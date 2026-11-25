@@ -57,7 +57,8 @@ def run(sc, liquid_shift=0):
     for i, y in enumerate(YEARS):
         infl, gdp = M(sc, y, "inflation_cpi_pct") / 100, M(sc, y, "gdp_growth_pct") / 100
         pol, t364 = M(sc, y, "policy_rate_pct") / 100, M(sc, y, "tbill_364d_pct") / 100
-        crr, minc = M(sc, y, "crr_pct") / 100, M(sc, y, "min_car_pct")
+        crr, minc = M(sc, y, "crr_pct") / 100, M(sc, y, "min_car_pct") / 100
+        assert abs(minc - .13) < 1e-9 and abs(100*minc + BUF - 18) < 1e-9, (sc, y, minc, BUF)
         r = {}
         if i == 0:
             r["loans"], r["dep"] = H(P9, "loans_and_advances_net"), H(P9, "customer_deposits")
@@ -142,7 +143,7 @@ for sc in SCEN:
                           ("other_operating_expenses", "othx"), ("impairment_charge", "imp"), ("profit_before_tax", "pbt"),
                           ("income_tax", "tax"), ("profit_after_tax", "pat")]:
             emit(sc, y, "income_statement", item, r[key], n_is)
-        emit(sc, y, "income_statement", "x_dividends_paid", r["div"], "Dividends paid in the year. FY2026E is the 604.370m actually paid in 9M-2026.")
+        emit(sc, y, "income_statement", "x_dividends_paid", r["div"], ("FY2026E is the 604.370m actually paid in 9M-2026." if y == "FY2026E" else "Estimated annual dividends, subject to payout gates."))
         n_bs = "Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit." if y == "FY2026E" else "Estimate."
         for item, key in [("cash_and_bog_balances", "cash"), ("investment_securities", "secs"), ("loans_and_advances_net", "loans"), ("property_equipment_intangibles", "ppe"),
                           ("other_assets", "oth_a"), ("total_assets", "ta"), ("customer_deposits", "dep"), ("other_liabilities", "oth_l"), ("total_liabilities", "tl"),
@@ -183,7 +184,7 @@ for sc in SCEN:
         fails += 0 if ok else 1
         flag = "ok" if r["car"] >= 100*r["min_car"] + BUF else ("above minimum, inside buffer" if r["car"] >= 100*r["min_car"] else "BELOW MINIMUM")
         lines.append(f"| {sc} | {y} | {'PASS' if bal else 'FAIL'} | {'PASS' if sec else 'FAIL'} | {'PASS' if nii else 'FAIL'} | {'PASS' if pat else 'FAIL'} | {r['car']:.1f}% vs {100*r['min_car']:.0f}% {flag} | {r['div'] / r['pat'] * 100:.0f}% |" if r["pat"] else f"| {sc} | {y} | {'PASS' if bal else 'FAIL'} | {'PASS' if sec else 'FAIL'} | {'PASS' if nii else 'FAIL'} | {'PASS' if pat else 'FAIL'} | {r['car']:.1f}% | n/a |")
-lines += ["", f"Forecast failures: {fails}", ""]
+lines += ["", f"Forecast failures: {fails}", "Shared minimum 13% and model payout target 18% asserted in all scenario-years, including yield sensitivities.", ""]
 # calibration disclosure
 t364 = M("base", "FY2026E", "tbill_364d_pct") / 100
 avg_loans = (H("FY2025", "loans_and_advances_net") + H(P9, "loans_and_advances_net")) / 2
