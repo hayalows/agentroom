@@ -22,3 +22,9 @@ ACCESS25AR five-year summary read in parsed issuer PDF text; printed pages at fo
 One-page bank statement accessed via parsed PDF text; visual inspection is still needed. Totals include impairment in the bank's stated operating income. Cash and equivalents include items beyond BoG balances. Gross loans and allowance are not separately disclosed in this summary. The FY2025 AGM copy has blank auditor signature line and approval date in the web edition; final signed status requires independent verification, so treat its provenance with caution.
 
 Visual check 2026-11-25: web PDF page 1 rendered and inspected. Confirmed 9M-2026 interest income 927.077m, net interest income 508.049m, PAT 367.086m, total assets 20,509.091m, deposits 15,225.967m, equity 2,411.519m, CAR 16.35% and NPL 4.51%. Figures in GHS millions except ratios. This validates these selections only, not every transcribed row.
+
+| source_id | title | publisher | URL | period | retrieved |
+|---|---|---|---|---|---|
+| ACCESS23AR | Annual report and financial statements 2023 | Access Bank Ghana | https://www.ghana.accessbankplc.com/getattachment/3b9abb6e-1994-49bd-a1af-ecd52ce6b1f2/ABG_Financial-Statement-2023.pdf.aspx?lang=en-US | FY2023 and FY2022 comparative | 2026-11-25 |
+
+ACCESS23AR p.42 parsed text supplies 2022 comparative and FY2023 expenses. Financial results in this source agree on selected 2023 headline income items with the FY2024 comparative. Page image and complete restatement review still pending.
