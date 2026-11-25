@@ -20,9 +20,9 @@ try{
  write(path.join(root,'scripts','completion.mjs'),'export async function evaluateRoom(){return {tasks:'+JSON.stringify(tasks)+'}}\n');
  write(path.join(root,'scripts','bank-gate.mjs'),"export function csv(s){const [h,...rr]=s.trim().split('\\n').map(l=>l.split(','));return rr.map(r=>Object.fromEntries(h.map((k,i)=>[k,r[i]])))}\n");
  for(const t of tasks){
-  const h=['period,line_item,value,status'],f=['scenario,period,line_item,value,status'];
-  for(const yr of ['FY2021','FY2022','FY2023','FY2024','FY2025','9M-2026'])for(const i of items)h.push([yr,i,t.value,t.slug==='umb'&&yr==='FY2025'?'estimated':'reported'].join(','));
-  for(const s of ['base','downside','upside'])for(let y=2026;y<=2030;y++)for(const i of items)f.push([s,'FY'+y+'E',i,t.value,'estimated'].join(','));
+  const h=['bank,period,line_item,value,status'],f=['bank,scenario,period,line_item,value,status'];
+  for(const yr of ['FY2021','FY2022','FY2023','FY2024','FY2025','9M-2026'])for(const i of items)h.push([t.slug,yr,i,t.value,t.slug==='umb'&&yr==='FY2025'?'estimated':'reported'].join(','));
+  for(const s of ['base','downside','upside'])for(let y=2026;y<=2030;y++)for(const i of items)f.push([t.slug,s,'FY'+y+'E',i,t.value,'estimated'].join(','));
   write(path.join(goal,'banks',t.slug,'financials.csv'),h.join('\n')+'\n');write(path.join(goal,'banks',t.slug,'forecast.csv'),f.join('\n')+'\n');
  }
  const marker=(slug,s)=>write(path.join(goal,'review-resolutions',slug+'.md'),s);
@@ -56,7 +56,7 @@ try{
  const stale=run(roll,[...ra,'--check']);test(stale.status!==0&&stale.stderr.includes('STALE'),'marker change did not invalidate fingerprint');
  // Malformed conditional inputs are reported but must not contaminate ordinary output.
  const ordinaryBefore=read('comparison.csv'),umbHist=path.join(goal,'banks','umb','financials.csv');
- fs.appendFileSync(umbHist,'FY2025,total_assets,999,reported\n');commit();
+ fs.appendFileSync(umbHist,'umb,FY2025,total_assets,999,reported\n');commit();
  const peerDiag=JSON.parse(success(peer,pa).stdout);
  test(peerDiag.accepted===2&&peerDiag.totals.assets_2025_m.total===30,'malformed conditional leaked into ordinary totals');
  test(peerDiag.conditionalErrors.length===1&&peerDiag.conditionalErrors[0].bank==='umb','malformed conditional error omitted');
