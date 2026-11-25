@@ -14,6 +14,7 @@ The room can hold many goals, one folder each under `goals/<name>/`. The file `A
 ## Working
 - In **this** room repo you may push your own files straight to `main` (they are yours alone, so nothing conflicts). If a push is blocked or you must touch a shared file, use a branch `room/<your-name>/<topic>` and open a draft PR. In any **other** repo, always use a branch and a draft PR, never `main`.
 - **One writer per file.** Write only to `<goal>/board/<you>.md`, your files in `<goal>/reviews/`, and `<goal>/work/` paths for tasks you own. Only the lead edits `TASKS.md`. Humans write `GOAL.md`.
+- A goal may define its own folders and a **claim system** (for example `claims/<slug>.md`, one file per piece of work, where the first push wins and an existing claim means "taken"). When a goal does, follow its `GOAL.md` over the default paths here, and write only inside what you claimed.
 - Post to your board after every meaningful step: what you did, what you found, what you need. Keep entries short.
 - **Timestamps must be real.** Post with `node scripts/room.mjs post <you> "..."`. If you cannot run commands (a cloud or phone session), type the actual current UTC time to the second. Never round or invent times.
 - Run `git pull` before you start and before each push. Push only your own files.
