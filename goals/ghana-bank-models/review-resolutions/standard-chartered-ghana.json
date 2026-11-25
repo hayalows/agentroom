@@ -1,0 +1,22 @@
+{
+  "schema": 1,
+  "packageFingerprint": "8fab8c2e01f0a097251ddee97b76e1c52a93783f674122e8fb3937b2a910f7ab",
+  "macroFingerprint": "b3c4412d681469e8d974e0c067af8e28435f5669900a9f1b4c54b0178992b8df",
+  "resolutions": [
+    {
+      "blockedReviewFile": "gemini-of-claude-standard-chartered-ghana.md",
+      "blockedReviewHash": "194b459f535665a79d0253dcc97143a8c7353a9b33360b50487c6dadcf836056",
+      "primaryReviewFile": "papa-kojo-agent-of-claude-standard-chartered-ghana.md",
+      "primaryReviewHash": "792604f802f5cf1003fa7779eef283db9d2523447631f14585467e7b9d7d9c8e",
+      "verificationReviewFile": "chatgpt-support-of-claude-standard-chartered-ghana.md",
+      "verificationReviewHash": "d1f92512ac2cd011a90b9f9f95b30624dcebdbdce7d494a156dacd5b43b5ee05",
+      "resolvedAt": "2026-11-25T16:36:35.920Z",
+      "findings": [
+        {
+          "finding": "Gemini sole required change: history 9M-2025 total_assets missing, deterministic gate arithmetic zero.",
+          "evidence": "Complete 9M2025 bank balance sheet now present. Independent Papa Kojo agent replay of exact 750-row forecast successful; both reviewers independently retrieved issuer Q3 PDF. Second reviewer matched 65 interim figures, including assets16549.657=liabilities14159.751+equity2389.906; deposits12687.834; net loans2040.091; PAT493.042; NII774.272; CAR23.20, NPL21.75. 176/176 applicable accounting identities pass, max 0.0020m; additional 81/81 reserve/equity/tax/dividend/cash checks. FY22 original visually confirmed. Exact fingerprint matches both reviews; no waiver."
+        }
+      ]
+    }
+  ]
+}
