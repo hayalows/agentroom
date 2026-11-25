@@ -14,3 +14,17 @@ Independent issuer Q3 2026 PDF retrieval HTTP200, physical pages 1–2, Firecraw
 4. Hygiene: checks.md title says uba-ghana; distinguish reported 1115m YTD dividends from incremental Q4 zero, reconcile 35.5% Q4 tax wording, add reserve and gap rows. No source/macro edits required.
 
 Strong arithmetic; no need to discard model. Await exact bounded revision and re-review before acceptance.
+
+## Round 2 — 2026-11-25T17:56:36.689Z
+Verdict: PASS
+Package SHA-256 fingerprint: 0bd968656464be84708f1ffba30d694877e29047f861870b539cc02a95b9983f
+Macro SHA-256 fingerprint: b3c4412d681469e8d974e0c067af8e28435f5669900a9f1b4c54b0178992b8df
+
+Reviewed exact package at e73b4e6ee367d2f5e63a3465a0e3a57815917321; all bank files and macro blobs unchanged at publication. Independent re-review of all four prior grouped findings. 300 historical and 837 forecast rows, 449/449 independent CSV equations, no duplicates, unavailable-value violations, missing source/page fields or skipped equations; maximum residual GHS0.002m. History blob 9378726879ef7f45c0f6588b7b6f1ea3fb1d237c unchanged; Q3 issuer source checks from round 1 carry forward. Papa Kojo Agent also independently verified exact supervisor fingerprints, annual source evidence and replay. My own isolated LF laptop Python -I model.py exit0 and 837 rows, zero model failures; forecast.csv unchanged, checks.md raw bytes differ solely in Windows line endings/whitespace (only that file modified, git diff --ignore-space-at-eol exit0), not a numerical or textual difference. No owner edits.
+
+1. Reserve cash: inferred eligible-deposit share 77.05525%, eligible cash share35.51504%; independently checked all 15 requirements, cash proxies, full-deposit and eligibility stresses. Base FY30 gap0 by construction, full-deposit1709.886m, eligibility1148.460m. Entire separate stress_gate path withholds additional dividends, explicitly documented. No claim that modeled distributions are permitted or that reserves comply. Prior profit clamp implemented. Bounded finding resolved; wholesale runoff remains unmodeled, not actual liquidity analysis.
+2. Capital/transfer: 15/15 proxy stress = CAR×0.9/1.1; min and target gaps, net LDR, full-year statutory reserve/credit risk balance and YTD transfer all reconcile. Base FY30 PAT1657.106m, CAR19.449%, stress15.913%, dividend788.099m; downside CAR22.913%/stress18.747%; upside16.991%/13.902%. Canonical CAR/LDR/NPL/Tier1/gross/ECL blank as appropriate. FY26 full-year transfer163.835m, Q4 increment40.668m after actual123.167m, dividend1115m already booked; no double count.
+3. Actual YTD amounts frozen in Q4-only sensitivities; negative Q4 tax credit removed, penalty16.1m separately modeled without tax benefit. Fitted interest split disclosed. The penalty sensitivity changes PBT directly and is not emitted as a central forecast; only reported sensitivity totals, no central bridge error. 
+4. Checks title corrected, 35.5% Q4 rate and full-year versus incremental dividends explained; remaining minor prose (35% in one forecast memo, round 1 heading, old assumptions anchor wording) is cosmetic, not a blocking numerical issue. 
+
+All material round-1 findings resolved on exact revision. PASS for model-spec quality, not regulatory compliance or investment advice. Source and calibration limitations retained, including no observed RWA, gross/ECL or wholesale maturity schedule. Owner must verify latest supervisor and all other reviewers' current verdicts before closure; Gemini supplemental round-1 alignment also needs reconciliation if supervisor counts it as a blocker.
