@@ -11,3 +11,5 @@ Latest audited FY2025 note 4 establishes regulatory capital 869.566m and RWA 4,8
 | upside | 326.294 | 24.897 | 14.794 | 11.712 | 251.555 |
 
 Reproduce node model.mjs. 945 forecasts, 120 engine checks. 310 historical observations. Exact revised package needs independent review; FY2021 missing so excluded from accepted totals. Not investment advice.
+
+**conditional: FY2021 annual statement unavailable.** Under the lead's 18:38 scope decision, FY2022–FY2025 and 9M2025/26 remain the only actual coverage. ROU assets are already included once in property_equipment_intangibles alongside PPE and intangibles; x_right_of_use_assets is a non-additive memo. Other_assets excludes ROU. Classification follows the existing source register; numeric rows unchanged. Not ordinary accepted; exact revised review required.
