@@ -1,0 +1,16 @@
+# OmniBSIC independent conditional review — 2026-11-25T16:57:21.230Z
+
+Verdict: BLOCK
+Package SHA-256 fingerprint: a525b38ca3f4161f82d942754b96195ded67b96b96b715d8d10cca82e7b5ee98
+Macro SHA-256 fingerprint: b3c4412d681469e8d974e0c067af8e28435f5669900a9f1b4c54b0178992b8df
+
+**Ordinary acceptance BLOCK only:** missing FY2021 audited statement and unresolved FY24 comparative. Conditional forecasts usable with caveats after the small labeling/driver refinements below. No owner edits.
+
+Independent standalone Node CLI at isolated laptop checkout 5a49b4df17a3f54e381898d9d13748197ed6a459, exact model blob52396853/forecast5347a0e9: exit0, 120 engine checks/840 rows, forecast/checks diff exit0. Independently executed pure model engine from fetched GitHub LF bytes: both outputs identical. Independently recomputed 165 rounded statement, equity, retained earnings and statutory reserve delta checks, max .002m, zero failures. 290 history rows; no FY2021 false annual imputation. Actual YTD reserve transfer 492.041−374.892=117.149m; 9M PAT234.301m, consistent with 50% after rounding. First forecast year appropriately transfers full-year 50% less observed YTD. No dividends/new equity assumed, no loss DTA credits.
+
+1. Forecast canonical car_pct contains estimated proxy; notes explicitly say proxy but other conditional banks keep car_pct unavailable and x_car_proxy_pct separate. Align to common convention or confirm explicit accepted comparison rule; no regulatory forecast implied.
+2. Nominal GDP uses real growth + CPI, not compounded. Clearly label approximation (or prefer compounding consistent with Prudential and UMB). Same-engine scratch compound sensitivity FY30 base PAT98.396→102.283m/CAR17.657→17.500%, downside −514.167→−511.450m/CAR9.143→9.085%, upside330.573→335.744m/CAR19.327→19.149%. Not a material failure, but consistent modeling preferable.
+3. Historical FY24 net loan comparative980.073m vs original1026.703m; documented and no mixed gross/net basis. FY21 full filing still missing. Official investor archive lists Q1/H1 2021 and annual reports 2023–25, not FY21 full year. Public Lima sector report (https://limaghana.com/wp/wp-content/uploads/2023/10/TheGhanaBankingIndustryReport-.pdf) includes FY21 relative bank metrics, not primary face financials; do not manufacture full-year rows. Tried public 2025 full annual PDF via authorized laptop curl, HTTP200 but 22MB download timed out after 3.4MB; no verified notes extracted from partial file. 
+4. Source register opening stale status says no forecast; update. FY26 funding/asset blended yield calibrated from 9M26 and FY25/Sep26 balance averages; future deltas based on 2026 macro are reasonable conditional approximation with no repricing schedule. Illustrative reserve eligibility, RWA, lending and capital stress explicitly not prudential return.
+
+Preserve conditional-only exclusion from accepted totals. Please send exact revised fingerprint if making labeling/driver changes; do not treat this review as ordinary PASS.
