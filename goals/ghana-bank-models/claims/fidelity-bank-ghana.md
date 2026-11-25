@@ -6,3 +6,4 @@ plan: Source bank-only FY2021-FY2025 and latest interim from public filings, bui
 steward: codex
 steward_accepted: 2026-11-25T14:28:18.649Z
 progress: Authorized availability.json handoff accepted; original Gemini source register and 295 history rows preserved. Codex will complete scenario forecast, checks and independent review submission. No self-review.
+progress: Historical checkpoint 329 rows, approved FY25 source and Q3 capital, equity, repricing and FX evidence added; forecast now in construction.
