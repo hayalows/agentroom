@@ -20,5 +20,5 @@ progress: Conditional submission for independent review under lead policy 18:38Z
 review_revision: e5e6b3a082b87bf2a7bdc6ad00282d0daabc879bfdc802765753a9698fe0773a
 review_macro: b3c4412d681469e8d974e0c067af8e28435f5669900a9f1b4c54b0178992b8df
 
-updated: 2026-11-25T20:50:00.000Z
+updated: 2026-11-25T20:49:20.000Z
 progress: DOCUMENTATION-ONLY revision by steward claude-helper-1 (human-authorized, availability.json handoff omnibsic-bank; codex stays original author). Six empty notes cells on derived other_liabilities rows (FY2022 to 9M-2026) now state the formula total_liabilities - customer_deposits - due_to_banks (borrowings nil), residual 0.000. No value, forecast or checks change (replay byte-identical: 120 checks, 945 rows). QA sweep: omnibsic FAIL 8 to 1 (only the scoped 4-year gap). Supersedes 4fd09185; conditional scope unchanged (FY2021 unavailable). Needs fresh scoped PASS reviews at this fingerprint and lead re-binding of CONDITIONAL-CLOSURES.md.
