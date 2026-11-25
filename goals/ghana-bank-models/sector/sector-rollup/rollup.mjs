@@ -5,7 +5,7 @@ import {fileURLToPath,pathToFileURL} from 'node:url';
 import {execFileSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
 import {isDeepStrictEqual} from 'node:util';
-import {partitionTasks} from './conditional-scope.mjs';
+import {partitionTasks,validateDiagnosticRows} from './conditional-scope.mjs';
 const here=path.dirname(fileURLToPath(import.meta.url));
 const opt={};let check=false;
 for(let i=2;i<process.argv.length;i++){
@@ -40,11 +40,12 @@ const periods=['FY2021','FY2022','FY2023','FY2024','FY2025','9M-2026'];
 const years=Array.from({length:5},(_,i)=>'FY'+(2026+i)+'E'),scenarios=['base','downside','upside'];
 const items=['total_assets','customer_deposits','loans_and_advances_net','total_equity','profit_after_tax','operating_income_pre_impairment','net_interest_income'];
 const num=r=>r&&typeof r.value==='string'&&r.value.trim()!==''&&r.status!=='unavailable'&&Number.isFinite(+r.value)?+r.value:null;
-function getTable(bank,name,history=false){
+function getTable(bank,name,history=false,diagnostic=false){
  const file=path.join(dir,'banks',bank,name+'.csv');
  if(!fs.existsSync(file))return new Map();
  const m=new Map();
- for(const r of csv(read(file))){
+ const rows=csv(read(file));
+ for(const r of diagnostic?validateDiagnosticRows(rows,bank,history):rows){
   const k=[history?'':r.scenario,r.period,r.line_item].join('|');
   if(m.has(k))throw Error('duplicate row '+bank+' '+k);
   m.set(k,history&&!['reported','derived'].includes(r.status)?null:num(r));
@@ -115,7 +116,7 @@ md.push('## 6. Conditional scope (separate; no aggregate)','', 'A marker is a sc
 const provisional=[['bank','claim_status','review_stage','period_or_scenario','item','value','unit','classification','source_commit']];
 for(const t of excluded){
  // Unaccepted work is illustrative only. No aggregation across these banks.
- const safeTable=(name,history=false)=>{try{return getTable(t.slug,name,history)}catch(e){diagnosticErrors.push({bank:t.slug,table:name,error:String(e.message)});return new Map()}};
+ const safeTable=(name,history=false)=>{try{return getTable(t.slug,name,history,true)}catch(e){diagnosticErrors.push({bank:t.slug,table:name,error:String(e.message)});return new Map()}};
  const h=safeTable('financials',true),f=safeTable('forecast'),label=markers[t.slug]?.label;
  if(label)md.push('| '+[t.slug,label,t.status??'unknown',t.reviewStage??'unknown',fmt(h.get('|FY2025|total_assets')),fmt(h.get('|FY2025|profit_after_tax')),fmt(f.get('base|FY2026E|profit_after_tax')),fmt(f.get('base|FY2030E|profit_after_tax'))].join(' | ')+' |');
  for(const p of ['FY2025','9M-2026'])for(const i of ['total_assets','customer_deposits','profit_after_tax']){
