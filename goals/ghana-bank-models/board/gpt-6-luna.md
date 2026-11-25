@@ -42,3 +42,22 @@ NEXT: read SCB's current claim and review history; if the repaired current packa
 SEEN: Codex and chatgpt-support both note the CalBank/Fidelity handoffs remain open; I have accepted CalBank only. Claude, Gemini, and helper-1 are paused. I will keep all earlier reviews and will not alter other agents' boards.
 
 - 2026-11-25T14:44:41Z MILESTONE 1/5 DONE calbank: read the current claim, availability handoff, all three review files, README, source register, assumptions, model and outputs; replayed the committed model in an isolated copy. | FOUND: 615 forecast rows and checks.md/forecast.csv match byte-for-byte after line-ending normalization; historical and forecast identities pass. The later helper review still blocks on F7 and notes D1/D2 plus missing x_dividends_paid; Claude's earlier round-2 PASS predates that latest review. The current asset map places ROU inside other_assets, against MODEL-SPEC. Official CAL25 gives FY2025/FY2024 ROU at 53.960/60.700m, and CAL26Q3 gives 49.379m for Sep-2026. | NEXT: finish source checks, choose two-point funding calibration, and identify ROU values for prior years | NEED: page-verified 2021-2023 ROU evidence; independent reviewer after repair.
+
+
+- 2026-11-25T15:13:26Z PAUSE / HANDOFF: Session allowance is about 12%; estimated reset is in roughly 2h32 from this update. I may be unavailable until it resets. CalBank remains in progress under my accepted steward handoff; Gemini remains the original claimant.
+
+STATUS: Four internal read-only agents checked the cost calibration, ROU history, model logic, and source notes. They made no Agent Room edits. The CalBank repair is still in my working copy at this timestamp and has not yet been pushed to main.
+
+FINDINGS / CHANGES IN WORKING COPY:
+- Replaced the 1:1 bill-to-funding-cost pass-through with `max(1.5%, 0.7% + 0.18 × 91-day bill rate)`. It fits FY2025 at 3.468% vs 3.470% observed and annualized 9M-2026 at 1.821% vs 1.813% observed.
+- Corrected FY2026E timing. It is 9M actuals plus Q4, so the Q4 cost input is an implied 4.55% 91-day bill mean; loan yield uses a day-weighted 12.57% policy rate; the investment yield references 9.447% 364-day bills and 15.01% 10-year bonds. The full-year averages are no longer applied directly to Q4 flows.
+- Recast sourced right-of-use balances into `property_equipment_intangibles` for all six periods, with `other_assets` reduced by the same amount. Total assets are unchanged.
+- Clarified FY2024 retained earnings against the CAL25 balance sheet and reserve-transfer bridge; historical CAR retains the Bank series, not the Group series.
+- Added `x_dividends_paid` for all 15 scenario-years. FY2026E zero is a no-Q4-payout assumption; later modeled dividends are gated by positive retained earnings and CAR. The Q3 equity statement does not report a dividend movement.
+- Documented the FY2027E+ downside PAT ordering as assumption-sensitive: higher policy and market rates raise modeled loan and investment income; the downside loan spread is +1.5pp vs +1.0pp base and +0.5pp upside, with no modeled maturity/repricing schedule.
+
+The current working copy reruns to 630 forecast rows with 0.000 historical and forecast residuals and 0.000000 iteration residual. README forecast figures have been refreshed. I have not yet run the final room gate on this latest package.
+
+NEXT: finish one clean replay and `bank-gate.mjs`, push the seven CalBank package files, update the claim to `needs-review` with exact package/macro fingerprints, then request an independent review. Do not mark CalBank done yet: Claude's round-2 PASS predates claude-helper-1's blocking CHANGES at package fingerprint 37b1e410...; that old review still needs independent current-version review and explicit lead/human resolution if the paused reviewer cannot re-review.
+
+TO all: If I run out of usage before the package is pushed, please take over the final gate and package push from this handoff. Preserve prior reviews and keep the claim open until the review and protocol closure are complete.
