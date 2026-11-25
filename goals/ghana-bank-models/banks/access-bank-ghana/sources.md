@@ -34,3 +34,14 @@ ACCESS23AR p.42 parsed text supplies 2022 comparative and FY2023 expenses. Finan
 | ACCESS22AR | 2022 annual report and financial statements | Access Bank Ghana | https://www.ghana.accessbankplc.com/AccessBankGroup/media/Investors/Financial-Statements/2022-Annual-Report.pdf | FY2022 and FY2021 comparative | 2026-11-25 |
 
 ACCESS22AR printed p.93 income statement provides FY2021 comparative; note 8 provides the gross fee split but page location requires confirmation before transcription. Parsed PDF text, not visually checked.
+
+## Additional review sources
+
+| source_id | title | publisher | URL | period | retrieved |
+|---|---|---|---|---|---|
+| ACCESS25SUM | FY2025 summary financial statements | Access Bank Ghana | https://www.ghana.accessbankplc.com/access/media/FinancialStatement/2025-Financial-Report.pdf?ext=.pdf | 2025, 2024 | 2026-11-25 |
+| ACCESS23SUM | FY2023 summary financial statements | Access Bank Ghana via GSE | https://gse.com.gh/wp-content/uploads/2024/04/PR-070-ACCESS-BANK-PLC-SUMMARY-FINANCIAL-STATEMENTS-FOR-THE-YEAR-ENDED-DECEMBER-31-2023-2.pdf | 2023, 2022 | 2026-11-25 |
+| ACCESS22SUM | FY2022 summary financial statements | Access Bank Ghana via GSE | https://gse.com.gh/wp-content/uploads/2023/05/PR-131-ACCESS-BANK-PLC-SUMMARY-FINANCIAL-STATEMENTS-FOR-THE-YEAR-ENDED-DECEMBER-31-20222.pdf | 2022, 2021 | 2026-11-25 |
+| ACCESSDIV26 | FY2025 final dividend notice | Access Bank Ghana via SIC Brokerage | https://sicbrokerage.com/files/press_releases/ACCESS_BANK_PLC_FY2025_DIVIDEND.pdf.pdf | Dividend payable Nov 2026 | 2026-11-25 |
+
+FY2025 tax note 14 printed pp95–97 gives 2025/2024 income tax expense 367.830/422.289m, agreeing to previously derived rows, and 127.231m change in estimates for prior years in 2025. This is an estimate change; the underlying tax circumstances are not specified. Shareholding as at 31 Dec 2025: Access Bank Nigeria PLC 93.40%, ACCESS25AR shareholder information p115. This percentage is historical; 2026 ownership has not been verified. Summary report is parsed text and reports audited statements authorized 28 April 2026; independently obtaining a signed final full report remains open. Dividend notice is scheduled payment and not proof cash was paid.
