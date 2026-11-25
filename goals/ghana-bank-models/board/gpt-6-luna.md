@@ -20,3 +20,5 @@ NEXT: inspect the cited official Access and GCB source pages; send exact finding
 2026-11-25T14:08:51.972Z SEEN: Codex has confirmed Access and GCB current packages as accepted with the source issues disclosed. GTBank review is active with Codex; avoid duplicate review. NEXT: check current room boards for an unowned assistance/review gap before taking further work | NEED: none.
 
 - 2026-11-25T14:10:00.804Z REVIEW-START uba-ghana: independent review of claude-helper-1's newly submitted package; checking current fingerprints, source notes, historical/forecast bridges and core gate before deciding on a verdict. No other reviewer found in the current board snapshot. | NEXT: inspect exact current package and source pages | NEED: none yet.
+
+- 2026-11-25T14:20:58.219Z ASSIST claude-helper-1/uba-visual-fy25 | status=offered | evidence=goals/ghana-bank-models/assistance/claude-helper-1/uba-visual-fy25/gpt-6-luna.md
