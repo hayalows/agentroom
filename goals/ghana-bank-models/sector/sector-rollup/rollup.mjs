@@ -4,6 +4,8 @@ import path from 'node:path';
 import {fileURLToPath,pathToFileURL} from 'node:url';
 import {execFileSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
+import {isDeepStrictEqual} from 'node:util';
+import {partitionTasks} from './conditional-scope.mjs';
 const here=path.dirname(fileURLToPath(import.meta.url));
 const opt={};let check=false;
 for(let i=2;i<process.argv.length;i++){
@@ -21,15 +23,16 @@ const {evaluateRoom}=await import(pathToFileURL(path.join(root,'scripts/completi
 const {csv}=await import(pathToFileURL(path.join(root,'scripts/bank-gate.mjs')).href);
 const state=await evaluateRoom(root,goal);
 const tasks=state.tasks.slice().sort((a,b)=>a.slug.localeCompare(b.slug));
-const accepted=tasks.filter(t=>t.acceptance==='accepted'),excluded=tasks.filter(t=>t.acceptance!=='accepted');
+const {accepted,excluded,conditional,markers}=partitionTasks(tasks,dir);
 const read=p=>fs.readFileSync(p,'utf8');
 const ctxText=read(path.join(dir,'sector/macro-assumptions/sector-context.csv'));
 const ctx=Object.fromEntries(csv(ctxText).map(r=>[r.indicator,r]));
 const evidence=accepted.map(t=>({bank:t.slug,...t.completionEvidence}));
 for(const e of evidence)if(!e.packageFingerprint||!e.macroFingerprint||!e.reviewSha256)throw Error('Incomplete evidence '+e.bank);
-const exclusions=excluded.map(t=>({bank:t.slug,owner:t.owner??null,status:t.status??null,stage:t.reviewStage??null,packageFingerprint:t.gate?.fingerprint??null,macroFingerprint:t.gate?.macroFingerprint??null}));
+const exclusions=excluded.map(t=>({bank:t.slug,owner:t.owner??null,status:t.status??null,stage:t.reviewStage??null,conditional:markers[t.slug]?.label??null,packageFingerprint:t.gate?.fingerprint??null,macroFingerprint:t.gate?.macroFingerprint??null}));
 const diagnosticInputs=Object.fromEntries(excluded.map(t=>[t.slug,Object.fromEntries(['financials.csv','forecast.csv'].map(f=>{const p=path.join(dir,'banks',t.slug,f);return [f,fs.existsSync(p)?hash(read(p)):null]}))]));
-const inputFingerprint=hash(JSON.stringify({evidence,exclusions,diagnosticInputs,context:hash(ctxText),generator:hash(read(fileURLToPath(import.meta.url)))}));
+const generatorSha256=hash(read(fileURLToPath(import.meta.url))), scopeClassifierSha256=hash(read(path.join(here,'conditional-scope.mjs')));
+const inputFingerprint=hash(JSON.stringify({evidence,exclusions,diagnosticInputs,conditionalMarkers:markers,context:hash(ctxText),generator:generatorSha256,scopeClassifier:scopeClassifierSha256}));
 const prior=check?JSON.parse(read(path.join(out,'manifest.json'))):null;
 if(check&&(prior.inputFingerprint!==inputFingerprint||!/^[0-9a-f]{40}$/.test(prior.sourceCommit)))throw Error('STALE: eligibility, package, diagnostics, context or generator inputs changed');
 const sourceCommit=prior?.sourceCommit??sha;
@@ -75,7 +78,7 @@ const fmt=(v,d=3)=>v==null?'n/a':v.toLocaleString('en-US',{minimumFractionDigits
 const rows=[['table','period_or_scenario','item','bank','value','unit','n_banks_reporting','n_banks_eligible','reporting_banks','source_commit','input_fingerprint']];
 const record=(table,period,item,bank,a,unit='GHS millions')=>rows.push([table,period,item,bank,a.value==null?'':a.value.toFixed(unit==='percent'?4:3),unit,a.n,names.length,a.banks.join(';'),sourceCommit,inputFingerprint]);
 const display=(a,d=3)=>fmt(a.value,d)+' ('+a.n+'/'+names.length+')';
-const md=['# Ghana banking models: accepted-only sector roll-up','', 'Source commit: `'+sourceCommit+'`','Input fingerprint: `'+inputFingerprint+'`','', '**'+names.length+' of '+tasks.length+' licensed-bank models accepted.** These are partial coverage totals, not the whole banking sector.','Accepted banks: '+(names.join(', ')||'none')+'.','Provisional or otherwise excluded models appear only in the separate diagnostics and exclusion manifest.','', '## 1. Coverage against Bank of Ghana aggregates','', '| Measure | Period | Accepted banks (GHS bn; count) | BoG (GHS bn) | Indicative coverage |','|---|---|---:|---:|---:|'];
+const md=['# Ghana banking models: accepted-only sector roll-up','', 'Source commit: `'+sourceCommit+'`','Input fingerprint: `'+inputFingerprint+'`','', '**'+names.length+' of '+tasks.length+' licensed-bank models ordinarily accepted.** These are partial coverage totals, not the whole banking sector.','Accepted banks: '+(names.join(', ')||'none')+'.','Conditional and otherwise excluded models appear only in the separate diagnostics and exclusion manifest. No conditional model enters ordinary totals even if the supervisor reports accepted.','', '## 1. Coverage against Bank of Ghana aggregates','', '| Measure | Period | Accepted banks (GHS bn; count) | BoG (GHS bn) | Indicative coverage |','|---|---|---:|---:|---:|'];
 for(const [item,key,p,col] of [['total_assets','total_assets','FY2025','2025-12'],['total_assets','total_assets','9M-2026','2026-09'],['customer_deposits','total_deposits','FY2025','2025-12'],['customer_deposits','total_deposits','9M-2026','2026-09']]){
  const a=aggregate(names,b=>hist(b,p,item)),v=ctx[key]?.[col],den=v!=null&&v.trim()!==''&&Number.isFinite(+v)&&+v>0?+v:null;
  const cov=a.value!=null&&den!=null?100*a.value/1000/den:null;
@@ -106,30 +109,35 @@ for(const i of ['profit_after_tax','total_assets','total_equity']){
  for(const s of scenarios){const vv=years.map(p=>{const a=aggregate(names,b=>forecast(b,s,p,i));record('forecast_total',s+'|'+p,i,'ACCEPTED_ONLY',a);return display(a)});md.push('| '+s+' | '+vv.join(' | ')+' |')}
  md.push('');
 }
-md.push('## 5. Excluded models','', '| Bank | Status | Review stage |','|---|---|---|',...exclusions.map(e=>'| '+e.bank+' | '+(e.status??'unknown')+' | '+(e.stage??'unknown')+' |'),'','See provisional.csv for separate non-accepted bank-level diagnostics. No provisional figures are added to accepted totals. See manifest.json for exact review, package and macro evidence and output hashes.','');
+md.push('## 5. Excluded models','', '| Bank | Status | Review stage |','|---|---|---|',...exclusions.filter(e=>!e.conditional).map(e=>'| '+e.bank+' | '+(e.status??'unknown')+' | '+(e.stage??'unknown')+' |'),'','See provisional.csv for separate bank-level diagnostics. No excluded or conditional figures are added to ordinary accepted totals. See manifest.json for exact review, package and macro evidence and output hashes.','');
 const diagnosticErrors=[];
+md.push('## 6. Conditional scope (separate; no aggregate)','', 'A marker is a scope decision, not a PASS or closure. Historical values below are reported/derived only; forecasts are estimates. No figures in this block enter ordinary totals.','', '| Bank | Scope | Claim status | Review stage | FY25 assets (m) | FY25 PAT (m) | FY26E base PAT (m) | FY30E base PAT (m) |','|---|---|---|---|---:|---:|---:|---:|');
 const provisional=[['bank','claim_status','review_stage','period_or_scenario','item','value','unit','classification','source_commit']];
 for(const t of excluded){
  // Unaccepted work is illustrative only. No aggregation across these banks.
  const safeTable=(name,history=false)=>{try{return getTable(t.slug,name,history)}catch(e){diagnosticErrors.push({bank:t.slug,table:name,error:String(e.message)});return new Map()}};
- const h=safeTable('financials',true),f=safeTable('forecast');
+ const h=safeTable('financials',true),f=safeTable('forecast'),label=markers[t.slug]?.label;
+ if(label)md.push('| '+[t.slug,label,t.status??'unknown',t.reviewStage??'unknown',fmt(h.get('|FY2025|total_assets')),fmt(h.get('|FY2025|profit_after_tax')),fmt(f.get('base|FY2026E|profit_after_tax')),fmt(f.get('base|FY2030E|profit_after_tax'))].join(' | ')+' |');
  for(const p of ['FY2025','9M-2026'])for(const i of ['total_assets','customer_deposits','profit_after_tax']){
-  const v=h.get('|'+p+'|'+i);provisional.push([t.slug,t.status,t.reviewStage,p,i,v==null?'':v.toFixed(3),'GHS millions','unaccepted historical observation',sourceCommit]);
+  const v=h.get('|'+p+'|'+i);provisional.push([t.slug,t.status,t.reviewStage,p,i,v==null?'':v.toFixed(3),'GHS millions',label?label+'; historical observation':'unaccepted historical observation',sourceCommit]);
  }
  for(const s of scenarios)for(const p of ['FY2026E','FY2030E'])for(const i of ['total_assets','profit_after_tax','total_equity']){
-  const v=f.get(s+'|'+p+'|'+i);provisional.push([t.slug,t.status,t.reviewStage,s+'|'+p,i,v==null?'':v.toFixed(3),'GHS millions','unaccepted scenario estimate',sourceCommit]);
+  const v=f.get(s+'|'+p+'|'+i);provisional.push([t.slug,t.status,t.reviewStage,s+'|'+p,i,v==null?'':v.toFixed(3),'GHS millions',label?label+'; scenario estimate':'unaccepted scenario estimate',sourceCommit]);
  }
 }
 const files={'rollup.md':md.join('\n')+'\n','rollup.csv':toCsv(rows),'provisional.csv':toCsv(provisional)};
 clean();if(git('rev-parse','HEAD')!==sha)throw Error('HEAD changed during generation');
-const summary={sourceCommit,inputFingerprint,accepted:names.length,roster:tasks.length,excluded:excluded.length,totals:Object.fromEntries(['total_assets','customer_deposits','profit_after_tax'].map(i=>[i,aggregate(names,b=>hist(b,'FY2025',i))]))};
+const summary={sourceCommit,inputFingerprint,accepted:names.length,roster:tasks.length,excluded:excluded.length,conditional:conditional.length,totals:Object.fromEntries(['total_assets','customer_deposits','profit_after_tax'].map(i=>[i,aggregate(names,b=>hist(b,'FY2025',i))]))};
+const metadata={schema:3,...summary,acceptedEvidence:evidence,exclusions,diagnosticInputs,diagnosticErrors,conditionalMarkers:markers,sectorContextSha256:hash(ctxText),generatorSha256,scopeClassifierSha256,outputHashes:Object.fromEntries(Object.entries(files).map(([k,v])=>[k,hash(v)]))};
 if(check){
  const m=prior;
- for(const [f,s] of Object.entries(files))if(m.outputHashes[f]!==hash(s)||hash(read(path.join(out,f)))!==hash(s))throw Error('STALE or modified output: '+f);
+ for(const [k,v] of Object.entries(metadata))if(!isDeepStrictEqual(m[k],v))throw Error('STALE or modified manifest field: '+k);
+ if(typeof m.generatedAt!=='string'||!Number.isFinite(Date.parse(m.generatedAt)))throw Error('Invalid generation timestamp');
+ for(const [f,s] of Object.entries(files))if(hash(read(path.join(out,f)))!==hash(s))throw Error('STALE or modified output: '+f);
  console.log(JSON.stringify({...summary,checkedCommit:sha,fresh:true},null,2));
 }else{
  fs.mkdirSync(out,{recursive:true});
  for(const [f,s] of Object.entries(files))fs.writeFileSync(path.join(out,f),s);
- fs.writeFileSync(path.join(out,'manifest.json'),JSON.stringify({schema:2,generatedAt:new Date().toISOString(),...summary,acceptedEvidence:evidence,exclusions,diagnosticInputs,diagnosticErrors,sectorContextSha256:hash(ctxText),generatorSha256:hash(read(fileURLToPath(import.meta.url))),outputHashes:Object.fromEntries(Object.entries(files).map(([k,v])=>[k,hash(v)]))},null,2)+'\n');
+ fs.writeFileSync(path.join(out,'manifest.json'),JSON.stringify({generatedAt:new Date().toISOString(),...metadata},null,2)+'\n');
  console.log(JSON.stringify({...summary,diagnosticErrors},null,2));
 }
