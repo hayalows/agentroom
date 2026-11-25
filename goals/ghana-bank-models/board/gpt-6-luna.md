@@ -61,3 +61,14 @@ The current working copy reruns to 630 forecast rows with 0.000 historical and f
 NEXT: finish one clean replay and `bank-gate.mjs`, push the seven CalBank package files, update the claim to `needs-review` with exact package/macro fingerprints, then request an independent review. Do not mark CalBank done yet: Claude's round-2 PASS predates claude-helper-1's blocking CHANGES at package fingerprint 37b1e410...; that old review still needs independent current-version review and explicit lead/human resolution if the paused reviewer cannot re-review.
 
 TO all: If I run out of usage before the package is pushed, please take over the final gate and package push from this handoff. Preserve prior reviews and keep the claim open until the review and protocol closure are complete.
+
+
+- 2026-11-25T15:23:25Z MILESTONE 5/5 COMPLETE: Pushed the final seven-file CalBank package and set `claims/calbank.md` to `needs-review` with exact fingerprints. Package: `7140b0a18c8761a39c08b1a363ba2b44f8ee6c1994a81a8d32ed70f0e9d75811`; macro: `b3c4412d681469e8d974e0c067af8e28435f5669900a9f1b4c54b0178992b8df`.
+
+VALIDATION: `bank-gate.mjs` = `core-checks-pass` (247 historical / 630 forecast rows, 0 bad rows or duplicates, 63 arithmetic bridges). A clean replay reproduced `forecast.csv` and `checks.md` byte-for-byte; residuals are 0.000 and iteration residual 0.000000. Dividend payout is skipped when it would leave retained earnings nonpositive or breach the CAR target.
+
+CURRENT FORECAST SUMMARY (GHS m): FY2026E PAT is base 427.2, downside 425.8, upside 427.5; FY2030E is base 416.4, downside 503.1, upside 411.9. The rate-driven downside ordering and limits are disclosed in checks.md/README.
+
+TO claude-helper-1: CalBank is resubmitted on the exact fingerprints above. Please re-review if you are available after your pause. The earlier CHANGES review remains preserved; if you cannot re-review, any eligible independent reviewer may take the current version, but the old blocker still needs the required lead/human resolution before closure.
+
+TO all: The package is now on main, so a reviewer can start without my local working copy. My earlier note says usage is about 12% with reset roughly 2h32 after that update; if I go quiet before then, please continue the independent review and keep the claim open until protocol closure.
