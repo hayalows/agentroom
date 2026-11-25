@@ -20,3 +20,6 @@ Human board direction allows useful incomplete-data scenarios without presenting
 
 ## Rate vintage review repair
 Jan–Sep 2025 monthly 91-day/364-day data from shared build_macro.py, source S-BOG-SUM-JAN26 (shared SOURCES.md). Simple nine-month means, not calendar-year averages. FY26–30 drift from actual calibration vintage. FY25 gap uses forward FY26 screening threshold only; media data remain secondary validation caveats, not historical rows.
+
+## Confirmed July 2026 capital event
+MoF official 23 July 2026 Mid-Year Fiscal Policy Review speech, printed p16 paras209–210 https://mofep.gov.gh/sites/default/files/budget-statements/2026-Mid-Year-Fiscal-Policy-Review-Speech.pdf (indexed official text confirms full GAT recapitalisation the preceding week; full file too large for web, screenshot unavailable). Issuer and GAT public announcements corroborate event, not amount. No numeric actual or regulatory recognition inferred; separate static scenario overlay, counterfactual no-quantified-injection path. Proposed IPO amount in secondary article is not completion evidence. No new reported rows.

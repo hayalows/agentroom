@@ -2,7 +2,7 @@
   "bank": "umb",
   "status": "CONDITIONAL: actual Sep2025 anchor, FY25 and FY26 missing; not accepted",
   "macro_file": "../../sector/macro-assumptions/macro.csv",
-  "basis": "Q3 2025 actual, estimated Q4 2025 and full 2026; separate estimated anchors, not historical observations. All GHS millions. No additional capital/deposits-for-shares assumed; current regulatory recognition unknown.",
+  "basis": "Counterfactual no-quantified-new-capital path using latest verified September 2025 balances; July 2026 recapitalisation confirmed by Ministry of Finance, actual injection amount/structure/recognition not available. Separate hypothetical 2026 closing capital overlay, no reported event amount inferred.",
   "assumptions": {
     "earning_cash_fraction": 0.25,
     "rwa_density": 0.45,
@@ -47,7 +47,13 @@
       "method": "Same-vintage simple nine-month mean; Q4 2025 flow run-rate unchanged; FY26–30 rate differences apply partial betas to calibrated yields."
     },
     "anchor_gap_note": "FY25 estimated anchor gaps use forward FY26 screening thresholds only, not actual FY25 compliance (dynamic CRR unavailable).",
-    "tax_note": "35% effective scenario rate, not statutory assertion; positive PBT only, no tax credit modeled; actual Q3 tax retained."
+    "tax_note": "35% effective scenario rate, not statutory assertion; positive PBT only, no tax credit modeled; actual Q3 tax retained.",
+    "recap_event": {
+      "source": "Ministry of Finance 2026 Mid-Year Fiscal Policy Review speech, 23 July, printed p16 paragraphs 209–210; indexed official text confirms GAT completed UMB recapitalisation previous week. Full PDF exceeds web limit; screenshot unavailable.",
+      "url": "https://mofep.gov.gh/sites/default/files/budget-statements/2026-Mid-Year-Fiscal-Policy-Review-Speech.pdf",
+      "amount_m": null,
+      "method": "At FY2026 estimated close, separately solve X=max(0,(t*RWA-cap)/(1-t*d)) with t=13% or scenario management target, d=0.45 assumed incremental RWA density, full regulatory recognition of hypothetical cash/equity increment. No P&L or observed recognition assumed; static overlay, not a forecast of actual amount. If 0% incremental RWA, X equals gap; 60% incremental density stress also provided."
+    }
   },
   "scenarios": {
     "base": {

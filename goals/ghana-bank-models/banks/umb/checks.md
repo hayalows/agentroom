@@ -1,6 +1,6 @@
 # UMB conditional model checks
 
-Latest actual September 2025; FY25 audited and all 2026 actuals unavailable. FY25 estimate in anchor-estimates.csv, FY26–30 in forecast.csv. No historical imputation. 180 identities (including all three estimated FY25 anchors), max residual 0.00000000m; 825 forecast rows and 165 anchor rows. Blended yields 12.624%, funding 6.851%; no future extra capital. Proxy CAR explicitly conditional on approval of shares; negative cash/capital gaps flagged. Jan–Sep 2025 rate reference: 91d 16.8800%, 364d 18.9911%; FY25 estimated-anchor gaps are forward FY26 threshold stresses only (dynamic FY25 CRR unknown). FY25 secondary media comparison (not actual): PAT267.2m/equity551.3m/deposits10400m vs base estimates 231.558m/483.463m/8811.238m. Q1 2026 media PAT81m not used as actual.
+Latest actual September 2025; FY25 audited and all 2026 actuals unavailable. FY25 estimate in anchor-estimates.csv, FY26–30 in forecast.csv. No historical imputation. 186 identities (including all three estimated FY25 anchors), max residual 0.00000000m; 846 forecast rows and 165 anchor rows. Blended yields 12.624%, funding 6.851%; no quantified capital event in counterfactual path. July 2026 recapitalisation confirmed by MoF, amount and recognition unknown. Separate FY26 static recap overlay estimates the capital needed to hit the proxy threshold, not actual proceeds. Proxy CAR explicitly conditional on approval of shares; negative cash/capital gaps flagged. Jan–Sep 2025 rate reference: 91d 16.8800%, 364d 18.9911%; FY25 estimated-anchor gaps are forward FY26 threshold stresses only (dynamic FY25 CRR unknown). FY25 secondary media comparison (not actual): PAT267.2m/equity551.3m/deposits10400m vs base estimates 231.558m/483.463m/8811.238m. Q1 2026 media PAT81m not used as actual.
 
 | Scenario | Year | PAT m | Assets m | Equity m | CAR proxy % | Cash m | Capital gap m | Cash proxy gap m |
 |---|---|---:|---:|---:|---:|---:|---:|---:|
@@ -22,3 +22,10 @@ Latest actual September 2025; FY25 audited and all 2026 actuals unavailable. FY2
 | upside | FY2028E | 153.185 | 19158.746 | 1003.282 | 10.099 | 2634.062 | 250.086 | 1580.169 |
 | upside | FY2029E | 139.639 | 22197.398 | 1142.921 | 10.115 | 3233.294 | 288.208 | 1785.028 |
 | upside | FY2030E | 141.362 | 25831.560 | 1284.283 | 9.908 | 3968.585 | 359.444 | 2027.643 |
+
+## July 2026 recapitalisation event: static closing overlay (not actual transaction)
+| Scenario | Min 13% injection m (45% incremental RWA) | Management target injection m | Min injection m (60% incremental RWA) |
+|---|---:|---:|---:|
+| base | 448.813 | 651.642 | 458.306 |
+| downside | 641.645 | 949.422 | 655.216 |
+| upside | 304.083 | 517.570 | 310.515 |
