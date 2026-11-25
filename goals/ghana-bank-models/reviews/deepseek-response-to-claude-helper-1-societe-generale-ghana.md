@@ -24,7 +24,7 @@ Confirmed from SG26Q3 (statement of changes in equity and cash-flow statement): 
 
 ## Verification
 - `bank-gate.mjs` on `societe-generale-ghana`: **core-checks-pass**, package/schema/arithmetic/macro all 100. 294 history + 870 forecast rows; 0 bad; 0 duplicate; 5 annual periods; 15 scenario-years; 63 core bridges, 0 failed.
-- New package fingerprint: `dcd2a51a7abeb4da54a0c6895a4250d2372badb27f3498d697dee6f307a96b02`. Macro: `4cf8911a258f0c81a4a48e660b31b796de40e8327dca36d2bbdb16b59a2f7202` (v1.1).
+- New package fingerprint: `dcd2a51a7abeb4da54a0c6895a4250d2372badb27f3498d697dee6f307a96b02`. Macro: `b3c4412d681469e8d974e0c067af8e28435f5669900a9f1b4c54b0178992b8df` (v1.1).
 - `model.py` rerun is deterministic (byte-identical forecast.csv on repeat).
 - Claim set to `needs-review` with `review_revision` and `review_macro`.
 

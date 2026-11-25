@@ -135,7 +135,7 @@ def _fd(b):
 
 
 NOTE_I = {
-    "interest_income": "Q4 2026 9M run-rate; 2027+ average net loans x loan yield plus average securities x investment yield plus prior-year cash/BoG and inter-bank balances x policy-linked cash yield.",
+    "interest_income": "Q4 2026 9M run-rate; 2027+ blended anchor-implied asset yield (prior interest income / mean earning assets, drifted by the policy-rate ratio) x current earning assets. No component-yield formula.",
     "interest_expense": "Q4 funding sensitivity; later average customer deposits, due-to-banks and borrowings x blended funding cost.",
     "net_interest_income": "Interest income minus interest expense.",
     "fee_commission_income": "9M run-rate plus Q4 scenario, then nominal GDP proxy plus fee-growth spread.",
@@ -307,12 +307,18 @@ for s in SCEN:
         preRwa = rwa(preAssets, b["loans_and_advances_gross"])
         preCap = prevCap + incPAT
         reserve = b["customer_deposits"] * pct(crr)
+        # Statutory reserve transfer: the Bank moves 12.5% of positive annual PAT from retained
+        # earnings to the statutory reserve (source-confirmed FY2024 145.325m / FY2025 201.083m).
+        # It is an internal equity transfer, so total equity and regulatory capital are unaffected.
+        transfer = pct(D["statutory_reserve_transfer_pct"][s]) * max(incPAT, 0.0)
+        distributable = max(0.0, prevB["retained_earnings"] + incPAT - transfer)
         div = max(0.0, min(max(incPAT, 0.0) * pct(D["dividend_payout_pct"][s]),
+                           distributable,
                            preCap - preRwa * pct(carTarget),
                            preCash - reserve))
         b["stated_capital"] = prevB["stated_capital"]
-        b["reserves_other"] = prevB["reserves_other"]
-        b["retained_earnings"] = prevB["retained_earnings"] + incPAT - div
+        b["reserves_other"] = prevB["reserves_other"] + transfer
+        b["retained_earnings"] = prevB["retained_earnings"] + incPAT - div - transfer
         b["total_equity"] = b["stated_capital"] + b["retained_earnings"] + b["reserves_other"]
         b["total_assets"] = b["total_liabilities"] + b["total_equity"]
         b["cash_and_bog_balances"] = b["total_assets"] - noncash(b)
@@ -354,17 +360,25 @@ for s in SCEN:
             emit(s, t, "ratios", k, ratios[k], "%", note)
 
         short = max(0.0, rw * pct(minCAR) - cap)
+        targetGap = max(0.0, rw * pct(carTarget) - cap)
         cashGap = max(0.0, reserve - b["cash_and_bog_balances"])
         allowMove = prevB["loan_loss_allowance"] + loanCharge - b["loan_loss_allowance"]
+        # Full-year dividends memo: the observed 9M-2026 YTD dividend for the anchor year plus the
+        # modelled Q4 payout; for later years the annual payout. Kept separate from the Q4-only row.
+        ytd_div = hist("9M-2026", "x_ytd_dividends") if first else 0.0
         for k, v, n in [
             ("x_regulatory_capital", cap, "Proxy Q3 capital from the reported CAR x estimated RWA plus cumulative retained modelled earnings."),
             ("x_tier1_capital", tier, "Proxy initial Tier 1/capital relation from FY2025; retained modelled earnings."),
             ("x_risk_weighted_assets", rw, "Gross loans plus calibrated FY2025 residual risk intensity x assets minus gross loans."),
             ("x_model_dividends", div, ("Estimated Q4-only dividends for the anchor year (the observed nine-month equity already includes the year-to-date dividend); the annual figure is therefore not comparable to a full-year payout."
-                                        if first else "Estimated annual dividends constrained by the pre-dividend CAR target and cash-reserve proxy.")),
+                                        if first else "Estimated annual dividends constrained by the pre-dividend CAR target, distributable retained earnings and cash-reserve proxy.")),
+            ("x_dividends_paid", ytd_div + div, ("Full-year dividend memo: observed 9M-2026 YTD dividend 1,126.334m plus the estimated Q4 payout. "
+                                                 if first else "Estimated annual dividends paid.")),
+            ("x_statutory_reserve_transfer", transfer, "Estimated transfer of 12.5% of positive PAT from retained earnings to the statutory reserve (source-confirmed FY2024/FY2025); an internal equity transfer that caps distributable earnings."),
             ("x_cash_reserve_proxy", reserve, "CRR x modelled year-end deposits; screening proxy, not actual eligible reserve."),
             ("x_cash_reserve_gap", cashGap, "Positive value is a reserve-proxy shortfall; not automatically funded."),
             ("x_capital_shortfall", short, "Additional regulatory capital needed to reach the shared minimum CAR; not assumed raised."),
+            ("x_capital_target_gap", targetGap, "Additional regulatory capital needed to reach the scenario capital target (shared minimum plus buffer); not assumed raised."),
             ("x_allowance_other_movement", allowMove, "Opening modelled allowance + modelled loan impairment charge - closing modelled allowance; positive implies write-offs/other reductions; the provision floor prevents an unfunded allowance build. FY2026 Q4 only."),
         ]:
             emit(s, t, "balance_sheet", k, v, "GHS millions", n)

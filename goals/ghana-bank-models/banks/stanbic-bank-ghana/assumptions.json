@@ -27,23 +27,15 @@
       "upside": { "spread_pp": 6, "q4_pct": 8 }
     },
     "investment_yield": {
-      "status": "estimated",
-      "method": "Use 50% shared 364-day T-bill and 50% representative medium-term government bond yield; a portfolio mix proxy, not a reported yield.",
-      "reason": "The Bank holds 11,911.532m investment securities at FY2025 (largely government paper); the implied FY2025 securities yield is consistent with a blend of the 364-day bill and the medium-term bond.",
+      "status": "diagnostic",
+      "method": "Diagnostic only, NOT used in the income forecast: 50% shared 364-day T-bill and 50% medium-term government bond yield, reported as x_investment_yield_pct for context.",
+      "reason": "Income uses the blended anchor-implied yield (see blended_asset_yield); this row is retained as a reference for the securities mix.",
       "weights": { "tbill_364d_pct": 0.5, "govt_bond_yield_pct": 0.5 }
-    },
-    "loan_yield": {
-      "status": "estimated",
-      "method": "NOT used directly. The forecast uses a blended anchor-implied asset yield: yield_t = interest_income_{t-1} / mean earning assets, drifted by the shared policy-rate ratio (rate_t / rate_{t-1}). This replaced a component-yield formula (loans, securities and cash each priced separately) that mis-calibrated the forward book, producing a 2026->2027 interest-income jump of about 53%; the blended method is continuous with the observed anchor.",
-      "reason": "FY2024 implied earning-asset yield 15.1% applied to FY2025 average earning assets predicted FY2025 interest income of 3,563.0m versus the actual 3,415.7m (a 4.3% out-of-sample error), which supports the blended-yield approach. The anchor-implied asset yield (9M-2026 annualised) is about 7.0%.",
-      "base": null,
-      "downside": null,
-      "upside": null
     },
     "blended_asset_yield": {
       "status": "estimated",
       "method": "Interest income / mean earning assets (cash+BoG, investment securities, net loans), carried forward for continuity and drifted by the shared policy-rate ratio. Earning assets use the prior-year cash balance as a proxy because the current cash residual is only known after equity is set.",
-      "reason": "Avoids the method-switch jump flagged by review; back-tested on FY2024->FY2025 with a 4.3% error.",
+      "reason": "Avoids the method-switch jump flagged by review; back-tested on FY2024->FY2025 with a 4.3% error. The FY2024 implied earning-asset yield applied to FY2025 average earning assets predicts FY2025 interest income of 3,563.0m versus the actual 3,415.7m. The anchor-implied asset yield (9M-2026 annualised) is about 7.0%.",
       "note": "The cash and BoG residual includes non-earning reserve balances; the blended yield is a portfolio average, not an eligible-reserve rate. Inter-bank balances are not given a separate income line."
     },
     "blended_cost_of_funds": {
@@ -51,22 +43,6 @@
       "method": "Interest expense / mean interest-bearing funding (customer deposits, due to banks, borrowings), carried forward and drifted by the shared policy-rate ratio.",
       "reason": "FY2024 implied funding cost 2.6% applied to FY2025 average funding predicted FY2025 interest expense of 663.8m versus the actual 578.9m; the blended method is continuous with the anchor.",
       "note": "Effective blended cost, not a quoted deposit rate."
-    },
-    "cash_yield_factor": {
-      "status": "estimated",
-      "method": "Cash and BoG balances yield = shared policy rate multiplied by this factor; effective blended yield, not a quoted reserve rate.",
-      "reason": "FY2025 interest income is consistent with a low yield on the large cash/BoG and inter-bank balance relative to the policy rate.",
-      "base": 0.35,
-      "downside": 0.4,
-      "upside": 0.3
-    },
-    "cost_of_funds": {
-      "status": "estimated",
-      "method": "Interest-bearing funding cost = shared policy rate multiplied by this factor; applied to average customer deposits, due to banks and borrowings; effective blended cost, not a quoted deposit rate.",
-      "reason": "FY2025 interest expense 578.935m against average FY2024-FY2025 deposits and borrowings of roughly 25,400m is about 2.3%; 9M-2026 annualises to about 1.3%, reflecting cheap deposit funding.",
-      "base": 0.15,
-      "downside": 0.28,
-      "upside": 0.12
     },
     "fee_growth": {
       "status": "estimated",
@@ -133,11 +109,19 @@
     },
     "dividend_payout_pct": {
       "status": "estimated",
-      "method": "Payout on positive PAT; constrained if a capital target or cash minimum is breached.",
+      "method": "Payout on positive PAT; constrained if a capital target, cash minimum or distributable retained earnings is breached.",
       "reason": "FY2022 dividend 180.000m on a loss (prior-year profit); 9M-2026 dividends paid 1,126.334m. Scenario payout sensitivity.",
       "base": 40,
       "downside": 0,
       "upside": 50
+    },
+    "statutory_reserve_transfer_pct": {
+      "status": "estimated",
+      "method": "Annual transfer from retained earnings to the statutory reserve, as a share of positive PAT. An internal equity transfer, so total equity and regulatory capital are unaffected; it caps distributable retained earnings for dividends.",
+      "reason": "Source-confirmed: FY2024 transfer 145.325m = 12.5% x PAT 1,162.602m; FY2025 201.083m = 12.5% x PAT 1,608.667m (SB24AR/SB25AR note 16.1). The 9M-2026 actual reserve movement is zero; the model applies it at the year-end (Q4) only.",
+      "base": 12.5,
+      "downside": 12.5,
+      "upside": 12.5
     },
     "capital_ratio_target_pct": {
       "status": "estimated",

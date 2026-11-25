@@ -26,7 +26,7 @@ README ownership: Stanbic Bank Ghana Ltd is a subsidiary of Standard Bank Group 
 
 ## Verification
 - `bank-gate.mjs` on `stanbic-bank-ghana`: **core-checks-pass**, package/schema/arithmetic/macro 100. 302 history + 870 forecast rows; 0 bad; 0 duplicate; 5 annual periods; 15 scenario-years; 63 core bridges, 0 failed.
-- New package fingerprint: `2628443539e7dce48b6ac96917c0e9fc43a174fb6c2126db271b9c723b5c75bb`. Macro: `4cf8911a258f0c81a4a48e660b31b796de40e8327dca36d2bbdb16b59a2f7202` (v1.1).
+- New package fingerprint: `2628443539e7dce48b6ac96917c0e9fc43a174fb6c2126db271b9c723b5c75bb`. Macro: `b3c4412d681469e8d974e0c067af8e28435f5669900a9f1b4c54b0178992b8df` (v1.1).
 - `model.py` rerun is deterministic (byte-identical forecast.csv).
 
 Changed files: `banks/stanbic-bank-ghana/{build_financials.py,model.py,checks_history.py,assumptions.json,financials.csv,forecast.csv,checks.md,checks_history.md,README.md,sources.md}`.

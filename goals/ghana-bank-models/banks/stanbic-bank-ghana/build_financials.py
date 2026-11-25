@@ -260,6 +260,8 @@ add("FY2021", "balance_sheet", "x_regulatory_gross_loans", REG21["reg_gross"], "
     "78.277m interest in suspense below, so this is disclosed for transparency and NOT used to re-derive net loans.")
 add("FY2021", "balance_sheet", "x_iis_regulatory", REG21["iis"], "GHS millions", REG21["src"], REG21["pg"],
     "reported", "Interest in suspense on the regulatory basis (risk note 30): 5,466.710 - 78.277 - 203.305 = 5,185.128 net.")
+add("9M-2026", "balance_sheet", "x_ytd_dividends", 1126.334, "GHS millions", "SB26Q3", "1", "reported",
+    "Dividends paid in the nine months to 30 September 2026 (interim statement of changes in equity).")
 
 with open(OUT, "w", newline="", encoding="utf-8") as f:
     w = csv.writer(f)

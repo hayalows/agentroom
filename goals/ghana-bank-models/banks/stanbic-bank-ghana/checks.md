@@ -15,7 +15,7 @@ Recomputed from the committed `financials.csv` and `forecast.csv` by `model.py` 
 
 ## Source and schema checks
 
-- Historical rows: 302; duplicate bank/period/statement/key rows: 0; reported rows missing source/page: 0; unavailable rows with non-blank value: 0.
+- Historical rows: 303; duplicate bank/period/statement/key rows: 0; reported rows missing source/page: 0; unavailable rows with non-blank value: 0.
 - Spot-checks against printed filing pages (visually verified): SB25AR printed p.46 total assets 36,708,145k -> 36708.145; SB25AR printed p.47 PAT 1,608,667k -> 1608.667; SB24AR printed p.49 total assets 32,590,921k -> 32590.921; SB26Q3 9M-2026 total assets 43,243,634k -> 43243.634. All match.
 
 ## Ratios: reported vs recomputed (%)
@@ -35,7 +35,7 @@ Reported CAR/CET1 are the Bank's own summary quantitative disclosures; the audit
 
 All forecast rows are estimated. Currency GHS millions; ratios in percent. Accounting arithmetic is checked before rounding. Cash-reserve and CAR checks are screening proxies, not regulatory returns. A negative cash residual or a positive gap is a flagged financing requirement, not an assumed funding source.
 
-Rows: 870; scenario-years: 15; FY2025 residual RWA density: 0.278715; estimated 9M-2026 RWA: 19993.498; initial proxy regulatory capital: 4662.484 (anchored to the observed 23.32% CAR); FY2025 Tier 1 share of regulatory capital: 0.9137.
+Rows: 915; scenario-years: 15; FY2025 residual RWA density: 0.278715; estimated 9M-2026 RWA: 19993.498; initial proxy regulatory capital: 4662.484 (anchored to the observed 23.32% CAR); FY2025 Tier 1 share of regulatory capital: 0.9137.
 
 | Scenario | Year | Max bridge residual | CAR % | Min CAR % | Capital gap | Cash | CRR proxy | Reserve gap | Dividends |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
