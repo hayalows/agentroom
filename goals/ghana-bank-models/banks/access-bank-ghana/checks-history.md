@@ -1,6 +1,6 @@
 # Access Bank Ghana: preliminary historical checks
 
-Checked 2026-11-25T13:25:13Z against financials.csv at Git blob 04bb9563126f5a784a51b4a87e846edb08d6f329. Values are GHS millions, rounded to 0.001m. This is a history checkpoint, not a complete model or an independent review.
+Checked 2026-11-25T13:25:13Z against financials.csv at Git blob 6a48342c1d8cb72d64dee1f460ccee7fe1787145. Values are GHS millions, rounded to 0.001m. This is a history checkpoint, not a complete model or an independent review.
 
 | Period | Assets minus liabilities minus equity | Net interest residual | Operating income residual | Profit before tax residual | Profit after tax residual |
 |---|---:|---:|---:|---:|---:|
@@ -14,3 +14,5 @@ Checked 2026-11-25T13:25:13Z against financials.csv at Git blob 04bb9563126f5a78
 Operating income in FY2021–25 excludes impairment; in the interim statement the bank's reported operating income includes impairment. Both formula bases were respected when computing PBT. FY2022 income tax is a reported credit and stored as a negative tax expense. Net fee rows were used for FY2021, FY2022 and 9M-2026, with income/expense separately used for FY2023–25. No duplicate period/statement/line_item keys.
 
 Source and scope limitations: the 2025 annual report web copy's signature/final status is unconfirmed; see sources.md. Only selected 9M-2026 values have been visually checked. No forecast, ratio validation, complete source spot checks or peer review have been completed. Reported balances may still need more detailed note-level extraction and cash eligibility does not follow from aggregate cash.
+
+Rechecked after adding source-cited 2021–25 ratios and reported 2024/25 tax charges: balance, NII, operating income and PAT residuals remain zero to 0.001m. Prior tax values did not change; their status changed from derived to reported.
