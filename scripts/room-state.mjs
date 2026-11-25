@@ -35,7 +35,7 @@ export function reviewDecision(text){
 export function reviewVerdict(text){return reviewDecision(text).verdict;}
 export function peerReviewsFor(reviews,task){
   const suffix='-of-'+task.owner+'-'+task.slug+'.md';
-  return reviews.filter(r=>task.owner&&r.file.endsWith(suffix)).map(r=>({...r,reviewer:r.file.slice(0,-suffix.length)})).filter(r=>validAgent(r.reviewer)&&r.reviewer!==task.owner&&r.reviewer!==task.worker).map(r=>({...r,...reviewDecision(r.text)}));
+  return reviews.filter(r=>task.owner&&r.file.endsWith(suffix)).map(r=>({...r,reviewer:r.file.slice(0,-suffix.length)})).filter(r=>validAgent(r.reviewer)&&r.reviewer!==task.owner&&r.reviewer!==task.worker&&!(task.priorStewards||[]).includes(r.reviewer)).map(r=>({...r,...reviewDecision(r.text)}));
 }
 export function readState(root,goal,now=Date.now()){
   if(!slugOK(goal))throw Error('Invalid goal');
@@ -88,8 +88,15 @@ export function readState(root,goal,now=Date.now()){
     const steward=t.claim?.steward;
     // Explicit, task-specific human authorization; preserve original author/review history.
     t.worker=offer?.owner===t.owner&&steward&&steward!==t.owner&&boards.includes(steward)?steward:t.owner;
-    t.handoffAvailable=!!offer&&offer.owner===t.owner&&!!owner?.paused&&t.worker===t.owner&&!['done','released','ownership-conflict'].includes(t.status);
+    t.priorStewards=offer?.owner===t.owner?(offer.previousStewards||[]).filter(id=>boards.includes(id)):[];
     t.workerPaused=!!agents.find(a=>a.id===t.worker)?.paused;
+    t.handoffAvailable=!!offer&&offer.owner===t.owner&&t.workerPaused&&(t.worker===t.owner||offer.replaceSteward===t.worker)&&!['done','released','ownership-conflict'].includes(t.status);
+  }
+  const reviewResolutions={};
+  for(const file of names(path.join(dir,'review-resolutions')).filter(f=>f.endsWith('.json'))){
+    const slug=file.slice(0,-5);
+    try{reviewResolutions[slug]=JSON.parse(read(path.join(dir,'review-resolutions',file)));}
+    catch(e){reviewResolutions[slug]={invalid:true};}
   }
   const messageId=m=>/^\[([a-zA-Z0-9_-]{1,80})\]/.exec(m.text)?.[1]||null;
   const pending=messages.filter(m=>m.kind==='TO'&&!messages.some(a=>a.from===m.to&&a.to===m.from&&time(a.at)>time(m.at)&&a.kind==='ACK'&&(messageId(m)?messageId(a)===messageId(m):!messageId(a))));
@@ -108,5 +115,5 @@ export function readState(root,goal,now=Date.now()){
     return [a.id,{help:h,messages:pending.filter(m=>m.to===a.id).length,repair:repairs.map(t=>t.slug),continue:ongoing.map(t=>t.slug),review:reviewable.map(t=>t.slug),claim:a.open<3?unclaimed.map(t=>t.slug):[],next:h.verify.length?'verify-assistance':repairs.length?'repair':h.assist.length?'assist-peer':ongoing.length?'continue':reviewable.length?'review':a.open<3&&unclaimed.length?'claim':'wait-or-report-blocker'}];
   }));
   const sorted=a=>a.sort((x,y)=>(time(x.at)||0)-(time(y.at)||0));
-  return {goal,availability,generatedAt:new Date(now).toISOString(),agents,tasks,shared,claims,reviews,events:sorted(events),messages:sorted(messages),pending,actionable,help,goalClaimComplete:tasks.length>0&&all.every(t=>t.status==='done'),notes:['Recent check-in is not proof a process is running.','Quiet claims are not released automatically.','Legacy ACK matching is advisory; an acknowledgment may cover multiple messages.','A done claim is an owner assertion until evidence and peer review are checked.']};
+  return {goal,availability,reviewResolutions,generatedAt:new Date(now).toISOString(),agents,tasks,shared,claims,reviews,events:sorted(events),messages:sorted(messages),pending,actionable,help,goalClaimComplete:tasks.length>0&&all.every(t=>t.status==='done'),notes:['Recent check-in is not proof a process is running.','Quiet claims are not released automatically.','Legacy ACK matching is advisory; an acknowledgment may cover multiple messages.','A done claim is an owner assertion until evidence and peer review are checked.']};
 }

@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "notes": "Human reported Gemini out of usage; Claude self-posted pause at 14:17:20Z. Paused is an explicit state, not inferred from silence; resume only by owner's dated RESUME on own board. Handoffs are offers, not assignments until a volunteer records acceptance. Claude Helper 1 also posted an explicit pause and released Prudential at 14:21:49.789Z; no handoff of other owned tasks implied.",
+  "notes": "Human reported Gemini out of usage; Claude self-posted pause at 14:17:20Z. Paused is an explicit state, not inferred from silence; resume only by owner's dated RESUME on own board. Handoffs are offers, not assignments until a volunteer records acceptance. Claude Helper 1 also posted an explicit pause and released Prudential at 14:21:49.789Z; no handoff of other owned tasks implied. Human requested a reduced-team completion policy at the 15:36 work session. Named handoff offers preserve original ownership. Old review blockers require two independent exact-version PASS reviews and finding-by-finding evidence; no automatic waiver.",
   "paused": {
     "gemini": {
       "since": "2026-11-25T14:17:20Z",
@@ -22,11 +22,31 @@
   "handoffs": {
     "calbank": {
       "owner": "gemini",
-      "reason": "Human requested team continue paused agent's unfinished work; outstanding conflicting reviews, retain all findings"
+      "reason": "Human requested team continue paused agent's unfinished work; outstanding conflicting reviews, retain all findings Luna explicitly paused after submission; a new steward may accept to repair identified ROU double count, not waive existing blockers.",
+      "replaceSteward": "gpt-6-luna",
+      "previousStewards": [
+        "gpt-6-luna"
+      ]
     },
     "fidelity-bank-ghana": {
       "owner": "gemini",
       "reason": "Human requested team continue paused agent's unfinished work; preserve source register"
+    },
+    "gtbank-ghana": {
+      "owner": "claude",
+      "reason": "Claude explicitly offered takeover in claim and board; human asks remaining agents to continue. Preserve Claude's original work and Codex review."
+    },
+    "standard-chartered-ghana": {
+      "owner": "claude",
+      "reason": "Human-authorized completion handoff offer for paused builder; preserve corrected history and all reviews; accept before editing."
+    },
+    "qa-sweep": {
+      "owner": "claude",
+      "reason": "Human-authorized shared QA completion handoff; preserve peer reviews."
+    },
+    "sector-rollup": {
+      "owner": "claude",
+      "reason": "Human-authorized shared roll-up completion handoff; accepted-only default and prior findings."
     }
   }
 }
