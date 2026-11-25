@@ -65,13 +65,7 @@ if m['schema']>=3:
         raw=marker.read_bytes()
         txt=raw.decode('utf-8')
         if not re.search(r'\bconditional\b',txt,re.I):continue
-        scope=re.search(r'^Scope:\s*conditional\s*\(([^\r\n]+)\)\s*
-for f,sha in m['outputHashes'].items():assert hashlib.sha256((out/f).read_bytes()).hexdigest()==sha
-assert len({e['packageFingerprint'] for e in m['acceptedEvidence']})==len(accepted)
-print('INDEPENDENT PASS',ncheck,'output cells,',len(pr),'separate diagnostics, max rounding error',maxerr)
-print('EXCLUDED',','.join(sorted(excluded)))
-print('ACCEPTED',len(accepted),'of',len(accepted|excluded))
-,txt,re.I|re.M)
+        scope=re.search(r'^Scope:\s*conditional\s*\(([^\r\n]+)\)\s*$',txt,re.I|re.M)
         label=re.search(r'["“]conditional:\s*([^"”\r\n]+)["”]',txt,re.I)
         gap=scope.group(1) if scope else label.group(1) if label else 'source gap; see scope marker'
         markers[bank]={'label':'conditional: '+gap.strip(),'sha256':hashlib.sha256(raw).hexdigest()}
