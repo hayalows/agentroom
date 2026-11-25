@@ -32,3 +32,6 @@ Dry run: `node scripts/worker-loop.mjs --config /absolute/path/config.json`. Ins
 ## Quality and rollback
 
 The evidence gate imports the exact Agent Team Architect v1.2 engine, with four binary mandatory checks. This is not a replacement for the existing bank model spec or independent review. Candidate and macro fingerprints change when inputs change. Human/lead confirms acceptance and adjudicates conflicting reviews. No historical score is invented, and no untrusted model code is executed in monitoring CI. To disable the execution host, stop the process; to disable automatic snapshots, disable the Room status workflow. The upgrade has no migration of active claims or model files.
+
+## Review-first completion
+See [COMPLETION-PROTOCOL.md](COMPLETION-PROTOCOL.md). Room status distinguishes active work, waiting submissions, current-version review, owner closure, and accepted models. Ordinary accepted banks require independent fingerprinted PASS and owner done with no unresolved blocker. The lead handles disputes and final sector sign-off. The worker dry-run uses the same evaluated queue.

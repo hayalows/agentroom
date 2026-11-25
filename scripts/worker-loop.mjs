@@ -4,7 +4,8 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {spawn,spawnSync} from 'node:child_process';
-import {readState,read,slugOK,hash} from './room-state.mjs';
+import {read,slugOK,hash} from './room-state.mjs';
+import {evaluateRoom} from './completion.mjs';
 import {validAgent} from './participants.mjs';
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const args=process.argv.slice(2),arg=k=>{const i=args.indexOf(k);return i<0?null:args[i+1]};
@@ -18,8 +19,8 @@ const maxTurns=bounded(cfg.maxTurns,1,100,12), maxMinutes=bounded(cfg.maxMinutes
 const workers=cfg.workers||[];
 if(!Array.isArray(workers)||new Set(workers.map(w=>w.id)).size!==workers.length)throw Error('unique workers required');
 for(const w of workers)if(!validAgent(w.id)||!Array.isArray(w.argv)||!w.argv.length||w.argv.some(x=>typeof x!=='string')||w.argv.filter(x=>x==='{prompt}').length!==1||!path.isAbsolute(w.cwd||''))throw Error('worker needs ID, argv with one {prompt} argument, absolute cwd');
-const prompt=(id,s)=>'Resume as '+id+' in online hayalows/agentroom, goal '+goal+'. Read latest AGENTS.md, PROTOCOL-V2.md and all goal state. Do not overwrite another agent. Suggested queue (advisory, recheck): '+JSON.stringify(s.actionable[id]||{})+'. Act on messages, repair, review, continue or claim useful work. Push a checkpoint and continue within authorized session limits. Never treat one bank as the whole goal.';
-if(!execute){const s=readState(root,goal);console.log(JSON.stringify({mode:'dry-run',goal,limits:{maxTurns,maxMinutes,timeout,poll,parallel},workers:workers.map(w=>({id:w.id,prompt:prompt(w.id,s)})),actionable:s.actionable},null,2));process.exit(0);}
+const prompt=(id,s)=>'Resume as '+id+' in online hayalows/agentroom, goal '+goal+'. Read latest AGENTS.md, PROTOCOL-V2.md and all goal state. Do not overwrite another agent. Suggested queue (advisory, recheck): '+JSON.stringify(s.actionable[id]||{})+'. Read COMPLETION-PROTOCOL.md. Act on messages, close verified work, repair, help and review before claiming new work. Push a checkpoint and continue within authorized session limits. Never treat one bank as the whole goal.';
+if(!execute){const s=await evaluateRoom(root,goal);console.log(JSON.stringify({mode:'dry-run',goal,limits:{maxTurns,maxMinutes,timeout,poll,parallel},workers:workers.map(w=>({id:w.id,prompt:prompt(w.id,s)})),actionable:s.actionable},null,2));process.exit(0);}
 if(!cfgPath||cfg.authorized!==true||!workers.length)throw Error('Execution requires explicit authorized=true config and workers');
 if(!cfg.stateDir||!path.isAbsolute(cfg.stateDir)||path.resolve(cfg.stateDir).startsWith(root+path.sep)||path.resolve(cfg.stateDir)===root)throw Error('stateDir must be outside the supervisor checkout');
 for(const w of workers)if(path.resolve(w.cwd)===root||path.resolve(w.cwd).startsWith(root+path.sep))throw Error('worker cwd must not be supervisor checkout');
@@ -46,8 +47,8 @@ try{
   record('run-started',{workers:workers.map(w=>w.id),maxTurns,maxMinutes});
   while(!stopping&&turns<maxTurns&&Date.now()<deadline){
     git('pull','--ff-only','origin','main');
-    const s=readState(root,goal);
-    if(s.goalClaimComplete){record('goal-claims-complete',{note:'stop for independent evidence and lead confirmation'});break;}
+    const s=await evaluateRoom(root,goal);
+    if(s.goalReadyForLead){record('goal-claims-complete',{note:'all bank acceptance gates and claim completion conditions met; final sector sign-off remains with lead'});break;}
     const signature=w=>hash(JSON.stringify({last:s.agents.find(a=>a.id===w.id)?.last,queue:s.actionable[w.id],messages:s.pending.filter(m=>m.to===w.id)}));
     const runnable=workers.filter(w=>s.actionable[w.id]&&s.actionable[w.id].next!=='wait-or-report-blocker'&&(failures.get(w.id)||0)<2&&seen.get(w.id)!==signature(w)).sort((a,b)=>(dispatches.get(a.id)||0)-(dispatches.get(b.id)||0));
     if(!runnable.length){idle++;record('idle',{note:'No fresh eligible checkpoint; do not relaunch unchanged or blocked sessions',idle});if(idle>=3)break;await new Promise(r=>setTimeout(r,Math.min(poll*1000,Math.max(0,deadline-Date.now()))));continue;}

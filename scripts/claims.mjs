@@ -5,6 +5,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { agentsFor, boardEvents } from './participants.mjs';
+import { evaluateRoom } from './completion.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const NL = String.fromCharCode(10);
@@ -49,18 +50,9 @@ const openShared = shared.filter((s) => !taken.has(s));
 md += NL + '## Unclaimed shared pieces' + NL + NL + (openShared.map((s) => '- ' + s).join(NL) || '(none)') + NL;
 
 const participants = agentsFor(gdir, claims.map(c => c.agent));
-const perAgent = Object.create(null);
-for (const c of claims) {
-  perAgent[c.agent] = perAgent[c.agent] || { open: 0, done: 0 };
-  if (c.status === 'done') perAgent[c.agent].done++;
-  else if (c.status !== 'released') perAgent[c.agent].open++;
-}
-md += NL + '## Load per agent (limit: 3 open claims each)' + NL + NL;
-for (const a of participants) {
-  const p = perAgent[a] || { open: 0, done: 0 };
-  md += '- ' + a + ': ' + p.open + ' open' + (p.open > 3 ? ' **(over the limit)**' : '') + ', ' + p.done + ' done' + NL;
-}
-
+const evaluated=await evaluateRoom(root,goal);
+md += NL + '## Load per agent (3 active / 3 submitted waiting)' + NL + NL;
+for(const a of evaluated.agents)md += '- '+a.id+': '+a.activeClaims+' active, '+a.awaitingReview+' submitted waiting, '+a.accepted+' accepted; next: '+evaluated.actionable[a.id].next+NL;
 md += NL + '## Last check-ins' + NL;
 for (const a of participants) {
   const lines = read(path.join(gdir, 'board', a + '.md')).split(NL).filter((l) => /^- \d{4}-/.test(l));

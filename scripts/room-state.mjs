@@ -9,14 +9,31 @@ export const names=d=>fs.existsSync(d)?fs.readdirSync(d,{withFileTypes:true}).fi
 export const hash=s=>crypto.createHash('sha256').update(s).digest('hex');
 const time=s=>Number.isFinite(Date.parse(s))?Date.parse(s):null;
 export function fields(s){return Object.fromEntries(s.replace(/^\uFEFF/,'').split(/\r?\n/).map(l=>/^([a-z_]+):\s*(.*)$/.exec(l.trim())).filter(Boolean).map(m=>[m[1],m[2]]))}
-export function reviewVerdict(text){
-  const matches=[...text.matchAll(/\bverdict\s*(?:\*\*)?\s*:\s*(?:\*\*)?\s*(PASS|CHANGES(?: REQUIRED)?|BLOCK)\b/gi)];
-  const value=matches.at(-1)?.[1]?.toUpperCase()||'unparsed';
-  return value.startsWith('CHANGES')?'CHANGES':value;
+// A mixed history PASS / forecast CHANGES verdict is a blocking verdict.
+export function reviewDecision(text){
+  const lines=text.split(/\r?\n/),hits=[];
+  for(let i=0;i<lines.length;i++){
+    const clean=lines[i].replace(/\*\*/g,'').replace(/__/g,'');
+    const m=/\bverdict\s*:\s*(.*)$/i.exec(clean);
+    if(!m)continue;
+    const v=m[1];
+    const verdict=/\bBLOCK(?:ED)?\b/i.test(v)?'BLOCK':/\bCHANGES(?: REQUIRED)?\b/i.test(v)?'CHANGES':/\bPASS\b/i.test(v)?'PASS':'unparsed';
+    hits.push({i,verdict});
+  }
+  const last=hits.at(-1);
+  if(!last)return {verdict:'unparsed',section:'',packageFingerprint:null,macroFingerprint:null,rounds:0};
+  // Only a fingerprint explicitly recorded in the latest verdict section counts.
+  const section=lines.slice(last.i).join('\n');
+  const label=(kind)=>{
+    const re=new RegExp('^\\s*(?:\\*\\*)?'+kind+' SHA-256 fingerprint\\s*:\\s*(?:\\*\\*)?\\s*\x60?([a-f0-9]{64})\\b','im');
+    return re.exec(section)?.[1]?.toLowerCase()||null;
+  };
+  return {verdict:last.verdict,section,packageFingerprint:label('Package'),macroFingerprint:label('Macro'),rounds:hits.length};
 }
+export function reviewVerdict(text){return reviewDecision(text).verdict;}
 export function peerReviewsFor(reviews,task){
   const suffix='-of-'+task.owner+'-'+task.slug+'.md';
-  return reviews.filter(r=>task.owner&&r.file.endsWith(suffix)).map(r=>({...r,reviewer:r.file.slice(0,-suffix.length)})).filter(r=>validAgent(r.reviewer)&&r.reviewer!==task.owner).map(r=>({...r,verdict:reviewVerdict(r.text)}));
+  return reviews.filter(r=>task.owner&&r.file.endsWith(suffix)).map(r=>({...r,reviewer:r.file.slice(0,-suffix.length)})).filter(r=>validAgent(r.reviewer)&&r.reviewer!==task.owner).map(r=>({...r,...reviewDecision(r.text)}));
 }
 export function readState(root,goal,now=Date.now()){
   if(!slugOK(goal))throw Error('Invalid goal');

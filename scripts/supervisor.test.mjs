@@ -4,6 +4,7 @@ import os from 'node:os';
 import path from 'node:path';
 import {readState,fields,reviewVerdict} from './room-state.mjs';
 import {gateBank,csv} from './bank-gate.mjs';
+import {evaluateRoom,assessBank} from './completion.mjs';
 const root=fs.mkdtempSync(path.join(os.tmpdir(),'room-supervisor-')),goal='test-bank',dir=path.join(root,'goals',goal);
 const put=(p,s)=>{const f=path.join(dir,p);fs.mkdirSync(path.dirname(f),{recursive:true});fs.writeFileSync(f,s);};
 try{
@@ -48,6 +49,30 @@ try{
   const fail=await gateBank(root,goal,task);assert.equal(fail.status,'failed');assert.equal(fail.checks.arithmetic.score,0);assert.notEqual(pass.fingerprint,fail.fingerprint);
   put('banks/bank-a/forecast.csv',forecast);put('sector/macro-assumptions/macro.csv','changed fixture');
   assert.notEqual((await gateBank(root,goal,task)).macroFingerprint,pass.macroFingerprint);
+  // Mixed verdicts must block and previous round hashes must not bind a new round.
+  assert.equal(reviewVerdict('**Verdict:** history **PASS** (fine). Forecast **CHANGES REQUIRED** (fix).'),'CHANGES');
+  put('sector/macro-assumptions/macro.csv','fixture');
+  const evidence='Package SHA-256 fingerprint: '+pass.fingerprint+'\nMacro SHA-256 fingerprint: '+pass.macroFingerprint+'\n';
+  put('reviews/codex-of-deepseek-bank-a.md','Verdict: PASS\n'+evidence+'\n## Round 2\nVerdict: PASS\n');
+  let v=await evaluateRoom(root,goal,now);
+  assert.equal(v.tasks[0].reviewStage,'current-version-review-required');
+  assert.equal(v.agents.find(a=>a.id==='deepseek').activeClaims,0);
+  assert.equal(v.agents.find(a=>a.id==='deepseek').awaitingReview,1);
+  assert.equal(v.actionable.codex.next,'review');
+  assert.equal(v.actionable.codex.claim.length,0);
+  put('reviews/codex-of-deepseek-bank-a.md','Verdict: PASS\n'+evidence);
+  v=await evaluateRoom(root,goal,now);assert.equal(v.tasks[0].reviewStage,'owner-close-required');assert.equal(v.actionable.deepseek.next,'close-reviewed-claim');
+  put('claims/bank-a.md','agent: deepseek\nstatus: done\n');
+  v=await evaluateRoom(root,goal,now);assert.equal(v.tasks[0].acceptance,'accepted');
+  assert.equal(v.tasks[0].completionEvidence.reviewer,'codex');
+  put('sector/macro-assumptions/macro.csv','new macro');
+  v=await evaluateRoom(root,goal,now);assert.equal(v.tasks[0].acceptance,'not-accepted');assert.equal(v.tasks[0].reviewStage,'current-version-review-required');
+  put('sector/macro-assumptions/macro.csv','fixture');
+  put('claims/bank-a.md','agent: deepseek\nstatus: needs-review\nreview_revision: '+pass.fingerprint+'\nreview_macro: '+pass.macroFingerprint+'\n');
+  put('reviews/codex-of-deepseek-bank-a.md','Verdict: CHANGES REQUIRED\n');
+  v=await evaluateRoom(root,goal,now);assert.equal(v.tasks[0].reviewStage,'re-review-required');assert(v.actionable.codex.review.includes('bank-a'));assert.equal(v.tasks[0].acceptance,'not-accepted');
+  put('claims/bank-a.md','agent: deepseek\nstatus: needs-review\n');
+  v=await evaluateRoom(root,goal,now);assert.equal(v.tasks[0].reviewStage,'repairs-required');assert.equal(v.agents.find(a=>a.id==='deepseek').activeClaims,1);
   fs.unlinkSync(path.join(dir,'banks/bank-a/forecast.csv'));assert.equal((await gateBank(root,goal,task)).status,'incomplete');
   console.log('PASS: discovery, BOM, chronology, advisory queue, conflict detection, CSV, evidence gate pass/fail, fingerprints, incomplete model');
 }finally{fs.rmSync(root,{recursive:true,force:true});}

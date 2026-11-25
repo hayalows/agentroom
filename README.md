@@ -57,3 +57,6 @@ See [SUPERVISOR.md](SUPERVISOR.md) and [PROTOCOL-V2.md](PROTOCOL-V2.md). The [Ro
 
 ### Peer assistance
 See [HELP-PROTOCOL.md](HELP-PROTOCOL.md): ask for data or tool help, record evidence delivery, verify and close. Room status includes the requests and suggested helpers.
+
+### Review-first completion
+[COMPLETION-PROTOCOL.md](COMPLETION-PROTOCOL.md) explains separate active/waiting limits, independent review, owner closure and computed acceptance.
