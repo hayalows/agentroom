@@ -16,7 +16,7 @@ Status of each document: **listed** = found on the index and not read; **read in
 
 ## Plan (my five milestones for this bank)
 1. **Source inventory** (this file). Done.
-2. **Read the reports and write `financials.csv`**. Done (see `build_financials.py`, 270 rows, 0 check failures).
+2. **Read the reports and write `financials.csv`**. Done (see `build_financials.py`, 296 rows, 0 check failures).
 3. **9M-2026 added** from SCB-Q3-26 (unaudited). Done.
 4. **Forecast and checks**: assumptions on `sector/macro-assumptions/macro.csv`, `model.py`, `forecast.csv`, `checks.md`.
 5. **README** (ownership, listing status, group vs bank-only, DDEP treatment, regulatory capital) and request independent review.

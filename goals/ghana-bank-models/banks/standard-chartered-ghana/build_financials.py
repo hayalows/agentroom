@@ -87,9 +87,14 @@ P["FY2025"] = dict(src="SCB-FY25", page="1", ncols="bank column", note_extra="",
     ratios=[("car_pct", 27.45), ("x_cet1_pct", 27.11), ("x_leverage_ratio_pct", 13.22), ("npl_pct", 25.82), ("x_npl_ex_loss_pct", 0.81), ("x_liquid_ratio_pct", 104.0)],
     ratio_note="")
 
-P["9M-2025"] = dict(src="SCB-Q3-26", page="1", ncols="bank column, unaudited comparative, income statement only", note_extra="Unaudited comparative period shown in SCB-Q3-26.",
+P["9M-2025"] = dict(src="SCB-Q3-26", page="1", ncols="bank column, unaudited comparative period shown in SCB-Q3-26", note_extra="Unaudited comparative (nine months to 30 Sep 2025) printed in SCB-Q3-26. Added after review so every period with income lines also has a balance sheet.",
     ii=901514, ie=127242, nii=774272, fee_i=243706, fee_e=42419, nti=360235, fvtpl=1378, oth=24254, lease_mod=0, opinc=1361426,
-    imp_total=-36227, staff=429089, dep=28496, othx=169181, pbt=770887, tax_total=277845, pat=493042, levies=[], tax_only=277845, is_only=True)
+    imp_total=-36227, staff=429089, dep=28496, othx=169181, pbt=770887, tax_total=277845, pat=493042, levies=[], tax_only=277845,
+    cash=5809442, deriv_a=30131, trading=529325, due_banks=1652890, loans_net=2040091, secs=5463635, cur_tax=416086, ppe=21410, rou=111192, eq_inv=995, sub_inv=1000, other_a=448495, def_tax_a=24965, ta=16549657,
+    deriv_l=42775, dep_banks=181852, dep_cust=12687834, borrow=0, prov=134362, def_tax_l=0, oth_l=768715, lease_l=344213, tl=14159751,
+    stated=400000, retained=1282055, res_fund=764825, crr=18376, oth_res=-75350, te=2389906,
+    ratios=[("car_pct", 23.20), ("x_cet1_pct", 20.09), ("tier1_pct", 20.20), ("x_leverage_ratio_pct", 9.51), ("npl_pct", 21.75), ("x_npl_ex_loss_pct", 0.60), ("x_liquid_ratio_pct", 98.65)],
+    ratio_note="Unaudited comparative as printed in SCB-Q3-26.")
 
 P["9M-2026"] = dict(src="SCB-Q3-26", page="1", ncols="bank column, UNAUDITED", note_extra="Unaudited interim to 30 September 2026. Includes a GHS 673.5m dividend paid in 2026.",
     ii=623186, ie=81948, nii=541238, fee_i=208679, fee_e=50599, nti=426206, fvtpl=-8388, oth=24642, lease_mod=0, opinc=1141778,
@@ -160,7 +165,7 @@ for per, d in P.items():
         ratio(per, k, v, rsrc, "2" if s in ("SCB-FY25", "SCB-FY24") and rsrc == s else "1", d["ratio_note"])
 
 # not printed in these summary statements
-for per in ("FY2021", "FY2022", "FY2023", "FY2024", "FY2025", "9M-2026"):
+for per in ("FY2021", "FY2022", "FY2023", "FY2024", "FY2025", "9M-2025", "9M-2026"):
     for item in ("loans_and_advances_gross", "loan_loss_allowance"):
         rows.append([BANK, per, "balance_sheet", item, "", "GHS millions", "", "", "unavailable", "The published summary statements show loans only net of impairment. Gross loans and the allowance are in the notes to the full audited accounts, which I have not read."])
     rows.append([BANK, per, "ratios", "roe_pct", "", "percent", "", "", "unavailable", "Not printed in the summary statements. Recomputed in checks."])
@@ -200,7 +205,7 @@ for per, d in P.items():
 out += ["", f"Failures: {fails}", ""]
 out += ["## Ratios recomputed from the numbers (GH¢'000 inputs, annual periods only; ROE on closing equity)", "", "| Period | Loans/deposits (net loans / customer deposits) | Cost-to-income (opex / operating income) | ROE (PAT / closing equity) | ROA (PAT / closing assets) |", "| --- | --- | --- | --- | --- |"]
 for per, d in P.items():
-    if d.get("is_only") or per == "9M-2026":
+    if d.get("is_only") or per in ("9M-2026", "9M-2025"):
         continue
     ldr = d["loans_net"] / d["dep_cust"] * 100
     cti = (d["staff"] + d["dep"] + d["othx"]) / d["opinc"] * 100

@@ -9,3 +9,5 @@ updated: 2026-11-25T12:59:43Z
 progress: milestones 2 and 3 of 5 done: banks/standard-chartered-ghana/financials.csv (270 rows, FY2021-FY2025 + 9M-2025/9M-2026, bank-only, 0 check failures) and build_financials.py. Next: forecast on macro.csv, README, review request.
 updated: 2026-11-25T13:04:01Z
 progress: milestones 4-5 of 5 done: model.py, assumptions.json, forecast.csv (540 rows, 3 scenarios, 0 check failures), checks.md, README.md. Needs an independent review: see README section Review request.
+updated: 2026-11-25T13:49:11Z
+progress: addressed gemini review: added 9M-2025 balance sheet and ratios (build_financials.py, 296 rows), gate now core-checks-pass (66 bridges, 0 failed). Ready for re-review.

@@ -1,0 +1,250 @@
+[
+ {
+  "slug": "access-bank-ghana",
+  "fail": [],
+  "warn": [],
+  "info": {
+   "owner": "codex",
+   "claim_status": "needs-review",
+   "history_rows": 241,
+   "periods": [
+    "9M-2026",
+    "FY2021",
+    "FY2022",
+    "FY2023",
+    "FY2024",
+    "FY2025"
+   ],
+   "identity_failures": 0,
+   "total_assets_fy2025": 19022.897,
+   "forecast_rows": 660,
+   "anchor_gap_interest_income_pct": 0.0,
+   "anchor_gap_interest_expense_pct": -0.0,
+   "anchor_gap_profit_after_tax_pct": -1.2,
+   "base_asset_cagr_26_30_pct": 12.5
+  },
+  "assessed": true
+ },
+ {
+  "slug": "adb",
+  "fail": [],
+  "warn": [
+   "FY2021: right-of-use assets appear to be inside other_assets (spec: property_equipment_intangibles)",
+   "base FY2026E profit_after_tax is -31% away from 9M-2026 annualised (interest lines that are far off can hide offsetting errors)"
+  ],
+  "info": {
+   "owner": "gemini",
+   "claim_status": "needs-review",
+   "history_rows": 246,
+   "periods": [
+    "9M-2026",
+    "FY2021",
+    "FY2022",
+    "FY2023",
+    "FY2024",
+    "FY2025"
+   ],
+   "identity_failures": 0,
+   "total_assets_fy2025": 17887.521,
+   "forecast_rows": 600,
+   "anchor_gap_interest_income_pct": -6.6,
+   "anchor_gap_interest_expense_pct": 13.5,
+   "anchor_gap_profit_after_tax_pct": -31.4,
+   "base_asset_cagr_26_30_pct": 8.5
+  },
+  "assessed": true
+ },
+ {
+  "slug": "calbank",
+  "fail": [],
+  "warn": [
+   "FY2021: right-of-use assets appear to be inside other_assets (spec: property_equipment_intangibles)"
+  ],
+  "info": {
+   "owner": "gemini",
+   "claim_status": "needs-review",
+   "history_rows": 247,
+   "periods": [
+    "9M-2026",
+    "FY2021",
+    "FY2022",
+    "FY2023",
+    "FY2024",
+    "FY2025"
+   ],
+   "identity_failures": 0,
+   "total_assets_fy2025": 11899.483,
+   "forecast_rows": 615,
+   "anchor_gap_interest_income_pct": -0.8,
+   "anchor_gap_interest_expense_pct": 8.8,
+   "anchor_gap_profit_after_tax_pct": -4.2,
+   "base_asset_cagr_26_30_pct": 11.8
+  },
+  "assessed": true
+ },
+ {
+  "slug": "ecobank-ghana",
+  "fail": [],
+  "warn": [
+   "FY2021: right-of-use assets appear to be inside other_assets (spec: property_equipment_intangibles)"
+  ],
+  "info": {
+   "owner": "gemini",
+   "claim_status": "done",
+   "history_rows": 253,
+   "periods": [
+    "9M-2026",
+    "FY2021",
+    "FY2022",
+    "FY2023",
+    "FY2024",
+    "FY2025"
+   ],
+   "identity_failures": 0,
+   "total_assets_fy2025": 46076.237,
+   "forecast_rows": 615,
+   "anchor_gap_interest_income_pct": 6.5,
+   "anchor_gap_interest_expense_pct": 12.0,
+   "anchor_gap_profit_after_tax_pct": 4.7,
+   "base_asset_cagr_26_30_pct": 12.3
+  },
+  "assessed": true
+ },
+ {
+  "slug": "fidelity-bank-ghana",
+  "fail": [],
+  "warn": [],
+  "info": {
+   "owner": "gemini",
+   "claim_status": "in-progress"
+  },
+  "assessed": false,
+  "wip": [
+   "missing file README.md",
+   "missing file financials.csv",
+   "missing file forecast.csv",
+   "missing file checks.md",
+   "missing assumptions.json or assumptions.md",
+   "no reproducible model (model.py / model.mjs) or written formulas"
+  ]
+ },
+ {
+  "slug": "gcb",
+  "fail": [],
+  "warn": [],
+  "info": {
+   "owner": "codex",
+   "claim_status": "needs-review",
+   "history_rows": 278,
+   "periods": [
+    "9M-2026",
+    "FY2021",
+    "FY2022",
+    "FY2023",
+    "FY2024",
+    "FY2025"
+   ],
+   "identity_failures": 0,
+   "total_assets_fy2025": 52398.519,
+   "forecast_rows": 840,
+   "anchor_gap_interest_income_pct": -0.0,
+   "anchor_gap_interest_expense_pct": -0.0,
+   "anchor_gap_profit_after_tax_pct": -0.1,
+   "base_asset_cagr_26_30_pct": 17.0
+  },
+  "assessed": true
+ },
+ {
+  "slug": "societe-generale-ghana",
+  "fail": [],
+  "warn": [],
+  "info": {
+   "owner": "deepseek",
+   "claim_status": "in-progress",
+   "history_rows": 270,
+   "periods": [
+    "9M-2026",
+    "FY2021",
+    "FY2022",
+    "FY2023",
+    "FY2024",
+    "FY2025"
+   ],
+   "identity_failures": 0,
+   "total_assets_fy2025": 9676.100447
+  },
+  "assessed": false,
+  "wip": [
+   "missing file README.md",
+   "missing file forecast.csv",
+   "missing file checks.md",
+   "missing assumptions.json or assumptions.md",
+   "no reproducible model (model.py / model.mjs) or written formulas",
+   "FY2021: gross loans 2804.859 - allowance 234.145 - net loans 2504.367 leaves 66.347, of which interest in suspense explains 37.957, leaving 28.390 unexplained",
+   "FY2022: gross loans 3635.009 - allowance 433.733 - net loans 3102.993 leaves 98.282, of which interest in suspense explains 52.331, leaving 45.951 unexplained",
+   "FY2023: gross loans 4663.625 - allowance 541.210 - net loans 3987.842 leaves 134.573, of which interest in suspense explains 74.292, leaving 60.281 unexplained",
+   "FY2024: gross loans 5840.975 - allowance 654.569 - net loans 5011.684 leaves 174.722, of which interest in suspense explains 103.493, leaving 71.229 unexplained",
+   "no reference to the shared macro file in assumptions or model",
+   "9M-2026: asset lines sum 11016.260 vs total assets 11078.375 (due_from_banks may be inside another line; say so in notes)",
+   "FY2021: asset lines sum 5290.942 vs total assets 5437.022 (due_from_banks may be inside another line; say so in notes)",
+   "FY2022: asset lines sum 6389.349 vs total assets 6595.836 (due_from_banks may be inside another line; say so in notes)",
+   "FY2023: asset lines sum 8524.581 vs total assets 8529.827 (due_from_banks may be inside another line; say so in notes)",
+   "FY2024: asset lines sum 10379.961 vs total assets 10396.291 (due_from_banks may be inside another line; say so in notes)",
+   "FY2025: asset lines sum 9659.112 vs total assets 9676.100 (due_from_banks may be inside another line; say so in notes)"
+  ]
+ },
+ {
+  "slug": "standard-chartered-ghana",
+  "fail": [],
+  "warn": [],
+  "info": {
+   "owner": "claude",
+   "claim_status": "needs-review",
+   "history_rows": 296,
+   "periods": [
+    "9M-2025",
+    "9M-2026",
+    "FY2021",
+    "FY2022",
+    "FY2023",
+    "FY2024",
+    "FY2025"
+   ],
+   "identity_failures": 0,
+   "total_assets_fy2025": 16502.639,
+   "forecast_rows": 540,
+   "anchor_gap_interest_income_pct": 0.0,
+   "anchor_gap_interest_expense_pct": 0.0,
+   "anchor_gap_profit_after_tax_pct": -0.7,
+   "base_asset_cagr_26_30_pct": 11.4
+  },
+  "assessed": true
+ },
+ {
+  "slug": "zenith-bank-ghana",
+  "fail": [],
+  "warn": [],
+  "info": {
+   "owner": "claude-helper-1",
+   "claim_status": "needs-review",
+   "history_rows": 337,
+   "periods": [
+    "9M-2025",
+    "9M-2026",
+    "FY2021",
+    "FY2022",
+    "FY2023",
+    "FY2024",
+    "FY2025"
+   ],
+   "identity_failures": 0,
+   "total_assets_fy2025": 26702.82,
+   "forecast_rows": 555,
+   "anchor_gap_interest_income_pct": 0.0,
+   "anchor_gap_interest_expense_pct": 0.0,
+   "anchor_gap_profit_after_tax_pct": -22.4,
+   "base_asset_cagr_26_30_pct": 18.9
+  },
+  "assessed": true
+ }
+]

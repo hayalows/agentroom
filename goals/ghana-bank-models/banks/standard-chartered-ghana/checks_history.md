@@ -52,6 +52,10 @@ All figures GH¢'000 unless stated. A check passes when the difference is within
 | 9M-2025 | operating income = NII + net fees + trading + other | 1,361,426 | 1,361,426 | 0 | PASS |
 | 9M-2025 | PBT = operating income - impairment - operating expenses | 770,887 | 770,887 | 0 | PASS |
 | 9M-2025 | PAT = PBT - total tax and levies | 493,042 | 493,042 | 0 | PASS |
+| 9M-2025 | total assets = sum of asset lines | 16,549,657 | 16,549,657 | 0 | PASS |
+| 9M-2025 | total liabilities = sum of liability lines | 14,159,751 | 14,159,751 | 0 | PASS |
+| 9M-2025 | total equity = stated + retained + reserves | 2,389,906 | 2,389,906 | 0 | PASS |
+| 9M-2025 | total assets = total liabilities + total equity | 16,549,657 | 16,549,657 | 0 | PASS |
 | 9M-2026 | NII = interest income - interest expense | 541,238 | 541,238 | 0 | PASS |
 | 9M-2026 | operating income = NII + net fees + trading + other | 1,141,778 | 1,141,778 | 0 | PASS |
 | 9M-2026 | PBT = operating income - impairment - operating expenses | 554,737 | 554,737 | 0 | PASS |

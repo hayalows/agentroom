@@ -198,7 +198,7 @@ standard-chartered-ghana,FY2025,ratios,x_leverage_ratio_pct,13.22,percent,SCB-FY
 standard-chartered-ghana,FY2025,ratios,npl_pct,25.82,percent,SCB-FY25,2,reported,
 standard-chartered-ghana,FY2025,ratios,x_npl_ex_loss_pct,0.81,percent,SCB-FY25,2,reported,
 standard-chartered-ghana,FY2025,ratios,x_liquid_ratio_pct,104.00,percent,SCB-FY25,2,reported,
-standard-chartered-ghana,9M-2025,income_statement,interest_income,901.514,GHS millions,SCB-Q3-26,1,reported,"Bank-only (bank column, unaudited comparative, income statement only). Unaudited comparative period shown in SCB-Q3-26."
+standard-chartered-ghana,9M-2025,income_statement,interest_income,901.514,GHS millions,SCB-Q3-26,1,reported,"Bank-only (bank column, unaudited comparative period shown in SCB-Q3-26). Unaudited comparative (nine months to 30 Sep 2025) printed in SCB-Q3-26. Added after review so every period with income lines also has a balance sheet."
 standard-chartered-ghana,9M-2025,income_statement,interest_expense,127.242,GHS millions,SCB-Q3-26,1,reported,Printed in brackets (an expense); stored positive.
 standard-chartered-ghana,9M-2025,income_statement,net_interest_income,774.272,GHS millions,SCB-Q3-26,1,reported,
 standard-chartered-ghana,9M-2025,income_statement,fee_commission_income,243.706,GHS millions,SCB-Q3-26,1,reported,
@@ -213,6 +213,29 @@ standard-chartered-ghana,9M-2025,income_statement,impairment_charge,-36.227,GHS 
 standard-chartered-ghana,9M-2025,income_statement,profit_before_tax,770.887,GHS millions,SCB-Q3-26,1,reported,
 standard-chartered-ghana,9M-2025,income_statement,income_tax,277.845,GHS millions,SCB-Q3-26,1,reported,Income tax expense; stored positive.
 standard-chartered-ghana,9M-2025,income_statement,profit_after_tax,493.042,GHS millions,SCB-Q3-26,1,reported,Printed as 'Profit/(loss) for the year/period'.
+standard-chartered-ghana,9M-2025,balance_sheet,cash_and_bog_balances,5809.442,GHS millions,SCB-Q3-26,1,reported,Printed as 'Cash and cash equivalents'; includes mandatory reserve deposits at the Bank of Ghana (SCB-FY25 cash-flow note: reserves excluded from cash flow cash). Bank-only.
+standard-chartered-ghana,9M-2025,balance_sheet,due_from_banks,1652.890,GHS millions,SCB-Q3-26,1,reported,Printed as 'Due from other banks' (FY2021: 'Loans to other banks'). 0 where no line is printed.
+standard-chartered-ghana,9M-2025,balance_sheet,investment_securities,5463.635,GHS millions,SCB-Q3-26,1,reported,
+standard-chartered-ghana,9M-2025,balance_sheet,loans_and_advances_net,2040.091,GHS millions,SCB-Q3-26,1,reported,Printed 'Loans and advances to customers' (net of impairment).
+standard-chartered-ghana,9M-2025,balance_sheet,property_equipment_intangibles,132.602,GHS millions,SCB-Q3-26,1,derived,Property and equipment 21410 + right-of-use asset 111192 (GH¢'000). FY2021 prints one combined line.
+standard-chartered-ghana,9M-2025,balance_sheet,other_assets,1450.997,GHS millions,SCB-Q3-26,1,derived,Sum of (GH¢'000): derivative assets 30131; non-pledged trading assets 529325; current tax assets 416086; deferred tax asset 24965; equity investments 995; investment in subsidiaries 1000; other assets 448495
+standard-chartered-ghana,9M-2025,balance_sheet,total_assets,16549.657,GHS millions,SCB-Q3-26,1,reported,
+standard-chartered-ghana,9M-2025,balance_sheet,customer_deposits,12687.834,GHS millions,SCB-Q3-26,1,reported,
+standard-chartered-ghana,9M-2025,balance_sheet,due_to_banks,181.852,GHS millions,SCB-Q3-26,1,reported,Printed as 'Deposits from banks'.
+standard-chartered-ghana,9M-2025,balance_sheet,borrowings,0.000,GHS millions,SCB-Q3-26,1,derived,Short-term borrowings / borrowings. 0 where no line is printed in the statement of financial position.
+standard-chartered-ghana,9M-2025,balance_sheet,other_liabilities,1290.065,GHS millions,SCB-Q3-26,1,derived,Sum of (GH¢'000): derivative liabilities 42775; provisions 134362; deferred tax liabilities 0; other liabilities 768715; lease liabilities 344213
+standard-chartered-ghana,9M-2025,balance_sheet,total_liabilities,14159.751,GHS millions,SCB-Q3-26,1,reported,
+standard-chartered-ghana,9M-2025,balance_sheet,stated_capital,400.000,GHS millions,SCB-Q3-26,1,reported,
+standard-chartered-ghana,9M-2025,balance_sheet,retained_earnings,1282.055,GHS millions,SCB-Q3-26,1,reported,Printed as 'Retained earnings' or 'Income surplus'.
+standard-chartered-ghana,9M-2025,balance_sheet,reserves_other,707.851,GHS millions,SCB-Q3-26,1,derived,Reserve fund 764825 + credit risk reserve 18376 + other reserves -75350 (GH¢'000).
+standard-chartered-ghana,9M-2025,balance_sheet,total_equity,2389.906,GHS millions,SCB-Q3-26,1,reported,Printed as 'Total shareholders' funds'.
+standard-chartered-ghana,9M-2025,ratios,car_pct,23.20,percent,SCB-Q3-26,1,reported,Unaudited comparative as printed in SCB-Q3-26.
+standard-chartered-ghana,9M-2025,ratios,x_cet1_pct,20.09,percent,SCB-Q3-26,1,reported,Unaudited comparative as printed in SCB-Q3-26.
+standard-chartered-ghana,9M-2025,ratios,tier1_pct,20.20,percent,SCB-Q3-26,1,reported,Unaudited comparative as printed in SCB-Q3-26.
+standard-chartered-ghana,9M-2025,ratios,x_leverage_ratio_pct,9.51,percent,SCB-Q3-26,1,reported,Unaudited comparative as printed in SCB-Q3-26.
+standard-chartered-ghana,9M-2025,ratios,npl_pct,21.75,percent,SCB-Q3-26,1,reported,Unaudited comparative as printed in SCB-Q3-26.
+standard-chartered-ghana,9M-2025,ratios,x_npl_ex_loss_pct,0.60,percent,SCB-Q3-26,1,reported,Unaudited comparative as printed in SCB-Q3-26.
+standard-chartered-ghana,9M-2025,ratios,x_liquid_ratio_pct,98.65,percent,SCB-Q3-26,1,reported,Unaudited comparative as printed in SCB-Q3-26.
 standard-chartered-ghana,9M-2026,income_statement,interest_income,623.186,GHS millions,SCB-Q3-26,1,reported,"Bank-only (bank column, UNAUDITED). Unaudited interim to 30 September 2026. Includes a GHS 673.5m dividend paid in 2026."
 standard-chartered-ghana,9M-2026,income_statement,interest_expense,81.948,GHS millions,SCB-Q3-26,1,reported,Printed in brackets (an expense); stored positive.
 standard-chartered-ghana,9M-2026,income_statement,net_interest_income,541.238,GHS millions,SCB-Q3-26,1,reported,
@@ -266,6 +289,9 @@ standard-chartered-ghana,FY2024,ratios,roe_pct,,percent,,,unavailable,Not printe
 standard-chartered-ghana,FY2025,balance_sheet,loans_and_advances_gross,,GHS millions,,,unavailable,"The published summary statements show loans only net of impairment. Gross loans and the allowance are in the notes to the full audited accounts, which I have not read."
 standard-chartered-ghana,FY2025,balance_sheet,loan_loss_allowance,,GHS millions,,,unavailable,"The published summary statements show loans only net of impairment. Gross loans and the allowance are in the notes to the full audited accounts, which I have not read."
 standard-chartered-ghana,FY2025,ratios,roe_pct,,percent,,,unavailable,Not printed in the summary statements. Recomputed in checks.
+standard-chartered-ghana,9M-2025,balance_sheet,loans_and_advances_gross,,GHS millions,,,unavailable,"The published summary statements show loans only net of impairment. Gross loans and the allowance are in the notes to the full audited accounts, which I have not read."
+standard-chartered-ghana,9M-2025,balance_sheet,loan_loss_allowance,,GHS millions,,,unavailable,"The published summary statements show loans only net of impairment. Gross loans and the allowance are in the notes to the full audited accounts, which I have not read."
+standard-chartered-ghana,9M-2025,ratios,roe_pct,,percent,,,unavailable,Not printed in the summary statements. Recomputed in checks.
 standard-chartered-ghana,9M-2026,balance_sheet,loans_and_advances_gross,,GHS millions,,,unavailable,"The published summary statements show loans only net of impairment. Gross loans and the allowance are in the notes to the full audited accounts, which I have not read."
 standard-chartered-ghana,9M-2026,balance_sheet,loan_loss_allowance,,GHS millions,,,unavailable,"The published summary statements show loans only net of impairment. Gross loans and the allowance are in the notes to the full audited accounts, which I have not read."
 standard-chartered-ghana,9M-2026,ratios,roe_pct,,percent,,,unavailable,Not printed in the summary statements. Recomputed in checks.
