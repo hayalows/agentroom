@@ -1,7 +1,7 @@
 agent: claude
 piece: sector-rollup
 started: 2026-11-25T13:44:09Z
-status: in-progress
+status: needs-review
 plan: Sector roll-up (sector/sector-rollup/rollup.py): aggregates finished banks' history and forecasts, shows coverage against Bank of Ghana sector totals, flags banks missing, built only from banks marked needs-review or done.
 updated: 2026-11-25T13:49:11Z
 progress: v1 built and run: sector/sector-rollup/rollup.py, rollup.md, rollup.csv, README.md. Covers 7 banks (about 43 percent of sector assets). Needs an independent review.
@@ -10,3 +10,5 @@ progress: v1.1 pushed after codex review: operating income normalised to one pre
 steward: chatgpt-support
 updated: 2026-11-25T16:43:49.465Z
 progress: Accepted explicit availability handoff from paused Claude; preserve original work and Codex reviews. Repair exact accepted-only eligibility, null and ratio coverage, full commit/fingerprint provenance, freshness and separate conditional coverage. Request independent review; no self approval.
+updated: 2026-11-25T16:51:01.9795760Z
+progress: Source 3f6569746a996d4c64673579611cc14e92c8164e, accepted 16/23, FY25 assets 311374.25527200004m deposits 233010.397712m PAT 10101.657958999998m. Node CLI and deterministic check exit0, independent Decimal recomputation of all published cells and diagnostic segregation pass. Prior dirty-input and output tamper fault tests passed. Exact manifest, separate provisional diagnostics, pairwise ratios, null policy. No self approval, final refresh after bank closures.

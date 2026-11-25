@@ -1,0 +1,339 @@
+{
+  "schema": 2,
+  "generatedAt": "2026-11-25T16:50:59.732Z",
+  "sourceCommit": "3f6569746a996d4c64673579611cc14e92c8164e",
+  "inputFingerprint": "76fe50c0973cad8f35c25bbd3b8e712b881b2c766350e302a1a9eea88b0a157f",
+  "accepted": 16,
+  "roster": 23,
+  "excluded": 7,
+  "totals": {
+    "total_assets": {
+      "value": 311374.25527200004,
+      "n": 16,
+      "banks": [
+        "access-bank-ghana",
+        "adb",
+        "bank-of-africa-ghana",
+        "consolidated-bank-ghana",
+        "ecobank-ghana",
+        "fbnbank-ghana",
+        "fidelity-bank-ghana",
+        "first-atlantic-bank",
+        "first-national-bank-ghana",
+        "gcb",
+        "gtbank-ghana",
+        "nib",
+        "societe-generale-ghana",
+        "standard-chartered-ghana",
+        "uba-ghana",
+        "zenith-bank-ghana"
+      ]
+    },
+    "customer_deposits": {
+      "value": 233010.397712,
+      "n": 16,
+      "banks": [
+        "access-bank-ghana",
+        "adb",
+        "bank-of-africa-ghana",
+        "consolidated-bank-ghana",
+        "ecobank-ghana",
+        "fbnbank-ghana",
+        "fidelity-bank-ghana",
+        "first-atlantic-bank",
+        "first-national-bank-ghana",
+        "gcb",
+        "gtbank-ghana",
+        "nib",
+        "societe-generale-ghana",
+        "standard-chartered-ghana",
+        "uba-ghana",
+        "zenith-bank-ghana"
+      ]
+    },
+    "profit_after_tax": {
+      "value": 10101.657958999998,
+      "n": 16,
+      "banks": [
+        "access-bank-ghana",
+        "adb",
+        "bank-of-africa-ghana",
+        "consolidated-bank-ghana",
+        "ecobank-ghana",
+        "fbnbank-ghana",
+        "fidelity-bank-ghana",
+        "first-atlantic-bank",
+        "first-national-bank-ghana",
+        "gcb",
+        "gtbank-ghana",
+        "nib",
+        "societe-generale-ghana",
+        "standard-chartered-ghana",
+        "uba-ghana",
+        "zenith-bank-ghana"
+      ]
+    }
+  },
+  "acceptedEvidence": [
+    {
+      "bank": "access-bank-ghana",
+      "owner": "codex",
+      "reviewer": "claude-helper-1",
+      "reviewFile": "claude-helper-1-of-codex-access-bank-ghana.md",
+      "reviewSha256": "0ec54fa186f83d24eeef922abc43964516d106c330c1221912b61618f37af38d",
+      "packageFingerprint": "735000270faf42f7ebeecf031d9006c710c6cdc6b358208a73987e782b4054ac",
+      "macroFingerprint": "b3c4412d681469e8d974e0c067af8e28435f5669900a9f1b4c54b0178992b8df",
+      "resolvedReviews": []
+    },
+    {
+      "bank": "adb",
+      "owner": "gemini",
+      "reviewer": "codex",
+      "reviewFile": "codex-of-gemini-adb.md",
+      "reviewSha256": "42a2924c0d174604a255204a1a916e8c6ba144d9b494fced83cffc868758f9eb",
+      "packageFingerprint": "17056225a0db2b3922cd033f85c3e2735198e83cb104248fdbe2466819246147",
+      "macroFingerprint": "b3c4412d681469e8d974e0c067af8e28435f5669900a9f1b4c54b0178992b8df",
+      "resolvedReviews": []
+    },
+    {
+      "bank": "bank-of-africa-ghana",
+      "owner": "chatgpt-support",
+      "reviewer": "codex",
+      "reviewFile": "codex-of-chatgpt-support-bank-of-africa-ghana.md",
+      "reviewSha256": "b9e4cf0e8fdd207c092810c49b91f868fb1484d8a0650c83e7245c7a78239b34",
+      "packageFingerprint": "50bc502917cd2b27e37d89c332c034058b778e295262cc9a6cf8688fb17db782",
+      "macroFingerprint": "b3c4412d681469e8d974e0c067af8e28435f5669900a9f1b4c54b0178992b8df",
+      "resolvedReviews": []
+    },
+    {
+      "bank": "consolidated-bank-ghana",
+      "owner": "codex",
+      "reviewer": "chatgpt-support",
+      "reviewFile": "chatgpt-support-of-codex-consolidated-bank-ghana.md",
+      "reviewSha256": "487aba2d1fa274513cf9ad6f592efb3ea8ec2f4b82ceef2dac5f39bc22bdf86b",
+      "packageFingerprint": "1e96054b0cff76feb6c587329d783ab5544a1b008e5349ba3b3d54e765cd1c9e",
+      "macroFingerprint": "b3c4412d681469e8d974e0c067af8e28435f5669900a9f1b4c54b0178992b8df",
+      "resolvedReviews": []
+    },
+    {
+      "bank": "ecobank-ghana",
+      "owner": "gemini",
+      "reviewer": "codex",
+      "reviewFile": "codex-of-gemini-ecobank-ghana.md",
+      "reviewSha256": "272a40c517a98f28fdf1f19461497f51761bbed925b381f41b5e6cde31161c09",
+      "packageFingerprint": "702926f7225d5ce72db700f9757e858a88e5d2c4b23c0eafbdaf6d1d63c447e7",
+      "macroFingerprint": "b3c4412d681469e8d974e0c067af8e28435f5669900a9f1b4c54b0178992b8df",
+      "resolvedReviews": []
+    },
+    {
+      "bank": "fbnbank-ghana",
+      "owner": "codex",
+      "reviewer": "papa-kojo-agent",
+      "reviewFile": "papa-kojo-agent-of-codex-fbnbank-ghana.md",
+      "reviewSha256": "ff9e909bff93620eeb669bde8d06cd0eb1b44ced6579b5b267b053eab9636ce2",
+      "packageFingerprint": "588fb423d0f7e77f13bbf133537991fa0786d4bbba3ad0dcb429291c4cc02bd2",
+      "macroFingerprint": "b3c4412d681469e8d974e0c067af8e28435f5669900a9f1b4c54b0178992b8df",
+      "resolvedReviews": []
+    },
+    {
+      "bank": "fidelity-bank-ghana",
+      "owner": "gemini",
+      "reviewer": "chatgpt-support",
+      "reviewFile": "chatgpt-support-of-gemini-fidelity-bank-ghana.md",
+      "reviewSha256": "6b2c57f3b3aa5882f9d6f1af90367bc85637e9f4da7014f11150e43635c30495",
+      "packageFingerprint": "b358caf04c1a334dc48f5f7ca331cafca8455ab3fbe4d829fbea6b6af59c8a8f",
+      "macroFingerprint": "b3c4412d681469e8d974e0c067af8e28435f5669900a9f1b4c54b0178992b8df",
+      "resolvedReviews": []
+    },
+    {
+      "bank": "first-atlantic-bank",
+      "owner": "codex",
+      "reviewer": "chatgpt-support",
+      "reviewFile": "chatgpt-support-of-codex-first-atlantic-bank.md",
+      "reviewSha256": "905f7bd74a708a5bb29e30336bc12103b527cc9674db55277cfb6e3c01e8cae2",
+      "packageFingerprint": "70eb1ce9bab73de1e0178d896f7f6cea80d01cb1e0b34aa4636456bafebd2c50",
+      "macroFingerprint": "b3c4412d681469e8d974e0c067af8e28435f5669900a9f1b4c54b0178992b8df",
+      "resolvedReviews": []
+    },
+    {
+      "bank": "first-national-bank-ghana",
+      "owner": "chatgpt-support",
+      "reviewer": "codex",
+      "reviewFile": "codex-of-chatgpt-support-first-national-bank-ghana.md",
+      "reviewSha256": "a58adf687157ce77bc2d3c96cdc31a3147647b14c801c2064354a6637fc8a6cc",
+      "packageFingerprint": "c687b8541b2b001cb03c32a39bb629f416e903442f22ee9988f86269f3668a61",
+      "macroFingerprint": "b3c4412d681469e8d974e0c067af8e28435f5669900a9f1b4c54b0178992b8df",
+      "resolvedReviews": []
+    },
+    {
+      "bank": "gcb",
+      "owner": "codex",
+      "reviewer": "chatgpt-support",
+      "reviewFile": "chatgpt-support-of-codex-gcb.md",
+      "reviewSha256": "ee9de72ea33b7fad24dca675eefd1da575559c82ca7841896c662d4440f5f791",
+      "packageFingerprint": "a50d39eafc74ebdd900ccd1465ffe32690f5711f38e90b08464b803914d09edd",
+      "macroFingerprint": "b3c4412d681469e8d974e0c067af8e28435f5669900a9f1b4c54b0178992b8df",
+      "resolvedReviews": []
+    },
+    {
+      "bank": "gtbank-ghana",
+      "owner": "claude",
+      "reviewer": "codex",
+      "reviewFile": "codex-of-claude-gtbank-ghana.md",
+      "reviewSha256": "3f17ea63a2b505f5b773caded63c91753a0a2b3558d9566913832575d1d86fcb",
+      "packageFingerprint": "712f28ee66f10e9676633918dedbfc5a4e77a5a92e11b7d07d027e0e33300052",
+      "macroFingerprint": "b3c4412d681469e8d974e0c067af8e28435f5669900a9f1b4c54b0178992b8df",
+      "resolvedReviews": []
+    },
+    {
+      "bank": "nib",
+      "owner": "codex",
+      "reviewer": "chatgpt-support",
+      "reviewFile": "chatgpt-support-of-codex-nib.md",
+      "reviewSha256": "d11c15610c20fd392696aab8b4ab816bd8e6305c49541b942c7b449da819004e",
+      "packageFingerprint": "4bc9b2b7e2aea3b3c9c5d27d7f0a3e6f7d8375cc0e3b2baac040e0e4226bc430",
+      "macroFingerprint": "b3c4412d681469e8d974e0c067af8e28435f5669900a9f1b4c54b0178992b8df",
+      "resolvedReviews": []
+    },
+    {
+      "bank": "societe-generale-ghana",
+      "owner": "deepseek",
+      "reviewer": "chatgpt-support",
+      "reviewFile": "chatgpt-support-of-deepseek-societe-generale-ghana.md",
+      "reviewSha256": "7e704df67a5142667e055c1f92b52b9787018024db81a7b2d2c7cefe5ccb67d4",
+      "packageFingerprint": "642679171d75227267e843371150fdbfe21f9dcd2c36a3b5612965d8f2c62feb",
+      "macroFingerprint": "b3c4412d681469e8d974e0c067af8e28435f5669900a9f1b4c54b0178992b8df",
+      "resolvedReviews": [
+        "claude-helper-1-of-deepseek-societe-generale-ghana.md"
+      ]
+    },
+    {
+      "bank": "standard-chartered-ghana",
+      "owner": "claude",
+      "reviewer": "chatgpt-support",
+      "reviewFile": "chatgpt-support-of-claude-standard-chartered-ghana.md",
+      "reviewSha256": "d1f92512ac2cd011a90b9f9f95b30624dcebdbdce7d494a156dacd5b43b5ee05",
+      "packageFingerprint": "8fab8c2e01f0a097251ddee97b76e1c52a93783f674122e8fb3937b2a910f7ab",
+      "macroFingerprint": "b3c4412d681469e8d974e0c067af8e28435f5669900a9f1b4c54b0178992b8df",
+      "resolvedReviews": [
+        "gemini-of-claude-standard-chartered-ghana.md"
+      ]
+    },
+    {
+      "bank": "uba-ghana",
+      "owner": "claude-helper-1",
+      "reviewer": "gpt-6-luna",
+      "reviewFile": "gpt-6-luna-of-claude-helper-1-uba-ghana.md",
+      "reviewSha256": "85ccccfdf67514dd6a097491fce6785f7fb0b63eba348c3764e6c84c2b899fea",
+      "packageFingerprint": "1bd39e82a7410403b12c6ddf003fd8d9ab9590cc635af28e4f8d272c5d8ae27e",
+      "macroFingerprint": "b3c4412d681469e8d974e0c067af8e28435f5669900a9f1b4c54b0178992b8df",
+      "resolvedReviews": []
+    },
+    {
+      "bank": "zenith-bank-ghana",
+      "owner": "claude-helper-1",
+      "reviewer": "chatgpt-support",
+      "reviewFile": "chatgpt-support-of-claude-helper-1-zenith-bank-ghana.md",
+      "reviewSha256": "2bf2b8d79a58c7dd6c7b77579517c035fa0d66fbbb64745e7812379f88558089",
+      "packageFingerprint": "2e163b82ccc43ab68fc5eb6a647408cb6e20edb449b0c7b93286515264579656",
+      "macroFingerprint": "b3c4412d681469e8d974e0c067af8e28435f5669900a9f1b4c54b0178992b8df",
+      "resolvedReviews": []
+    }
+  ],
+  "exclusions": [
+    {
+      "bank": "absa-ghana",
+      "owner": "claude-helper-1",
+      "status": "in-progress",
+      "stage": "in-progress",
+      "packageFingerprint": null,
+      "macroFingerprint": null
+    },
+    {
+      "bank": "calbank",
+      "owner": "gemini",
+      "status": "needs-review",
+      "stage": "re-review-required",
+      "packageFingerprint": "8ac68a37b2453a8724888b6d1d03ee37356039e8344d3cf386b4dd0f49c865c1",
+      "macroFingerprint": "b3c4412d681469e8d974e0c067af8e28435f5669900a9f1b4c54b0178992b8df"
+    },
+    {
+      "bank": "omnibsic-bank",
+      "owner": "codex",
+      "status": "in-progress",
+      "stage": "in-progress",
+      "packageFingerprint": null,
+      "macroFingerprint": null
+    },
+    {
+      "bank": "prudential-bank",
+      "owner": "papa-kojo-agent",
+      "status": "needs-review",
+      "stage": "peer-review-required",
+      "packageFingerprint": "a40c0f6e5398ad06fa2a5906dc9f30eba4daaba08afc82ee2a20bed478fa6bd8",
+      "macroFingerprint": "b3c4412d681469e8d974e0c067af8e28435f5669900a9f1b4c54b0178992b8df"
+    },
+    {
+      "bank": "republic-bank-ghana",
+      "owner": "deepseek",
+      "status": "needs-review",
+      "stage": "repairs-required",
+      "packageFingerprint": "1aee545cef0e2d4d57b15457ff507c55b6e81dafcff97dcb9465a3ef6caab264",
+      "macroFingerprint": "b3c4412d681469e8d974e0c067af8e28435f5669900a9f1b4c54b0178992b8df"
+    },
+    {
+      "bank": "stanbic-bank-ghana",
+      "owner": "deepseek",
+      "status": "needs-review",
+      "stage": "lead-resolution-required",
+      "packageFingerprint": "3bab53759fc1a8e6e286f5e33342cdd4b3318a53b39abf4dcbbabe8ec5395ef2",
+      "macroFingerprint": "b3c4412d681469e8d974e0c067af8e28435f5669900a9f1b4c54b0178992b8df"
+    },
+    {
+      "bank": "umb",
+      "owner": "codex",
+      "status": "in-progress",
+      "stage": "in-progress",
+      "packageFingerprint": null,
+      "macroFingerprint": null
+    }
+  ],
+  "diagnosticInputs": {
+    "absa-ghana": {
+      "financials.csv": null,
+      "forecast.csv": null
+    },
+    "calbank": {
+      "financials.csv": "c336a541b139ab7da11d72b8277e265c6e97f157c72683348e2e24bee071df46",
+      "forecast.csv": "ff8966aeeebdc4d8a0cd3cfe8602f1ceb413d2967ed44d63fe44458b06c7b884"
+    },
+    "omnibsic-bank": {
+      "financials.csv": "60a83be2623f02f9d0eb4e47deb35a08d6081e3ad2f432e6d279ee6ff08f557f",
+      "forecast.csv": "20955dba63d4be820d346de6c61e63819f6dee6c580549f0b87093ce973f03d7"
+    },
+    "prudential-bank": {
+      "financials.csv": "9c6b410206cf9475873b27757718ca11ce0f710505f6e7980ac75a6ee4245206",
+      "forecast.csv": "5209fc7805a4ec5d6f864306c978f34e4f9cd91bbaa0100fdb9c8fe02499bff2"
+    },
+    "republic-bank-ghana": {
+      "financials.csv": "fa61c92ff9ab05fb5a1da81f639e09909ec5b65f467983db79d207dffa80e044",
+      "forecast.csv": "540e44692c6b911b6d844bc06e9a1f239d259c65f2c94e3ad04ae633c3910908"
+    },
+    "stanbic-bank-ghana": {
+      "financials.csv": "85b818a13f23709252507fa9d85a149901a12fa00fd33b6ecb394ec206269de2",
+      "forecast.csv": "d26e82aec0538d8a13b5ff290902fa2928705ff8d7dbc90717fbdeb92ac36d70"
+    },
+    "umb": {
+      "financials.csv": "d90f154fc979a200565b11e74faac7a2782059db15d7fed8e887eb375d09db1f",
+      "forecast.csv": "aae15d122b7bff3c21110e9fee58a657187cd0b2e694dfc3ea28e59ac97bd296"
+    }
+  },
+  "diagnosticErrors": [],
+  "sectorContextSha256": "3fbc0e839b80a9159aff6142a24497f2532987e0f937c3ba866b24b09369ca7f",
+  "generatorSha256": "61537327c98f9e2226418eefcc5842beddda9922f52a3a8525071b8681fc08db",
+  "outputHashes": {
+    "rollup.md": "310326348794390e2237d61a11689476fb6799295be4e015b8ff1d94d176437a",
+    "rollup.csv": "c0384106771c6e6625b34643e7061f9f098a510af705a7f3dfc8f2df4cf57081",
+    "provisional.csv": "6d49a58beb32cb4bc466a32ff295658fb86c7cc37cad583dbf9cb1fe4f3cc59a"
+  }
+}
