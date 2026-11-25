@@ -74,6 +74,8 @@ def run(share_override=None, write=True, plc_incl_override=None, loan_shift=0.0)
         drv = assump['drivers'][scen]
         prev = dict(fy25)
         npl_prev = q3['npl_pct']
+        tiers = drv['statutory_reserve_tiers']['value']
+        fund_prev = fy25['x_statutory_reserve']
 
         q4_loan_g = drv['q4_2026_loan_growth_pct']['value'] / 100.0
         q4_dep_g = drv['q4_2026_deposit_growth_pct']['value'] / 100.0
@@ -208,6 +210,15 @@ def run(share_override=None, write=True, plc_incl_override=None, loan_shift=0.0)
                     inv_sec = rem_assets - cash_bog
                     iter_diff = abs(inv_sec - inv_prev)
 
+            band = next(pct for lim, pct in tiers if (fund_prev / q3['stated_capital'] * 100.0) < lim)
+            xfer_year = band / 100.0 * max(0.0, pat)
+            if yr == 'FY2026E':
+                stat_xfer = max(0.0, xfer_year - q3['x_statutory_transfer'])
+                stat_fund = q3['x_statutory_reserve'] + stat_xfer
+            else:
+                stat_xfer = xfer_year
+                stat_fund = fund_prev + stat_xfer
+            fund_prev = stat_fund
             avg_eq = 0.5 * (prev['total_equity'] + total_eq)
             avg_as = 0.5 * (prev['total_assets'] + total_assets)
             car_pct = car_of(total_eq, total_assets)
@@ -254,6 +265,8 @@ def run(share_override=None, write=True, plc_incl_override=None, loan_shift=0.0)
                 ('balance_sheet', 'total_liabilities', total_liab, 'GHS millions', 'Sum of liability items.'),
                 ('balance_sheet', 'stated_capital', stated_cap, 'GHS millions', 'Held flat (no automatic capital injection assumed).'),
                 ('balance_sheet', 'retained_earnings', ret_earn, 'GHS millions', 'Prior retained_earnings + PAT - dividends.'),
+                ('balance_sheet', 'x_statutory_reserve', stat_fund, 'GHS millions', 'Memo, part of reserves_other (held flat in the total): opening fund + transfer. FY2026E = reported 9M-2026 fund + Q4 top-up.'),
+                ('balance_sheet', 'x_statutory_transfer', stat_xfer, 'GHS millions', 'Memo, no effect on total equity: tier % x positive PAT (FY2026E: full-year transfer less 150.857 already transferred in 9M, floor 0). Tier from opening fund / stated capital.'),
                 ('balance_sheet', 'reserves_other', res_other, 'GHS millions', 'Held flat.'),
                 ('balance_sheet', 'total_equity', total_eq, 'GHS millions', 'stated_capital + retained_earnings + reserves_other.'),
                 ('ratios', 'car_pct', car_pct, '%', 'v2 proxy: (FY2025 regulatory capital + change in book equity since FY2025) / (total assets x RWA density), anchored on reported 9M-2026 CAR 27.41%; no capital injection assumed.'),
@@ -402,7 +415,7 @@ def run(share_override=None, write=True, plc_incl_override=None, loan_shift=0.0)
         '',
         'A negative CAR that becomes less negative at a higher density is not an improvement in capital: compare the absolute gaps.',
         '',
-        'Statutory reserve (Act 930 s34) memo. The opening bank-only statutory reserve and the stated-capital ratio are not published in the sources read, so the model holds reserves flat. Equity totals are unaffected by a transfer between reserves and retained earnings. Positive-profit years and the tier amounts (GHS m):',
+        'Statutory reserve memo (forecast rows `x_statutory_reserve`, `x_statutory_transfer`): the 9M-2026 fund (534.049m) and year-to-date transfer (150.857m, 50.0% of PAT) are reported; the tiers are in `assumptions.json` and are not verified against the Act. Transfers move amounts between reserves and retained earnings, so total equity and CAR are unaffected. Year-by-year amounts are in `forecast.csv`; the table shows the transfer tier amounts for positive-profit years.',
         '| Scenario | Year | PAT | 12.5% | 25% | 50% |',
         '| --- | --- | --- | --- | --- | --- |',
     ])

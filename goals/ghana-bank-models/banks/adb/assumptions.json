@@ -91,6 +91,27 @@
       "placements_inclusion": {
         "value": 1.0,
         "note": "Scale on placements income: 1.0 applies the FY2025 observed yield (133.097 / average other non-bill, non-reserve cash, about 4.1%) to the non-bill share of cash above the CRR proxy. Held at a constant yield, not linked to rates. Sensitivity 0%, 50%, 100% in checks.md."
+      },
+      "statutory_reserve_tiers": {
+        "value": [
+          [
+            25,
+            50.0
+          ],
+          [
+            50,
+            37.5
+          ],
+          [
+            100,
+            25.0
+          ],
+          [
+            1000000000.0,
+            12.5
+          ]
+        ],
+        "note": "Transfer % of positive PAT by opening statutory fund / stated capital (%): below 25 -> 50%, 25-50 -> 37.5%, 50-100 -> 25%, 100+ -> 12.5%. Taken from codex's source pack (assistance/claude-helper-1/adb-v3-source-check-codex.md); consistent with the observed 50% in FY2025 and 9M-2026. Steward did not read the Act, and the Absa and Republic models use a three-tier reading (50/25/12.5). Memo only: no effect on total equity."
       }
     },
     "downside": {
@@ -168,6 +189,27 @@
       "placements_inclusion": {
         "value": 1.0,
         "note": "Scale on placements income: 1.0 applies the FY2025 observed yield (133.097 / average other non-bill, non-reserve cash, about 4.1%) to the non-bill share of cash above the CRR proxy. Held at a constant yield, not linked to rates. Sensitivity 0%, 50%, 100% in checks.md."
+      },
+      "statutory_reserve_tiers": {
+        "value": [
+          [
+            25,
+            50.0
+          ],
+          [
+            50,
+            37.5
+          ],
+          [
+            100,
+            25.0
+          ],
+          [
+            1000000000.0,
+            12.5
+          ]
+        ],
+        "note": "Transfer % of positive PAT by opening statutory fund / stated capital (%): below 25 -> 50%, 25-50 -> 37.5%, 50-100 -> 25%, 100+ -> 12.5%. Taken from codex's source pack (assistance/claude-helper-1/adb-v3-source-check-codex.md); consistent with the observed 50% in FY2025 and 9M-2026. Steward did not read the Act, and the Absa and Republic models use a three-tier reading (50/25/12.5). Memo only: no effect on total equity."
       }
     },
     "upside": {
@@ -245,6 +287,27 @@
       "placements_inclusion": {
         "value": 1.0,
         "note": "Scale on placements income: 1.0 applies the FY2025 observed yield (133.097 / average other non-bill, non-reserve cash, about 4.1%) to the non-bill share of cash above the CRR proxy. Held at a constant yield, not linked to rates. Sensitivity 0%, 50%, 100% in checks.md."
+      },
+      "statutory_reserve_tiers": {
+        "value": [
+          [
+            25,
+            50.0
+          ],
+          [
+            50,
+            37.5
+          ],
+          [
+            100,
+            25.0
+          ],
+          [
+            1000000000.0,
+            12.5
+          ]
+        ],
+        "note": "Transfer % of positive PAT by opening statutory fund / stated capital (%): below 25 -> 50%, 25-50 -> 37.5%, 50-100 -> 25%, 100+ -> 12.5%. Taken from codex's source pack (assistance/claude-helper-1/adb-v3-source-check-codex.md); consistent with the observed 50% in FY2025 and 9M-2026. Steward did not read the Act, and the Absa and Republic models use a three-tier reading (50/25/12.5). Memo only: no effect on total equity."
       }
     }
   }
