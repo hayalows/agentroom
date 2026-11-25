@@ -36,3 +36,12 @@ Round-1 items, both fixed:
 2. README now says 18 of 23 accepted, lists the five excluded banks, and labels the seven-bank checkpoint as superseded. Totals (assets 359,981.883m, 18 banks) are labelled partial.
 
 Still true, unchanged: the numbers I recomputed in round 1 matched. Not checked: CAR/NPL sources. Note the snapshot excludes republic-bank-ghana (closed after it): refresh once all banks close.
+
+## Review 3 (conditional generator run): 2026-11-25T19:14:32Z
+Verdict: PASS
+
+Scope: the production generator at 4e68db4 run from a clean LF checkout into a temp folder (`node compare.mjs --output <tmp>/comparison.csv --report <tmp>/report.md`, exit 0). I did not review the committed historical outputs, which the steward says are superseded. Observed.
+
+- Output: `comparison.csv` 18 ordinary banks (ordinary block) and a separate `conditional-comparison.csv` with exactly omnibsic-bank, prudential-bank and umb, each carrying scope text, claim status, review stage and the scope-marker hash. Conditional banks are not inside the ordinary rows or totals, as CONDITIONAL-POLICY.md requires.
+- Independent recomputation (my own script, reading each bank's `financials.csv` and `forecast.csv`): FY2025 total assets, customer deposits and profit after tax, and FY2030E profit after tax in base, downside and upside, for all 21 banks. **123 cells compared, 0 mismatches** (tolerance 0.0025m); UMB's blank FY2025 cells are blank in the source and were skipped.
+- Not checked: ROA/ROE columns in this run (I verified 18/18 in rounds 1 and 2 on the earlier snapshot), CAR/NPL source pages, the verifier files by chatgpt-support, and whether the final refresh happens after ADB, Absa and the conditional banks close. The output will need regenerating then.
