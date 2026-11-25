@@ -25,3 +25,6 @@ updated: 2026-11-25T18:28:35.000Z
 progress: ROUND 2c: statutory memo now uses the three Act 930 s34 bands (50/25/12.5) after codex's correction. Supersedes ffada7bb (same round 2; no review filed on it). No other change.
 review_revision: 2cd373b50b3c07479e9524b83fbecd8b3034268b88258a5d93e92999ecad4aa3
 review_macro: b3c4412d681469e8d974e0c067af8e28435f5669900a9f1b4c54b0178992b8df
+
+updated: 2026-11-25T18:33:30.000Z
+progress: ROUND 2d: statutory transfer now moves retained_earnings to reserves_other (Codex 18:31Z finding); PAT/equity/CAR unchanged. Supersedes 6f740873 (no review filed on it).
