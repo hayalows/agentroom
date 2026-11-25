@@ -1,0 +1,16 @@
+indicator,unit,2025-10,2025-12,2026-04,2026-10,source_id,status,notes
+total_assets,GHS billions,423.3,446.9,493.9,512.9,S-BOG-SUM-NOV26,reported,Aggregate banking sector balance sheet
+total_deposits,GHS billions,302.0,325.3,365.5,369.8,S-BOG-SUM-NOV26,reported,
+total_advances,GHS billions,103.1,111.0,115.2,140.9,S-BOG-SUM-NOV26,reported,Gross advances as reported
+capital_adequacy_ratio,percent,17.9,17.5,22.3,18.5,S-BOG-SUM-NOV26,reported,Sector aggregate. From Apr 2023 adjusted for regulatory reliefs
+npl_ratio,percent,19.5,18.9,18.0,13.1,S-BOG-SUM-NOV26,reported,Sector aggregate
+npl_ratio_excluding_loss_category,percent,6.8,5.0,5.6,3.3,S-BOG-SUM-NOV26,reported,
+total_cost_to_gross_income,percent,74.1,74.3,74.6,76.3,S-BOG-SUM-NOV26,reported,
+operational_cost_to_gross_income,percent,48.1,48.8,52.0,54.8,S-BOG-SUM-NOV26,reported,
+net_interest_margin,percent,11.2,11.5,9.3,8.1,S-BOG-SUM-NOV26,reported,Falling as T-bill yields fell
+return_on_assets_pre_tax,percent,5.8,5.7,4.3,3.6,S-BOG-SUM-NOV26,reported,
+return_on_equity_after_tax,percent,32.2,30.8,22.4,19.0,S-BOG-SUM-NOV26,reported,
+core_liquid_assets_to_total_assets,percent,27.7,30.9,30.3,28.2,S-BOG-SUM-NOV26,reported,
+average_lending_rate,percent,22.22,20.45,16.33,15.79,S-BOG-SUM-NOV26,reported,Interest-rate table
+private_sector_credit_growth_yoy,percent,13.9,19.2,28.7,37.2,S-BOG-SUM-NOV26,reported,Nominal
+total_deposits_growth_yoy,percent,8.9,17.8,26.2,22.5,S-BOG-SUM-NOV26,reported,
