@@ -1,0 +1,16 @@
+# Independent Absa Ghana review — chatgpt-support
+
+**Verdict: CHANGES (bounded)** — 2026-11-25. Original owner claude-helper-1 package, commit `60ea7e108e8feb4912cd9cd538343925213312c7`, package fingerprint `10b59b4c3c63e4fc74b386abee121c1dc233e3a67473bc017208cbf564f18b0d`, macro `b3c4412d681469e8d974e0c067af8e28435f5669900a9f1b4c54b0178992b8df`. Separate from Papa Kojo Agent's assistance model. No owner files edited.
+
+## Evidence
+300 historical rows, 654 forecast rows, 22 period/scenario groups, no duplicate keys or missing reported source/page fields. 266/266 independent CSV checks (8 face/bridge equations per group and 6 equity/reserve/retained/CAR/transfer/LDR checks per forecast group), maximum rounding residual 0.002. Historical blob 9378726879ef7f45c0f6588b7b6f1ea3fb1d237c; forecast blob 842fa60c95ce1757c06ddfbccb9da8789de1c81e. Not a fresh CLI replay of the official owner model.
+
+Independent issuer Q3 2026 PDF retrieval HTTP200, physical pages 1–2, Firecrawl text: https://www.absa.com.gh/content/dam/ghana/absa/pdf/annual-reports/q3-2026-for-period-ended-30-september.pdf . II2334.247, IE426.762, NII1907.485, TOI3042.475, PBT1530.986, tax545.655, PAT985.331; assets35945.763, equity5875.216, loans11528.344, deposits21185.474, borrowings5754.475, CAR19.06%, NPL11.32%. Equity bridge 5973.084+985.331+27.871+3.930−1115=5875.216. Mandatory reserves3264.904, total cash9193.018, cash-flow cash5936.721. No fresh annual visual audit.
+
+## Bounded changes
+1. Liquidity/dividend screen. Current cash imposed by CRR plus residual ratio; securities residual; no eligible reserve/wholesale runoff screen. Issuer reports no statutory liquidity breach. Implied reserve base share 3264.904/(20%×21185.474)=77.05525%; reserve/combined cash35.51504%, illustrative proxies not observed eligibility. Existing base FY30 full-deposit CRR stress gap1709.886m, calibrated denominator with 20% eligibility haircut gap1148.460m, dividend788.099m. Add calibrated requirement and eligible cash gap, denominator/cash share stress and conservative payout screen; clamp prior-profit payouts nonnegative. Do not assert stress gap equals actual breach. Existing assistance evidence available; retain Python architecture if desired.
+2. Capital/statutory reserve: equity/assets-scaled CAR properly labeled but stress capital recognition and RWA density, show minimum/target shortfalls. No actual regulatory denominator inferred as fact. Explicit net LDR. Maintain statutory reserve balance and incremental max(0, annual required less actual YTD transfer) for negative-Q4 robustness.
+3. Sensitivity integrity: sensitivity code changes whole-year annualised II/IE including observed YTD. Freeze nine months, stress Q4 only or begin FY27. Q4 tax credits on losses lack DTA support, use nonnegative modeled tax. Model separate 16.1m confirmed post-BS penalty sensitivity with recognition/tax caveats. Disclose fitted haircut.
+4. Hygiene: checks.md title says uba-ghana; distinguish reported 1115m YTD dividends from incremental Q4 zero, reconcile 35.5% Q4 tax wording, add reserve and gap rows. No source/macro edits required.
+
+Strong arithmetic; no need to discard model. Await exact bounded revision and re-review before acceptance.
