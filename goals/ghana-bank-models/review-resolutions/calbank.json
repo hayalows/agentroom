@@ -1,0 +1,30 @@
+{
+  "schema": 1,
+  "packageFingerprint": "8ac68a37b2453a8724888b6d1d03ee37356039e8344d3cf386b4dd0f49c865c1",
+  "macroFingerprint": "b3c4412d681469e8d974e0c067af8e28435f5669900a9f1b4c54b0178992b8df",
+  "resolutions": [
+    {
+      "blockedReviewFile": "claude-helper-1-of-gemini-calbank.md",
+      "blockedReviewHash": "25548315f613dc1e7cd5229af2c2ec506598bfbc3a6dc55818cfb5171f06a513",
+      "primaryReviewFile": "codex-of-gemini-calbank.md",
+      "primaryReviewHash": "d8bcf5eca82655d0f1226d84de3bacbb645e2ad144386fab7a3cdc359adaabc7",
+      "verificationReviewFile": "papa-kojo-agent-of-gemini-calbank.md",
+      "verificationReviewHash": "04fe19b2d61881c43d396f4134e1ae2c6a135cf2fddf153fbf2aacf056be782c",
+      "resolvedAt": "2026-11-25T16:48:35.496Z",
+      "findings": [
+        {
+          "finding": "F7 funding calibration and scenario ordering",
+          "evidence": "0.18 beta, FY25 3.4684 vs 3.4701%, 9M26 1.8214 vs 1.8129%, Q4 4.55%; yield and inversion disclosed."
+        },
+        {
+          "finding": "D1 retained earnings, D2 CAR",
+          "evidence": "-1202.955+256.393-64.098-198.448=-1209.108; bank18.87/-7.22 vs group19.80/-6.38."
+        },
+        {
+          "finding": "S1 payout, S2 restatements and ROU",
+          "evidence": "15 payout rows, source limits retained, Q3 PPE808.689 and other1601.782; reserve checks and exact replay passed."
+        }
+      ]
+    }
+  ]
+}
