@@ -1,6 +1,6 @@
 # OmniBSIC Bank Ghana LTD — primary source register
 
-Status: CONDITIONAL model built and independently reviewed; ordinary acceptance blocked by missing FY21 and unresolved FY24 comparative. Bank-only statements in GHS thousands converted to GHS millions. Retrieved 25 November 2026 using issuer archive and secondary Firecrawl; physical PDF pages, not printed page numbers. FY2021 audited full year not yet obtained. No secondary/news numbers used as actuals.
+Status: CONDITIONAL model built and independently reviewed; ordinary acceptance blocked by missing FY21; later audited FY24 comparative reconciled below. Bank-only statements in GHS thousands converted to GHS millions. Retrieved 25 November 2026 using issuer archive and secondary Firecrawl; physical PDF pages, not printed page numbers. FY2021 audited full year not yet obtained. No secondary/news numbers used as actuals.
 
 | ID | Official filing | Periods | Access |
 |---|---|---|---|
@@ -9,7 +9,7 @@ Status: CONDITIONAL model built and independently reviewed; ordinary acceptance 
 | OM26Q3 | https://www.omnibsic.com.gh/assets/images/reports/omnibsic-unaudited-financials-Q3.pdf | 9M2026 and 9M2025 comparative | Firecrawl text; web rendering unavailable; ratio table parsed on p2 |
 | OM23AR | https://omnibsic.com.gh/files/OmniBSIC202329.Mar.2024.pdf | FY2023 full audited, FY2022 comparative | Located; notes extraction pending |
 | OM24AR | https://www.omnibsic.com.gh/assets/images/reports/aanual-report-2024.pdf | FY2024 full audited | Selected notes visually verified; see below |
-| OM25AR | https://www.omnibsic.com.gh/assets/images/reports/2025-annual.pdf | FY2025 full annual report | Located; notes extraction pending |
+| OM25AR | https://www.omnibsic.com.gh/assets/images/reports/2025-annual.pdf | FY2025 full annual report | Complete 22,038,831 bytes; visually verified notes, see addendum |
 
 Issuer index: https://www.omnibsic.com.gh/investor-relation.php . It contains Q1/H1 2021 but no full FY2021 filing found. A third-party database lists 2021 and 2022 reports; no unauthenticated primary document retrieved. Need public FY2022 audited financial statements with 2021 comparative (or FY2021 standalone) before marking historical coverage complete.
 
@@ -24,3 +24,8 @@ OM23AR printed p90 (indexed PDF text; live screenshot redirected to 404) gives F
 
 ## Conditional review response
 Q3 official filing independently corroborated by Papa Kojo Agent; 9M26 actual capital ratio19.55% and book equity1346.713m. Actual regulatory numerator and RWA unavailable; 38% assumed density implies 1541.480m numerator. Book-equity cap and 48% density combined sensitivity explicitly estimated. Prior 2025 PDF download incomplete, no new source claims. Nominal growth compounded; canonical CAR forecast unavailable; separate estimated proxy. FY21 missing, FY24 original/comparative difference remains explicit.
+
+## Full audited FY2025 report recovered 2026-11-25
+Issuer URL OM25AR retrieved in 22 verified byte ranges; SHA256 2d2d6cfab3d510c20178ac9e4ac50bdd64e34420709467a379ce6ee38f876a39; 140 pages, not repaired, image-only. Physical pages 63–65, 98–99, 103–104 (printed 60–62, 95–96, 100–101) visually checked. FY24 gross1067.401m unchanged; later ECL87.328 vs original40.698 gives net980.073 vs1026.703, exactly46.630m. Latest gross/ECL/net FY25 1460.968/70.725/1390.243m. Historical original vintage memos retained; underlying accounting cause not asserted until note36 visually checked. FY25 capital869.566m, RWA4873.315m, qualifying Tier2 zero, CAR17.84%; FY24 later capital470.932m, RWA3564.267m, CAR13.21% vs original486.967m/13.66% (original retained as memo). FY25 cash on hand667.587, unrestricted bank balances4800.781, restricted BoG3059.085, placements472.798; FY24 comparative236.044/169.439/1100.938/1185.826, total2692.247m, annual face2692.248m (0.001m rounding). Restricted balances not available for day-to-day operations. Note6 FY25 loan/placement/securities income266.094/270.080/1920.010, customer deposit interest984.781, bank funding302.201; FY24 195.548/69.573/979.155 and520.673/177.824. These sums reproduce face II/IE. No historical Sep26 gross or capital invented. Central cash mix and RWA density use latest audited FY25 proportions as estimates; 38% and 48% RWA stresses explicitly retained. FY2021 full annual still not recovered.
+
+- OM25AR printed pp117–119 (physical pp120–122), note 36: prior-year IAS 8 cash-flow corrections, POCI reclassification of GHS785.536m from Stage 3, industry credit-quality disclosure, undiscounted liquidity table, restricted cash and short-term investment presentation. Restated 2024 cash equivalents 5528.056m versus signed 4427.119m; cash-flow correction has no further face IS/BS/equity impact per note. Note 36 does NOT explicitly explain the separate FY2024 net-loan/ECL change of 46.630m or capital vintage difference; numerical reconciliation only, cause remains unconfirmed. Do not conflate cash-equivalents scope with balance-sheet cash.

@@ -1,24 +1,25 @@
 {
   "bank": "omnibsic-bank",
-  "status": "CONDITIONAL: FY2021 complete annual statement and FY2025 full notes missing; not accepted",
+  "status": "CONDITIONAL: full FY2025 report recovered; FY2021 complete annual statement still missing; excluded from accepted totals.",
   "macro_file": "../../sector/macro-assumptions/macro.csv",
   "anchor": "Actual 9M2026 plus Q4 estimate; no FY2021 imputation",
   "assumptions": {
-    "earning_cash_share": 0.45,
-    "earning_cash_reason": "FY2024 audited money market placements and unrestricted banks 50.34% of face cash, cash-on-hand and restricted BoG excluded; 45% conservative estimate, not Q3 observed",
-    "restricted_cash_share": 0.409,
-    "restricted_cash_reason": "FY2024 note15 1100.938/2692.248; Q3 split unknown; proxy and 80% sensitivity",
+    "earning_cash_share": 0.5859368810936495,
+    "earning_cash_reason": "Latest audited FY2025 note15 unrestricted banks plus placements / face cash = 58.59%, used only as forecast proxy; not contractual earning balances or observed Sep26 split.",
+    "restricted_cash_share": 0.3398888542108437,
+    "restricted_cash_reason": "Latest audited FY2025 note15 restricted BoG / face cash = 33.99%, illustrative proxy only; actual Sep26 split unavailable; retain 20% haircut stress.",
     "asset_rate_beta": 0.55,
     "funding_rate_beta": 0.35,
-    "rwa_density": 0.38,
-    "capital_reason": "Analyst proxy near original FY2024 audited 3564.267m RWA / ~9.3bn assets; no Q3 numerator/RWA. Anchor to observed 19.55% CAR at assumed RWA; additions from retained profit, no fresh capital, 0.48 density stress Opening proxy numerator exceeds actual book equity; illustrative alternative caps opening numerator at book equity, not a regulatory rule, combined with 48% density stress.",
+    "rwa_density": 0.22580295260557354,
+    "capital_reason": "FY2025 audited note4 actual RWA4873.315m, capital869.566m and reported CAR17.84%. Central density proxy = actual FY25 RWA/assets 22.5803%, applied to Sep26 assets with observed CAR19.55%; no actual Sep26 RWA inferred. Legacy 38% and severe 48% density stresses at same estimated numerator, plus book-equity cap alternative. No new capital assumed.",
     "rwa_stress": 0.48,
     "tax": 0.35,
     "tax_reason": "25% corporation plus historical levies (FY24 36.5% effective, 9M26 35%); no credit on losses",
     "dividend_payout": 0,
     "dividend_reason": "9M26 accumulated deficit; assume no dividends throughout; no new capital or legal approval inferred",
     "reserve_reason": "FY25 and 9M26 observed 50% PAT transfer, Q4 carries annual 50% less actual YTD floor 0; later 50/25/12.5% based on opening reserve vs capital, internal equity only",
-    "fx": "No currency-specific net position; no incremental FX P&L; scenario inflation and GDP indirect"
+    "fx": "No currency-specific net position; no incremental FX P&L; scenario inflation and GDP indirect",
+    "rwa_legacy_stress": 0.38
   },
   "scenarios": {
     "base": {
@@ -73,5 +74,5 @@
       "buffer": 6
     }
   },
-  "driver_note": "All scenario driver values are analyst estimates, not guidance; loan/fee/deposit/wholesale growth use nominal GDP proxy; investment securities grow by fractional deposit growth; Q4 runrate uses actual 9M/3 times stated factors; future blended interest uses average earning pool, shared 364d rates and calibrated rates with partial beta; impairment on average NET loans, gross and allowance unavailable, no NPL estimate invented; operating cost growth CPI+spread; property and other assets, nonbank liabilities grow with deposit growth. Nominal GDP growth is compounded (1+real GDP)*(1+CPI)-1."
+  "driver_note": "All scenario driver values are analyst estimates, not guidance; loan/fee/deposit/wholesale growth use nominal GDP proxy; investment securities grow by fractional deposit growth; Q4 runrate uses actual 9M/3 times stated factors; future blended interest uses average earning pool, shared 364d rates and calibrated rates with partial beta; impairment on average NET loans, gross and allowance unavailable at Sep26 (FY24/25 audited values now recovered), no NPL estimate invented; operating cost growth CPI+spread; property and other assets, nonbank liabilities grow with deposit growth. Nominal GDP growth is compounded (1+real GDP)*(1+CPI)-1."
 }
