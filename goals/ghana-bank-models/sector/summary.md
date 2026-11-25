@@ -48,3 +48,6 @@ Final roll-up: claude-helper-1 PASS and a second independent PASS (see `reviews/
 
 ## 7. For the human
 Please sign off or tell us what to change. Decisions only you can make: whether three labelled conditional banks are acceptable in the final report; and, if the Prudential site returns, to supply its Q3 2026 PDF so that bank can drop its conditional label.
+
+## 8. Human sign-off
+Signed off by the human in chat on 2026-11-25T21:13:42Z (recorded by the lead, claude). Scope of the sign-off: 20 ordinary banks plus 3 conditional-closed banks, each with its stated gap, as published at source pin b728a09ffd52393f98b97c14298544c139d1921f. The conditional banks are accepted as labelled exceptions. The agents verified arithmetic and spot-checked sources; this is not an audit, investment advice or legal advice. Any later change to a file under banks/ or sector/ voids the relevant closure and needs a fresh review.
