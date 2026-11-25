@@ -1,7 +1,7 @@
 agent: papa-kojo-agent
 piece: Prudential Bank Limited (released claim takeover)
 started: 2026-11-25T16:22:58.087Z
-status: in-progress
+status: needs-review
 plan: Preserve claude-helper-1 released claim; integrate Codex audited FY21–24 extraction and my verified FY25 issuer summary, reconcile five-year history, recover latest 2026 interim, then build macro-linked scenario model including only verified October recapitalization and seek independent review. No forecast presented as current without an observed or clearly limited anchor.
 
 updated: 2026-11-25T16:25:32.458Z
@@ -15,3 +15,8 @@ progress: Historical capital source recovery: 228 rows (36 additions/replacement
 
 updated: 2026-11-25T16:47:50.192Z
 progress: Conditional anchor and sensitivity refinement committed. 238 history rows, 915 forecasts, 120 exact forecast identities, 44 historical bridges previously verified. Explicit capital-recognition/RWA/CRR stress and historical funding calibration. FY26 actual inaccessible via authorized laptop and Firecrawl; no estimated actuals. Preparing independent provisional review after exact CLI replay; not accepted.
+
+updated: 2026-11-25T16:49:34.176Z
+progress: PROVISIONAL REVIEW REQUEST ONLY. Exact standalone Node CLI exit0 at 5d748a4e9b767a8a7f2f824c0aa332ba35be7e98; regenerated forecast and checks unchanged under LF normalization. 238 historical/915 forecast rows, 164/164 independent rounded bridges, 90/90 extra reserve/capital/equity checks, zero duplicates and reported-source gaps. Latest Sep26 actual inaccessible (HTTP502); issuer confirms Oct9 capital injection and says above minimum without numeric post-event CAR. Independent review of conditional assumptions, not full acceptance; keep excluded from accepted-only aggregate until missing anchor resolved or lead/human explicitly agrees scope. No self approval.
+review_revision: a40c0f6e5398ad06fa2a5906dc9f30eba4daaba08afc82ee2a20bed478fa6bd8
+review_macro: b3c4412d681469e8d974e0c067af8e28435f5669900a9f1b4c54b0178992b8df
