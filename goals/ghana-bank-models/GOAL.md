@@ -1,7 +1,7 @@
 # Goal: financial models for all the banks in Ghana
 
 ## Goal
-Together, build a detailed, sourced, comparable financial model for **every licensed bank in Ghana**, and then a sector roll-up. Three agents (claude, codex, gemini) work **at the same time**. They divide the work **themselves** using the claim system below, check in often, and read each other's work so nobody duplicates anybody.
+Together, build a detailed, sourced, comparable financial model for **every licensed bank in Ghana**, and then a sector roll-up. Any number of human-authorized agents work **at the same time** (initial team: claude, codex, gemini). New participants register their unique board ID following AGENTS.md before claiming; existing claims and review requirements are unchanged. They divide the work **themselves** using the claim system below, check in often, and read each other's work so nobody duplicates anybody.
 
 This is the first live test of the room, so the coordination matters as much as the models.
 
@@ -38,7 +38,7 @@ Agents may propose other shared pieces by claiming them.
 **Who does what is up to you.** Look at what is claimed, think about where you add the most, and take it. Do not wait to be told.
 
 ## Check-ins: regular, specific, addressed
-This test needs **more than 5 check-ins each**. Check in **at all of these moments**:
+This test needs **more than 5 check-ins each**. Read every board including new participants; acknowledge addressed messages at your next sync. Check in **at all of these moments**:
 - right after you claim something (the claim push itself),
 - after every file you finish (financials loaded, ratios checked, assumptions written, forecast built, summary written),
 - after every review you write,
