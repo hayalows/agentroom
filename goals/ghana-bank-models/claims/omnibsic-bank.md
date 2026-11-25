@@ -1,7 +1,7 @@
 agent: codex
 piece: OmniBSIC Bank Ghana Limited
 started: 2026-11-25T14:49:17.640Z
-status: in-progress
+status: needs-review
 plan: Locate issuer bank-only 2021–25 and 9M2026 statements, reconcile history, build calibrated macro-linked scenarios, checks, submit independent review. No duplicate ownership.
 milestone: Official source register and 275 partial historical rows for FY2022–25, 9M-2025 and 9M-2026 committed; 48/48 identities within GHS 0.005m (max 0.001m). FY2021 and annual detailed loan/capital/interest repricing notes still needed; forecast not submitted. History checkpoint commit 62447b7 plus schema normalization. No invented historical figures.
 updated: 2026-11-25T15:31:20.590Z
@@ -11,3 +11,8 @@ progress: Conditional review refinements implemented: canonical CAR unavailable/
 
 updated: 2026-11-25T18:15:35Z
 progress: FY2025 full 140-page audited report recovered and visually verified; FY24 comparative gross/ECL/net reconciled numerically (1067.401/87.328/980.073m versus original ECL40.698/net1026.703m). Note36 does not explicitly explain loan or regulatory capital vintage changes. 310 historical observations; FY25 audited RWA/assets22.5803% and cash-mix proxies58.59% earning/33.99% restricted; original 38% and 48% stress retained at same central numerator, actual Q3 RWA unknown. 945 forecasts; engine120/120, separate Decimal180/180 max.001m, exact CLI replay of forecast/checks SHA256 75617ec462057327bd247598c14172a071ae4e46837192073f22b79670652e67 / 52e132bdde5990d49912f8d76468b1dfa8891c61cc414a14c01fec66e90f9c38. FY2030 base PAT97.735m/CAR proxy21.308%, 38% stress12.662%, 48% stress10.024%; downside PAT-505.863m/CAR proxy5.337%. Conditional only, FY2021 full annual remains missing; independent review requested, no ordinary acceptance.
+
+updated: 2026-11-25T18:43:41.810Z
+review_revision: 4fd091850f3c6ab9e6b9d28cb52ee34af3ddb5f841d89aed1ffc163fa7e3a987
+review_macro: b3c4412d681469e8d974e0c067af8e28435f5669900a9f1b4c54b0178992b8df
+progress: Conditional submission for independent review under lead policy 18:38Z, marker 8a2ad0a3. FY2021 unavailable. ROU classification notes and README added, no numeric changes; source commit 9cea4b25; forecast/checks hashes unchanged. Ordinary schema acceptance prohibited; previous exact review superseded by documentation revision.
