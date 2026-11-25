@@ -1,0 +1,247 @@
+bank,period,statement,line_item,value,unit,source_id,page,status,notes
+adb,FY2021,income_statement,interest_income,728.235,GHS millions,ADB22,2,reported,Bank-only; expenses positive.
+adb,FY2021,income_statement,interest_expense,247.909,GHS millions,ADB22,2,reported,Bank-only; expenses positive.
+adb,FY2021,income_statement,net_interest_income,480.326,GHS millions,ADB22,2,reported,Bank-only; expenses positive.
+adb,FY2021,income_statement,fee_commission_income,101.319,GHS millions,ADB22,2,reported,Bank-only; expenses positive.
+adb,FY2021,income_statement,fee_commission_expense,10.116,GHS millions,ADB22,2,reported,Bank-only; expenses positive.
+adb,FY2021,income_statement,net_trading_income,55.874,GHS millions,ADB22,2,reported,Bank-only; expenses positive.
+adb,FY2021,income_statement,other_operating_income,12.412,GHS millions,ADB22,2,reported,Bank-only; expenses positive.
+adb,FY2021,income_statement,total_operating_income,639.815,GHS millions,ADB22,2,reported,Bank-only; expenses positive.
+adb,FY2021,income_statement,staff_costs,250.281,GHS millions,ADB22,2,reported,Bank-only; expenses positive.
+adb,FY2021,income_statement,depreciation_amortisation,66.946,GHS millions,ADB22,2,reported,Bank-only; expenses positive.
+adb,FY2021,income_statement,other_operating_expenses,154.71,GHS millions,ADB22,2,reported,Bank-only; expenses positive.
+adb,FY2021,income_statement,impairment_charge,41.781,GHS millions,ADB22,2,reported,Bank-only.
+adb,FY2021,income_statement,profit_before_tax,126.097,GHS millions,ADB22,2,reported,Bank-only; tax credit negative; 9M-2026 PBT-tax has 0.001m rounding in filing.
+adb,FY2021,income_statement,income_tax,44.495,GHS millions,ADB22,2,reported,Bank-only; tax credit negative; 9M-2026 PBT-tax has 0.001m rounding in filing.
+adb,FY2021,income_statement,profit_after_tax,81.602,GHS millions,ADB22,2,reported,Bank-only; tax credit negative; 9M-2026 PBT-tax has 0.001m rounding in filing.
+adb,FY2021,balance_sheet,cash_and_bog_balances,924.619,GHS millions,ADB22,1,reported,Cash and bank/cash equivalents (excludes restricted cash).
+adb,FY2021,balance_sheet,due_from_banks,346.219,GHS millions,ADB22,1,reported,Due from other banks.
+adb,FY2021,balance_sheet,investment_securities,2400.655,GHS millions,ADB22,1,reported,Bank-only investment securities.
+adb,FY2021,balance_sheet,loans_and_advances_gross,,GHS millions,,,unavailable,Not disclosed in GSE summary statements (net loans only).
+adb,FY2021,balance_sheet,loan_loss_allowance,,GHS millions,,,unavailable,Not disclosed in GSE summary statements (net loans only).
+adb,FY2021,balance_sheet,loans_and_advances_net,2282.312,GHS millions,ADB22,1,reported,Bank-only.
+adb,FY2021,balance_sheet,property_equipment_intangibles,141.767,GHS millions,ADB22,1,derived,Property & equipment plus intangible assets.
+adb,FY2021,balance_sheet,other_assets,358.547,GHS millions,ADB22,1,derived,"Sum of restricted cash, investment other than securities, tax assets, ROU assets, and other assets."
+adb,FY2021,balance_sheet,total_assets,6454.119,GHS millions,ADB22,1,reported,Bank-only.
+adb,FY2021,balance_sheet,customer_deposits,4927.216,GHS millions,ADB22,1,reported,Bank-only.
+adb,FY2021,balance_sheet,due_to_banks,,GHS millions,,,unavailable,Not separately reported on balance sheet face (included in deposits/borrowings if any).
+adb,FY2021,balance_sheet,borrowings,294.559,GHS millions,ADB22,1,reported,Borrowed funds.
+adb,FY2021,balance_sheet,other_liabilities,294.089,GHS millions,ADB22,1,derived,"Sum of corporate tax liability, provisions, lease liability, and other liabilities."
+adb,FY2021,balance_sheet,total_liabilities,5515.864,GHS millions,ADB22,1,reported,Bank-only.
+adb,FY2021,balance_sheet,stated_capital,698.7,GHS millions,ADB22,1,reported,Bank-only.
+adb,FY2021,balance_sheet,retained_earnings,-236.645,GHS millions,ADB22,1,reported,Accumulated losses.
+adb,FY2021,balance_sheet,reserves_other,476.2,GHS millions,ADB22,1,derived,"Sum of deposit for shares (873.310m FY25, 855.601m 9M-26), statutory, revaluation, credit risk, and FVOCI/other reserves."
+adb,FY2021,balance_sheet,total_equity,938.255,GHS millions,ADB22,1,reported,Bank-only.
+adb,FY2021,ratios,car_pct,14.49,%,ADB22,5,reported,Bank-only regulatory CAR.
+adb,FY2021,ratios,tier1_pct,,%,,,unavailable,Total Tier 1 not separately disclosed; CET1 reported in x_cet1_pct.
+adb,FY2021,ratios,x_cet1_pct,12.49,%,ADB22,5,reported,Bank-only Common Equity Tier 1 ratio.
+adb,FY2021,ratios,npl_pct,31.21,%,ADB22,5,reported,Bank-only NPL to gross loans.
+adb,FY2021,ratios,ldr_pct,46.3205,%,ADB22,1,derived,loans_and_advances_net / customer_deposits * 100 (net basis).
+adb,FY2021,ratios,cost_to_income_pct,73.7615,%,ADB22,2,derived,(staff + da + other_operating_expenses) / total_operating_income * 100.
+adb,FY2021,ratios,roe_pct,,%,,,unavailable,Opening FY2020 not retrieved / 9M-2026 interim.
+adb,FY2021,ratios,roa_pct,,%,,,unavailable,Opening FY2020 not retrieved / 9M-2026 interim.
+adb,FY2022,income_statement,interest_income,892.367,GHS millions,ADB22,2,reported,Bank-only; expenses positive.
+adb,FY2022,income_statement,interest_expense,470.05,GHS millions,ADB22,2,reported,Bank-only; expenses positive.
+adb,FY2022,income_statement,net_interest_income,422.317,GHS millions,ADB22,2,reported,Bank-only; expenses positive.
+adb,FY2022,income_statement,fee_commission_income,113.711,GHS millions,ADB22,2,reported,Bank-only; expenses positive.
+adb,FY2022,income_statement,fee_commission_expense,17.932,GHS millions,ADB22,2,reported,Bank-only; expenses positive.
+adb,FY2022,income_statement,net_trading_income,122.854,GHS millions,ADB22,2,reported,Bank-only; expenses positive.
+adb,FY2022,income_statement,other_operating_income,6.745,GHS millions,ADB22,2,reported,Bank-only; expenses positive.
+adb,FY2022,income_statement,total_operating_income,647.695,GHS millions,ADB22,2,reported,Bank-only; expenses positive.
+adb,FY2022,income_statement,staff_costs,336.028,GHS millions,ADB22,2,reported,Bank-only; expenses positive.
+adb,FY2022,income_statement,depreciation_amortisation,58.382,GHS millions,ADB22,2,reported,Bank-only; expenses positive.
+adb,FY2022,income_statement,other_operating_expenses,187.432,GHS millions,ADB22,2,reported,Bank-only; expenses positive.
+adb,FY2022,income_statement,impairment_charge,430.211,GHS millions,ADB22,2,derived,Sum of loan and other financial asset impairment charges (net reversals negative).
+adb,FY2022,income_statement,profit_before_tax,-364.358,GHS millions,ADB22,2,reported,Bank-only; tax credit negative; 9M-2026 PBT-tax has 0.001m rounding in filing.
+adb,FY2022,income_statement,income_tax,6.922,GHS millions,ADB22,2,reported,Bank-only; tax credit negative; 9M-2026 PBT-tax has 0.001m rounding in filing.
+adb,FY2022,income_statement,profit_after_tax,-371.28,GHS millions,ADB22,2,reported,Bank-only; tax credit negative; 9M-2026 PBT-tax has 0.001m rounding in filing.
+adb,FY2022,balance_sheet,cash_and_bog_balances,1908.837,GHS millions,ADB22,1,reported,Cash and bank/cash equivalents (excludes restricted cash).
+adb,FY2022,balance_sheet,due_from_banks,349.719,GHS millions,ADB22,1,reported,Due from other banks.
+adb,FY2022,balance_sheet,investment_securities,1316.584,GHS millions,ADB22,1,reported,Bank-only investment securities.
+adb,FY2022,balance_sheet,loans_and_advances_gross,,GHS millions,,,unavailable,Not disclosed in GSE summary statements (net loans only).
+adb,FY2022,balance_sheet,loan_loss_allowance,,GHS millions,,,unavailable,Not disclosed in GSE summary statements (net loans only).
+adb,FY2022,balance_sheet,loans_and_advances_net,3242.189,GHS millions,ADB22,1,reported,Bank-only.
+adb,FY2022,balance_sheet,property_equipment_intangibles,236.424,GHS millions,ADB22,1,derived,Property & equipment plus intangible assets.
+adb,FY2022,balance_sheet,other_assets,358.967,GHS millions,ADB22,1,derived,"Sum of restricted cash, investment other than securities, tax assets, ROU assets, and other assets."
+adb,FY2022,balance_sheet,total_assets,7412.72,GHS millions,ADB22,1,reported,Bank-only.
+adb,FY2022,balance_sheet,customer_deposits,5864.85,GHS millions,ADB22,1,reported,Bank-only.
+adb,FY2022,balance_sheet,due_to_banks,,GHS millions,,,unavailable,Not separately reported on balance sheet face (included in deposits/borrowings if any).
+adb,FY2022,balance_sheet,borrowings,588.438,GHS millions,ADB22,1,reported,Borrowed funds.
+adb,FY2022,balance_sheet,other_liabilities,301.241,GHS millions,ADB22,1,derived,"Sum of corporate tax liability, provisions, lease liability, and other liabilities."
+adb,FY2022,balance_sheet,total_liabilities,6754.529,GHS millions,ADB22,1,reported,Bank-only.
+adb,FY2022,balance_sheet,stated_capital,698.7,GHS millions,ADB22,1,reported,Bank-only.
+adb,FY2022,balance_sheet,retained_earnings,-674.978,GHS millions,ADB22,1,reported,Accumulated losses.
+adb,FY2022,balance_sheet,reserves_other,634.467,GHS millions,ADB22,1,derived,"Sum of deposit for shares (873.310m FY25, 855.601m 9M-26), statutory, revaluation, credit risk, and FVOCI/other reserves."
+adb,FY2022,balance_sheet,total_equity,658.191,GHS millions,ADB22,1,reported,Bank-only.
+adb,FY2022,ratios,car_pct,7.36,%,ADB22,5,reported,Bank-only regulatory CAR.
+adb,FY2022,ratios,tier1_pct,,%,,,unavailable,Total Tier 1 not separately disclosed; CET1 reported in x_cet1_pct.
+adb,FY2022,ratios,x_cet1_pct,4.36,%,ADB22,5,reported,Bank-only Common Equity Tier 1 ratio.
+adb,FY2022,ratios,npl_pct,29.74,%,ADB22,5,reported,Bank-only NPL to gross loans.
+adb,FY2022,ratios,ldr_pct,55.2817,%,ADB22,1,derived,loans_and_advances_net / customer_deposits * 100 (net basis).
+adb,FY2022,ratios,cost_to_income_pct,89.8327,%,ADB22,2,derived,(staff + da + other_operating_expenses) / total_operating_income * 100.
+adb,FY2022,ratios,roe_pct,-46.5133,%,ADB22,2,derived,profit_after_tax / average total_equity * 100.
+adb,FY2022,ratios,roa_pct,-5.3549,%,ADB22,2,derived,profit_after_tax / average total_assets * 100.
+adb,FY2023,income_statement,interest_income,1043.564,GHS millions,ADB24,1,reported,Bank-only; expenses positive.
+adb,FY2023,income_statement,interest_expense,669.644,GHS millions,ADB24,1,reported,Bank-only; expenses positive.
+adb,FY2023,income_statement,net_interest_income,373.92,GHS millions,ADB24,1,reported,Bank-only; expenses positive.
+adb,FY2023,income_statement,fee_commission_income,158.347,GHS millions,ADB24,1,reported,Bank-only; expenses positive.
+adb,FY2023,income_statement,fee_commission_expense,21.852,GHS millions,ADB24,1,reported,Bank-only; expenses positive.
+adb,FY2023,income_statement,net_trading_income,140.861,GHS millions,ADB24,1,reported,Bank-only; expenses positive.
+adb,FY2023,income_statement,other_operating_income,11.152,GHS millions,ADB24,1,reported,Bank-only; expenses positive.
+adb,FY2023,income_statement,total_operating_income,662.428,GHS millions,ADB24,1,reported,Bank-only; expenses positive.
+adb,FY2023,income_statement,staff_costs,387.983,GHS millions,ADB24,1,reported,Bank-only; expenses positive.
+adb,FY2023,income_statement,depreciation_amortisation,62.583,GHS millions,ADB24,1,reported,Bank-only; expenses positive.
+adb,FY2023,income_statement,other_operating_expenses,284.063,GHS millions,ADB24,1,reported,Bank-only; expenses positive.
+adb,FY2023,income_statement,impairment_charge,786.926,GHS millions,ADB24,1,derived,Sum of loan and other financial asset impairment charges (net reversals negative).
+adb,FY2023,income_statement,profit_before_tax,-859.127,GHS millions,ADB24,1,reported,Bank-only; tax credit negative; 9M-2026 PBT-tax has 0.001m rounding in filing.
+adb,FY2023,income_statement,income_tax,-30.307,GHS millions,ADB24,1,reported,Bank-only; tax credit negative; 9M-2026 PBT-tax has 0.001m rounding in filing.
+adb,FY2023,income_statement,profit_after_tax,-828.82,GHS millions,ADB24,1,reported,Bank-only; tax credit negative; 9M-2026 PBT-tax has 0.001m rounding in filing.
+adb,FY2023,balance_sheet,cash_and_bog_balances,3800.04,GHS millions,ADB24,1,reported,Cash and bank/cash equivalents (excludes restricted cash).
+adb,FY2023,balance_sheet,due_from_banks,,GHS millions,,,unavailable,Combined with cash_and_bog_balances in FY2023-9M-2026 summary statements.
+adb,FY2023,balance_sheet,investment_securities,1784.902,GHS millions,ADB24,1,reported,Bank-only investment securities.
+adb,FY2023,balance_sheet,loans_and_advances_gross,,GHS millions,,,unavailable,Not disclosed in GSE summary statements (net loans only).
+adb,FY2023,balance_sheet,loan_loss_allowance,,GHS millions,,,unavailable,Not disclosed in GSE summary statements (net loans only).
+adb,FY2023,balance_sheet,loans_and_advances_net,2937.636,GHS millions,ADB24,1,reported,Bank-only.
+adb,FY2023,balance_sheet,property_equipment_intangibles,230.179,GHS millions,ADB24,1,derived,Property & equipment plus intangible assets.
+adb,FY2023,balance_sheet,other_assets,559.89,GHS millions,ADB24,1,derived,"Sum of restricted cash, investment other than securities, tax assets, ROU assets, and other assets."
+adb,FY2023,balance_sheet,total_assets,9312.647,GHS millions,ADB24,1,reported,Bank-only.
+adb,FY2023,balance_sheet,customer_deposits,8545.307,GHS millions,ADB24,1,reported,Bank-only.
+adb,FY2023,balance_sheet,due_to_banks,,GHS millions,,,unavailable,Not separately reported on balance sheet face (included in deposits/borrowings if any).
+adb,FY2023,balance_sheet,borrowings,547.306,GHS millions,ADB24,1,reported,Borrowed funds.
+adb,FY2023,balance_sheet,other_liabilities,322.33,GHS millions,ADB24,1,derived,"Sum of corporate tax liability, provisions, lease liability, and other liabilities."
+adb,FY2023,balance_sheet,total_liabilities,9414.943,GHS millions,ADB24,1,reported,Bank-only.
+adb,FY2023,balance_sheet,stated_capital,698.7,GHS millions,ADB24,1,reported,Bank-only.
+adb,FY2023,balance_sheet,retained_earnings,-1725.169,GHS millions,ADB24,1,reported,Accumulated losses.
+adb,FY2023,balance_sheet,reserves_other,924.173,GHS millions,ADB24,1,derived,"Sum of deposit for shares (873.310m FY25, 855.601m 9M-26), statutory, revaluation, credit risk, and FVOCI/other reserves."
+adb,FY2023,balance_sheet,total_equity,-102.296,GHS millions,ADB24,1,reported,Bank-only.
+adb,FY2023,ratios,car_pct,-22.61,%,ADB24,2,reported,Bank-only regulatory CAR.
+adb,FY2023,ratios,tier1_pct,,%,,,unavailable,Total Tier 1 not separately disclosed; CET1 reported in x_cet1_pct.
+adb,FY2023,ratios,x_cet1_pct,-25.61,%,ADB24,2,reported,Bank-only Common Equity Tier 1 ratio.
+adb,FY2023,ratios,npl_pct,70.25,%,ADB24,2,reported,Bank-only NPL to gross loans.
+adb,FY2023,ratios,ldr_pct,34.3772,%,ADB24,1,derived,loans_and_advances_net / customer_deposits * 100 (net basis).
+adb,FY2023,ratios,cost_to_income_pct,110.8994,%,ADB24,1,derived,(staff + da + other_operating_expenses) / total_operating_income * 100.
+adb,FY2023,ratios,roe_pct,-298.193,%,ADB24,1,derived,profit_after_tax / average total_equity * 100.
+adb,FY2023,ratios,roa_pct,-9.9109,%,ADB24,1,derived,profit_after_tax / average total_assets * 100.
+adb,FY2024,income_statement,interest_income,1571.627,GHS millions,ADB25,1,reported,Bank-only; expenses positive.
+adb,FY2024,income_statement,interest_expense,848.446,GHS millions,ADB25,1,reported,Bank-only; expenses positive.
+adb,FY2024,income_statement,net_interest_income,723.181,GHS millions,ADB25,1,reported,Bank-only; expenses positive.
+adb,FY2024,income_statement,fee_commission_income,238.976,GHS millions,ADB25,1,reported,Bank-only; expenses positive.
+adb,FY2024,income_statement,fee_commission_expense,31.46,GHS millions,ADB25,1,reported,Bank-only; expenses positive.
+adb,FY2024,income_statement,net_trading_income,70.739,GHS millions,ADB25,1,reported,Bank-only; expenses positive.
+adb,FY2024,income_statement,other_operating_income,3.315,GHS millions,ADB25,1,reported,Bank-only; expenses positive.
+adb,FY2024,income_statement,total_operating_income,1004.751,GHS millions,ADB25,1,reported,Bank-only; expenses positive.
+adb,FY2024,income_statement,staff_costs,494.64,GHS millions,ADB25,1,reported,Bank-only; expenses positive.
+adb,FY2024,income_statement,depreciation_amortisation,72.877,GHS millions,ADB25,1,reported,Bank-only; expenses positive.
+adb,FY2024,income_statement,other_operating_expenses,351.834,GHS millions,ADB25,1,reported,Bank-only; expenses positive.
+adb,FY2024,income_statement,impairment_charge,310.491,GHS millions,ADB25,1,derived,Sum of loan and other financial asset impairment charges (net reversals negative).
+adb,FY2024,income_statement,profit_before_tax,-225.091,GHS millions,ADB25,1,reported,Bank-only; tax credit negative; 9M-2026 PBT-tax has 0.001m rounding in filing.
+adb,FY2024,income_statement,income_tax,-260.152,GHS millions,ADB25,1,reported,Bank-only; tax credit negative; 9M-2026 PBT-tax has 0.001m rounding in filing.
+adb,FY2024,income_statement,profit_after_tax,35.061,GHS millions,ADB25,1,reported,Bank-only; tax credit negative; 9M-2026 PBT-tax has 0.001m rounding in filing.
+adb,FY2024,balance_sheet,cash_and_bog_balances,7176.917,GHS millions,ADB25,1,reported,Cash and bank/cash equivalents (excludes restricted cash).
+adb,FY2024,balance_sheet,due_from_banks,,GHS millions,,,unavailable,Combined with cash_and_bog_balances in FY2023-9M-2026 summary statements.
+adb,FY2024,balance_sheet,investment_securities,3804.236,GHS millions,ADB25,1,reported,Bank-only investment securities.
+adb,FY2024,balance_sheet,loans_and_advances_gross,,GHS millions,,,unavailable,Not disclosed in GSE summary statements (net loans only).
+adb,FY2024,balance_sheet,loan_loss_allowance,,GHS millions,,,unavailable,Not disclosed in GSE summary statements (net loans only).
+adb,FY2024,balance_sheet,loans_and_advances_net,2574.527,GHS millions,ADB25,1,reported,Bank-only.
+adb,FY2024,balance_sheet,property_equipment_intangibles,207.251,GHS millions,ADB25,1,derived,Property & equipment plus intangible assets.
+adb,FY2024,balance_sheet,other_assets,841.846,GHS millions,ADB25,1,derived,"Sum of restricted cash, investment other than securities, tax assets, ROU assets, and other assets."
+adb,FY2024,balance_sheet,total_assets,14604.777,GHS millions,ADB25,1,reported,Bank-only.
+adb,FY2024,balance_sheet,customer_deposits,12045.885,GHS millions,ADB25,1,reported,Bank-only.
+adb,FY2024,balance_sheet,due_to_banks,,GHS millions,,,unavailable,Not separately reported on balance sheet face (included in deposits/borrowings if any).
+adb,FY2024,balance_sheet,borrowings,929.864,GHS millions,ADB25,1,reported,Borrowed funds.
+adb,FY2024,balance_sheet,other_liabilities,350.983,GHS millions,ADB25,1,derived,"Sum of corporate tax liability, provisions, lease liability, and other liabilities."
+adb,FY2024,balance_sheet,total_liabilities,13326.732,GHS millions,ADB25,1,reported,Bank-only.
+adb,FY2024,balance_sheet,stated_capital,2146.745,GHS millions,ADB25,1,reported,Bank-only.
+adb,FY2024,balance_sheet,retained_earnings,-2056.062,GHS millions,ADB25,1,reported,Accumulated losses.
+adb,FY2024,balance_sheet,reserves_other,1187.362,GHS millions,ADB25,1,derived,"Sum of deposit for shares (873.310m FY25, 855.601m 9M-26), statutory, revaluation, credit risk, and FVOCI/other reserves."
+adb,FY2024,balance_sheet,total_equity,1278.045,GHS millions,ADB25,1,reported,Bank-only.
+adb,FY2024,ratios,car_pct,-3.15,%,ADB25,3,reported,Bank-only regulatory CAR.
+adb,FY2024,ratios,tier1_pct,,%,,,unavailable,Total Tier 1 not separately disclosed; CET1 reported in x_cet1_pct.
+adb,FY2024,ratios,x_cet1_pct,-6.15,%,ADB25,3,reported,Bank-only Common Equity Tier 1 ratio.
+adb,FY2024,ratios,npl_pct,75.26,%,ADB25,3,reported,Bank-only NPL to gross loans.
+adb,FY2024,ratios,ldr_pct,21.3727,%,ADB25,1,derived,loans_and_advances_net / customer_deposits * 100 (net basis).
+adb,FY2024,ratios,cost_to_income_pct,91.5004,%,ADB25,1,derived,(staff + da + other_operating_expenses) / total_operating_income * 100.
+adb,FY2024,ratios,roe_pct,5.964,%,ADB25,1,derived,profit_after_tax / average total_equity * 100.
+adb,FY2024,ratios,roa_pct,0.2932,%,ADB25,1,derived,profit_after_tax / average total_assets * 100.
+adb,FY2025,income_statement,interest_income,2093.844,GHS millions,ADB25,1,reported,Bank-only; expenses positive.
+adb,FY2025,income_statement,interest_expense,723.598,GHS millions,ADB25,1,reported,Bank-only; expenses positive.
+adb,FY2025,income_statement,net_interest_income,1370.246,GHS millions,ADB25,1,reported,Bank-only; expenses positive.
+adb,FY2025,income_statement,fee_commission_income,284.479,GHS millions,ADB25,1,reported,Bank-only; expenses positive.
+adb,FY2025,income_statement,fee_commission_expense,28.898,GHS millions,ADB25,1,reported,Bank-only; expenses positive.
+adb,FY2025,income_statement,net_trading_income,106.466,GHS millions,ADB25,1,reported,Bank-only; expenses positive.
+adb,FY2025,income_statement,other_operating_income,13.117,GHS millions,ADB25,1,reported,Bank-only; expenses positive.
+adb,FY2025,income_statement,total_operating_income,1745.41,GHS millions,ADB25,1,reported,Bank-only; expenses positive.
+adb,FY2025,income_statement,staff_costs,514.075,GHS millions,ADB25,1,reported,Bank-only; expenses positive.
+adb,FY2025,income_statement,depreciation_amortisation,71.847,GHS millions,ADB25,1,reported,Bank-only; expenses positive.
+adb,FY2025,income_statement,other_operating_expenses,324.446,GHS millions,ADB25,1,reported,Bank-only; expenses positive.
+adb,FY2025,income_statement,impairment_charge,254.222,GHS millions,ADB25,1,derived,Sum of loan and other financial asset impairment charges (net reversals negative).
+adb,FY2025,income_statement,profit_before_tax,580.82,GHS millions,ADB25,1,reported,Bank-only; tax credit negative; 9M-2026 PBT-tax has 0.001m rounding in filing.
+adb,FY2025,income_statement,income_tax,213.529,GHS millions,ADB25,1,reported,Bank-only; tax credit negative; 9M-2026 PBT-tax has 0.001m rounding in filing.
+adb,FY2025,income_statement,profit_after_tax,367.291,GHS millions,ADB25,1,reported,Bank-only; tax credit negative; 9M-2026 PBT-tax has 0.001m rounding in filing.
+adb,FY2025,balance_sheet,cash_and_bog_balances,9902.445,GHS millions,ADB25,1,reported,Cash and bank/cash equivalents (excludes restricted cash).
+adb,FY2025,balance_sheet,due_from_banks,,GHS millions,,,unavailable,Combined with cash_and_bog_balances in FY2023-9M-2026 summary statements.
+adb,FY2025,balance_sheet,investment_securities,5029.965,GHS millions,ADB25,1,reported,Bank-only investment securities.
+adb,FY2025,balance_sheet,loans_and_advances_gross,,GHS millions,,,unavailable,Not disclosed in GSE summary statements (net loans only).
+adb,FY2025,balance_sheet,loan_loss_allowance,,GHS millions,,,unavailable,Not disclosed in GSE summary statements (net loans only).
+adb,FY2025,balance_sheet,loans_and_advances_net,2011.731,GHS millions,ADB25,1,reported,Bank-only.
+adb,FY2025,balance_sheet,property_equipment_intangibles,181.806,GHS millions,ADB25,1,derived,Property & equipment plus intangible assets.
+adb,FY2025,balance_sheet,other_assets,761.575,GHS millions,ADB25,1,derived,"Sum of restricted cash, investment other than securities, tax assets, ROU assets, and other assets."
+adb,FY2025,balance_sheet,total_assets,17887.521,GHS millions,ADB25,1,reported,Bank-only.
+adb,FY2025,balance_sheet,customer_deposits,13220.185,GHS millions,ADB25,1,reported,Bank-only.
+adb,FY2025,balance_sheet,due_to_banks,,GHS millions,,,unavailable,Not separately reported on balance sheet face (included in deposits/borrowings if any).
+adb,FY2025,balance_sheet,borrowings,1754.969,GHS millions,ADB25,1,reported,Borrowed funds.
+adb,FY2025,balance_sheet,other_liabilities,434.528,GHS millions,ADB25,1,derived,"Sum of corporate tax liability, provisions, lease liability, and other liabilities."
+adb,FY2025,balance_sheet,total_liabilities,15409.682,GHS millions,ADB25,1,reported,Bank-only.
+adb,FY2025,balance_sheet,stated_capital,2146.745,GHS millions,ADB25,1,reported,Bank-only.
+adb,FY2025,balance_sheet,retained_earnings,-1747.174,GHS millions,ADB25,1,reported,Accumulated losses.
+adb,FY2025,balance_sheet,reserves_other,2078.268,GHS millions,ADB25,1,derived,"Sum of deposit for shares (873.310m FY25, 855.601m 9M-26), statutory, revaluation, credit risk, and FVOCI/other reserves."
+adb,FY2025,balance_sheet,total_equity,2477.839,GHS millions,ADB25,1,reported,Bank-only.
+adb,FY2025,ratios,car_pct,27.17,%,ADB25,3,reported,Bank-only regulatory CAR.
+adb,FY2025,ratios,tier1_pct,,%,,,unavailable,Total Tier 1 not separately disclosed; CET1 reported in x_cet1_pct.
+adb,FY2025,ratios,x_cet1_pct,25.17,%,ADB25,3,reported,Bank-only Common Equity Tier 1 ratio.
+adb,FY2025,ratios,npl_pct,70.53,%,ADB25,3,reported,Bank-only NPL to gross loans.
+adb,FY2025,ratios,ldr_pct,15.2171,%,ADB25,1,derived,loans_and_advances_net / customer_deposits * 100 (net basis).
+adb,FY2025,ratios,cost_to_income_pct,52.1578,%,ADB25,1,derived,(staff + da + other_operating_expenses) / total_operating_income * 100.
+adb,FY2025,ratios,roe_pct,19.5582,%,ADB25,1,derived,profit_after_tax / average total_equity * 100.
+adb,FY2025,ratios,roa_pct,2.2608,%,ADB25,1,derived,profit_after_tax / average total_assets * 100.
+adb,9M-2026,income_statement,interest_income,1228.542,GHS millions,ADB26Q3,2,reported,Bank-only; expenses positive.
+adb,9M-2026,income_statement,interest_expense,361.343,GHS millions,ADB26Q3,2,reported,Bank-only; expenses positive.
+adb,9M-2026,income_statement,net_interest_income,867.199,GHS millions,ADB26Q3,2,reported,Bank-only; expenses positive.
+adb,9M-2026,income_statement,fee_commission_income,210.36,GHS millions,ADB26Q3,2,reported,Bank-only; expenses positive.
+adb,9M-2026,income_statement,fee_commission_expense,21.629,GHS millions,ADB26Q3,2,reported,Bank-only; expenses positive.
+adb,9M-2026,income_statement,net_trading_income,75.5,GHS millions,ADB26Q3,2,reported,Bank-only; expenses positive.
+adb,9M-2026,income_statement,other_operating_income,19.215,GHS millions,ADB26Q3,2,reported,Bank-only; expenses positive.
+adb,9M-2026,income_statement,total_operating_income,1150.645,GHS millions,ADB26Q3,2,reported,Bank-only; expenses positive.
+adb,9M-2026,income_statement,staff_costs,418.335,GHS millions,ADB26Q3,2,reported,Bank-only; expenses positive.
+adb,9M-2026,income_statement,depreciation_amortisation,52.119,GHS millions,ADB26Q3,2,reported,Bank-only; expenses positive.
+adb,9M-2026,income_statement,other_operating_expenses,228.494,GHS millions,ADB26Q3,2,reported,Bank-only; expenses positive.
+adb,9M-2026,income_statement,impairment_charge,-26.828,GHS millions,ADB26Q3,2,derived,Sum of loan and other financial asset impairment charges (net reversals negative).
+adb,9M-2026,income_statement,profit_before_tax,478.525,GHS millions,ADB26Q3,2,reported,Bank-only; tax credit negative; 9M-2026 PBT-tax has 0.001m rounding in filing.
+adb,9M-2026,income_statement,income_tax,176.812,GHS millions,ADB26Q3,2,reported,Bank-only; tax credit negative; 9M-2026 PBT-tax has 0.001m rounding in filing.
+adb,9M-2026,income_statement,profit_after_tax,301.714,GHS millions,ADB26Q3,2,reported,Bank-only; tax credit negative; 9M-2026 PBT-tax has 0.001m rounding in filing.
+adb,9M-2026,balance_sheet,cash_and_bog_balances,10836.619,GHS millions,ADB26Q3,1,reported,Cash and bank/cash equivalents (excludes restricted cash).
+adb,9M-2026,balance_sheet,due_from_banks,,GHS millions,,,unavailable,Combined with cash_and_bog_balances in FY2023-9M-2026 summary statements.
+adb,9M-2026,balance_sheet,investment_securities,6381.47,GHS millions,ADB26Q3,1,reported,Bank-only investment securities.
+adb,9M-2026,balance_sheet,loans_and_advances_gross,,GHS millions,,,unavailable,Not disclosed in GSE summary statements (net loans only).
+adb,9M-2026,balance_sheet,loan_loss_allowance,,GHS millions,,,unavailable,Not disclosed in GSE summary statements (net loans only).
+adb,9M-2026,balance_sheet,loans_and_advances_net,2119.837,GHS millions,ADB26Q3,1,reported,Bank-only.
+adb,9M-2026,balance_sheet,property_equipment_intangibles,193.497,GHS millions,ADB26Q3,1,derived,Property & equipment plus intangible assets.
+adb,9M-2026,balance_sheet,other_assets,746.57,GHS millions,ADB26Q3,1,derived,"Sum of restricted cash, investment other than securities, tax assets, ROU assets, and other assets."
+adb,9M-2026,balance_sheet,total_assets,20277.994,GHS millions,ADB26Q3,1,reported,Bank-only.
+adb,9M-2026,balance_sheet,customer_deposits,15362.718,GHS millions,ADB26Q3,1,reported,Bank-only.
+adb,9M-2026,balance_sheet,due_to_banks,,GHS millions,,,unavailable,Not separately reported on balance sheet face (included in deposits/borrowings if any).
+adb,9M-2026,balance_sheet,borrowings,1665.71,GHS millions,ADB26Q3,1,reported,Borrowed funds.
+adb,9M-2026,balance_sheet,other_liabilities,487.719,GHS millions,ADB26Q3,1,derived,"Sum of corporate tax liability, provisions, lease liability, and other liabilities."
+adb,9M-2026,balance_sheet,total_liabilities,17516.147,GHS millions,ADB26Q3,1,reported,Bank-only.
+adb,9M-2026,balance_sheet,stated_capital,2146.745,GHS millions,ADB26Q3,1,reported,Bank-only.
+adb,9M-2026,balance_sheet,retained_earnings,-1522.86,GHS millions,ADB26Q3,1,reported,Accumulated losses.
+adb,9M-2026,balance_sheet,reserves_other,2137.962,GHS millions,ADB26Q3,1,derived,"Sum of deposit for shares (873.310m FY25, 855.601m 9M-26), statutory, revaluation, credit risk, and FVOCI/other reserves."
+adb,9M-2026,balance_sheet,total_equity,2761.847,GHS millions,ADB26Q3,1,reported,Bank-only.
+adb,9M-2026,ratios,car_pct,27.41,%,ADB26Q3,5,reported,Bank-only regulatory CAR.
+adb,9M-2026,ratios,tier1_pct,,%,,,unavailable,Total Tier 1 not separately disclosed; CET1 reported in x_cet1_pct.
+adb,9M-2026,ratios,x_cet1_pct,25.41,%,ADB26Q3,5,reported,Bank-only Common Equity Tier 1 ratio.
+adb,9M-2026,ratios,npl_pct,66.32,%,ADB26Q3,5,reported,Bank-only NPL to gross loans.
+adb,9M-2026,ratios,ldr_pct,13.7986,%,ADB26Q3,1,derived,loans_and_advances_net / customer_deposits * 100 (net basis).
+adb,9M-2026,ratios,cost_to_income_pct,60.744,%,ADB26Q3,2,derived,(staff + da + other_operating_expenses) / total_operating_income * 100.
+adb,9M-2026,ratios,roe_pct,,%,,,unavailable,Opening FY2020 not retrieved / 9M-2026 interim.
+adb,9M-2026,ratios,roa_pct,,%,,,unavailable,Opening FY2020 not retrieved / 9M-2026 interim.
