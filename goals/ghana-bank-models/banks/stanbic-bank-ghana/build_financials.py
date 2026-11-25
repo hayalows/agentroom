@@ -217,11 +217,18 @@ for p in PERIODS:
 
     r = RATIO[p]
     add(p, "ratios", "car_pct", r["car"], "percent", r["src"], r["pg"], "reported", "Total capital adequacy ratio as reported.")
-    add(p, "ratios", "tier1_pct", r["tier1"], "percent", r["src"], r["pg"], "reported", "Reported Common Equity Tier 1 ratio (note 5.1 basis).")
+    add(p, "ratios", "x_cet1_pct", r["tier1"], "percent", r["src"], r["pg"], "reported",
+        "Reported Common Equity Tier 1 ratio (the summary disclosures label this CET1, not Tier 1).")
+    c = CAP[p]
+    t1pct = None if (c["t1"] is None or not c["rwa"]) else 100.0 * c["t1"] / c["rwa"]
+    add(p, "ratios", "tier1_pct", t1pct, "percent", c["src"], c["pg"],
+        "derived" if t1pct is not None else "unavailable",
+        "Tier 1 capital / RWA computed from the audited capital-adequacy note (Tier 1 numerator, not CET1). "
+        "Close to but definitionally distinct from the reported CET1 ratio."
+        if t1pct is not None else "Tier 1 capital and RWA not both available; true Tier 1 ratio unavailable.")
     add(p, "ratios", "npl_pct", r["npl"], "percent", r["src"], r["pg"], "reported",
         "Gross non-performing loan ratio as reported by the Bank (the AR narrative separately quotes the industry NPL).")
 
-    c = CAP[p]
     nreg = "Bank-only (separate) statements; audited capital-adequacy note."
     for key, item, lab in [("t1","x_tier1_capital","Tier 1 capital."),("t2","x_tier2_capital","Tier 2 capital."),
                            ("cap","x_regulatory_capital","Total regulatory capital (Tier 1 + Tier 2)."),

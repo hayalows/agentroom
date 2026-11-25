@@ -257,11 +257,17 @@ for s in SCEN:
         if first:
             i["income_tax"] = (Q3I["income_tax"]
                                + max(0.0, i["profit_before_tax"] - Q3I["profit_before_tax"]) * pct(D["tax_rate_pct"][s]))
+            # Anchor-year tax split: preserve the ACTUAL 9M indirect and direct tax and add only
+            # an estimated Q4 component. Never recompute the annual indirect tax from full-year PBT
+            # (that can put the estimated indirect tax below the observed nine-month figure).
+            q4pbt = max(0.0, i["profit_before_tax"] - Q3I["profit_before_tax"])
+            i["x_indirect_tax"] = Q3I["x_indirect_tax"] + q4pbt * pct(D["indirect_tax_ratio_pct"][s])
+            i["x_direct_tax"] = i["income_tax"] - i["x_indirect_tax"]
         else:
             i["income_tax"] = max(0.0, i["profit_before_tax"]) * pct(D["tax_rate_pct"][s])
+            i["x_indirect_tax"] = max(0.0, i["profit_before_tax"]) * pct(D["indirect_tax_ratio_pct"][s])
+            i["x_direct_tax"] = i["income_tax"] - i["x_indirect_tax"]
         i["profit_after_tax"] = i["profit_before_tax"] - i["income_tax"]
-        i["x_indirect_tax"] = max(0.0, i["profit_before_tax"]) * pct(D["indirect_tax_ratio_pct"][s])
-        i["x_direct_tax"] = i["income_tax"] - i["x_indirect_tax"]
 
         incPAT = (i["profit_after_tax"] - Q3I["profit_after_tax"]) if first else i["profit_after_tax"]
         preEquity = prevB["total_equity"] + incPAT
@@ -436,7 +442,7 @@ L.append("")
 L.append("| Period | Reported CAR | Reported CET1 | Reported NPL | Derived LDR | Derived cost/income | Derived ROE | Derived ROA |")
 L.append("|---|---:|---:|---:|---:|---:|---:|---:|")
 for p in hist_periods:
-    car, t1, npl = hv(p, "car_pct"), hv(p, "tier1_pct"), hv(p, "npl_pct")
+    car, t1, npl = hv(p, "car_pct"), hv(p, "x_cet1_pct"), hv(p, "npl_pct")
     loang, dep = hv(p, "loans_and_advances_gross"), hv(p, "customer_deposits")
     ldr = None if None in (loang, dep) else 100 * loang / dep
     tii = hv(p, "total_operating_income")

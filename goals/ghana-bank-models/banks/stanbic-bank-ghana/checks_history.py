@@ -89,7 +89,7 @@ lines.append("")
 lines.append("| Period | Reported CAR | Reported CET1 | Reported NPL | Derived LDR | Derived cost/income | Derived ROE | Derived ROA |")
 lines.append("|---|---:|---:|---:|---:|---:|---:|---:|")
 for p in PERIODS:
-    car, t1, npl = hv(p, "car_pct"), hv(p, "tier1_pct"), hv(p, "npl_pct")
+    car, t1, npl = hv(p, "car_pct"), hv(p, "x_cet1_pct"), hv(p, "npl_pct")
     loang, dep = hv(p, "loans_and_advances_gross"), hv(p, "customer_deposits")
     ldr = None if None in (loang, dep) else 100 * loang / dep
     tii = hv(p, "total_operating_income")
