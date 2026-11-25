@@ -1,0 +1,271 @@
+bank,period,statement,line_item,value,unit,source_id,page,status,notes
+societe-generale-ghana,FY2021,income_statement,interest_income,510.992929,GHS millions,SG21AR,51,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2021,income_statement,interest_expense,109.990417,GHS millions,SG21AR,51,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2021,income_statement,net_interest_income,401.002512,GHS millions,SG21AR,51,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2021,income_statement,fee_commission_income,77.475216,GHS millions,SG21AR,51,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2021,income_statement,fee_commission_expense,27.252208,GHS millions,SG21AR,51,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2021,income_statement,net_trading_income,40.793352,GHS millions,SG21AR,51,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2021,income_statement,total_operating_income,636.294053,GHS millions,SG21AR,51,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2021,income_statement,staff_costs,135.516867,GHS millions,SG21AR,51,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2021,income_statement,depreciation_amortisation,34.807599,GHS millions,SG21AR,51,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2021,income_statement,other_operating_expenses,150.595307,GHS millions,SG21AR,51,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2021,income_statement,impairment_charge,33.407581,GHS millions,SG21AR,51,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2021,income_statement,profit_before_tax,281.966699,GHS millions,SG21AR,51,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2021,income_statement,income_tax,97.637066,GHS millions,SG21AR,51,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2021,income_statement,profit_after_tax,184.329633,GHS millions,SG21AR,51,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2021,income_statement,other_operating_income,91.439536,GHS millions,SG21AR,51,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2021,income_statement,x_fv_other_income,52.835645,GHS millions,SG21AR,51,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed. Net income from other financial instruments carried at fair value."
+societe-generale-ghana,FY2021,balance_sheet,cash_and_bog_balances,963.960922,GHS millions,SG21AR,52,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2021,balance_sheet,x_trading_assets,143.15628,GHS millions,SG21AR,52,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed. Non-pledged trading assets."
+societe-generale-ghana,FY2021,balance_sheet,x_derivative_assets,,GHS millions,SG21AR,52,unavailable,No derivative asset reported.
+societe-generale-ghana,FY2021,balance_sheet,investment_securities,1471.195748,GHS millions,SG21AR,52,derived,"Debt instruments at amortised cost plus debt instruments at FVOCI, as reported."
+societe-generale-ghana,FY2021,balance_sheet,loans_and_advances_net,2504.366677,GHS millions,SG21AR,52,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2021,balance_sheet,x_equity_investments,2.923386,GHS millions,SG21AR,52,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed. Unlisted equity investments at fair value."
+societe-generale-ghana,FY2021,balance_sheet,other_assets,81.140894,GHS millions,SG21AR,52,derived,Other assets plus deferred/current tax assets as reported.
+societe-generale-ghana,FY2021,balance_sheet,property_equipment_intangibles,270.278212,GHS millions,SG21AR,52,derived,"Property, plant and equipment plus intangible assets as reported."
+societe-generale-ghana,FY2021,balance_sheet,total_assets,5437.022119,GHS millions,SG21AR,52,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2021,balance_sheet,customer_deposits,3391.140683,GHS millions,SG21AR,52,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2021,balance_sheet,due_to_banks,1.916501,GHS millions,SG21AR,52,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2021,balance_sheet,borrowings,588.864628,GHS millions,SG21AR,52,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2021,balance_sheet,other_liabilities,426.53497,GHS millions,SG21AR,52,derived,Other liabilities plus current/deferred tax and derivative liabilities as reported.
+societe-generale-ghana,FY2021,balance_sheet,total_liabilities,4408.456782,GHS millions,SG21AR,52,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2021,balance_sheet,stated_capital,404.245427,GHS millions,SG21AR,52,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2021,balance_sheet,retained_earnings,207.312183,GHS millions,SG21AR,52,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2021,balance_sheet,reserves_other,417.007727,GHS millions,SG21AR,52,derived,Revaluation reserve plus statutory reserve plus other reserves as reported.
+societe-generale-ghana,FY2021,balance_sheet,total_equity,1028.565337,GHS millions,SG21AR,52,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2021,balance_sheet,loans_and_advances_gross,2804.858737,GHS millions,SG21AR,76,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed. Gross loans and advances (note 20)."
+societe-generale-ghana,FY2021,balance_sheet,loan_loss_allowance,234.145097,GHS millions,SG21AR,76,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed. Allowance for impairment on loans (note 20); positive balance."
+societe-generale-ghana,FY2021,balance_sheet,x_amortised_cost_adjustment,28.390451,GHS millions,SG21AR,76,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed. Amortised-cost adjustment to gross loans."
+societe-generale-ghana,FY2021,balance_sheet,x_interest_in_suspense,37.956512,GHS millions,SG21AR,76,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed. Interest in suspense (note 20); bridge: gross - amortised cost adjustment - interest in suspense - allowance = net."
+societe-generale-ghana,FY2021,ratios,car_pct,22.38,percent,SG21AR,111,reported,CAR 22.38% at 31 Dec 2021 per the audited capital-adequacy note (printed p.111).
+societe-generale-ghana,FY2021,ratios,npl_pct,7.58,percent,SG21AR,77,reported,Gross non-performing loan ratio as reported.
+societe-generale-ghana,FY2021,ratios,tier1_pct,,percent,,,unavailable,Not disclosed as a ratio in the bank's summary statements; recomputable in checks.md where inputs exist.
+societe-generale-ghana,FY2021,ratios,ldr_pct,,percent,,,unavailable,Not disclosed as a ratio in the bank's summary statements; recomputable in checks.md where inputs exist.
+societe-generale-ghana,FY2021,ratios,cost_to_income_pct,,percent,,,unavailable,Not disclosed as a ratio in the bank's summary statements; recomputable in checks.md where inputs exist.
+societe-generale-ghana,FY2021,ratios,roe_pct,,percent,,,unavailable,Not disclosed as a ratio in the bank's summary statements; recomputable in checks.md where inputs exist.
+societe-generale-ghana,FY2021,ratios,roa_pct,,percent,,,unavailable,Not disclosed as a ratio in the bank's summary statements; recomputable in checks.md where inputs exist.
+societe-generale-ghana,FY2022,income_statement,interest_income,659.497229,GHS millions,SG22AR,54,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2022,income_statement,interest_expense,134.930676,GHS millions,SG22AR,54,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2022,income_statement,net_interest_income,524.566553,GHS millions,SG22AR,54,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2022,income_statement,fee_commission_income,105.172123,GHS millions,SG22AR,54,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2022,income_statement,fee_commission_expense,36.313952,GHS millions,SG22AR,54,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2022,income_statement,net_trading_income,95.734001,GHS millions,SG22AR,54,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2022,income_statement,total_operating_income,801.581983,GHS millions,SG22AR,54,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2022,income_statement,staff_costs,171.621011,GHS millions,SG22AR,54,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2022,income_statement,depreciation_amortisation,39.433935,GHS millions,SG22AR,54,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2022,income_statement,other_operating_expenses,137.40568,GHS millions,SG22AR,54,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2022,income_statement,impairment_charge,284.73704,GHS millions,SG22AR,54,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2022,income_statement,profit_before_tax,168.384317,GHS millions,SG22AR,54,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2022,income_statement,income_tax,59.544391,GHS millions,SG22AR,54,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2022,income_statement,profit_after_tax,108.839926,GHS millions,SG22AR,54,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2022,income_statement,other_operating_income,48.31857,GHS millions,SG22AR,54,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2022,income_statement,x_fv_other_income,64.104688,GHS millions,SG22AR,54,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed. Net income from other financial instruments carried at fair value."
+societe-generale-ghana,FY2022,balance_sheet,cash_and_bog_balances,1950.873066,GHS millions,SG22AR,55,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2022,balance_sheet,x_trading_assets,14.157407,GHS millions,SG22AR,55,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed. Non-pledged trading assets."
+societe-generale-ghana,FY2022,balance_sheet,x_derivative_assets,188.78,GHS millions,SG22AR,55,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed. Derivative financial assets."
+societe-generale-ghana,FY2022,balance_sheet,investment_securities,840.341317,GHS millions,SG22AR,55,derived,"Debt instruments at amortised cost plus debt instruments at FVOCI, as reported."
+societe-generale-ghana,FY2022,balance_sheet,loans_and_advances_net,3102.993067,GHS millions,SG22AR,55,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2022,balance_sheet,x_equity_investments,3.549552,GHS millions,SG22AR,55,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed. Unlisted equity investments at fair value."
+societe-generale-ghana,FY2022,balance_sheet,other_assets,191.856626,GHS millions,SG22AR,55,derived,Other assets plus deferred/current tax assets as reported.
+societe-generale-ghana,FY2022,balance_sheet,property_equipment_intangibles,303.285068,GHS millions,SG22AR,55,derived,"Property, plant and equipment plus intangible assets as reported."
+societe-generale-ghana,FY2022,balance_sheet,total_assets,6595.836103,GHS millions,SG22AR,55,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2022,balance_sheet,customer_deposits,4239.5682,GHS millions,SG22AR,55,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2022,balance_sheet,due_to_banks,1.145398,GHS millions,SG22AR,55,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2022,balance_sheet,borrowings,642.585961,GHS millions,SG22AR,55,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2022,balance_sheet,other_liabilities,623.898719,GHS millions,SG22AR,55,derived,Other liabilities plus current/deferred tax and derivative liabilities as reported.
+societe-generale-ghana,FY2022,balance_sheet,total_liabilities,5507.198278,GHS millions,SG22AR,55,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2022,balance_sheet,stated_capital,404.245427,GHS millions,SG22AR,55,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2022,balance_sheet,retained_earnings,240.555598,GHS millions,SG22AR,55,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2022,balance_sheet,reserves_other,443.8368,GHS millions,SG22AR,55,derived,Revaluation reserve plus statutory reserve plus other reserves as reported.
+societe-generale-ghana,FY2022,balance_sheet,total_equity,1088.637825,GHS millions,SG22AR,55,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2022,balance_sheet,loans_and_advances_gross,3635.008639,GHS millions,SG22AR,78,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed. Gross loans and advances (note 20)."
+societe-generale-ghana,FY2022,balance_sheet,loan_loss_allowance,433.733437,GHS millions,SG22AR,78,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed. Allowance for impairment on loans (note 20); positive balance."
+societe-generale-ghana,FY2022,balance_sheet,x_amortised_cost_adjustment,45.950796,GHS millions,SG22AR,78,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed. Amortised-cost adjustment to gross loans."
+societe-generale-ghana,FY2022,balance_sheet,x_interest_in_suspense,52.331339,GHS millions,SG22AR,78,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed. Interest in suspense (note 20); bridge: gross - amortised cost adjustment - interest in suspense - allowance = net."
+societe-generale-ghana,FY2022,ratios,car_pct,16,percent,SG22AR,113,reported,CAR 16.00% at 31 Dec 2022 per the audited capital-adequacy note (printed p.113).
+societe-generale-ghana,FY2022,ratios,npl_pct,13.48,percent,SG22AR,79,reported,Gross non-performing loan ratio as reported.
+societe-generale-ghana,FY2022,ratios,tier1_pct,,percent,,,unavailable,Not disclosed as a ratio in the bank's summary statements; recomputable in checks.md where inputs exist.
+societe-generale-ghana,FY2022,ratios,ldr_pct,,percent,,,unavailable,Not disclosed as a ratio in the bank's summary statements; recomputable in checks.md where inputs exist.
+societe-generale-ghana,FY2022,ratios,cost_to_income_pct,,percent,,,unavailable,Not disclosed as a ratio in the bank's summary statements; recomputable in checks.md where inputs exist.
+societe-generale-ghana,FY2022,ratios,roe_pct,,percent,,,unavailable,Not disclosed as a ratio in the bank's summary statements; recomputable in checks.md where inputs exist.
+societe-generale-ghana,FY2022,ratios,roa_pct,,percent,,,unavailable,Not disclosed as a ratio in the bank's summary statements; recomputable in checks.md where inputs exist.
+societe-generale-ghana,FY2023,income_statement,interest_income,1088.895175,GHS millions,SG23AR,61,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2023,income_statement,interest_expense,215.48651,GHS millions,SG23AR,61,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2023,income_statement,net_interest_income,873.408665,GHS millions,SG23AR,61,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2023,income_statement,fee_commission_income,126.883065,GHS millions,SG23AR,61,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2023,income_statement,fee_commission_expense,61.369992,GHS millions,SG23AR,61,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2023,income_statement,net_trading_income,103.590162,GHS millions,SG23AR,61,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2023,income_statement,total_operating_income,1237.829343,GHS millions,SG23AR,61,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2023,income_statement,staff_costs,216.591094,GHS millions,SG23AR,61,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2023,income_statement,depreciation_amortisation,53.98735,GHS millions,SG23AR,61,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2023,income_statement,other_operating_expenses,206.44805,GHS millions,SG23AR,61,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2023,income_statement,impairment_charge,99.213609,GHS millions,SG23AR,61,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2023,income_statement,profit_before_tax,661.58924,GHS millions,SG23AR,61,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2023,income_statement,income_tax,236.786258,GHS millions,SG23AR,61,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2023,income_statement,profit_after_tax,424.802981,GHS millions,SG23AR,61,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2023,income_statement,other_operating_income,68.568937,GHS millions,SG23AR,61,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2023,income_statement,x_fv_other_income,126.748506,GHS millions,SG23AR,61,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed. Net income from other financial instruments carried at fair value."
+societe-generale-ghana,FY2023,balance_sheet,cash_and_bog_balances,2131.699314,GHS millions,SG23AR,62,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2023,balance_sheet,x_trading_assets,1.742074,GHS millions,SG23AR,62,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed. Non-pledged trading assets."
+societe-generale-ghana,FY2023,balance_sheet,x_derivative_assets,,GHS millions,SG23AR,62,unavailable,No derivative asset reported.
+societe-generale-ghana,FY2023,balance_sheet,investment_securities,1800.220862,GHS millions,SG23AR,62,derived,"Debt instruments at amortised cost plus debt instruments at FVOCI, as reported."
+societe-generale-ghana,FY2023,balance_sheet,loans_and_advances_net,3987.842023,GHS millions,SG23AR,62,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2023,balance_sheet,x_equity_investments,3.50381,GHS millions,SG23AR,62,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed. Unlisted equity investments at fair value."
+societe-generale-ghana,FY2023,balance_sheet,other_assets,275.19051,GHS millions,SG23AR,62,derived,Other assets plus deferred/current tax assets as reported.
+societe-generale-ghana,FY2023,balance_sheet,property_equipment_intangibles,329.62796,GHS millions,SG23AR,62,derived,"Property, plant and equipment plus intangible assets as reported."
+societe-generale-ghana,FY2023,balance_sheet,total_assets,8529.826553,GHS millions,SG23AR,62,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2023,balance_sheet,customer_deposits,5087.136276,GHS millions,SG23AR,62,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2023,balance_sheet,due_to_banks,1.798457,GHS millions,SG23AR,62,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2023,balance_sheet,borrowings,897.959701,GHS millions,SG23AR,62,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2023,balance_sheet,other_liabilities,1029.929239,GHS millions,SG23AR,62,derived,Other liabilities plus current/deferred tax and derivative liabilities as reported.
+societe-generale-ghana,FY2023,balance_sheet,total_liabilities,7016.823673,GHS millions,SG23AR,62,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2023,balance_sheet,stated_capital,404.245427,GHS millions,SG23AR,62,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2023,balance_sheet,retained_earnings,559.157834,GHS millions,SG23AR,62,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2023,balance_sheet,reserves_other,549.599619,GHS millions,SG23AR,62,derived,Revaluation reserve plus statutory reserve plus other reserves as reported.
+societe-generale-ghana,FY2023,balance_sheet,total_equity,1513.00288,GHS millions,SG23AR,62,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2023,balance_sheet,loans_and_advances_gross,4663.624839,GHS millions,SG23AR,90,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed. Gross loans and advances (note 20)."
+societe-generale-ghana,FY2023,balance_sheet,loan_loss_allowance,541.210135,GHS millions,SG23AR,90,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed. Allowance for impairment on loans (note 20); positive balance."
+societe-generale-ghana,FY2023,balance_sheet,x_amortised_cost_adjustment,60.28087,GHS millions,SG23AR,90,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed. Amortised-cost adjustment to gross loans."
+societe-generale-ghana,FY2023,balance_sheet,x_interest_in_suspense,74.291811,GHS millions,SG23AR,90,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed. Interest in suspense (note 20); bridge: gross - amortised cost adjustment - interest in suspense - allowance = net."
+societe-generale-ghana,FY2023,ratios,car_pct,18.71,percent,SG23AR,127,reported,"CAR 18.71% at 31 Dec 2023 per the audited capital-adequacy note (printed p.127). The FY2024 narrative separately quotes 13.9% with BoG DDEP reliefs / 8.3% without; different basis, noted."
+societe-generale-ghana,FY2023,ratios,npl_pct,19.55,percent,SG23AR,90,reported,Gross non-performing loan ratio as reported.
+societe-generale-ghana,FY2023,ratios,tier1_pct,,percent,,,unavailable,Not disclosed as a ratio in the bank's summary statements; recomputable in checks.md where inputs exist.
+societe-generale-ghana,FY2023,ratios,ldr_pct,,percent,,,unavailable,Not disclosed as a ratio in the bank's summary statements; recomputable in checks.md where inputs exist.
+societe-generale-ghana,FY2023,ratios,cost_to_income_pct,,percent,,,unavailable,Not disclosed as a ratio in the bank's summary statements; recomputable in checks.md where inputs exist.
+societe-generale-ghana,FY2023,ratios,roe_pct,,percent,,,unavailable,Not disclosed as a ratio in the bank's summary statements; recomputable in checks.md where inputs exist.
+societe-generale-ghana,FY2023,ratios,roa_pct,,percent,,,unavailable,Not disclosed as a ratio in the bank's summary statements; recomputable in checks.md where inputs exist.
+societe-generale-ghana,FY2024,income_statement,interest_income,1357.215549,GHS millions,SG24AR,64,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2024,income_statement,interest_expense,234.148854,GHS millions,SG24AR,64,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2024,income_statement,net_interest_income,1123.066695,GHS millions,SG24AR,64,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2024,income_statement,fee_commission_income,158.644102,GHS millions,SG24AR,64,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2024,income_statement,fee_commission_expense,83.272803,GHS millions,SG24AR,64,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2024,income_statement,net_trading_income,59.933937,GHS millions,SG24AR,64,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2024,income_statement,total_operating_income,1455.550944,GHS millions,SG24AR,64,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2024,income_statement,staff_costs,244.686798,GHS millions,SG24AR,64,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2024,income_statement,depreciation_amortisation,71.057192,GHS millions,SG24AR,64,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2024,income_statement,other_operating_expenses,198.138976,GHS millions,SG24AR,64,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2024,income_statement,impairment_charge,103.267026,GHS millions,SG24AR,64,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2024,income_statement,profit_before_tax,838.400952,GHS millions,SG24AR,64,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2024,income_statement,income_tax,287.101705,GHS millions,SG24AR,64,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2024,income_statement,profit_after_tax,551.299247,GHS millions,SG24AR,64,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2024,income_statement,other_operating_income,138.874043,GHS millions,SG24AR,64,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2024,income_statement,x_fv_other_income,58.30497,GHS millions,SG24AR,64,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed. Net income from other financial instruments carried at fair value."
+societe-generale-ghana,FY2024,balance_sheet,cash_and_bog_balances,3579.482591,GHS millions,SG24AR,65,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2024,balance_sheet,x_trading_assets,8.794742,GHS millions,SG24AR,65,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed. Non-pledged trading assets."
+societe-generale-ghana,FY2024,balance_sheet,x_derivative_assets,2.021429,GHS millions,SG24AR,65,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed. Derivative financial assets."
+societe-generale-ghana,FY2024,balance_sheet,investment_securities,780.949308,GHS millions,SG24AR,65,derived,"Debt instruments at amortised cost plus debt instruments at FVOCI, as reported."
+societe-generale-ghana,FY2024,balance_sheet,loans_and_advances_net,5011.684459,GHS millions,SG24AR,65,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2024,balance_sheet,x_equity_investments,5.513268,GHS millions,SG24AR,65,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed. Unlisted equity investments at fair value."
+societe-generale-ghana,FY2024,balance_sheet,other_assets,100.915543,GHS millions,SG24AR,65,derived,Other assets plus deferred/current tax assets as reported.
+societe-generale-ghana,FY2024,balance_sheet,property_equipment_intangibles,906.929353,GHS millions,SG24AR,65,derived,"Property, plant and equipment plus intangible assets as reported."
+societe-generale-ghana,FY2024,balance_sheet,total_assets,10396.290693,GHS millions,SG24AR,65,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2024,balance_sheet,customer_deposits,6219.856675,GHS millions,SG24AR,65,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2024,balance_sheet,due_to_banks,30.76448,GHS millions,SG24AR,65,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2024,balance_sheet,borrowings,520.138679,GHS millions,SG24AR,65,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2024,balance_sheet,other_liabilities,1179.648936,GHS millions,SG24AR,65,derived,Other liabilities plus current/deferred tax and derivative liabilities as reported.
+societe-generale-ghana,FY2024,balance_sheet,total_liabilities,7950.40877,GHS millions,SG24AR,65,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2024,balance_sheet,stated_capital,404.245427,GHS millions,SG24AR,65,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2024,balance_sheet,retained_earnings,1041.544676,GHS millions,SG24AR,65,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2024,balance_sheet,reserves_other,1000.09182,GHS millions,SG24AR,65,derived,Revaluation reserve plus statutory reserve plus other reserves as reported.
+societe-generale-ghana,FY2024,balance_sheet,total_equity,2445.881923,GHS millions,SG24AR,65,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2024,balance_sheet,loans_and_advances_gross,5840.974925,GHS millions,SG24AR,96,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed. Gross loans and advances (note 20)."
+societe-generale-ghana,FY2024,balance_sheet,loan_loss_allowance,654.568723,GHS millions,SG24AR,96,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed. Allowance for impairment on loans (note 20); positive balance."
+societe-generale-ghana,FY2024,balance_sheet,x_amortised_cost_adjustment,71.229039,GHS millions,SG24AR,96,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed. Amortised-cost adjustment to gross loans."
+societe-generale-ghana,FY2024,balance_sheet,x_interest_in_suspense,103.492704,GHS millions,SG24AR,96,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed. Interest in suspense (note 20); bridge: gross - amortised cost adjustment - interest in suspense - allowance = net."
+societe-generale-ghana,FY2024,ratios,car_pct,19.81,percent,SG24AR,133,reported,"CAR 19.81% at 31 Dec 2024 per the audited capital-adequacy note (printed p.133). FY2024 narrative separately quotes 14.0% with DDEP reliefs / 11.3% without; different basis, noted."
+societe-generale-ghana,FY2024,ratios,npl_pct,16.56,percent,SG24AR,96,reported,Gross non-performing loan ratio as reported.
+societe-generale-ghana,FY2024,ratios,tier1_pct,,percent,,,unavailable,Not disclosed as a ratio in the bank's summary statements; recomputable in checks.md where inputs exist.
+societe-generale-ghana,FY2024,ratios,ldr_pct,,percent,,,unavailable,Not disclosed as a ratio in the bank's summary statements; recomputable in checks.md where inputs exist.
+societe-generale-ghana,FY2024,ratios,cost_to_income_pct,,percent,,,unavailable,Not disclosed as a ratio in the bank's summary statements; recomputable in checks.md where inputs exist.
+societe-generale-ghana,FY2024,ratios,roe_pct,,percent,,,unavailable,Not disclosed as a ratio in the bank's summary statements; recomputable in checks.md where inputs exist.
+societe-generale-ghana,FY2024,ratios,roa_pct,,percent,,,unavailable,Not disclosed as a ratio in the bank's summary statements; recomputable in checks.md where inputs exist.
+societe-generale-ghana,FY2025,income_statement,interest_income,1410.11412,GHS millions,SG25AR,65,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2025,income_statement,interest_expense,222.702856,GHS millions,SG25AR,65,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2025,income_statement,net_interest_income,1187.411264,GHS millions,SG25AR,65,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2025,income_statement,fee_commission_income,169.468925,GHS millions,SG25AR,65,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2025,income_statement,fee_commission_expense,82.12428,GHS millions,SG25AR,65,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2025,income_statement,net_trading_income,122.253401,GHS millions,SG25AR,65,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2025,income_statement,total_operating_income,1356.036221,GHS millions,SG25AR,65,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2025,income_statement,staff_costs,275.643494,GHS millions,SG25AR,65,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2025,income_statement,depreciation_amortisation,126.487549,GHS millions,SG25AR,65,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2025,income_statement,other_operating_expenses,372.781678,GHS millions,SG25AR,65,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2025,income_statement,impairment_charge,-33.64139,GHS millions,SG25AR,65,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed. Impairment is a net credit (gain) this period; stored negative."
+societe-generale-ghana,FY2025,income_statement,profit_before_tax,614.76489,GHS millions,SG25AR,65,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2025,income_statement,income_tax,217.76359,GHS millions,SG25AR,65,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2025,income_statement,profit_after_tax,397.0013,GHS millions,SG25AR,65,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2025,income_statement,other_operating_income,-59.763027,GHS millions,SG25AR,65,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2025,income_statement,x_fv_other_income,18.789938,GHS millions,SG25AR,65,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed. Net income from other financial instruments carried at fair value."
+societe-generale-ghana,FY2025,balance_sheet,cash_and_bog_balances,2676.28021,GHS millions,SG25AR,66,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2025,balance_sheet,x_trading_assets,7.620583,GHS millions,SG25AR,66,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed. Non-pledged trading assets."
+societe-generale-ghana,FY2025,balance_sheet,x_derivative_assets,,GHS millions,SG25AR,66,unavailable,No derivative asset reported.
+societe-generale-ghana,FY2025,balance_sheet,investment_securities,1505.273694,GHS millions,SG25AR,66,derived,"Debt instruments at amortised cost plus debt instruments at FVOCI, as reported."
+societe-generale-ghana,FY2025,balance_sheet,loans_and_advances_net,4491.82654,GHS millions,SG25AR,66,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2025,balance_sheet,x_equity_investments,9.368223,GHS millions,SG25AR,66,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed. Unlisted equity investments at fair value."
+societe-generale-ghana,FY2025,balance_sheet,other_assets,89.318297,GHS millions,SG25AR,66,derived,Other assets plus deferred/current tax assets as reported.
+societe-generale-ghana,FY2025,balance_sheet,property_equipment_intangibles,896.4129,GHS millions,SG25AR,66,derived,"Property, plant and equipment plus intangible assets as reported."
+societe-generale-ghana,FY2025,balance_sheet,total_assets,9676.100447,GHS millions,SG25AR,66,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2025,balance_sheet,customer_deposits,5843.182979,GHS millions,SG25AR,66,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2025,balance_sheet,due_to_banks,1.396221,GHS millions,SG25AR,66,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2025,balance_sheet,borrowings,334.350011,GHS millions,SG25AR,66,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2025,balance_sheet,other_liabilities,895.396077,GHS millions,SG25AR,66,derived,Other liabilities plus current/deferred tax and derivative liabilities as reported.
+societe-generale-ghana,FY2025,balance_sheet,total_liabilities,7074.325288,GHS millions,SG25AR,66,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2025,balance_sheet,stated_capital,404.245427,GHS millions,SG25AR,66,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2025,balance_sheet,retained_earnings,1147.812749,GHS millions,SG25AR,66,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2025,balance_sheet,reserves_other,1049.716983,GHS millions,SG25AR,66,derived,Revaluation reserve plus statutory reserve plus other reserves as reported.
+societe-generale-ghana,FY2025,balance_sheet,total_equity,2601.775159,GHS millions,SG25AR,66,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,FY2025,balance_sheet,loans_and_advances_gross,5121.327682,GHS millions,SG25AR,95,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed. Gross loans and advances (note 20)."
+societe-generale-ghana,FY2025,balance_sheet,loan_loss_allowance,629.501142,GHS millions,SG25AR,95,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed. Allowance for impairment on loans (note 20); positive balance."
+societe-generale-ghana,FY2025,balance_sheet,x_amortised_cost_adjustment,,GHS millions,SG25AR,95,unavailable,"Bank-only (separate) statements; costs/allowances positive, profits signed. Amortised-cost adjustment to gross loans."
+societe-generale-ghana,FY2025,balance_sheet,x_interest_in_suspense,,GHS millions,SG25AR,95,unavailable,"Bank-only (separate) statements; costs/allowances positive, profits signed. FY2025 net = gross - allowance exactly, so no interest-in-suspense adjustment was disclosed."
+societe-generale-ghana,FY2025,ratios,car_pct,23.39,percent,SG25AR,133,reported,CAR 23.39% at 31 Dec 2025 per the audited capital-adequacy note (printed p.133); the 2025 narrative says 17.5% (DDEP reliefs excluded in 2025). The audited 2025 summary prints the same 23.39%.
+societe-generale-ghana,FY2025,ratios,npl_pct,13.06,percent,SG25AR,95,reported,Gross non-performing loan ratio as reported.
+societe-generale-ghana,FY2025,ratios,tier1_pct,,percent,,,unavailable,Not disclosed as a ratio in the bank's summary statements; recomputable in checks.md where inputs exist.
+societe-generale-ghana,FY2025,ratios,ldr_pct,,percent,,,unavailable,Not disclosed as a ratio in the bank's summary statements; recomputable in checks.md where inputs exist.
+societe-generale-ghana,FY2025,ratios,cost_to_income_pct,,percent,,,unavailable,Not disclosed as a ratio in the bank's summary statements; recomputable in checks.md where inputs exist.
+societe-generale-ghana,FY2025,ratios,roe_pct,,percent,,,unavailable,Not disclosed as a ratio in the bank's summary statements; recomputable in checks.md where inputs exist.
+societe-generale-ghana,FY2025,ratios,roa_pct,,percent,,,unavailable,Not disclosed as a ratio in the bank's summary statements; recomputable in checks.md where inputs exist.
+societe-generale-ghana,9M-2026,income_statement,interest_income,750.419,GHS millions,SG26Q3,1,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,9M-2026,income_statement,interest_expense,126.427,GHS millions,SG26Q3,1,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,9M-2026,income_statement,net_interest_income,623.992,GHS millions,SG26Q3,1,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,9M-2026,income_statement,fee_commission_income,135.216,GHS millions,SG26Q3,1,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,9M-2026,income_statement,fee_commission_expense,50.863,GHS millions,SG26Q3,1,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,9M-2026,income_statement,net_trading_income,59.697,GHS millions,SG26Q3,1,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,9M-2026,income_statement,total_operating_income,797.099,GHS millions,SG26Q3,1,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,9M-2026,income_statement,staff_costs,238.264,GHS millions,SG26Q3,1,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,9M-2026,income_statement,depreciation_amortisation,109.208,GHS millions,SG26Q3,1,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,9M-2026,income_statement,other_operating_expenses,190.323,GHS millions,SG26Q3,1,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,9M-2026,income_statement,impairment_charge,27.165,GHS millions,SG26Q3,1,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,9M-2026,income_statement,profit_before_tax,232.139,GHS millions,SG26Q3,1,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,9M-2026,income_statement,income_tax,82.136,GHS millions,SG26Q3,1,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,9M-2026,income_statement,profit_after_tax,150.003,GHS millions,SG26Q3,1,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,9M-2026,income_statement,other_operating_income,14.762,GHS millions,SG26Q3,1,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,9M-2026,income_statement,x_fv_other_income,14.295,GHS millions,SG26Q3,1,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed. Net income from other financial instruments carried at fair value."
+societe-generale-ghana,9M-2026,balance_sheet,cash_and_bog_balances,3958.763,GHS millions,SG26Q3,1,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,9M-2026,balance_sheet,x_trading_assets,52.747,GHS millions,SG26Q3,1,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed. Non-pledged trading assets."
+societe-generale-ghana,9M-2026,balance_sheet,x_derivative_assets,,GHS millions,SG26Q3,1,unavailable,No derivative asset reported.
+societe-generale-ghana,9M-2026,balance_sheet,investment_securities,1305.391,GHS millions,SG26Q3,1,derived,"Debt instruments at amortised cost plus debt instruments at FVOCI, as reported."
+societe-generale-ghana,9M-2026,balance_sheet,loans_and_advances_net,4674.926,GHS millions,SG26Q3,1,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,9M-2026,balance_sheet,x_equity_investments,9.368,GHS millions,SG26Q3,1,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed. Unlisted equity investments at fair value."
+societe-generale-ghana,9M-2026,balance_sheet,other_assets,197.057,GHS millions,SG26Q3,1,derived,Other assets plus deferred/current tax assets as reported.
+societe-generale-ghana,9M-2026,balance_sheet,property_equipment_intangibles,880.123,GHS millions,SG26Q3,1,derived,"Property, plant and equipment plus intangible assets as reported."
+societe-generale-ghana,9M-2026,balance_sheet,total_assets,11078.375,GHS millions,SG26Q3,1,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,9M-2026,balance_sheet,customer_deposits,7156.119,GHS millions,SG26Q3,1,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,9M-2026,balance_sheet,due_to_banks,1.603,GHS millions,SG26Q3,1,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,9M-2026,balance_sheet,borrowings,314.74,GHS millions,SG26Q3,1,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,9M-2026,balance_sheet,other_liabilities,1027.804,GHS millions,SG26Q3,1,derived,Other liabilities plus current/deferred tax and derivative liabilities as reported.
+societe-generale-ghana,9M-2026,balance_sheet,total_liabilities,8500.266,GHS millions,SG26Q3,1,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,9M-2026,balance_sheet,stated_capital,404.245,GHS millions,SG26Q3,1,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,9M-2026,balance_sheet,retained_earnings,1105.397,GHS millions,SG26Q3,1,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,9M-2026,balance_sheet,reserves_other,1068.467,GHS millions,SG26Q3,1,derived,Revaluation reserve plus statutory reserve plus other reserves as reported.
+societe-generale-ghana,9M-2026,balance_sheet,total_equity,2578.109,GHS millions,SG26Q3,1,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
+societe-generale-ghana,9M-2026,balance_sheet,loans_and_advances_gross,,GHS millions,,,unavailable,"Bank-only (separate) statements; costs/allowances positive, profits signed. Not disclosed in the interim summary."
+societe-generale-ghana,9M-2026,balance_sheet,loan_loss_allowance,,GHS millions,,,unavailable,"Bank-only (separate) statements; costs/allowances positive, profits signed. Not disclosed in the interim summary."
+societe-generale-ghana,9M-2026,balance_sheet,x_amortised_cost_adjustment,,GHS millions,,,unavailable,"Bank-only (separate) statements; costs/allowances positive, profits signed. Amortised-cost adjustment to gross loans."
+societe-generale-ghana,9M-2026,balance_sheet,x_interest_in_suspense,,GHS millions,,,unavailable,"Bank-only (separate) statements; costs/allowances positive, profits signed. FY2025 net = gross - allowance exactly, so no interest-in-suspense adjustment was disclosed."
+societe-generale-ghana,9M-2026,ratios,car_pct,18.52,percent,SG26Q3,1,reported,CAR 18.52% at 30 Sep 2026 (unaudited).
+societe-generale-ghana,9M-2026,ratios,npl_pct,13.98,percent,SG26Q3,1,reported,Gross non-performing loan ratio as reported.
+societe-generale-ghana,9M-2026,ratios,tier1_pct,,percent,,,unavailable,Not disclosed as a ratio in the bank's summary statements; recomputable in checks.md where inputs exist.
+societe-generale-ghana,9M-2026,ratios,ldr_pct,,percent,,,unavailable,Not disclosed as a ratio in the bank's summary statements; recomputable in checks.md where inputs exist.
+societe-generale-ghana,9M-2026,ratios,cost_to_income_pct,,percent,,,unavailable,Not disclosed as a ratio in the bank's summary statements; recomputable in checks.md where inputs exist.
+societe-generale-ghana,9M-2026,ratios,roe_pct,,percent,,,unavailable,Not disclosed as a ratio in the bank's summary statements; recomputable in checks.md where inputs exist.
+societe-generale-ghana,9M-2026,ratios,roa_pct,,percent,,,unavailable,Not disclosed as a ratio in the bank's summary statements; recomputable in checks.md where inputs exist.
