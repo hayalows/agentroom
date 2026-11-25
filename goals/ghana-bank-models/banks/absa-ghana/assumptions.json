@@ -1,0 +1,138 @@
+{
+ "bank": "absa-ghana",
+ "owner": "claude-helper-1",
+ "status": "estimated",
+ "about": "Every value is an ESTIMATE by the owner, not a reported number. 'basis' says what it is anchored on. Shared macro drivers come from the shared macro file. History is the codex source pack (sources.md); the owner did not re-read the Absa PDFs.",
+ "macro_file": "../../sector/macro-assumptions/macro.csv",
+ "anchor": {
+  "fy2026e_method": "FY2026E income and expense lines = 9M-2026 x 12/9, except impairment (9M-2026 actual 198.4m plus a Q4 charge at the base cost of risk x 30 Sep 2026 net loans / 4) and tax (9M-2026 booked plus the tax rate on implied Q4 profit before tax). Balance sheet = 30 Sep 2026 carried to 31 Dec 2026; equity = 9M-2026 equity + Q4 profit (no Q4 dividend; 1,115m paid in 9M-2026 is already in equity). FY2026E is the same in all scenarios. Q4 implied rows are x_q4_implied_*."
+ },
+ "rates": {
+  "loan_yield_spread_over_tbill_364d_pct": {
+   "value": 6.0,
+   "basis": "Same spread as SCB, Zenith and UBA so banks are comparable (sector lending rate near 15.8% against a 364-day bill near 11%, as cited in SCB's basis; not re-verified). Judgement."
+  },
+  "tbill_share_of_earning_pool": {
+   "value": 0.5,
+   "basis": "ASSUMED, not observed. Share of the earning pool (investment securities plus trading assets) repricing with the average of the 91- and 364-day bills; the rest follows the government bond yield. No repricing table was available."
+  },
+  "tax_rate": {
+   "value": 0.355,
+   "basis": "Observed effective rates: 35.7% FY2025 (979.7m / 2,742.1m), 36.2% FY2024, 36.3% FY2023, 34.7% FY2021 and 35.6% in 9M-2026 (545.7m / 1,531.0m), consistent with 25% income tax plus the 5% Growth and Sustainability levy and 5% Financial Sector Recovery levy plus non-deductibles (the split was not read; inferred). Applied to Q4-2026 and later years."
+  },
+  "avg_policy_rate_2026_pct": {
+   "value": 14.3,
+   "basis": "Used only to scale the cost-of-funds ratio; taken from the SCB, Zenith and UBA bases, not re-verified."
+  },
+  "cost_of_funds_ratio_to_policy_rate": {
+   "value": "solved in model.py",
+   "basis": "9M-2026 interest expense x 12/9 divided by (average policy rate x average of deposits, bank deposits and borrowings at FY2025 and 30 Sep 2026)."
+  },
+  "earning_pool_yield_haircut_pts": {
+   "value": "solved in model.py",
+   "basis": "FITTED so the FY2026E interest formula equals 9M-2026 x 12/9 with loans at the 364-day bill + 6 points. A match by construction, not a validation."
+  }
+ },
+ "growth": {
+  "customer_deposit_growth_formula": "(1+real GDP growth)*(1+CPI inflation)+adjustment, using the macro row of the same scenario and year.",
+  "customer_deposit_adjustment": {
+   "base": 0.02,
+   "downside": -0.03,
+   "upside": 0.05,
+   "basis": "Customer deposits grew 42% (FY2022), 42% (FY2023), 11% (FY2024), 8.8% (FY2025) and 10.4% in 9M-2026 (19,186m to 21,185m). Base nominal GDP growth is about 12%, so base assumes a small share gain; judgement."
+  },
+  "net_loan_growth": {
+   "base": {
+    "FY2027E": 0.15,
+    "FY2028E": 0.13,
+    "FY2029E": 0.11,
+    "FY2030E": 0.1
+   },
+   "downside": {
+    "FY2027E": 0.04,
+    "FY2028E": 0.04,
+    "FY2029E": 0.05,
+    "FY2030E": 0.05
+   },
+   "upside": {
+    "FY2027E": 0.2,
+    "FY2028E": 0.17,
+    "FY2029E": 0.14,
+    "FY2030E": 0.12
+   },
+   "basis": "Net loans grew 25% (FY2022), 24% (FY2023), 32% (FY2024), 20% (FY2025) and 15% in 9M-2026 (9,995m to 11,528m); the loan-to-deposit ratio is 54% at Sep 2026. Base fades from 15% to 10%. Judgement."
+  },
+  "net_trading_income_growth": {
+   "base": -0.08,
+   "downside": -0.25,
+   "upside": 0.0,
+   "basis": "Net trading income was 534.6m (FY2023), 606.0m (FY2024), 1,049.6m (FY2025) and 703.9m in 9M-2026 against 822.6m in 9M-2025 (-14%). It depends on FX and bond trading and is volatile. Base assumes mild further decline."
+  },
+  "fee_income_growth_over_inflation": {
+   "value": 0.0,
+   "basis": "Fee income was 468.7m (FY2024), 554.7m (FY2025) and 445.7m in 9M-2026 (+6.8% on 9M-2025). Base grows with inflation."
+  },
+  "fee_expense_ratio": {
+   "value": "9M-2026 ratio held",
+   "basis": "3.3% of fee income in 9M-2026 (14.7m / 445.7m)."
+  },
+  "staff_cost_growth_over_inflation": {
+   "value": 0.02,
+   "basis": "Staff costs 730.9m (FY2024), 940.0m (FY2025) and 722.7m in 9M-2026 (+6.2% on 9M-2025). Base: inflation plus 2 points. Judgement."
+  },
+  "other_opex_growth_over_inflation": {
+   "value": 0.0,
+   "basis": "Other operating expenses 535.0m (FY2024), 636.3m (FY2025) and 518.6m in 9M-2026 (+6.3% on 9M-2025). Base grows with inflation. Depreciation (71.7m in 9M-2026, +64%) also grows with inflation from the higher base."
+  }
+ },
+ "credit": {
+  "cost_of_risk_on_average_net_loans": {
+   "base": 0.025,
+   "downside": 0.05,
+   "upside": 0.015,
+   "basis": "Impairment 88.9m (FY2021), 2,126.9m (FY2022, domestic debt exchange), 165.4m (FY2023), 264.8m (FY2024, 3.6% of average net loans), 3.3m (FY2025) and 198.4m in 9M-2026 (2.4% annualised on average net loans). The reported NPL ratio was 14.09% (Sep 2025) and 11.32% (Sep 2026). Base 2.5%, downside 5%, upside 1.5%. Judgement; NPL is not forecast."
+  },
+  "fy2026e_q4_charge": {
+   "value": "base cost of risk x 30 Sep 2026 net loans / 4, applied in all scenarios",
+   "basis": "Three quarters are reported."
+  },
+  "note": "No securities impairment after FY2026E. The FY2022 debt exchange is not repeated."
+ },
+ "capital_and_liquidity": {
+  "dividend_payout_of_prior_year_profit": {
+   "base": 0.5,
+   "downside": 0.3,
+   "upside": 0.65,
+   "basis": "1,115m was paid in 9M-2026 (63% of FY2025 profit of 1,762m). Annual dividend history before 2026 was not in the pack (unknown). Base 50% of prior-year profit, capped by distributable retained earnings and withheld if the capital proxy would fall below the target. Judgement."
+  },
+  "statutory_reserve_transfer_of_profit": {
+   "value": "50% of profit if the reserve is below 50% of stated capital, 25% from 50% to below 100%, 12.5% at or above 100%",
+   "basis": "Banks and SDI Act 2016 (Act 930) s.34, official Bank of Ghana PDF printed p.30, as read by independent reviewer chatgpt-support in the Zenith review. Absa's statutory reserve is 1,266m against stated capital of 400m (above 100%), and the 9M-2026 transfer of 123.2m is 12.5% of profit (observed)."
+  },
+  "credit_risk_reserve_and_other_reserves": {
+   "value": "held at the 30 Sep 2026 balances (317.6m and -5.4m)",
+   "basis": "Regulatory reserve; no further transfers forecast."
+  },
+  "capital_adequacy_proxy": {
+   "value": "reported CAR 19.06% scaled by (equity / total assets) relative to 30 Sep 2026",
+   "basis": "No annual CAR, risk-weighted assets or regulatory capital figures are in the source pack, so the proxy cannot use regulatory deductions. It equals the reported 19.06% at 30 Sep 2026 and moves with the equity-to-assets ratio. It is a PROXY, not the regulatory ratio, and it assumes risk-weighted assets grow in line with total assets."
+  },
+  "target_car_pct_for_dividends": {
+   "value": 15.0,
+   "basis": "Judgement: 2 points above the 13% shared minimum."
+  },
+  "operating_cash_to_customer_deposits": {
+   "value": "solved in model.py",
+   "basis": "Cash and bank balances at 30 Sep 2026 were 9,193m = 43.4% of customer deposits; mandatory reserves were 3,265m (15.4% of deposits, pack memo). The model holds the 20% macro CRR plus the solved extra share. The 20% is a constructed floor, not a tested statutory eligibility."
+  }
+ },
+ "other_balance_sheet": {
+  "other_assets_and_liabilities_growth": "inflation",
+  "property_equipment_growth": "inflation",
+  "trading_assets": "Trading assets (pledged 1,470.6m + unpledged 2,166.7m at Sep 2026) are held flat inside other_assets and earn the earning-pool yield.",
+  "due_from_banks": "Grown with customer deposits at the 30 Sep 2026 share (3.1% of deposits).",
+  "borrowings": "Held at the 30 Sep 2026 balance (5,754.5m, up from 4,077.6m at FY2025); terms not read.",
+  "securities": "Investment securities are the plug (total assets less cash, due from banks, loans, other assets and property).",
+  "stated_capital": "400m, unchanged."
+ }
+}

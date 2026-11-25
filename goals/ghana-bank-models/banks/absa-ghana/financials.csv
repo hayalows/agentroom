@@ -1,0 +1,301 @@
+bank,period,statement,line_item,value,unit,source_id,page,status,notes
+absa-ghana,FY2021,income_statement,interest_income,1440.284,GHS millions,ABSA21,32,reported,"Official bank standalone; annual visual, interim text extraction."
+absa-ghana,FY2021,income_statement,interest_expense,356.225,GHS millions,ABSA21,32,reported,"Official bank standalone; annual visual, interim text extraction."
+absa-ghana,FY2021,income_statement,net_interest_income,1084.059,GHS millions,ABSA21,32,reported,"Official bank standalone; annual visual, interim text extraction."
+absa-ghana,FY2021,income_statement,fee_commission_income,213.016,GHS millions,ABSA21,32,reported,"Official bank standalone; annual visual, interim text extraction."
+absa-ghana,FY2021,income_statement,fee_commission_expense,30.917,GHS millions,ABSA21,32,reported,"Official bank standalone; annual visual, interim text extraction."
+absa-ghana,FY2021,income_statement,net_trading_income,338.582,GHS millions,ABSA21,32,reported,"Official bank standalone; annual visual, interim text extraction."
+absa-ghana,FY2021,income_statement,other_operating_income,36.471,GHS millions,ABSA21,32,reported,"Official bank standalone; annual visual, interim text extraction."
+absa-ghana,FY2021,income_statement,total_operating_income,1641.211,GHS millions,ABSA21,32,reported,"Official bank standalone; annual visual, interim text extraction."
+absa-ghana,FY2021,income_statement,impairment_charge,88.893,GHS millions,ABSA21,32,reported,"Official bank standalone; annual visual, interim text extraction."
+absa-ghana,FY2021,income_statement,staff_costs,341.983,GHS millions,ABSA21,32,reported,"Official bank standalone; annual visual, interim text extraction."
+absa-ghana,FY2021,income_statement,depreciation_amortisation,34.905,GHS millions,ABSA21,32,reported,"Official bank standalone; annual visual, interim text extraction."
+absa-ghana,FY2021,income_statement,other_operating_expenses,114.958,GHS millions,ABSA21,32,reported,"Official bank standalone; annual visual, interim text extraction."
+absa-ghana,FY2021,income_statement,profit_before_tax,1060.472,GHS millions,ABSA21,32,reported,"Official bank standalone; annual visual, interim text extraction."
+absa-ghana,FY2021,income_statement,income_tax,367.953,GHS millions,ABSA21,32,reported,"Official bank standalone; annual visual, interim text extraction."
+absa-ghana,FY2021,income_statement,profit_after_tax,692.519,GHS millions,ABSA21,32,reported,"Official bank standalone; annual visual, interim text extraction."
+absa-ghana,FY2021,balance_sheet,cash_and_bog_balances,2858.669,GHS millions,ABSA21,31,reported,Official standalone face figures.
+absa-ghana,FY2021,balance_sheet,due_from_banks,519.044,GHS millions,ABSA21,31,reported,Official standalone face figures.
+absa-ghana,FY2021,balance_sheet,investment_securities,3541.278,GHS millions,ABSA21,31,reported,Official standalone face figures.
+absa-ghana,FY2021,balance_sheet,loans_and_advances_net,4785.114,GHS millions,ABSA21,31,reported,Official standalone face figures.
+absa-ghana,FY2021,balance_sheet,property_equipment_intangibles,153.283,GHS millions,ABSA21,31,derived,Face PPE plus intangibles; confirm ROU included in PPE note before final submission.
+absa-ghana,FY2021,balance_sheet,other_assets,4180.160,GHS millions,ABSA21,31,derived,Trading assets (pledged/unpledged) + derivatives + other assets + current/deferred tax assets.
+absa-ghana,FY2021,balance_sheet,total_assets,16037.548,GHS millions,ABSA21,31,reported,Official standalone face figures.
+absa-ghana,FY2021,balance_sheet,customer_deposits,7944.122,GHS millions,ABSA21,31,reported,Official standalone face figures.
+absa-ghana,FY2021,balance_sheet,due_to_banks,335.899,GHS millions,ABSA21,31,reported,Official standalone face figures.
+absa-ghana,FY2021,balance_sheet,borrowings,4306.825,GHS millions,ABSA21,31,reported,Official standalone face figures.
+absa-ghana,FY2021,balance_sheet,other_liabilities,1153.039,GHS millions,ABSA21,31,derived,Derivative liabilities + employee benefit obligations + other liabilities.
+absa-ghana,FY2021,balance_sheet,total_liabilities,13739.885,GHS millions,ABSA21,31,reported,Official standalone face figures.
+absa-ghana,FY2021,balance_sheet,stated_capital,400.000,GHS millions,ABSA21,31,reported,Official standalone face figures.
+absa-ghana,FY2021,balance_sheet,retained_earnings,1295.154,GHS millions,ABSA21,31,reported,Official standalone face figures.
+absa-ghana,FY2021,balance_sheet,reserves_other,602.509,GHS millions,ABSA21,31,derived,Statutory + credit risk + other reserves.
+absa-ghana,FY2021,balance_sheet,total_equity,2297.663,GHS millions,ABSA21,31,reported,Official standalone face figures.
+absa-ghana,FY2021,balance_sheet,x_statutory_reserve,631.240,GHS millions,ABSA21,31,reported,Nonadditive source memo; annual zero pledged means none separately shown.
+absa-ghana,FY2021,balance_sheet,x_credit_risk_reserve,19.246,GHS millions,ABSA21,31,reported,Nonadditive source memo; annual zero pledged means none separately shown.
+absa-ghana,FY2021,balance_sheet,x_other_reserves,-47.977,GHS millions,ABSA21,31,reported,Nonadditive source memo; annual zero pledged means none separately shown.
+absa-ghana,FY2021,balance_sheet,x_nonpledged_trading_assets,3232.950,GHS millions,ABSA21,31,reported,Nonadditive source memo; annual zero pledged means none separately shown.
+absa-ghana,FY2021,balance_sheet,x_pledged_trading_assets,0.000,GHS millions,ABSA21,31,reported,Nonadditive source memo; annual zero pledged means none separately shown.
+absa-ghana,FY2021,balance_sheet,x_derivative_assets,99.287,GHS millions,ABSA21,31,reported,Nonadditive source memo; annual zero pledged means none separately shown.
+absa-ghana,FY2021,income_statement,x_oci,-44.672,GHS millions,ABSA21,31,reported,Nonadditive source memo; annual zero pledged means none separately shown.
+absa-ghana,FY2021,balance_sheet,loans_and_advances_gross,,GHS millions,,,unavailable,Need annual loan note or interim gross/ECL disclosure; no zero imputed.
+absa-ghana,FY2021,balance_sheet,loan_loss_allowance,,GHS millions,,,unavailable,Need annual loan note or interim gross/ECL disclosure; no zero imputed.
+absa-ghana,FY2022,income_statement,interest_income,1960.065,GHS millions,ABSA22,32,reported,"Official bank standalone; annual visual, interim text extraction."
+absa-ghana,FY2022,income_statement,interest_expense,593.927,GHS millions,ABSA22,32,reported,"Official bank standalone; annual visual, interim text extraction."
+absa-ghana,FY2022,income_statement,net_interest_income,1366.138,GHS millions,ABSA22,32,reported,"Official bank standalone; annual visual, interim text extraction."
+absa-ghana,FY2022,income_statement,fee_commission_income,248.302,GHS millions,ABSA22,32,reported,"Official bank standalone; annual visual, interim text extraction."
+absa-ghana,FY2022,income_statement,fee_commission_expense,33.064,GHS millions,ABSA22,32,reported,"Official bank standalone; annual visual, interim text extraction."
+absa-ghana,FY2022,income_statement,net_trading_income,487.792,GHS millions,ABSA22,32,reported,"Official bank standalone; annual visual, interim text extraction."
+absa-ghana,FY2022,income_statement,other_operating_income,0.224,GHS millions,ABSA22,32,reported,"Official bank standalone; annual visual, interim text extraction."
+absa-ghana,FY2022,income_statement,total_operating_income,2069.392,GHS millions,ABSA22,32,reported,"Official bank standalone; annual visual, interim text extraction."
+absa-ghana,FY2022,income_statement,impairment_charge,2126.914,GHS millions,ABSA22,32,reported,"Official bank standalone; annual visual, interim text extraction."
+absa-ghana,FY2022,income_statement,staff_costs,427.812,GHS millions,ABSA22,32,reported,"Official bank standalone; annual visual, interim text extraction."
+absa-ghana,FY2022,income_statement,depreciation_amortisation,35.149,GHS millions,ABSA22,32,reported,"Official bank standalone; annual visual, interim text extraction."
+absa-ghana,FY2022,income_statement,other_operating_expenses,41.979,GHS millions,ABSA22,32,reported,"Official bank standalone; annual visual, interim text extraction."
+absa-ghana,FY2022,income_statement,profit_before_tax,-562.462,GHS millions,ABSA22,32,reported,"Official bank standalone; annual visual, interim text extraction."
+absa-ghana,FY2022,income_statement,income_tax,-133.293,GHS millions,ABSA22,32,reported,"Tax credit, signed negative"
+absa-ghana,FY2022,income_statement,profit_after_tax,-429.169,GHS millions,ABSA22,32,reported,"Official bank standalone; annual visual, interim text extraction."
+absa-ghana,FY2022,balance_sheet,cash_and_bog_balances,3849.838,GHS millions,ABSA22,31,reported,Official standalone face figures.
+absa-ghana,FY2022,balance_sheet,due_from_banks,768.075,GHS millions,ABSA22,31,reported,Official standalone face figures.
+absa-ghana,FY2022,balance_sheet,investment_securities,3958.094,GHS millions,ABSA22,31,reported,Official standalone face figures.
+absa-ghana,FY2022,balance_sheet,loans_and_advances_net,5135.435,GHS millions,ABSA22,31,reported,Official standalone face figures.
+absa-ghana,FY2022,balance_sheet,property_equipment_intangibles,230.823,GHS millions,ABSA22,31,derived,Face PPE plus intangibles; confirm ROU included in PPE note before final submission.
+absa-ghana,FY2022,balance_sheet,other_assets,3160.009,GHS millions,ABSA22,31,derived,Trading assets (pledged/unpledged) + derivatives + other assets + current/deferred tax assets.
+absa-ghana,FY2022,balance_sheet,total_assets,17102.274,GHS millions,ABSA22,31,reported,Official standalone face figures.
+absa-ghana,FY2022,balance_sheet,customer_deposits,11177.398,GHS millions,ABSA22,31,reported,Official standalone face figures.
+absa-ghana,FY2022,balance_sheet,due_to_banks,124.609,GHS millions,ABSA22,31,reported,Official standalone face figures.
+absa-ghana,FY2022,balance_sheet,borrowings,2408.221,GHS millions,ABSA22,31,reported,Official standalone face figures.
+absa-ghana,FY2022,balance_sheet,other_liabilities,1253.715,GHS millions,ABSA22,31,derived,Derivative liabilities + employee benefit obligations + other liabilities.
+absa-ghana,FY2022,balance_sheet,total_liabilities,14963.943,GHS millions,ABSA22,31,reported,Official standalone face figures.
+absa-ghana,FY2022,balance_sheet,stated_capital,400.000,GHS millions,ABSA22,31,reported,Official standalone face figures.
+absa-ghana,FY2022,balance_sheet,retained_earnings,885.231,GHS millions,ABSA22,31,reported,Official standalone face figures.
+absa-ghana,FY2022,balance_sheet,reserves_other,853.100,GHS millions,ABSA22,31,derived,Statutory + credit risk + other reserves.
+absa-ghana,FY2022,balance_sheet,total_equity,2138.331,GHS millions,ABSA22,31,reported,Official standalone face figures.
+absa-ghana,FY2022,balance_sheet,x_statutory_reserve,631.240,GHS millions,ABSA22,31,reported,Nonadditive source memo; annual zero pledged means none separately shown.
+absa-ghana,FY2022,balance_sheet,x_credit_risk_reserve,0.000,GHS millions,ABSA22,31,reported,Nonadditive source memo; annual zero pledged means none separately shown.
+absa-ghana,FY2022,balance_sheet,x_other_reserves,221.860,GHS millions,ABSA22,31,reported,Nonadditive source memo; annual zero pledged means none separately shown.
+absa-ghana,FY2022,balance_sheet,x_nonpledged_trading_assets,1466.476,GHS millions,ABSA22,31,reported,Nonadditive source memo; annual zero pledged means none separately shown.
+absa-ghana,FY2022,balance_sheet,x_pledged_trading_assets,0.000,GHS millions,ABSA22,31,reported,Nonadditive source memo; annual zero pledged means none separately shown.
+absa-ghana,FY2022,balance_sheet,x_derivative_assets,416.227,GHS millions,ABSA22,31,reported,Nonadditive source memo; annual zero pledged means none separately shown.
+absa-ghana,FY2022,income_statement,x_oci,265.112,GHS millions,ABSA22,31,reported,Nonadditive source memo; annual zero pledged means none separately shown.
+absa-ghana,FY2022,balance_sheet,loans_and_advances_gross,,GHS millions,,,unavailable,Need annual loan note or interim gross/ECL disclosure; no zero imputed.
+absa-ghana,FY2022,balance_sheet,loan_loss_allowance,,GHS millions,,,unavailable,Need annual loan note or interim gross/ECL disclosure; no zero imputed.
+absa-ghana,FY2023,income_statement,interest_income,2779.322,GHS millions,ABSA23,37,reported,"Official bank standalone; annual visual, interim text extraction."
+absa-ghana,FY2023,income_statement,interest_expense,545.842,GHS millions,ABSA23,37,reported,"Official bank standalone; annual visual, interim text extraction."
+absa-ghana,FY2023,income_statement,net_interest_income,2233.480,GHS millions,ABSA23,37,reported,"Official bank standalone; annual visual, interim text extraction."
+absa-ghana,FY2023,income_statement,fee_commission_income,300.765,GHS millions,ABSA23,37,reported,"Official bank standalone; annual visual, interim text extraction."
+absa-ghana,FY2023,income_statement,fee_commission_expense,44.808,GHS millions,ABSA23,37,reported,"Official bank standalone; annual visual, interim text extraction."
+absa-ghana,FY2023,income_statement,net_trading_income,534.640,GHS millions,ABSA23,37,reported,"Official bank standalone; annual visual, interim text extraction."
+absa-ghana,FY2023,income_statement,other_operating_income,0.451,GHS millions,ABSA23,37,reported,"Official bank standalone; annual visual, interim text extraction."
+absa-ghana,FY2023,income_statement,total_operating_income,3024.528,GHS millions,ABSA23,37,reported,"Official bank standalone; annual visual, interim text extraction."
+absa-ghana,FY2023,income_statement,impairment_charge,165.396,GHS millions,ABSA23,37,reported,"Official bank standalone; annual visual, interim text extraction."
+absa-ghana,FY2023,income_statement,staff_costs,516.564,GHS millions,ABSA23,37,reported,"Official bank standalone; annual visual, interim text extraction."
+absa-ghana,FY2023,income_statement,depreciation_amortisation,39.613,GHS millions,ABSA23,37,reported,"Official bank standalone; annual visual, interim text extraction."
+absa-ghana,FY2023,income_statement,other_operating_expenses,497.922,GHS millions,ABSA23,37,reported,"Official bank standalone; annual visual, interim text extraction."
+absa-ghana,FY2023,income_statement,profit_before_tax,1805.033,GHS millions,ABSA23,37,reported,"Official bank standalone; annual visual, interim text extraction."
+absa-ghana,FY2023,income_statement,income_tax,668.338,GHS millions,ABSA23,37,reported,"Official bank standalone; annual visual, interim text extraction."
+absa-ghana,FY2023,income_statement,profit_after_tax,1136.695,GHS millions,ABSA23,37,reported,"Official bank standalone; annual visual, interim text extraction."
+absa-ghana,FY2023,balance_sheet,cash_and_bog_balances,8438.363,GHS millions,ABSA23,36,reported,Official standalone face figures.
+absa-ghana,FY2023,balance_sheet,due_from_banks,0.000,GHS millions,ABSA23,36,reported,Official standalone face figures.
+absa-ghana,FY2023,balance_sheet,investment_securities,3714.843,GHS millions,ABSA23,36,reported,Official standalone face figures.
+absa-ghana,FY2023,balance_sheet,loans_and_advances_net,6344.791,GHS millions,ABSA23,36,reported,Official standalone face figures.
+absa-ghana,FY2023,balance_sheet,property_equipment_intangibles,370.811,GHS millions,ABSA23,36,derived,Face PPE plus intangibles; confirm ROU included in PPE note before final submission.
+absa-ghana,FY2023,balance_sheet,other_assets,2622.124,GHS millions,ABSA23,36,derived,Trading assets (pledged/unpledged) + derivatives + other assets + current/deferred tax assets.
+absa-ghana,FY2023,balance_sheet,total_assets,21490.932,GHS millions,ABSA23,36,reported,Official standalone face figures.
+absa-ghana,FY2023,balance_sheet,customer_deposits,15883.067,GHS millions,ABSA23,36,reported,Official standalone face figures.
+absa-ghana,FY2023,balance_sheet,due_to_banks,376.048,GHS millions,ABSA23,36,reported,Official standalone face figures.
+absa-ghana,FY2023,balance_sheet,borrowings,730.815,GHS millions,ABSA23,36,reported,Official standalone face figures.
+absa-ghana,FY2023,balance_sheet,other_liabilities,1525.691,GHS millions,ABSA23,36,derived,Derivative liabilities + employee benefit obligations + other liabilities.
+absa-ghana,FY2023,balance_sheet,total_liabilities,18515.621,GHS millions,ABSA23,36,reported,Official standalone face figures.
+absa-ghana,FY2023,balance_sheet,stated_capital,400.000,GHS millions,ABSA23,36,reported,Official standalone face figures.
+absa-ghana,FY2023,balance_sheet,retained_earnings,1643.836,GHS millions,ABSA23,36,reported,Official standalone face figures.
+absa-ghana,FY2023,balance_sheet,reserves_other,931.475,GHS millions,ABSA23,36,derived,Statutory + credit risk + other reserves.
+absa-ghana,FY2023,balance_sheet,total_equity,2975.311,GHS millions,ABSA23,36,reported,Official standalone face figures.
+absa-ghana,FY2023,balance_sheet,x_statutory_reserve,773.327,GHS millions,ABSA23,36,reported,Nonadditive source memo; annual zero pledged means none separately shown.
+absa-ghana,FY2023,balance_sheet,x_credit_risk_reserve,236.003,GHS millions,ABSA23,36,reported,Nonadditive source memo; annual zero pledged means none separately shown.
+absa-ghana,FY2023,balance_sheet,x_other_reserves,-77.855,GHS millions,ABSA23,36,reported,Nonadditive source memo; annual zero pledged means none separately shown.
+absa-ghana,FY2023,balance_sheet,x_nonpledged_trading_assets,677.060,GHS millions,ABSA23,36,reported,Nonadditive source memo; annual zero pledged means none separately shown.
+absa-ghana,FY2023,balance_sheet,x_pledged_trading_assets,410.221,GHS millions,ABSA23,36,reported,Nonadditive source memo; annual zero pledged means none separately shown.
+absa-ghana,FY2023,balance_sheet,x_derivative_assets,21.280,GHS millions,ABSA23,36,reported,Nonadditive source memo; annual zero pledged means none separately shown.
+absa-ghana,FY2023,income_statement,x_oci,-298.396,GHS millions,ABSA23,36,reported,Nonadditive source memo; annual zero pledged means none separately shown.
+absa-ghana,FY2023,balance_sheet,loans_and_advances_gross,,GHS millions,,,unavailable,Need annual loan note or interim gross/ECL disclosure; no zero imputed.
+absa-ghana,FY2023,balance_sheet,loan_loss_allowance,,GHS millions,,,unavailable,Need annual loan note or interim gross/ECL disclosure; no zero imputed.
+absa-ghana,FY2024,income_statement,interest_income,3187.865,GHS millions,ABSA25,60,reported,"Official bank standalone; annual visual, interim text extraction."
+absa-ghana,FY2024,income_statement,interest_expense,792.106,GHS millions,ABSA25,60,reported,"Official bank standalone; annual visual, interim text extraction."
+absa-ghana,FY2024,income_statement,net_interest_income,2395.759,GHS millions,ABSA25,60,reported,"Official bank standalone; annual visual, interim text extraction."
+absa-ghana,FY2024,income_statement,fee_commission_income,468.656,GHS millions,ABSA25,60,reported,"Official bank standalone; annual visual, interim text extraction."
+absa-ghana,FY2024,income_statement,fee_commission_expense,21.827,GHS millions,ABSA25,60,reported,"Official bank standalone; annual visual, interim text extraction."
+absa-ghana,FY2024,income_statement,net_trading_income,606.038,GHS millions,ABSA25,60,reported,"Official bank standalone; annual visual, interim text extraction."
+absa-ghana,FY2024,income_statement,other_operating_income,0.725,GHS millions,ABSA25,60,reported,"Official bank standalone; annual visual, interim text extraction."
+absa-ghana,FY2024,income_statement,total_operating_income,3449.351,GHS millions,ABSA25,60,reported,"Official bank standalone; annual visual, interim text extraction."
+absa-ghana,FY2024,income_statement,impairment_charge,264.764,GHS millions,ABSA25,60,reported,"Official bank standalone; annual visual, interim text extraction."
+absa-ghana,FY2024,income_statement,staff_costs,730.913,GHS millions,ABSA25,60,reported,"Official bank standalone; annual visual, interim text extraction."
+absa-ghana,FY2024,income_statement,depreciation_amortisation,45.930,GHS millions,ABSA25,60,reported,"Official bank standalone; annual visual, interim text extraction."
+absa-ghana,FY2024,income_statement,other_operating_expenses,534.963,GHS millions,ABSA25,60,reported,"Official bank standalone; annual visual, interim text extraction."
+absa-ghana,FY2024,income_statement,profit_before_tax,1872.781,GHS millions,ABSA25,60,reported,"Official bank standalone; annual visual, interim text extraction."
+absa-ghana,FY2024,income_statement,income_tax,678.052,GHS millions,ABSA25,60,reported,"Official bank standalone; annual visual, interim text extraction."
+absa-ghana,FY2024,income_statement,profit_after_tax,1194.729,GHS millions,ABSA25,60,reported,"Official bank standalone; annual visual, interim text extraction."
+absa-ghana,FY2024,balance_sheet,cash_and_bog_balances,9847.398,GHS millions,ABSA25,59,reported,Official standalone face figures.
+absa-ghana,FY2024,balance_sheet,due_from_banks,130.166,GHS millions,ABSA25,59,reported,Official standalone face figures.
+absa-ghana,FY2024,balance_sheet,investment_securities,4648.938,GHS millions,ABSA25,59,reported,Official standalone face figures.
+absa-ghana,FY2024,balance_sheet,loans_and_advances_net,8344.900,GHS millions,ABSA25,59,reported,Official standalone face figures.
+absa-ghana,FY2024,balance_sheet,property_equipment_intangibles,547.808,GHS millions,ABSA25,59,derived,Face PPE plus intangibles; confirm ROU included in PPE note before final submission.
+absa-ghana,FY2024,balance_sheet,other_assets,3822.546,GHS millions,ABSA25,59,derived,Trading assets (pledged/unpledged) + derivatives + other assets + current/deferred tax assets.
+absa-ghana,FY2024,balance_sheet,total_assets,27341.756,GHS millions,ABSA25,59,reported,Official standalone face figures.
+absa-ghana,FY2024,balance_sheet,customer_deposits,17631.015,GHS millions,ABSA25,59,reported,Official standalone face figures.
+absa-ghana,FY2024,balance_sheet,due_to_banks,372.284,GHS millions,ABSA25,59,reported,Official standalone face figures.
+absa-ghana,FY2024,balance_sheet,borrowings,3031.398,GHS millions,ABSA25,59,reported,Official standalone face figures.
+absa-ghana,FY2024,balance_sheet,other_liabilities,2129.029,GHS millions,ABSA25,59,derived,Derivative liabilities + employee benefit obligations + other liabilities.
+absa-ghana,FY2024,balance_sheet,total_liabilities,23163.726,GHS millions,ABSA25,59,reported,Official standalone face figures.
+absa-ghana,FY2024,balance_sheet,stated_capital,400.000,GHS millions,ABSA25,59,reported,Official standalone face figures.
+absa-ghana,FY2024,balance_sheet,retained_earnings,2708.127,GHS millions,ABSA25,59,reported,Official standalone face figures.
+absa-ghana,FY2024,balance_sheet,reserves_other,1069.903,GHS millions,ABSA25,59,derived,Statutory + credit risk + other reserves.
+absa-ghana,FY2024,balance_sheet,total_equity,4178.030,GHS millions,ABSA25,59,reported,Official standalone face figures.
+absa-ghana,FY2024,balance_sheet,x_statutory_reserve,922.668,GHS millions,ABSA25,59,reported,Nonadditive source memo; annual zero pledged means none separately shown.
+absa-ghana,FY2024,balance_sheet,x_credit_risk_reserve,217.100,GHS millions,ABSA25,59,reported,Nonadditive source memo; annual zero pledged means none separately shown.
+absa-ghana,FY2024,balance_sheet,x_other_reserves,-69.865,GHS millions,ABSA25,59,reported,Nonadditive source memo; annual zero pledged means none separately shown.
+absa-ghana,FY2024,balance_sheet,x_nonpledged_trading_assets,1206.738,GHS millions,ABSA25,59,reported,Nonadditive source memo; annual zero pledged means none separately shown.
+absa-ghana,FY2024,balance_sheet,x_pledged_trading_assets,571.488,GHS millions,ABSA25,59,reported,Nonadditive source memo; annual zero pledged means none separately shown.
+absa-ghana,FY2024,balance_sheet,x_derivative_assets,87.444,GHS millions,ABSA25,59,reported,Nonadditive source memo; annual zero pledged means none separately shown.
+absa-ghana,FY2024,income_statement,x_oci,6.751,GHS millions,ABSA25,59,reported,Nonadditive source memo; annual zero pledged means none separately shown.
+absa-ghana,FY2024,balance_sheet,loans_and_advances_gross,,GHS millions,,,unavailable,Need annual loan note or interim gross/ECL disclosure; no zero imputed.
+absa-ghana,FY2024,balance_sheet,loan_loss_allowance,,GHS millions,,,unavailable,Need annual loan note or interim gross/ECL disclosure; no zero imputed.
+absa-ghana,FY2025,income_statement,interest_income,3687.227,GHS millions,ABSA25,60,reported,"Official bank standalone; annual visual, interim text extraction."
+absa-ghana,FY2025,income_statement,interest_expense,885.223,GHS millions,ABSA25,60,reported,"Official bank standalone; annual visual, interim text extraction."
+absa-ghana,FY2025,income_statement,net_interest_income,2802.004,GHS millions,ABSA25,60,reported,"Official bank standalone; annual visual, interim text extraction."
+absa-ghana,FY2025,income_statement,fee_commission_income,554.687,GHS millions,ABSA25,60,reported,"Official bank standalone; annual visual, interim text extraction."
+absa-ghana,FY2025,income_statement,fee_commission_expense,24.687,GHS millions,ABSA25,60,reported,"Official bank standalone; annual visual, interim text extraction."
+absa-ghana,FY2025,income_statement,net_trading_income,1049.631,GHS millions,ABSA25,60,reported,"Official bank standalone; annual visual, interim text extraction."
+absa-ghana,FY2025,income_statement,other_operating_income,3.465,GHS millions,ABSA25,60,reported,"Official bank standalone; annual visual, interim text extraction."
+absa-ghana,FY2025,income_statement,total_operating_income,4385.100,GHS millions,ABSA25,60,reported,"Official bank standalone; annual visual, interim text extraction."
+absa-ghana,FY2025,income_statement,impairment_charge,3.321,GHS millions,ABSA25,60,reported,"Official bank standalone; annual visual, interim text extraction."
+absa-ghana,FY2025,income_statement,staff_costs,939.956,GHS millions,ABSA25,60,reported,"Official bank standalone; annual visual, interim text extraction."
+absa-ghana,FY2025,income_statement,depreciation_amortisation,63.444,GHS millions,ABSA25,60,reported,"Official bank standalone; annual visual, interim text extraction."
+absa-ghana,FY2025,income_statement,other_operating_expenses,636.278,GHS millions,ABSA25,60,reported,"Official bank standalone; annual visual, interim text extraction."
+absa-ghana,FY2025,income_statement,profit_before_tax,2742.101,GHS millions,ABSA25,60,reported,"Official bank standalone; annual visual, interim text extraction."
+absa-ghana,FY2025,income_statement,income_tax,979.690,GHS millions,ABSA25,60,reported,"Official bank standalone; annual visual, interim text extraction."
+absa-ghana,FY2025,income_statement,profit_after_tax,1762.411,GHS millions,ABSA25,60,reported,"Official bank standalone; annual visual, interim text extraction."
+absa-ghana,FY2025,balance_sheet,cash_and_bog_balances,9701.763,GHS millions,ABSA25,59,reported,Official standalone face figures.
+absa-ghana,FY2025,balance_sheet,due_from_banks,165.737,GHS millions,ABSA25,59,reported,Official standalone face figures.
+absa-ghana,FY2025,balance_sheet,investment_securities,6406.293,GHS millions,ABSA25,59,reported,Official standalone face figures.
+absa-ghana,FY2025,balance_sheet,loans_and_advances_net,9995.251,GHS millions,ABSA25,59,reported,Official standalone face figures.
+absa-ghana,FY2025,balance_sheet,property_equipment_intangibles,726.092,GHS millions,ABSA25,59,derived,Face PPE plus intangibles; confirm ROU included in PPE note before final submission.
+absa-ghana,FY2025,balance_sheet,other_assets,4534.711,GHS millions,ABSA25,59,derived,Trading assets (pledged/unpledged) + derivatives + other assets + current/deferred tax assets.
+absa-ghana,FY2025,balance_sheet,total_assets,31529.847,GHS millions,ABSA25,59,reported,Official standalone face figures.
+absa-ghana,FY2025,balance_sheet,customer_deposits,19185.669,GHS millions,ABSA25,59,reported,Official standalone face figures.
+absa-ghana,FY2025,balance_sheet,due_to_banks,447.421,GHS millions,ABSA25,59,reported,Official standalone face figures.
+absa-ghana,FY2025,balance_sheet,borrowings,4077.611,GHS millions,ABSA25,59,reported,Official standalone face figures.
+absa-ghana,FY2025,balance_sheet,other_liabilities,1846.062,GHS millions,ABSA25,59,derived,Derivative liabilities + employee benefit obligations + other liabilities.
+absa-ghana,FY2025,balance_sheet,total_liabilities,25556.763,GHS millions,ABSA25,59,reported,Official standalone face figures.
+absa-ghana,FY2025,balance_sheet,stated_capital,400.000,GHS millions,ABSA25,59,reported,Official standalone face figures.
+absa-ghana,FY2025,balance_sheet,retained_earnings,4217.913,GHS millions,ABSA25,59,reported,Official standalone face figures.
+absa-ghana,FY2025,balance_sheet,reserves_other,1355.171,GHS millions,ABSA25,59,derived,Statutory + credit risk + other reserves.
+absa-ghana,FY2025,balance_sheet,total_equity,5973.084,GHS millions,ABSA25,59,reported,Official standalone face figures.
+absa-ghana,FY2025,balance_sheet,x_statutory_reserve,1142.969,GHS millions,ABSA25,59,reported,Nonadditive source memo; annual zero pledged means none separately shown.
+absa-ghana,FY2025,balance_sheet,x_credit_risk_reserve,249.424,GHS millions,ABSA25,59,reported,Nonadditive source memo; annual zero pledged means none separately shown.
+absa-ghana,FY2025,balance_sheet,x_other_reserves,-37.222,GHS millions,ABSA25,59,reported,Nonadditive source memo; annual zero pledged means none separately shown.
+absa-ghana,FY2025,balance_sheet,x_nonpledged_trading_assets,2524.387,GHS millions,ABSA25,59,reported,Nonadditive source memo; annual zero pledged means none separately shown.
+absa-ghana,FY2025,balance_sheet,x_pledged_trading_assets,349.190,GHS millions,ABSA25,59,reported,Nonadditive source memo; annual zero pledged means none separately shown.
+absa-ghana,FY2025,balance_sheet,x_derivative_assets,61.184,GHS millions,ABSA25,59,reported,Nonadditive source memo; annual zero pledged means none separately shown.
+absa-ghana,FY2025,income_statement,x_oci,30.442,GHS millions,ABSA25,59,reported,Nonadditive source memo; annual zero pledged means none separately shown.
+absa-ghana,FY2025,balance_sheet,loans_and_advances_gross,,GHS millions,,,unavailable,Need annual loan note or interim gross/ECL disclosure; no zero imputed.
+absa-ghana,FY2025,balance_sheet,loan_loss_allowance,,GHS millions,,,unavailable,Need annual loan note or interim gross/ECL disclosure; no zero imputed.
+absa-ghana,9M-2025,income_statement,interest_income,2744.945,GHS millions,ABSA26Q3,1,reported,"Official bank standalone; annual visual, interim text extraction."
+absa-ghana,9M-2025,income_statement,interest_expense,664.353,GHS millions,ABSA26Q3,1,reported,"Official bank standalone; annual visual, interim text extraction."
+absa-ghana,9M-2025,income_statement,net_interest_income,2080.592,GHS millions,ABSA26Q3,1,reported,"Official bank standalone; annual visual, interim text extraction."
+absa-ghana,9M-2025,income_statement,fee_commission_income,417.351,GHS millions,ABSA26Q3,1,reported,"Official bank standalone; annual visual, interim text extraction."
+absa-ghana,9M-2025,income_statement,fee_commission_expense,18.943,GHS millions,ABSA26Q3,1,reported,"Official bank standalone; annual visual, interim text extraction."
+absa-ghana,9M-2025,income_statement,net_trading_income,822.605,GHS millions,ABSA26Q3,1,reported,"Official bank standalone; annual visual, interim text extraction."
+absa-ghana,9M-2025,income_statement,other_operating_income,1.721,GHS millions,ABSA26Q3,1,reported,"Official bank standalone; annual visual, interim text extraction."
+absa-ghana,9M-2025,income_statement,total_operating_income,3303.326,GHS millions,ABSA26Q3,1,reported,"Official bank standalone; annual visual, interim text extraction."
+absa-ghana,9M-2025,income_statement,impairment_charge,32.831,GHS millions,ABSA26Q3,1,reported,"Official bank standalone; annual visual, interim text extraction."
+absa-ghana,9M-2025,income_statement,staff_costs,680.198,GHS millions,ABSA26Q3,1,reported,"Official bank standalone; annual visual, interim text extraction."
+absa-ghana,9M-2025,income_statement,depreciation_amortisation,43.690,GHS millions,ABSA26Q3,1,reported,"Official bank standalone; annual visual, interim text extraction."
+absa-ghana,9M-2025,income_statement,other_operating_expenses,487.712,GHS millions,ABSA26Q3,1,reported,"Official bank standalone; annual visual, interim text extraction."
+absa-ghana,9M-2025,income_statement,profit_before_tax,2058.895,GHS millions,ABSA26Q3,1,reported,"Official bank standalone; annual visual, interim text extraction."
+absa-ghana,9M-2025,income_statement,income_tax,739.892,GHS millions,ABSA26Q3,1,reported,"Official bank standalone; annual visual, interim text extraction."
+absa-ghana,9M-2025,income_statement,profit_after_tax,1319.003,GHS millions,ABSA26Q3,1,reported,"Official bank standalone; annual visual, interim text extraction."
+absa-ghana,9M-2025,balance_sheet,cash_and_bog_balances,11759.281,GHS millions,ABSA26Q3,1,reported,Official standalone face figures.
+absa-ghana,9M-2025,balance_sheet,due_from_banks,613.793,GHS millions,ABSA26Q3,1,reported,Official standalone face figures.
+absa-ghana,9M-2025,balance_sheet,investment_securities,5708.238,GHS millions,ABSA26Q3,1,reported,Official standalone face figures.
+absa-ghana,9M-2025,balance_sheet,loans_and_advances_net,8465.091,GHS millions,ABSA26Q3,1,reported,Official standalone face figures.
+absa-ghana,9M-2025,balance_sheet,property_equipment_intangibles,667.690,GHS millions,ABSA26Q3,1,derived,Face PPE plus intangibles; confirm ROU included in PPE note before final submission.
+absa-ghana,9M-2025,balance_sheet,other_assets,4905.662,GHS millions,ABSA26Q3,1,derived,Trading assets (pledged/unpledged) + derivatives + other assets + current/deferred tax assets.
+absa-ghana,9M-2025,balance_sheet,total_assets,32119.755,GHS millions,ABSA26Q3,1,reported,Official standalone face figures.
+absa-ghana,9M-2025,balance_sheet,customer_deposits,18999.627,GHS millions,ABSA26Q3,1,reported,Official standalone face figures.
+absa-ghana,9M-2025,balance_sheet,due_to_banks,324.651,GHS millions,ABSA26Q3,1,reported,Official standalone face figures.
+absa-ghana,9M-2025,balance_sheet,borrowings,5183.100,GHS millions,ABSA26Q3,1,reported,Official standalone face figures.
+absa-ghana,9M-2025,balance_sheet,other_liabilities,2042.332,GHS millions,ABSA26Q3,1,derived,Derivative liabilities + employee benefit obligations + other liabilities.
+absa-ghana,9M-2025,balance_sheet,total_liabilities,26549.710,GHS millions,ABSA26Q3,1,reported,Official standalone face figures.
+absa-ghana,9M-2025,balance_sheet,stated_capital,400.000,GHS millions,ABSA26Q3,1,reported,Official standalone face figures.
+absa-ghana,9M-2025,balance_sheet,retained_earnings,3860.442,GHS millions,ABSA26Q3,1,reported,Official standalone face figures.
+absa-ghana,9M-2025,balance_sheet,reserves_other,1309.603,GHS millions,ABSA26Q3,1,derived,Statutory + credit risk + other reserves.
+absa-ghana,9M-2025,balance_sheet,total_equity,5570.045,GHS millions,ABSA26Q3,1,reported,Official standalone face figures.
+absa-ghana,9M-2025,balance_sheet,x_statutory_reserve,1087.543,GHS millions,ABSA26Q3,1,reported,Nonadditive source memo; annual zero pledged means none separately shown.
+absa-ghana,9M-2025,balance_sheet,x_credit_risk_reserve,218.913,GHS millions,ABSA26Q3,1,reported,Nonadditive source memo; annual zero pledged means none separately shown.
+absa-ghana,9M-2025,balance_sheet,x_other_reserves,3.147,GHS millions,ABSA26Q3,1,reported,Nonadditive source memo; annual zero pledged means none separately shown.
+absa-ghana,9M-2025,balance_sheet,x_nonpledged_trading_assets,2497.527,GHS millions,ABSA26Q3,1,reported,Nonadditive source memo; annual zero pledged means none separately shown.
+absa-ghana,9M-2025,balance_sheet,x_pledged_trading_assets,710.738,GHS millions,ABSA26Q3,1,reported,Nonadditive source memo; annual zero pledged means none separately shown.
+absa-ghana,9M-2025,balance_sheet,x_derivative_assets,26.027,GHS millions,ABSA26Q3,1,reported,Nonadditive source memo; annual zero pledged means none separately shown.
+absa-ghana,9M-2025,income_statement,x_oci,72.939,GHS millions,ABSA26Q3,1,reported,Nonadditive source memo; annual zero pledged means none separately shown.
+absa-ghana,9M-2025,balance_sheet,x_ytd_statutory_transfer,164.875,GHS millions,ABSA26Q3,1,reported,Nonadditive source memo; annual zero pledged means none separately shown.
+absa-ghana,9M-2025,balance_sheet,x_ytd_credit_reserve_transfer,1.813,GHS millions,ABSA26Q3,1,reported,Nonadditive source memo; annual zero pledged means none separately shown.
+absa-ghana,9M-2025,income_statement,x_dividends_paid,0.000,GHS millions,ABSA26Q3,1,reported,Nonadditive source memo; annual zero pledged means none separately shown.
+absa-ghana,9M-2025,balance_sheet,x_net_operating_cash_flow,896.767,GHS millions,ABSA26Q3,2,reported,Nonadditive source memo; annual zero pledged means none separately shown.
+absa-ghana,9M-2025,balance_sheet,x_fx_effect_on_cash,-448.678,GHS millions,ABSA26Q3,2,reported,Nonadditive source memo; annual zero pledged means none separately shown.
+absa-ghana,9M-2025,balance_sheet,x_mandatory_cash_reserves,3624.372,GHS millions,ABSA26Q3,2,reported,Nonadditive source memo; annual zero pledged means none separately shown.
+absa-ghana,9M-2025,ratios,car_pct,22.3700,%,ABSA26Q3,2,reported,Official interim quantitative disclosure.
+absa-ghana,9M-2025,ratios,npl_pct,14.0900,%,ABSA26Q3,2,reported,Official interim quantitative disclosure.
+absa-ghana,9M-2025,ratios,x_liquidity_ratio_pct,84.4700,%,ABSA26Q3,2,reported,Official interim quantitative disclosure.
+absa-ghana,9M-2025,ratios,x_leverage_ratio_pct,9.1200,%,ABSA26Q3,2,reported,Official interim quantitative disclosure.
+absa-ghana,9M-2025,balance_sheet,loans_and_advances_gross,,GHS millions,,,unavailable,Need annual loan note or interim gross/ECL disclosure; no zero imputed.
+absa-ghana,9M-2025,balance_sheet,loan_loss_allowance,,GHS millions,,,unavailable,Need annual loan note or interim gross/ECL disclosure; no zero imputed.
+absa-ghana,9M-2026,income_statement,interest_income,2334.247,GHS millions,ABSA26Q3,1,reported,"Official bank standalone; annual visual, interim text extraction."
+absa-ghana,9M-2026,income_statement,interest_expense,426.762,GHS millions,ABSA26Q3,1,reported,"Official bank standalone; annual visual, interim text extraction."
+absa-ghana,9M-2026,income_statement,net_interest_income,1907.485,GHS millions,ABSA26Q3,1,reported,"Official bank standalone; annual visual, interim text extraction."
+absa-ghana,9M-2026,income_statement,fee_commission_income,445.660,GHS millions,ABSA26Q3,1,reported,"Official bank standalone; annual visual, interim text extraction."
+absa-ghana,9M-2026,income_statement,fee_commission_expense,14.739,GHS millions,ABSA26Q3,1,reported,"Official bank standalone; annual visual, interim text extraction."
+absa-ghana,9M-2026,income_statement,net_trading_income,703.851,GHS millions,ABSA26Q3,1,reported,"Official bank standalone; annual visual, interim text extraction."
+absa-ghana,9M-2026,income_statement,other_operating_income,0.218,GHS millions,ABSA26Q3,1,reported,"Official bank standalone; annual visual, interim text extraction."
+absa-ghana,9M-2026,income_statement,total_operating_income,3042.475,GHS millions,ABSA26Q3,1,reported,"Official bank standalone; annual visual, interim text extraction."
+absa-ghana,9M-2026,income_statement,impairment_charge,198.435,GHS millions,ABSA26Q3,1,reported,"Official bank standalone; annual visual, interim text extraction."
+absa-ghana,9M-2026,income_statement,staff_costs,722.692,GHS millions,ABSA26Q3,1,reported,"Official bank standalone; annual visual, interim text extraction."
+absa-ghana,9M-2026,income_statement,depreciation_amortisation,71.743,GHS millions,ABSA26Q3,1,reported,"Official bank standalone; annual visual, interim text extraction."
+absa-ghana,9M-2026,income_statement,other_operating_expenses,518.619,GHS millions,ABSA26Q3,1,reported,"Official bank standalone; annual visual, interim text extraction."
+absa-ghana,9M-2026,income_statement,profit_before_tax,1530.986,GHS millions,ABSA26Q3,1,reported,"Official bank standalone; annual visual, interim text extraction."
+absa-ghana,9M-2026,income_statement,income_tax,545.655,GHS millions,ABSA26Q3,1,reported,"Official bank standalone; annual visual, interim text extraction."
+absa-ghana,9M-2026,income_statement,profit_after_tax,985.331,GHS millions,ABSA26Q3,1,reported,"Official bank standalone; annual visual, interim text extraction."
+absa-ghana,9M-2026,balance_sheet,cash_and_bog_balances,9193.018,GHS millions,ABSA26Q3,1,reported,Official standalone face figures.
+absa-ghana,9M-2026,balance_sheet,due_from_banks,666.240,GHS millions,ABSA26Q3,1,reported,Official standalone face figures.
+absa-ghana,9M-2026,balance_sheet,investment_securities,7991.971,GHS millions,ABSA26Q3,1,reported,Official standalone face figures.
+absa-ghana,9M-2026,balance_sheet,loans_and_advances_net,11528.344,GHS millions,ABSA26Q3,1,reported,Official standalone face figures.
+absa-ghana,9M-2026,balance_sheet,property_equipment_intangibles,1006.701,GHS millions,ABSA26Q3,1,derived,Face PPE plus intangibles; confirm ROU included in PPE note before final submission.
+absa-ghana,9M-2026,balance_sheet,other_assets,5559.489,GHS millions,ABSA26Q3,1,derived,Trading assets (pledged/unpledged) + derivatives + other assets + current/deferred tax assets.
+absa-ghana,9M-2026,balance_sheet,total_assets,35945.763,GHS millions,ABSA26Q3,1,reported,Official standalone face figures.
+absa-ghana,9M-2026,balance_sheet,customer_deposits,21185.474,GHS millions,ABSA26Q3,1,reported,Official standalone face figures.
+absa-ghana,9M-2026,balance_sheet,due_to_banks,631.714,GHS millions,ABSA26Q3,1,reported,Official standalone face figures.
+absa-ghana,9M-2026,balance_sheet,borrowings,5754.475,GHS millions,ABSA26Q3,1,reported,Official standalone face figures.
+absa-ghana,9M-2026,balance_sheet,other_liabilities,2498.884,GHS millions,ABSA26Q3,1,derived,Derivative liabilities + employee benefit obligations + other liabilities.
+absa-ghana,9M-2026,balance_sheet,total_liabilities,30070.547,GHS millions,ABSA26Q3,1,reported,Official standalone face figures.
+absa-ghana,9M-2026,balance_sheet,stated_capital,400.000,GHS millions,ABSA26Q3,1,reported,Official standalone face figures.
+absa-ghana,9M-2026,balance_sheet,retained_earnings,3896.887,GHS millions,ABSA26Q3,1,reported,Official standalone face figures.
+absa-ghana,9M-2026,balance_sheet,reserves_other,1578.329,GHS millions,ABSA26Q3,1,derived,Statutory + credit risk + other reserves.
+absa-ghana,9M-2026,balance_sheet,total_equity,5875.216,GHS millions,ABSA26Q3,1,reported,Official standalone face figures.
+absa-ghana,9M-2026,balance_sheet,x_statutory_reserve,1266.136,GHS millions,ABSA26Q3,1,reported,Nonadditive source memo; annual zero pledged means none separately shown.
+absa-ghana,9M-2026,balance_sheet,x_credit_risk_reserve,317.614,GHS millions,ABSA26Q3,1,reported,Nonadditive source memo; annual zero pledged means none separately shown.
+absa-ghana,9M-2026,balance_sheet,x_other_reserves,-5.421,GHS millions,ABSA26Q3,1,reported,Nonadditive source memo; annual zero pledged means none separately shown.
+absa-ghana,9M-2026,balance_sheet,x_nonpledged_trading_assets,2166.728,GHS millions,ABSA26Q3,1,reported,Nonadditive source memo; annual zero pledged means none separately shown.
+absa-ghana,9M-2026,balance_sheet,x_pledged_trading_assets,1470.627,GHS millions,ABSA26Q3,1,reported,Nonadditive source memo; annual zero pledged means none separately shown.
+absa-ghana,9M-2026,balance_sheet,x_derivative_assets,33.874,GHS millions,ABSA26Q3,1,reported,Nonadditive source memo; annual zero pledged means none separately shown.
+absa-ghana,9M-2026,income_statement,x_oci,27.871,GHS millions,ABSA26Q3,1,reported,Nonadditive source memo; annual zero pledged means none separately shown.
+absa-ghana,9M-2026,balance_sheet,x_ytd_statutory_transfer,123.167,GHS millions,ABSA26Q3,1,reported,Nonadditive source memo; annual zero pledged means none separately shown.
+absa-ghana,9M-2026,balance_sheet,x_ytd_credit_reserve_transfer,68.190,GHS millions,ABSA26Q3,1,reported,Nonadditive source memo; annual zero pledged means none separately shown.
+absa-ghana,9M-2026,income_statement,x_dividends_paid,1115.000,GHS millions,ABSA26Q3,1,reported,Nonadditive source memo; annual zero pledged means none separately shown.
+absa-ghana,9M-2026,balance_sheet,x_net_operating_cash_flow,938.425,GHS millions,ABSA26Q3,2,reported,Nonadditive source memo; annual zero pledged means none separately shown.
+absa-ghana,9M-2026,balance_sheet,x_fx_effect_on_cash,332.983,GHS millions,ABSA26Q3,2,reported,Nonadditive source memo; annual zero pledged means none separately shown.
+absa-ghana,9M-2026,balance_sheet,x_mandatory_cash_reserves,3264.904,GHS millions,ABSA26Q3,2,reported,Nonadditive source memo; annual zero pledged means none separately shown.
+absa-ghana,9M-2026,ratios,car_pct,19.0600,%,ABSA26Q3,2,reported,Official interim quantitative disclosure.
+absa-ghana,9M-2026,ratios,npl_pct,11.3200,%,ABSA26Q3,2,reported,Official interim quantitative disclosure.
+absa-ghana,9M-2026,ratios,x_liquidity_ratio_pct,75.5200,%,ABSA26Q3,2,reported,Official interim quantitative disclosure.
+absa-ghana,9M-2026,ratios,x_leverage_ratio_pct,9.0200,%,ABSA26Q3,2,reported,Official interim quantitative disclosure.
+absa-ghana,9M-2026,balance_sheet,loans_and_advances_gross,,GHS millions,,,unavailable,Need annual loan note or interim gross/ECL disclosure; no zero imputed.
+absa-ghana,9M-2026,balance_sheet,loan_loss_allowance,,GHS millions,,,unavailable,Need annual loan note or interim gross/ECL disclosure; no zero imputed.
