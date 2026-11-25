@@ -2,6 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
 import {validAgent, boardAgents} from './participants.mjs';
+import {helpState} from './help-requests.mjs';
 export const slugOK=s=>typeof s==='string'&&/^[a-z0-9][a-z0-9-]{0,80}$/.test(s);
 export const read=p=>fs.existsSync(p)?fs.readFileSync(p,'utf8').replace(/^\uFEFF/,''):'';
 export const names=d=>fs.existsSync(d)?fs.readdirSync(d,{withFileTypes:true}).filter(x=>x.isFile()).map(x=>x.name).sort():[];
@@ -24,12 +25,14 @@ export function readState(root,goal,now=Date.now()){
   const roster=read(path.join(dir,'ROSTER.md')).split(/\r?\n/).map(l=>/^\|\s*([a-z0-9][a-z0-9-]*)\s*\|\s*(.*?)\s*\|$/.exec(l)).filter(Boolean).map(m=>({slug:m[1],name:m[2]}));
   const claims=names(path.join(dir,'claims')).filter(n=>n.endsWith('.md')).map(n=>({slug:n.slice(0,-3),...fields(read(path.join(dir,'claims',n)))}));
   const boards=boardAgents(dir), ids=[...new Set([...boards,...claims.map(c=>c.agent).filter(validAgent)])].sort();
-  const events=[], messages=[];
+  const events=[], messages=[], helpEvents=[];
   const agents=ids.map(id=>{
     let at=null, last=null;
     for(const l of read(path.join(dir,'board',id+'.md')).split(/\r?\n/)){
       const m=/^- (\d{4}-\d\d-\d\dT\S+)\s+(.*)$/.exec(l);
       if(m&&time(m[1])!==null){at=m[1];last=at;events.push({agent:id,at,text:m[2]});}
+      const helpLine=m?m[2]:l;
+      if(at&&/^(CAPABILITIES:|HELP \[|ASSIST \[|HELP-RESOLVED \[)/.test(helpLine.trim()))helpEvents.push({agent:id,at,text:helpLine,order:helpEvents.length});
       const x=/(?:^|\s)(TO|ACK) ([a-z0-9][a-z0-9-]{0,47}):\s*(.*)$/.exec(l);
       if(x&&validAgent(x[2]))messages.push({from:id,to:x[2],kind:x[1],at,text:x[3]});
     }
@@ -59,13 +62,15 @@ export function readState(root,goal,now=Date.now()){
     t.reviewSummary=peer.map(r=>({file:r.file,reviewer:r.reviewer,verdict:r.verdict}));
     t.repairRequested=peer.some(r=>['CHANGES','BLOCK'].includes(r.verdict));
   }
+  const help=helpState(helpEvents,agents,all);
   const actionable=Object.fromEntries(agents.map(a=>{
     const own=all.filter(t=>t.owner===a.id), repairs=own.filter(t=>t.status==='changes-requested'||t.status==='blocked'||t.repairRequested);
     const reviewable=all.filter(t=>t.owner&&t.owner!==a.id&&t.status==='needs-review'&&!t.repairRequested&&!t.reviewSummary.some(r=>r.reviewer===a.id&&r.verdict==='PASS'));
     const ongoing=own.filter(t=>t.status==='in-progress');
     const unclaimed=all.filter(t=>t.status==='unclaimed'&&(!['sector-rollup','peer-comparison','qa-sweep'].includes(t.slug)||tasks.every(b=>b.status==='done')));
-    return [a.id,{messages:pending.filter(m=>m.to===a.id).length,repair:repairs.map(t=>t.slug),continue:ongoing.map(t=>t.slug),review:reviewable.map(t=>t.slug),claim:a.open<3?unclaimed.map(t=>t.slug):[],next:repairs.length?'repair':ongoing.length?'continue':reviewable.length?'review':a.open<3&&unclaimed.length?'claim':'wait-or-report-blocker'}];
+    const h=help.queues[a.id];
+    return [a.id,{help:h,messages:pending.filter(m=>m.to===a.id).length,repair:repairs.map(t=>t.slug),continue:ongoing.map(t=>t.slug),review:reviewable.map(t=>t.slug),claim:a.open<3?unclaimed.map(t=>t.slug):[],next:h.verify.length?'verify-assistance':repairs.length?'repair':h.assist.length?'assist-peer':ongoing.length?'continue':reviewable.length?'review':a.open<3&&unclaimed.length?'claim':'wait-or-report-blocker'}];
   }));
   const sorted=a=>a.sort((x,y)=>(time(x.at)||0)-(time(y.at)||0));
-  return {goal,generatedAt:new Date(now).toISOString(),agents,tasks,shared,claims,reviews,events:sorted(events),messages:sorted(messages),pending,actionable,goalClaimComplete:tasks.length>0&&all.every(t=>t.status==='done'),notes:['Recent check-in is not proof a process is running.','Quiet claims are not released automatically.','Legacy ACK matching is advisory; an acknowledgment may cover multiple messages.','A done claim is an owner assertion until evidence and peer review are checked.']};
+  return {goal,generatedAt:new Date(now).toISOString(),agents,tasks,shared,claims,reviews,events:sorted(events),messages:sorted(messages),pending,actionable,help,goalClaimComplete:tasks.length>0&&all.every(t=>t.status==='done'),notes:['Recent check-in is not proof a process is running.','Quiet claims are not released automatically.','Legacy ACK matching is advisory; an acknowledgment may cover multiple messages.','A done claim is an owner assertion until evidence and peer review are checked.']};
 }

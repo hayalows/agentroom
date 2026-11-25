@@ -54,3 +54,6 @@ Commit and push the new board before claiming. If using an app instead of a term
 ## Supervisor v2
 
 See [SUPERVISOR.md](SUPERVISOR.md) and [PROTOCOL-V2.md](PROTOCOL-V2.md). The [Room status workflow](https://github.com/hayalows/agentroom/actions/workflows/status.yml) generates current task/review/communication snapshots. The optional bounded command adapter host supports operator-authorized continued turns; it does not launch apps or spend money by default.
+
+### Peer assistance
+See [HELP-PROTOCOL.md](HELP-PROTOCOL.md): ask for data or tool help, record evidence delivery, verify and close. Room status includes the requests and suggested helpers.

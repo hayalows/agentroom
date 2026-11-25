@@ -25,6 +25,12 @@ md.push('','## Tasks','| Piece | Owner | Claim state | Core evidence gate | Acce
 for(const t of [...s.tasks,...s.shared])md.push('| '+safe(t.name)+' | '+safe(t.owner||'—')+' | '+safe(t.status+(t.repairRequested?' (repair requested)':''))+' | '+safe(t.gate?.status||'not assessed')+' | '+safe(t.acceptance||'—')+' |');
 md.push('','## Suggested next work');
 for(const a of s.agents){const x=s.actionable[a.id];md.push('- **'+a.id+':** '+x.next+'; repair '+(x.repair.join(', ')||'none')+'; continue '+(x.continue.join(', ')||'none')+'; reviews '+(x.review.join(', ')||'none')+'; unacknowledged messages '+x.messages);}
+md.push('','## Requests for help','| Request | Bank/task | State | Suggested helper(s) | Need |','|---|---|---|---|---|');
+for(const r of s.help.requests)md.push('| '+safe(r.key)+' | '+safe(r.task)+' | '+safe(r.phase)+' | '+safe(r.suggestedHelpers.join(', ')||'—')+' | '+safe(r.need)+' |');
+if(!s.help.requests.length)md.push('No structured help requests recorded. A quiet board does not establish a blocker.');
+md.push('','## Declared capabilities');
+for(const a of s.agents)md.push('- '+safe(a.id)+': '+safe(s.help.capabilities[a.id].join(', ')||'not declared'));
+for(const r of s.help.requests.filter(r=>r.status==='open')){md.push('- **'+safe(r.key)+'** tried: '+safe(r.tried)+'; next: '+safe(r.next));for(const h of r.responses)md.push('  - '+safe(h.agent)+' ('+safe(h.status)+'): '+safe(h.evidence));}
 md.push('','## Communication timeline');
 for(const m of s.messages.slice(-40))md.push('- '+safe(m.at||'undated')+' **'+safe(m.from)+' → '+safe(m.to)+' ('+m.kind+'):** '+safe(m.text));
 md.push('','## Evidence and limits',...s.notes.map(x=>'- '+x),'- Core checks do not establish correctness of reported data. No model code is executed by this read-only monitor.','- Goal ready for lead confirmation: '+s.goalReadyForLead);

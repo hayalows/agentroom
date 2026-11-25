@@ -27,6 +27,14 @@ try{
   put('claims/bank-a-takeover.md','agent: codex\nstatus: in-progress\n');
   assert.equal(readState(root,goal,now).tasks[0].status,'ownership-conflict');
   fs.unlinkSync(path.join(dir,'claims/bank-a-takeover.md'));
+  put('board/deepseek.md','- 2026-11-25T12:00:00Z JOINED\nHELP [pdf-1] | task=bank-a | kind=pdf-extract | target=any | need=FY2025 bank statement | tried=issuer timeout | next=continue other bank\n');
+  put('board/codex.md','- 2026-11-25T11:59:00Z CAPABILITIES: pdf-extract, source-search\n');
+  let h=readState(root,goal,now);
+  assert.equal(h.help.requests.length,1);assert.deepEqual(h.actionable.codex.help.assist,['deepseek/pdf-1']);
+  put('board/codex.md','- 2026-11-25T11:59:00Z CAPABILITIES: pdf-extract, source-search\n- 2026-11-25T12:03:00Z ASSIST [deepseek/pdf-1] | status=delivered | evidence=official URL page 8\nHELP-RESOLVED [pdf-1] | status=resolved | evidence=wrong owner\n');
+  h=readState(root,goal,now);assert.equal(h.help.requests[0].phase,'awaiting-requester-verification');assert.deepEqual(h.actionable.deepseek.help.verify,['deepseek/pdf-1']);assert.equal(h.help.invalid.length,1);
+  fs.appendFileSync(path.join(dir,'board/deepseek.md'),'- 2026-11-25T12:05:00Z HELP-RESOLVED [pdf-1] | status=resolved | evidence=verified page 8\n');
+  h=readState(root,goal,now);assert.equal(h.help.requests[0].status,'resolved');assert.deepEqual(h.actionable.deepseek.help.verify,[]);
   const task=s.tasks[0], header='bank,period,statement,line_item,value,unit,source_id,page,status,notes,scenario\n';
   const pairs=[['total_assets',10],['total_liabilities',7],['total_equity',3],['net_interest_income',4],['interest_income',6],['interest_expense',2],['profit_after_tax',2],['profit_before_tax',3],['income_tax',1]];
   const rows=(period,scenario)=>pairs.map(([key,v])=>['bank-a',period,'statement',key,v,'GHS millions','source','1',scenario?'estimated':'reported','',scenario].join(',')).join('\n')+'\n';
