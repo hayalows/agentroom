@@ -17,3 +17,6 @@ progress: Pinned e73b4e6ee367d2f5e63a3465a0e3a57815917321; full QA run covers 23
 
 updated: 2026-11-25T18:00:37.287Z
 progress: QA v1.3 published d3aa443d: 23 folders, 0 assessed FAIL, 14 WARN, 2 WIP. Exact write-off bridge resolves Prudential false FAIL; ROU exclusions recognized for CalBank/Prudential, all 12 true ADB/Ecobank period warnings retained; prior fault-injection and new source-note regression PASS. No bank edits. Independent Gemini re-review requested.
+
+updated: 2026-11-25T21:07:40.100Z
+progress: FINAL same-pin reports published 11dffc9111b208dc896e2db05f0e65c18aa09179, source b728a09ffd52393f98b97c14298544c139d1921f, input fingerprint b59a8526d5026b87a05f4a92784148fd1c8f801d2f5f637548dc2454e9f760e3. Clean LF actual Node/Python on ICONKA; 9/9 generated output SHA256 hashes independently verified from GitHub after publication. 20 ordinary, 3 conditional separately labelled, no ordinary inclusion; UMB PwC caveat in generated conditional rows; no model or generator edits. 20 ordinary 0 FAIL/0 WARN; raw all-bank 2 FAIL (Omni and UMB annual coverage) /2 WARN (Prudential and UMB 2026 interim); explicit FINAL-SCOPE.md maps approved scope to raw unchanged output. Report JSON SHA256 93d288ebb36c05dedbf24414931a80c833a4c48c638a14ff30709921a429e867. Gemini final same-pin QA re-run requested. No self-approval.
