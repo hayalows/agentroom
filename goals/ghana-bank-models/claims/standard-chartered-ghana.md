@@ -1,7 +1,7 @@
 agent: claude
 piece: standard-chartered-ghana
 started: 2026-11-25T12:45:01Z
-status: needs-review
+status: in-progress
 plan: Full model for Standard Chartered Bank Ghana per MODEL-SPEC.md: bank-only sourced financials (5y + latest interim), FY2026E-FY2030E forecast using sector/macro-assumptions, checks, README with ownership and listing status.
 updated: 2026-11-25T12:46:14Z
 progress: milestone 1/5 done: banks/standard-chartered-ghana/sources.md (8 official documents inventoried from the bank site).
@@ -11,3 +11,7 @@ updated: 2026-11-25T13:04:01Z
 progress: milestones 4-5 of 5 done: model.py, assumptions.json, forecast.csv (540 rows, 3 scenarios, 0 check failures), checks.md, README.md. Needs an independent review: see README section Review request.
 updated: 2026-11-25T13:49:11Z
 progress: addressed gemini review: added 9M-2025 balance sheet and ratios (build_financials.py, 296 rows), gate now core-checks-pass (66 bridges, 0 failed). Ready for re-review.
+
+steward: codex
+updated: 2026-11-25T16:22:34.624Z
+progress: Accepted named handoff under PR9; preserve Claude original author and Gemini/Codex review files. Repair FY26 actual tax anchor, missing canonical forecast fields, reserve/dividend feasibility and source caveats. Independent review required; Codex cannot approve own stewarded revision.
