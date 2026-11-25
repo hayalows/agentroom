@@ -4,6 +4,7 @@ import path from 'node:path';
 import {fileURLToPath,pathToFileURL} from 'node:url';
 import {execFileSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
+import {isDeepStrictEqual} from 'node:util';
 const here=path.dirname(fileURLToPath(import.meta.url));
 const opt={};let check=false;
 for(let i=2;i<process.argv.length;i++){
@@ -123,13 +124,21 @@ for(const t of excluded){
 const files={'rollup.md':md.join('\n')+'\n','rollup.csv':toCsv(rows),'provisional.csv':toCsv(provisional)};
 clean();if(git('rev-parse','HEAD')!==sha)throw Error('HEAD changed during generation');
 const summary={sourceCommit,inputFingerprint,accepted:names.length,roster:tasks.length,excluded:excluded.length,totals:Object.fromEntries(['total_assets','customer_deposits','profit_after_tax'].map(i=>[i,aggregate(names,b=>hist(b,'FY2025',i))]))};
+const expected={schema:2,...summary,acceptedEvidence:evidence,exclusions,diagnosticInputs,diagnosticErrors,sectorContextSha256:hash(ctxText),generatorSha256:hash(read(fileURLToPath(import.meta.url))),outputHashes:Object.fromEntries(Object.entries(files).map(([k,v])=>[k,hash(v)]))};
 if(check){
  const m=prior;
- for(const [f,s] of Object.entries(files))if(m.outputHashes[f]!==hash(s)||hash(read(path.join(out,f)))!==hash(s))throw Error('STALE or modified output: '+f);
+ // generatedAt is provenance metadata, not a deterministic input. Validate format only.
+ const {generatedAt,...actual}=m;
+ if(typeof generatedAt!=='string'||!Number.isFinite(Date.parse(generatedAt)))throw Error('Invalid manifest generation time');
+ if(!isDeepStrictEqual(actual,expected)){
+  const keys=[...new Set([...Object.keys(actual),...Object.keys(expected)])].filter(k=>!isDeepStrictEqual(actual[k],expected[k]));
+  throw Error('STALE or modified manifest: '+keys.join(', '));
+ }
+ for(const [f,s] of Object.entries(files))if(hash(read(path.join(out,f)))!==hash(s))throw Error('STALE or modified output: '+f);
  console.log(JSON.stringify({...summary,checkedCommit:sha,fresh:true},null,2));
 }else{
  fs.mkdirSync(out,{recursive:true});
  for(const [f,s] of Object.entries(files))fs.writeFileSync(path.join(out,f),s);
- fs.writeFileSync(path.join(out,'manifest.json'),JSON.stringify({schema:2,generatedAt:new Date().toISOString(),...summary,acceptedEvidence:evidence,exclusions,diagnosticInputs,diagnosticErrors,sectorContextSha256:hash(ctxText),generatorSha256:hash(read(fileURLToPath(import.meta.url))),outputHashes:Object.fromEntries(Object.entries(files).map(([k,v])=>[k,hash(v)]))},null,2)+'\n');
+ fs.writeFileSync(path.join(out,'manifest.json'),JSON.stringify({generatedAt:new Date().toISOString(),...expected},null,2)+'\n');
  console.log(JSON.stringify({...summary,diagnosticErrors},null,2));
 }

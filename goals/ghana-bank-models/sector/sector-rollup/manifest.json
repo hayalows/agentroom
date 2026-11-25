@@ -1,18 +1,17 @@
 {
+  "generatedAt": "2026-11-25T18:21:52.597Z",
   "schema": 2,
-  "generatedAt": "2026-11-25T17:40:13.372Z",
-  "sourceCommit": "50c3f1acc4449cd65389e1e45727bba6ef7d247c",
-  "inputFingerprint": "5d055a122d310c371f2ff2ff5c8cfc3d02c77a4476474098f2c561f42274117f",
+  "sourceCommit": "768ebd0d2f618fcc2df487cb20ac8d8446b10bf9",
+  "inputFingerprint": "9b21c0dfb4671e6e6a0085526491ac562f403dac654b7cec1f0c786a6d09eebe",
   "accepted": 18,
   "roster": 23,
   "excluded": 5,
   "totals": {
     "total_assets": {
-      "value": 359981.88327200006,
+      "value": 354359.37527200003,
       "n": 18,
       "banks": [
         "access-bank-ghana",
-        "adb",
         "bank-of-africa-ghana",
         "calbank",
         "consolidated-bank-ghana",
@@ -24,6 +23,7 @@
         "gcb",
         "gtbank-ghana",
         "nib",
+        "republic-bank-ghana",
         "societe-generale-ghana",
         "stanbic-bank-ghana",
         "standard-chartered-ghana",
@@ -32,11 +32,10 @@
       ]
     },
     "customer_deposits": {
-      "value": 265681.17771200003,
+      "value": 260829.060712,
       "n": 18,
       "banks": [
         "access-bank-ghana",
-        "adb",
         "bank-of-africa-ghana",
         "calbank",
         "consolidated-bank-ghana",
@@ -48,6 +47,7 @@
         "gcb",
         "gtbank-ghana",
         "nib",
+        "republic-bank-ghana",
         "societe-generale-ghana",
         "stanbic-bank-ghana",
         "standard-chartered-ghana",
@@ -56,11 +56,10 @@
       ]
     },
     "profit_after_tax": {
-      "value": 12016.736959,
+      "value": 11904.035959,
       "n": 18,
       "banks": [
         "access-bank-ghana",
-        "adb",
         "bank-of-africa-ghana",
         "calbank",
         "consolidated-bank-ghana",
@@ -72,6 +71,7 @@
         "gcb",
         "gtbank-ghana",
         "nib",
+        "republic-bank-ghana",
         "societe-generale-ghana",
         "stanbic-bank-ghana",
         "standard-chartered-ghana",
@@ -88,16 +88,6 @@
       "reviewFile": "claude-helper-1-of-codex-access-bank-ghana.md",
       "reviewSha256": "0ec54fa186f83d24eeef922abc43964516d106c330c1221912b61618f37af38d",
       "packageFingerprint": "735000270faf42f7ebeecf031d9006c710c6cdc6b358208a73987e782b4054ac",
-      "macroFingerprint": "b3c4412d681469e8d974e0c067af8e28435f5669900a9f1b4c54b0178992b8df",
-      "resolvedReviews": []
-    },
-    {
-      "bank": "adb",
-      "owner": "gemini",
-      "reviewer": "codex",
-      "reviewFile": "codex-of-gemini-adb.md",
-      "reviewSha256": "42a2924c0d174604a255204a1a916e8c6ba144d9b494fced83cffc868758f9eb",
-      "packageFingerprint": "17056225a0db2b3922cd033f85c3e2735198e83cb104248fdbe2466819246147",
       "macroFingerprint": "b3c4412d681469e8d974e0c067af8e28435f5669900a9f1b4c54b0178992b8df",
       "resolvedReviews": []
     },
@@ -215,6 +205,16 @@
       "resolvedReviews": []
     },
     {
+      "bank": "republic-bank-ghana",
+      "owner": "deepseek",
+      "reviewer": "chatgpt-support",
+      "reviewFile": "chatgpt-support-of-deepseek-republic-bank-ghana.md",
+      "reviewSha256": "867049afe9851a2e3696d11d82beba4b31e6b0dba5fbe296d57655d3cbed9203",
+      "packageFingerprint": "32d4316c0df4bd9f805ff52fa92e6878a9fc31790b9e2d9ee93853d6db846c9f",
+      "macroFingerprint": "b3c4412d681469e8d974e0c067af8e28435f5669900a9f1b4c54b0178992b8df",
+      "resolvedReviews": []
+    },
+    {
       "bank": "societe-generale-ghana",
       "owner": "deepseek",
       "reviewer": "chatgpt-support",
@@ -273,9 +273,17 @@
     {
       "bank": "absa-ghana",
       "owner": "claude-helper-1",
+      "status": "done",
+      "stage": "repairs-required",
+      "packageFingerprint": "0bd968656464be84708f1ffba30d694877e29047f861870b539cc02a95b9983f",
+      "macroFingerprint": "b3c4412d681469e8d974e0c067af8e28435f5669900a9f1b4c54b0178992b8df"
+    },
+    {
+      "bank": "adb",
+      "owner": "gemini",
       "status": "needs-review",
-      "stage": "re-review-required",
-      "packageFingerprint": "10b59b4c3c63e4fc74b386abee121c1dc233e3a67473bc017208cbf564f18b0d",
+      "stage": "current-version-review-required",
+      "packageFingerprint": "5cd130b689ba5d4c67cd8c6b448156e5bc568cc4cac44d53bf5a164d38d4791a",
       "macroFingerprint": "b3c4412d681469e8d974e0c067af8e28435f5669900a9f1b4c54b0178992b8df"
     },
     {
@@ -290,16 +298,8 @@
       "bank": "prudential-bank",
       "owner": "papa-kojo-agent",
       "status": "needs-review",
-      "stage": "re-review-required",
-      "packageFingerprint": "1e26bbeb1632b76ef4ce20ac4b1f144ef7ea94c8a8d88345297a864d5a484492",
-      "macroFingerprint": "b3c4412d681469e8d974e0c067af8e28435f5669900a9f1b4c54b0178992b8df"
-    },
-    {
-      "bank": "republic-bank-ghana",
-      "owner": "deepseek",
-      "status": "needs-review",
       "stage": "repairs-required",
-      "packageFingerprint": "1aee545cef0e2d4d57b15457ff507c55b6e81dafcff97dcb9465a3ef6caab264",
+      "packageFingerprint": "1919f9e67abe7b9a4c0bee01ea80cb1629b137516d991bd25daca96202841384",
       "macroFingerprint": "b3c4412d681469e8d974e0c067af8e28435f5669900a9f1b4c54b0178992b8df"
     },
     {
@@ -314,19 +314,19 @@
   "diagnosticInputs": {
     "absa-ghana": {
       "financials.csv": "fae8708ec24be5623d4f04999d464fecb19a5f1c75ee4903f9590e4137454aaa",
-      "forecast.csv": "2f46535fb477a122939e760fa35d6124770ce1eee807328982b14a0894ce63bf"
+      "forecast.csv": "2b941a6eebbf9d43e51b0470d10626e6120192040ab897838bf165954351c375"
+    },
+    "adb": {
+      "financials.csv": "efedf2d6c20539a1e153928acef675febc762875c4aadeaead2f6ab3707cc77c",
+      "forecast.csv": "324c71125e954ab11576c348d0706a66c64e8ad0cb838f04d8f167a7dd1f7387"
     },
     "omnibsic-bank": {
-      "financials.csv": "60a83be2623f02f9d0eb4e47deb35a08d6081e3ad2f432e6d279ee6ff08f557f",
-      "forecast.csv": "b47469c8d0455f813e747a0a4c5efc5e05486d14d0905a13993f8eeb08d0612b"
+      "financials.csv": "ef80cad90345563de1b6302f2f32eb8428c4a1c42a78b27ebe1329b0fb79b29c",
+      "forecast.csv": "75617ec462057327bd247598c14172a071ae4e46837192073f22b79670652e67"
     },
     "prudential-bank": {
       "financials.csv": "9c6b410206cf9475873b27757718ca11ce0f710505f6e7980ac75a6ee4245206",
       "forecast.csv": "5209fc7805a4ec5d6f864306c978f34e4f9cd91bbaa0100fdb9c8fe02499bff2"
-    },
-    "republic-bank-ghana": {
-      "financials.csv": "fa61c92ff9ab05fb5a1da81f639e09909ec5b65f467983db79d207dffa80e044",
-      "forecast.csv": "540e44692c6b911b6d844bc06e9a1f239d259c65f2c94e3ad04ae633c3910908"
     },
     "umb": {
       "financials.csv": "d90f154fc979a200565b11e74faac7a2782059db15d7fed8e887eb375d09db1f",
@@ -335,10 +335,10 @@
   },
   "diagnosticErrors": [],
   "sectorContextSha256": "3fbc0e839b80a9159aff6142a24497f2532987e0f937c3ba866b24b09369ca7f",
-  "generatorSha256": "61537327c98f9e2226418eefcc5842beddda9922f52a3a8525071b8681fc08db",
+  "generatorSha256": "22453b2317eb79f0a7544480b37c1eeb49f2c27052f056e70be0d4d2f307e1aa",
   "outputHashes": {
-    "rollup.md": "3e71c2830793c3e960c6f4a83aaa1344b68f4b2bc1a2c415d1be444cee2e3cea",
-    "rollup.csv": "99b8ed69bef53491cda31ffe9d4c1895deb0156e53e82a2366bf63c07a1f2a8a",
-    "provisional.csv": "68b6d2f4970b5f6ff4ab92979b27f26a4e3b85cdea6c629c7949e93d78512960"
+    "rollup.md": "af701cd8989cef73619ce8c5988045c0991ebc0f640109ade617b0add8d9f1d1",
+    "rollup.csv": "e6bad67aa575c17dc38cfa8827107559a0dc2b3e9d81b80bea452bf667f7ccd5",
+    "provisional.csv": "b985042bc07a8231c04fdfd5c459600e964e63be2500f756fe3d5eb23745a8ed"
   }
 }
