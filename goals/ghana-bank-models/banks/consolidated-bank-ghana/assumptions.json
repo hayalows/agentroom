@@ -9,8 +9,15 @@
     "securities_weight_tbill": 0.5,
     "loan_rate_pass_through": 0.6,
     "placement_rate_pass_through": 0.6,
-    "funding_rate_pass_through": 0.3,
-    "reason": "Annualized H1 interest income fit from average FY2025/H1 net loans and securities; interim bank balances split at FY2025 share, assumed loan and placement yields, securities yield solved as residual. Funding cost fitted to annualized H1 expense over average deposit plus borrowing stocks. Not independently observed yields. Future yields adjust with weighted bill/bond or policy changes."
+    "funding_rate_pass_through": 0.44,
+    "reason": "Annualized H1 interest income fit from average FY2025/H1 net loans and securities; interim bank balances split at FY2025 share, assumed loan and placement yields, securities yield solved as residual. Funding cost fitted to annualized H1 expense over average deposit plus borrowing stocks. Not independently observed yields. Future yields adjust with weighted bill/bond or policy changes. Revised: 44% funding beta is rounded from the FY2025 static +100bp disclosed NII sensitivity, holding loan and placement betas at 60%, securities first-year fast share at 34.66%, and applying beta to total deposits/borrowings. This is a diagnostic calibration, not a replication of the bank's contractual rate buckets.",
+    "securities_repricing": {
+      "within_12m_ghs_m": 4276.981,
+      "over_12m_ghs_m": 8061.788,
+      "total_ghs_m": 12338.769,
+      "slow_annual_reset_fraction": 0.2,
+      "source": "CBG25AR pp84–85 note 3.3.2, as independently checked by chatgpt-support; FY2025 observed mix held constant as proxy, slow annual reset 20% analyst estimate. Fast share 34.66%; slow share 65.34%. H2 2026 fitted yields unchanged, from FY27 fast bucket resets to shared weighted rate, slow bucket rolls 20% toward current target each year."
+    }
   },
   "scenario": {
     "base": {
@@ -116,7 +123,6 @@
   "other": {
     "tax_pct": 35,
     "dividend_payout_pct": 0,
-    "statutory_reserve_transfer_pct": 50,
     "capital_buffer_pp": 3,
     "bank_placement_growth_tracks_deposits": true,
     "borrowings_growth_tracks_deposits": true,
@@ -129,10 +135,17 @@
     "deposit_growth_cap_pct": 30,
     "fee_expense_ratio": "H1 expense / income",
     "fx_method": "Use reported FY2025 USD net short exposure (GHS60.283m), express at shared 2025 year-end FX, hold USD amount fixed from FY2027; increment P&L for FX change, residual cash reflects P&L, no separate gross asset/liability FX stocks. No separate H2 FX shock because June FX inventory unavailable; H2 trading run-rate includes ordinary FX activity.",
-    "capital_method": "FY2025 actual RWA minus gross loans divided by total assets minus gross loans as residual risk intensity; H1 gross estimated using FY2025 allowance ratio. H1 regulatory capital = estimated RWA times reported 14.91%; CET1 proxy likewise 13.74%, no identification with Tier1. Post-H1 modeled profit/loss changes total and CET1 capital one-for-one; no new relief or injection assumed. Screen 13% shared min and management buffer +3pp; flag any gap. No accounting equity substitution.",
+    "capital_method": "FY2025 actual RWA minus gross loans divided by total assets minus gross loans as residual risk intensity; H1 gross estimated using FY2025 allowance ratio. H1 regulatory capital = estimated RWA times reported 14.91%; CET1 proxy likewise 13.74%, no identification with Tier1. Post-H1 modeled profit/loss changes total and CET1 capital one-for-one; no new relief or injection assumed. Screen 13% shared min and management buffer +3pp; flag any gap. No accounting equity substitution. Central case assumes positive PAT fully eligible; separately screen a sensitivity with only 80% of positive incremental PAT eligible, all losses deducted. No forecast detailed prudential deductions.",
     "cash_method": "H1 combined cash split at FY2025 due-from-banks share. Securities grow by scenario fraction of deposit change, other noncash assets explicit, cash is residual; no funding or capital injection to force feasibility. Compare estimated cash with shared CRR times deposits, not evidence of actual eligible reserves or bank-specific dispensation. CBG25AR p118 says 25% CRR was waived in 2025; 2026 waiver status not verified. Shared 20% screen represents standard-requirement sensitivity only.",
     "credit_method": "H1 net loan actual grossed up at FY2025 allowance ratio; target allowance stock and NPL path illustrative, independent of each other. Modeled risk charge floored at stock build; release/write-off difference is implied unallocated movement. Historical sovereign modification losses not repeated. Downside credit charges and cost pressure explicit.",
-    "reserve_method": "50% positive post-H1 earnings transferred to statutory reserve while below stated capital (CBG H1 2026 actual 50%); not distributed. No dividend even if retained deficit closes. No future owner transactions assumed.",
-    "rationale": "CBG's 2025 impairment loss, thin capital buffer, retained deficit and June 2026 NPL above 33% motivate cautious lending and no distributions. No new government support assumed. Loan/deposit, fee and opex spreads are analyst judgments, not bank guidance."
+    "reserve_method": "Apply Act 930 s34 tier to opening statutory reserve alone: 50% of positive incremental PAT below 50% of paid-up capital, 25% at 50% to below 100%, 12.5% thereafter. No cap at full capital. Hold fair-value reserve constant. No dividends or new owner transactions assumed. H1 actual statutory reserve 171.642m and fair value 0.498m.",
+    "rationale": "CBG's 2025 impairment loss, thin capital buffer, retained deficit and June 2026 NPL above 33% motivate cautious lending and no distributions. No new government support assumed. Loan/deposit, fee and opex spreads are analyst judgments, not bank guidance.",
+    "statutory_reserve_bands_pct": [
+      50,
+      25,
+      12.5
+    ],
+    "capital_positive_eligibility_sensitivity": 0.8,
+    "sensitivity": "Recompute entire scenario using previous full securities repricing and 30% funding beta (both changed, so comparison not pure duration isolation); also isolate full repricing at revised beta. Report both FY2030 outcomes. Capital eligibility sensitivity keeps accounting stocks unchanged."
   }
 }
