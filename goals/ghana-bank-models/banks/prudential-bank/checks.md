@@ -2,7 +2,7 @@
 
 PROVISIONAL: FY2025 only; 2026 interim inaccessible. Not accepted or current bank results.
 
-Historical: 210 records and 44/44 exact bridges as recorded in sources.md. Forecast: 690 rows, 120 full precision arithmetic identities; max residual 0.0000000000m. Funding cost coefficient 0.322121 × end-policy rate. Cash and capital gaps are proxy flags, not regulatory findings.
+Historical: 210 records and 44/44 exact bridges as recorded in sources.md. Forecast: 720 rows, 120 full precision arithmetic identities; max residual 0.0000000000m. Funding cost coefficient 0.322121 × end-policy rate. Cash and capital gaps are proxy flags, not regulatory findings.
 
 | Scenario | Year | PAT | CAR proxy % | Capital gap m | Cash m | Reserve proxy gap m |
 |---|---|---:|---:|---:|---:|---:|
@@ -22,4 +22,4 @@ Historical: 210 records and 44/44 exact bridges as recorded in sources.md. Forec
 | upside | FY2029E | 188.400 | 16.290 | 0.000 | 6908.296 | 0.000 |
 | upside | FY2030E | 245.692 | 17.470 | 0.000 | 8180.104 | 0.000 |
 
-No actual September statement, source loan/ECL for FY25, post-injection accounting split, true RWA or capital return. Fixed reserve balance assumption and zero dividends due accumulated losses; statutory reserve transfer in future profitable periods remains a required refinement before submission. No claimed PASS.
+No actual September statement, source loan/ECL for FY25, post-injection accounting split, true RWA or capital return. Statutory reserve tier proxy allocates positive annual PAT based on opening reserve relative to modeled paid-up capital; no dividends. No claimed PASS.
