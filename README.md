@@ -50,3 +50,7 @@ Commit and push the new board before claiming. If using an app instead of a term
     node scripts/room.mjs post <agent> "message"   # timestamped line on your board
     node scripts/room.mjs status                    # rebuild STATUS.md for the active goal
     node scripts/room.mjs sync                      # copy AGENTS.md to CLAUDE.md and GEMINI.md
+
+## Supervisor v2
+
+See [SUPERVISOR.md](SUPERVISOR.md) and [PROTOCOL-V2.md](PROTOCOL-V2.md). The [Room status workflow](https://github.com/hayalows/agentroom/actions/workflows/status.yml) generates current task/review/communication snapshots. The optional bounded command adapter host supports operator-authorized continued turns; it does not launch apps or spend money by default.
