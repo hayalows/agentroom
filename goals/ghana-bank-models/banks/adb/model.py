@@ -219,6 +219,8 @@ def run(share_override=None, write=True, plc_incl_override=None, loan_shift=0.0)
                 stat_xfer = xfer_year
                 stat_fund = fund_prev + stat_xfer
             fund_prev = stat_fund
+            ret_earn -= stat_xfer
+            res_other += stat_xfer
             avg_eq = 0.5 * (prev['total_equity'] + total_eq)
             avg_as = 0.5 * (prev['total_assets'] + total_assets)
             car_pct = car_of(total_eq, total_assets)
@@ -264,10 +266,10 @@ def run(share_override=None, write=True, plc_incl_override=None, loan_shift=0.0)
                 ('balance_sheet', 'other_liabilities', other_liab, 'GHS millions', 'Tracks CPI inflation.'),
                 ('balance_sheet', 'total_liabilities', total_liab, 'GHS millions', 'Sum of liability items.'),
                 ('balance_sheet', 'stated_capital', stated_cap, 'GHS millions', 'Held flat (no automatic capital injection assumed).'),
-                ('balance_sheet', 'retained_earnings', ret_earn, 'GHS millions', 'Prior retained_earnings + PAT - dividends.'),
-                ('balance_sheet', 'x_statutory_reserve', stat_fund, 'GHS millions', 'Memo, part of reserves_other (held flat in the total): opening fund + transfer. FY2026E = reported 9M-2026 fund + Q4 top-up.'),
-                ('balance_sheet', 'x_statutory_transfer', stat_xfer, 'GHS millions', 'Memo, no effect on total equity: tier % x positive PAT (FY2026E: full-year transfer less 150.857 already transferred in 9M, floor 0). Tier from opening fund / stated capital.'),
-                ('balance_sheet', 'reserves_other', res_other, 'GHS millions', 'Held flat.'),
+                ('balance_sheet', 'retained_earnings', ret_earn, 'GHS millions', 'Prior retained_earnings + PAT - dividends - statutory transfer.'),
+                ('balance_sheet', 'x_statutory_reserve', stat_fund, 'GHS millions', 'Memo, a component of reserves_other: opening fund + transfer. FY2026E = reported 9M-2026 fund + Q4 top-up.'),
+                ('balance_sheet', 'x_statutory_transfer', stat_xfer, 'GHS millions', 'Memo, moves from retained_earnings to reserves_other (total equity unchanged): tier % x positive PAT (FY2026E: full-year transfer less 150.857 already transferred in 9M, floor 0). Tier from opening fund / stated capital.'),
+                ('balance_sheet', 'reserves_other', res_other, 'GHS millions', 'Prior reserves_other + statutory transfer (x_statutory_transfer).'),
                 ('balance_sheet', 'total_equity', total_eq, 'GHS millions', 'stated_capital + retained_earnings + reserves_other.'),
                 ('ratios', 'car_pct', car_pct, '%', 'v2 proxy: (FY2025 regulatory capital + change in book equity since FY2025) / (total assets x RWA density), anchored on reported 9M-2026 CAR 27.41%; no capital injection assumed.'),
                 ('ratios', 'tier1_pct', None, '%', 'Not projected separately.'),

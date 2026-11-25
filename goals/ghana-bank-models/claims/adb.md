@@ -23,5 +23,5 @@ progress: ROUND 2b: statutory reserve memo rows anchored on codex's recovered 9M
 
 updated: 2026-11-25T18:28:35.000Z
 progress: ROUND 2c: statutory memo now uses the three Act 930 s34 bands (50/25/12.5) after codex's correction. Supersedes ffada7bb (same round 2; no review filed on it). No other change.
-review_revision: 6f7408739fca10ebdb4db756d5e1542aceb5978b82dfd911698c20cf45bbf292
+review_revision: 2cd373b50b3c07479e9524b83fbecd8b3034268b88258a5d93e92999ecad4aa3
 review_macro: b3c4412d681469e8d974e0c067af8e28435f5669900a9f1b4c54b0178992b8df

@@ -31,10 +31,10 @@ adb,base,FY2026E,balance_sheet,borrowings,1665.710,GHS millions,MODEL-ESTIMATE,e
 adb,base,FY2026E,balance_sheet,other_liabilities,492.596,GHS millions,MODEL-ESTIMATE,estimated,Tracks CPI inflation.
 adb,base,FY2026E,balance_sheet,total_liabilities,17905.092,GHS millions,MODEL-ESTIMATE,estimated,Sum of liability items.
 adb,base,FY2026E,balance_sheet,stated_capital,2146.745,GHS millions,MODEL-ESTIMATE,estimated,Held flat (no automatic capital injection assumed).
-adb,base,FY2026E,balance_sheet,retained_earnings,-1477.938,GHS millions,MODEL-ESTIMATE,estimated,Prior retained_earnings + PAT - dividends.
-adb,base,FY2026E,balance_sheet,x_statutory_reserve,556.510,GHS millions,MODEL-ESTIMATE,estimated,"Memo, part of reserves_other (held flat in the total): opening fund + transfer. FY2026E = reported 9M-2026 fund + Q4 top-up."
-adb,base,FY2026E,balance_sheet,x_statutory_transfer,22.461,GHS millions,MODEL-ESTIMATE,estimated,"Memo, no effect on total equity: tier % x positive PAT (FY2026E: full-year transfer less 150.857 already transferred in 9M, floor 0). Tier from opening fund / stated capital."
-adb,base,FY2026E,balance_sheet,reserves_other,2137.962,GHS millions,MODEL-ESTIMATE,estimated,Held flat.
+adb,base,FY2026E,balance_sheet,retained_earnings,-1500.399,GHS millions,MODEL-ESTIMATE,estimated,Prior retained_earnings + PAT - dividends - statutory transfer.
+adb,base,FY2026E,balance_sheet,x_statutory_reserve,556.510,GHS millions,MODEL-ESTIMATE,estimated,"Memo, a component of reserves_other: opening fund + transfer. FY2026E = reported 9M-2026 fund + Q4 top-up."
+adb,base,FY2026E,balance_sheet,x_statutory_transfer,22.461,GHS millions,MODEL-ESTIMATE,estimated,"Memo, moves from retained_earnings to reserves_other (total equity unchanged): tier % x positive PAT (FY2026E: full-year transfer less 150.857 already transferred in 9M, floor 0). Tier from opening fund / stated capital."
+adb,base,FY2026E,balance_sheet,reserves_other,2160.423,GHS millions,MODEL-ESTIMATE,estimated,Prior reserves_other + statutory transfer (x_statutory_transfer).
 adb,base,FY2026E,balance_sheet,total_equity,2806.769,GHS millions,MODEL-ESTIMATE,estimated,stated_capital + retained_earnings + reserves_other.
 adb,base,FY2026E,ratios,car_pct,27.747,%,MODEL-ESTIMATE,estimated,"v2 proxy: (FY2025 regulatory capital + change in book equity since FY2025) / (total assets x RWA density), anchored on reported 9M-2026 CAR 27.41%; no capital injection assumed."
 adb,base,FY2026E,ratios,tier1_pct,,%,MODEL-ESTIMATE,unavailable,Not projected separately.
@@ -76,10 +76,10 @@ adb,base,FY2027E,balance_sheet,borrowings,1665.710,GHS millions,MODEL-ESTIMATE,e
 adb,base,FY2027E,balance_sheet,other_liabilities,529.541,GHS millions,MODEL-ESTIMATE,estimated,Tracks CPI inflation.
 adb,base,FY2027E,balance_sheet,total_liabilities,19969.436,GHS millions,MODEL-ESTIMATE,estimated,Sum of liability items.
 adb,base,FY2027E,balance_sheet,stated_capital,2146.745,GHS millions,MODEL-ESTIMATE,estimated,Held flat (no automatic capital injection assumed).
-adb,base,FY2027E,balance_sheet,retained_earnings,-1323.022,GHS millions,MODEL-ESTIMATE,estimated,Prior retained_earnings + PAT - dividends.
-adb,base,FY2027E,balance_sheet,x_statutory_reserve,633.968,GHS millions,MODEL-ESTIMATE,estimated,"Memo, part of reserves_other (held flat in the total): opening fund + transfer. FY2026E = reported 9M-2026 fund + Q4 top-up."
-adb,base,FY2027E,balance_sheet,x_statutory_transfer,77.458,GHS millions,MODEL-ESTIMATE,estimated,"Memo, no effect on total equity: tier % x positive PAT (FY2026E: full-year transfer less 150.857 already transferred in 9M, floor 0). Tier from opening fund / stated capital."
-adb,base,FY2027E,balance_sheet,reserves_other,2137.962,GHS millions,MODEL-ESTIMATE,estimated,Held flat.
+adb,base,FY2027E,balance_sheet,retained_earnings,-1422.941,GHS millions,MODEL-ESTIMATE,estimated,Prior retained_earnings + PAT - dividends - statutory transfer.
+adb,base,FY2027E,balance_sheet,x_statutory_reserve,633.968,GHS millions,MODEL-ESTIMATE,estimated,"Memo, a component of reserves_other: opening fund + transfer. FY2026E = reported 9M-2026 fund + Q4 top-up."
+adb,base,FY2027E,balance_sheet,x_statutory_transfer,77.458,GHS millions,MODEL-ESTIMATE,estimated,"Memo, moves from retained_earnings to reserves_other (total equity unchanged): tier % x positive PAT (FY2026E: full-year transfer less 150.857 already transferred in 9M, floor 0). Tier from opening fund / stated capital."
+adb,base,FY2027E,balance_sheet,reserves_other,2237.881,GHS millions,MODEL-ESTIMATE,estimated,Prior reserves_other + statutory transfer (x_statutory_transfer).
 adb,base,FY2027E,balance_sheet,total_equity,2961.685,GHS millions,MODEL-ESTIMATE,estimated,stated_capital + retained_earnings + reserves_other.
 adb,base,FY2027E,ratios,car_pct,27.901,%,MODEL-ESTIMATE,estimated,"v2 proxy: (FY2025 regulatory capital + change in book equity since FY2025) / (total assets x RWA density), anchored on reported 9M-2026 CAR 27.41%; no capital injection assumed."
 adb,base,FY2027E,ratios,tier1_pct,,%,MODEL-ESTIMATE,unavailable,Not projected separately.
@@ -121,10 +121,10 @@ adb,base,FY2028E,balance_sheet,borrowings,1665.710,GHS millions,MODEL-ESTIMATE,e
 adb,base,FY2028E,balance_sheet,other_liabilities,571.904,GHS millions,MODEL-ESTIMATE,estimated,Tracks CPI inflation.
 adb,base,FY2028E,balance_sheet,total_liabilities,22393.540,GHS millions,MODEL-ESTIMATE,estimated,Sum of liability items.
 adb,base,FY2028E,balance_sheet,stated_capital,2146.745,GHS millions,MODEL-ESTIMATE,estimated,Held flat (no automatic capital injection assumed).
-adb,base,FY2028E,balance_sheet,retained_earnings,-1276.572,GHS millions,MODEL-ESTIMATE,estimated,Prior retained_earnings + PAT - dividends.
-adb,base,FY2028E,balance_sheet,x_statutory_reserve,657.193,GHS millions,MODEL-ESTIMATE,estimated,"Memo, part of reserves_other (held flat in the total): opening fund + transfer. FY2026E = reported 9M-2026 fund + Q4 top-up."
-adb,base,FY2028E,balance_sheet,x_statutory_transfer,23.225,GHS millions,MODEL-ESTIMATE,estimated,"Memo, no effect on total equity: tier % x positive PAT (FY2026E: full-year transfer less 150.857 already transferred in 9M, floor 0). Tier from opening fund / stated capital."
-adb,base,FY2028E,balance_sheet,reserves_other,2137.962,GHS millions,MODEL-ESTIMATE,estimated,Held flat.
+adb,base,FY2028E,balance_sheet,retained_earnings,-1399.716,GHS millions,MODEL-ESTIMATE,estimated,Prior retained_earnings + PAT - dividends - statutory transfer.
+adb,base,FY2028E,balance_sheet,x_statutory_reserve,657.193,GHS millions,MODEL-ESTIMATE,estimated,"Memo, a component of reserves_other: opening fund + transfer. FY2026E = reported 9M-2026 fund + Q4 top-up."
+adb,base,FY2028E,balance_sheet,x_statutory_transfer,23.225,GHS millions,MODEL-ESTIMATE,estimated,"Memo, moves from retained_earnings to reserves_other (total equity unchanged): tier % x positive PAT (FY2026E: full-year transfer less 150.857 already transferred in 9M, floor 0). Tier from opening fund / stated capital."
+adb,base,FY2028E,balance_sheet,reserves_other,2261.106,GHS millions,MODEL-ESTIMATE,estimated,Prior reserves_other + statutory transfer (x_statutory_transfer).
 adb,base,FY2028E,balance_sheet,total_equity,3008.135,GHS millions,MODEL-ESTIMATE,estimated,stated_capital + retained_earnings + reserves_other.
 adb,base,FY2028E,ratios,car_pct,25.956,%,MODEL-ESTIMATE,estimated,"v2 proxy: (FY2025 regulatory capital + change in book equity since FY2025) / (total assets x RWA density), anchored on reported 9M-2026 CAR 27.41%; no capital injection assumed."
 adb,base,FY2028E,ratios,tier1_pct,,%,MODEL-ESTIMATE,unavailable,Not projected separately.
@@ -166,10 +166,10 @@ adb,base,FY2029E,balance_sheet,borrowings,1665.710,GHS millions,MODEL-ESTIMATE,e
 adb,base,FY2029E,balance_sheet,other_liabilities,617.657,GHS millions,MODEL-ESTIMATE,estimated,Tracks CPI inflation.
 adb,base,FY2029E,balance_sheet,total_liabilities,25096.649,GHS millions,MODEL-ESTIMATE,estimated,Sum of liability items.
 adb,base,FY2029E,balance_sheet,stated_capital,2146.745,GHS millions,MODEL-ESTIMATE,estimated,Held flat (no automatic capital injection assumed).
-adb,base,FY2029E,balance_sheet,retained_earnings,-1430.540,GHS millions,MODEL-ESTIMATE,estimated,Prior retained_earnings + PAT - dividends.
-adb,base,FY2029E,balance_sheet,x_statutory_reserve,657.193,GHS millions,MODEL-ESTIMATE,estimated,"Memo, part of reserves_other (held flat in the total): opening fund + transfer. FY2026E = reported 9M-2026 fund + Q4 top-up."
-adb,base,FY2029E,balance_sheet,x_statutory_transfer,0.000,GHS millions,MODEL-ESTIMATE,estimated,"Memo, no effect on total equity: tier % x positive PAT (FY2026E: full-year transfer less 150.857 already transferred in 9M, floor 0). Tier from opening fund / stated capital."
-adb,base,FY2029E,balance_sheet,reserves_other,2137.962,GHS millions,MODEL-ESTIMATE,estimated,Held flat.
+adb,base,FY2029E,balance_sheet,retained_earnings,-1553.684,GHS millions,MODEL-ESTIMATE,estimated,Prior retained_earnings + PAT - dividends - statutory transfer.
+adb,base,FY2029E,balance_sheet,x_statutory_reserve,657.193,GHS millions,MODEL-ESTIMATE,estimated,"Memo, a component of reserves_other: opening fund + transfer. FY2026E = reported 9M-2026 fund + Q4 top-up."
+adb,base,FY2029E,balance_sheet,x_statutory_transfer,0.000,GHS millions,MODEL-ESTIMATE,estimated,"Memo, moves from retained_earnings to reserves_other (total equity unchanged): tier % x positive PAT (FY2026E: full-year transfer less 150.857 already transferred in 9M, floor 0). Tier from opening fund / stated capital."
+adb,base,FY2029E,balance_sheet,reserves_other,2261.106,GHS millions,MODEL-ESTIMATE,estimated,Prior reserves_other + statutory transfer (x_statutory_transfer).
 adb,base,FY2029E,balance_sheet,total_equity,2854.167,GHS millions,MODEL-ESTIMATE,estimated,stated_capital + retained_earnings + reserves_other.
 adb,base,FY2029E,ratios,car_pct,21.274,%,MODEL-ESTIMATE,estimated,"v2 proxy: (FY2025 regulatory capital + change in book equity since FY2025) / (total assets x RWA density), anchored on reported 9M-2026 CAR 27.41%; no capital injection assumed."
 adb,base,FY2029E,ratios,tier1_pct,,%,MODEL-ESTIMATE,unavailable,Not projected separately.
@@ -211,10 +211,10 @@ adb,base,FY2030E,balance_sheet,borrowings,1665.710,GHS millions,MODEL-ESTIMATE,e
 adb,base,FY2030E,balance_sheet,other_liabilities,667.069,GHS millions,MODEL-ESTIMATE,estimated,Tracks CPI inflation.
 adb,base,FY2030E,balance_sheet,total_liabilities,28153.765,GHS millions,MODEL-ESTIMATE,estimated,Sum of liability items.
 adb,base,FY2030E,balance_sheet,stated_capital,2146.745,GHS millions,MODEL-ESTIMATE,estimated,Held flat (no automatic capital injection assumed).
-adb,base,FY2030E,balance_sheet,retained_earnings,-1738.783,GHS millions,MODEL-ESTIMATE,estimated,Prior retained_earnings + PAT - dividends.
-adb,base,FY2030E,balance_sheet,x_statutory_reserve,657.193,GHS millions,MODEL-ESTIMATE,estimated,"Memo, part of reserves_other (held flat in the total): opening fund + transfer. FY2026E = reported 9M-2026 fund + Q4 top-up."
-adb,base,FY2030E,balance_sheet,x_statutory_transfer,0.000,GHS millions,MODEL-ESTIMATE,estimated,"Memo, no effect on total equity: tier % x positive PAT (FY2026E: full-year transfer less 150.857 already transferred in 9M, floor 0). Tier from opening fund / stated capital."
-adb,base,FY2030E,balance_sheet,reserves_other,2137.962,GHS millions,MODEL-ESTIMATE,estimated,Held flat.
+adb,base,FY2030E,balance_sheet,retained_earnings,-1861.927,GHS millions,MODEL-ESTIMATE,estimated,Prior retained_earnings + PAT - dividends - statutory transfer.
+adb,base,FY2030E,balance_sheet,x_statutory_reserve,657.193,GHS millions,MODEL-ESTIMATE,estimated,"Memo, a component of reserves_other: opening fund + transfer. FY2026E = reported 9M-2026 fund + Q4 top-up."
+adb,base,FY2030E,balance_sheet,x_statutory_transfer,0.000,GHS millions,MODEL-ESTIMATE,estimated,"Memo, moves from retained_earnings to reserves_other (total equity unchanged): tier % x positive PAT (FY2026E: full-year transfer less 150.857 already transferred in 9M, floor 0). Tier from opening fund / stated capital."
+adb,base,FY2030E,balance_sheet,reserves_other,2261.106,GHS millions,MODEL-ESTIMATE,estimated,Prior reserves_other + statutory transfer (x_statutory_transfer).
 adb,base,FY2030E,balance_sheet,total_equity,2545.924,GHS millions,MODEL-ESTIMATE,estimated,stated_capital + retained_earnings + reserves_other.
 adb,base,FY2030E,ratios,car_pct,15.149,%,MODEL-ESTIMATE,estimated,"v2 proxy: (FY2025 regulatory capital + change in book equity since FY2025) / (total assets x RWA density), anchored on reported 9M-2026 CAR 27.41%; no capital injection assumed."
 adb,base,FY2030E,ratios,tier1_pct,,%,MODEL-ESTIMATE,unavailable,Not projected separately.
@@ -256,10 +256,10 @@ adb,downside,FY2026E,balance_sheet,borrowings,1665.710,GHS millions,MODEL-ESTIMA
 adb,downside,FY2026E,balance_sheet,other_liabilities,492.596,GHS millions,MODEL-ESTIMATE,estimated,Tracks CPI inflation.
 adb,downside,FY2026E,balance_sheet,total_liabilities,17674.651,GHS millions,MODEL-ESTIMATE,estimated,Sum of liability items.
 adb,downside,FY2026E,balance_sheet,stated_capital,2146.745,GHS millions,MODEL-ESTIMATE,estimated,Held flat (no automatic capital injection assumed).
-adb,downside,FY2026E,balance_sheet,retained_earnings,-1480.628,GHS millions,MODEL-ESTIMATE,estimated,Prior retained_earnings + PAT - dividends.
-adb,downside,FY2026E,balance_sheet,x_statutory_reserve,555.165,GHS millions,MODEL-ESTIMATE,estimated,"Memo, part of reserves_other (held flat in the total): opening fund + transfer. FY2026E = reported 9M-2026 fund + Q4 top-up."
-adb,downside,FY2026E,balance_sheet,x_statutory_transfer,21.116,GHS millions,MODEL-ESTIMATE,estimated,"Memo, no effect on total equity: tier % x positive PAT (FY2026E: full-year transfer less 150.857 already transferred in 9M, floor 0). Tier from opening fund / stated capital."
-adb,downside,FY2026E,balance_sheet,reserves_other,2137.962,GHS millions,MODEL-ESTIMATE,estimated,Held flat.
+adb,downside,FY2026E,balance_sheet,retained_earnings,-1501.744,GHS millions,MODEL-ESTIMATE,estimated,Prior retained_earnings + PAT - dividends - statutory transfer.
+adb,downside,FY2026E,balance_sheet,x_statutory_reserve,555.165,GHS millions,MODEL-ESTIMATE,estimated,"Memo, a component of reserves_other: opening fund + transfer. FY2026E = reported 9M-2026 fund + Q4 top-up."
+adb,downside,FY2026E,balance_sheet,x_statutory_transfer,21.116,GHS millions,MODEL-ESTIMATE,estimated,"Memo, moves from retained_earnings to reserves_other (total equity unchanged): tier % x positive PAT (FY2026E: full-year transfer less 150.857 already transferred in 9M, floor 0). Tier from opening fund / stated capital."
+adb,downside,FY2026E,balance_sheet,reserves_other,2159.078,GHS millions,MODEL-ESTIMATE,estimated,Prior reserves_other + statutory transfer (x_statutory_transfer).
 adb,downside,FY2026E,balance_sheet,total_equity,2804.079,GHS millions,MODEL-ESTIMATE,estimated,stated_capital + retained_earnings + reserves_other.
 adb,downside,FY2026E,ratios,car_pct,28.008,%,MODEL-ESTIMATE,estimated,"v2 proxy: (FY2025 regulatory capital + change in book equity since FY2025) / (total assets x RWA density), anchored on reported 9M-2026 CAR 27.41%; no capital injection assumed."
 adb,downside,FY2026E,ratios,tier1_pct,,%,MODEL-ESTIMATE,unavailable,Not projected separately.
@@ -301,10 +301,10 @@ adb,downside,FY2027E,balance_sheet,borrowings,1665.710,GHS millions,MODEL-ESTIMA
 adb,downside,FY2027E,balance_sheet,other_liabilities,546.782,GHS millions,MODEL-ESTIMATE,estimated,Tracks CPI inflation.
 adb,downside,FY2027E,balance_sheet,total_liabilities,19719.584,GHS millions,MODEL-ESTIMATE,estimated,Sum of liability items.
 adb,downside,FY2027E,balance_sheet,stated_capital,2146.745,GHS millions,MODEL-ESTIMATE,estimated,Held flat (no automatic capital injection assumed).
-adb,downside,FY2027E,balance_sheet,retained_earnings,-1543.344,GHS millions,MODEL-ESTIMATE,estimated,Prior retained_earnings + PAT - dividends.
-adb,downside,FY2027E,balance_sheet,x_statutory_reserve,555.165,GHS millions,MODEL-ESTIMATE,estimated,"Memo, part of reserves_other (held flat in the total): opening fund + transfer. FY2026E = reported 9M-2026 fund + Q4 top-up."
-adb,downside,FY2027E,balance_sheet,x_statutory_transfer,0.000,GHS millions,MODEL-ESTIMATE,estimated,"Memo, no effect on total equity: tier % x positive PAT (FY2026E: full-year transfer less 150.857 already transferred in 9M, floor 0). Tier from opening fund / stated capital."
-adb,downside,FY2027E,balance_sheet,reserves_other,2137.962,GHS millions,MODEL-ESTIMATE,estimated,Held flat.
+adb,downside,FY2027E,balance_sheet,retained_earnings,-1564.460,GHS millions,MODEL-ESTIMATE,estimated,Prior retained_earnings + PAT - dividends - statutory transfer.
+adb,downside,FY2027E,balance_sheet,x_statutory_reserve,555.165,GHS millions,MODEL-ESTIMATE,estimated,"Memo, a component of reserves_other: opening fund + transfer. FY2026E = reported 9M-2026 fund + Q4 top-up."
+adb,downside,FY2027E,balance_sheet,x_statutory_transfer,0.000,GHS millions,MODEL-ESTIMATE,estimated,"Memo, moves from retained_earnings to reserves_other (total equity unchanged): tier % x positive PAT (FY2026E: full-year transfer less 150.857 already transferred in 9M, floor 0). Tier from opening fund / stated capital."
+adb,downside,FY2027E,balance_sheet,reserves_other,2159.078,GHS millions,MODEL-ESTIMATE,estimated,Prior reserves_other + statutory transfer (x_statutory_transfer).
 adb,downside,FY2027E,balance_sheet,total_equity,2741.363,GHS millions,MODEL-ESTIMATE,estimated,stated_capital + retained_earnings + reserves_other.
 adb,downside,FY2027E,ratios,car_pct,24.363,%,MODEL-ESTIMATE,estimated,"v2 proxy: (FY2025 regulatory capital + change in book equity since FY2025) / (total assets x RWA density), anchored on reported 9M-2026 CAR 27.41%; no capital injection assumed."
 adb,downside,FY2027E,ratios,tier1_pct,,%,MODEL-ESTIMATE,unavailable,Not projected separately.
@@ -346,10 +346,10 @@ adb,downside,FY2028E,balance_sheet,borrowings,1665.710,GHS millions,MODEL-ESTIMA
 adb,downside,FY2028E,balance_sheet,other_liabilities,604.194,GHS millions,MODEL-ESTIMATE,estimated,Tracks CPI inflation.
 adb,downside,FY2028E,balance_sheet,total_liabilities,22029.721,GHS millions,MODEL-ESTIMATE,estimated,Sum of liability items.
 adb,downside,FY2028E,balance_sheet,stated_capital,2146.745,GHS millions,MODEL-ESTIMATE,estimated,Held flat (no automatic capital injection assumed).
-adb,downside,FY2028E,balance_sheet,retained_earnings,-1934.871,GHS millions,MODEL-ESTIMATE,estimated,Prior retained_earnings + PAT - dividends.
-adb,downside,FY2028E,balance_sheet,x_statutory_reserve,555.165,GHS millions,MODEL-ESTIMATE,estimated,"Memo, part of reserves_other (held flat in the total): opening fund + transfer. FY2026E = reported 9M-2026 fund + Q4 top-up."
-adb,downside,FY2028E,balance_sheet,x_statutory_transfer,0.000,GHS millions,MODEL-ESTIMATE,estimated,"Memo, no effect on total equity: tier % x positive PAT (FY2026E: full-year transfer less 150.857 already transferred in 9M, floor 0). Tier from opening fund / stated capital."
-adb,downside,FY2028E,balance_sheet,reserves_other,2137.962,GHS millions,MODEL-ESTIMATE,estimated,Held flat.
+adb,downside,FY2028E,balance_sheet,retained_earnings,-1955.987,GHS millions,MODEL-ESTIMATE,estimated,Prior retained_earnings + PAT - dividends - statutory transfer.
+adb,downside,FY2028E,balance_sheet,x_statutory_reserve,555.165,GHS millions,MODEL-ESTIMATE,estimated,"Memo, a component of reserves_other: opening fund + transfer. FY2026E = reported 9M-2026 fund + Q4 top-up."
+adb,downside,FY2028E,balance_sheet,x_statutory_transfer,0.000,GHS millions,MODEL-ESTIMATE,estimated,"Memo, moves from retained_earnings to reserves_other (total equity unchanged): tier % x positive PAT (FY2026E: full-year transfer less 150.857 already transferred in 9M, floor 0). Tier from opening fund / stated capital."
+adb,downside,FY2028E,balance_sheet,reserves_other,2159.078,GHS millions,MODEL-ESTIMATE,estimated,Prior reserves_other + statutory transfer (x_statutory_transfer).
 adb,downside,FY2028E,balance_sheet,total_equity,2349.836,GHS millions,MODEL-ESTIMATE,estimated,stated_capital + retained_earnings + reserves_other.
 adb,downside,FY2028E,ratios,car_pct,15.696,%,MODEL-ESTIMATE,estimated,"v2 proxy: (FY2025 regulatory capital + change in book equity since FY2025) / (total assets x RWA density), anchored on reported 9M-2026 CAR 27.41%; no capital injection assumed."
 adb,downside,FY2028E,ratios,tier1_pct,,%,MODEL-ESTIMATE,unavailable,Not projected separately.
@@ -391,10 +391,10 @@ adb,downside,FY2029E,balance_sheet,borrowings,1665.710,GHS millions,MODEL-ESTIMA
 adb,downside,FY2029E,balance_sheet,other_liabilities,664.613,GHS millions,MODEL-ESTIMATE,estimated,Tracks CPI inflation.
 adb,downside,FY2029E,balance_sheet,total_liabilities,24639.157,GHS millions,MODEL-ESTIMATE,estimated,Sum of liability items.
 adb,downside,FY2029E,balance_sheet,stated_capital,2146.745,GHS millions,MODEL-ESTIMATE,estimated,Held flat (no automatic capital injection assumed).
-adb,downside,FY2029E,balance_sheet,retained_earnings,-2465.137,GHS millions,MODEL-ESTIMATE,estimated,Prior retained_earnings + PAT - dividends.
-adb,downside,FY2029E,balance_sheet,x_statutory_reserve,555.165,GHS millions,MODEL-ESTIMATE,estimated,"Memo, part of reserves_other (held flat in the total): opening fund + transfer. FY2026E = reported 9M-2026 fund + Q4 top-up."
-adb,downside,FY2029E,balance_sheet,x_statutory_transfer,0.000,GHS millions,MODEL-ESTIMATE,estimated,"Memo, no effect on total equity: tier % x positive PAT (FY2026E: full-year transfer less 150.857 already transferred in 9M, floor 0). Tier from opening fund / stated capital."
-adb,downside,FY2029E,balance_sheet,reserves_other,2137.962,GHS millions,MODEL-ESTIMATE,estimated,Held flat.
+adb,downside,FY2029E,balance_sheet,retained_earnings,-2486.253,GHS millions,MODEL-ESTIMATE,estimated,Prior retained_earnings + PAT - dividends - statutory transfer.
+adb,downside,FY2029E,balance_sheet,x_statutory_reserve,555.165,GHS millions,MODEL-ESTIMATE,estimated,"Memo, a component of reserves_other: opening fund + transfer. FY2026E = reported 9M-2026 fund + Q4 top-up."
+adb,downside,FY2029E,balance_sheet,x_statutory_transfer,0.000,GHS millions,MODEL-ESTIMATE,estimated,"Memo, moves from retained_earnings to reserves_other (total equity unchanged): tier % x positive PAT (FY2026E: full-year transfer less 150.857 already transferred in 9M, floor 0). Tier from opening fund / stated capital."
+adb,downside,FY2029E,balance_sheet,reserves_other,2159.078,GHS millions,MODEL-ESTIMATE,estimated,Prior reserves_other + statutory transfer (x_statutory_transfer).
 adb,downside,FY2029E,balance_sheet,total_equity,1819.570,GHS millions,MODEL-ESTIMATE,estimated,stated_capital + retained_earnings + reserves_other.
 adb,downside,FY2029E,ratios,car_pct,6.039,%,MODEL-ESTIMATE,estimated,"v2 proxy: (FY2025 regulatory capital + change in book equity since FY2025) / (total assets x RWA density), anchored on reported 9M-2026 CAR 27.41%; no capital injection assumed."
 adb,downside,FY2029E,ratios,tier1_pct,,%,MODEL-ESTIMATE,unavailable,Not projected separately.
@@ -436,10 +436,10 @@ adb,downside,FY2030E,balance_sheet,borrowings,1665.710,GHS millions,MODEL-ESTIMA
 adb,downside,FY2030E,balance_sheet,other_liabilities,727.752,GHS millions,MODEL-ESTIMATE,estimated,Tracks CPI inflation.
 adb,downside,FY2030E,balance_sheet,total_liabilities,27464.129,GHS millions,MODEL-ESTIMATE,estimated,Sum of liability items.
 adb,downside,FY2030E,balance_sheet,stated_capital,2146.745,GHS millions,MODEL-ESTIMATE,estimated,Held flat (no automatic capital injection assumed).
-adb,downside,FY2030E,balance_sheet,retained_earnings,-3148.780,GHS millions,MODEL-ESTIMATE,estimated,Prior retained_earnings + PAT - dividends.
-adb,downside,FY2030E,balance_sheet,x_statutory_reserve,555.165,GHS millions,MODEL-ESTIMATE,estimated,"Memo, part of reserves_other (held flat in the total): opening fund + transfer. FY2026E = reported 9M-2026 fund + Q4 top-up."
-adb,downside,FY2030E,balance_sheet,x_statutory_transfer,0.000,GHS millions,MODEL-ESTIMATE,estimated,"Memo, no effect on total equity: tier % x positive PAT (FY2026E: full-year transfer less 150.857 already transferred in 9M, floor 0). Tier from opening fund / stated capital."
-adb,downside,FY2030E,balance_sheet,reserves_other,2137.962,GHS millions,MODEL-ESTIMATE,estimated,Held flat.
+adb,downside,FY2030E,balance_sheet,retained_earnings,-3169.896,GHS millions,MODEL-ESTIMATE,estimated,Prior retained_earnings + PAT - dividends - statutory transfer.
+adb,downside,FY2030E,balance_sheet,x_statutory_reserve,555.165,GHS millions,MODEL-ESTIMATE,estimated,"Memo, a component of reserves_other: opening fund + transfer. FY2026E = reported 9M-2026 fund + Q4 top-up."
+adb,downside,FY2030E,balance_sheet,x_statutory_transfer,0.000,GHS millions,MODEL-ESTIMATE,estimated,"Memo, moves from retained_earnings to reserves_other (total equity unchanged): tier % x positive PAT (FY2026E: full-year transfer less 150.857 already transferred in 9M, floor 0). Tier from opening fund / stated capital."
+adb,downside,FY2030E,balance_sheet,reserves_other,2159.078,GHS millions,MODEL-ESTIMATE,estimated,Prior reserves_other + statutory transfer (x_statutory_transfer).
 adb,downside,FY2030E,balance_sheet,total_equity,1135.927,GHS millions,MODEL-ESTIMATE,estimated,stated_capital + retained_earnings + reserves_other.
 adb,downside,FY2030E,ratios,car_pct,-4.459,%,MODEL-ESTIMATE,estimated,"v2 proxy: (FY2025 regulatory capital + change in book equity since FY2025) / (total assets x RWA density), anchored on reported 9M-2026 CAR 27.41%; no capital injection assumed."
 adb,downside,FY2030E,ratios,tier1_pct,,%,MODEL-ESTIMATE,unavailable,Not projected separately.
@@ -481,10 +481,10 @@ adb,upside,FY2026E,balance_sheet,borrowings,1665.710,GHS millions,MODEL-ESTIMATE
 adb,upside,FY2026E,balance_sheet,other_liabilities,492.596,GHS millions,MODEL-ESTIMATE,estimated,Tracks CPI inflation.
 adb,upside,FY2026E,balance_sheet,total_liabilities,18058.719,GHS millions,MODEL-ESTIMATE,estimated,Sum of liability items.
 adb,upside,FY2026E,balance_sheet,stated_capital,2146.745,GHS millions,MODEL-ESTIMATE,estimated,Held flat (no automatic capital injection assumed).
-adb,upside,FY2026E,balance_sheet,retained_earnings,-1469.855,GHS millions,MODEL-ESTIMATE,estimated,Prior retained_earnings + PAT - dividends.
-adb,upside,FY2026E,balance_sheet,x_statutory_reserve,560.551,GHS millions,MODEL-ESTIMATE,estimated,"Memo, part of reserves_other (held flat in the total): opening fund + transfer. FY2026E = reported 9M-2026 fund + Q4 top-up."
-adb,upside,FY2026E,balance_sheet,x_statutory_transfer,26.502,GHS millions,MODEL-ESTIMATE,estimated,"Memo, no effect on total equity: tier % x positive PAT (FY2026E: full-year transfer less 150.857 already transferred in 9M, floor 0). Tier from opening fund / stated capital."
-adb,upside,FY2026E,balance_sheet,reserves_other,2137.962,GHS millions,MODEL-ESTIMATE,estimated,Held flat.
+adb,upside,FY2026E,balance_sheet,retained_earnings,-1496.358,GHS millions,MODEL-ESTIMATE,estimated,Prior retained_earnings + PAT - dividends - statutory transfer.
+adb,upside,FY2026E,balance_sheet,x_statutory_reserve,560.551,GHS millions,MODEL-ESTIMATE,estimated,"Memo, a component of reserves_other: opening fund + transfer. FY2026E = reported 9M-2026 fund + Q4 top-up."
+adb,upside,FY2026E,balance_sheet,x_statutory_transfer,26.502,GHS millions,MODEL-ESTIMATE,estimated,"Memo, moves from retained_earnings to reserves_other (total equity unchanged): tier % x positive PAT (FY2026E: full-year transfer less 150.857 already transferred in 9M, floor 0). Tier from opening fund / stated capital."
+adb,upside,FY2026E,balance_sheet,reserves_other,2164.464,GHS millions,MODEL-ESTIMATE,estimated,Prior reserves_other + statutory transfer (x_statutory_transfer).
 adb,upside,FY2026E,balance_sheet,total_equity,2814.852,GHS millions,MODEL-ESTIMATE,estimated,stated_capital + retained_earnings + reserves_other.
 adb,upside,FY2026E,ratios,car_pct,27.695,%,MODEL-ESTIMATE,estimated,"v2 proxy: (FY2025 regulatory capital + change in book equity since FY2025) / (total assets x RWA density), anchored on reported 9M-2026 CAR 27.41%; no capital injection assumed."
 adb,upside,FY2026E,ratios,tier1_pct,,%,MODEL-ESTIMATE,unavailable,Not projected separately.
@@ -526,10 +526,10 @@ adb,upside,FY2027E,balance_sheet,borrowings,1665.710,GHS millions,MODEL-ESTIMATE
 adb,upside,FY2027E,balance_sheet,other_liabilities,522.152,GHS millions,MODEL-ESTIMATE,estimated,Tracks CPI inflation.
 adb,upside,FY2027E,balance_sheet,total_liabilities,20292.072,GHS millions,MODEL-ESTIMATE,estimated,Sum of liability items.
 adb,upside,FY2027E,balance_sheet,stated_capital,2146.745,GHS millions,MODEL-ESTIMATE,estimated,Held flat (no automatic capital injection assumed).
-adb,upside,FY2027E,balance_sheet,retained_earnings,-1217.678,GHS millions,MODEL-ESTIMATE,estimated,Prior retained_earnings + PAT - dividends.
-adb,upside,FY2027E,balance_sheet,x_statutory_reserve,686.640,GHS millions,MODEL-ESTIMATE,estimated,"Memo, part of reserves_other (held flat in the total): opening fund + transfer. FY2026E = reported 9M-2026 fund + Q4 top-up."
-adb,upside,FY2027E,balance_sheet,x_statutory_transfer,126.089,GHS millions,MODEL-ESTIMATE,estimated,"Memo, no effect on total equity: tier % x positive PAT (FY2026E: full-year transfer less 150.857 already transferred in 9M, floor 0). Tier from opening fund / stated capital."
-adb,upside,FY2027E,balance_sheet,reserves_other,2137.962,GHS millions,MODEL-ESTIMATE,estimated,Held flat.
+adb,upside,FY2027E,balance_sheet,retained_earnings,-1370.269,GHS millions,MODEL-ESTIMATE,estimated,Prior retained_earnings + PAT - dividends - statutory transfer.
+adb,upside,FY2027E,balance_sheet,x_statutory_reserve,686.640,GHS millions,MODEL-ESTIMATE,estimated,"Memo, a component of reserves_other: opening fund + transfer. FY2026E = reported 9M-2026 fund + Q4 top-up."
+adb,upside,FY2027E,balance_sheet,x_statutory_transfer,126.089,GHS millions,MODEL-ESTIMATE,estimated,"Memo, moves from retained_earnings to reserves_other (total equity unchanged): tier % x positive PAT (FY2026E: full-year transfer less 150.857 already transferred in 9M, floor 0). Tier from opening fund / stated capital."
+adb,upside,FY2027E,balance_sheet,reserves_other,2290.553,GHS millions,MODEL-ESTIMATE,estimated,Prior reserves_other + statutory transfer (x_statutory_transfer).
 adb,upside,FY2027E,balance_sheet,total_equity,3067.029,GHS millions,MODEL-ESTIMATE,estimated,stated_capital + retained_earnings + reserves_other.
 adb,upside,FY2027E,ratios,car_pct,29.286,%,MODEL-ESTIMATE,estimated,"v2 proxy: (FY2025 regulatory capital + change in book equity since FY2025) / (total assets x RWA density), anchored on reported 9M-2026 CAR 27.41%; no capital injection assumed."
 adb,upside,FY2027E,ratios,tier1_pct,,%,MODEL-ESTIMATE,unavailable,Not projected separately.
@@ -571,10 +571,10 @@ adb,upside,FY2028E,balance_sheet,borrowings,1665.710,GHS millions,MODEL-ESTIMATE
 adb,upside,FY2028E,balance_sheet,other_liabilities,558.703,GHS millions,MODEL-ESTIMATE,estimated,Tracks CPI inflation.
 adb,upside,FY2028E,balance_sheet,total_liabilities,22991.028,GHS millions,MODEL-ESTIMATE,estimated,Sum of liability items.
 adb,upside,FY2028E,balance_sheet,stated_capital,2146.745,GHS millions,MODEL-ESTIMATE,estimated,Held flat (no automatic capital injection assumed).
-adb,upside,FY2028E,balance_sheet,retained_earnings,-1009.262,GHS millions,MODEL-ESTIMATE,estimated,Prior retained_earnings + PAT - dividends.
-adb,upside,FY2028E,balance_sheet,x_statutory_reserve,790.848,GHS millions,MODEL-ESTIMATE,estimated,"Memo, part of reserves_other (held flat in the total): opening fund + transfer. FY2026E = reported 9M-2026 fund + Q4 top-up."
-adb,upside,FY2028E,balance_sheet,x_statutory_transfer,104.208,GHS millions,MODEL-ESTIMATE,estimated,"Memo, no effect on total equity: tier % x positive PAT (FY2026E: full-year transfer less 150.857 already transferred in 9M, floor 0). Tier from opening fund / stated capital."
-adb,upside,FY2028E,balance_sheet,reserves_other,2137.962,GHS millions,MODEL-ESTIMATE,estimated,Held flat.
+adb,upside,FY2028E,balance_sheet,retained_earnings,-1266.061,GHS millions,MODEL-ESTIMATE,estimated,Prior retained_earnings + PAT - dividends - statutory transfer.
+adb,upside,FY2028E,balance_sheet,x_statutory_reserve,790.848,GHS millions,MODEL-ESTIMATE,estimated,"Memo, a component of reserves_other: opening fund + transfer. FY2026E = reported 9M-2026 fund + Q4 top-up."
+adb,upside,FY2028E,balance_sheet,x_statutory_transfer,104.208,GHS millions,MODEL-ESTIMATE,estimated,"Memo, moves from retained_earnings to reserves_other (total equity unchanged): tier % x positive PAT (FY2026E: full-year transfer less 150.857 already transferred in 9M, floor 0). Tier from opening fund / stated capital."
+adb,upside,FY2028E,balance_sheet,reserves_other,2394.761,GHS millions,MODEL-ESTIMATE,estimated,Prior reserves_other + statutory transfer (x_statutory_transfer).
 adb,upside,FY2028E,balance_sheet,total_equity,3275.445,GHS millions,MODEL-ESTIMATE,estimated,stated_capital + retained_earnings + reserves_other.
 adb,upside,FY2028E,ratios,car_pct,29.379,%,MODEL-ESTIMATE,estimated,"v2 proxy: (FY2025 regulatory capital + change in book equity since FY2025) / (total assets x RWA density), anchored on reported 9M-2026 CAR 27.41%; no capital injection assumed."
 adb,upside,FY2028E,ratios,tier1_pct,,%,MODEL-ESTIMATE,unavailable,Not projected separately.
@@ -616,10 +616,10 @@ adb,upside,FY2029E,balance_sheet,borrowings,1665.710,GHS millions,MODEL-ESTIMATE
 adb,upside,FY2029E,balance_sheet,other_liabilities,600.605,GHS millions,MODEL-ESTIMATE,estimated,Tracks CPI inflation.
 adb,upside,FY2029E,balance_sheet,total_liabilities,26129.752,GHS millions,MODEL-ESTIMATE,estimated,Sum of liability items.
 adb,upside,FY2029E,balance_sheet,stated_capital,2146.745,GHS millions,MODEL-ESTIMATE,estimated,Held flat (no automatic capital injection assumed).
-adb,upside,FY2029E,balance_sheet,retained_earnings,-881.373,GHS millions,MODEL-ESTIMATE,estimated,Prior retained_earnings + PAT - dividends.
-adb,upside,FY2029E,balance_sheet,x_statutory_reserve,854.792,GHS millions,MODEL-ESTIMATE,estimated,"Memo, part of reserves_other (held flat in the total): opening fund + transfer. FY2026E = reported 9M-2026 fund + Q4 top-up."
-adb,upside,FY2029E,balance_sheet,x_statutory_transfer,63.944,GHS millions,MODEL-ESTIMATE,estimated,"Memo, no effect on total equity: tier % x positive PAT (FY2026E: full-year transfer less 150.857 already transferred in 9M, floor 0). Tier from opening fund / stated capital."
-adb,upside,FY2029E,balance_sheet,reserves_other,2137.962,GHS millions,MODEL-ESTIMATE,estimated,Held flat.
+adb,upside,FY2029E,balance_sheet,retained_earnings,-1202.117,GHS millions,MODEL-ESTIMATE,estimated,Prior retained_earnings + PAT - dividends - statutory transfer.
+adb,upside,FY2029E,balance_sheet,x_statutory_reserve,854.792,GHS millions,MODEL-ESTIMATE,estimated,"Memo, a component of reserves_other: opening fund + transfer. FY2026E = reported 9M-2026 fund + Q4 top-up."
+adb,upside,FY2029E,balance_sheet,x_statutory_transfer,63.944,GHS millions,MODEL-ESTIMATE,estimated,"Memo, moves from retained_earnings to reserves_other (total equity unchanged): tier % x positive PAT (FY2026E: full-year transfer less 150.857 already transferred in 9M, floor 0). Tier from opening fund / stated capital."
+adb,upside,FY2029E,balance_sheet,reserves_other,2458.705,GHS millions,MODEL-ESTIMATE,estimated,Prior reserves_other + statutory transfer (x_statutory_transfer).
 adb,upside,FY2029E,balance_sheet,total_equity,3403.334,GHS millions,MODEL-ESTIMATE,estimated,stated_capital + retained_earnings + reserves_other.
 adb,upside,FY2029E,ratios,car_pct,27.949,%,MODEL-ESTIMATE,estimated,"v2 proxy: (FY2025 regulatory capital + change in book equity since FY2025) / (total assets x RWA density), anchored on reported 9M-2026 CAR 27.41%; no capital injection assumed."
 adb,upside,FY2029E,ratios,tier1_pct,,%,MODEL-ESTIMATE,unavailable,Not projected separately.
@@ -661,10 +661,10 @@ adb,upside,FY2030E,balance_sheet,borrowings,1665.710,GHS millions,MODEL-ESTIMATE
 adb,upside,FY2030E,balance_sheet,other_liabilities,648.654,GHS millions,MODEL-ESTIMATE,estimated,Tracks CPI inflation.
 adb,upside,FY2030E,balance_sheet,total_liabilities,29862.316,GHS millions,MODEL-ESTIMATE,estimated,Sum of liability items.
 adb,upside,FY2030E,balance_sheet,stated_capital,2146.745,GHS millions,MODEL-ESTIMATE,estimated,Held flat (no automatic capital injection assumed).
-adb,upside,FY2030E,balance_sheet,retained_earnings,-801.096,GHS millions,MODEL-ESTIMATE,estimated,Prior retained_earnings + PAT - dividends.
-adb,upside,FY2030E,balance_sheet,x_statutory_reserve,894.931,GHS millions,MODEL-ESTIMATE,estimated,"Memo, part of reserves_other (held flat in the total): opening fund + transfer. FY2026E = reported 9M-2026 fund + Q4 top-up."
-adb,upside,FY2030E,balance_sheet,x_statutory_transfer,40.139,GHS millions,MODEL-ESTIMATE,estimated,"Memo, no effect on total equity: tier % x positive PAT (FY2026E: full-year transfer less 150.857 already transferred in 9M, floor 0). Tier from opening fund / stated capital."
-adb,upside,FY2030E,balance_sheet,reserves_other,2137.962,GHS millions,MODEL-ESTIMATE,estimated,Held flat.
+adb,upside,FY2030E,balance_sheet,retained_earnings,-1161.978,GHS millions,MODEL-ESTIMATE,estimated,Prior retained_earnings + PAT - dividends - statutory transfer.
+adb,upside,FY2030E,balance_sheet,x_statutory_reserve,894.931,GHS millions,MODEL-ESTIMATE,estimated,"Memo, a component of reserves_other: opening fund + transfer. FY2026E = reported 9M-2026 fund + Q4 top-up."
+adb,upside,FY2030E,balance_sheet,x_statutory_transfer,40.139,GHS millions,MODEL-ESTIMATE,estimated,"Memo, moves from retained_earnings to reserves_other (total equity unchanged): tier % x positive PAT (FY2026E: full-year transfer less 150.857 already transferred in 9M, floor 0). Tier from opening fund / stated capital."
+adb,upside,FY2030E,balance_sheet,reserves_other,2498.844,GHS millions,MODEL-ESTIMATE,estimated,Prior reserves_other + statutory transfer (x_statutory_transfer).
 adb,upside,FY2030E,balance_sheet,total_equity,3483.611,GHS millions,MODEL-ESTIMATE,estimated,stated_capital + retained_earnings + reserves_other.
 adb,upside,FY2030E,ratios,car_pct,25.765,%,MODEL-ESTIMATE,estimated,"v2 proxy: (FY2025 regulatory capital + change in book equity since FY2025) / (total assets x RWA density), anchored on reported 9M-2026 CAR 27.41%; no capital injection assumed."
 adb,upside,FY2030E,ratios,tier1_pct,,%,MODEL-ESTIMATE,unavailable,Not projected separately.
