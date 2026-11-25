@@ -16,7 +16,8 @@
       "base": 0.9,
       "downside": 0.8,
       "upside": 1
-    }
+    },
+    "statutory_reserve_m": 131.423
   },
   "drivers": {
     "base": {
@@ -82,6 +83,7 @@
   },
   "notes": [
     "GDP plus CPI nominal growth proxy, not guidance. Investment rate 50% 364-day bill plus 50% 10-year bond × scenario factor. FY25 benchmark uses 364-day annual average17.48%; no annual bond yield. Funding rate = FY25 observed blended cost divided by FY25 end-policy18%, times current scenario end-policy; no repricing detail.",
-    "Net-loan credit charge proxy (gross/ECL unavailable FY25); not regulatory NPL forecast. No dividends because accumulated losses and statutory reserve restrictions. No FX P&L due to missing net monetary position. RWA proxy sensitivity only, not compliance."
+    "Net-loan credit charge proxy (gross/ECL unavailable FY25); not regulatory NPL forecast. No dividends because accumulated losses and statutory reserve restrictions. No FX P&L due to missing net monetary position. RWA proxy sensitivity only, not compliance.",
+    "Statutory reserve allocation uses Act 930 s34 tier proxy (50%,25%,12.5% based on opening reserve relative to modeled paid-up capital); positive annual PAT only, no distribution. Actual bank treatment or regulatory waiver unverified."
   ]
 }
