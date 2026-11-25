@@ -1,41 +1,38 @@
-# Running the room from your phone
+# Running the room from your phone or any app
 
-No laptop needed. Each agent has a cloud version that works on this GitHub repo and pushes its results back. The repo is the meeting place. Product names and limits change, so check each one's current setup page.
+No PC needed. Each agent works in its own app, connected to this GitHub repo, and everything it does is pushed here. The repo is the meeting place and the memory.
 
 | Agent | Where to open it | Needs |
 | --- | --- | --- |
-| claude | Claude Code on the web (claude.ai/code), or the Claude mobile app | GitHub connected to your Claude account |
-| codex | Codex in ChatGPT (chatgpt.com/codex), or the ChatGPT mobile app | GitHub connected to your ChatGPT account |
-| gemini | Jules (jules.google), or the Gemini app if its GitHub connection allows edits | GitHub connected to Jules |
+| claude | Claude Code on the web (claude.ai/code), the Claude app, or the Claude desktop app | GitHub connected to your Claude account |
+| codex | Codex in ChatGPT (chatgpt.com/codex) or the ChatGPT app | GitHub connected to your ChatGPT account |
+| gemini | Jules (jules.google), Antigravity, or the Gemini app if its GitHub link allows edits | GitHub connected |
 
-You connect GitHub once in each app, and choose the `hayalows/agentroom` repo. That step is yours. An agent cannot do it for you.
+Connect GitHub once in each app and choose `hayalows/agentroom`. That step is yours. Product names and limits change, so check each app's current setup page.
 
-## How a round works
-1. Write what you want in the **Room inbox** issue on GitHub (a comment), or in `goals/<goal>/HUMAN.md`.
-2. Open each agent's app and paste its message card below.
-3. Each agent reads the rules and the others' notes, does its task, pushes, and writes what to do next on its board.
-4. On the GitHub mobile app, read `goals/<goal>/STATUS.md` or the board files. Answer questions in the inbox.
+## How it works
+1. You send the agent the card below.
+2. The agent reads `AGENTS.md` and the goal, splits its task into 5 milestones, and works.
+3. At the end of each milestone it pushes its work and a check-in, then reads what the other agents pushed, avoids duplicating them, and builds on or challenges their work.
+4. You read progress in the GitHub app: `goals/<goal>/board/` (check-ins), `work/` (the work) and `reviews/`.
 
-Agents only act when you message them. They do not run on their own. To get the next round, send the same card again ("continue").
+Agents act only when you message them, and they do not talk live. They coordinate by leaving work in the repo. To get more, send the **Continue** card.
 
 ## Message cards (copy and paste)
 
-**Claude**
-> Repo: hayalows/agentroom. Read AGENTS.md, then act as "claude" (lead). Read the active goal in ACTIVE_GOAL, its GOAL.md, TASKS.md, all board files, HUMAN.md, and the newest comments on the Room inbox issue. Do your open tasks, update TASKS.md, review others' work, and put anything needing me into HUMAN.md. Use a branch room/claude/<topic> and open a draft PR if you cannot push to main.
+**Start (change NAME to claude, codex or gemini)**
+> Work with the GitHub repo hayalows/agentroom (online, not on my PC). Read AGENTS.md fully, then act as "NAME". Read ACTIVE_GOAL and everything in that goal's folder: GOAL.md, TASKS.md, HUMAN.md, every board file, every review and every file under work/. Take your open tasks from TASKS.md. Split your work into 5 milestones, and follow the milestone-and-sync loop in AGENTS.md: at the end of each milestone push your work, check in, then read what the other agents pushed so you do not duplicate it and you advance it. Think independently and be proactive. Push everything to the repo. If you cannot push to main, use a branch room/NAME/<topic> and open a draft PR.
 
-**Codex**
-> Repo: hayalows/agentroom. Read AGENTS.md, then act as "codex" (builder). Read the active goal in ACTIVE_GOAL, its GOAL.md, TASKS.md, all board files, HUMAN.md, and the newest comments on the Room inbox issue. Claim and do your open tasks, write to your own board file only, and review gemini's work. Use a branch room/codex/<topic> and open a draft PR.
+**Continue (any agent)**
+> Continue as NAME in hayalows/agentroom. git pull first. Read every board entry, review and work file written by others since your last sync, in full. Then carry on with your next milestone using the loop in AGENTS.md, and push your work and check-in.
 
-**Gemini**
-> Repo: hayalows/agentroom. Read AGENTS.md, then act as "gemini" (reviewer and researcher). Read the active goal in ACTIVE_GOAL, its GOAL.md, TASKS.md, all board files, HUMAN.md, and the newest comments on the Room inbox issue. Do your open tasks, write to your own board file only, and review claude's work. Use a branch room/gemini/<topic> and open a draft PR.
-
-**Continue** (any agent)
-> Continue as <your name>. git pull first. Read every board entry written since your last one, answer any review of your work, then do the next open task. End with a board note saying what is next.
+**Review**
+> As NAME in hayalows/agentroom, review the newest work by the other agents in the active goal. Read it in full, verify claims against the sources, and write reviews/NAME-of-<author>.md. Disagree where the evidence says so. Push it.
 
 ## Changing the goal from your phone
-Edit `ACTIVE_GOAL` on GitHub to the name of a folder under `goals/`. The next round of every agent follows it.
+Edit `ACTIVE_GOAL` on GitHub to the name of a folder under `goals/`.
 
 ## Limits
-- Agents do not talk live. They coordinate by leaving notes in the repo, one round at a time.
-- Cloud agents may not run `node scripts/room.mjs`. The rules cover that.
-- Spending, deploys and messages stay off-limits for all agents (see AGENTS.md).
+- Agents do not run on their own, and they do not see each other live. They see each other's pushed work at each milestone.
+- If an app cannot push to this repo, it opens a branch and a draft PR. Merge those from the GitHub app.
+- Spending, deploys and messages stay off-limits (see AGENTS.md).

@@ -13,7 +13,7 @@ The room can hold many goals, one folder each under `goals/<name>/`. The file `A
 3. Claim an open task in your board file, then start.
 
 ## Working
-- Work on your own branch: `room/<your-name>/<topic>`. Never commit to `main` directly.
+- In **this** room repo you may push your own files straight to `main` (they are yours alone, so nothing conflicts). If a push is blocked or you must touch a shared file, use a branch `room/<your-name>/<topic>` and open a draft PR. In any **other** repo, always use a branch and a draft PR, never `main`.
 - **One writer per file.** Write only to `<goal>/board/<you>.md`, your files in `<goal>/reviews/`, and `<goal>/work/` paths for tasks you own. Only the lead edits `TASKS.md`. Humans write `GOAL.md`.
 - Post to your board after every meaningful step: what you did, what you found, what you need. Keep entries short.
 - **Timestamps must be real.** Post with `node scripts/room.mjs post <you> "..."`. If you cannot run commands (a cloud or phone session), type the actual current UTC time to the second. Never round or invent times.
@@ -22,13 +22,24 @@ The room can hold many goals, one folder each under `goals/<name>/`. The file `A
 - Read-only phases stay read-only. Do not change a target repo until the goal's `GOAL.md` and `HUMAN.md` allow it.
 - When a goal touches another repo, use branches and draft PRs there. Never push to its `main`.
 
-## The main loop: check in continuously
-This is how the room works day to day. Every agent, in its own app, repeats this:
-1. **Pull and read.** Read the other agents' newest check-ins (`<goal>/board/*.md`), their reviews, and their files in `<goal>/work/`. Pick up where they left off.
-2. **Work.** Do a small piece. Put the actual work (code, markdown, data) in `<goal>/work/<you>/`.
-3. **Check in.** After every meaningful piece, not only at the end, add one line to your board and push. A check-in says: what I did, what I found, what is next, and what I need from the others. Format: `- <UTC time> DONE: ... | FOUND: ... | NEXT: ... | NEED: ...`
-4. **Review and build on others.** When another agent has pushed something new, review it (`reviews/<you>-of-<them>.md`) or continue from it in your own folder. Say what you reused.
-5. Repeat. Check in at least every time you finish a piece, so anyone joining can see the latest state at once.
+## The main loop: five milestones, sync at each one
+Everything happens in this online GitHub repo. Whatever machine or app you run on, your work only counts once it is pushed here. Do not leave work only on a PC or in a chat.
+
+**Plan.** When you take a task, split it into **5 milestones** (parts that each produce something real: a file, a finding, a piece of code). Write the 5 in your board as your plan, with what "done" means for each. If the task is small, fewer is fine, but say why.
+
+**At the end of each milestone, do this "sync" in order:**
+1. **Think for yourself first.** Before reading anyone else's new work, write down your own conclusion for this milestone. Do not just follow others. Be proactive: if you see a gap nobody is covering, take it and say so.
+2. **Push your work** to `<goal>/work/<you>/` (and reviews to `<goal>/reviews/`). Never leave a finished milestone unpushed.
+3. **Check in.** Add one entry to your board and push. Format:
+   `- <UTC time> MILESTONE n/5: DONE: ... | FOUND: ... | NEXT: ... | NEED: ...`
+4. **Look at what the others did.** Run `git pull`. Read every board file and every new or changed file under `<goal>/work/` and `<goal>/reviews/` since your last sync. **Read the whole file, not only the top or the summary.** Then write a second board line:
+   `SEEN: <agent>: <what they did> | OVERLAP: <where I would duplicate them, or "none"> | GAP: <what nobody covers> | ADOPT/CHALLENGE: <what I will build on, and what I think is wrong>`
+5. **Decide what is next.**
+   - If **nobody has done anything** new: continue with your next milestone.
+   - If **someone has done something**: do not repeat it. Verify it (spot-check a claim against the source), build on it, or challenge it. Move your next milestone away from the overlap and toward the gap. Say which you did.
+6. Repeat for milestone n+1. After milestone 5, write a short wrap-up entry (what is finished, what you could not verify, what you recommend) and ask the lead to review.
+
+**Standards.** Think carefully and independently. Disagreement is welcome when it is based on evidence; agreement is only useful if you checked. Label claims observed, inferred or unknown. Do not claim you read or ran something you did not.
 
 Push small and often. Every push is a check-in others can read.
 
