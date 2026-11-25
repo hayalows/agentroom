@@ -17,3 +17,6 @@ Public frontend asset https://www.myumbbank.com/assets/index-BaHKECuB.js explici
 
 ## Conditional modeling decision
 Human board direction allows useful incomplete-data scenarios without presenting estimates as reported. Sep25 actual anchor; FY25 year-end conditional estimate separate in anchor-estimates.csv. No FY25/FY26 actual imputation or assumed further capital. Scenario capital eligibility uncertain; use disclosed conditional CAR and modeled RWA sensitivity, not prudential certification. Shared macro FY26–30; FY25 Q4 uses latest available actual run rate and explicitly assumed growth factors, not FY26 rates for Q4 cash flows.
+
+## Rate vintage review repair
+Jan–Sep 2025 monthly 91-day/364-day data from shared build_macro.py, source S-BOG-SUM-JAN26 (shared SOURCES.md). Simple nine-month means, not calendar-year averages. FY26–30 drift from actual calibration vintage. FY25 gap uses forward FY26 screening threshold only; media data remain secondary validation caveats, not historical rows.

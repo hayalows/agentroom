@@ -17,7 +17,37 @@
     "reserve_note": "50/25/12.5% of positive full annual PAT based on opening statutory reserve vs stated capital; FY25 statutory YTD movement zero, no dividends; actual FY25 losses/recoveries unobserved beyond September.",
     "funding_note": "Funding base deposits plus borrowings; interest expense calibrated to Sep25 annualized over FY24/Sep25 average funding, no individual deposit/wholesale prices disclosed.",
     "yield_note": "Blended earning pool net loans + securities + bank placements + 25% cash. 9M25 annualised yield calibrated to FY24/Sep25 average pool, rate beta on 364d bill; no contractual repricing data. Q4 fees/costs use actual 9M/3; Q4 impairment modeled as normalized cost, not extrapolated reversal. 2026 full year conditional, no observed Q3 data.",
-    "fx": "No future direct FX revaluation; historical cash flow FX separately disclosed. No new capital or OCI modeled. No dividends because retained deficit and capital uncertainty."
+    "fx": "No future direct FX revaluation; historical cash flow FX separately disclosed. No new capital or OCI modeled. No dividends because retained deficit and capital uncertainty.",
+    "anchor_tbill_91d_pct": 16.879999999999995,
+    "anchor_tbill_364d_pct": 18.991111111111113,
+    "rate_reference": {
+      "source": "Shared build_macro.py; BoG S-BOG-SUM-JAN26 Jan–Sep 2025 interest-equivalent monthly series",
+      "monthly91": [
+        28.37,
+        26.93,
+        17.15,
+        15.47,
+        15.11,
+        14.74,
+        13.44,
+        10.26,
+        10.45
+      ],
+      "monthly364": [
+        30.26,
+        28.9,
+        19.85,
+        18.62,
+        16.64,
+        15.76,
+        14.84,
+        13.11,
+        12.94
+      ],
+      "method": "Same-vintage simple nine-month mean; Q4 2025 flow run-rate unchanged; FY26–30 rate differences apply partial betas to calibrated yields."
+    },
+    "anchor_gap_note": "FY25 estimated anchor gaps use forward FY26 screening thresholds only, not actual FY25 compliance (dynamic CRR unavailable).",
+    "tax_note": "35% effective scenario rate, not statutory assertion; positive PBT only, no tax credit modeled; actual Q3 tax retained."
   },
   "scenarios": {
     "base": {

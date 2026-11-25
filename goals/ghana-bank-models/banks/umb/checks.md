@@ -1,24 +1,24 @@
 # UMB conditional model checks
 
-Latest actual September 2025; FY25 audited and all 2026 actuals unavailable. FY25 estimate in anchor-estimates.csv, FY26–30 in forecast.csv. No historical imputation. 180 identities (including all three estimated FY25 anchors), max residual 0.00000000m; 825 forecast rows and 165 anchor rows. Blended yields 12.624%, funding 6.851%; no future extra capital. Proxy CAR explicitly conditional on approval of shares; negative cash/capital gaps flagged.
+Latest actual September 2025; FY25 audited and all 2026 actuals unavailable. FY25 estimate in anchor-estimates.csv, FY26–30 in forecast.csv. No historical imputation. 180 identities (including all three estimated FY25 anchors), max residual 0.00000000m; 825 forecast rows and 165 anchor rows. Blended yields 12.624%, funding 6.851%; no future extra capital. Proxy CAR explicitly conditional on approval of shares; negative cash/capital gaps flagged. Jan–Sep 2025 rate reference: 91d 16.8800%, 364d 18.9911%; FY25 estimated-anchor gaps are forward FY26 threshold stresses only (dynamic FY25 CRR unknown). FY25 secondary media comparison (not actual): PAT267.2m/equity551.3m/deposits10400m vs base estimates 231.558m/483.463m/8811.238m. Q1 2026 media PAT81m not used as actual.
 
 | Scenario | Year | PAT m | Assets m | Equity m | CAR proxy % | Cash m | Capital gap m | Cash proxy gap m |
 |---|---|---:|---:|---:|---:|---:|---:|---:|
 | base | FY2025E | 231.558 | 12097.716 | 483.463 | 4.018 | 1232.710 | 488.957 | 1145.893 |
-| base | FY2026E | 116.436 | 13462.168 | 599.899 | 5.533 | 1479.001 | 452.342 | 1240.561 |
-| base | FY2027E | 71.945 | 14994.450 | 671.844 | 6.034 | 1722.551 | 470.036 | 1373.719 |
-| base | FY2028E | 33.778 | 16742.237 | 705.622 | 5.852 | 1979.827 | 538.503 | 1544.570 |
-| base | FY2029E | -56.756 | 18583.447 | 648.866 | 4.594 | 2182.251 | 702.970 | 1777.504 |
-| base | FY2030E | -121.185 | 20599.242 | 527.681 | 2.837 | 2369.494 | 942.079 | 2062.083 |
+| base | FY2026E | 148.070 | 13493.803 | 631.534 | 6.041 | 1510.636 | 422.558 | 1224.744 |
+| base | FY2027E | 109.427 | 15063.566 | 740.960 | 7.026 | 1791.668 | 404.962 | 1339.160 |
+| base | FY2028E | 79.011 | 16856.587 | 819.971 | 7.320 | 2094.177 | 430.843 | 1487.395 |
+| base | FY2029E | 18.159 | 18772.711 | 838.130 | 6.788 | 2371.516 | 524.777 | 1682.872 |
+| base | FY2030E | -17.744 | 20891.947 | 820.386 | 5.911 | 2662.200 | 666.497 | 1915.730 |
 | downside | FY2025E | 169.885 | 11198.817 | 421.790 | 0.495 | 916.481 | 630.169 | 1167.133 |
-| downside | FY2026E | 43.523 | 11904.041 | 465.312 | 1.278 | 1115.374 | 627.902 | 1201.065 |
-| downside | FY2027E | -38.955 | 12713.652 | 426.358 | 0.516 | 1312.237 | 714.218 | 1266.725 |
-| downside | FY2028E | -166.421 | 13481.040 | 259.937 | -2.257 | 1422.500 | 925.532 | 1391.716 |
-| downside | FY2029E | -341.371 | 14166.624 | -81.434 | -7.502 | 1403.158 | 1307.009 | 1599.066 |
-| downside | FY2030E | -504.397 | 14712.921 | -585.831 | -14.842 | 1238.622 | 1843.365 | 1885.631 |
+| downside | FY2026E | 68.794 | 11929.312 | 490.583 | 1.747 | 1140.645 | 604.109 | 1188.430 |
+| downside | FY2027E | 6.830 | 12784.707 | 497.413 | 1.748 | 1383.292 | 647.320 | 1231.198 |
+| downside | FY2028E | -102.236 | 13616.280 | 395.177 | -0.027 | 1557.740 | 798.203 | 1324.096 |
+| downside | FY2029E | -259.133 | 14384.103 | 136.044 | -4.029 | 1620.637 | 1102.253 | 1490.327 |
+| downside | FY2030E | -400.579 | 15034.218 | -264.534 | -9.776 | 1559.919 | 1540.864 | 1724.983 |
 | upside | FY2025E | 249.851 | 12476.025 | 501.756 | 6.576 | 1287.576 | 360.672 | 1186.897 |
-| upside | FY2026E | 150.831 | 14336.706 | 652.587 | 8.060 | 1648.675 | 318.691 | 1300.007 |
-| upside | FY2027E | 120.278 | 16469.910 | 772.865 | 8.639 | 2038.966 | 323.206 | 1452.404 |
-| upside | FY2028E | 99.196 | 19027.525 | 872.061 | 8.636 | 2502.841 | 373.630 | 1645.780 |
-| upside | FY2029E | 71.133 | 21997.672 | 943.194 | 8.189 | 3033.567 | 476.250 | 1884.892 |
-| upside | FY2030E | 54.374 | 25544.845 | 997.568 | 7.525 | 3681.870 | 629.386 | 2171.001 |
+| upside | FY2026E | 185.240 | 14371.115 | 686.996 | 8.573 | 1683.084 | 286.295 | 1282.802 |
+| upside | FY2027E | 163.100 | 16547.141 | 850.096 | 9.636 | 2116.197 | 250.492 | 1413.789 |
+| upside | FY2028E | 153.185 | 19158.746 | 1003.282 | 10.099 | 2634.062 | 250.086 | 1580.169 |
+| upside | FY2029E | 139.639 | 22197.398 | 1142.921 | 10.115 | 3233.294 | 288.208 | 1785.028 |
+| upside | FY2030E | 141.362 | 25831.560 | 1284.283 | 9.908 | 3968.585 | 359.444 | 2027.643 |
