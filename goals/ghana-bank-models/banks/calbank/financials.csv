@@ -21,8 +21,8 @@ calbank,FY2021,balance_sheet,investment_securities,4946.98,GHS millions,CAL21,51
 calbank,FY2021,balance_sheet,loans_and_advances_gross,2452.92,GHS millions,CAL21,114,reported,Bank-only gross loans from Note 24/26.
 calbank,FY2021,balance_sheet,loan_loss_allowance,213.4,GHS millions,CAL21,114,reported,Bank-only accumulated impairment allowance from Note 24/26.
 calbank,FY2021,balance_sheet,loans_and_advances_net,2239.52,GHS millions,CAL21,51,reported,Bank-only.
-calbank,FY2021,balance_sheet,property_equipment_intangibles,487,GHS millions,CAL21,51,derived,"Property, plant & equipment plus intangible assets."
-calbank,FY2021,balance_sheet,other_assets,1031.184,GHS millions,CAL21,51,derived,"Sum of trading assets, subsidiaries, tax assets, ROU assets, assets held for sale (FY21), and other assets."
+calbank,FY2021,balance_sheet,property_equipment_intangibles,665.140,GHS millions,CAL21+CAL22,51;153,derived,Derived standard reclass: reported PPE and intangibles plus right-of-use assets 89.070 GHS m (CAL21 p51 + CAL22 p153 Note 34(a)); Bank values; see sources.md.
+calbank,FY2021,balance_sheet,other_assets,853.044,GHS millions,CAL21+CAL22,51;153,derived,Derived standard reclass: reported other_assets less right-of-use assets 89.070 GHS m (CAL21 p51 + CAL22 p153 Note 34(a)); Bank values; see sources.md.
 calbank,FY2021,balance_sheet,total_assets,10012.378,GHS millions,CAL21,51,reported,Bank-only.
 calbank,FY2021,balance_sheet,customer_deposits,5161.933,GHS millions,CAL21,51,reported,Bank-only.
 calbank,FY2021,balance_sheet,due_to_banks,1150.134,GHS millions,CAL21,51,reported,Deposits from banks and other financial institutions.
@@ -62,8 +62,8 @@ calbank,FY2022,balance_sheet,investment_securities,2675.533,GHS millions,CAL23,6
 calbank,FY2022,balance_sheet,loans_and_advances_gross,3738.077,GHS millions,CAL23,140,reported,Bank-only gross loans from Note 24/26.
 calbank,FY2022,balance_sheet,loan_loss_allowance,547.718,GHS millions,CAL23,140,reported,Bank-only accumulated impairment allowance from Note 24/26.
 calbank,FY2022,balance_sheet,loans_and_advances_net,3190.359,GHS millions,CAL23,67,reported,Bank-only.
-calbank,FY2022,balance_sheet,property_equipment_intangibles,704.05,GHS millions,CAL23,67,derived,"Property, plant & equipment plus intangible assets."
-calbank,FY2022,balance_sheet,other_assets,640.442,GHS millions,CAL23,67,derived,"Sum of trading assets, subsidiaries, tax assets, ROU assets, assets held for sale (FY21), and other assets."
+calbank,FY2022,balance_sheet,property_equipment_intangibles,874.144,GHS millions,CAL23+CAL22,67;153,derived,Derived standard reclass: reported PPE and intangibles plus right-of-use assets 85.047 GHS m (CAL23 p67 + CAL22 p153 Note 34(a)); Bank values; see sources.md.
+calbank,FY2022,balance_sheet,other_assets,470.348,GHS millions,CAL23+CAL22,67;153,derived,Derived standard reclass: reported other_assets less right-of-use assets 85.047 GHS m (CAL23 p67 + CAL22 p153 Note 34(a)); Bank values; see sources.md.
 calbank,FY2022,balance_sheet,total_assets,9219.254,GHS millions,CAL23,67,reported,Bank-only.
 calbank,FY2022,balance_sheet,customer_deposits,6116.174,GHS millions,CAL23,67,reported,Bank-only.
 calbank,FY2022,balance_sheet,due_to_banks,622.594,GHS millions,CAL23,67,reported,Deposits from banks and other financial institutions.
@@ -103,8 +103,8 @@ calbank,FY2023,balance_sheet,investment_securities,2982.682,GHS millions,CAL24,6
 calbank,FY2023,balance_sheet,loans_and_advances_gross,3850.332,GHS millions,CAL24,141,reported,Bank-only gross loans from Note 24/26.
 calbank,FY2023,balance_sheet,loan_loss_allowance,1095.553,GHS millions,CAL24,141,reported,Bank-only accumulated impairment allowance from Note 24/26.
 calbank,FY2023,balance_sheet,loans_and_advances_net,2754.779,GHS millions,CAL24,66,reported,Bank-only.
-calbank,FY2023,balance_sheet,property_equipment_intangibles,717.993,GHS millions,CAL24,66,derived,"Property, plant & equipment plus intangible assets."
-calbank,FY2023,balance_sheet,other_assets,1093.016,GHS millions,CAL24,66,derived,"Sum of trading assets, subsidiaries, tax assets, ROU assets, assets held for sale (FY21), and other assets."
+calbank,FY2023,balance_sheet,property_equipment_intangibles,868.315,GHS millions,CAL24,66;153,derived,Derived standard reclass: reported PPE and intangibles plus right-of-use assets 75.161 GHS m (CAL24 p66 and p153 Note 33(a)); Bank values; see sources.md.
+calbank,FY2023,balance_sheet,other_assets,942.694,GHS millions,CAL24,66;153,derived,Derived standard reclass: reported other_assets less right-of-use assets 75.161 GHS m (CAL24 p66 and p153 Note 33(a)); Bank values; see sources.md.
 calbank,FY2023,balance_sheet,total_assets,9869.433,GHS millions,CAL24,66,reported,Bank-only.
 calbank,FY2023,balance_sheet,customer_deposits,6945.627,GHS millions,CAL24,66,reported,Bank-only.
 calbank,FY2023,balance_sheet,due_to_banks,555.001,GHS millions,CAL24,66,reported,Deposits from banks and other financial institutions.
@@ -144,8 +144,8 @@ calbank,FY2024,balance_sheet,investment_securities,4876.244,GHS millions,CAL25,6
 calbank,FY2024,balance_sheet,loans_and_advances_gross,3466.3,GHS millions,CAL25,142,reported,Bank-only gross loans from Note 24/26.
 calbank,FY2024,balance_sheet,loan_loss_allowance,1364.304,GHS millions,CAL25,142,reported,Bank-only accumulated impairment allowance from Note 24/26.
 calbank,FY2024,balance_sheet,loans_and_advances_net,2101.996,GHS millions,CAL25,65,reported,Bank-only.
-calbank,FY2024,balance_sheet,property_equipment_intangibles,651.205,GHS millions,CAL25,65,derived,"Property, plant & equipment plus intangible assets."
-calbank,FY2024,balance_sheet,other_assets,1220.63,GHS millions,CAL25,65,derived,"Sum of trading assets, subsidiaries, tax assets, ROU assets, assets held for sale (FY21), and other assets."
+calbank,FY2024,balance_sheet,property_equipment_intangibles,772.605,GHS millions,CAL25,65,derived,"Derived standard reclass: reported PPE and intangibles plus right-of-use assets 60.700 GHS m (CAL25 p65, Bank column, Note 35(a)); Bank values; see sources.md."
+calbank,FY2024,balance_sheet,other_assets,1099.230,GHS millions,CAL25,65,derived,"Derived standard reclass: reported other_assets less right-of-use assets 60.700 GHS m (CAL25 p65, Bank column, Note 35(a)); Bank values; see sources.md."
 calbank,FY2024,balance_sheet,total_assets,11658.694,GHS millions,CAL25,65,reported,Bank-only.
 calbank,FY2024,balance_sheet,customer_deposits,9431.527,GHS millions,CAL25,65,reported,Bank-only.
 calbank,FY2024,balance_sheet,due_to_banks,255.166,GHS millions,CAL25,65,reported,Deposits from banks and other financial institutions.
@@ -153,7 +153,7 @@ calbank,FY2024,balance_sheet,borrowings,1537.162,GHS millions,CAL25,65,reported,
 calbank,FY2024,balance_sheet,other_liabilities,217.503,GHS millions,CAL25,65,derived,"Sum of current tax liabilities (if any), lease liabilities, and other liabilities."
 calbank,FY2024,balance_sheet,total_liabilities,11441.358,GHS millions,CAL25,65,reported,Bank-only.
 calbank,FY2024,balance_sheet,stated_capital,545.846,GHS millions,CAL25,65,reported,Bank-only.
-calbank,FY2024,balance_sheet,retained_earnings,-1209.108,GHS millions,CAL25,65,reported,Bank-only.
+calbank,FY2024,balance_sheet,retained_earnings,-1209.108,GHS millions,CAL25,65,reported,"Bank balance-sheet retained earnings, CAL25 p65. The Directors table p22 excludes transfers to regulatory reserves; see CAL25 p67 bridge and sources.md."
 calbank,FY2024,balance_sheet,reserves_other,880.598,GHS millions,CAL25,65,derived,"Sum of revaluation, statutory, credit risk, and other reserves."
 calbank,FY2024,balance_sheet,total_equity,217.336,GHS millions,CAL25,65,reported,Bank-only.
 calbank,FY2024,ratios,car_pct,-7.22,%,CAL25,122,reported,Bank-only regulatory CAR (with DDEP forbearance in FY23-FY24).
@@ -185,8 +185,8 @@ calbank,FY2025,balance_sheet,investment_securities,7041.694,GHS millions,CAL25,6
 calbank,FY2025,balance_sheet,loans_and_advances_gross,1290.234,GHS millions,CAL25,142,reported,Bank-only gross loans from Note 24/26.
 calbank,FY2025,balance_sheet,loan_loss_allowance,219.354,GHS millions,CAL25,142,reported,Bank-only accumulated impairment allowance from Note 24/26.
 calbank,FY2025,balance_sheet,loans_and_advances_net,1070.88,GHS millions,CAL25,65,reported,Bank-only.
-calbank,FY2025,balance_sheet,property_equipment_intangibles,783.785,GHS millions,CAL25,65,derived,"Property, plant & equipment plus intangible assets."
-calbank,FY2025,balance_sheet,other_assets,1259.606,GHS millions,CAL25,65,derived,"Sum of trading assets, subsidiaries, tax assets, ROU assets, assets held for sale (FY21), and other assets."
+calbank,FY2025,balance_sheet,property_equipment_intangibles,891.705,GHS millions,CAL25,65,derived,"Derived standard reclass: reported PPE and intangibles plus right-of-use assets 53.960 GHS m (CAL25 p65, Bank column, Note 35(a)); Bank values; see sources.md."
+calbank,FY2025,balance_sheet,other_assets,1151.686,GHS millions,CAL25,65,derived,"Derived standard reclass: reported other_assets less right-of-use assets 53.960 GHS m (CAL25 p65, Bank column, Note 35(a)); Bank values; see sources.md."
 calbank,FY2025,balance_sheet,total_assets,11899.483,GHS millions,CAL25,65,reported,Bank-only.
 calbank,FY2025,balance_sheet,customer_deposits,8657.596,GHS millions,CAL25,65,reported,Bank-only.
 calbank,FY2025,balance_sheet,due_to_banks,434.855,GHS millions,CAL25,65,reported,Deposits from banks and other financial institutions.
@@ -226,8 +226,8 @@ calbank,9M-2026,balance_sheet,investment_securities,6885.43,GHS millions,CAL26Q3
 calbank,9M-2026,balance_sheet,loans_and_advances_gross,,GHS millions,,,unavailable,Not disclosed in Q3 summary statement.
 calbank,9M-2026,balance_sheet,loan_loss_allowance,,GHS millions,,,unavailable,Not disclosed in Q3 summary statement.
 calbank,9M-2026,balance_sheet,loans_and_advances_net,2054.166,GHS millions,CAL26Q3,2,reported,Bank-only.
-calbank,9M-2026,balance_sheet,property_equipment_intangibles,759.31,GHS millions,CAL26Q3,2,derived,"Property, plant & equipment plus intangible assets."
-calbank,9M-2026,balance_sheet,other_assets,1651.161,GHS millions,CAL26Q3,2,derived,"Sum of trading assets, subsidiaries, tax assets, ROU assets, assets held for sale (FY21), and other assets."
+calbank,9M-2026,balance_sheet,property_equipment_intangibles,858.068,GHS millions,CAL26Q3,PDF p2,derived,"Derived standard reclass: reported PPE and intangibles plus right-of-use assets 49.379 GHS m (CAL26Q3 physical PDF p2, Bank column; no printed page number); Bank values; see sources.md."
+calbank,9M-2026,balance_sheet,other_assets,1552.403,GHS millions,CAL26Q3,PDF p2,derived,"Derived standard reclass: reported other_assets less right-of-use assets 49.379 GHS m (CAL26Q3 physical PDF p2, Bank column; no printed page number); Bank values; see sources.md."
 calbank,9M-2026,balance_sheet,total_assets,14549.7,GHS millions,CAL26Q3,2,reported,Bank-only.
 calbank,9M-2026,balance_sheet,customer_deposits,10633.698,GHS millions,CAL26Q3,2,reported,Bank-only.
 calbank,9M-2026,balance_sheet,due_to_banks,474.453,GHS millions,CAL26Q3,2,reported,Deposits from banks and other financial institutions.
