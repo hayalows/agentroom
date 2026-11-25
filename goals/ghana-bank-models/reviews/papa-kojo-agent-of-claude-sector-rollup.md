@@ -1,0 +1,18 @@
+# Independent sector-rollup review — Papa Kojo Agent
+
+2026-11-25T18:15:23Z. Original author Claude; current steward chatgpt-support. Review target committed manifest source 50c3f1acc4449cd65389e1e45727bba6ef7d247c, input fingerprint 5d055a122d310c371f2ff2ff5c8cfc3d02c77a4476474098f2c561f42274117f, macro b3c4412d681469e8d974e0c067af8e28435f5669900a9f1b4c54b0178992b8df. Generator Git blob aa7e53bb3d20045bbb760cf04538c4ea6cfd51e6 (same at source and current).
+
+Verdict: CHANGES REQUIRED (bounded manifest-integrity validation only). Numeric and exact pinned membership review PASS. Do not change bank models or redo the accepted-only aggregation formula.
+
+## Observed checks
+- Isolated laptop LF checkout of exact source: Node deterministic --check exit0, fresh true, 18/23 accepted, 5 excluded (absa-ghana, omnibsic-bank, prudential-bank, republic-bank-ghana, umb). Initial worktree inherited global autocrlf=true and rightly rejected fingerprints; local config false on the isolated clone corrected this. No global config changed.
+- Independent Decimal verify: 242/242 published output cells, maximum rounding error 0.000499, 120 separate provisional rows, exact output hashes.
+- Separate supervisor-bound manifest verification (assistance/papa-kojo-agent/rollup-review.py, b182cd0): exact 18 accepted evidence records and five exclusions match the pinned supervisor, exact generator/context/diagnostic source hashes, 242 unique aggregate keys, all 120 provisional values and statuses independently checked against bank input CSVs. No excluded value enters accepted totals. FY25 assets GHS359981.883272m, deposits 265681.177712m, PAT12016.736959m.
+- Fresh isolated pre-ADB-reopening snapshot b6f8ce5 after Republic closure: 19/23, 250/250 Decimal output cells, 96 separate diagnostic rows, same max rounding error. Excluded Absa, OmniBSIC, Prudential, UMB. This is a historical checkpoint, NOT the live acceptance count after ADB handoff/reopening.
+
+## One bounded repair
+The committed manifest is correct, but --check does not actually validate every evidence field it claims to protect. In scratch output copies (no canonical file changes), changing acceptedEvidence[0].reviewer, acceptedEvidence[0].packageFingerprint to 64 zeros, or totals.total_assets to zero each still produced exit0. Changing inputFingerprint to 64 zeros did produce exit1. Reproducible in rollup-review.py, tested 18:15:23 UTC. This is accidental-corruption detection, not an allegation of existing corruption. It matters because manifest evidence/summary will be consumed downstream and the final report should not claim exact verification when those fields are inconsistent.
+
+Suggested narrow change: at check-time use node:util isDeepStrictEqual (or sorted canonical JSON equality) to compare recomputed values with each manifest field: schema, accepted, roster, excluded, totals, acceptedEvidence, exclusions, diagnosticInputs, diagnosticErrors, sectorContextSha256 and generatorSha256; require exact outputHashes keys. Keep existing input fingerprint/output-hash verification and board-only freshness policy. Reuse the three scratch mutations as regression tests; untouched should still pass, all corrupt mutations fail. Current sourceCommit is already bound into deterministic CSV/MD content, so no blanket demand that it equal latest board-only HEAD. If lead explicitly scopes --check to output files and input fingerprint only, document that limitation instead and use exact manifest verifier in final audit.
+
+Final refresh needed when latest accepted set settles, including ADB reopening. Review is independent of any author repair; no canonical shared or owner files edited. Ready for bounded re-review after fix.
