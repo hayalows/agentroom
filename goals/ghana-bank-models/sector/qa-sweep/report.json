@@ -5,7 +5,7 @@
   "warn": [],
   "info": {
    "owner": "codex",
-   "claim_status": "needs-review",
+   "claim_status": "done",
    "history_rows": 241,
    "periods": [
     "9M-2026",
@@ -34,7 +34,7 @@
   ],
   "info": {
    "owner": "gemini",
-   "claim_status": "needs-review",
+   "claim_status": "done",
    "history_rows": 246,
    "periods": [
     "9M-2026",
@@ -83,6 +83,30 @@
   "assessed": true
  },
  {
+  "slug": "consolidated-bank-ghana",
+  "fail": [],
+  "warn": [],
+  "info": {
+   "owner": "codex",
+   "claim_status": "needs-review",
+   "history_rows": 421,
+   "periods": [
+    "FY2021",
+    "FY2022",
+    "FY2023",
+    "FY2024",
+    "FY2025",
+    "H1-2025",
+    "H1-2026"
+   ],
+   "identity_failures": 0,
+   "total_assets_fy2025": 17857.592,
+   "forecast_rows": 855,
+   "base_asset_cagr_26_30_pct": 12.1
+  },
+  "assessed": true
+ },
+ {
   "slug": "ecobank-ghana",
   "fail": [],
   "warn": [
@@ -111,6 +135,36 @@
   "assessed": true
  },
  {
+  "slug": "fbnbank-ghana",
+  "fail": [],
+  "warn": [],
+  "info": {
+   "owner": "codex",
+   "claim_status": "in-progress",
+   "history_rows": 288,
+   "periods": [
+    "9M-2025",
+    "9M-2026",
+    "FY2021",
+    "FY2022",
+    "FY2023",
+    "FY2024"
+   ],
+   "identity_failures": 0,
+   "total_assets_fy2025": null
+  },
+  "assessed": false,
+  "wip": [
+   "missing file README.md",
+   "missing file forecast.csv",
+   "missing file checks.md",
+   "missing assumptions.json or assumptions.md",
+   "no reproducible model (model.py / model.mjs) or written formulas",
+   "only 4 full fiscal years in history (spec asks for 5)",
+   "no reference to macro.csv / macro_file in assumptions or model (the core gate requires it)"
+  ]
+ },
+ {
   "slug": "fidelity-bank-ghana",
   "fail": [],
   "warn": [],
@@ -134,7 +188,7 @@
   "warn": [],
   "info": {
    "owner": "codex",
-   "claim_status": "needs-review",
+   "claim_status": "done",
    "history_rows": 278,
    "periods": [
     "9M-2026",
@@ -184,10 +238,7 @@
  {
   "slug": "societe-generale-ghana",
   "fail": [
-   "FY2021: gross loans 2804.859 - allowance 234.145 - net loans 2504.367 leaves 66.347, of which interest in suspense explains 37.957, leaving 28.390 unexplained",
-   "FY2022: gross loans 3635.009 - allowance 433.733 - net loans 3102.993 leaves 98.282, of which interest in suspense explains 52.331, leaving 45.951 unexplained",
-   "FY2023: gross loans 4663.625 - allowance 541.210 - net loans 3987.842 leaves 134.573, of which interest in suspense explains 74.292, leaving 60.281 unexplained",
-   "FY2024: gross loans 5840.975 - allowance 654.569 - net loans 5011.684 leaves 174.722, of which interest in suspense explains 103.493, leaving 71.229 unexplained"
+   "forecast identities fail: ['base FY2026E asset lines sum 11379.558 != total assets 11444.157', 'base FY2027E asset lines sum 12776.106 != total assets 12849.425', 'base FY2028E asset lines sum 14429.758 != total assets 14513.344', 'base FY2029E asset lines sum 16292.328 != total assets 16387.449']"
   ],
   "warn": [
    "9M-2026: asset lines sum 11016.260 vs total assets 11078.375 (due_from_banks may be inside another line; say so in notes)",
@@ -220,6 +271,41 @@
   "assessed": true
  },
  {
+  "slug": "stanbic-bank-ghana",
+  "fail": [
+   "forecast identities fail: ['base FY2026E asset lines sum 40643.302 != total assets 44912.812', 'base FY2027E asset lines sum 46483.093 != total assets 51328.987', 'base FY2028E asset lines sum 53278.605 != total assets 58802.923', 'base FY2029E asset lines sum 60898.633 != total assets 67185.307']"
+  ],
+  "warn": [
+   "9M-2026: asset lines sum 39138.336 vs total assets 43243.634 (due_from_banks may be inside another line; say so in notes)",
+   "FY2021: asset lines sum 12440.984 vs total assets 14043.097 (due_from_banks may be inside another line; say so in notes)",
+   "FY2022: asset lines sum 17539.482 vs total assets 18597.451 (due_from_banks may be inside another line; say so in notes)",
+   "FY2023: asset lines sum 22578.158 vs total assets 24633.538 (due_from_banks may be inside another line; say so in notes)",
+   "FY2024: asset lines sum 30274.399 vs total assets 32590.921 (due_from_banks may be inside another line; say so in notes)",
+   "FY2025: asset lines sum 31840.798 vs total assets 36708.145 (due_from_banks may be inside another line; say so in notes)"
+  ],
+  "info": {
+   "owner": "deepseek",
+   "claim_status": "needs-review",
+   "history_rows": 296,
+   "periods": [
+    "9M-2026",
+    "FY2021",
+    "FY2022",
+    "FY2023",
+    "FY2024",
+    "FY2025"
+   ],
+   "identity_failures": 0,
+   "total_assets_fy2025": 36708.145,
+   "forecast_rows": 870,
+   "anchor_gap_interest_income_pct": 0.0,
+   "anchor_gap_interest_expense_pct": -0.0,
+   "anchor_gap_profit_after_tax_pct": -2.9,
+   "base_asset_cagr_26_30_pct": 14.3
+  },
+  "assessed": true
+ },
+ {
   "slug": "standard-chartered-ghana",
   "fail": [],
   "warn": [],
@@ -247,12 +333,39 @@
   "assessed": true
  },
  {
-  "slug": "zenith-bank-ghana",
+  "slug": "uba-ghana",
   "fail": [],
   "warn": [],
   "info": {
    "owner": "claude-helper-1",
    "claim_status": "needs-review",
+   "history_rows": 341,
+   "periods": [
+    "9M-2025",
+    "9M-2026",
+    "FY2021",
+    "FY2022",
+    "FY2023",
+    "FY2024",
+    "FY2025"
+   ],
+   "identity_failures": 0,
+   "total_assets_fy2025": 11541.568,
+   "forecast_rows": 671,
+   "anchor_gap_interest_income_pct": -0.0,
+   "anchor_gap_interest_expense_pct": 0.0,
+   "anchor_gap_profit_after_tax_pct": -2.8,
+   "base_asset_cagr_26_30_pct": 13.3
+  },
+  "assessed": true
+ },
+ {
+  "slug": "zenith-bank-ghana",
+  "fail": [],
+  "warn": [],
+  "info": {
+   "owner": "claude-helper-1",
+   "claim_status": "done",
    "history_rows": 346,
    "periods": [
     "9M-2025",

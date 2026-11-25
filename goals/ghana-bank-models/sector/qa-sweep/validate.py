@@ -152,9 +152,9 @@ def check_bank(slug):
         ln, lg, la = g(p, "loans_and_advances_net"), g(p, "loans_and_advances_gross"), g(p, "loan_loss_allowance")
         if None not in (ln, lg, la):
             gap = lg - la - ln
-            sus = g(p, "x_interest_in_suspense") or 0.0
+            sus = sum(v for (pp, ii), v in V.items() if pp == p and re.fullmatch(r"x_.*(suspense|adjustment).*", ii))
             if abs(gap) > 0.0051 and abs(gap - sus) > 0.0051:
-                msg = f"{p}: gross loans {lg:.3f} - allowance {la:.3f} - net loans {ln:.3f} leaves {gap:.3f}" + (f", of which interest in suspense explains {sus:.3f}, leaving {gap - sus:.3f} unexplained" if sus else " and no x_interest_in_suspense row explains it")
+                msg = f"{p}: gross loans {lg:.3f} - allowance {la:.3f} - net loans {ln:.3f} leaves {gap:.3f}" + (f", of which x_ suspense/adjustment rows explain {sus:.3f}, leaving {gap - sus:.3f} unexplained" if sus else " and no x_ suspense/adjustment row explains it")
                 F.append(msg)
     I["identity_failures"] = bad
     # sign convention: costs positive
@@ -179,7 +179,7 @@ def check_bank(slug):
         except Exception as e:
             F.append(f"forecast.csv unreadable: {e}")
             return res
-        for need in ["scenario", "period", "line_item", "value", "status"]:
+        for need in ["bank", "scenario", "period", "line_item", "value", "unit", "status"]:
             if need not in fh:
                 F.append(f"forecast.csv lacks column {need}")
         if not F or all("forecast.csv" not in x for x in F):
@@ -194,8 +194,13 @@ def check_bank(slug):
                 if v is not None:
                     fv[k] = v
                 if r.get("status") not in ("estimated", "unavailable"):
-                    W.append(f"forecast row status '{r.get('status')}' on {k} (spec: estimated)")
+                    badstat = locals().get("badstat", 0) + 1
+                li = r.get("line_item", "")
+                if li and li not in ALLOWED and not li.startswith("x_"):
+                    F.append(f"forecast line_item '{li}' is not in the spec and not an x_ item")
                     break
+            if locals().get("badstat"):
+                W.append(f"{badstat} forecast rows have a status other than estimated/unavailable (spec: estimated)")
             have = {(k[0], k[1]) for k in fv}
             miss = [f"{s}|{y}" for s in SCEN for y in FYE if (s, y) not in have]
             if miss:
@@ -210,6 +215,13 @@ def check_bank(slug):
                     nii, ii, ie = fv.get((s, y, "net_interest_income")), fv.get((s, y, "interest_income")), fv.get((s, y, "interest_expense"))
                     if None not in (nii, ii, ie) and abs(nii - (ii - ie)) > 0.01:
                         bad_bs.append(f"{s} {y} NII off")
+                    fpat, fpbt, ftax = fv.get((s, y, "profit_after_tax")), fv.get((s, y, "profit_before_tax")), fv.get((s, y, "income_tax"))
+                    if None not in (fpat, fpbt, ftax) and abs(fpat - (fpbt - ftax)) > 0.01:
+                        bad_bs.append(f"{s} {y} PAT != PBT - tax ({fpat:.3f} vs {fpbt - ftax:.3f})")
+                    al = [fv.get((s, y, k)) for k in ["cash_and_bog_balances", "due_from_banks", "investment_securities", "loans_and_advances_net", "property_equipment_intangibles", "other_assets"]]
+                    got = [x for x in al if x is not None]
+                    if ta is not None and len(got) >= 5 and abs(sum(got) - ta) > 0.01:
+                        bad_bs.append(f"{s} {y} asset lines sum {sum(got):.3f} != total assets {ta:.3f}")
             if bad_bs:
                 F.append(f"forecast identities fail: {bad_bs[:4]}")
             # anchor test: FY2026E vs 9M-2026 x 12/9 (informational, WARN when far)
@@ -235,8 +247,8 @@ def check_bank(slug):
     for f in ("model.py", "model.mjs", "model.js"):
         if f in files:
             code += open(os.path.join(d, f), encoding="utf-8-sig").read()
-    if "macro" not in a.lower() and "macro" not in code.lower():
-        F.append("no reference to the shared macro file in assumptions or model")
+    if not re.search(r"macro\.csv|macro_file", a + code):
+        F.append("no reference to macro.csv / macro_file in assumptions or model (the core gate requires it)")
     return res
 
 def main():
