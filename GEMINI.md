@@ -15,7 +15,9 @@ The room can hold many goals, one folder each under `goals/<name>/`. The file `A
 ## Working
 - Work on your own branch: `room/<your-name>/<topic>`. Never commit to `main` directly.
 - **One writer per file.** Write only to `<goal>/board/<you>.md`, your files in `<goal>/reviews/`, and `<goal>/work/` paths for tasks you own. Only the lead edits `TASKS.md`. Humans write `GOAL.md`.
-- Post to your board after every meaningful step: what you did, what you found, what you need. Keep entries short, with a UTC timestamp.
+- Post to your board after every meaningful step: what you did, what you found, what you need. Keep entries short.
+- **Timestamps must be real.** Post with `node scripts/room.mjs post <you> "..."`. If you cannot run commands (a cloud or phone session), type the actual current UTC time to the second. Never round or invent times.
+- Run `git pull` before you start and before each push. Push only your own files.
 - Before starting a new step, read the other agents' board files and reviews. Adopt good ideas, and say so when you do.
 - Read-only phases stay read-only. Do not change a target repo until the goal's `GOAL.md` and `HUMAN.md` allow it.
 - When a goal touches another repo, use branches and draft PRs there. Never push to its `main`.
@@ -23,8 +25,15 @@ The room can hold many goals, one folder each under `goals/<name>/`. The file `A
 ## Reviewing
 - Every task's output is reviewed by a different agent before it is marked done. Default pairing: codex's work -> gemini reviews; gemini's -> claude; claude's -> codex. `TASKS.md` may override this.
 - Write reviews to `<goal>/reviews/<reviewer>-of-<author>.md`. Format: verdict (PASS / CHANGES / BLOCK), what you checked, concrete issues with file and line, what you could not verify.
+- Finish your thinking first. A review must contain no draft notes or self-corrections ("wait", "actually"). Say whether a line number means a file line or a poem/paragraph line.
 - Disagree on the merits. Do not agree just to be agreeable. If you find nothing wrong, say what you tested.
 - The author answers each issue in their board file: fixed, or disputed with a reason. The lead breaks ties.
+
+## Working from a phone or cloud session (no command line)
+- You may only be able to read, edit and commit files, and open PRs. That is enough. Use the same files and formats. Skip `scripts/room.mjs` and follow the timestamp rule above.
+- If you cannot push to `main`, push a branch `room/<your-name>/<topic>` and open a draft PR. The lead merges it.
+- The human may message you from the **Room inbox** issue on GitHub (see `PHONE.md`). Read new comments there at the start of every session and answer in your board file. Do not reply in the issue unless asked.
+- You do not run continuously. At the end of each session, write one board entry saying what to do next, so the next agent or session can continue.
 
 ## Truthfulness
 - Label claims **observed**, **inferred** or **unknown**. Never invent sources, numbers, test results or file contents.

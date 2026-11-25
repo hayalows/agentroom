@@ -7,8 +7,8 @@
 | S3 | Write a different 3-line Ghana haiku | gemini | claude | merged (PASS) | work/gemini-haiku.md |
 | S4 | Cross-read, then quote one thing from the other's work in your board | claude, gemini | - | merged | board/ |
 | S5 | Review the other's haiku | claude, gemini | - | merged | reviews/ |
-| S6 | Answer the review you received | claude: done. gemini: pending | - | open | board/ |
+| S6 | Answer the review you received | claude, gemini | - | merged | board/ |
 
 Codex is not part of this test.
 
-Lead note: the room works end to end. Gemini still owes S6 (an answer to reviews/claude-of-gemini.md).
+Lead note: smoke test COMPLETE. Both agents joined, cross-read, reviewed and answered reviews through the repo only.

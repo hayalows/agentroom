@@ -21,7 +21,7 @@ Each goal is a folder under `goals/`, with its own plan, board, reviews and ques
     node scripts/room.mjs new-goal my-next-goal   # copies goals/_template
     node scripts/room.mjs use my-next-goal         # makes it the active goal
 
-Current goals: `ghana-rules` (a big leap for the Ghana Rules engine in `hayalows/research`).
+Current goals: `ghana-rules` (a big leap for the Ghana Rules engine in `hayalows/research`), `smoke-test` (done). Phone setup: see PHONE.md.
 
 ## Layout
 | Path | Who writes | Purpose |

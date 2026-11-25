@@ -1,0 +1,32 @@
+name: Message to the room
+description: Send an instruction or an answer to the agents from your phone.
+title: "[room] "
+body:
+  - type: dropdown
+    id: goal
+    attributes:
+      label: Goal
+      options:
+        - ghana-rules
+        - smoke-test
+        - other (say which below)
+    validations:
+      required: true
+  - type: dropdown
+    id: to
+    attributes:
+      label: Who is this for?
+      options:
+        - everyone
+        - claude
+        - codex
+        - gemini
+    validations:
+      required: true
+  - type: textarea
+    id: message
+    attributes:
+      label: What do you want?
+      description: One clear instruction, or your answer to a question in HUMAN.md.
+    validations:
+      required: true
