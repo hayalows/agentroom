@@ -140,7 +140,7 @@ def noncash(b):
 # interest-expense split (customer deposits 227.208, bank+debt-sec+borrowed 310.324, lease 0.600 =
 # 538.132). Loans keep the FORWARD driver (shared policy rate plus a scenario spread), as the
 # reviewer asked; the note-8 loan yield is shown in the back-test only, as a reference residual.
-CRR_CAL = 0.15   # CRR in force through FY2024-FY2025 (raised to the uniform 20% only from 4 Jun 2026)
+CRR_CAL = 0.15   # Simplified historic calibration proxy, NOT actual legal CRR; issuer note 19 discloses differentiated reserves.
 
 
 def _cal_balances(p):
@@ -240,24 +240,14 @@ def wholesale_base(bb):
 
 
 def statutory_band_pct(fund, stated):
-    """Act 930 s34 transfer band, as a share of PAT, from statutory fund / paid-up capital.
-
-    Bands (Bank of Ghana practice under Act 930 s34): below 25% of paid-up capital -> 50%;
-    25-50% -> 37.5%; 50-75% -> 25%; 75% and above -> 12.5%. The Bank itself APPLIED 25% in both
-    FY2024 and FY2025 even though the fund/stated-capital ratio (75.9%, 91.8%) sits in the lowest
-    band; the base case therefore keeps a conservative 25% policy and this function drives the
-    statutory-band sensitivity only (see checks.md).
-    """
+    """Act 930 s34, printed p30: 50% below half of paid-up capital,
+    25% from half to below full paid-up capital, 12.5% at or above full.
+    Opening-fund convention; positive annual after-tax profit only."""
     if stated <= 0:
         return 50.0
     r = fund / stated
-    if r < 0.25:
-        return 50.0
-    if r < 0.50:
-        return 37.5
-    if r < 0.75:
-        return 25.0
-    return 12.5
+    return 50.0 if r < 0.5 else (25.0 if r < 1.0 else 12.5)
+
 
 
 def costs(i):
@@ -285,7 +275,7 @@ NOTE_I = {
 NOTE_B = {
     "cash_and_bog_balances": "Residual assets after funding, equity and non-cash assets; a negative value is an infeasible funding gap, not available cash.",
     "due_from_banks": "The Bank reports no separate asset-side inter-bank balance; held at zero.",
-    "investment_securities": "Deposit-growth proxy from the reported FVOCI plus amortised-cost portfolio (excluding pledged securities).",
+    "investment_securities": "Deposit-growth proxy from the reported FVTPL plus amortised-cost portfolio (excluding pledged securities).",
     "loans_and_advances_gross": "FY2026 net/(1-allowance ratio); 2027+ organic growth.",
     "loan_loss_allowance": "Gross loans x scenario allowance ratio; distinct from the annual impairment expense.",
     "loans_and_advances_net": "Gross minus allowance; FY2026 anchored to actual 9M net loans.",
@@ -405,7 +395,7 @@ for s in SCEN:
                                     + eP["cash"] * cashYield) / 100.0
             i["interest_expense"] = (avg(prevB["customer_deposits"], b["customer_deposits"]) * depCost
                                      + avg(wholesale_base(prevB), wholesale_base(b)) * whlCost
-                                     + CAL["lease_interest_seed"] * (1 + pct(og)) ** j) / 100.0
+                                     ) / 100.0 + CAL["lease_interest_seed"] * (1 + pct(og)) ** j
             i["fee_commission_income"] = prevI["fee_commission_income"] * (1 + pct(fg))
             i["fee_commission_expense"] = i["fee_commission_income"] * (prevI["fee_commission_expense"] / prevI["fee_commission_income"]) * feeMult
             i["net_trading_income"] = prevI["net_trading_income"] * (1 + pct(nominal + D["model_structure"]["trading_growth_spread_pp"][s]))
@@ -436,29 +426,19 @@ for s in SCEN:
         preRwa = rwa(preAssets, b["loans_and_advances_gross"])
         preCap = prevCap + incPAT
         reserve = b["customer_deposits"] * pct(crr)
-        # STATUTORY RESERVE FUND (Act 930 s34), tracked SEPARATELY from aggregate reserves.
-        # The Bank APPLIED 25% of PAT in FY2024 (46.926m) and FY2025 (63.648m), even though the fund
-        # (368.101m) exceeds its stated capital (401.191m) ratio band that would permit 12.5%. The
-        # base model therefore keeps a CONSERVATIVE 25% policy (explicitly not a statutory
-        # requirement). x_statutory_band_transfer applies the Act 930 s34 band instead, as a
-        # sensitivity. Either way it is an INTERNAL equity transfer: total equity and regulatory
-        # capital are unchanged; it only caps distributable retained earnings. The observed 9M-2026
-        # statutory fund equals the FY2025 closing 368.101m (RB26Q3 statement of changes in equity
-        # shows no statutory transfer in the nine months), so the anchor year carries only the
-        # transfer on positive Q4 PAT; the 9M movement is genuinely unavailable and is not invented.
+        # Section 34 uses annual net profit after tax, not Q4 PAT.
+        # FY2026 observed YTD transfer is zero (issuer Q3 Bank SoCE p1).
+        # Keep a 25% policy floor while applying the actual statutory bands.
         prevStat = Q3I["_stat_fund"] if first else prevB["x_statutory_reserve_fund_fc"]
         prevStated = prevB["stated_capital"]
+        ytdStat = max(0.0, prevStat - hist("FY2025", "x_statutory_reserve_fund")) if first else 0.0
+        bandPct = statutory_band_pct(hist("FY2025", "x_statutory_reserve_fund") if first else prevStat, prevStated)
+        annualPAT = max(0.0, i["profit_after_tax"])
+        bandTransfer = max(0.0, pct(bandPct) * annualPAT - ytdStat)
+        transfer = max(0.0, pct(max(bandPct, D["statutory_reserve_transfer_pct"][s])) * annualPAT - ytdStat)
         if first:
-            transfer = max(0.0, pct(D["statutory_reserve_transfer_pct"][s]) * incPAT)
-            bandPct = statutory_band_pct(prevStat, prevStated)
-            bandTransfer = max(0.0, pct(bandPct) * incPAT)
-            # The observed 9M-2026 equity already reflects the dividend paid in 2026 (GHS42.598m,
-            # RB26Q3), so Q4 carries no further dividend.
             div = 0.0
         else:
-            transfer = max(0.0, pct(D["statutory_reserve_transfer_pct"][s]) * incPAT)
-            bandPct = statutory_band_pct(prevStat, prevStated)
-            bandTransfer = max(0.0, pct(bandPct) * incPAT)
             distributable = max(0.0, prevB["retained_earnings"] + incPAT - transfer)
             div = max(0.0, min(max(incPAT, 0.0) * pct(D["dividend_payout_pct"][s]),
                                distributable,
@@ -508,7 +488,7 @@ for s in SCEN:
         emit(s, t, "balance_sheet", "x_statutory_band_transfer", b["x_statutory_band_transfer"], "GHS millions",
              "Sensitivity: transfer to the statutory reserve fund under the Act 930 s34 band instead of the conservative 25% policy. Internal equity transfer; total equity and capital unchanged.")
         emit(s, t, "ratios", "x_statutory_band_pct", b["x_statutory_band_pct"], "%",
-             "Act 930 s34 transfer band (share of PAT) implied by statutory-fund / paid-up-capital ratio: <25% -> 50%; 25-50% -> 37.5%; 50-75% -> 25%; >=75% -> 12.5%. Sensitivity only; the base uses a conservative 25% policy.")
+             "Act 930 s34 opening-fund band: below 50% -> 50%; 50% to below 100% -> 25%; at least 100% -> 12.5%. Central policy uses the greater of the band and 25%.")
         for k in KEYS_R:
             note = {"car_pct": "Proxy regulatory capital divided by proxy RWA; not a BoG regulatory return.",
                     "tier1_pct": "Estimated Tier 1 / RWA. The Bank discloses Tier 1 (predominantly CET1); Q3 starting Tier 1 inferred from the FY2025 audited capital structure.",
@@ -537,8 +517,8 @@ for s in SCEN:
                                         if first else "Estimated annual dividends constrained by distributable retained earnings after the statutory transfer, the pre-dividend CAR target and the cash-reserve proxy.")),
             ("x_dividends_paid", ytd_div + div, ("Full-year dividend memo: observed 9M-2026 YTD dividend 42.598m plus the estimated Q4 payout (zero)."
                                                  if first else "Estimated annual dividends paid.")),
-            ("x_statutory_reserve_transfer", transfer, ("Estimated Q4-only statutory reserve transfer (25% of positive Q4 PAT)."
-                                                        if first else "Estimated annual transfer to the statutory reserve (25% of positive PAT, source-confirmed).")),
+            ("x_statutory_reserve_transfer", transfer, ("Estimated remaining annual statutory transfer on positive full-year PAT less observed YTD transfer (zero)."
+                                                        if first else "Estimated annual transfer on positive PAT using the statutory band and conservative 25% policy floor.")),
             ("x_cash_reserve_proxy", reserve, "CRR x modelled year-end deposits; screening proxy, not actual eligible reserve."),
             ("x_cash_reserve_gap", cashGap, "Positive value is a reserve-proxy shortfall; not automatically funded."),
             ("x_capital_shortfall", short, "Additional regulatory capital needed to reach the shared minimum CAR; not assumed raised."),
@@ -594,7 +574,7 @@ for s in SCEN:
 
 # ------------------------------------------------------------------ write forecast.csv
 with open(os.path.join(HERE, "forecast.csv"), "w", newline="", encoding="utf-8") as f:
-    w = csv.writer(f)
+    w = csv.writer(f, lineterminator="\n")
     w.writerow(HEADER)
     w.writerows(rows)
 
@@ -794,17 +774,15 @@ L.append("With base cost growth the downside FY2030E profit before tax changes t
 L.append("")
 L.append("### Statutory reserve fund (Act 930 s34), tracked separately")
 L.append("")
-L.append("The Bank reported a statutory reserve fund of 368.101m at FY2025 and 401.191m of stated capital, so the fund "
-         "is now BELOW stated capital; the note-5 (p139) policy is a 12.5%-50% transfer depending on the fund/paid-up-capital "
-         "ratio, and the Bank APPLIED 25% in both FY2024 (46.926m) and FY2025 (63.648m). The model tracks the statutory fund "
-         "SEPARATELY (x_statutory_reserve_fund_fc), applies a **conservative 25% policy** (explicitly labelled: NOT a statutory "
-         "requirement), and reports the Act 930 s34 band (x_statutory_band_transfer / x_statutory_band_pct) as a sensitivity. "
-         "The 9M-2026 statement of changes in equity shows NO statutory transfer in the nine months (fund held at 368.101m), "
-         "and the full-year 2026 statutory movement is genuinely unavailable, so the anchor year carries only the estimated Q4 "
-         "transfer; it is labelled estimated, not invented. The transfer is an INTERNAL equity transfer: total equity, total "
-         "liabilities and regulatory capital are unchanged; it only caps distributable retained earnings.")
+L.append("Act 930 section 34 printed p30 sets three bands based on opening reserve / paid-up capital: below 50%: 50%; "
+         "50% to below 100%: 25%; at least 100%: 12.5%. FY2025 closing statutory fund 368.101m / stated capital "
+         "401.191m implies 25%. The issuer Q3 Bank statement of changes in equity (p1) confirms the fund remained "
+         "368.101m and YTD statutory transfer was zero. FY2026 therefore uses positive full-year PAT less zero YTD transfer; "
+         "later periods use opening fund and positive annual PAT. Central policy applies at least the statutory band and a 25% "
+         "floor, and the statutory-only minimum is a sensitivity. Actual FY2026 final transfer is not yet published. "
+         "Internal equity transfer, no effect on total equity or capital before dividends.")
 L.append("")
-L.append("| Year | Statutory fund | Stated capital | Fund/capital % | s34 band % | Band transfer (sensitivity) | 25% policy transfer |")
+L.append("| Year | Statutory fund | Stated capital | Fund/capital % | s34 band % | Band transfer (sensitivity) | Central policy transfer |")
 L.append("|---|---:|---:|---:|---:|---:|---:|")
 for x in checks_log:
     st = states[(x["s"], x["t"])]
@@ -868,7 +846,7 @@ L.append("FY2026E retains the actual 9M-2026 tax charge and adds tax on any posi
          "exceeds the 35% input; this is the model's stated treatment, not an error. The observed 9M-2026 equity already "
          "reflects the GHS42.598m dividend paid in 2026 (RB26Q3), so no additional Q4-2026 dividend is assumed and "
          "`x_model_dividends` is zero in FY2026E for every scenario. The statutory reserve transfer is modelled at a "
-         "conservative 25% of positive PAT (source-confirmed FY2024 46.926m / FY2025 63.648m) with the Act 930 s34 band as "
+         "conservative minimum of 25% of positive annual PAT or the applicable Act 930 band, less actual YTD transfer, with the statutory-only band as "
          "a sensitivity; it is an internal equity transfer, so total equity and regulatory capital are unaffected, but it "
          "caps distributable retained earnings for dividends. See the statutory-reserve section above.")
 L.append("")
@@ -879,7 +857,22 @@ L.append("FY2026 estimated earnings retain actual 9M income and estimate Q4 only
          "review required.")
 L.append("")
 
-with open(os.path.join(HERE, "checks.md"), "w", encoding="utf-8") as f:
+L.append("### Additional collateral and wholesale repricing diagnostic")
+L.append("")
+L.append("Illustrative static stress, not a full model rerun: 20% of pledged securities is an incremental collateral haircut (not a loss or free cash); +100bp on average borrowings, bank funding and bonds is gross annual pre-tax expense before behavioral or capital feedback. The original pledged assets are already restricted. FY2026 applies one quarter of the annual funding shock, preserving reported nine months.")
+L.append("")
+L.append("| Scenario | Year | 20% pledged haircut (GHS m) | Incremental wholesale interest (GHS m) |")
+L.append("|---|---|---:|---:|")
+for sc in SCEN:
+    opening = wholesale_base(Q3B)
+    for yr in PERIODS:
+        rr = {r[3]: float(r[4]) for r in rows if r[-1] == sc and r[1] == yr}
+        closing = rr["borrowings"] + rr["due_to_banks"] + rr["x_bonds"]
+        L.append("| %s | %s | %.3f | %.3f |" % (sc, yr, .2 * rr["x_pledged_assets"], .01 * (opening + closing)/2 / (4 if yr == PERIODS[0] else 1)))
+        opening = closing
+L.append("")
+
+with open(os.path.join(HERE, "checks.md"), "w", encoding="utf-8", newline="\n") as f:
     f.write("\n".join(L))
 
 print(json.dumps({"forecast_rows": len(rows), "scenario_years": len(checks_log),

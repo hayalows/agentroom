@@ -60,20 +60,20 @@ Rows: 1020; scenario-years: 15; FY2025 residual RWA density: 0.136864; estimated
 | Scenario | Year | Max bridge residual | CAR % | Min CAR % | Capital gap | Cash | CRR proxy | Reserve gap | Dividends |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | base | FY2026E | 0.000 | 17.179 | 13.000 | 0.000 | 3561.977 | 1502.183 | 0.000 | 0.000 |
-| base | FY2027E | 0.000 | 16.945 | 13.000 | 0.000 | 4039.488 | 1719.999 | 0.000 | 0.000 |
-| base | FY2028E | 0.000 | 16.710 | 13.000 | 0.000 | 4601.740 | 1977.999 | 0.000 | 0.000 |
-| base | FY2029E | 0.000 | 16.481 | 13.000 | 0.000 | 5228.436 | 2270.743 | 0.000 | 0.000 |
-| base | FY2030E | 0.000 | 16.351 | 13.000 | 0.000 | 5952.339 | 2606.813 | 0.000 | 0.000 |
+| base | FY2027E | 0.000 | 16.938 | 13.000 | 0.000 | 4039.058 | 1719.999 | 0.000 | 0.000 |
+| base | FY2028E | 0.000 | 16.697 | 13.000 | 0.000 | 4600.804 | 1977.999 | 0.000 | 0.000 |
+| base | FY2029E | 0.000 | 16.464 | 13.000 | 0.000 | 5226.914 | 2270.743 | 0.000 | 0.000 |
+| base | FY2030E | 0.000 | 16.330 | 13.000 | 0.000 | 5950.137 | 2606.813 | 0.000 | 0.000 |
 | downside | FY2026E | 0.000 | 15.520 | 13.000 | 0.000 | 3156.662 | 1415.518 | 0.000 | 0.000 |
-| downside | FY2027E | 0.000 | 16.263 | 13.000 | 0.000 | 3344.375 | 1542.915 | 0.000 | 0.000 |
-| downside | FY2028E | 0.000 | 16.825 | 13.000 | 0.000 | 3527.764 | 1681.777 | 0.000 | 0.000 |
-| downside | FY2029E | 0.000 | 16.412 | 13.000 | 0.000 | 3656.111 | 1833.137 | 0.000 | 0.000 |
-| downside | FY2030E | 0.000 | 15.236 | 13.000 | 0.000 | 3693.411 | 1988.954 | 0.000 | 0.000 |
+| downside | FY2027E | 0.000 | 16.255 | 13.000 | 0.000 | 3343.927 | 1542.915 | 0.000 | 0.000 |
+| downside | FY2028E | 0.000 | 16.809 | 13.000 | 0.000 | 3526.776 | 1681.777 | 0.000 | 0.000 |
+| downside | FY2029E | 0.000 | 16.387 | 13.000 | 0.000 | 3654.483 | 1833.137 | 0.000 | 0.000 |
+| downside | FY2030E | 0.000 | 15.195 | 13.000 | 0.000 | 3690.636 | 1988.954 | 0.000 | 0.000 |
 | upside | FY2026E | 0.000 | 17.395 | 13.000 | 0.000 | 4196.947 | 1617.735 | 0.000 | 0.000 |
-| upside | FY2027E | 0.000 | 16.731 | 13.000 | 0.000 | 5280.036 | 1941.282 | 0.000 | 0.000 |
-| upside | FY2028E | 0.000 | 16.222 | 13.000 | 0.000 | 6639.347 | 2345.069 | 0.000 | 0.000 |
-| upside | FY2029E | 0.000 | 16.020 | 13.000 | 0.000 | 8333.544 | 2837.534 | 0.000 | 0.000 |
-| upside | FY2030E | 0.000 | 16.007 | 13.000 | 0.000 | 10474.040 | 3447.604 | 0.000 | 0.000 |
+| upside | FY2027E | 0.000 | 16.725 | 13.000 | 0.000 | 5279.619 | 1941.282 | 0.000 | 0.000 |
+| upside | FY2028E | 0.000 | 16.211 | 13.000 | 0.000 | 6638.452 | 2345.069 | 0.000 | 0.000 |
+| upside | FY2029E | 0.000 | 16.006 | 13.000 | 0.000 | 8332.100 | 2837.534 | 0.000 | 0.000 |
+| upside | FY2030E | 0.000 | 15.991 | 13.000 | 0.000 | 10471.964 | 3447.604 | 0.000 | 0.000 |
 
 Accounting bridges: PASS (15/15). Capital below the shared minimum: 0/15 flagged. Cash-reserve proxy shortfalls: 0/15 flagged. Negative cash: 0/15 flagged.
 
@@ -105,40 +105,40 @@ The downside presents a combined stress. To separate the two drivers, the table 
 
 | Scenario | Year | Total operating income | Operating costs | Impairment | Profit before tax | Tax | PAT |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| base | FY2030E | 1292.487 | 837.943 | 117.723 | 336.820 | 117.887 | 218.933 |
-| downside | FY2030E | 1098.087 | 967.281 | 152.463 | -21.657 | 0.000 | -21.657 |
-| upside | FY2030E | 1435.469 | 758.477 | 114.412 | 562.580 | 196.903 | 365.677 |
+| base | FY2030E | 1291.441 | 837.943 | 117.723 | 335.775 | 117.521 | 218.254 |
+| downside | FY2030E | 1096.939 | 967.281 | 152.463 | -22.805 | 0.000 | -22.805 |
+| upside | FY2030E | 1434.496 | 758.477 | 114.412 | 561.607 | 196.562 | 365.044 |
 
 **Counterfactual: downside with base cost growth — a one-year marginal diagnostic.** Below, downside FY2030E operating costs are recomputed by applying the **BASE** opex growth (shared base CPI plus the 4-point base spread) to the downside FY2029 opening cost lines, holding the downside operating income and impairment charge fixed. Note this changes BOTH the inflation path (downside CPI -> base CPI) and the spread (downside -> base); it is not the same downside CPI with an alternative spread. This is a single-year diagnostic: the FY2029 opening costs already embed four years of cumulative downside opex, so it isolates only the FY2030 growth-rate substitution.
 
 | FY2030E variant | Operating costs | Profit before tax | Tax | PAT |
 |---|---:|---:|---:|---:|
-| Downside as modelled (CPI+5) | 967.281 | -21.657 | 0.000 | -21.657 |
-| Downside with base cost growth (CPI+4) | 946.162 | -0.537 | 0.000 | -0.537 |
+| Downside as modelled (CPI+5) | 967.281 | -22.805 | 0.000 | -22.805 |
+| Downside with base cost growth (CPI+4) | 946.162 | -1.685 | 0.000 | -1.685 |
 
-With base cost growth the downside FY2030E profit before tax changes to -0.537 from -21.657, about 98% of the modelled downside FY2030E profit-before-tax magnitude. Because the FY2029 opening costs already embed cumulative downside opex, this is one year of cost pass-through, not the whole five-year effect.
+With base cost growth the downside FY2030E profit before tax changes to -1.685 from -22.805, about 93% of the modelled downside FY2030E profit-before-tax magnitude. Because the FY2029 opening costs already embed cumulative downside opex, this is one year of cost pass-through, not the whole five-year effect.
 
 ### Statutory reserve fund (Act 930 s34), tracked separately
 
-The Bank reported a statutory reserve fund of 368.101m at FY2025 and 401.191m of stated capital, so the fund is now BELOW stated capital; the note-5 (p139) policy is a 12.5%-50% transfer depending on the fund/paid-up-capital ratio, and the Bank APPLIED 25% in both FY2024 (46.926m) and FY2025 (63.648m). The model tracks the statutory fund SEPARATELY (x_statutory_reserve_fund_fc), applies a **conservative 25% policy** (explicitly labelled: NOT a statutory requirement), and reports the Act 930 s34 band (x_statutory_band_transfer / x_statutory_band_pct) as a sensitivity. The 9M-2026 statement of changes in equity shows NO statutory transfer in the nine months (fund held at 368.101m), and the full-year 2026 statutory movement is genuinely unavailable, so the anchor year carries only the estimated Q4 transfer; it is labelled estimated, not invented. The transfer is an INTERNAL equity transfer: total equity, total liabilities and regulatory capital are unchanged; it only caps distributable retained earnings.
+Act 930 section 34 printed p30 sets three bands based on opening reserve / paid-up capital: below 50%: 50%; 50% to below 100%: 25%; at least 100%: 12.5%. FY2025 closing statutory fund 368.101m / stated capital 401.191m implies 25%. The issuer Q3 Bank statement of changes in equity (p1) confirms the fund remained 368.101m and YTD statutory transfer was zero. FY2026 therefore uses positive full-year PAT less zero YTD transfer; later periods use opening fund and positive annual PAT. Central policy applies at least the statutory band and a 25% floor, and the statutory-only minimum is a sensitivity. Actual FY2026 final transfer is not yet published. Internal equity transfer, no effect on total equity or capital before dividends.
 
-| Year | Statutory fund | Stated capital | Fund/capital % | s34 band % | Band transfer (sensitivity) | 25% policy transfer |
+| Year | Statutory fund | Stated capital | Fund/capital % | s34 band % | Band transfer (sensitivity) | Central policy transfer |
 |---|---:|---:|---:|---:|---:|---:|
-| base FY2026E | 371.184 | 401.191 | 92.5 | 12.5 | 1.541 | 3.083 |
-| base FY2027E | 405.169 | 401.191 | 101.0 | 12.5 | 16.993 | 33.985 |
-| base FY2028E | 445.304 | 401.191 | 111.0 | 12.5 | 20.067 | 40.135 |
-| base FY2029E | 490.883 | 401.191 | 122.4 | 12.5 | 22.790 | 45.579 |
-| base FY2030E | 545.617 | 401.191 | 136.0 | 12.5 | 27.367 | 54.733 |
-| downside FY2026E | 368.101 | 401.191 | 91.8 | 12.5 | 0.000 | 0.000 |
-| downside FY2027E | 390.959 | 401.191 | 97.4 | 12.5 | 11.429 | 22.858 |
-| downside FY2028E | 413.204 | 401.191 | 103.0 | 12.5 | 11.123 | 22.245 |
-| downside FY2029E | 421.752 | 401.191 | 105.1 | 12.5 | 4.274 | 8.547 |
-| downside FY2030E | 421.752 | 401.191 | 105.1 | 12.5 | 0.000 | 0.000 |
-| upside FY2026E | 385.683 | 401.191 | 96.1 | 12.5 | 8.791 | 17.582 |
-| upside FY2027E | 425.876 | 401.191 | 106.2 | 12.5 | 20.096 | 40.193 |
-| upside FY2028E | 477.605 | 401.191 | 119.0 | 12.5 | 25.865 | 51.729 |
-| upside FY2029E | 546.936 | 401.191 | 136.3 | 12.5 | 34.666 | 69.331 |
-| upside FY2030E | 638.355 | 401.191 | 159.1 | 12.5 | 45.710 | 91.419 |
+| base FY2026E | 400.877 | 401.191 | 99.9 | 25.0 | 32.776 | 32.776 |
+| base FY2027E | 434.755 | 401.191 | 108.4 | 25.0 | 33.878 | 33.878 |
+| base FY2028E | 474.763 | 401.191 | 118.3 | 12.5 | 20.004 | 40.009 |
+| base FY2029E | 520.196 | 401.191 | 129.7 | 12.5 | 22.716 | 45.432 |
+| base FY2030E | 574.759 | 401.191 | 143.3 | 12.5 | 27.282 | 54.563 |
+| downside FY2026E | 368.101 | 401.191 | 91.8 | 25.0 | 0.000 | 0.000 |
+| downside FY2027E | 390.847 | 401.191 | 97.4 | 25.0 | 22.746 | 22.746 |
+| downside FY2028E | 412.957 | 401.191 | 102.9 | 25.0 | 22.110 | 22.110 |
+| downside FY2029E | 421.345 | 401.191 | 105.0 | 12.5 | 4.194 | 8.388 |
+| downside FY2030E | 421.345 | 401.191 | 105.0 | 12.5 | 0.000 | 0.000 |
+| upside FY2026E | 415.376 | 401.191 | 103.5 | 25.0 | 47.275 | 47.275 |
+| upside FY2027E | 455.465 | 401.191 | 113.5 | 12.5 | 20.044 | 40.089 |
+| upside FY2028E | 507.074 | 401.191 | 126.4 | 12.5 | 25.805 | 51.610 |
+| upside FY2029E | 576.268 | 401.191 | 143.6 | 12.5 | 34.597 | 69.194 |
+| upside FY2030E | 667.529 | 401.191 | 166.4 | 12.5 | 45.631 | 91.261 |
 
 ### FY2025 interest back-test (note-8 split vs the earning-base formula)
 
@@ -163,6 +163,28 @@ The reported securities+cash subtotal ties to the FY2025 note-8 split; the amort
 
 ### Tax treatment and dividends in the anchor year
 
-FY2026E retains the actual 9M-2026 tax charge and adds tax on any positive estimated Q4 profit before tax. No deferred-tax credit is recognised for a Q4 loss, so if the downside Q4 is a loss the annual effective rate exceeds the 35% input; this is the model's stated treatment, not an error. The observed 9M-2026 equity already reflects the GHS42.598m dividend paid in 2026 (RB26Q3), so no additional Q4-2026 dividend is assumed and `x_model_dividends` is zero in FY2026E for every scenario. The statutory reserve transfer is modelled at a conservative 25% of positive PAT (source-confirmed FY2024 46.926m / FY2025 63.648m) with the Act 930 s34 band as a sensitivity; it is an internal equity transfer, so total equity and regulatory capital are unaffected, but it caps distributable retained earnings for dividends. See the statutory-reserve section above.
+FY2026E retains the actual 9M-2026 tax charge and adds tax on any positive estimated Q4 profit before tax. No deferred-tax credit is recognised for a Q4 loss, so if the downside Q4 is a loss the annual effective rate exceeds the 35% input; this is the model's stated treatment, not an error. The observed 9M-2026 equity already reflects the GHS42.598m dividend paid in 2026 (RB26Q3), so no additional Q4-2026 dividend is assumed and `x_model_dividends` is zero in FY2026E for every scenario. The statutory reserve transfer is modelled at a conservative minimum of 25% of positive annual PAT or the applicable Act 930 band, less actual YTD transfer, with the statutory-only band as a sensitivity; it is an internal equity transfer, so total equity and regulatory capital are unaffected, but it caps distributable retained earnings for dividends. See the statutory-reserve section above.
 
 FY2026 estimated earnings retain actual 9M income and estimate Q4 only. The Bank reports a net on-balance-sheet FX position (RB25AR p180) but the model keeps a central NO-FX-REVALUATION assumption; the reported FY2025 exposure and a bounded 10% sensitivity are shown above. Full prudential risk weights, OCI, capital deductions and liquidity eligibility are not available, so the capital and reserve checks are simplified screening proxies. Independent review required.
+
+### Additional collateral and wholesale repricing diagnostic
+
+Illustrative static stress, not a full model rerun: 20% of pledged securities is an incremental collateral haircut (not a loss or free cash); +100bp on average borrowings, bank funding and bonds is gross annual pre-tax expense before behavioral or capital feedback. The original pledged assets are already restricted. FY2026 applies one quarter of the annual funding shock, preserving reported nine months.
+
+| Scenario | Year | 20% pledged haircut (GHS m) | Incremental wholesale interest (GHS m) |
+|---|---|---:|---:|
+| base | FY2026E | 574.303 | 7.255 |
+| base | FY2027E | 640.348 | 31.734 |
+| base | FY2028E | 717.190 | 36.420 |
+| base | FY2029E | 803.253 | 41.844 |
+| base | FY2030E | 899.643 | 48.037 |
+| downside | FY2026E | 577.105 | 7.042 |
+| downside | FY2027E | 669.442 | 29.136 |
+| downside | FY2028E | 773.205 | 31.759 |
+| downside | FY2029E | 889.186 | 34.617 |
+| downside | FY2030E | 1018.118 | 37.642 |
+| upside | FY2026E | 570.802 | 7.539 |
+| upside | FY2027E | 616.466 | 35.051 |
+| upside | FY2028E | 671.948 | 42.214 |
+| upside | FY2029E | 735.783 | 51.041 |
+| upside | FY2030E | 809.361 | 61.900 |

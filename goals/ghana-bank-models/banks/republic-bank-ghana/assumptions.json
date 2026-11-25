@@ -1,7 +1,13 @@
 {
   "bank": "republic-bank-ghana",
   "status": "Bank-specific scenario estimates using shared macro v1 (fingerprint b3c4412d681469e8d974e0c067af8e28435f5669900a9f1b4c54b0178992b8df); regulatory threshold 13% and CRR 20% taken from the shared macro file; not investment advice.",
-  "forecast_periods": ["FY2026E", "FY2027E", "FY2028E", "FY2029E", "FY2030E"],
+  "forecast_periods": [
+    "FY2026E",
+    "FY2027E",
+    "FY2028E",
+    "FY2029E",
+    "FY2030E"
+  ],
   "macro_file": "../../sector/macro-assumptions/macro.csv",
   "macro_schema": "../../sector/macro-assumptions/SCHEMA.md",
   "macro_fingerprint": "b3c4412d681469e8d974e0c067af8e28435f5669900a9f1b4c54b0178992b8df",
@@ -15,17 +21,35 @@
       "status": "estimated",
       "method": "2027 onward nominal GDP approximation = shared real GDP growth + CPI inflation, plus a bank-specific spread in percentage points; 2026 Q4 net loan growth applied to the September actual. Annual growth capped/floored at -10% and 35%.",
       "reason": "Bank gross loans grew 12.1% FY2021, 13.3% FY2022, 23.1% FY2023, 23.7% FY2024 and 13.0% FY2025. September-2026 net loans 4,027.925m vs FY2025 net 3,457.667m is a strong 9M run-rate; assume growth normalises toward nominal GDP plus a modest spread.",
-      "base": { "spread_pp": 4, "q4_pct": 5 },
-      "downside": { "spread_pp": -9, "q4_pct": -3 },
-      "upside": { "spread_pp": 9, "q4_pct": 10 }
+      "base": {
+        "spread_pp": 4,
+        "q4_pct": 5
+      },
+      "downside": {
+        "spread_pp": -9,
+        "q4_pct": -3
+      },
+      "upside": {
+        "spread_pp": 9,
+        "q4_pct": 10
+      }
     },
     "deposit_growth": {
       "status": "estimated",
       "method": "Nominal GDP approximation plus spread; 2026 Q4 from the September deposit balance.",
       "reason": "Bank customer deposits rose sharply to FY2024 and FY2025 (6,114.923m, 8,368.068m) but fell in the nine months to Sep-2026 to 7,222.033m as the Bank shifted to wholesale borrowing (2,767.292m at Sep-2026 vs 2,091.662m at FY2025). Assume Q4 recovery and then growth normalising toward nominal GDP.",
-      "base": { "spread_pp": 2, "q4_pct": 4 },
-      "downside": { "spread_pp": -5, "q4_pct": -2 },
-      "upside": { "spread_pp": 8, "q4_pct": 12 }
+      "base": {
+        "spread_pp": 2,
+        "q4_pct": 4
+      },
+      "downside": {
+        "spread_pp": -5,
+        "q4_pct": -2
+      },
+      "upside": {
+        "spread_pp": 8,
+        "q4_pct": 12
+      }
     },
     "investment_yield": {
       "status": "estimated",
@@ -109,8 +133,8 @@
     },
     "statutory_reserve_transfer_pct": {
       "status": "estimated",
-      "method": "Annual transfer from retained earnings (income surplus) to the statutory reserve fund, as a share of positive PAT. An internal equity transfer, so total equity and regulatory capital are unaffected; it caps distributable retained earnings for dividends. The statutory FUND is tracked separately (x_statutory_reserve_fund_fc) so the Act 930 s34 threshold can be tested; the Act 930 s34 band (a function of statutory fund / paid-up capital) is reported as x_statutory_band_transfer / x_statutory_band_pct, a sensitivity.",
-      "reason": "Source-confirmed 25% of positive PAT: FY2024 transfer 46.926m and FY2025 transfer 63.648m (statement of changes in equity). The FY2025 closing statutory fund was 368.101m and stated capital 401.191m, so the fund is BELOW stated capital; under Bank of Ghana practice (Act 930 s34; the Bank's own policy note, printed p.139) the transfer is 50% while the fund is below 25% of paid-up capital, 37.5% at 25-50%, 25% at 50-75% and 12.5% at 75%+. The Bank actually APPLIED 25% in both FY2024 and FY2025. The base case therefore keeps a CONSERVATIVE 25% policy, explicitly LABELLED as a policy choice and NOT a statutory requirement; the Act 930 s34 band is supplied as a sensitivity. The observed 9M-2026 statutory fund equals the FY2025 closing 368.101m (no transfer in the nine months), so the anchor year adds only the transfer on estimated positive Q4 PAT; the full-year 2026 statutory movement is genuinely unavailable and is not invented.",
+      "method": "Positive full-year PAT times max(25% conservative floor, applicable opening statutory band), less actual YTD transfer in FY2026 (zero). Statutory-only minimum reported as sensitivity; internal transfer.",
+      "reason": "Act 930 section 34 printed p30: fund below 50% of paid-up capital -> 50%; 50% to below 100% -> 25%; at least 100% -> 12.5%. FY2025 fund 368.101m, stated capital 401.191m. Issuer Q3 Bank SoCE p1 visually confirms unchanged 368.101m and zero YTD transfer. FY2026 full-year actual unavailable; estimate remaining transfer on full-year PAT, not Q4 PAT. Source-confirmed FY2024/25 transfers 46.926m/63.648m. Central 25% floor is a conservative policy, not a claim of statutory minimum in all years.",
       "base": 25,
       "downside": 25,
       "upside": 25
@@ -141,15 +165,32 @@
     },
     "model_structure": {
       "status": "estimated",
-      "method": "Hold non-core balance sheet lines proportional to deposit growth, except property/other assets grow with opex; stated capital and other reserves held constant; securities follow deposit growth; cash balances plug the accounting identity, flagging negative balances or a reserve shortfall without automatically borrowing. Earning base: loans at GROSS carrying amount, amortised-cost securities = unpledged amortised-cost investment securities (note 21c) PLUS pledged assets (note 20, amortised-cost financial assets), and EARNING cash (cash and BoG balances less a CRR-proxy reserve). FVTPL securities are EXCLUDED from the amortised-cost yield (their return sits in the net FVTPL line). Securities/cash yields and deposit/wholesale costs are calibrated from the FY2025 note-8/note-9 split (RB25AR printed pp.106); loans keep the forward policy-plus-spread driver. RWA = gross loans + FY2025 calibrated residual risk intensity x (total assets minus gross loans). Q3 regulatory capital anchored on reported CAR x estimated RWA; Tier 1 capital anchored using the FY2025 Tier 1 / total regulatory capital relationship. Retained profit increments regulatory capital; dividends constrained to pre-dividend cash and the CAR buffer. Report a proxy, not a regulatory return.",
-      "q4_cost_multiplier": { "base": 1, "downside": 1.1, "upside": 1 },
-      "q4_funding_multiplier": { "base": 1, "downside": 1.25, "upside": 0.9 },
-      "fee_expense_ratio_multiplier": { "base": 1, "downside": 1.1, "upside": 0.95 },
-      "trading_growth_spread_pp": { "base": 0, "downside": -8, "upside": 3 },
+      "method": "Hold non-core balance sheet lines proportional to deposit growth, except property/other assets grow with opex; stated capital and other reserves held constant; securities follow deposit growth; cash balances plug the accounting identity, flagging negative balances or a reserve shortfall without automatically borrowing. Earning base: loans at GROSS carrying amount, amortised-cost securities = unpledged amortised-cost investment securities (note 21c) PLUS pledged assets (note 20, amortised-cost financial assets), and EARNING cash (cash and BoG balances less a CRR-proxy reserve). FVTPL securities are EXCLUDED from the amortised-cost yield (their return sits in the net FVTPL line). Securities/cash yields and deposit/wholesale costs are calibrated from the FY2025 note-8/note-9 split (RB25AR printed pp.106); loans use the FY2025 implied gross-loan yield and partial policy-rate pass-through. RWA = gross loans + FY2025 calibrated residual risk intensity x (total assets minus gross loans). Q3 regulatory capital anchored on reported CAR x estimated RWA; Tier 1 capital anchored using the FY2025 Tier 1 / total regulatory capital relationship. Retained profit increments regulatory capital; dividends constrained to pre-dividend cash and the CAR buffer. Report a proxy, not a regulatory return.",
+      "q4_cost_multiplier": {
+        "base": 1,
+        "downside": 1.1,
+        "upside": 1
+      },
+      "q4_funding_multiplier": {
+        "base": 1,
+        "downside": 1.25,
+        "upside": 0.9
+      },
+      "fee_expense_ratio_multiplier": {
+        "base": 1,
+        "downside": 1.1,
+        "upside": 0.95
+      },
+      "trading_growth_spread_pp": {
+        "base": 0,
+        "downside": -8,
+        "upside": 3
+      },
       "cash_yield_policy_factor": 0.3,
       "q4_opex_balance_growth": "Annual opex growth divided by four for Q4 property and other assets.",
       "allowance_bridge": "Implied write-offs/other reductions = opening allowance + modelled impairment - closing allowance; the impairment floor is max(risk-based charge, allowance stock increase, zero). Movements are scenario estimates, not observed write-offs. FY2026 opening allowance is estimated; Q4 only.",
-      "cash_residual": "Do not hide negative cash; show the reserve and funding gap. Cash is the reported cash-and-BoG aggregate, so regulatory compliance is not established."
+      "cash_residual": "Do not hide negative cash; show the reserve and funding gap. Cash is the reported cash-and-BoG aggregate, so regulatory compliance is not established.",
+      "collateral_stress": "Static 20% haircut on restricted pledged securities, plus incremental 100bp wholesale funding repricing on average balances, Q4 only in FY2026. No realized loss, no behavioral feedback; diagnostic only."
     }
   },
   "notes": [

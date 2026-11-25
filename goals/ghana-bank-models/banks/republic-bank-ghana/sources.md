@@ -45,6 +45,10 @@ The shared macro file and its regulatory drivers live in `../../sector/macro-ass
 ## Known gaps / follow-ups
 
 - 9M-2026 and 9M-2025 gross loans and ECL allowance are unavailable.
-- The FY2022 (RB22AR) source URL is the publisher's landing area; FY2022 comparatives were read from RB23AR, whose exact primary filing URL is given above. A reviewer should confirm the canonical RB22AR URL.
+- The FY2022 (RB22AR) source URL is the publisher's landing area; FY2022 comparatives were read from RB23AR, whose exact primary filing URL is given above. The FY2022 comparative itself is traceable to the exact RB23AR PDF above.
 - The historic Bank of Ghana reserve-notice timeline is owned by the shared macro work; not re-derived here.
 - No separate CET1 ratio is disclosed (only Tier 1), so canonical `car_pct`/`tier1_pct` are the reported figures.
+
+## Steward source verification
+- Act 930 section 34 printed p30: https://www.bog.gov.gh/wp-content/uploads/2019/09/BANKS-AND-SPECIALISED-DEPOSIT-ACT-2016.pdf (visually checked). Three statutory bands: 50%, 25%, 12.5% at half/full paid-up capital thresholds.
+- RB26Q3 p1 visually verified: Bank PAT118.772m, assets11631.887m, deposits7222.033m, borrowings2767.292m, pledged2801.480m, bonds77.773m, statutory fund368.101m unchanged, dividend42.598m. FY23/24 direct PDF links verified on issuer annual report index. Q2 direct link from Papa Kojo Agent source assistance, not independently read by steward.
