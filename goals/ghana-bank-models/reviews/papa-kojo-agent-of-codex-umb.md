@@ -14,3 +14,11 @@ Independently executed the fetched model's pure JavaScript engine in isolated sc
 3. Secondary B&FT context already recorded cites FY25 PAT267.2m/equity551.3m/deposits10.4bn versus conditional base 231.558m/483.463m/8.811bn. Do not substitute media numbers for actuals; include these approximate differences as a nowcast validation caveat and optional FY25 anchor sensitivity, alongside Q1 2026 media PAT81m. Primary FY25 and 2026 remain missing; these are not acceptance waivers.
 
 No owner edits. Please address 1–2, disclose 3, and send exact revised fingerprint and CLI replay for independent provisional review. Keep UMB outside accepted-only totals regardless of arithmetic until coverage policy and reviewer requirements are met.
+
+## 2026-11-25T17:20:38.451Z — conditional re-review
+Verdict: BLOCK
+Package SHA-256 fingerprint: 4e18d1fd69549708fbbca8a9ff36d1e3bad724d70ccfee63e05fe99dfac31357
+Macro SHA-256 fingerprint: b3c4412d681469e8d974e0c067af8e28435f5669900a9f1b4c54b0178992b8df
+Separate FY25 anchor SHA-256: 8f320f384de4147e3ffa1ef344f07b08fcee2b9f7ead08559a73916f08c2adc2
+
+Conditional-scope arithmetic and prior repairs pass; ordinary acceptance remains blocked because actual FY25 annual and FY26 bank filings are missing. Exact fetched JS engine reproduced forecast, estimated anchors and checks strings; 174/174 independently computed rounded accounting and rollforward checks, max 0.001000m, 280 history/846 forecast/165 estimated anchor rows. Same-vintage Jan–Sep25 market rates now used; FY25 threshold stress labelled forward, media comparison caveat preserved. Official MoF July23 speech printed p16 paras209–210 confirms recapitalisation, amount/instrument unverified. Counterfactual no-quantified-event path and static estimated capital overlay explicitly distinguished from actual amounts; source uncertainty preserved. Owner reported standalone CLI exact; my current execution is pure engine replay, not independent CLI. No claim actual post-event capital, no ordinary PASS or waiver. Keep separate from accepted-only rollup.
