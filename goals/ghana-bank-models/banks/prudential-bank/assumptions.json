@@ -1,0 +1,87 @@
+{
+  "bank": "prudential-bank",
+  "macro_file": "../../sector/macro-assumptions/macro.csv",
+  "status": "provisional; FY2025 audited base only, 9M2026 unavailable",
+  "capital_event": {
+    "amount_m": 1130,
+    "date": "2026-10-09",
+    "recognition": "conditional forecast assumes all cash/equity at year end, split and regulatory eligibility unverified; never booked in reported history"
+  },
+  "anchor": {
+    "year": "FY2025",
+    "net_loan_cost_basis": true,
+    "rwa_density_proxy": 0.45,
+    "starting_car_pct": -20.19,
+    "reg_capital_pass_through": {
+      "base": 0.9,
+      "downside": 0.8,
+      "upside": 1
+    }
+  },
+  "drivers": {
+    "base": {
+      "loan_spread": -2,
+      "deposit_spread": 0,
+      "opex_spread": -2,
+      "fee_spread": 0,
+      "loan_yield_spread": 8,
+      "investment_yield_factor": 0.75,
+      "cash_yield_factor": 0.1,
+      "cost_of_risk_pct": 4,
+      "npl_pct": [
+        52,
+        45,
+        38,
+        32,
+        27
+      ],
+      "trade_scale": 0.8,
+      "other_scale": 0.75,
+      "tax_pct": 35
+    },
+    "downside": {
+      "loan_spread": -9,
+      "deposit_spread": -7,
+      "opex_spread": 4,
+      "fee_spread": -5,
+      "loan_yield_spread": 6,
+      "investment_yield_factor": 0.65,
+      "cash_yield_factor": 0.05,
+      "cost_of_risk_pct": 10,
+      "npl_pct": [
+        60,
+        60,
+        58,
+        55,
+        52
+      ],
+      "trade_scale": 0.55,
+      "other_scale": 0.5,
+      "tax_pct": 35
+    },
+    "upside": {
+      "loan_spread": 3,
+      "deposit_spread": 4,
+      "opex_spread": -4,
+      "fee_spread": 4,
+      "loan_yield_spread": 10,
+      "investment_yield_factor": 0.85,
+      "cash_yield_factor": 0.15,
+      "cost_of_risk_pct": 2,
+      "npl_pct": [
+        48,
+        37,
+        28,
+        20,
+        15
+      ],
+      "trade_scale": 0.95,
+      "other_scale": 0.9,
+      "tax_pct": 35
+    }
+  },
+  "notes": [
+    "GDP plus CPI nominal growth proxy, not guidance. Investment rate 50% 364-day bill plus 50% 10-year bond × scenario factor. FY25 benchmark uses 364-day annual average17.48%; no annual bond yield. Funding rate = FY25 observed blended cost divided by FY25 end-policy18%, times current scenario end-policy; no repricing detail.",
+    "Net-loan credit charge proxy (gross/ECL unavailable FY25); not regulatory NPL forecast. No dividends because accumulated losses and statutory reserve restrictions. No FX P&L due to missing net monetary position. RWA proxy sensitivity only, not compliance."
+  ]
+}
