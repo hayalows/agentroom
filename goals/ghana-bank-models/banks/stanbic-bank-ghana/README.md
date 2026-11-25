@@ -24,7 +24,7 @@ Stanbic's income statement separates an **Indirect tax** line from the direct in
 
 ## Reproduction and limitations
 
-Run `python model.py` in this directory (Python 3, standard library only). It reads `financials.csv`, `assumptions.json` and the shared `../../sector/macro-assumptions/macro.csv`, and writes `forecast.csv` and `checks.md`. Historical numbers come from `build_financials.py`; `checks_history.py` recomputes the historical bridges. 302 historical rows; 870 forecast rows (15 scenario-years). All historical balance, income, tax-split and net-loan bridges pass, and all 15 forecast accounting bridges pass.
+Run `python model.py` in this directory (Python 3, standard library only). It reads `financials.csv`, `assumptions.json` and the shared `../../sector/macro-assumptions/macro.csv`, and writes `forecast.csv` and `checks.md`. Historical numbers come from `build_financials.py`; `checks_history.py` recomputes the historical bridges. 303 historical rows; 915 forecast rows (15 scenario-years). All historical balance, income, tax-split and net-loan bridges pass, and all 15 forecast accounting bridges pass.
 
 ## Reporting conventions and review fixes
 
