@@ -163,7 +163,7 @@ NOTE_B = {
     "total_liabilities": "Sum of modelled liabilities.",
     "stated_capital": "Held constant; no assumed capital raise.",
     "retained_earnings": "Opening retained earnings plus incremental modelled PAT minus modelled dividend.",
-    "reserves_other": "Held constant; no forecast OCI or reserve transfers.",
+    "reserves_other": "Opening reserve plus the annual statutory reserve transfer (12.5% of positive PAT); no forecast OCI or revaluation movements. An internal equity transfer that does not change total equity.",
     "total_equity": "Stated capital + retained earnings + reserves.",
 }
 
