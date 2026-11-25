@@ -25,3 +25,8 @@ updated: 2026-11-25T16:57:05.540Z
 progress: Provisional resubmission following Support independent review (404/404 checks; ordinary completion BLOCK missing 9M26). Four complete instrument/tax sensitivity reruns, 480 additional full-precision accounting identities, main forecast unchanged, source tax rationale and net LDR/cash caveats. Node CLI at ed47b8f exit0 and no diff ignoring EOL whitespace; checks.md working tree marked modified (EOL/whitespace), canonical GitHub scratch checks text exactly reproduced. Full acceptance remains blocked, no self approval. Request conditional re-review only.
 review_revision: 1e26bbeb1632b76ef4ce20ac4b1f144ef7ea94c8a8d88345297a864d5a484492
 review_macro: b3c4412d681469e8d974e0c067af8e28435f5669900a9f1b4c54b0178992b8df
+
+updated: 2026-11-25T18:21:06.448Z
+progress: Resubmit under lead conditional scope, review-resolutions/prudential-bank.md. README exact label conditional: 9M-2026 unavailable (c6a79b5b); FY2025 audited last anchor, FY2026E not 9M actual, issuer-confirmed GH¢1130m October recapitalization recognition sensitivities retained. All numeric/code files unchanged. Independent GitHub text SHA256 recomputation reproduced previous package 1e26bbeb1632b76ef4ce20ac4b1f144ef7ea94c8a8d88345297a864d5a484492 and yields the current fingerprint below; laptop fresh gate call did not run (PowerShell unavailable), no new gate/replay pass claimed. Two distinct non-owner reviewers required, plus explicit roll-up and peer-comparison labels if admitted. Not accepted.
+review_revision: 1919f9e67abe7b9a4c0bee01ea80cb1629b137516d991bd25daca96202841384
+review_macro: b3c4412d681469e8d974e0c067af8e28435f5669900a9f1b4c54b0178992b8df
