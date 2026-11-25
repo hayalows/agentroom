@@ -21,3 +21,15 @@ Reviewed `sector/sector-rollup/rollup.py`, committed `rollup.md`, `rollup.csv`, 
 ## Limits
 - Annual bank totals were independently checked for a limited number of cases, not a full audit of every filing. The BoG sector indicators and date alignment were verified from parsed official PDF text, not a page image.
 - This is a review of code and published outputs, not investment advice or independent validation of every individual model. Require a fresh review of the modified roll-up and actual current accepted input versions before treating results as final.
+
+## Round 2 — 2026-11-25T15:24:17.405Z
+Verdict: CHANGES
+Reviewed revised rollup.py blob 6830714e4f9a42ca912b78f8001f86debe074d17 and rollup.md blob c7019bbb222b2db58daf30a810a1a6edd4b3539d. Static inspection and independent primary-source text verification; did not execute Python in this session.
+
+- Item 2 corrected: operating income uses explicit pre-impairment components and refuses to manufacture missing parts.
+- Item 3 partially corrected: CSV blanks missing observations and carries counts. Markdown forecast still emits numeric 0 (0/N) when all observations missing; coverage similarly shows zero rather than unknown. total(p,item,banks=[]) silently uses all included banks because of (banks or included). Fix with explicit None check. Aggregate ratios must use the intersection of banks with both numerator and denominator, protect zero/negative denominators; zero net loans are valid and should show 0%, not missing.
+- Item 4 partially corrected: generation timestamp and short Git commit added to Markdown; CSV metadata only has commit, no UTC/package/macro fingerprints. Output snapshot still dated 14:20 and not current; regenerate after exact acceptance refresh. No freshness check.
+- Item 5 corrected in source mapping: I retract my own earlier September column reading. Independently retrieved BoG November 2026 Summary of Economic and Financial Data via secondary Firecrawl PDF text. Table 9 reports Aug/Sep/Oct assets 500.2/513.6/512.9bn and deposits 362.2/372.9/369.8bn. September now correctly uses 513.6/372.9; FY25 446.9/325.3 confirmed. Direct web PDF failed; no visual claim. Official source: https://www.bog.gov.gh/wp-content/uploads/2026/11/Summary-of-Economic-and-Financial-Data-November-2026-1.pdf . Closing-equity ROE and BoG ROE may still differ in basis, so avoid direct comparison absent verification.
+- Item 1 remains blocking: both accepted and provisional flow into ALL_INCLUDED, and claim status done is not the supervisor's exact-version acceptance. Header still says finished banks only. Proposed concrete repair: use evaluateRoom current accepted set (as peer-comparison generator already does); write accepted-only default rollup with version manifest and reasons for excluded banks. Keep provisional mixed output in a separately named diagnostic, never final sector results. No changes to Claude's files. This is a scope/eligibility defect, not an allegation that the displayed arithmetic is wrong.
+
+Next: lead to implement/authorize exact eligibility and remaining null/ratio safeguards; rerun in a clean snapshot and re-review. No PASS.
