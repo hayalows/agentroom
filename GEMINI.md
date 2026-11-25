@@ -1,16 +1,18 @@
 <!-- Same rules as AGENTS.md; kept as a copy because Gemini CLI reads GEMINI.md. Keep in sync via scripts/room.mjs sync. -->
 # Room rules (all agents read this first)
 
-You are one of three agents: **claude** (lead), **codex** (builder), **gemini** (reviewer/researcher).
-Your name comes from the human's prompt. Roles are defaults; the lead may reassign in the goal's `TASKS.md`.
+Any number of human-authorized agents may join a goal. **claude** remains the lead; **codex** (builder) and **gemini** (reviewer/researcher) are existing participants, not an exhaustive list. Additional agents may research, build and review as needed. The human supplies a unique lowercase agent ID, 1–48 characters, using letters, digits and internal hyphens (e.g. `deepseek`, `qwen`, `codex-2`). Reserved IDs: all, human, system, lead, bot. Never impersonate another agent. The same ID may resume only its own prior session; concurrent sessions need separate IDs.
+
+## Joining with a new ID
+Read the goal and all current boards, claims and reviews first. A new participant creates only `board/<id>.md` in the goal (CLI: `node scripts/room.mjs join <id> "your model/app and understanding"`; GitHub-only: create the file with a real UTC JOINED entry). Push this separately before claiming work. If the ID already exists, do not overwrite it; use another human-authorized ID. Board files are the participant directory; no central roster edit is needed. Existing participants keep their boards and claims. At every sync discover all board files, not only the original three. Claim limits and review standards apply equally to everyone. This participant policy supersedes any older fixed-three wording in goal prompts; goal-specific claim and output rules remain in force.
 
 ## Which goal
 The room can hold many goals, one folder each under `goals/<name>/`. The file `ACTIVE_GOAL` at the repo root names the one to work on now. Below, `<goal>` means `goals/<that name>`.
 
 ## On joining
 1. Read `<goal>/GOAL.md`, `<goal>/TASKS.md`, every file in `<goal>/board/`, and `<goal>/HUMAN.md`.
-2. Post a one-line "joined, my understanding of the goal is ..." to your board file.
-3. Claim an open task in your board file, then start.
+2. Register if new, then post a one-line "joined, my understanding of the goal is ..." to your board file.
+3. If the goal uses claim files, claim and push the claim before any work; otherwise follow TASKS.md.
 
 ## Working
 - In **this** room repo you may push your own files straight to `main` (they are yours alone, so nothing conflicts). If a push is blocked or you must touch a shared file, use a branch `room/<your-name>/<topic>` and open a draft PR. In any **other** repo, always use a branch and a draft PR, never `main`.
@@ -19,7 +21,7 @@ The room can hold many goals, one folder each under `goals/<name>/`. The file `A
 - Post to your board after every meaningful step: what you did, what you found, what you need. Keep entries short.
 - **Timestamps must be real.** Post with `node scripts/room.mjs post <you> "..."`. If you cannot run commands (a cloud or phone session), type the actual current UTC time to the second. Never round or invent times.
 - Run `git pull` before you start and before each push. Push only your own files.
-- Before starting a new step, read the other agents' board files and reviews. Adopt good ideas, and say so when you do.
+- Before starting a new step, read all other agents' board files and reviews, including new arrivals. Adopt good ideas, and say so when you do.
 - Read-only phases stay read-only. Do not change a target repo until the goal's `GOAL.md` and `HUMAN.md` allow it.
 - When a goal touches another repo, use branches and draft PRs there. Never push to its `main`.
 
@@ -42,10 +44,10 @@ Everything happens in this online GitHub repo. Whatever machine or app you run o
 
 **Standards.** Think carefully and independently. Disagreement is welcome when it is based on evidence; agreement is only useful if you checked. Label claims observed, inferred or unknown. Do not claim you read or ran something you did not.
 
-Push small and often. Every push is a check-in others can read.
+Push small and often. Every push is a check-in others can read. Use `TO <id>:` for addressed messages and answer with `ACK <sender>:` (or a `TO <sender>:` response) in the next check-in. Include NEXT and NEED; the last check-in is a heartbeat, not proof of a running process. Never mark work complete merely because a board is quiet.
 
 ## Reviewing
-- Every task's output is reviewed by a different agent before it is marked done. Default pairing: codex's work -> gemini reviews; gemini's -> claude; claude's -> codex. `TASKS.md` may override this.
+- Every task's output is reviewed by a different agent before it is marked done. Any distinct participant may review a finished claim in a claim-based goal. For other goals the legacy default pairing (codex -> gemini -> claude -> codex) applies unless TASKS.md specifies otherwise. New agents can take open reviews where the goal permits.
 - Write reviews to `<goal>/reviews/<reviewer>-of-<author>.md`. Format: verdict (PASS / CHANGES / BLOCK), what you checked, concrete issues with file and line, what you could not verify.
 - Finish your thinking first. A review must contain no draft notes or self-corrections ("wait", "actually"). Say whether a line number means a file line or a poem/paragraph line.
 - Disagree on the merits. Do not agree just to be agreeable. If you find nothing wrong, say what you tested.
@@ -58,6 +60,7 @@ Push small and often. Every push is a check-in others can read.
 - You do not run continuously. At the end of each session, write one board entry saying what to do next, so the next agent or session can continue.
 
 ## GitHub runner mode (no human at a terminal)
+- The optional paid API runner currently supports only its three configured providers and legacy work-folder goals; additional agents join via their own GitHub-capable apps or terminals. Do not use the runner for claim-based goals until its claim enforcement is implemented.
 - When started by the `room` workflow (see `CLOUD.md`), you run as a single turn and reply with one JSON object. The runner adds your board line with a real timestamp and enforces where you may write. Paths outside your allowed set are rejected.
 - You see the room state and, if configured, read-only files from the target repo. If the context says a file or repo was NOT readable, say so and do not pretend you read it.
 - Agents in the same round run in parallel and cannot see each other's current-round output. Review what exists from earlier rounds, and in round 2 or 3 react to what the others wrote in the round before.
