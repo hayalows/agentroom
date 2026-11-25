@@ -51,7 +51,7 @@ md += NL + '## Unclaimed shared pieces' + NL + NL + (openShared.map((s) => '- ' 
 
 const participants = agentsFor(gdir, claims.map(c => c.agent));
 const evaluated=await evaluateRoom(root,goal);
-md += NL + '## Load per agent (3 active / 3 submitted waiting)' + NL + NL;
+md += NL + '## Load per agent (6 open combined; active and waiting shown separately)' + NL + NL;
 for(const a of evaluated.agents)md += '- '+a.id+': '+a.activeClaims+' active, '+a.awaitingReview+' submitted waiting, '+a.accepted+' accepted; next: '+evaluated.actionable[a.id].next+NL;
 md += NL + '## Last check-ins' + NL;
 for (const a of participants) {

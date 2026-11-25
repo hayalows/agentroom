@@ -50,7 +50,7 @@ try{
     const s=await evaluateRoom(root,goal);
     if(s.goalReadyForLead){record('goal-claims-complete',{note:'all bank acceptance gates and claim completion conditions met; final sector sign-off remains with lead'});break;}
     const signature=w=>hash(JSON.stringify({last:s.agents.find(a=>a.id===w.id)?.last,queue:s.actionable[w.id],messages:s.pending.filter(m=>m.to===w.id)}));
-    const runnable=workers.filter(w=>s.actionable[w.id]&&s.actionable[w.id].next!=='wait-or-report-blocker'&&(failures.get(w.id)||0)<2&&seen.get(w.id)!==signature(w)).sort((a,b)=>(dispatches.get(a.id)||0)-(dispatches.get(b.id)||0));
+    const runnable=workers.filter(w=>s.actionable[w.id]&&!['wait-or-report-blocker','paused-no-dispatch'].includes(s.actionable[w.id].next)&&(failures.get(w.id)||0)<2&&seen.get(w.id)!==signature(w)).sort((a,b)=>(dispatches.get(a.id)||0)-(dispatches.get(b.id)||0));
     if(!runnable.length){idle++;record('idle',{note:'No fresh eligible checkpoint; do not relaunch unchanged or blocked sessions',idle});if(idle>=3)break;await new Promise(r=>setTimeout(r,Math.min(poll*1000,Math.max(0,deadline-Date.now()))));continue;}
     idle=0;
     const batch=runnable.slice(0,Math.min(parallel,maxTurns-turns));
