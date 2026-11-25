@@ -36,7 +36,7 @@ adb,FY2021,ratios,car_pct,14.49,%,ADB22,5,reported,Bank-only regulatory CAR.
 adb,FY2021,ratios,tier1_pct,,%,,,unavailable,Total Tier 1 not separately disclosed; CET1 reported in x_cet1_pct.
 adb,FY2021,ratios,x_cet1_pct,12.49,%,ADB22,5,reported,Bank-only Common Equity Tier 1 ratio.
 adb,FY2021,ratios,npl_pct,31.21,%,ADB22,5,reported,Bank-only NPL to gross loans.
-adb,FY2021,ratios,ldr_pct,46.3205,%,ADB22,1,derived,loans_and_advances_net / customer_deposits * 100 (net basis).
+adb,FY2021,ratios,ldr_pct,,%,,,unavailable,Gross loans not disclosed for this period; net basis is in x_net_ldr_pct.
 adb,FY2021,ratios,cost_to_income_pct,73.7615,%,ADB22,2,derived,(staff + da + other_operating_expenses) / total_operating_income * 100.
 adb,FY2021,ratios,roe_pct,,%,,,unavailable,Opening FY2020 not retrieved / 9M-2026 interim.
 adb,FY2021,ratios,roa_pct,,%,,,unavailable,Opening FY2020 not retrieved / 9M-2026 interim.
@@ -77,7 +77,7 @@ adb,FY2022,ratios,car_pct,7.36,%,ADB22,5,reported,Bank-only regulatory CAR.
 adb,FY2022,ratios,tier1_pct,,%,,,unavailable,Total Tier 1 not separately disclosed; CET1 reported in x_cet1_pct.
 adb,FY2022,ratios,x_cet1_pct,4.36,%,ADB22,5,reported,Bank-only Common Equity Tier 1 ratio.
 adb,FY2022,ratios,npl_pct,29.74,%,ADB22,5,reported,Bank-only NPL to gross loans.
-adb,FY2022,ratios,ldr_pct,55.2817,%,ADB22,1,derived,loans_and_advances_net / customer_deposits * 100 (net basis).
+adb,FY2022,ratios,ldr_pct,,%,,,unavailable,Gross loans not disclosed for this period; net basis is in x_net_ldr_pct.
 adb,FY2022,ratios,cost_to_income_pct,89.8327,%,ADB22,2,derived,(staff + da + other_operating_expenses) / total_operating_income * 100.
 adb,FY2022,ratios,roe_pct,-46.5133,%,ADB22,2,derived,profit_after_tax / average total_equity * 100.
 adb,FY2022,ratios,roa_pct,-5.3549,%,ADB22,2,derived,profit_after_tax / average total_assets * 100.
@@ -118,7 +118,7 @@ adb,FY2023,ratios,car_pct,-22.61,%,ADB24,2,reported,Bank-only regulatory CAR.
 adb,FY2023,ratios,tier1_pct,,%,,,unavailable,Total Tier 1 not separately disclosed; CET1 reported in x_cet1_pct.
 adb,FY2023,ratios,x_cet1_pct,-25.61,%,ADB24,2,reported,Bank-only Common Equity Tier 1 ratio.
 adb,FY2023,ratios,npl_pct,70.25,%,ADB24,2,reported,Bank-only NPL to gross loans.
-adb,FY2023,ratios,ldr_pct,34.3772,%,ADB24,1,derived,loans_and_advances_net / customer_deposits * 100 (net basis).
+adb,FY2023,ratios,ldr_pct,,%,,,unavailable,Gross loans not disclosed for this period; net basis is in x_net_ldr_pct.
 adb,FY2023,ratios,cost_to_income_pct,110.8994,%,ADB24,1,derived,(staff + da + other_operating_expenses) / total_operating_income * 100.
 adb,FY2023,ratios,roe_pct,-298.193,%,ADB24,1,derived,profit_after_tax / average total_equity * 100.
 adb,FY2023,ratios,roa_pct,-9.9109,%,ADB24,1,derived,profit_after_tax / average total_assets * 100.
@@ -159,7 +159,7 @@ adb,FY2024,ratios,car_pct,-3.15,%,ADB25,3,reported,Bank-only regulatory CAR.
 adb,FY2024,ratios,tier1_pct,,%,,,unavailable,Total Tier 1 not separately disclosed; CET1 reported in x_cet1_pct.
 adb,FY2024,ratios,x_cet1_pct,-6.15,%,ADB25,3,reported,Bank-only Common Equity Tier 1 ratio.
 adb,FY2024,ratios,npl_pct,75.26,%,ADB25,3,reported,Bank-only NPL to gross loans.
-adb,FY2024,ratios,ldr_pct,21.3727,%,ADB25,1,derived,loans_and_advances_net / customer_deposits * 100 (net basis).
+adb,FY2024,ratios,ldr_pct,35.0764,%,ADB25AR,121,derived,Gross loans (note 21) / customer_deposits * 100 (gross basis). Net basis is in x_net_ldr_pct.
 adb,FY2024,ratios,cost_to_income_pct,91.5004,%,ADB25,1,derived,(staff + da + other_operating_expenses) / total_operating_income * 100.
 adb,FY2024,ratios,roe_pct,5.964,%,ADB25,1,derived,profit_after_tax / average total_equity * 100.
 adb,FY2024,ratios,roa_pct,0.2932,%,ADB25,1,derived,profit_after_tax / average total_assets * 100.
@@ -200,7 +200,7 @@ adb,FY2025,ratios,car_pct,27.17,%,ADB25,3,reported,Bank-only regulatory CAR.
 adb,FY2025,ratios,tier1_pct,,%,,,unavailable,Total Tier 1 not separately disclosed; CET1 reported in x_cet1_pct.
 adb,FY2025,ratios,x_cet1_pct,25.17,%,ADB25,3,reported,Bank-only Common Equity Tier 1 ratio.
 adb,FY2025,ratios,npl_pct,70.53,%,ADB25,3,reported,Bank-only NPL to gross loans.
-adb,FY2025,ratios,ldr_pct,15.2171,%,ADB25,1,derived,loans_and_advances_net / customer_deposits * 100 (net basis).
+adb,FY2025,ratios,ldr_pct,29.4554,%,ADB25AR,121,derived,Gross loans (note 21) / customer_deposits * 100 (gross basis). Net basis is in x_net_ldr_pct.
 adb,FY2025,ratios,cost_to_income_pct,52.1578,%,ADB25,1,derived,(staff + da + other_operating_expenses) / total_operating_income * 100.
 adb,FY2025,ratios,roe_pct,19.5582,%,ADB25,1,derived,profit_after_tax / average total_equity * 100.
 adb,FY2025,ratios,roa_pct,2.2608,%,ADB25,1,derived,profit_after_tax / average total_assets * 100.
@@ -241,7 +241,7 @@ adb,9M-2026,ratios,car_pct,27.41,%,ADB26Q3,5,reported,Bank-only regulatory CAR.
 adb,9M-2026,ratios,tier1_pct,,%,,,unavailable,Total Tier 1 not separately disclosed; CET1 reported in x_cet1_pct.
 adb,9M-2026,ratios,x_cet1_pct,25.41,%,ADB26Q3,5,reported,Bank-only Common Equity Tier 1 ratio.
 adb,9M-2026,ratios,npl_pct,66.32,%,ADB26Q3,5,reported,Bank-only NPL to gross loans.
-adb,9M-2026,ratios,ldr_pct,13.7986,%,ADB26Q3,1,derived,loans_and_advances_net / customer_deposits * 100 (net basis).
+adb,9M-2026,ratios,ldr_pct,,%,,,unavailable,Gross loans not disclosed for this period; net basis is in x_net_ldr_pct.
 adb,9M-2026,ratios,cost_to_income_pct,60.744,%,ADB26Q3,2,derived,(staff + da + other_operating_expenses) / total_operating_income * 100.
 adb,9M-2026,ratios,roe_pct,,%,,,unavailable,Opening FY2020 not retrieved / 9M-2026 interim.
 adb,9M-2026,ratios,roa_pct,,%,,,unavailable,Opening FY2020 not retrieved / 9M-2026 interim.
@@ -269,3 +269,9 @@ adb,FY2024,balance_sheet,x_regulatory_capital,-133.407,GHS millions,ADB25AR,102,
 adb,FY2024,balance_sheet,x_tier2_capital,126.956,GHS millions,ADB25AR,102,reported,Note 5.7.2 (printed p102). Evidence pack (assistance/gemini/adb-earning-assets/findings.md); steward did not view the page. 
 adb,FY2024,balance_sheet,x_cet1_capital,-260.363,GHS millions,ADB25AR,102,reported,"Note 5.7.2 (printed p102), CET1/Tier 1 amount. Evidence pack (assistance/gemini/adb-earning-assets/findings.md); steward did not view the page. "
 adb,FY2024,balance_sheet,x_risk_weighted_assets,4231.879,GHS millions,ADB25AR,102,reported,Note 5.7.2 (printed p102). Evidence pack (assistance/gemini/adb-earning-assets/findings.md); steward did not view the page. 
+adb,FY2021,ratios,x_net_ldr_pct,46.3205,%,ADB22,1,derived,loans_and_advances_net / customer_deposits * 100 (net basis).
+adb,FY2022,ratios,x_net_ldr_pct,55.2817,%,ADB22,1,derived,loans_and_advances_net / customer_deposits * 100 (net basis).
+adb,FY2023,ratios,x_net_ldr_pct,34.3772,%,ADB24,1,derived,loans_and_advances_net / customer_deposits * 100 (net basis).
+adb,FY2024,ratios,x_net_ldr_pct,21.3727,%,ADB25,1,derived,loans_and_advances_net / customer_deposits * 100 (net basis).
+adb,FY2025,ratios,x_net_ldr_pct,15.2171,%,ADB25,1,derived,loans_and_advances_net / customer_deposits * 100 (net basis).
+adb,9M-2026,ratios,x_net_ldr_pct,13.7986,%,ADB26Q3,1,derived,loans_and_advances_net / customer_deposits * 100 (net basis).
