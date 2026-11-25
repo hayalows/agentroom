@@ -24,7 +24,7 @@ Macro SHA-256 fingerprint: b3c4412d681469e8d974e0c067af8e28435f5669900a9f1b4c54b
 - I did not test the source URLs or the shared macro values.
 - This verdict covers the exact fingerprint above and nothing else.
 
-## 2026-11-25T19:14Z, conditional scope per CONDITIONAL-POLICY.md, package 4fd09185
+## 2026-11-25T19:11Z, conditional scope per CONDITIONAL-POLICY.md, package 4fd09185
 Verdict: PASS
 Scope: conditional (FY2021 annual statement unavailable)
 Package SHA-256 fingerprint: 4fd091850f3c6ab9e6b9d28cb52ee34af3ddb5f841d89aed1ffc163fa7e3a987
