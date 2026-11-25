@@ -34,3 +34,30 @@ Per `iconka.md` and room independence rules, `gemini` discloses prior authorship
 
 ## 4. What Could Not Be Verified
 - Did not re-audit original bank PDF filings or visually render every PDF page image beyond `pypdf` 41-page text extraction and `build_report.py` source inspection.
+
+## Round 2 (allocated by lead): 2026-11-25T22:01:30Z
+- **Scope:**
+  1. **(a) BoG industry context table (page 4 / Section 03) & macro anchors (page 5 / Section 04)** checked directly against the **original public Bank of Ghana releases** listed in `sector/macro-assumptions/SOURCES.md` (not only our CSVs).
+  2. **(b) Qualitative prose on Bank Profiles 13–23 (pages 24–34)** checked against each bank's `README.md`, `sources.md`, `financials.csv`, `forecast.csv`, `claims/*.md`, and `CONDITIONAL-CLOSURES.md` / `summary.md`.
+- **PDF & Markdown hashes unchanged:** PDF `735b6d6b90df044d54bb06db9c53a9162c741c623fcd5f14bedb365f34c36523`, Markdown LF `55d189b6bdd80c8700de4a3815a22bd6776db717a8d4ab9c7801c23b133833bf`.
+
+### (a) Original BoG & MPC Public Release Verification (0 mismatches)
+1. **BoG *Summary of Economic and Financial Data — November 2026* (`Summary-of-Economic-and-Financial-Data-November-2026-1.pdf`, 17-Nov-2026, 16 pages; fetched live, 1,201,990 bytes):**
+   - **Page 13 (`9. Banking Sector Indicators`):** Verified all 4 columns (`2025:12`, `2026:04`, `2026:09`, `2026:10`) for Assets (`446.9`, `493.9`, `513.6`, `512.9`), Deposits (`325.3`, `365.5`, `372.9`, `369.8`), Gross Advances (`111.0`, `115.2`, `134.0`, `140.9`), CAR (`17.5`, `22.3`, `18.9`, `18.5`), NPL (`18.9`, `18.0`, `14.0`, `13.1`), NIM (`11.5`, `9.3`, `9.2`, `8.1`), ROE after tax (`30.8`, `22.4`, `23.2`, `19.0`), and Operational Cost / Gross Income (`48.8`, `52.0`, `53.3`, `54.8`) — **32/32 exact match**.
+   - **Page 12 (`8b. Monetary Indicators`, `Nominal PSC (%)`):** Verified Private credit growth YoY (`19.2`, `28.7`, `34.0`, `37.2`) — **4/4 exact match**.
+   - **Page 5 (`3a. Interest Rates`, `Average Lending Rate`):** Verified (`20.45`, `16.33`, `15.78`, `15.79`) — **4/4 exact match**.
+2. **BoG *133rd MPC Press Release — 18 November 2026* (`MPC-Press-Release-November-2026.pdf`, 3 pages; fetched live, 206,515 bytes):**
+   - Confirmed Page 3 decision: Monetary Policy Rate aligned from `14 percent to 11 percent`; Page 1: headline inflation rose to `5.5 percent` in October 2026; Page 2: 91-day Treasury bill declined to `4.6 percent` in October 2026 (`4.62%` in `Summary-of-Economic-and-Financial-Data-November-2026-1.pdf` p. 5).
+3. **BoG Treasury Bill Auction Results (November 2026, `bog.gov.gh`):**
+   - Confirmed Tender held 20 Nov 2026 (Issue Date 23 Nov 2026): 91-day Bill weighted average interest rate **`4.5193%`** (matches paper's `"approximately 4.52%"` in Section 04).
+
+### (b) Prose on Bank Profiles 13–23 (pages 24–34, 0 mismatches)
+- **Prior involvement disclosure for Profiles 13–23:** `gemini` did **not** originally build any bank in Profiles 13–23 (`gtbank-ghana`, `nib`, `omnibsic-bank`, `prudential-bank`, `republic-bank-ghana`, `societe-generale-ghana`, `stanbic-bank-ghana`, `standard-chartered-ghana`, `uba-ghana`, `umb`, `zenith-bank-ghana`); `gemini` did act as scoped reviewer on `omnibsic-bank` and `umb`.
+- Verified qualitative claims, ownership/steward/reviewer attributions, conditional closure gaps, and cited ratios/amounts across all 11 profiles against each bank's `README.md`, `sources.md`, `financials.csv`, `forecast.csv`, `claims/*.md`, `CONDITIONAL-CLOSURES.md`, and `sector/summary.md` (`gtbank-ghana` CAR 24.08% / NPL 3.67% / 9M div 604.370m; `nib` negative opening FY25 equity / NPL 69.70% / downside CAR proxy 11.17%; `omnibsic-bank` FY21 gap / RWA density 22.58% & 38%/48% stress; `prudential-bank` Sep 2026 inaccessible / FY25 equity 60.863m, CAR -20.19%, NPL 57%, going-concern, 1.012bn shortfall, impairment reversal; `republic-bank-ghana` Republic Financial Holdings / DeepSeek->Codex; `societe-generale-ghana` 76.9% net LDR / downside CAR <13%; `stanbic-bank-ghana` Sep 2026 CAR 23.32% & NPL 9.54% vs 24.63% FY25; `standard-chartered-ghana` Claude->Codex / 9M tax & div; `uba-ghana` FY25 NPL 2.11% / upside<base 2030; `umb` Sep 2025 anchor / MoF recapitalisation unverified / PwC Q2 2026 secondary benchmark 16.684bn, 11.5375bn, 195.1m, 13.0%; `zenith-bank-ghana` unlisted Zenith Bank PLC subsidiary / bank-only). **0 mismatches**.
+
+### Round 2 What Could Not Be Verified
+- Did not re-fetch the earlier *Summary of Economic and Financial Data — September 2026* PDF separately (the November 17, 2026 release carries the full `2025:10`–`2026:10` series including `2026:09`), nor `S-BOG-MPR-SEP26` / `S-BOG-MPC-MAY26` in full during Round 2.
+
+### Round 2 Verdict
+- **PASS** (zero mismatches on all Round 2 checks; PDF and Markdown remain unchanged).
+
