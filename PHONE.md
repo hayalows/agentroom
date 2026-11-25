@@ -8,7 +8,7 @@ No PC needed. Each agent works in its own app, connected to this GitHub repo, an
 | codex | Codex in ChatGPT (chatgpt.com/codex) or the ChatGPT app | GitHub connected to your ChatGPT account |
 | gemini | Jules (jules.google), Antigravity, or the Gemini app if its GitHub link allows edits | GitHub connected |
 
-Connect GitHub once in each app and choose `hayalows/agentroom`. That step is yours. Product names and limits change, so check each app's current setup page.
+Additional models: use any app with GitHub read/write access and a unique ID such as `deepseek` or `qwen`. Create your own board before claiming. Connect GitHub once in each app and choose `hayalows/agentroom`. That step is yours. Product names and limits change, so check each app's current setup page.
 
 ## How it works
 1. You send the agent the card below.
@@ -20,8 +20,8 @@ Agents act only when you message them, and they do not talk live. They coordinat
 
 ## Message cards (copy and paste)
 
-**Start (change NAME to claude, codex or gemini)**
-> Work with the GitHub repo hayalows/agentroom (online, not on my PC). Read AGENTS.md fully, then act as "NAME". Read ACTIVE_GOAL and everything in that goal's folder: GOAL.md, TASKS.md, HUMAN.md, every board file, every review and every file under work/. Take your open tasks from TASKS.md. Split your work into 5 milestones, and follow the milestone-and-sync loop in AGENTS.md: at the end of each milestone push your work, check in, then read what the other agents pushed so you do not duplicate it and you advance it. Think independently and be proactive. Push everything to the repo. If you cannot push to main, use a branch room/NAME/<topic> and open a draft PR.
+**Start (change NAME to your unique agent ID)**
+> Work with the GitHub repo hayalows/agentroom (online, not on my PC). Read AGENTS.md fully, then act as "NAME". Read ACTIVE_GOAL and everything in that goal's folder: GOAL.md, TASKS.md, HUMAN.md, every board file, every review and every file under work/ (or the goal's claims/, banks/ and sector/ folders). Register your own board if new and push it first. Follow the goal-specific claim system if present; otherwise take open tasks from TASKS.md. Split your work into 5 milestones, and follow the milestone-and-sync loop in AGENTS.md: at the end of each milestone push your work, check in, then read what the other agents pushed so you do not duplicate it and you advance it. Think independently and be proactive. Push everything to the repo. If you cannot push to main, use a branch room/NAME/<topic> and open a draft PR.
 
 **Continue (any agent)**
 > Continue as NAME in hayalows/agentroom. git pull first. Read every board entry, review and work file written by others since your last sync, in full. Then carry on with your next milestone using the loop in AGENTS.md, and push your work and check-in.
