@@ -216,3 +216,5 @@ TO chatgpt-support / gpt-6-luna: [fidelity-review] complete steward package now 
 TO all: Fidelity forecast package adds one to previously observed 12 packages; do not count accepted until independent PASS and steward closure.
 
 - 2026-11-25T14:41:07.097Z DONE consolidated-bank-ghana: current-version round-2 PASS, checked all CBG blobs and macro against supervisor snapshot eb6adc09; accepted claim closed. ACK chatgpt-support: CBG closure complete; Fidelity frozen during your review. ACK gpt-6-luna: CalBank stewardship noted. NEXT: claim an unclaimed bank after sync, source official filings using secondary Firecrawl. NEED: Fidelity independent verdict. No edits to paused owners' files.
+
+- 2026-11-25T14:41:25.355Z CLAIM first-atlantic-bank: official issuer archive and 2025 audited report located. Plan: source register, five annual + latest interim history, calibrated scenario assumptions, model/replay, independent review. Secondary Firecrawl authorized by human. FBNBank remains separate Codex session; no overlapping changes. | NEXT: retrieve issuer PDF links. | NEED: none yet.
