@@ -1,21 +1,40 @@
 # Absa Ghana assistance draft checks
 
-Not a claimed package or accepted model. 300 historical source rows inherited from Codex pack; 56 historical face identities reported by Codex (not independently re-extracted here). 870 forecast rows; 165 full-precision forecast identities, max 0.0000000000m. Asset yield 12.248%; modeled deposit funding cost 1.931%, wholesale 3.284%; assumed RWA 19770.170m, inferred regulatory numerator 3768.194m, not actual. No new equity or assumed Q4 dividend; full year YTD1115m preserved. Standalone CLI replay pending.
+Not a claimed package or accepted model. 300 historical source rows inherited from Codex pack; 56 historical face identities reported by Codex (not independently re-extracted here). 915 forecast rows; 165 full-precision forecast identities, max 0.0000000000m. Asset yield 12.248%; modeled deposit funding cost 1.931%, wholesale 3.284%; assumed RWA 19770.170m, inferred regulatory numerator 3768.194m, not actual. No new equity or assumed Q4 dividend; full year YTD1115m preserved. Prior draft independently replayed by Support with 356/356 rounded checks. Revised candidate needs fresh CLI replay. Main screen uses illustrative 77.0553% deposit denominator (mandatory reserve / 20% / deposits); 100% deposit basis remains conservative stress, not actual regulatory requirement.
 
-| Scenario | Year | PAT m | Assets m | Equity m | CAR proxy % | Stress CAR % | Capital gap m | Cash gap m | Stress cash gap m | Additional dividend m |
+| Scenario | Year | PAT m | Assets m | Equity m | CAR proxy % | Stress CAR % | Capital gap m | Calibrated cash gap m | Eligibility stress gap m | Additional dividend m |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| base | FY2026E | 1313.250 | 36904.664 | 6203.135 | 20.263 | 15.505 | 0.000 | 952.714 | 1630.776 | 0.000 |
-| base | FY2027E | 1422.381 | 42014.536 | 7625.516 | 24.520 | 18.827 | 0.000 | 798.531 | 1619.262 | 0.000 |
-| base | FY2028E | 1502.274 | 47834.673 | 9127.790 | 27.881 | 21.368 | 0.000 | 674.191 | 1651.168 | 0.000 |
-| base | FY2029E | 1512.231 | 54138.030 | 10640.021 | 30.304 | 23.178 | 0.000 | 599.604 | 1738.081 | 0.000 |
-| base | FY2030E | 1632.697 | 61163.481 | 12272.718 | 32.256 | 24.622 | 0.000 | 547.926 | 1862.646 | 0.000 |
-| downside | FY2026E | 1125.141 | 35088.772 | 6015.026 | 20.105 | 15.482 | 0.000 | 1012.509 | 1636.241 | 0.000 |
-| downside | FY2027E | 967.839 | 38635.394 | 6982.866 | 23.277 | 17.915 | 0.000 | 863.463 | 1594.091 | 0.000 |
-| downside | FY2028E | 815.944 | 42260.936 | 7798.810 | 25.217 | 19.349 | 0.000 | 779.890 | 1611.852 | 0.000 |
-| downside | FY2029E | 547.638 | 45867.375 | 8346.447 | 25.657 | 19.664 | 0.000 | 803.520 | 1723.622 | 0.000 |
-| downside | FY2030E | 315.814 | 49324.209 | 8662.262 | 25.117 | 19.271 | 0.000 | 910.980 | 1905.566 | 0.000 |
-| upside | FY2026E | 1392.302 | 37606.023 | 6282.187 | 20.286 | 15.539 | 0.000 | 985.924 | 1678.529 | 0.000 |
-| upside | FY2027E | 1626.576 | 43610.452 | 7908.763 | 24.836 | 19.138 | 0.000 | 872.562 | 1724.511 | 0.000 |
-| upside | FY2028E | 1834.136 | 50762.554 | 9742.899 | 28.562 | 22.000 | 0.000 | 785.915 | 1821.542 | 0.000 |
-| upside | FY2029E | 2082.515 | 59071.559 | 11825.414 | 31.653 | 24.329 | 0.000 | 721.570 | 1965.836 | 0.000 |
-| upside | FY2030E | 2423.162 | 68938.801 | 14248.576 | 34.240 | 26.255 | 0.000 | 680.349 | 2168.084 | 0.000 |
+| base | FY2026E | 1313.250 | 36904.664 | 6203.135 | 20.263 | 15.505 | 0.000 | 0.000 | 634.280 | 0.000 |
+| base | FY2027E | 1414.989 | 41511.898 | 7122.878 | 22.287 | 17.193 | 0.000 | 0.000 | 637.217 | 495.246 |
+| base | FY2028E | 1479.542 | 46791.463 | 8084.580 | 23.739 | 18.415 | 0.000 | 0.000 | 671.923 | 517.840 |
+| base | FY2029E | 1474.339 | 52540.909 | 9042.901 | 24.632 | 19.206 | 0.000 | 0.000 | 747.982 | 516.018 |
+| base | FY2030E | 1578.145 | 58959.459 | 10068.695 | 25.263 | 19.792 | 0.000 | 0.000 | 854.572 | 552.351 |
+| downside | FY2026E | 1125.141 | 35088.772 | 6015.026 | 20.105 | 15.482 | 0.000 | 64.623 | 688.355 | 0.000 |
+| downside | FY2027E | 967.839 | 38635.394 | 6982.866 | 23.277 | 17.915 | 0.000 | 0.000 | 557.768 | 0.000 |
+| downside | FY2028E | 815.944 | 42260.936 | 7798.810 | 25.217 | 19.349 | 0.000 | 0.000 | 478.451 | 0.000 |
+| downside | FY2029E | 547.638 | 45867.375 | 8346.447 | 25.657 | 19.664 | 0.000 | 0.000 | 483.681 | 0.000 |
+| downside | FY2030E | 315.814 | 49324.209 | 8662.262 | 25.117 | 19.271 | 0.000 | 0.000 | 555.518 | 0.000 |
+| upside | FY2026E | 1392.302 | 37606.023 | 6282.187 | 20.286 | 15.539 | 0.000 | 0.000 | 657.729 | 0.000 |
+| upside | FY2027E | 1616.251 | 42872.815 | 7171.125 | 21.678 | 16.820 | 0.000 | 0.000 | 756.405 | 727.313 |
+| upside | FY2028E | 1802.511 | 49182.161 | 8162.507 | 22.651 | 17.763 | 0.000 | 0.000 | 901.937 | 811.130 |
+| upside | FY2029E | 2027.464 | 56616.741 | 9370.596 | 23.658 | 18.714 | 0.000 | 0.000 | 1069.974 | 819.374 |
+| upside | FY2030E | 2344.225 | 65607.697 | 10917.473 | 24.846 | 19.776 | 0.000 | 0.000 | 1251.227 | 797.348 |
+
+## Alternative policy and penalty replays
+
+Full-deposit payout screen and additional GHSm16.1 Q4 penalty stress independently rerun every scenario-year; no extra tax benefit assumed in penalty stress. Both are hypothetical, not actual regulatory compliance or recognition.
+
+| Alternative | Scenario | Year | PAT m | CAR proxy % | Cash gap m | Additional dividend m |
+|---|---|---|---:|---:|---:|---:|
+| Conservative 100% deposit screen | base | FY2026E | 1313.250 | 20.263 | 952.714 | 0.000 |
+| Conservative 100% deposit screen | base | FY2030E | 1632.697 | 32.256 | 547.926 | 0.000 |
+| Conservative 100% deposit screen | downside | FY2026E | 1125.141 | 20.105 | 1012.509 | 0.000 |
+| Conservative 100% deposit screen | downside | FY2030E | 315.814 | 25.117 | 910.980 | 0.000 |
+| Conservative 100% deposit screen | upside | FY2026E | 1392.302 | 20.286 | 985.924 | 0.000 |
+| Conservative 100% deposit screen | upside | FY2030E | 2423.162 | 34.240 | 680.349 | 0.000 |
+| Additional Q4 penalty, no tax benefit | base | FY2026E | 1297.150 | 20.183 | 0.000 | 0.000 |
+| Additional Q4 penalty, no tax benefit | base | FY2030E | 1561.671 | 25.095 | 0.000 | 546.585 |
+| Additional Q4 penalty, no tax benefit | downside | FY2026E | 1109.041 | 20.022 | 70.338 | 0.000 |
+| Additional Q4 penalty, no tax benefit | downside | FY2030E | 295.249 | 24.802 | 0.000 | 0.000 |
+| Additional Q4 penalty, no tax benefit | upside | FY2026E | 1376.202 | 20.208 | 0.000 | 0.000 |
+| Additional Q4 penalty, no tax benefit | upside | FY2030E | 2330.572 | 24.846 | 0.000 | 783.695 |
