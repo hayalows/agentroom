@@ -1,4 +1,4 @@
-import csv,json,math,hashlib,sys
+import csv,json,math,hashlib,sys,re
 from pathlib import Path
 from decimal import Decimal as D
 root,out=map(Path,sys.argv[1:3])
@@ -56,6 +56,58 @@ for r in read(out/'rollup.csv'):
         assert err<=(D('.000051') if r['unit']=='percent' else D('.000501')),(r,err)
     ncheck+=1
 pr=read(out/'provisional.csv');assert set(r['bank'] for r in pr)==excluded and len(pr)==len(excluded)*24
+if m['schema']>=3:
+    # Independent marker check, including a source file that says conditional without a structured label.
+    markers={}
+    for bank in accepted|excluded:
+        marker=goal/'review-resolutions'/(bank+'.md')
+        if not marker.exists():continue
+        raw=marker.read_bytes()
+        txt=raw.decode('utf-8')
+        if not re.search(r'\bconditional\b',txt,re.I):continue
+        scope=re.search(r'^Scope:\s*conditional\s*\(([^\r\n]+)\)\s*
+for f,sha in m['outputHashes'].items():assert hashlib.sha256((out/f).read_bytes()).hexdigest()==sha
+assert len({e['packageFingerprint'] for e in m['acceptedEvidence']})==len(accepted)
+print('INDEPENDENT PASS',ncheck,'output cells,',len(pr),'separate diagnostics, max rounding error',maxerr)
+print('EXCLUDED',','.join(sorted(excluded)))
+print('ACCEPTED',len(accepted),'of',len(accepted|excluded))
+,txt,re.I|re.M)
+        label=re.search(r'["“]conditional:\s*([^"”\r\n]+)["”]',txt,re.I)
+        gap=scope.group(1) if scope else label.group(1) if label else 'source gap; see scope marker'
+        markers[bank]={'label':'conditional: '+gap.strip(),'sha256':hashlib.sha256(raw).hexdigest()}
+    assert m['conditionalMarkers']==markers and not accepted & markers.keys()
+    assert m['conditional']==len(markers) and markers.keys()<=excluded
+    assert all(e['conditional']==markers.get(e['bank'],{}).get('label') for e in m['exclusions'])
+    assert all(r['classification'].startswith(markers[r['bank']]['label']+'; ') if r['bank'] in markers else r['classification'].startswith('unaccepted ') for r in pr)
+    seen=set()
+    for r in pr:
+        bank,period,item=r['bank'],r['period_or_scenario'],r['item']
+        key=(bank,period,item)
+        assert key not in seen and r['source_commit']==m['sourceCommit'],r
+        seen.add(key)
+        forecast='|' in period
+        scenario,period=period.split('|') if forecast else (None,period)
+        source='forecast.csv' if forecast else 'financials.csv'
+        if any(e['bank']==bank and e['table']==source.removesuffix('.csv') for e in m['diagnosticErrors']):
+            assert r['value']=='',r
+            continue
+        filename=goal/'banks'/bank/source
+        source_rows=read(filename) if filename.exists() else []
+        matches=[x for x in source_rows if x['period']==period and x['line_item']==item and (not forecast or x['scenario']==scenario)]
+        assert len(matches)<=1,r
+        value=None
+        if matches:
+            x=matches[0]
+            allowed=(x['status']!='unavailable') if forecast else (x['status'] in ('reported','derived'))
+            if allowed and x['value'].strip():
+                try:
+                    d=D(x['value'])
+                    if d.is_finite():value=d
+                except Exception:pass
+        if value is None:assert r['value']=='',r
+        else:assert abs(D(r['value'])-value)<=D('.000501'),r
+    print('CONDITIONAL/DIAGNOSTIC PASS',len(markers),'scope markers,',len(pr),'separately verified values')
+
 for f,sha in m['outputHashes'].items():assert hashlib.sha256((out/f).read_bytes()).hexdigest()==sha
 assert len({e['packageFingerprint'] for e in m['acceptedEvidence']})==len(accepted)
 print('INDEPENDENT PASS',ncheck,'output cells,',len(pr),'separate diagnostics, max rounding error',maxerr)
