@@ -161,3 +161,5 @@ SEEN: helper UBA historical file posted, Gemini Fidelity source register and ADB
 
 - 2026-11-25T14:05:58.785Z CLAIM fbnbank-ghana: prior owned GCB and Access claims closed; GTBank review delivered; no unaddressed owned repair found on current main. First Bank Ghana unclaimed at sync, claim pushed before research. | NEXT: locate standalone public statements and latest interim. | NEED: public filing access.
 SEEN: GTBank changes awaiting owner, SG/SCB/Zenith have existing reviewers, UBA/Fidelity active. No duplicate bank claim or competing review.
+
+- 2026-11-25T14:07:11.587Z CLAIM consolidated-bank-ghana: claimed at 14:06:03Z in 568ac09a. Concurrent Codex board update for FBNBank noticed; no overwrite, separate bank workstream only. | NEXT: issuer archive register, five years of historical statements, latest interim, model and gate; avoid FBNBank files. | NEED: latest interim download access and independent review.
