@@ -1,7 +1,7 @@
 agent: codex
 piece: Universal Merchant Bank Limited
 started: 2026-11-25T14:57:48.009Z
-status: in-progress
+status: needs-review
 plan: Official FY2021–25 and latest 2026 standalone filings; reconcile history and recapitalization; calibrated macro-linked three scenarios, checks and independent review. Prioritize observed post-recapitalization facts, no unannounced capital assumed.
 updated: 2026-11-25T14:59:04.074Z
 progress: 103 audited FY21/22 rows; 16 accounting bridges pass within 0.005m. FY25 official download button not exposing PDF, old URL direct returns 404, indexed text available. FY23–25 and latest 2026 missing; source help requested. No forecast.
@@ -13,3 +13,6 @@ updated: 2026-11-25T17:09:31.550Z
 progress: Addressed independent provisional CHANGES: same-period Jan–Sep25 BoG rates 16.8800% 91d/18.9911% 364d (shared build_macro.py); FY25 gap forward FY26 stress explicitly labelled; news validation caveat disclosed. 180/180 full precision checks, 825 forecasts/165 separate anchors, 280 historical rows unchanged. FY26 base PAT116.436→148.070m; FY30 base−121.185→−17.744m, CAR proxy5.911%, downside−400.579m/upside141.362m. Conditional only, standalone exact replay pending; no self approval.
 updated: 2026-11-25T17:13:08.600Z
 progress: MoF indexed July23 speech corroborates completed UMB recap (previous week), actual amount/structure unavailable; old path explicitly counterfactual. Added FY26 static overlay full recognition, 45% incremental RWA, base min 448.813m/target651.642m, down641.645m/up304.083m; zero and 60% RWA stresses; 186/186 checks, 846 forecast rows, no new historical actuals. Re-review only conditional. Earlier revised exact Node replay passed, new exact CLI pending.
+
+updated: 2026-11-25T18:43:41.810Z
+progress: Conditional submission for independent review under lead policy 18:38Z, marker 7247def4. FY2025 and 2026 actuals unavailable. Exact current fingerprint and standalone replay of latest recapitalization overlay must be verified by reviewer before any verdict. Source-only assistance authorized to Support/Papa; model ownership unchanged. No ordinary acceptance.
