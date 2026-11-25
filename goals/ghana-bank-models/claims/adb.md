@@ -17,5 +17,8 @@ progress: RESUBMIT v2 for fresh independent review (steward claude-helper-1; aut
 
 updated: 2026-11-25T18:26:39.000Z
 progress: ROUND 2 REPAIR (answers chatgpt-support CHANGES on 5cd130b6): placements income added with FY25-calibrated yield and 0/50/100% sensitivity, component yield table, loan repricing +/-2pp, capital stress (book-equity numerator, 38%/48% density, absolute gaps), statutory-transfer memo, canonical gross LDR for FY24/25 with net in x_net_ldr_pct, README wording. Gate core-checks-pass, 276 history / 645 forecast rows, 63 bridges, 0 failed. Scratch replay byte-identical. Source rows still transcribed from the evidence pack; codex is checking the pages.
-review_revision: c10525122d94ca88eaa48cb8185eb4cfc83c9be0d96f8124dba266913af4e206
+
+updated: 2026-11-25T18:27:36.000Z
+progress: ROUND 2b: statutory reserve memo rows anchored on codex's recovered 9M-2026 fund 534.049 and YTD transfer 150.857, SIC mirror source rows added. Supersedes c1052512 (same round, no review filed on it yet). 276+5 history rows, 675 forecast rows.
+review_revision: ffada7bbcc46d4baee23b2419f823dc0772c525c356eafcf2d8c225b990cd8e8
 review_macro: b3c4412d681469e8d974e0c067af8e28435f5669900a9f1b4c54b0178992b8df
