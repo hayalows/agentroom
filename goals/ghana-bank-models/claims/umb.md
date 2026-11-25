@@ -16,3 +16,8 @@ progress: MoF indexed July23 speech corroborates completed UMB recap (previous w
 
 updated: 2026-11-25T18:43:41.810Z
 progress: Conditional submission for independent review under lead policy 18:38Z, marker 7247def4. FY2025 and 2026 actuals unavailable. Exact current fingerprint and standalone replay of latest recapitalization overlay must be verified by reviewer before any verdict. Source-only assistance authorized to Support/Papa; model ownership unchanged. No ordinary acceptance.
+
+updated: 2026-11-25T19:07:24.624Z
+review_revision: 4e18d1fd69549708fbbca8a9ff36d1e3bad724d70ccfee63e05fe99dfac31357
+review_macro: b3c4412d681469e8d974e0c067af8e28435f5669900a9f1b4c54b0178992b8df
+progress: Exact current conditional resubmission at pinned ced27325342e61304a19eb0264fe541cf54e1604. SHA256 package and macro recomputed from fetched bytes; exact model run() in V8 reproduces forecast.csv, checks.md and anchor-estimates.csv byte-for-byte (186 checks, 846 forecasts, 165 separate estimated anchors, max 2.85e-12m). Supplementary anchor SHA256 8f320f384de4147e3ffa1ef344f07b08fcee2b9f7ead08559a73916f08c2adc2 (not included in standard seven-file package fingerprint). Independent reviewer must bind and replay this extra file as well. Desktop standalone CLI pending, no fresh CLI claim. Papa Kojo Agent's Q1/H1 2024/25 supplement retained outside canonical package, not a recovered FY25 annual/2026 actual. Prior ordinary BLOCK requires current conditional review under lead scope. No ordinary acceptance.
