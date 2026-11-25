@@ -70,7 +70,7 @@
       },
       "dividend_payout_pct": {
         "value": 20.0,
-        "note": "20% payout applied ONLY once retained_earnings > 0 AND car_pct >= target_car_pct."
+        "note": "20.0% of positive PAT is paid only when retained earnings remain positive after the full proposed payout and post-payout CAR meets target_car_pct; otherwise payout is zero."
       },
       "target_car_pct": {
         "value": 15.0,
@@ -143,7 +143,7 @@
       },
       "dividend_payout_pct": {
         "value": 10.0,
-        "note": "10% payout only if retained_earnings > 0 and CAR >= target."
+        "note": "10.0% of positive PAT is paid only when retained earnings remain positive after the full proposed payout and post-payout CAR meets target_car_pct; otherwise payout is zero."
       },
       "target_car_pct": {
         "value": 15.0,
@@ -216,7 +216,7 @@
       },
       "dividend_payout_pct": {
         "value": 25.0,
-        "note": "25% payout once retained_earnings > 0 and CAR >= target."
+        "note": "25.0% of positive PAT is paid only when retained earnings remain positive after the full proposed payout and post-payout CAR meets target_car_pct; otherwise payout is zero."
       },
       "target_car_pct": {
         "value": 15.0,
@@ -250,7 +250,7 @@
     "q4_2026_tbill_364d_pct": 9.447,
     "q4_2026_govt_bond_yield_pct": 15.01,
     "q4_2026_yield_source_id": "OWNER-ESTIMATE",
-    "q4_2026_yield_basis": "Shared macro.csv notes use the latest 364-day auction (9.447 on 23 Nov 2026) and hold the October 10-year yield (15.01) for November-December. The FY2026E policy rate of 11.0% is the latest rate effective 18 Nov and is used as the Q4 loan-yield anchor.",
+    "q4_2026_yield_basis": "Q4 rate proxies from shared macro.csv: latest 364-day auction (9.447 on 23 Nov 2026) and October 10-year yield (15.01) held for November-December. These are applied as Q4 run-rate inputs, not observed quarter-average yields. The 11.0% policy rate effective 18 Nov is time-weighted with 14.0% before the cut for the Q4 loan-yield input.",
     "q4_2026_policy_rate_pct": 12.57,
     "q4_2026_policy_rate_source_id": "S-BOG-MPC-NOV26",
     "q4_2026_policy_rate_basis": "Day-weighted Q4 mean: 14.0% from 1 Oct through 17 Nov (48 days) and 11.0% from 18 Nov through 31 Dec (44 days), based on the 18 Nov policy-rate cut in macro.csv; (48*14 + 44*11)/92 = 12.565%, rounded to 12.57%."
