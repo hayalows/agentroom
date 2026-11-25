@@ -23,8 +23,9 @@ KEYS_B = ("cash_and_bog_balances due_from_banks investment_securities loans_and_
           "loan_loss_allowance loans_and_advances_net property_equipment_intangibles other_assets "
           "total_assets customer_deposits due_to_banks borrowings other_liabilities total_liabilities "
           "stated_capital retained_earnings reserves_other total_equity").split()
-KEYS_R = "car_pct tier1_pct npl_pct ldr_pct cost_to_income_pct roe_pct roa_pct".split()
-# extra balance-sheet components reported by SG and used for the cash residual
+KEYS_R = "car_pct x_cet1_pct npl_pct ldr_pct cost_to_income_pct roe_pct roa_pct".split()
+# Extra balance-sheet components reported by SG as memos; the canonical other_assets already
+# folds them (see build_financials.py), so they are NOT added again in the bridge.
 XTRA_B = ["x_trading_assets", "x_equity_investments"]
 
 
@@ -117,11 +118,10 @@ Q3_TIER = Q3_CAP * hist("FY2025", "x_cet1_capital") / hist("FY2025", "x_total_re
 
 
 def noncash(b):
-    s = (b["due_from_banks"] + b["investment_securities"] + b["loans_and_advances_net"]
-         + b["property_equipment_intangibles"] + b["other_assets"])
-    for k in XTRA_B:
-        s += b.get(k, 0.0)
-    return s
+    # Canonical other_assets already folds trading assets, derivative assets and unlisted equity
+    # investments (see build_financials.py), so the x memos are NOT added here again.
+    return (b["due_from_banks"] + b["investment_securities"] + b["loans_and_advances_net"]
+            + b["property_equipment_intangibles"] + b["other_assets"])
 
 
 def costs(i):
@@ -210,8 +210,11 @@ for s in SCEN:
         # assets (non-cash)
         b["due_from_banks"] = 0.0
         b["investment_securities"] = prevB["investment_securities"] * (1 + pct(dg))
-        b["x_trading_assets"] = prevB["x_trading_assets"] * (1 + pct(dg))
-        b["x_equity_investments"] = prevB["x_equity_investments"] * (1 + pct(dg))
+        # x trading/equity/derivative memos are components of canonical other_assets, so they
+        # grow at the same rate as their host bucket, keeping the memos consistent and nonadditive.
+        b["x_trading_assets"] = prevB["x_trading_assets"] * (1 + pct(og) / (4 if first else 1))
+        b["x_equity_investments"] = prevB["x_equity_investments"] * (1 + pct(og) / (4 if first else 1))
+        b["x_derivative_assets"] = prevB.get("x_derivative_assets", 0.0) * (1 + pct(og) / (4 if first else 1))
         if first:
             b["loans_and_advances_net"] = prevB["loans_and_advances_net"] * (1 + pct(lg))
             b["loans_and_advances_gross"] = b["loans_and_advances_net"] / (1 - allow)
@@ -255,14 +258,18 @@ for s in SCEN:
             i["fee_commission_expense"] = i["fee_commission_income"] * (prevI["fee_commission_expense"] / prevI["fee_commission_income"]) * feeMult
             i["net_trading_income"] = prevI["net_trading_income"] * (1 + pct(nominal + D["model_structure"]["trading_growth_spread_pp"][s]))
             i["x_fv_other_income"] = prevI["x_fv_other_income"] * (1 + pct(nominal + D["model_structure"]["trading_growth_spread_pp"][s]))
-            i["other_operating_income"] = prevI["other_operating_income"] * (1 + pct(fg))
+            i["_ooi_bank"] = (prevI["other_operating_income"] - prevI["x_fv_other_income"]) * (1 + pct(fg))
             for k in ["staff_costs", "depreciation_amortisation", "other_operating_expenses"]:
                 i[k] = prevI[k] * (1 + pct(og))
             i["impairment_charge"] = loanCharge
 
+        # Canonical other operating income folds the bank's own other-operating line with the
+        # FV-other-income line, so the operating-income bridge closes. x_fv stays a memo.
+        i["other_operating_income"] = (i["_ooi_bank"] + i["x_fv_other_income"]) if not first else i["other_operating_income"]
+
         i["net_interest_income"] = i["interest_income"] - i["interest_expense"]
         i["total_operating_income"] = (i["net_interest_income"] + i["fee_commission_income"] - i["fee_commission_expense"]
-                                       + i["net_trading_income"] + i["x_fv_other_income"] + i["other_operating_income"])
+                                       + i["net_trading_income"] + i["other_operating_income"])
         i["profit_before_tax"] = i["total_operating_income"] - costs(i) - i["impairment_charge"]
         if first:
             i["income_tax"] = Q3I["income_tax"] + max(0.0, i["profit_before_tax"] - Q3I["profit_before_tax"]) * pct(D["tax_rate_pct"][s])
@@ -277,18 +284,26 @@ for s in SCEN:
         preRwa = rwa(preAssets, b["loans_and_advances_gross"])
         preCap = prevCap + incPAT
         reserve = b["customer_deposits"] * pct(crr)
+        # Statutory reserve transfer: 12.5% of positive annual PAT, source-confirmed FY2024
+        # (68.912m), FY2025 (49.625m) and 9M-2026 (18.750m). It is an internal equity transfer,
+        # so total equity and regulatory capital are unaffected; it caps distributable earnings.
         if first:
-            # The observed 9M-2026 equity already reflects the FY2025 final dividend paid in
-            # 2026 (GHS173.669m, SG26Q3 cash-flow/equity statement), so Q4 carries no further
-            # dividend unless separately declared; none is assumed.
+            # The observed 9M-2026 statutory reserve already includes the YTD transfer of 18.750m,
+            # so Q4 carries only the transfer on positive Q4 PAT (floored at zero).
+            transfer = max(0.0, pct(D["statutory_reserve_transfer_pct"][s]) * incPAT)
+            # The observed 9M-2026 equity already reflects the FY2025 final dividend paid in 2026
+            # (GHS173.669m, SG26Q3), so Q4 carries no further dividend; none is assumed.
             div = 0.0
         else:
+            transfer = max(0.0, pct(D["statutory_reserve_transfer_pct"][s]) * incPAT)
+            distributable = max(0.0, prevB["retained_earnings"] + incPAT - transfer)
             div = max(0.0, min(max(incPAT, 0.0) * pct(D["dividend_payout_pct"][s]),
+                               distributable,
                                preCap - preRwa * pct(carTarget),
                                preCash - reserve))
         b["stated_capital"] = prevB["stated_capital"]
-        b["reserves_other"] = prevB["reserves_other"]
-        b["retained_earnings"] = prevB["retained_earnings"] + incPAT - div
+        b["reserves_other"] = prevB["reserves_other"] + transfer
+        b["retained_earnings"] = prevB["retained_earnings"] + incPAT - div - transfer
         b["total_equity"] = b["stated_capital"] + b["retained_earnings"] + b["reserves_other"]
         b["total_assets"] = b["total_liabilities"] + b["total_equity"]
         b["cash_and_bog_balances"] = b["total_assets"] - noncash(b)
@@ -300,7 +315,7 @@ for s in SCEN:
         op = Y25 if first else prevB
         ratios = {
             "car_pct": car,
-            "tier1_pct": 100 * tier / rw,
+            "x_cet1_pct": 100 * tier / rw,
             "npl_pct": D["npl_pct"][s],
             "ldr_pct": 100 * b["loans_and_advances_gross"] / b["customer_deposits"],
             "cost_to_income_pct": 100 * costs(i) / i["total_operating_income"],
@@ -319,7 +334,7 @@ for s in SCEN:
              "Unlisted equity investments at fair value, deposit-growth proxy.")
         for k in KEYS_R:
             note = {"car_pct": "Proxy regulatory capital divided by proxy RWA; not a BoG regulatory return.",
-                    "tier1_pct": "Estimated Common Equity Tier 1 / RWA; Q3 starting CET1 inferred from the FY2025 audited capital structure.",
+                    "x_cet1_pct": "Estimated Common Equity Tier 1 / RWA. This is CET1, not total Tier 1; Q3 starting CET1 inferred from the FY2025 audited capital structure.",
                     "npl_pct": "Estimated scenario NPL target; not a loan-level migration model; held flat within a scenario across years.",
                     "ldr_pct": "Gross loans / customer deposits.",
                     "cost_to_income_pct": "Operating expenses excluding impairments / total operating income.",
@@ -336,17 +351,25 @@ for s in SCEN:
              "effective rate may differ from the scenario input; both are shown.")
 
         short = max(0.0, rw * pct(minCAR) - cap)
+        targetGap = max(0.0, rw * pct(carTarget) - cap)
         cashGap = max(0.0, reserve - b["cash_and_bog_balances"])
         allowMove = prevB["loan_loss_allowance"] + loanCharge - b["loan_loss_allowance"]
+        ytd_div = hist("9M-2026", "x_ytd_dividends") if first else 0.0
+        ytd_transfer = hist("9M-2026", "x_ytd_statutory_transfer") if first else 0.0
         for k, v, n in [
             ("x_regulatory_capital", cap, "Proxy Q3 capital from 18.52% CAR x estimated RWA plus cumulative retained modelled earnings."),
-            ("x_tier1_capital", tier, "Proxy initial CET1/capital relation from FY2025; retained modelled earnings."),
+            ("x_cet1_capital", tier, "Estimated Common Equity Tier 1 capital: Q3 starting CET1 inferred from the FY2025 audited CET1/total-capital relation, plus retained modelled earnings. This is CET1, not total Tier 1."),
             ("x_risk_weighted_assets", rw, "Gross loans plus calibrated FY2025 residual risk intensity x assets minus gross loans."),
             ("x_model_dividends", div, ("Estimated Q4-only dividends; observed 9M retained earnings already include YTD equity movements."
-                                        if first else "Estimated annual dividends constrained by the pre-dividend CAR target and cash-reserve proxy.")),
+                                        if first else "Estimated annual dividends constrained by distributable retained earnings after the statutory transfer, the pre-dividend CAR target and the cash-reserve proxy.")),
+            ("x_dividends_paid", ytd_div + div, ("Full-year dividend memo: observed 9M-2026 YTD dividend 173.669m plus the estimated Q4 payout (zero)."
+                                                 if first else "Estimated annual dividends paid.")),
+            ("x_statutory_reserve_transfer", ytd_transfer + transfer, ("Full-year statutory reserve transfer memo: observed 9M-2026 YTD transfer 18.750m plus the estimated Q4 transfer."
+                                                                        if first else "Estimated annual transfer to the statutory reserve (12.5% of positive PAT, source-confirmed).")),
             ("x_cash_reserve_proxy", reserve, "CRR x modelled year-end deposits; screening proxy, not actual eligible reserve."),
             ("x_cash_reserve_gap", cashGap, "Positive value is a reserve-proxy shortfall; not automatically funded."),
             ("x_capital_shortfall", short, "Additional regulatory capital needed to reach the shared minimum CAR; not assumed raised."),
+            ("x_capital_target_gap", targetGap, "Additional regulatory capital needed to reach the scenario capital target (shared minimum plus management buffer); distinct from the 13% minimum gap. Not assumed raised."),
             ("x_allowance_other_movement", allowMove, "Opening modelled allowance + modelled loan impairment charge - closing modelled allowance; positive implies write-offs/other reductions; the provision floor prevents an unfunded allowance build. FY2026 Q4 only."),
         ]:
             emit(s, t, "balance_sheet", k, v, "GHS millions", n)
@@ -368,7 +391,7 @@ for s in SCEN:
             b["total_liabilities"] - sum(b[k] for k in ["customer_deposits", "due_to_banks", "borrowings", "other_liabilities"]),
             b["total_equity"] - b["stated_capital"] - b["retained_earnings"] - b["reserves_other"],
             i["net_interest_income"] - i["interest_income"] + i["interest_expense"],
-            i["total_operating_income"] - i["net_interest_income"] - i["fee_commission_income"] + i["fee_commission_expense"] - i["net_trading_income"] - i["x_fv_other_income"] - i["other_operating_income"],
+            i["total_operating_income"] - i["net_interest_income"] - i["fee_commission_income"] + i["fee_commission_expense"] - i["net_trading_income"] - i["other_operating_income"],
             i["profit_before_tax"] - i["total_operating_income"] + costs(i) + i["impairment_charge"],
             i["profit_after_tax"] - i["profit_before_tax"] + i["income_tax"],
             b["loans_and_advances_net"] - b["loans_and_advances_gross"] + b["loan_loss_allowance"],
@@ -433,17 +456,16 @@ for p in hist_periods:
     ta = hv(p, "total_assets"); tl = hv(p, "total_liabilities"); te = hv(p, "total_equity")
     r1 = None if None in (ta, tl, te) else ta - tl - te
     cash = hv(p, "cash_and_bog_balances")
-    comps = [hv(p, x) for x in ["due_from_banks", "investment_securities", "x_trading_assets",
-                                "x_derivative_assets", "x_equity_investments", "loans_and_advances_net",
-                                "property_equipment_intangibles", "other_assets"]]
+    comps = [hv(p, x) for x in ["due_from_banks", "investment_securities",
+                                "loans_and_advances_net", "property_equipment_intangibles", "other_assets"]]
     comps = [0.0 if c is None else c for c in comps]
     r2 = None if (ta is None or cash is None) else ta - cash - sum(comps)
     nii = hv(p, "net_interest_income"); ii = hv(p, "interest_income"); ie = hv(p, "interest_expense")
     r3 = None if None in (nii, ii, ie) else nii - ii + ie
     toi = hv(p, "total_operating_income")
     fci = hv(p, "fee_commission_income"); fce = hv(p, "fee_commission_expense")
-    nt = hv(p, "net_trading_income"); xfv = hv(p, "x_fv_other_income"); ooi = hv(p, "other_operating_income")
-    r4 = None if None in (toi, fci, fce, nt, xfv, ooi) else toi - nii - fci + fce - nt - xfv - ooi
+    nt = hv(p, "net_trading_income"); ooi = hv(p, "other_operating_income")
+    r4 = None if None in (toi, nii, fci, fce, nt, ooi) else toi - nii - fci + fce - nt - ooi
     pbt = hv(p, "profit_before_tax")
     pat = hv(p, "profit_after_tax"); tax = hv(p, "income_tax")
     r5 = None if None in (pat, pbt, tax) else pat - pbt + tax
@@ -545,10 +567,13 @@ for x in checks_log:
         L.append("| %s | %s | %.3f | %.3f | %.3f | %.3f | %.3f | %.3f |"
                  % (x["s"], x["t"], x["toi"], x["opex_cost"], x["imp"], pbt, x["tax"], x["pat"]))
 L.append("")
-L.append("**Counterfactual: downside with base cost growth (isolates the credit and rate effect).** The table above "
-         "keeps the downside's CPI-plus-8pt opex rule. Below, the downside FY2030E is recomputed with the **base** "
-         "opex growth spread, holding the downside operating income and impairment charge fixed. The gap is the part "
-         "of the downside loss that is mechanical cost pass-through from the shared higher-inflation downside path.")
+L.append("**Counterfactual: downside with base cost growth — a one-year marginal diagnostic.** The table above "
+         "keeps the downside's CPI-plus-8pt opex rule. Below, downside FY2030E operating costs are recomputed by "
+         "applying the **base** opex growth spread to the downside FY2029 opening cost lines, holding the downside "
+         "operating income and impairment charge fixed. This is a single-year marginal diagnostic, not a full "
+         "five-year base-cost path: the FY2029 opening costs already embed four years of cumulative downside opex, "
+         "so it isolates only the FY2030 growth-rate substitution and cannot by itself attribute the whole remaining "
+         "loss to credit and rates.")
 L.append("")
 L.append("| FY2030E variant | Operating costs | Profit before tax | Tax | PAT |")
 L.append("|---|---:|---:|---:|---:|")
@@ -568,10 +593,11 @@ L.append("| Downside as modelled (CPI+%d) | %.3f | %.3f | %.3f | %.3f |"
 L.append("| Downside with base cost growth (CPI+%d) | %.3f | %.3f | %.3f | %.3f |"
          % (D["opex_growth"]["base"], _base_og_cost, _ds_pbt_alt, _ds_tax_alt, _ds_pbt_alt - _ds_tax_alt))
 L.append("")
-L.append("The FY2030E gap between the two rows is the cost-pass-through component: with base cost growth the "
-         "downside FY2030E loss shrinks to %.3f from %.3f, so about %.0f%% of the modelled downside loss magnitude "
-         "comes from the mechanical opex rule (higher shared downside inflation plus the cost spread), not from "
-         "credit or rates. The remaining loss is the credit and rate effect."
+L.append("The FY2030E gap between the two rows is the FY2030 growth-rate substitution only: with base cost growth the "
+         "downside FY2030E loss changes to %.3f from %.3f, about %.0f%% of the modelled downside FY2030E loss "
+         "magnitude. Because the FY2029 opening costs already embed cumulative downside opex, this is one year of "
+         "cost pass-through, not the whole five-year effect; the residual is credit, rates and earlier-years' "
+         "cumulative cost."
          % (_ds_pbt_alt, _ds["pbt"],
             100 * abs(_ds_pbt_alt - _ds["pbt"]) / abs(_ds["pbt"]) if _ds["pbt"] else 0.0))
 L.append("")

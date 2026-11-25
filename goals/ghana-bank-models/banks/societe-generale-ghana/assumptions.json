@@ -105,11 +105,19 @@
     },
     "dividend_payout_pct": {
       "status": "estimated",
-      "method": "Payout on positive PAT; constrained if a capital target or cash minimum is breached.",
+      "method": "Payout on positive PAT; constrained if distributable retained earnings after the statutory transfer, a capital target or cash minimum is breached.",
       "reason": "FY2021 dividend 80.842m / PAT 184.330m = 43.9%; FY2022 48.387m / 108.840m = 44.5%. Scenario payout sensitivity.",
       "base": 40,
       "downside": 0,
       "upside": 50
+    },
+    "statutory_reserve_transfer_pct": {
+      "status": "estimated",
+      "method": "Annual transfer from retained earnings to the statutory reserve, as a share of positive PAT. An internal equity transfer, so total equity and regulatory capital are unaffected; it caps distributable retained earnings for dividends.",
+      "reason": "Source-confirmed 12.5% of positive PAT: FY2024 transfer 68.912m, FY2025 49.625m (SG25FIN/SG25AR), and 9M-2026 18.750m (SG26Q3). The observed 9M-2026 reserve already includes the YTD transfer, so the model adds only the Q4 transfer in the anchor year.",
+      "base": 12.5,
+      "downside": 12.5,
+      "upside": 12.5
     },
     "capital_ratio_target_pct": {
       "status": "estimated",

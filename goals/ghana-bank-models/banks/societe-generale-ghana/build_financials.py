@@ -46,6 +46,11 @@ INC = {
    fci=135.216, fce=50.863, nt=59.697, xfv=14.295, ooi=14.762, toi=797.099,
    imp=27.165, staff=238.264, da=109.208, ooe=190.323, pbt=232.139,
    tax=82.136, pat=150.003),
+ # 9M-2025 comparative column, SG26Q3 p.1 (both statements; net impairment was a gain).
+ "9M-2025": dict(src="SG26Q3", pg="1", ii=1091.610, ie=168.259, nii=923.351,
+   fci=125.244, fce=60.856, nt=96.183, xfv=12.825, ooi=-60.955, toi=1035.792,
+   imp=-32.969, staff=201.344, da=92.701, ooe=244.732, pbt=529.984,
+   tax=185.681, pat=344.303),
 }
 
 # Balance sheet (GHS millions). Component buckets are defined so they sum to reported totals.
@@ -92,6 +97,14 @@ BS = {
    ctax=None, dtl=None, othl=1027.804, tl=8500.266,
    stated=404.245, retained=1105.397, reval=505.250, statutory=563.217,
    resoth=None, te=2578.109),
+ # 9M-2025 comparative column, SG26Q3 p.1.
+ "9M-2025": dict(src="SG26Q3", pg="1", cash=2592.298, trading=9.479, deriv_a=None,
+   fvoci=None, amc=2352.500, loans_net=4319.635, eqinv=5.513, oth=182.090,
+   ppe=731.408, intang=152.434, dta=None, cta=None,
+   ta=10345.357, dep_banks=10.357, dep_cust=6254.001, borrow=371.418, deriv_l=None,
+   ctax=4.643, dtl=0.684, othl=1155.177, tl=7796.280,
+   stated=404.245, retained=1101.702, reval=505.250, statutory=537.880,
+   resoth=None, te=2549.077),
 }
 
 # Loan detail (GHS millions): gross, amortised-cost adjustment, interest in suspense, allowance.
@@ -102,6 +115,7 @@ LOANS = {
  "FY2024": dict(src="SG24AR", pg="96", gross=5840.974925, amort=71.229039, iis=103.492704, allow=654.568723),
  "FY2025": dict(src="SG25AR", pg="95", gross=5121.327682, amort=None, iis=None, allow=629.501142),
  "9M-2026": dict(src=None, pg="", gross=None, amort=None, iis=None, allow=None),
+ "9M-2025": dict(src=None, pg="", gross=None, amort=None, iis=None, allow=None),
 }
 
 # Reported ratios. car_pct primary value is the audited-statement disclosure where present,
@@ -113,6 +127,8 @@ RATIO = {
  "FY2024": dict(src="SG24AR", pg="133", car=19.81, car_note="CAR 19.81% at 31 Dec 2024 per the audited capital-adequacy note (printed p.133). FY2024 narrative separately quotes 14.0% with DDEP reliefs / 11.3% without; different basis, noted.", npl=16.56, npl_pg="96"),
  "FY2025": dict(src="SG25AR", pg="133", car=23.39, car_note="CAR 23.39% at 31 Dec 2025 per the audited capital-adequacy note (printed p.133); the 2025 narrative says 17.5% (DDEP reliefs excluded in 2025). The audited 2025 summary prints the same 23.39%.", npl=13.06, npl_pg="95"),
  "9M-2026": dict(src="SG26Q3", pg="1", car=18.52, car_note="CAR 18.52% at 30 Sep 2026 (unaudited).", npl=13.98, npl_pg="1"),
+ # 9M-2025 comparative column, SG26Q3 p.1.
+ "9M-2025": dict(src="SG26Q3", pg="1", car=17.90, car_note="CAR 17.90% at 30 Sep 2025 (comparative column, unaudited).", npl=13.51, npl_pg="1"),
 }
 
 # Regulatory capital note (GHS millions): CET1, Tier 2, total regulatory capital, total RWA, and
@@ -125,9 +141,10 @@ CAP = {
  "FY2024": dict(src="SG24AR", pg="133", cet1=1626.705277, cet2=290.339900, cap=1917.045177, rwa=9677.996677, cet1_pct=16.81),
  "FY2025": dict(src="SG25AR", pg="133", cet1=1746.913789, cet2=163.322103, cap=1910.235892, rwa=8166.105152, cet1_pct=21.39),
  "9M-2026": dict(src=None, pg=None, cet1=None, cet2=None, cap=None, rwa=None, cet1_pct=None),
+ "9M-2025": dict(src=None, pg=None, cet1=None, cet2=None, cap=None, rwa=None, cet1_pct=None),
 }
 
-PERIODS = ["FY2021", "FY2022", "FY2023", "FY2024", "FY2025", "9M-2026"]
+PERIODS = ["FY2021", "FY2022", "FY2023", "FY2024", "FY2025", "9M-2025", "9M-2026"]
 BANKONLY = "Bank-only (separate) statements; costs/allowances positive, profits signed."
 
 rows = []
@@ -149,10 +166,13 @@ for p in PERIODS:
         if item == "impairment_charge" and d["imp"] < 0:
             note += " Impairment is a net credit (gain) this period; stored negative."
         add(p, "income_statement", item, d[key], "GHS millions", d["src"], d["pg"], "reported", note)
-    # other operating income (bank's own line) and the FV-other-income line kept separately
-    add(p, "income_statement", "other_operating_income", d["ooi"], "GHS millions", d["src"], d["pg"], "reported", BANKONLY)
+    # Canonical other operating income folds the bank's own other-operating line together with
+    # the "net income from other financial instruments carried at fair value" line, so the
+    # canonical operating-income bridge closes. The raw FV component is kept as a memo.
+    add(p, "income_statement", "other_operating_income", (d["ooi"] + d["xfv"]), "GHS millions", d["src"], d["pg"],
+        "derived", BANKONLY + " Bank's other operating income plus net income from other financial instruments at fair value.")
     add(p, "income_statement", "x_fv_other_income", d["xfv"], "GHS millions", d["src"], d["pg"], "reported",
-        BANKONLY + " Net income from other financial instruments carried at fair value.")
+        BANKONLY + " Net income from other financial instruments carried at fair value. Memo only; already folded into canonical other_operating_income, so do not add again.")
 
     b = BS[p]
     def rep(item, val, extra=""):
@@ -161,9 +181,12 @@ for p in PERIODS:
     add(p, "balance_sheet", "due_from_banks", None, "GHS millions", b["src"], b["pg"], "unavailable",
         "Cash and cash equivalents (note 17) is the only asset-side bank balance; the Bank reports no separate 'due from banks' line. Deposits from banks appear on the liability side as due_to_banks.")
     if b["trading"] is not None:
-        rep("x_trading_assets", b["trading"], "Non-pledged trading assets.")
+        add(p, "balance_sheet", "x_trading_assets", b["trading"], "GHS millions", b["src"], b["pg"], "reported",
+            BANKONLY + " Non-pledged trading assets. Memo only; already folded into canonical other_assets, so do not add again.")
+    else:
+        add(p, "balance_sheet", "x_trading_assets", None, "GHS millions", b["src"], b["pg"], "unavailable", "No trading assets reported.")
     if b["deriv_a"] is not None:
-        add(p, "balance_sheet", "x_derivative_assets", b["deriv_a"], "GHS millions", b["src"], b["pg"], "reported", BANKONLY + " Derivative financial assets.")
+        add(p, "balance_sheet", "x_derivative_assets", b["deriv_a"], "GHS millions", b["src"], b["pg"], "reported", BANKONLY + " Derivative financial assets. Memo only; already folded into canonical other_assets, so do not add again.")
     else:
         add(p, "balance_sheet", "x_derivative_assets", None, "GHS millions", b["src"], b["pg"], "unavailable", "No derivative asset reported.")
     inv = (b["amc"] or 0) + (b["fvoci"] or 0)
@@ -171,10 +194,18 @@ for p in PERIODS:
         "Debt instruments at amortised cost plus debt instruments at FVOCI, as reported.")
     rep("loans_and_advances_net", b["loans_net"])
     if b["eqinv"] is not None:
-        rep("x_equity_investments", b["eqinv"], "Unlisted equity investments at fair value.")
-    oth = (b["oth"] or 0) + (b["dta"] or 0) + (b["cta"] or 0)
+        add(p, "balance_sheet", "x_equity_investments", b["eqinv"], "GHS millions", b["src"], b["pg"], "reported",
+            BANKONLY + " Unlisted equity investments at fair value. Memo only; already folded into canonical other_assets, so do not add again.")
+    else:
+        add(p, "balance_sheet", "x_equity_investments", None, "GHS millions", b["src"], b["pg"], "unavailable", "No equity investments reported.")
+    # Canonical other_assets folds the bank's "other assets" together with tax assets, trading
+    # assets, derivative assets and unlisted equity investments, so the canonical asset bridge
+    # (cash + due from banks + securities + net loans + PPE + other assets = total assets) closes
+    # without needing the raw x memos. The x rows above are retained as nonadditive memos.
+    oth = ((b["oth"] or 0) + (b["dta"] or 0) + (b["cta"] or 0)
+           + (b["trading"] or 0) + (b["deriv_a"] or 0) + (b["eqinv"] or 0))
     add(p, "balance_sheet", "other_assets", oth, "GHS millions", b["src"], b["pg"], "derived",
-        "Other assets plus deferred/current tax assets as reported.")
+        "Other assets plus deferred/current tax assets, non-pledged trading assets, derivative assets and unlisted equity investments as reported.")
     ppe = (b["ppe"] or 0) + (b["intang"] or 0)
     add(p, "balance_sheet", "property_equipment_intangibles", ppe, "GHS millions", b["src"], b["pg"], "derived",
         "Property, plant and equipment plus intangible assets as reported.")
@@ -204,6 +235,17 @@ for p in PERIODS:
         "reported" if l["iis"] is not None else "unavailable",
         BANKONLY + (" Interest in suspense (note 20); bridge: gross - amortised cost adjustment - interest in suspense - allowance = net." if l["iis"] is not None else " FY2025 net = gross - allowance exactly, so no interest-in-suspense adjustment was disclosed."))
 
+    if p == "9M-2026":
+        add(p, "balance_sheet", "x_ytd_dividends", 173.669, "GHS millions", "SG26Q3", "1", "reported",
+            "FY2025 final dividend of GHS173.669m paid in the nine months to 30 September 2026 (statement of changes in equity).")
+        add(p, "balance_sheet", "x_ytd_statutory_transfer", 18.750, "GHS millions", "SG26Q3", "1", "reported",
+            "Transfer to statutory reserve in the nine months to 30 September 2026 (statement of changes in equity).")
+    elif p == "9M-2025":
+        add(p, "balance_sheet", "x_ytd_dividends", 241.108, "GHS millions", "SG26Q3", "1", "reported",
+            "FY2024 final dividend of GHS241.108m paid in the nine months to 30 September 2025 (comparative statement of changes in equity).")
+        add(p, "balance_sheet", "x_ytd_statutory_transfer", 43.038, "GHS millions", "SG26Q3", "1", "reported",
+            "Transfer to statutory reserve in the nine months to 30 September 2025 (comparative statement of changes in equity).")
+
     r = RATIO[p]
     add(p, "ratios", "car_pct", r["car"], "percent", r["src"], r["pg"], "reported", r["car_note"])
     add(p, "ratios", "npl_pct", r["npl"], "percent", r["src"], r["npl_pg"], "reported", "Gross non-performing loan ratio as reported.")
@@ -216,8 +258,11 @@ for p in PERIODS:
         "reported" if c["cap"] is not None else "unavailable", nreg + " Total regulatory capital (CET1 + Tier 2).")
     add(p, "balance_sheet", "x_risk_weighted_assets", c["rwa"], "GHS millions", c["src"], c["pg"],
         "reported" if c["rwa"] is not None else "unavailable", nreg + " Total risk-weighted assets.")
-    add(p, "ratios", "tier1_pct", c["cet1_pct"], "percent", c["src"], c["pg"],
-        "reported" if c["cet1_pct"] is not None else "unavailable", nreg + " Common Equity Tier 1 / RWA as reported.")
+    add(p, "ratios", "x_cet1_pct", c["cet1_pct"], "percent", c["src"], c["pg"],
+        "reported" if c["cet1_pct"] is not None else "unavailable",
+        nreg + " Common Equity Tier 1 / RWA as reported. This is CET1, NOT total Tier 1; no separate Tier 1 (including AT1) ratio is disclosed, so canonical tier1_pct is left unavailable.")
+    add(p, "ratios", "tier1_pct", None, "percent", "", "", "unavailable",
+        "Tier 1 (CET1 plus additional Tier 1) is not separately disclosed; only CET1 is (see x_cet1_pct). Not guessed.")
 
     for item in ["ldr_pct", "cost_to_income_pct", "roe_pct", "roa_pct"]:
         add(p, "ratios", item, None, "percent", "", "", "unavailable",

@@ -18,8 +18,8 @@ Scope: **standalone Bank** (separate financial statements), 31 December fiscal y
 
 ## Page map (printed pages used in `financials.csv`)
 
-- Income statement: SG21AR p.51, SG22AR p.54, SG23AR p.61, SG24AR p.64, SG25AR p.65. Interim 9M-2026 income is p.1 of SG26Q3.
-- Statement of financial position: SG21AR p.52, SG22AR p.55, SG23AR p.62, SG24AR p.65, SG25AR p.66. Interim 9M-2026 balance sheet is p.1 of SG26Q3.
+- Income statement: SG21AR p.51, SG22AR p.54, SG23AR p.61, SG24AR p.64, SG25AR p.65. Interim 9M-2026 income is p.1 of SG26Q3 (its comparative column gives 9M-2025).
+- Statement of financial position: SG21AR p.52, SG22AR p.55, SG23AR p.62, SG24AR p.65, SG25AR p.66. Interim 9M-2026 balance sheet is p.1 of SG26Q3 (comparative column gives 9M-2025).
 - Loans and advances note (gross, amortised-cost adjustment, interest in suspense, allowance): SG21AR p.76, SG22AR p.78, SG23AR p.90, SG24AR p.96, SG25AR p.95.
 - Other statistics / gross NPL ratio and loan-loss provision ratio: SG21AR p.77, SG22AR p.79, SG23AR p.90, SG24AR p.96, SG25AR p.95.
 - Capital adequacy note (CAR): SG21AR p.111, SG22AR p.113, SG23AR p.127, SG24AR p.133, SG25AR p.133. Interim CAR is p.1 of SG26Q3.
@@ -37,7 +37,7 @@ Scope: **standalone Bank** (separate financial statements), 31 December fiscal y
 - **Domestic Debt Exchange Programme (2022�?"2023).** SG22AR p.18 (Managing Director's review) and SG23AR p.23 note the DDEP and describe limited impact on the Bank's profitability; SG24AR p.106 (note) gives the 5 December 2022 DDEP launch detail. The Bank's own accounting consequences are captured through the reported impairment charge and capital notes; no separate DDEP loss line is modelled.
 - **Capital and reserves.** CAR per the audited capital-adequacy notes (see page map). Regulatory minimum CAR of 13.0% and cash reserve ratio of 20% are taken from the shared macro file (`sector/macro-assumptions/macro.csv`), which cites the Bank of Ghana notices; they are not re-derived here.
 - **Levies and special taxes.** The income tax charge is reported as a single line (`income_tax`); the National Fiscal Stabilisation Levy / COVID-19 levy and the growth-and-sustainability levy are not separately disclosed in the summary statements and are therefore not split out. Flagged for the forecast.
-- **Cedi depreciation.** SG holds foreign-currency assets and liabilities; the net monetary FX position is not disclosed in the summary statements used, so FX revaluation is left to the forecast using the shared `ghs_per_usd_end` driver, and no historical FX split is asserted.
+- **Cedi depreciation.** SG holds foreign-currency assets and liabilities; the net monetary FX position is not disclosed in the summary statements used, so **no FX revaluation is modelled** (see `assumptions.json` driver `fx`). The balance sheet is not revalued by currency and no historical FX split is asserted. Flagged rather than guessed.
 
 ## Known gaps / follow-ups
 

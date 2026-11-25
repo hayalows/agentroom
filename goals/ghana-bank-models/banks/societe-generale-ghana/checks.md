@@ -11,11 +11,12 @@ Recomputed from the committed `financials.csv` and `forecast.csv` by `model.py` 
 | FY2023 | 0.000 | 0.000 | -0.000 | 0.000 | -0.000 | 0.000 |
 | FY2024 | 0.000 | 0.000 | -0.000 | 0.000 | 0.000 | 0.000 |
 | FY2025 | 0.000 | 0.000 | 0.000 | -0.000 | -0.000 | 0.000 |
-| 9M-2026 | 0.000 | 0.000 | -0.000 | 0.000 | -0.000 | NA |
+| 9M-2025 | 0.000 | 0.000 | 0.000 | -0.000 | -0.000 | NA |
+| 9M-2026 | 0.000 | -0.000 | -0.000 | 0.000 | -0.000 | NA |
 
 ## Source and schema checks
 
-- Historical rows: 294; duplicate bank/period/statement/key rows: 0; reported rows missing source/page: 0; unavailable rows with non-blank value: 0.
+- Historical rows: 354; duplicate bank/period/statement/key rows: 0; reported rows missing source/page: 0; unavailable rows with non-blank value: 0.
 - Spot-checks against printed filing pages (visually verified): SG25AR printed p.66 total assets 9,676.100447 -> 9676.100447; SG24AR printed p.64 PAT 551.299247 -> 551.299247; SG26Q3 9M-2026 total assets 11,078.375 -> 11078.375. All match.
 
 ## Ratios: reported vs recomputed (%)
@@ -27,6 +28,7 @@ Recomputed from the committed `financials.csv` and `forecast.csv` by `model.py` 
 | FY2023 | 18.71 | 19.55 | 91.67 | 38.54 | 28.08 | 4.98 |
 | FY2024 | 19.81 | 16.56 | 93.91 | 35.31 | 22.54 | 5.30 |
 | FY2025 | 23.39 | 13.06 | 87.65 | 57.15 | 15.26 | 4.10 |
+| 9M-2025 | 17.90 | 13.51 | NA | 52.02 | 13.51 | 3.33 |
 | 9M-2026 | 18.52 | 13.98 | NA | 67.47 | 5.82 | 1.35 |
 
 Reported CAR is the audited capital-adequacy note; the bank's narrative quotes a different basis (e.g. FY2025 17.5% excluding DDEP reliefs vs 23.39% audited) and this is recorded in `financials.csv` notes. ROE/ROA here use year-end equity/assets as a single-period ratio, so they differ slightly from the bank's average-balance ratios. Net-loan bridge for FY2026E and later is gross minus allowance; FY2021-FY2024 also net of a separately reported amortised-cost adjustment and interest in suspense.
@@ -36,25 +38,25 @@ Reported CAR is the audited capital-adequacy note; the bank's narrative quotes a
 
 All forecast rows are estimated. Currency GHS millions; ratios in percent. Accounting arithmetic is checked before rounding. Cash-reserve and CAR checks are screening proxies, not regulatory returns. A negative cash residual or a positive gap is a flagged financing requirement, not an assumed funding source.
 
-Rows: 870; scenario-years: 15; FY2025 residual RWA density: 0.668481; estimated 9M-2026 RWA: 9172.706; initial proxy regulatory capital: 1698.785 (anchored to the observed 18.52% CAR).
+Rows: 915; scenario-years: 15; FY2025 residual RWA density: 0.668481; estimated 9M-2026 RWA: 9172.706; initial proxy regulatory capital: 1698.785 (anchored to the observed 18.52% CAR).
 
 | Scenario | Year | Max bridge residual | CAR % | Min CAR % | Capital gap | Cash | CRR proxy | Reserve gap | Dividends |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| base | FY2026E | 0.000 | 18.347 | 13.000 | 0.000 | 4073.100 | 1488.473 | 0.000 | 0.000 |
-| base | FY2027E | 0.000 | 18.106 | 13.000 | 0.000 | 4390.725 | 1689.417 | 0.000 | 94.094 |
-| base | FY2028E | 0.000 | 18.064 | 13.000 | 0.000 | 4780.593 | 1925.935 | 0.000 | 64.436 |
-| base | FY2029E | 0.000 | 18.057 | 13.000 | 0.000 | 5205.855 | 2191.714 | 0.000 | 65.314 |
-| base | FY2030E | 0.000 | 18.068 | 13.000 | 0.000 | 5676.915 | 2494.170 | 0.000 | 89.209 |
-| downside | FY2026E | 0.000 | 17.538 | 13.000 | 0.000 | 3829.089 | 1416.912 | 0.000 | 0.000 |
-| downside | FY2027E | 0.000 | 17.282 | 13.000 | 0.000 | 4025.566 | 1558.603 | 0.000 | 0.000 |
-| downside | FY2028E | 0.000 | 16.523 | 13.000 | 0.000 | 4170.034 | 1714.463 | 0.000 | 0.000 |
-| downside | FY2029E | 0.000 | 14.283 | 13.000 | 0.000 | 4123.824 | 1885.909 | 0.000 | 0.000 |
-| downside | FY2030E | 0.000 | 10.666 | 13.000 | 283.544 | 3844.336 | 2065.071 | 0.000 | 0.000 |
-| upside | FY2026E | 0.000 | 18.203 | 13.000 | 0.000 | 4217.631 | 1545.722 | 0.000 | 0.000 |
-| upside | FY2027E | 0.000 | 18.690 | 13.000 | 0.000 | 4967.186 | 1839.409 | 0.000 | 0.000 |
-| upside | FY2028E | 0.000 | 19.021 | 13.000 | 0.000 | 5876.025 | 2203.612 | 0.000 | 22.464 |
-| upside | FY2029E | 0.000 | 19.092 | 13.000 | 0.000 | 6931.536 | 2644.334 | 0.000 | 119.085 |
-| upside | FY2030E | 0.000 | 19.126 | 13.000 | 0.000 | 8220.700 | 3186.423 | 0.000 | 195.584 |
+| base | FY2026E | 0.000 | 18.347 | 13.000 | 0.000 | 4074.032 | 1488.473 | 0.000 | 0.000 |
+| base | FY2027E | 0.000 | 18.106 | 13.000 | 0.000 | 4393.059 | 1689.417 | 0.000 | 94.110 |
+| base | FY2028E | 0.000 | 18.064 | 13.000 | 0.000 | 4784.675 | 1925.935 | 0.000 | 64.476 |
+| base | FY2029E | 0.000 | 18.057 | 13.000 | 0.000 | 5211.935 | 2191.714 | 0.000 | 65.381 |
+| base | FY2030E | 0.000 | 18.069 | 13.000 | 0.000 | 5685.441 | 2494.170 | 0.000 | 89.311 |
+| downside | FY2026E | 0.000 | 17.538 | 13.000 | 0.000 | 3826.139 | 1416.912 | 0.000 | 0.000 |
+| downside | FY2027E | 0.000 | 17.282 | 13.000 | 0.000 | 4016.429 | 1558.603 | 0.000 | 0.000 |
+| downside | FY2028E | 0.000 | 16.520 | 13.000 | 0.000 | 4153.192 | 1714.463 | 0.000 | 0.000 |
+| downside | FY2029E | 0.000 | 14.275 | 13.000 | 0.000 | 4097.377 | 1885.909 | 0.000 | 0.000 |
+| downside | FY2030E | 0.000 | 10.650 | 13.000 | 285.416 | 3805.910 | 2065.071 | 0.000 | 0.000 |
+| upside | FY2026E | 0.000 | 18.203 | 13.000 | 0.000 | 4221.436 | 1545.722 | 0.000 | 0.000 |
+| upside | FY2027E | 0.000 | 18.691 | 13.000 | 0.000 | 4978.732 | 1839.409 | 0.000 | 0.000 |
+| upside | FY2028E | 0.000 | 19.021 | 13.000 | 0.000 | 5897.197 | 2203.612 | 0.000 | 22.659 |
+| upside | FY2029E | 0.000 | 19.092 | 13.000 | 0.000 | 6964.772 | 2644.334 | 0.000 | 119.375 |
+| upside | FY2030E | 0.000 | 19.126 | 13.000 | 0.000 | 8269.330 | 3186.423 | 0.000 | 196.038 |
 
 Accounting bridges: PASS (15/15). Capital below the shared minimum: 1/15 flagged. Cash-reserve proxy shortfalls: 0/15 flagged. Negative cash: 0/15 flagged.
 
@@ -86,18 +88,18 @@ The downside presents a combined stress. To separate the two drivers, the table 
 
 | Scenario | Year | Total operating income | Operating costs | Impairment | Profit before tax | Tax | PAT |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| base | FY2030E | 1947.430 | 1123.271 | 162.522 | 661.638 | 231.573 | 430.064 |
-| downside | FY2030E | 1347.597 | 1437.026 | 253.197 | -342.626 | 0.000 | -342.626 |
-| upside | FY2030E | 2514.929 | 1016.746 | 223.376 | 1274.807 | 446.182 | 828.624 |
+| base | FY2030E | 1947.594 | 1123.271 | 162.522 | 661.802 | 231.631 | 430.171 |
+| downside | FY2030E | 1346.608 | 1437.026 | 253.197 | -343.615 | 0.000 | -343.615 |
+| upside | FY2030E | 2515.664 | 1016.746 | 223.376 | 1275.541 | 446.439 | 829.102 |
 
-**Counterfactual: downside with base cost growth (isolates the credit and rate effect).** The table above keeps the downside's CPI-plus-8pt opex rule. Below, the downside FY2030E is recomputed with the **base** opex growth spread, holding the downside operating income and impairment charge fixed. The gap is the part of the downside loss that is mechanical cost pass-through from the shared higher-inflation downside path.
+**Counterfactual: downside with base cost growth — a one-year marginal diagnostic.** The table above keeps the downside's CPI-plus-8pt opex rule. Below, downside FY2030E operating costs are recomputed by applying the **base** opex growth spread to the downside FY2029 opening cost lines, holding the downside operating income and impairment charge fixed. This is a single-year marginal diagnostic, not a full five-year base-cost path: the FY2029 opening costs already embed four years of cumulative downside opex, so it isolates only the FY2030 growth-rate substitution and cannot by itself attribute the whole remaining loss to credit and rates.
 
 | FY2030E variant | Operating costs | Profit before tax | Tax | PAT |
 |---|---:|---:|---:|---:|
-| Downside as modelled (CPI+8) | 1437.026 | -342.626 | 0.000 | -342.626 |
-| Downside with base cost growth (CPI+4) | 1369.761 | -275.361 | 0.000 | -275.361 |
+| Downside as modelled (CPI+8) | 1437.026 | -343.615 | 0.000 | -343.615 |
+| Downside with base cost growth (CPI+4) | 1369.761 | -276.350 | 0.000 | -276.350 |
 
-The FY2030E gap between the two rows is the cost-pass-through component: with base cost growth the downside FY2030E loss shrinks to -275.361 from -342.626, so about 20% of the modelled downside loss magnitude comes from the mechanical opex rule (higher shared downside inflation plus the cost spread), not from credit or rates. The remaining loss is the credit and rate effect.
+The FY2030E gap between the two rows is the FY2030 growth-rate substitution only: with base cost growth the downside FY2030E loss changes to -276.350 from -343.615, about 20% of the modelled downside FY2030E loss magnitude. Because the FY2029 opening costs already embed cumulative downside opex, this is one year of cost pass-through, not the whole five-year effect; the residual is credit, rates and earlier-years' cumulative cost.
 
 ### Tax treatment in the anchor year
 
