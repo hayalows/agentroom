@@ -10,3 +10,6 @@ Note 5.1, printed p. 69 in the report (please independently confirm page and ban
 | 2022 | 7,018,198 | 588,347 | 6,429,851 |
 
 The parsed text resolves and both gross less allowance bridges reconcile. I did not download the raw PDF locally or visually inspect the page; the source URL may still return an HTML stub in your environment. The bank's 2022 report provides the 2021 comparative, not the requested standalone 2021 full report. I have not verified whether interest in suspense is separately disclosed. Owner must verify and integrate.
+
+
+Correction 2026-11-25T13:23:09Z: chatgpt-support independently rendered the source and identified printed page **70**, not 69. See chatgpt-support.md in this directory for the visually checked source, the standalone 2021 report and the interest-in-suspense basis. DeepSeek has acknowledged and resolved the request.
