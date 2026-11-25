@@ -1,0 +1,12 @@
+# Agricultural Development Bank PLC (`adb`) source register
+
+Scope: standalone Bank (separate financial statements; note whether GSE summaries present Bank-only or Consolidated — verify on statement headers), 31 December fiscal year; GHS millions (converted from GHS thousands). Covers FY2021–FY2025 and 9M-2026 (unaudited, cumulative).
+
+| source_id | title | publisher | URL | period covered | retrieved |
+| --- | --- | --- | --- | --- | --- |
+| ADB22 | Audited Summary Financial Statements for Year Ended December 31, 2022 (PR-147) | Agricultural Development Bank PLC via GSE | https://gse.com.gh/wp-content/uploads/2025/03/PR-147-AGRICULTURAL-DEVELOPMENT-BANK-PLC-AUDITED-SUMMARY-FINANCIAL-STATEMENTS-FOR-YEAR-ENDED-DECEMBER-31-20222.pdf | FY2022, FY2021 comparative | 2026-11-25 |
+| ADB24 | Summary Financial Statements Prepared from the Audited Financial Statements for the Year Ended 31 December 2024 (PR-333) | Agricultural Development Bank PLC via GSE | https://gse.com.gh/wp-content/uploads/2025/08/PR-333-AGRICULTURAL-DEVELOPMENT-BANK-PLC-SUMMARY-FINANCIAL-STATEMENTS-PREPARED-FROM-THE-AUDITED-FINANCIAL-STATEMENTS-FOR-THE-YEAR-ENDED-31-DECEMBER-20242-1.pdf | FY2024, FY2023 comparative | 2026-11-25 |
+| ADB25 | Summary Financial Statements Prepared from the Audited Financial Statements for the Year Ended 31 December 2025 (PR-111) | Agricultural Development Bank PLC via GSE | https://gse.com.gh/wp-content/uploads/2026/04/PR-111-AGRICULTURAL-DEVELOPMENT-BANK-PLC-SUMMARY-FINANCIAL-STATEMENTS-PREPARED-FROM-THE-AUDITED-FINANCIAL-STATEMENTS-FOR-THE-YEAR-ENDED-31-DECEMBER-20252-1.pdf | FY2025, FY2024 comparative | 2026-11-25 |
+| ADB25AR | Annual Report and Financial Statements 31 December 2025 (PR-129) | Agricultural Development Bank PLC via GSE | https://gse.com.gh/wp-content/uploads/2026/04/PR-129-AGRICULTURAL-DEVELOPMENT-BANK-PLC-ANNUAL-REPORT-AND-FINANCIAL-STATEMENTS-31-DECEMBER-20252-1.pdf | FY2025, FY2024 comparative (full notes) | 2026-11-25 |
+| ADB26Q3 | Unaudited Financial Statements for the Period Ended 30 September 2026 (PR-425) | Agricultural Development Bank PLC via GSE | https://gse.com.gh/wp-content/uploads/2026/10/PR-425-AGRICULTURAL-DEVELOPMENT-BANK-PLC-UNAUDITED-FINANCIAL-STATEMENTS-FOR-THE-PERIOD-ENDED-30-SEPTEMBER-20262.pdf | 9M-2026, 9M-2025 comparative | 2026-11-25 |
+| BOGREG | Register of licensed banks | Bank of Ghana | https://www.bog.gov.gh/supervision-regulation/registered-institutions/banks/ | current register (per `sector/roster-verification/verification.md`) | 2026-11-25 |
