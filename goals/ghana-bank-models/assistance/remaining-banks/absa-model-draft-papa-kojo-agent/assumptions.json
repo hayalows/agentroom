@@ -16,7 +16,8 @@
     "eligible_cash_share": 0.355,
     "eligible_share_stress": 0.284,
     "cash_earning_share": 0.4,
-    "reason": "Sep26 mandatory reserves 3264.904 / combined cash 9193.018 = 35.516%; use rounded 35.5% as proxy, stress 20% lower. Mandatory reserve is not verified eligible reserve and combined cash is not all yield-bearing. Cash yield pool assumes 40% combined cash earning; not an actual product split."
+    "reason": "Sep26 mandatory reserves 3264.904 / combined cash 9193.018 = 35.516%; use rounded 35.5% as proxy, stress 20% lower. Mandatory reserve is not verified eligible reserve and combined cash is not all yield-bearing. Cash yield pool assumes 40% combined cash earning; not an actual product split. Actual Sep26 mandatory reserve / (20% headline CRR × customer deposits) implies 77.0553% illustrative reserve base; neither this denominator nor cash eligibility is verified. Main payout screen uses this calibrated proxy, and full-deposit basis remains a conservative gap/payout sensitivity. Source reports no statutory liquidity breaches; prior all-deposit screen was not actual compliance.",
+    "deposit_basis_share": 0.7705525021531263
   },
   "rate": {
     "asset_beta": 0.55,
@@ -93,5 +94,10 @@
     "Q4 statutory reserve allocation 12.5% of positive full-year PAT less actual YTD123.167m, later annual tiers using opening statutory reserve / paid-up capital. No Q4 dividend assumed; actual YTD1115m preserved. Future dividends conditional on positive PAT and retained earnings, CAR buffer and cash eligibility screen; not permission or actual guidance.",
     "No new equity capital, no future OCI. Existing credit risk reserve held constant because gross credit migration unknown; sensitivity caveat. Regulatory minimum and reserve rate from macro; any gap flags not plugged by fresh funding.",
     "Net lending credit cost proxy; FY22 DDEP impairment not extrapolated. Q3 other regulatory sanctions and post-balance-sheet penalty disclosed by source pack; no assumed timing."
-  ]
+  ],
+  "penalty": {
+    "additional_q4_expense_m": 0,
+    "stress_m": 16.1,
+    "reason": "Issuer Q3 disclosed post-balance-sheet confirmed penalty GHS16.1m; baseline excludes an additional separately modeled charge to avoid double count, stress treats it as extra Q4 pretax expense with no incremental tax benefit, not a claim of actual recognition or deductibility."
+  }
 }
