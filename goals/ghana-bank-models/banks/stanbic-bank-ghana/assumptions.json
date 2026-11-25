@@ -7,7 +7,7 @@
   "anchor": {
     "period": "9M-2026",
     "source": "SB26Q3",
-    "method": "Use the observed September 2026 balance sheet and year-to-date earnings. Q4 is estimated from the 9M run rate with a scenario multiplier. 9M gross loans and allowance are not disclosed: estimate 9M gross from 9M net using the FY2025 reported allowance/net ratio, then treat allowance = gross - net as an estimate. No historical imputation."
+    "method": "Use the observed September 2026 balance sheet and year-to-date earnings. Q4 is estimated from the 9M run rate with a scenario multiplier. 9M gross loans and allowance are not disclosed: the anchor gross, RWA and capital use the BASE net-to-gross estimate (82%, an explicit estimated improvement over the actual FY2025 77.93%), then treat allowance = gross - net as an estimate. No historical imputation."
   },
   "drivers": {
     "loan_growth": {
@@ -117,8 +117,8 @@
     },
     "statutory_reserve_transfer_pct": {
       "status": "estimated",
-      "method": "Annual transfer from retained earnings to the statutory reserve, as a share of positive PAT. An internal equity transfer, so total equity and regulatory capital are unaffected; it caps distributable retained earnings for dividends.",
-      "reason": "Source-confirmed: FY2024 transfer 145.325m = 12.5% x PAT 1,162.602m; FY2025 201.083m = 12.5% x PAT 1,608.667m (SB24AR/SB25AR note 16.1). The 9M-2026 actual reserve movement is zero; the model applies it at the year-end (Q4) only.",
+      "method": "Annual transfer from retained earnings to the statutory reserve, as a share of POSITIVE FULL-YEAR PAT, less any statutory transfer already made year-to-date. An internal equity transfer, so total equity and regulatory capital are unaffected; it caps distributable retained earnings for dividends.",
+      "reason": "Source-confirmed: FY2024 transfer 145.325m = 12.5% x PAT 1,162.602m; FY2025 201.083m = 12.5% x PAT 1,608.667m (SB24AR/SB25AR note 16.1). The 9M-2026 equity statement shows the statutory reserve unchanged at 1,026.642m since January, so the actual YTD statutory transfer is zero (the 212.987m credit-risk-reserve transfer is a DISTINCT line, tracked separately and not netted). Illustrative FY2026E transfer: base 1170.626 x 12.5% = 146.328m; downside 213.209 x 12.5% = 26.651m; upside 1311.620 x 12.5% = 163.953m. Later years keep the annual positive-PAT rule.",
       "base": 12.5,
       "downside": 12.5,
       "upside": 12.5

@@ -48,6 +48,10 @@ INC = {
    fci=771.076, fce=167.997, netfee=603.079, nt=1011.641, ooi=12.047, toi=4463.492,
    imp=52.178, staff=943.984, da=130.582, ooe=729.216, pbt=2607.532,
    indtax=78.313, dirtax=920.552, tax=998.865, pat=1608.667),
+ "9M-2025": dict(src="SB26Q3", pg="1", ii=2544.666, ie=454.069, nii=2090.597,
+   fci=582.828, fce=114.574, netfee=468.254, nt=755.313, ooi=12.044, toi=3326.208,
+   imp=14.668, staff=681.260, da=96.571, ooe=532.949, pbt=2000.760,
+   indtax=54.365, dirtax=681.358, tax=735.723, pat=1265.037),
  "9M-2026": dict(src="SB26Q3", pg="1", ii=1974.780, ie=282.424, nii=1692.356,
    fci=646.334, fce=125.730, netfee=520.604, nt=602.257, ooi=6.128, toi=2821.345,
    imp=102.757, staff=741.271, da=120.634, ooe=450.969, pbt=1405.714,
@@ -89,6 +93,12 @@ BS = {
    dep_banks=655.594, dep_cust=24013.184, borrow=1417.465,
    trading_liab=2950.742, ctax=222.323, othl_extra=1709.506, tl=30968.814,
    stated=414.213, retained=4298.476, statres=1026.642, crim=0.0, others=0.0, te=5739.331),
+ "9M-2025": dict(src="SB26Q3", pg="1", cash=13026.512, due_from_banks=None,
+   trading=5982.781, pledged=851.062, inv=12071.810, loans_net=6893.419,
+   dta=329.153, oth=224.221, intang=32.323, ppe=361.750, ta=39773.031,
+   dep_banks=1720.993, dep_cust=26773.899, borrow=327.063,
+   trading_liab=3717.495, ctax=286.287, othl_extra=1551.593, tl=34377.330,
+   stated=414.213, retained=4155.929, statres=825.559, crim=0.0, others=0.0, te=5395.701),
  "9M-2026": dict(src="SB26Q3", pg="1", cash=15778.120, due_from_banks=None,
    trading=3107.390, pledged=997.908, inv=12622.184, loans_net=9027.632,
    dta=241.918, oth=908.830, intang=18.296, ppe=541.356, ta=43243.634,
@@ -105,6 +115,7 @@ LOANS = {
  "FY2023": dict(src="SB23AR", pg="85", gross=6767.842, allow=778.500, iis=0.0, net=5989.342),
  "FY2024": dict(src="SB24AR", pg="85", gross=9390.373, allow=1209.169, iis=334.488, net=7846.716),
  "FY2025": dict(src="SB25AR", pg="80", gross=9820.519, allow=1502.630, iis=665.113, net=7652.776),
+ "9M-2025": dict(src=None, pg="", gross=None, allow=None, iis=None, net=6893.419),
  "9M-2026": dict(src=None, pg="", gross=None, allow=None, iis=None, net=None),
 }
 
@@ -115,6 +126,7 @@ RATIO = {
  "FY2023": dict(src="SB23SUM", pg="1", car=19.6, tier1=16.6, npl=16.24),
  "FY2024": dict(src="SB24SUM", pg="1", car=19.0, tier1=16.0, npl=17.08),
  "FY2025": dict(src="SB25SUM", pg="1", car=23.2, tier1=21.2, npl=24.63),
+ "9M-2025": dict(src="SB26Q3", pg="1", car=24.84, tier1=21.84, npl=26.78),
  "9M-2026": dict(src="SB26Q3", pg="1", car=23.32, tier1=21.32, npl=9.54),
 }
 
@@ -125,13 +137,14 @@ CAP = {
  "FY2023": dict(src="SB23AR", pg="68", t1=1919.338, t2=345.918, cap=2265.256, rwa=11530.609),
  "FY2024": dict(src="SB24AR", pg="137", t1=2621.420, t2=491.453, cap=3112.873, rwa=16381.778),
  "FY2025": dict(src="SB25AR", pg="132", t1=3665.705, t2=346.290, cap=4011.995, rwa=17314.504),
+ "9M-2025": dict(src=None, pg=None, t1=None, t2=None, cap=None, rwa=None),
  "9M-2026": dict(src=None, pg=None, t1=None, t2=None, cap=None, rwa=None),
 }
 
 # FY2021 regulatory-basis loan detail (risk note 30) kept separate to avoid double counting.
 REG21 = dict(src="SB21AR", pg="107", reg_gross=5466.710, iis=78.277)
 
-PERIODS = ["FY2021", "FY2022", "FY2023", "FY2024", "FY2025", "9M-2026"]
+PERIODS = ["FY2021", "FY2022", "FY2023", "FY2024", "FY2025", "9M-2025", "9M-2026"]
 BANKONLY = "Bank-only (separate) statements; costs/allowances positive, profits signed."
 
 rows = []
@@ -200,6 +213,13 @@ for p in PERIODS:
     res = (b["statres"] or 0) + (b["crim"] or 0) + (b["others"] or 0)
     add(p, "balance_sheet", "reserves_other", res, "GHS millions", b["src"], b["pg"], "derived",
         "Statutory reserve plus statutory credit risk reserve plus other reserves as reported.")
+    add(p, "balance_sheet", "x_statutory_reserve", b["statres"], "GHS millions", b["src"], b["pg"],
+        "reported" if b["statres"] is not None else "unavailable",
+        BANKONLY + " Statutory reserve (Act 930 s.34); tracked separately but already inside reserves_other (non-additive memo).")
+    add(p, "balance_sheet", "x_credit_risk_reserve", b["crim"], "GHS millions", b["src"], b["pg"],
+        "reported" if b["crim"] is not None else "unavailable",
+        BANKONLY + " Statutory credit-risk reserve; DISTINCT from the statutory reserve and already inside "
+        "reserves_other (non-additive memo). The 9M-2026 credit-risk transfer of 212.987m is not a statutory-reserve transfer.")
     rep("total_equity", b["te"])
 
     l = LOANS[p]

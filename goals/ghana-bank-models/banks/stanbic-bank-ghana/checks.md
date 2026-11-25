@@ -11,11 +11,12 @@ Recomputed from the committed `financials.csv` and `forecast.csv` by `model.py` 
 | FY2023 | -0.000 | 0.000 | -0.000 | -0.000 | -0.000 | 0.000 |
 | FY2024 | -0.000 | -0.000 | 0.000 | 0.000 | 0.000 | 0.000 |
 | FY2025 | -0.000 | -0.000 | 0.000 | 0.000 | -0.000 | 0.000 |
+| 9M-2025 | 0.000 | 0.000 | 0.000 | -0.000 | 0.000 | NA |
 | 9M-2026 | -0.000 | -0.000 | 0.000 | -0.000 | 0.000 | NA |
 
 ## Source and schema checks
 
-- Historical rows: 303; duplicate bank/period/statement/key rows: 0; reported rows missing source/page: 0; unavailable rows with non-blank value: 0.
+- Historical rows: 367; duplicate bank/period/statement/key rows: 0; reported rows missing source/page: 0; unavailable rows with non-blank value: 0.
 - Spot-checks against printed filing pages (visually verified): SB25AR printed p.46 total assets 36,708,145k -> 36708.145; SB25AR printed p.47 PAT 1,608,667k -> 1608.667; SB24AR printed p.49 total assets 32,590,921k -> 32590.921; SB26Q3 9M-2026 total assets 43,243,634k -> 43243.634. All match.
 
 ## Ratios: reported vs recomputed (%)
@@ -27,6 +28,7 @@ Recomputed from the committed `financials.csv` and `forecast.csv` by `model.py` 
 | FY2023 | 19.60 | 16.60 | 16.24 | 36.34 | 38.02 | 43.01 | 5.20 |
 | FY2024 | 19.00 | 16.00 | 17.08 | 40.52 | 41.42 | 28.15 | 3.57 |
 | FY2025 | 23.20 | 21.20 | 24.63 | 40.90 | 40.41 | 28.03 | 4.38 |
+| 9M-2025 | 24.84 | 21.84 | 26.78 | NA | 39.41 | 23.45 | 3.18 |
 | 9M-2026 | 23.32 | 21.32 | 9.54 | NA | 46.53 | 16.38 | 2.09 |
 
 Reported CAR/CET1 are the Bank's own summary quantitative disclosures; the audited capital-adequacy note agrees (FY2022 12.3%, FY2023 19.6%, FY2024 19.0%, FY2025 23.2%). ROE/ROA and cost/income here use year-end/single-period figures. `income_tax` is the sum of the reported indirect and direct tax. FY2022 was a loss year: direct tax was a credit.

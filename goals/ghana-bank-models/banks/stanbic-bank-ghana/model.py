@@ -167,8 +167,8 @@ NOTE_B = {
     "other_liabilities": "Deposit-growth proxy.",
     "total_liabilities": "Sum of modelled liabilities.",
     "stated_capital": "Held constant; no assumed capital raise.",
-    "retained_earnings": "Opening retained earnings plus incremental modelled PAT minus modelled dividend.",
-    "reserves_other": "Held constant; no forecast OCI or reserve transfers.",
+    "retained_earnings": "Opening retained earnings plus incremental modelled PAT minus modelled dividend minus the statutory reserve transfer.",
+    "reserves_other": "Opening other reserves plus the annual statutory reserve transfer (12.5% of positive full-year PAT less any transfer already made year-to-date); no forecast OCI.",
     "total_equity": "Stated capital + retained earnings + reserves.",
 }
 
@@ -307,10 +307,18 @@ for s in SCEN:
         preRwa = rwa(preAssets, b["loans_and_advances_gross"])
         preCap = prevCap + incPAT
         reserve = b["customer_deposits"] * pct(crr)
-        # Statutory reserve transfer: the Bank moves 12.5% of positive annual PAT from retained
-        # earnings to the statutory reserve (source-confirmed FY2024 145.325m / FY2025 201.083m).
-        # It is an internal equity transfer, so total equity and regulatory capital are unaffected.
-        transfer = pct(D["statutory_reserve_transfer_pct"][s]) * max(incPAT, 0.0)
+        # Statutory reserve transfer: the Bank moves 12.5% of the POSITIVE FULL-YEAR PAT from
+        # retained earnings to the statutory reserve, less any statutory transfer already made
+        # year-to-date (source-confirmed FY2024 145.325m / FY2025 201.083m = 12.5% of PAT).
+        # The official 9M-2026 equity statement shows the statutory reserve unchanged at 1,026.642m
+        # since January, so the actual YTD statutory transfer is zero (the 212.987m credit-risk-reserve
+        # transfer is a DISTINCT line and is NOT netted here). Full-year anchor PAT -> illustrative
+        # transfer 146.328m (base) / 26.651m (downside) / 163.953m (upside). Later years keep the
+        # annual positive-PAT rule. It is an INTERNAL equity transfer, so total equity and regulatory
+        # capital are unaffected; it only reallocates retained earnings <-> reserves and caps dividends.
+        ytd_stat_transfer = 0.0  # observed statutory transfer in the current fiscal year (9M-2026: zero)
+        transfer = max(0.0, pct(D["statutory_reserve_transfer_pct"][s]) * max(i["profit_after_tax"], 0.0)
+                       - ytd_stat_transfer)
         distributable = max(0.0, prevB["retained_earnings"] + incPAT - transfer)
         div = max(0.0, min(max(incPAT, 0.0) * pct(D["dividend_payout_pct"][s]),
                            distributable,
