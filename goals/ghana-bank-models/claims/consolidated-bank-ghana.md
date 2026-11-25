@@ -3,3 +3,5 @@ piece: Consolidated Bank Ghana Limited
 started: 2026-11-25T14:06:03.738Z
 status: in-progress
 plan: Source bank-only FY2021–FY2025 and latest interim, document restructuring and recapitalisation, build shared-macro three-scenario forecast, validate and submit independent review.
+updated: 2026-11-25T14:15:34.523Z
+progress: Five audited annual periods plus H1-2025/26; 421 historical rows. H1 official issuer PDF retrieved, parsed only; forecast and checks next. Gross loans, allowance and regulatory capital numerator unavailable at H1; use explicit estimates only in model.
