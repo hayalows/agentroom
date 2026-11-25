@@ -180,8 +180,10 @@ def run():
                     pbt = toi - staff - da - oth_opex - lease_fin - impairment
                     tax = max(0.0, pbt * tax_r)
                     pat = pbt - tax
-                    # Pay dividend only once retained_earnings > 0 and CAR >= target_car_pct
-                    div = max(0.0, pat * payout) if (prev['retained_earnings'] + pat > 0) else 0.0
+                    # Pay the full modeled dividend only if retained earnings stay positive after payout.
+                    pre_div_retained = prev['retained_earnings'] + pat
+                    proposed_div = max(0.0, pat * payout)
+                    div = proposed_div if (pre_div_retained > 0 and pre_div_retained - proposed_div > 0) else 0.0
                     stated_cap = prev['stated_capital']
                     ret_earn = prev['retained_earnings'] + pat - div
                     res_other = prev['reserves_other']
@@ -206,9 +208,9 @@ def run():
             roe_pct = None if avg_eq <= 0 else (pat / avg_eq) * 100.0
             roa_pct = (pat / avg_as) * 100.0
 
-            interest_income_note = ('FY2026E = 9M actual + iterative Q4; Q4 uses the day-weighted policy rate and Q4 investment yields in assumptions.json.' if yr == 'FY2026E' else 'Average loans x policy-linked loan yield + average investments x 50/50 364-day bill and 10-year bond yield (macro.csv).')
+            interest_income_note = ('FY2026E = 9M actual + iterative Q4; Q4 uses the day-weighted policy rate and investment-yield proxies in assumptions.json, not observed Q4 average yields.' if yr == 'FY2026E' else 'Average loans x policy-linked loan yield + average investments x 50/50 364-day bill and 10-year bond yield (macro.csv).')
             cof_note = ('FY2026E adds Q4 interest expense using the implied Q4 bill mean in assumptions.json; 9M actual is retained.' if yr == 'FY2026E' else 'Cost of funds = max(1.5%, 0.7% + 0.18 x annual 91-day bill rate); calibrated to FY2025 and 9M-2026 in checks.md.')
-            dividends_note = ('FY2026E assumes no Q4 dividend; CAL26Q3 reports no dividend movement in its 9M-2026 equity rollforward.' if yr == 'FY2026E' else 'Modeled payout under positive retained earnings and CAR gate; deducted once from retained earnings.')
+            dividends_note = ('FY2026E assumes no Q4 dividend; CAL26Q3 does not report a dividend movement in its 9M-2026 equity rollforward.' if yr == 'FY2026E' else 'Full modeled payout only if retained earnings stay positive after payout and post-payout CAR meets target; deducted once.')
             retained_earnings_note = ('9M-2026 closing retained earnings + projected Q4 PAT - assumed Q4 dividends (0); 9M reserve transfers are already reflected.' if yr == 'FY2026E' else 'Prior retained_earnings + PAT - dividends (payout gated on positive retained earnings & CAR >= target).')
             items = [
                 ('income_statement', 'interest_income', int_inc, 'GHS millions', interest_income_note),
@@ -353,7 +355,7 @@ def run():
     lines.append(f'| 9M-2026 annualized | {bill_26:.2f} | {annual_interest_26:.3f} | {avg_funding_26:.3f} | {observed_26:.3f} | {fit_26:.3f} | {fit_26-observed_26:+.3f} |')
     lines.extend([
         f'- FY2025 bill rate is the 12-month mean in `macro.csv`. The 9M-2026 bill rate is the Jan-Sep monthly mean (6.23%) from Bank of Ghana November 2026 Summary, p.3.',
-        f'- FY2026E adds Q4 only. Q4 uses an implied 91-day bill mean of {q4_bill:.2f}%, a day-weighted policy rate of {q4_policy:.2f}%, and Q4 investment references of {q4_bill_364:.3f}% (364-day bill) and {q4_bond:.2f}% (10-year bond). The 5.81% 91-day, 11.01% 364-day and 14.05% bond inputs in `macro.csv` are full-year estimates, so they are not applied directly to Q4.',
+        f'- FY2026E adds Q4 only. Q4 uses an implied 91-day bill mean of {q4_bill:.2f}%, a day-weighted policy rate of {q4_policy:.2f}%, and investment-yield proxies of {q4_bill_364:.3f}% (364-day bill) and {q4_bond:.2f}% (10-year bond). These are Q4 run-rate proxies, not observed quarter-average yields. The 5.81% 91-day, 11.01% 364-day and 14.05% bond inputs in `macro.csv` are full-year estimates, so they are not applied directly to Q4.',
         f'- Related interest-income fit: base FY2026E is {base_26_income:.3f}m versus the 9M-2026 annualized run rate of {annualized_9m_income:.3f}m ({(base_26_income/annualized_9m_income-1)*100:+.1f}%). The base loan-yield rule is Q4 policy rate + 1.0 percentage point; this aggregate fit is a calibration guide, not an observed loan yield.',
         '',
         '## 5. Scenario PAT ordering',
@@ -372,7 +374,7 @@ def run():
         '- FY2024 Bank retained earnings stored from CAL25 SoFP p.65 are (1,209.108)m. The Directors table p.22 shows (946.562)m excluding reserve transfers; CAL25 SoCE p.67 reconciles this as opening (1,202.955) + PAT 256.393 - statutory reserve transfer 64.098 - credit-risk reserve transfer 198.448 = closing (1,209.108).',
         '- CAL25 p.122 reports Bank CAR of 18.87% (FY2025) and (7.22%) (FY2024). Group CAR is 19.80% and (6.38%); the p.14 narrative refers to Group. Historical rows retain the Bank series.',
         '- Right-of-use assets are recast from `other_assets` to `property_equipment_intangibles` per MODEL-SPEC; the reclass changes no period total. Source values and formulas are in `financials.csv` and `sources.md`.',
-        '- CAL26Q3 Statement of Changes in Equity (physical PDF p.3; no printed page numbers) reports no 9M-2026 dividend movement or amount. FY2026E `x_dividends_paid` is 0.000 because no Q4 payout is assumed; subsequent modeled payments are shown and deducted from retained earnings.',
+        '- CAL26Q3 Statement of Changes in Equity (physical PDF p.3; no printed page numbers) does not report a 9M-2026 dividend movement or amount. FY2026E `x_dividends_paid` is 0.000 because no Q4 payout is assumed; later payouts occur only when the full payout leaves positive retained earnings and post-payout CAR meets target.',
     ])
     with open(CHECKS_PATH, 'w', encoding='utf-8') as f:
         f.write('\n'.join(lines) + '\n')
