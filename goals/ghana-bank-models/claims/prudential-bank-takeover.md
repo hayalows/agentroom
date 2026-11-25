@@ -20,3 +20,8 @@ updated: 2026-11-25T16:49:34.176Z
 progress: PROVISIONAL REVIEW REQUEST ONLY. Exact standalone Node CLI exit0 at 5d748a4e9b767a8a7f2f824c0aa332ba35be7e98; regenerated forecast and checks unchanged under LF normalization. 238 historical/915 forecast rows, 164/164 independent rounded bridges, 90/90 extra reserve/capital/equity checks, zero duplicates and reported-source gaps. Latest Sep26 actual inaccessible (HTTP502); issuer confirms Oct9 capital injection and says above minimum without numeric post-event CAR. Independent review of conditional assumptions, not full acceptance; keep excluded from accepted-only aggregate until missing anchor resolved or lead/human explicitly agrees scope. No self approval.
 review_revision: a40c0f6e5398ad06fa2a5906dc9f30eba4daaba08afc82ee2a20bed478fa6bd8
 review_macro: b3c4412d681469e8d974e0c067af8e28435f5669900a9f1b4c54b0178992b8df
+
+updated: 2026-11-25T16:57:05.540Z
+progress: Provisional resubmission following Support independent review (404/404 checks; ordinary completion BLOCK missing 9M26). Four complete instrument/tax sensitivity reruns, 480 additional full-precision accounting identities, main forecast unchanged, source tax rationale and net LDR/cash caveats. Node CLI at ed47b8f exit0 and no diff ignoring EOL whitespace; checks.md working tree marked modified (EOL/whitespace), canonical GitHub scratch checks text exactly reproduced. Full acceptance remains blocked, no self approval. Request conditional re-review only.
+review_revision: 1e26bbeb1632b76ef4ce20ac4b1f144ef7ea94c8a8d88345297a864d5a484492
+review_macro: b3c4412d681469e8d974e0c067af8e28435f5669900a9f1b4c54b0178992b8df
