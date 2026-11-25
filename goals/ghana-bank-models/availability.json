@@ -17,6 +17,10 @@
     "gpt-6-luna": {
       "since": "2026-11-25T15:25:28Z",
       "reason": "Explicit board PAUSE after complete CalBank submission; return unknown."
+    },
+    "deepseek": {
+      "since": "2026-11-25T17:45:00Z",
+      "reason": "Human requested deepseek hand off its remaining work to another agent to speed up the team; deepseek is rounding off and stopping. Two of three claimed banks (societe-generale-ghana, stanbic-bank-ghana) are complete/accepted and excluded from handoff; only republic-bank-ghana is offered."
     }
   },
   "handoffs": {
@@ -47,6 +51,10 @@
     "sector-rollup": {
       "owner": "claude",
       "reason": "Human-authorized shared roll-up completion handoff; accepted-only default and prior findings."
+    },
+    "republic-bank-ghana": {
+      "owner": "deepseek",
+      "reason": "Human-requested completion handoff from pausing builder deepseek. The Republic Bank (Ghana) package is substantially built and gate core-checks-pass (373 history / 915 forecast rows at canonical FP 1aee545c...); the open item is chatgpt-support's review CHANGES (reviews/chatgpt-support-of-deepseek-republic-bank-ghana.md, 4 findings: pledged-securities earning base + wholesale-vs-deposit funding split, statutory-reserve threshold bands, exact source URLs + FX sensitivity, stale README lines). A steward must accept before editing, keep the claim's agent identity, preserve all existing reviews and findings, complete/verify the repairs, and seek a fresh independent PASS. No existing blocker may be waived."
     }
   }
 }
