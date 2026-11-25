@@ -1,8 +1,8 @@
 {
   "bank": "fbnbank-ghana",
-  "status": "PROVISIONAL: missing FY2025 full audited statement; not eligible for acceptance",
+  "status": "Complete five annual audited-summary periods and Sep26; needs independent review",
   "macro_file": "../../sector/macro-assumptions/macro.csv",
-  "anchor": "9M-2026 actual + estimated Q4; calibrated to Sep25/Sep26 average earning/funding pools; FY25 equity and reserves from issuer 2026 opening reconciliation",
+  "anchor": "9M26 actual plus modeled Q4; FY25 closing pools observed; annual reserve transfers preserve actual YTD",
   "assumptions": {
     "earning_cash_share": 0.45,
     "earning_cash_reason": "Assumed 45% of combined cash earns interest, no deposit placement split disclosed",
@@ -16,11 +16,11 @@
     "tax": 0.35,
     "tax_reason": "9M26 reported corporate tax25% plus two 5% levies; no tax credit on forecast losses",
     "fy25_equity": 1041.455,
-    "fy25_statutory_reserve": 344.446,
-    "reserve_reason": "Actual YTD transfer17.934m (50% PAT) and FY25 opening statutory344.446m. FY26 modeled 50% annual positive PAT less observed YTD floor zero; later illustrative opening reserve tiers 50/25/12.5%. Actual transfer exceeds illustrative tier; reason not established. Credit-risk reserve held constant from Sep26.",
+    "fy25_statutory_reserve": 344.447,
+    "reserve_reason": "Observed FY24/25 transfer 50% PAT even when opening statutory reserve exceeded half capital; prudential conservative 50% positive annual PAT assumption rather than asserting statutory minimum equals actual practice; FY26 subtract actual YTD17.934m. Q3 opening statutory344.446 vs annual344.447 rounding/reclassification, use actual YTD transfer directly. No dividends; credit risk reserve held at Q3.",
     "dividend_payout": 0,
     "dividend_reason": "No dividend reported in 9M26 equity movements; retained earnings low, no future payout assumed for provisional stress; no new capital.",
-    "fx": "No net FX balance split; 9M26 cash FX movement -88.214m is not P&L. No incremental currency revaluation forecast."
+    "fx": "FY25 cash flow FX +271.057m and unrealised FX adjustment -148.653m are different items, not direct net currency exposure; Q3 FX cash effect -88.214m; no future separate revaluation. Trading scenario sensitivity only."
   },
   "scenarios": {
     "base": {
