@@ -1,5 +1,5 @@
 bank,scenario,period,statement,line_item,value,unit,source_id,status,notes
-calbank,base,FY2026E,income_statement,interest_income,879.963,GHS millions,MODEL-ESTIMATE,estimated,FY2026E = 9M actual + iterative Q4; Q4 uses the day-weighted policy rate and Q4 investment yields in assumptions.json.
+calbank,base,FY2026E,income_statement,interest_income,879.963,GHS millions,MODEL-ESTIMATE,estimated,"FY2026E = 9M actual + iterative Q4; Q4 uses the day-weighted policy rate and investment-yield proxies in assumptions.json, not observed Q4 average yields."
 calbank,base,FY2026E,income_statement,interest_expense,198.534,GHS millions,MODEL-ESTIMATE,estimated,FY2026E adds Q4 interest expense using the implied Q4 bill mean in assumptions.json; 9M actual is retained.
 calbank,base,FY2026E,income_statement,net_interest_income,681.430,GHS millions,MODEL-ESTIMATE,estimated,interest_income - interest_expense.
 calbank,base,FY2026E,income_statement,fee_commission_income,308.330,GHS millions,MODEL-ESTIMATE,estimated,Linked to nominal GDP (macro.csv).
@@ -15,7 +15,7 @@ calbank,base,FY2026E,income_statement,impairment_charge,-3.490,GHS millions,MODE
 calbank,base,FY2026E,income_statement,profit_before_tax,634.690,GHS millions,MODEL-ESTIMATE,estimated,total_operating_income - opex - x_lease_finance_cost - impairment.
 calbank,base,FY2026E,income_statement,income_tax,207.539,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax * tax_rate.
 calbank,base,FY2026E,income_statement,profit_after_tax,427.151,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax - income_tax.
-calbank,base,FY2026E,income_statement,x_dividends_paid,0.000,GHS millions,MODEL-ESTIMATE,estimated,FY2026E assumes no Q4 dividend; CAL26Q3 reports no dividend movement in its 9M-2026 equity rollforward.
+calbank,base,FY2026E,income_statement,x_dividends_paid,0.000,GHS millions,MODEL-ESTIMATE,estimated,FY2026E assumes no Q4 dividend; CAL26Q3 does not report a dividend movement in its 9M-2026 equity rollforward.
 calbank,base,FY2026E,balance_sheet,cash_and_bog_balances,3124.655,GHS millions,MODEL-ESTIMATE,estimated,Proxy screen >= crr_pct (20%) on customer_deposits; includes due_from_banks aggregate.
 calbank,base,FY2026E,balance_sheet,due_from_banks,,GHS millions,MODEL-ESTIMATE,unavailable,Not split from cash_and_bog_balances.
 calbank,base,FY2026E,balance_sheet,investment_securities,7290.863,GHS millions,MODEL-ESTIMATE,estimated,Balancing liquid asset = total_assets - loans - ppe - other - cash; solved iteratively.
@@ -57,7 +57,7 @@ calbank,base,FY2027E,income_statement,impairment_charge,34.428,GHS millions,MODE
 calbank,base,FY2027E,income_statement,profit_before_tax,555.168,GHS millions,MODEL-ESTIMATE,estimated,total_operating_income - opex - x_lease_finance_cost - impairment.
 calbank,base,FY2027E,income_statement,income_tax,183.206,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax * tax_rate.
 calbank,base,FY2027E,income_statement,profit_after_tax,371.963,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax - income_tax.
-calbank,base,FY2027E,income_statement,x_dividends_paid,0.000,GHS millions,MODEL-ESTIMATE,estimated,Modeled payout under positive retained earnings and CAR gate; deducted once from retained earnings.
+calbank,base,FY2027E,income_statement,x_dividends_paid,0.000,GHS millions,MODEL-ESTIMATE,estimated,Full modeled payout only if retained earnings stay positive after payout and post-payout CAR meets target; deducted once.
 calbank,base,FY2027E,balance_sheet,cash_and_bog_balances,3587.071,GHS millions,MODEL-ESTIMATE,estimated,Proxy screen >= crr_pct (20%) on customer_deposits; includes due_from_banks aggregate.
 calbank,base,FY2027E,balance_sheet,due_from_banks,,GHS millions,MODEL-ESTIMATE,unavailable,Not split from cash_and_bog_balances.
 calbank,base,FY2027E,balance_sheet,investment_securities,8369.833,GHS millions,MODEL-ESTIMATE,estimated,Balancing liquid asset = total_assets - loans - ppe - other - cash; solved iteratively.
@@ -99,7 +99,7 @@ calbank,base,FY2028E,income_statement,impairment_charge,39.646,GHS millions,MODE
 calbank,base,FY2028E,income_statement,profit_before_tax,567.863,GHS millions,MODEL-ESTIMATE,estimated,total_operating_income - opex - x_lease_finance_cost - impairment.
 calbank,base,FY2028E,income_statement,income_tax,187.395,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax * tax_rate.
 calbank,base,FY2028E,income_statement,profit_after_tax,380.468,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax - income_tax.
-calbank,base,FY2028E,income_statement,x_dividends_paid,76.094,GHS millions,MODEL-ESTIMATE,estimated,Modeled payout under positive retained earnings and CAR gate; deducted once from retained earnings.
+calbank,base,FY2028E,income_statement,x_dividends_paid,76.094,GHS millions,MODEL-ESTIMATE,estimated,Full modeled payout only if retained earnings stay positive after payout and post-payout CAR meets target; deducted once.
 calbank,base,FY2028E,balance_sheet,cash_and_bog_balances,4091.967,GHS millions,MODEL-ESTIMATE,estimated,Proxy screen >= crr_pct (20%) on customer_deposits; includes due_from_banks aggregate.
 calbank,base,FY2028E,balance_sheet,due_from_banks,,GHS millions,MODEL-ESTIMATE,unavailable,Not split from cash_and_bog_balances.
 calbank,base,FY2028E,balance_sheet,investment_securities,9547.923,GHS millions,MODEL-ESTIMATE,estimated,Balancing liquid asset = total_assets - loans - ppe - other - cash; solved iteratively.
@@ -141,7 +141,7 @@ calbank,base,FY2029E,income_statement,impairment_charge,42.659,GHS millions,MODE
 calbank,base,FY2029E,income_statement,profit_before_tax,570.899,GHS millions,MODEL-ESTIMATE,estimated,total_operating_income - opex - x_lease_finance_cost - impairment.
 calbank,base,FY2029E,income_statement,income_tax,188.397,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax * tax_rate.
 calbank,base,FY2029E,income_statement,profit_after_tax,382.502,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax - income_tax.
-calbank,base,FY2029E,income_statement,x_dividends_paid,76.500,GHS millions,MODEL-ESTIMATE,estimated,Modeled payout under positive retained earnings and CAR gate; deducted once from retained earnings.
+calbank,base,FY2029E,income_statement,x_dividends_paid,76.500,GHS millions,MODEL-ESTIMATE,estimated,Full modeled payout only if retained earnings stay positive after payout and post-payout CAR meets target; deducted once.
 calbank,base,FY2029E,balance_sheet,cash_and_bog_balances,4645.872,GHS millions,MODEL-ESTIMATE,estimated,Proxy screen >= crr_pct (20%) on customer_deposits; includes due_from_banks aggregate.
 calbank,base,FY2029E,balance_sheet,due_from_banks,,GHS millions,MODEL-ESTIMATE,unavailable,Not split from cash_and_bog_balances.
 calbank,base,FY2029E,balance_sheet,investment_securities,10840.367,GHS millions,MODEL-ESTIMATE,estimated,Balancing liquid asset = total_assets - loans - ppe - other - cash; solved iteratively.
@@ -183,7 +183,7 @@ calbank,base,FY2030E,income_statement,impairment_charge,49.136,GHS millions,MODE
 calbank,base,FY2030E,income_statement,profit_before_tax,621.417,GHS millions,MODEL-ESTIMATE,estimated,total_operating_income - opex - x_lease_finance_cost - impairment.
 calbank,base,FY2030E,income_statement,income_tax,205.068,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax * tax_rate.
 calbank,base,FY2030E,income_statement,profit_after_tax,416.350,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax - income_tax.
-calbank,base,FY2030E,income_statement,x_dividends_paid,83.270,GHS millions,MODEL-ESTIMATE,estimated,Modeled payout under positive retained earnings and CAR gate; deducted once from retained earnings.
+calbank,base,FY2030E,income_statement,x_dividends_paid,83.270,GHS millions,MODEL-ESTIMATE,estimated,Full modeled payout only if retained earnings stay positive after payout and post-payout CAR meets target; deducted once.
 calbank,base,FY2030E,balance_sheet,cash_and_bog_balances,5269.385,GHS millions,MODEL-ESTIMATE,estimated,Proxy screen >= crr_pct (20%) on customer_deposits; includes due_from_banks aggregate.
 calbank,base,FY2030E,balance_sheet,due_from_banks,,GHS millions,MODEL-ESTIMATE,unavailable,Not split from cash_and_bog_balances.
 calbank,base,FY2030E,balance_sheet,investment_securities,12295.231,GHS millions,MODEL-ESTIMATE,estimated,Balancing liquid asset = total_assets - loans - ppe - other - cash; solved iteratively.
@@ -209,7 +209,7 @@ calbank,base,FY2030E,ratios,ldr_pct,20.555,%,MODEL-ESTIMATE,estimated,loans_and_
 calbank,base,FY2030E,ratios,cost_to_income_pct,58.505,%,MODEL-ESTIMATE,estimated,opex / total_operating_income * 100.
 calbank,base,FY2030E,ratios,roe_pct,13.411,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_equity * 100 (blank if avg_eq <= 0).
 calbank,base,FY2030E,ratios,roa_pct,1.839,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_assets * 100.
-calbank,downside,FY2026E,income_statement,interest_income,880.474,GHS millions,MODEL-ESTIMATE,estimated,FY2026E = 9M actual + iterative Q4; Q4 uses the day-weighted policy rate and Q4 investment yields in assumptions.json.
+calbank,downside,FY2026E,income_statement,interest_income,880.474,GHS millions,MODEL-ESTIMATE,estimated,"FY2026E = 9M actual + iterative Q4; Q4 uses the day-weighted policy rate and investment-yield proxies in assumptions.json, not observed Q4 average yields."
 calbank,downside,FY2026E,income_statement,interest_expense,198.121,GHS millions,MODEL-ESTIMATE,estimated,FY2026E adds Q4 interest expense using the implied Q4 bill mean in assumptions.json; 9M actual is retained.
 calbank,downside,FY2026E,income_statement,net_interest_income,682.353,GHS millions,MODEL-ESTIMATE,estimated,interest_income - interest_expense.
 calbank,downside,FY2026E,income_statement,fee_commission_income,296.004,GHS millions,MODEL-ESTIMATE,estimated,Linked to nominal GDP (macro.csv).
@@ -225,7 +225,7 @@ calbank,downside,FY2026E,income_statement,impairment_charge,-0.903,GHS millions,
 calbank,downside,FY2026E,income_statement,profit_before_tax,635.035,GHS millions,MODEL-ESTIMATE,estimated,total_operating_income - opex - x_lease_finance_cost - impairment.
 calbank,downside,FY2026E,income_statement,income_tax,209.231,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax * tax_rate.
 calbank,downside,FY2026E,income_statement,profit_after_tax,425.804,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax - income_tax.
-calbank,downside,FY2026E,income_statement,x_dividends_paid,0.000,GHS millions,MODEL-ESTIMATE,estimated,FY2026E assumes no Q4 dividend; CAL26Q3 reports no dividend movement in its 9M-2026 equity rollforward.
+calbank,downside,FY2026E,income_statement,x_dividends_paid,0.000,GHS millions,MODEL-ESTIMATE,estimated,FY2026E assumes no Q4 dividend; CAL26Q3 does not report a dividend movement in its 9M-2026 equity rollforward.
 calbank,downside,FY2026E,balance_sheet,cash_and_bog_balances,3074.432,GHS millions,MODEL-ESTIMATE,estimated,Proxy screen >= crr_pct (20%) on customer_deposits; includes due_from_banks aggregate.
 calbank,downside,FY2026E,balance_sheet,due_from_banks,,GHS millions,MODEL-ESTIMATE,unavailable,Not split from cash_and_bog_balances.
 calbank,downside,FY2026E,balance_sheet,investment_securities,7173.675,GHS millions,MODEL-ESTIMATE,estimated,Balancing liquid asset = total_assets - loans - ppe - other - cash; solved iteratively.
@@ -251,175 +251,175 @@ calbank,downside,FY2026E,ratios,ldr_pct,19.413,%,MODEL-ESTIMATE,estimated,loans_
 calbank,downside,FY2026E,ratios,cost_to_income_pct,50.130,%,MODEL-ESTIMATE,estimated,opex / total_operating_income * 100.
 calbank,downside,FY2026E,ratios,roe_pct,24.453,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_equity * 100 (blank if avg_eq <= 0).
 calbank,downside,FY2026E,ratios,roa_pct,3.193,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_assets * 100.
-calbank,downside,FY2027E,income_statement,interest_income,1193.818,GHS millions,MODEL-ESTIMATE,estimated,Average loans x policy-linked loan yield + average investments x 50/50 364-day bill and 10-year bond yield (macro.csv).
+calbank,downside,FY2027E,income_statement,interest_income,1195.753,GHS millions,MODEL-ESTIMATE,estimated,Average loans x policy-linked loan yield + average investments x 50/50 364-day bill and 10-year bond yield (macro.csv).
 calbank,downside,FY2027E,income_statement,interest_expense,301.619,GHS millions,MODEL-ESTIMATE,estimated,"Cost of funds = max(1.5%, 0.7% + 0.18 x annual 91-day bill rate); calibrated to FY2025 and 9M-2026 in checks.md."
-calbank,downside,FY2027E,income_statement,net_interest_income,892.199,GHS millions,MODEL-ESTIMATE,estimated,interest_income - interest_expense.
+calbank,downside,FY2027E,income_statement,net_interest_income,894.134,GHS millions,MODEL-ESTIMATE,estimated,interest_income - interest_expense.
 calbank,downside,FY2027E,income_statement,fee_commission_income,338.421,GHS millions,MODEL-ESTIMATE,estimated,Linked to nominal GDP (macro.csv).
 calbank,downside,FY2027E,income_statement,fee_commission_expense,42.356,GHS millions,MODEL-ESTIMATE,estimated,0.7x fee growth.
 calbank,downside,FY2027E,income_statement,net_trading_income,340.678,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ trading growth.
 calbank,downside,FY2027E,income_statement,other_operating_income,7.473,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ 3% growth.
-calbank,downside,FY2027E,income_statement,total_operating_income,1536.416,GHS millions,MODEL-ESTIMATE,estimated,NII + net fees + trading + other operating income.
+calbank,downside,FY2027E,income_statement,total_operating_income,1538.351,GHS millions,MODEL-ESTIMATE,estimated,NII + net fees + trading + other operating income.
 calbank,downside,FY2027E,income_statement,staff_costs,389.696,GHS millions,MODEL-ESTIMATE,estimated,Linked to inflation_cpi_pct (macro.csv).
 calbank,downside,FY2027E,income_statement,depreciation_amortisation,63.328,GHS millions,MODEL-ESTIMATE,estimated,3% annual growth.
 calbank,downside,FY2027E,income_statement,other_operating_expenses,261.043,GHS millions,MODEL-ESTIMATE,estimated,Linked to inflation_cpi_pct (macro.csv).
 calbank,downside,FY2027E,income_statement,x_lease_finance_cost,2.671,GHS millions,MODEL-ESTIMATE,estimated,Consistent with historical separate line item.
 calbank,downside,FY2027E,income_statement,impairment_charge,77.473,GHS millions,MODEL-ESTIMATE,estimated,avg net loans * cost_of_risk.
-calbank,downside,FY2027E,income_statement,profit_before_tax,742.204,GHS millions,MODEL-ESTIMATE,estimated,total_operating_income - opex - x_lease_finance_cost - impairment.
-calbank,downside,FY2027E,income_statement,income_tax,252.349,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax * tax_rate.
-calbank,downside,FY2027E,income_statement,profit_after_tax,489.854,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax - income_tax.
-calbank,downside,FY2027E,income_statement,x_dividends_paid,48.985,GHS millions,MODEL-ESTIMATE,estimated,Modeled payout under positive retained earnings and CAR gate; deducted once from retained earnings.
-calbank,downside,FY2027E,balance_sheet,cash_and_bog_balances,3554.579,GHS millions,MODEL-ESTIMATE,estimated,Proxy screen >= crr_pct (20%) on customer_deposits; includes due_from_banks aggregate.
+calbank,downside,FY2027E,income_statement,profit_before_tax,744.139,GHS millions,MODEL-ESTIMATE,estimated,total_operating_income - opex - x_lease_finance_cost - impairment.
+calbank,downside,FY2027E,income_statement,income_tax,253.007,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax * tax_rate.
+calbank,downside,FY2027E,income_statement,profit_after_tax,491.132,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax - income_tax.
+calbank,downside,FY2027E,income_statement,x_dividends_paid,0.000,GHS millions,MODEL-ESTIMATE,estimated,Full modeled payout only if retained earnings stay positive after payout and post-payout CAR meets target; deducted once.
+calbank,downside,FY2027E,balance_sheet,cash_and_bog_balances,3569.658,GHS millions,MODEL-ESTIMATE,estimated,Proxy screen >= crr_pct (20%) on customer_deposits; includes due_from_banks aggregate.
 calbank,downside,FY2027E,balance_sheet,due_from_banks,,GHS millions,MODEL-ESTIMATE,unavailable,Not split from cash_and_bog_balances.
-calbank,downside,FY2027E,balance_sheet,investment_securities,8294.018,GHS millions,MODEL-ESTIMATE,estimated,Balancing liquid asset = total_assets - loans - ppe - other - cash; solved iteratively.
+calbank,downside,FY2027E,balance_sheet,investment_securities,8329.201,GHS millions,MODEL-ESTIMATE,estimated,Balancing liquid asset = total_assets - loans - ppe - other - cash; solved iteratively.
 calbank,downside,FY2027E,balance_sheet,loans_and_advances_gross,,GHS millions,MODEL-ESTIMATE,unavailable,Net loans projected (9M-2026 anchor is net).
 calbank,downside,FY2027E,balance_sheet,loan_loss_allowance,,GHS millions,MODEL-ESTIMATE,unavailable,Net loans projected.
 calbank,downside,FY2027E,balance_sheet,loans_and_advances_net,2342.056,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ linked to nominal GDP.
 calbank,downside,FY2027E,balance_sheet,property_equipment_intangibles,883.982,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
 calbank,downside,FY2027E,balance_sheet,other_assets,1599.286,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
-calbank,downside,FY2027E,balance_sheet,total_assets,16673.920,GHS millions,MODEL-ESTIMATE,estimated,total_liabilities + total_equity.
+calbank,downside,FY2027E,balance_sheet,total_assets,16724.183,GHS millions,MODEL-ESTIMATE,estimated,total_liabilities + total_equity.
 calbank,downside,FY2027E,balance_sheet,customer_deposits,12117.981,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ linked to nominal GDP.
 calbank,downside,FY2027E,balance_sheet,due_to_banks,507.414,GHS millions,MODEL-ESTIMATE,estimated,0.5 * deposit_growth.
 calbank,downside,FY2027E,balance_sheet,borrowings,1079.686,GHS millions,MODEL-ESTIMATE,estimated,Held flat.
 calbank,downside,FY2027E,balance_sheet,other_liabilities,573.724,GHS millions,MODEL-ESTIMATE,estimated,Tracks CPI inflation.
 calbank,downside,FY2027E,balance_sheet,total_liabilities,14278.805,GHS millions,MODEL-ESTIMATE,estimated,Sum of liability items.
 calbank,downside,FY2027E,balance_sheet,stated_capital,1421.535,GHS millions,MODEL-ESTIMATE,estimated,Held flat.
-calbank,downside,FY2027E,balance_sheet,retained_earnings,-16.726,GHS millions,MODEL-ESTIMATE,estimated,Prior retained_earnings + PAT - dividends (payout gated on positive retained earnings & CAR >= target).
+calbank,downside,FY2027E,balance_sheet,retained_earnings,33.537,GHS millions,MODEL-ESTIMATE,estimated,Prior retained_earnings + PAT - dividends (payout gated on positive retained earnings & CAR >= target).
 calbank,downside,FY2027E,balance_sheet,reserves_other,990.306,GHS millions,MODEL-ESTIMATE,estimated,Held flat.
-calbank,downside,FY2027E,balance_sheet,total_equity,2395.115,GHS millions,MODEL-ESTIMATE,estimated,stated_capital + retained_earnings + reserves_other.
-calbank,downside,FY2027E,ratios,car_pct,20.786,%,MODEL-ESTIMATE,estimated,Proxy calibrated to 9M-2026 reported 18.4% CAR (total_equity / (total_assets * 9M-26_RWA_density)).
+calbank,downside,FY2027E,balance_sheet,total_equity,2445.378,GHS millions,MODEL-ESTIMATE,estimated,stated_capital + retained_earnings + reserves_other.
+calbank,downside,FY2027E,ratios,car_pct,21.158,%,MODEL-ESTIMATE,estimated,Proxy calibrated to 9M-2026 reported 18.4% CAR (total_equity / (total_assets * 9M-26_RWA_density)).
 calbank,downside,FY2027E,ratios,tier1_pct,,%,MODEL-ESTIMATE,unavailable,Not projected separately.
 calbank,downside,FY2027E,ratios,npl_pct,,%,MODEL-ESTIMATE,unavailable,Not projected separately.
 calbank,downside,FY2027E,ratios,ldr_pct,19.327,%,MODEL-ESTIMATE,estimated,loans_and_advances_net / customer_deposits * 100 (net basis).
-calbank,downside,FY2027E,ratios,cost_to_income_pct,46.650,%,MODEL-ESTIMATE,estimated,opex / total_operating_income * 100.
-calbank,downside,FY2027E,ratios,roe_pct,22.525,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_equity * 100 (blank if avg_eq <= 0).
-calbank,downside,FY2027E,ratios,roa_pct,3.116,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_assets * 100.
-calbank,downside,FY2028E,income_statement,interest_income,1412.486,GHS millions,MODEL-ESTIMATE,estimated,Average loans x policy-linked loan yield + average investments x 50/50 364-day bill and 10-year bond yield (macro.csv).
+calbank,downside,FY2027E,ratios,cost_to_income_pct,46.591,%,MODEL-ESTIMATE,estimated,opex / total_operating_income * 100.
+calbank,downside,FY2027E,ratios,roe_pct,22.326,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_equity * 100 (blank if avg_eq <= 0).
+calbank,downside,FY2027E,ratios,roa_pct,3.119,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_assets * 100.
+calbank,downside,FY2028E,income_statement,interest_income,1416.632,GHS millions,MODEL-ESTIMATE,estimated,Average loans x policy-linked loan yield + average investments x 50/50 364-day bill and 10-year bond yield (macro.csv).
 calbank,downside,FY2028E,income_statement,interest_expense,388.628,GHS millions,MODEL-ESTIMATE,estimated,"Cost of funds = max(1.5%, 0.7% + 0.18 x annual 91-day bill rate); calibrated to FY2025 and 9M-2026 in checks.md."
-calbank,downside,FY2028E,income_statement,net_interest_income,1023.858,GHS millions,MODEL-ESTIMATE,estimated,interest_income - interest_expense.
+calbank,downside,FY2028E,income_statement,net_interest_income,1028.004,GHS millions,MODEL-ESTIMATE,estimated,interest_income - interest_expense.
 calbank,downside,FY2028E,income_statement,fee_commission_income,387.044,GHS millions,MODEL-ESTIMATE,estimated,Linked to nominal GDP (macro.csv).
 calbank,downside,FY2028E,income_statement,fee_commission_expense,46.616,GHS millions,MODEL-ESTIMATE,estimated,0.7x fee growth.
 calbank,downside,FY2028E,income_statement,net_trading_income,357.712,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ trading growth.
 calbank,downside,FY2028E,income_statement,other_operating_income,7.697,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ 3% growth.
-calbank,downside,FY2028E,income_statement,total_operating_income,1729.695,GHS millions,MODEL-ESTIMATE,estimated,NII + net fees + trading + other operating income.
+calbank,downside,FY2028E,income_statement,total_operating_income,1733.841,GHS millions,MODEL-ESTIMATE,estimated,NII + net fees + trading + other operating income.
 calbank,downside,FY2028E,income_statement,staff_costs,440.357,GHS millions,MODEL-ESTIMATE,estimated,Linked to inflation_cpi_pct (macro.csv).
 calbank,downside,FY2028E,income_statement,depreciation_amortisation,65.228,GHS millions,MODEL-ESTIMATE,estimated,3% annual growth.
 calbank,downside,FY2028E,income_statement,other_operating_expenses,294.979,GHS millions,MODEL-ESTIMATE,estimated,Linked to inflation_cpi_pct (macro.csv).
 calbank,downside,FY2028E,income_statement,x_lease_finance_cost,2.725,GHS millions,MODEL-ESTIMATE,estimated,Consistent with historical separate line item.
 calbank,downside,FY2028E,income_statement,impairment_charge,74.606,GHS millions,MODEL-ESTIMATE,estimated,avg net loans * cost_of_risk.
-calbank,downside,FY2028E,income_statement,profit_before_tax,851.801,GHS millions,MODEL-ESTIMATE,estimated,total_operating_income - opex - x_lease_finance_cost - impairment.
-calbank,downside,FY2028E,income_statement,income_tax,289.612,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax * tax_rate.
-calbank,downside,FY2028E,income_statement,profit_after_tax,562.188,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax - income_tax.
-calbank,downside,FY2028E,income_statement,x_dividends_paid,56.219,GHS millions,MODEL-ESTIMATE,estimated,Modeled payout under positive retained earnings and CAR gate; deducted once from retained earnings.
-calbank,downside,FY2028E,balance_sheet,cash_and_bog_balances,4100.224,GHS millions,MODEL-ESTIMATE,estimated,Proxy screen >= crr_pct (20%) on customer_deposits; includes due_from_banks aggregate.
+calbank,downside,FY2028E,income_statement,profit_before_tax,855.946,GHS millions,MODEL-ESTIMATE,estimated,total_operating_income - opex - x_lease_finance_cost - impairment.
+calbank,downside,FY2028E,income_statement,income_tax,291.022,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax * tax_rate.
+calbank,downside,FY2028E,income_statement,profit_after_tax,564.924,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax - income_tax.
+calbank,downside,FY2028E,income_statement,x_dividends_paid,56.492,GHS millions,MODEL-ESTIMATE,estimated,Full modeled payout only if retained earnings stay positive after payout and post-payout CAR meets target; deducted once.
+calbank,downside,FY2028E,balance_sheet,cash_and_bog_balances,4116.042,GHS millions,MODEL-ESTIMATE,estimated,Proxy screen >= crr_pct (20%) on customer_deposits; includes due_from_banks aggregate.
 calbank,downside,FY2028E,balance_sheet,due_from_banks,,GHS millions,MODEL-ESTIMATE,unavailable,Not split from cash_and_bog_balances.
-calbank,downside,FY2028E,balance_sheet,investment_securities,9567.190,GHS millions,MODEL-ESTIMATE,estimated,Balancing liquid asset = total_assets - loans - ppe - other - cash; solved iteratively.
+calbank,downside,FY2028E,balance_sheet,investment_securities,9604.098,GHS millions,MODEL-ESTIMATE,estimated,Balancing liquid asset = total_assets - loans - ppe - other - cash; solved iteratively.
 calbank,downside,FY2028E,balance_sheet,loans_and_advances_gross,,GHS millions,MODEL-ESTIMATE,unavailable,Net loans projected (9M-2026 anchor is net).
 calbank,downside,FY2028E,balance_sheet,loan_loss_allowance,,GHS millions,MODEL-ESTIMATE,unavailable,Net loans projected.
 calbank,downside,FY2028E,balance_sheet,loans_and_advances_net,2631.710,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ linked to nominal GDP.
 calbank,downside,FY2028E,balance_sheet,property_equipment_intangibles,901.661,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
 calbank,downside,FY2028E,balance_sheet,other_assets,1631.271,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
-calbank,downside,FY2028E,balance_sheet,total_assets,18832.058,GHS millions,MODEL-ESTIMATE,estimated,total_liabilities + total_equity.
+calbank,downside,FY2028E,balance_sheet,total_assets,18884.783,GHS millions,MODEL-ESTIMATE,estimated,total_liabilities + total_equity.
 calbank,downside,FY2028E,balance_sheet,customer_deposits,13677.263,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ linked to nominal GDP.
 calbank,downside,FY2028E,balance_sheet,due_to_banks,540.059,GHS millions,MODEL-ESTIMATE,estimated,0.5 * deposit_growth.
 calbank,downside,FY2028E,balance_sheet,borrowings,1079.686,GHS millions,MODEL-ESTIMATE,estimated,Held flat.
 calbank,downside,FY2028E,balance_sheet,other_liabilities,633.965,GHS millions,MODEL-ESTIMATE,estimated,Tracks CPI inflation.
 calbank,downside,FY2028E,balance_sheet,total_liabilities,15930.973,GHS millions,MODEL-ESTIMATE,estimated,Sum of liability items.
 calbank,downside,FY2028E,balance_sheet,stated_capital,1421.535,GHS millions,MODEL-ESTIMATE,estimated,Held flat.
-calbank,downside,FY2028E,balance_sheet,retained_earnings,489.244,GHS millions,MODEL-ESTIMATE,estimated,Prior retained_earnings + PAT - dividends (payout gated on positive retained earnings & CAR >= target).
+calbank,downside,FY2028E,balance_sheet,retained_earnings,541.968,GHS millions,MODEL-ESTIMATE,estimated,Prior retained_earnings + PAT - dividends (payout gated on positive retained earnings & CAR >= target).
 calbank,downside,FY2028E,balance_sheet,reserves_other,990.306,GHS millions,MODEL-ESTIMATE,estimated,Held flat.
-calbank,downside,FY2028E,balance_sheet,total_equity,2901.085,GHS millions,MODEL-ESTIMATE,estimated,stated_capital + retained_earnings + reserves_other.
-calbank,downside,FY2028E,ratios,car_pct,22.291,%,MODEL-ESTIMATE,estimated,Proxy calibrated to 9M-2026 reported 18.4% CAR (total_equity / (total_assets * 9M-26_RWA_density)).
+calbank,downside,FY2028E,balance_sheet,total_equity,2953.809,GHS millions,MODEL-ESTIMATE,estimated,stated_capital + retained_earnings + reserves_other.
+calbank,downside,FY2028E,ratios,car_pct,22.633,%,MODEL-ESTIMATE,estimated,Proxy calibrated to 9M-2026 reported 18.4% CAR (total_equity / (total_assets * 9M-26_RWA_density)).
 calbank,downside,FY2028E,ratios,tier1_pct,,%,MODEL-ESTIMATE,unavailable,Not projected separately.
 calbank,downside,FY2028E,ratios,npl_pct,,%,MODEL-ESTIMATE,unavailable,Not projected separately.
 calbank,downside,FY2028E,ratios,ldr_pct,19.241,%,MODEL-ESTIMATE,estimated,loans_and_advances_net / customer_deposits * 100 (net basis).
-calbank,downside,FY2028E,ratios,cost_to_income_pct,46.441,%,MODEL-ESTIMATE,estimated,opex / total_operating_income * 100.
-calbank,downside,FY2028E,ratios,roe_pct,21.230,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_equity * 100 (blank if avg_eq <= 0).
-calbank,downside,FY2028E,ratios,roa_pct,3.167,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_assets * 100.
-calbank,downside,FY2029E,income_statement,interest_income,1376.608,GHS millions,MODEL-ESTIMATE,estimated,Average loans x policy-linked loan yield + average investments x 50/50 364-day bill and 10-year bond yield (macro.csv).
+calbank,downside,FY2028E,ratios,cost_to_income_pct,46.330,%,MODEL-ESTIMATE,estimated,opex / total_operating_income * 100.
+calbank,downside,FY2028E,ratios,roe_pct,20.926,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_equity * 100 (blank if avg_eq <= 0).
+calbank,downside,FY2028E,ratios,roa_pct,3.173,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_assets * 100.
+calbank,downside,FY2029E,income_statement,interest_income,1380.281,GHS millions,MODEL-ESTIMATE,estimated,Average loans x policy-linked loan yield + average investments x 50/50 364-day bill and 10-year bond yield (macro.csv).
 calbank,downside,FY2029E,income_statement,interest_expense,404.915,GHS millions,MODEL-ESTIMATE,estimated,"Cost of funds = max(1.5%, 0.7% + 0.18 x annual 91-day bill rate); calibrated to FY2025 and 9M-2026 in checks.md."
-calbank,downside,FY2029E,income_statement,net_interest_income,971.693,GHS millions,MODEL-ESTIMATE,estimated,interest_income - interest_expense.
+calbank,downside,FY2029E,income_statement,net_interest_income,975.366,GHS millions,MODEL-ESTIMATE,estimated,interest_income - interest_expense.
 calbank,downside,FY2029E,income_statement,fee_commission_income,442.778,GHS millions,MODEL-ESTIMATE,estimated,Linked to nominal GDP (macro.csv).
 calbank,downside,FY2029E,income_statement,fee_commission_expense,51.315,GHS millions,MODEL-ESTIMATE,estimated,0.7x fee growth.
 calbank,downside,FY2029E,income_statement,net_trading_income,375.598,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ trading growth.
 calbank,downside,FY2029E,income_statement,other_operating_income,7.928,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ 3% growth.
-calbank,downside,FY2029E,income_statement,total_operating_income,1746.682,GHS millions,MODEL-ESTIMATE,estimated,NII + net fees + trading + other operating income.
+calbank,downside,FY2029E,income_statement,total_operating_income,1750.355,GHS millions,MODEL-ESTIMATE,estimated,NII + net fees + trading + other operating income.
 calbank,downside,FY2029E,income_statement,staff_costs,495.401,GHS millions,MODEL-ESTIMATE,estimated,Linked to inflation_cpi_pct (macro.csv).
 calbank,downside,FY2029E,income_statement,depreciation_amortisation,67.185,GHS millions,MODEL-ESTIMATE,estimated,3% annual growth.
 calbank,downside,FY2029E,income_statement,other_operating_expenses,331.852,GHS millions,MODEL-ESTIMATE,estimated,Linked to inflation_cpi_pct (macro.csv).
 calbank,downside,FY2029E,income_statement,x_lease_finance_cost,2.779,GHS millions,MODEL-ESTIMATE,estimated,Consistent with historical separate line item.
 calbank,downside,FY2029E,income_statement,impairment_charge,69.872,GHS millions,MODEL-ESTIMATE,estimated,avg net loans * cost_of_risk.
-calbank,downside,FY2029E,income_statement,profit_before_tax,779.594,GHS millions,MODEL-ESTIMATE,estimated,total_operating_income - opex - x_lease_finance_cost - impairment.
-calbank,downside,FY2029E,income_statement,income_tax,265.062,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax * tax_rate.
-calbank,downside,FY2029E,income_statement,profit_after_tax,514.532,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax - income_tax.
-calbank,downside,FY2029E,income_statement,x_dividends_paid,51.453,GHS millions,MODEL-ESTIMATE,estimated,Modeled payout under positive retained earnings and CAR gate; deducted once from retained earnings.
-calbank,downside,FY2029E,balance_sheet,cash_and_bog_balances,4684.830,GHS millions,MODEL-ESTIMATE,estimated,Proxy screen >= crr_pct (20%) on customer_deposits; includes due_from_banks aggregate.
+calbank,downside,FY2029E,income_statement,profit_before_tax,783.266,GHS millions,MODEL-ESTIMATE,estimated,total_operating_income - opex - x_lease_finance_cost - impairment.
+calbank,downside,FY2029E,income_statement,income_tax,266.311,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax * tax_rate.
+calbank,downside,FY2029E,income_statement,profit_after_tax,516.956,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax - income_tax.
+calbank,downside,FY2029E,income_statement,x_dividends_paid,51.696,GHS millions,MODEL-ESTIMATE,estimated,Full modeled payout only if retained earnings stay positive after payout and post-payout CAR meets target; deducted once.
+calbank,downside,FY2029E,balance_sheet,cash_and_bog_balances,4701.302,GHS millions,MODEL-ESTIMATE,estimated,Proxy screen >= crr_pct (20%) on customer_deposits; includes due_from_banks aggregate.
 calbank,downside,FY2029E,balance_sheet,due_from_banks,,GHS millions,MODEL-ESTIMATE,unavailable,Not split from cash_and_bog_balances.
-calbank,downside,FY2029E,balance_sheet,investment_securities,10931.270,GHS millions,MODEL-ESTIMATE,estimated,Balancing liquid asset = total_assets - loans - ppe - other - cash; solved iteratively.
+calbank,downside,FY2029E,balance_sheet,investment_securities,10969.705,GHS millions,MODEL-ESTIMATE,estimated,Balancing liquid asset = total_assets - loans - ppe - other - cash; solved iteratively.
 calbank,downside,FY2029E,balance_sheet,loans_and_advances_gross,,GHS millions,MODEL-ESTIMATE,unavailable,Net loans projected (9M-2026 anchor is net).
 calbank,downside,FY2029E,balance_sheet,loan_loss_allowance,,GHS millions,MODEL-ESTIMATE,unavailable,Net loans projected.
 calbank,downside,FY2029E,balance_sheet,loans_and_advances_net,2958.042,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ linked to nominal GDP.
 calbank,downside,FY2029E,balance_sheet,property_equipment_intangibles,919.695,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
 calbank,downside,FY2029E,balance_sheet,other_assets,1663.897,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
-calbank,downside,FY2029E,balance_sheet,total_assets,21157.733,GHS millions,MODEL-ESTIMATE,estimated,total_liabilities + total_equity.
+calbank,downside,FY2029E,balance_sheet,total_assets,21212.640,GHS millions,MODEL-ESTIMATE,estimated,total_liabilities + total_equity.
 calbank,downside,FY2029E,balance_sheet,customer_deposits,15441.630,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ linked to nominal GDP.
 calbank,downside,FY2029E,balance_sheet,due_to_banks,574.893,GHS millions,MODEL-ESTIMATE,estimated,0.5 * deposit_growth.
 calbank,downside,FY2029E,balance_sheet,borrowings,1079.686,GHS millions,MODEL-ESTIMATE,estimated,Held flat.
 calbank,downside,FY2029E,balance_sheet,other_liabilities,697.362,GHS millions,MODEL-ESTIMATE,estimated,Tracks CPI inflation.
 calbank,downside,FY2029E,balance_sheet,total_liabilities,17793.570,GHS millions,MODEL-ESTIMATE,estimated,Sum of liability items.
 calbank,downside,FY2029E,balance_sheet,stated_capital,1421.535,GHS millions,MODEL-ESTIMATE,estimated,Held flat.
-calbank,downside,FY2029E,balance_sheet,retained_earnings,952.322,GHS millions,MODEL-ESTIMATE,estimated,Prior retained_earnings + PAT - dividends (payout gated on positive retained earnings & CAR >= target).
+calbank,downside,FY2029E,balance_sheet,retained_earnings,1007.229,GHS millions,MODEL-ESTIMATE,estimated,Prior retained_earnings + PAT - dividends (payout gated on positive retained earnings & CAR >= target).
 calbank,downside,FY2029E,balance_sheet,reserves_other,990.306,GHS millions,MODEL-ESTIMATE,estimated,Held flat.
-calbank,downside,FY2029E,balance_sheet,total_equity,3364.163,GHS millions,MODEL-ESTIMATE,estimated,stated_capital + retained_earnings + reserves_other.
-calbank,downside,FY2029E,ratios,car_pct,23.008,%,MODEL-ESTIMATE,estimated,Proxy calibrated to 9M-2026 reported 18.4% CAR (total_equity / (total_assets * 9M-26_RWA_density)).
+calbank,downside,FY2029E,balance_sheet,total_equity,3419.070,GHS millions,MODEL-ESTIMATE,estimated,stated_capital + retained_earnings + reserves_other.
+calbank,downside,FY2029E,ratios,car_pct,23.323,%,MODEL-ESTIMATE,estimated,Proxy calibrated to 9M-2026 reported 18.4% CAR (total_equity / (total_assets * 9M-26_RWA_density)).
 calbank,downside,FY2029E,ratios,tier1_pct,,%,MODEL-ESTIMATE,unavailable,Not projected separately.
 calbank,downside,FY2029E,ratios,npl_pct,,%,MODEL-ESTIMATE,unavailable,Not projected separately.
 calbank,downside,FY2029E,ratios,ldr_pct,19.156,%,MODEL-ESTIMATE,estimated,loans_and_advances_net / customer_deposits * 100 (net basis).
-calbank,downside,FY2029E,ratios,cost_to_income_pct,51.367,%,MODEL-ESTIMATE,estimated,opex / total_operating_income * 100.
-calbank,downside,FY2029E,ratios,roe_pct,16.425,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_equity * 100 (blank if avg_eq <= 0).
-calbank,downside,FY2029E,ratios,roa_pct,2.573,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_assets * 100.
-calbank,downside,FY2030E,income_statement,interest_income,1411.328,GHS millions,MODEL-ESTIMATE,estimated,Average loans x policy-linked loan yield + average investments x 50/50 364-day bill and 10-year bond yield (macro.csv).
+calbank,downside,FY2029E,ratios,cost_to_income_pct,51.259,%,MODEL-ESTIMATE,estimated,opex / total_operating_income * 100.
+calbank,downside,FY2029E,ratios,roe_pct,16.224,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_equity * 100 (blank if avg_eq <= 0).
+calbank,downside,FY2029E,ratios,roa_pct,2.578,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_assets * 100.
+calbank,downside,FY2030E,income_statement,interest_income,1414.753,GHS millions,MODEL-ESTIMATE,estimated,Average loans x policy-linked loan yield + average investments x 50/50 364-day bill and 10-year bond yield (macro.csv).
 calbank,downside,FY2030E,income_statement,interest_expense,435.483,GHS millions,MODEL-ESTIMATE,estimated,"Cost of funds = max(1.5%, 0.7% + 0.18 x annual 91-day bill rate); calibrated to FY2025 and 9M-2026 in checks.md."
-calbank,downside,FY2030E,income_statement,net_interest_income,975.845,GHS millions,MODEL-ESTIMATE,estimated,interest_income - interest_expense.
+calbank,downside,FY2030E,income_statement,net_interest_income,979.270,GHS millions,MODEL-ESTIMATE,estimated,interest_income - interest_expense.
 calbank,downside,FY2030E,income_statement,fee_commission_income,504.236,GHS millions,MODEL-ESTIMATE,estimated,Linked to nominal GDP (macro.csv).
 calbank,downside,FY2030E,income_statement,fee_commission_expense,56.301,GHS millions,MODEL-ESTIMATE,estimated,0.7x fee growth.
 calbank,downside,FY2030E,income_statement,net_trading_income,394.378,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ trading growth.
 calbank,downside,FY2030E,income_statement,other_operating_income,8.166,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ 3% growth.
-calbank,downside,FY2030E,income_statement,total_operating_income,1826.324,GHS millions,MODEL-ESTIMATE,estimated,NII + net fees + trading + other operating income.
+calbank,downside,FY2030E,income_statement,total_operating_income,1829.749,GHS millions,MODEL-ESTIMATE,estimated,NII + net fees + trading + other operating income.
 calbank,downside,FY2030E,income_statement,staff_costs,554.849,GHS millions,MODEL-ESTIMATE,estimated,Linked to inflation_cpi_pct (macro.csv).
 calbank,downside,FY2030E,income_statement,depreciation_amortisation,69.200,GHS millions,MODEL-ESTIMATE,estimated,3% annual growth.
 calbank,downside,FY2030E,income_statement,other_operating_expenses,371.674,GHS millions,MODEL-ESTIMATE,estimated,Linked to inflation_cpi_pct (macro.csv).
 calbank,downside,FY2030E,income_statement,x_lease_finance_cost,2.835,GHS millions,MODEL-ESTIMATE,estimated,Consistent with historical separate line item.
 calbank,downside,FY2030E,income_statement,impairment_charge,68.942,GHS millions,MODEL-ESTIMATE,estimated,avg net loans * cost_of_risk.
-calbank,downside,FY2030E,income_statement,profit_before_tax,758.823,GHS millions,MODEL-ESTIMATE,estimated,total_operating_income - opex - x_lease_finance_cost - impairment.
-calbank,downside,FY2030E,income_statement,income_tax,258.000,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax * tax_rate.
-calbank,downside,FY2030E,income_statement,profit_after_tax,500.823,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax - income_tax.
-calbank,downside,FY2030E,income_statement,x_dividends_paid,50.082,GHS millions,MODEL-ESTIMATE,estimated,Modeled payout under positive retained earnings and CAR gate; deducted once from retained earnings.
-calbank,downside,FY2030E,balance_sheet,cash_and_bog_balances,5303.179,GHS millions,MODEL-ESTIMATE,estimated,Proxy screen >= crr_pct (20%) on customer_deposits; includes due_from_banks aggregate.
+calbank,downside,FY2030E,income_statement,profit_before_tax,762.248,GHS millions,MODEL-ESTIMATE,estimated,total_operating_income - opex - x_lease_finance_cost - impairment.
+calbank,downside,FY2030E,income_statement,income_tax,259.164,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax * tax_rate.
+calbank,downside,FY2030E,income_statement,profit_after_tax,503.084,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax - income_tax.
+calbank,downside,FY2030E,income_statement,x_dividends_paid,50.308,GHS millions,MODEL-ESTIMATE,estimated,Full modeled payout only if retained earnings stay positive after payout and post-payout CAR meets target; deducted once.
+calbank,downside,FY2030E,balance_sheet,cash_and_bog_balances,5320.261,GHS millions,MODEL-ESTIMATE,estimated,Proxy screen >= crr_pct (20%) on customer_deposits; includes due_from_banks aggregate.
 calbank,downside,FY2030E,balance_sheet,due_from_banks,,GHS millions,MODEL-ESTIMATE,unavailable,Not split from cash_and_bog_balances.
-calbank,downside,FY2030E,balance_sheet,investment_securities,12374.084,GHS millions,MODEL-ESTIMATE,estimated,Balancing liquid asset = total_assets - loans - ppe - other - cash; solved iteratively.
+calbank,downside,FY2030E,balance_sheet,investment_securities,12413.943,GHS millions,MODEL-ESTIMATE,estimated,Balancing liquid asset = total_assets - loans - ppe - other - cash; solved iteratively.
 calbank,downside,FY2030E,balance_sheet,loans_and_advances_gross,,GHS millions,MODEL-ESTIMATE,unavailable,Net loans projected (9M-2026 anchor is net).
 calbank,downside,FY2030E,balance_sheet,loan_loss_allowance,,GHS millions,MODEL-ESTIMATE,unavailable,Net loans projected.
 calbank,downside,FY2030E,balance_sheet,loans_and_advances_net,3309.458,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ linked to nominal GDP.
 calbank,downside,FY2030E,balance_sheet,property_equipment_intangibles,938.088,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
 calbank,downside,FY2030E,balance_sheet,other_assets,1697.175,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
-calbank,downside,FY2030E,balance_sheet,total_assets,23621.983,GHS millions,MODEL-ESTIMATE,estimated,total_liabilities + total_equity.
+calbank,downside,FY2030E,balance_sheet,total_assets,23678.925,GHS millions,MODEL-ESTIMATE,estimated,total_liabilities + total_equity.
 calbank,downside,FY2030E,balance_sheet,customer_deposits,17353.303,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ linked to nominal GDP.
 calbank,downside,FY2030E,balance_sheet,due_to_banks,610.479,GHS millions,MODEL-ESTIMATE,estimated,0.5 * deposit_growth.
 calbank,downside,FY2030E,balance_sheet,borrowings,1079.686,GHS millions,MODEL-ESTIMATE,estimated,Held flat.
 calbank,downside,FY2030E,balance_sheet,other_liabilities,763.611,GHS millions,MODEL-ESTIMATE,estimated,Tracks CPI inflation.
 calbank,downside,FY2030E,balance_sheet,total_liabilities,19807.079,GHS millions,MODEL-ESTIMATE,estimated,Sum of liability items.
 calbank,downside,FY2030E,balance_sheet,stated_capital,1421.535,GHS millions,MODEL-ESTIMATE,estimated,Held flat.
-calbank,downside,FY2030E,balance_sheet,retained_earnings,1403.063,GHS millions,MODEL-ESTIMATE,estimated,Prior retained_earnings + PAT - dividends (payout gated on positive retained earnings & CAR >= target).
+calbank,downside,FY2030E,balance_sheet,retained_earnings,1460.004,GHS millions,MODEL-ESTIMATE,estimated,Prior retained_earnings + PAT - dividends (payout gated on positive retained earnings & CAR >= target).
 calbank,downside,FY2030E,balance_sheet,reserves_other,990.306,GHS millions,MODEL-ESTIMATE,estimated,Held flat.
-calbank,downside,FY2030E,balance_sheet,total_equity,3814.904,GHS millions,MODEL-ESTIMATE,estimated,stated_capital + retained_earnings + reserves_other.
-calbank,downside,FY2030E,ratios,car_pct,23.369,%,MODEL-ESTIMATE,estimated,Proxy calibrated to 9M-2026 reported 18.4% CAR (total_equity / (total_assets * 9M-26_RWA_density)).
+calbank,downside,FY2030E,balance_sheet,total_equity,3871.845,GHS millions,MODEL-ESTIMATE,estimated,stated_capital + retained_earnings + reserves_other.
+calbank,downside,FY2030E,ratios,car_pct,23.661,%,MODEL-ESTIMATE,estimated,Proxy calibrated to 9M-2026 reported 18.4% CAR (total_equity / (total_assets * 9M-26_RWA_density)).
 calbank,downside,FY2030E,ratios,tier1_pct,,%,MODEL-ESTIMATE,unavailable,Not projected separately.
 calbank,downside,FY2030E,ratios,npl_pct,,%,MODEL-ESTIMATE,unavailable,Not projected separately.
 calbank,downside,FY2030E,ratios,ldr_pct,19.071,%,MODEL-ESTIMATE,estimated,loans_and_advances_net / customer_deposits * 100 (net basis).
-calbank,downside,FY2030E,ratios,cost_to_income_pct,54.676,%,MODEL-ESTIMATE,estimated,opex / total_operating_income * 100.
-calbank,downside,FY2030E,ratios,roe_pct,13.952,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_equity * 100 (blank if avg_eq <= 0).
-calbank,downside,FY2030E,ratios,roa_pct,2.237,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_assets * 100.
-calbank,upside,FY2026E,income_statement,interest_income,878.317,GHS millions,MODEL-ESTIMATE,estimated,FY2026E = 9M actual + iterative Q4; Q4 uses the day-weighted policy rate and Q4 investment yields in assumptions.json.
+calbank,downside,FY2030E,ratios,cost_to_income_pct,54.574,%,MODEL-ESTIMATE,estimated,opex / total_operating_income * 100.
+calbank,downside,FY2030E,ratios,roe_pct,13.800,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_equity * 100 (blank if avg_eq <= 0).
+calbank,downside,FY2030E,ratios,roa_pct,2.241,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_assets * 100.
+calbank,upside,FY2026E,income_statement,interest_income,878.317,GHS millions,MODEL-ESTIMATE,estimated,"FY2026E = 9M actual + iterative Q4; Q4 uses the day-weighted policy rate and investment-yield proxies in assumptions.json, not observed Q4 average yields."
 calbank,upside,FY2026E,income_statement,interest_expense,198.740,GHS millions,MODEL-ESTIMATE,estimated,FY2026E adds Q4 interest expense using the implied Q4 bill mean in assumptions.json; 9M actual is retained.
 calbank,upside,FY2026E,income_statement,net_interest_income,679.577,GHS millions,MODEL-ESTIMATE,estimated,interest_income - interest_expense.
 calbank,upside,FY2026E,income_statement,fee_commission_income,314.504,GHS millions,MODEL-ESTIMATE,estimated,Linked to nominal GDP (macro.csv).
@@ -435,7 +435,7 @@ calbank,upside,FY2026E,income_statement,impairment_charge,-4.543,GHS millions,MO
 calbank,upside,FY2026E,income_statement,profit_before_tax,632.885,GHS millions,MODEL-ESTIMATE,estimated,total_operating_income - opex - x_lease_finance_cost - impairment.
 calbank,upside,FY2026E,income_statement,income_tax,205.387,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax * tax_rate.
 calbank,upside,FY2026E,income_statement,profit_after_tax,427.498,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax - income_tax.
-calbank,upside,FY2026E,income_statement,x_dividends_paid,0.000,GHS millions,MODEL-ESTIMATE,estimated,FY2026E assumes no Q4 dividend; CAL26Q3 reports no dividend movement in its 9M-2026 equity rollforward.
+calbank,upside,FY2026E,income_statement,x_dividends_paid,0.000,GHS millions,MODEL-ESTIMATE,estimated,FY2026E assumes no Q4 dividend; CAL26Q3 does not report a dividend movement in its 9M-2026 equity rollforward.
 calbank,upside,FY2026E,balance_sheet,cash_and_bog_balances,3151.210,GHS millions,MODEL-ESTIMATE,estimated,Proxy screen >= crr_pct (20%) on customer_deposits; includes due_from_banks aggregate.
 calbank,upside,FY2026E,balance_sheet,due_from_banks,,GHS millions,MODEL-ESTIMATE,unavailable,Not split from cash_and_bog_balances.
 calbank,upside,FY2026E,balance_sheet,investment_securities,7352.822,GHS millions,MODEL-ESTIMATE,estimated,Balancing liquid asset = total_assets - loans - ppe - other - cash; solved iteratively.
@@ -477,7 +477,7 @@ calbank,upside,FY2027E,income_statement,impairment_charge,23.333,GHS millions,MO
 calbank,upside,FY2027E,income_statement,profit_before_tax,480.431,GHS millions,MODEL-ESTIMATE,estimated,total_operating_income - opex - x_lease_finance_cost - impairment.
 calbank,upside,FY2027E,income_statement,income_tax,153.738,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax * tax_rate.
 calbank,upside,FY2027E,income_statement,profit_after_tax,326.693,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax - income_tax.
-calbank,upside,FY2027E,income_statement,x_dividends_paid,0.000,GHS millions,MODEL-ESTIMATE,estimated,Modeled payout under positive retained earnings and CAR gate; deducted once from retained earnings.
+calbank,upside,FY2027E,income_statement,x_dividends_paid,0.000,GHS millions,MODEL-ESTIMATE,estimated,Full modeled payout only if retained earnings stay positive after payout and post-payout CAR meets target; deducted once.
 calbank,upside,FY2027E,balance_sheet,cash_and_bog_balances,3624.902,GHS millions,MODEL-ESTIMATE,estimated,Proxy screen >= crr_pct (20%) on customer_deposits; includes due_from_banks aggregate.
 calbank,upside,FY2027E,balance_sheet,due_from_banks,,GHS millions,MODEL-ESTIMATE,unavailable,Not split from cash_and_bog_balances.
 calbank,upside,FY2027E,balance_sheet,investment_securities,8458.105,GHS millions,MODEL-ESTIMATE,estimated,Balancing liquid asset = total_assets - loans - ppe - other - cash; solved iteratively.
@@ -519,7 +519,7 @@ calbank,upside,FY2028E,income_statement,impairment_charge,27.257,GHS millions,MO
 calbank,upside,FY2028E,income_statement,profit_before_tax,490.456,GHS millions,MODEL-ESTIMATE,estimated,total_operating_income - opex - x_lease_finance_cost - impairment.
 calbank,upside,FY2028E,income_statement,income_tax,156.946,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax * tax_rate.
 calbank,upside,FY2028E,income_statement,profit_after_tax,333.510,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax - income_tax.
-calbank,upside,FY2028E,income_statement,x_dividends_paid,83.378,GHS millions,MODEL-ESTIMATE,estimated,Modeled payout under positive retained earnings and CAR gate; deducted once from retained earnings.
+calbank,upside,FY2028E,income_statement,x_dividends_paid,83.378,GHS millions,MODEL-ESTIMATE,estimated,Full modeled payout only if retained earnings stay positive after payout and post-payout CAR meets target; deducted once.
 calbank,upside,FY2028E,balance_sheet,cash_and_bog_balances,4155.768,GHS millions,MODEL-ESTIMATE,estimated,Proxy screen >= crr_pct (20%) on customer_deposits; includes due_from_banks aggregate.
 calbank,upside,FY2028E,balance_sheet,due_from_banks,,GHS millions,MODEL-ESTIMATE,unavailable,Not split from cash_and_bog_balances.
 calbank,upside,FY2028E,balance_sheet,investment_securities,9696.791,GHS millions,MODEL-ESTIMATE,estimated,Balancing liquid asset = total_assets - loans - ppe - other - cash; solved iteratively.
@@ -561,7 +561,7 @@ calbank,upside,FY2029E,income_statement,impairment_charge,31.977,GHS millions,MO
 calbank,upside,FY2029E,income_statement,profit_before_tax,538.672,GHS millions,MODEL-ESTIMATE,estimated,total_operating_income - opex - x_lease_finance_cost - impairment.
 calbank,upside,FY2029E,income_statement,income_tax,172.375,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax * tax_rate.
 calbank,upside,FY2029E,income_statement,profit_after_tax,366.297,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax - income_tax.
-calbank,upside,FY2029E,income_statement,x_dividends_paid,91.574,GHS millions,MODEL-ESTIMATE,estimated,Modeled payout under positive retained earnings and CAR gate; deducted once from retained earnings.
+calbank,upside,FY2029E,income_statement,x_dividends_paid,91.574,GHS millions,MODEL-ESTIMATE,estimated,Full modeled payout only if retained earnings stay positive after payout and post-payout CAR meets target; deducted once.
 calbank,upside,FY2029E,balance_sheet,cash_and_bog_balances,4769.112,GHS millions,MODEL-ESTIMATE,estimated,Proxy screen >= crr_pct (20%) on customer_deposits; includes due_from_banks aggregate.
 calbank,upside,FY2029E,balance_sheet,due_from_banks,,GHS millions,MODEL-ESTIMATE,unavailable,Not split from cash_and_bog_balances.
 calbank,upside,FY2029E,balance_sheet,investment_securities,11127.928,GHS millions,MODEL-ESTIMATE,estimated,Balancing liquid asset = total_assets - loans - ppe - other - cash; solved iteratively.
@@ -603,7 +603,7 @@ calbank,upside,FY2030E,income_statement,impairment_charge,37.636,GHS millions,MO
 calbank,upside,FY2030E,income_statement,profit_before_tax,605.782,GHS millions,MODEL-ESTIMATE,estimated,total_operating_income - opex - x_lease_finance_cost - impairment.
 calbank,upside,FY2030E,income_statement,income_tax,193.850,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax * tax_rate.
 calbank,upside,FY2030E,income_statement,profit_after_tax,411.932,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax - income_tax.
-calbank,upside,FY2030E,income_statement,x_dividends_paid,102.983,GHS millions,MODEL-ESTIMATE,estimated,Modeled payout under positive retained earnings and CAR gate; deducted once from retained earnings.
+calbank,upside,FY2030E,income_statement,x_dividends_paid,102.983,GHS millions,MODEL-ESTIMATE,estimated,Full modeled payout only if retained earnings stay positive after payout and post-payout CAR meets target; deducted once.
 calbank,upside,FY2030E,balance_sheet,cash_and_bog_balances,5494.047,GHS millions,MODEL-ESTIMATE,estimated,Proxy screen >= crr_pct (20%) on customer_deposits; includes due_from_banks aggregate.
 calbank,upside,FY2030E,balance_sheet,due_from_banks,,GHS millions,MODEL-ESTIMATE,unavailable,Not split from cash_and_bog_balances.
 calbank,upside,FY2030E,balance_sheet,investment_securities,12819.443,GHS millions,MODEL-ESTIMATE,estimated,Balancing liquid asset = total_assets - loans - ppe - other - cash; solved iteratively.
