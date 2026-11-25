@@ -1,0 +1,13 @@
+{
+  "bank": "access-bank-ghana",
+  "currency": "GHS millions",
+  "macro_source": "../../sector/macro-assumptions/macro.csv",
+  "scope": "Standalone Ghana bank; 9M-2026 unaudited anchor",
+  "method": "Q4 income is estimated from nine-month run rates; subsequent annual income changes with balances and macro rates. Equity retains earnings after assumed dividends; investments are the balancing asset. Forecasts are estimates, not regulatory capital calculations.",
+  "scenarios": {
+    "base": {"q4_loan_growth": 0.03, "q4_deposit_growth": 0.025, "q4_flow_fraction": 0.3333333333, "growth_spread_pp": 0.0, "npl_step_pp": 0.0, "annual_credit_cost_pct": 1.0, "payout": 0.15},
+    "downside": {"q4_loan_growth": 0.01, "q4_deposit_growth": 0.01, "q4_flow_fraction": 0.28, "growth_spread_pp": -2.0, "npl_step_pp": 1.0, "annual_credit_cost_pct": 2.5, "payout": 0.0},
+    "upside": {"q4_loan_growth": 0.04, "q4_deposit_growth": 0.035, "q4_flow_fraction": 0.36, "growth_spread_pp": 1.5, "npl_step_pp": -0.3, "annual_credit_cost_pct": 0.6, "payout": 0.2}
+  },
+  "driver_notes": "All scenario drivers are analyst estimates, not reported bank guidance. From FY2027, loan and deposit growth = nominal GDP plus spread; operating costs follow CPI; 2026 flows use actual 9M plus estimated Q4. 2026 interest continues actual quarterly run-rate; 2027+ yields adjust by changes in policy and bill rates against 2026 macro, not a direct repricing of the entire book. Investment/cash categories retain a simplified mix and may be infeasible; flags are required. Gross fee income and expense and gross loan allowance are unavailable separately in the interim source. Taxes are held at 35% of positive incremental pre-tax income; NPL is an illustrative scenario and independent of impairment. The 9M equity/CAR ratio calibrates a proxy, not actual regulatory capital; no capital injection or CRR compliance is assumed."
+}
