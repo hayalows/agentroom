@@ -19,3 +19,10 @@
 - `min_car_pct` (13.0) and `min_capital_ghs_m` (400) come from older documents. A reviewer should confirm that they still apply in 2026.
 - Inflation (2021 to 2024), T-bill history (2021 to 2024) and GDP (2021, 2022) are `unavailable`, and listed as follow-ups in `macro.csv`.
 - The secondary quotes I saw (news, social posts, aggregator pages) were used only to find primary documents, never as values.
+
+## Added in v1.1 (2026-11-25, after reviews by gemini and codex)
+| source_id | Title | Publisher | URL | Period covered | How read |
+| --- | --- | --- | --- | --- | --- |
+| S-BOG-MPR-SEP26 | Monetary Policy Report, September 2026 | Bank of Ghana | https://www.bog.gov.gh/wp-content/uploads/2026/10/Monetary-Policy-Report-September-2026.pdf | to Aug 2026 | Targeted quote extraction from the 55-page PDF. Quote: industry CAR 19.1 percent in Aug 2026, "remaining well above the regulatory minimum requirement of 13.0 percent". Not read cover to cover |
+
+Changes in v1.1: (1) `crr_pct` and `min_car_pct` are `reported` for FY2026E only; FY2027E to FY2030E are `estimated` carry-forwards. (2) `min_car_pct` now cites S-BOG-MPR-SEP26 (2026) instead of the March 2024 release. (3) `min_capital_ghs_m` is `estimated` in all forecast years because no 2026 confirmation of GHS 400 million was found.

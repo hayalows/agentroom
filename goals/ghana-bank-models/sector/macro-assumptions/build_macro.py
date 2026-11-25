@@ -149,14 +149,22 @@ for sc, ends in SC["ghs_per_usd_end"].items():
         prev = e
 
 # ------------------------------------------------------------------ regulatory (same in all scenarios)
+# FY2026E rows describe rules in force in Nov 2026 (reported). FY2027E onward are carry-forwards of the current rule (estimated),
+# not reported future facts (review by gemini and codex, 2026-11-25).
+CRR_NOTE = ("Uniform cash reserve ratio of 20 percent in domestic currency, effective 4 Jun 2026, replacing the earlier dynamic CRR (S-BOG-MPC-MAY26). "
+            "BoG published a Liquidity Coverage Ratio exposure draft on 9 Oct 2026 that could change liquidity rules (not read).")
+CAR_NOTE = ("Regulatory minimum capital adequacy ratio of 13.0 percent, quoted in the BoG Monetary Policy Report September 2026 (solvency section): industry CAR 19.1 percent in Aug 2026 'well above the regulatory minimum requirement of 13.0 percent' (S-BOG-MPR-SEP26, read by claude). "
+            "Earlier history: a temporary lower 10 percent threshold under DDEP forbearance applied in 2024 and expired by Dec 2025 (per gemini's review citing CalBank AR 2024 p.120 and codex's reading of GCB FY2025; not verified by claude).")
+CAP_NOTE = ("Minimum paid-up capital of GHS 400 million required by 31 Dec 2018 (BoG Notice BG/GOV/SEC/2017/19, S-BOG-CAP17). A search on 2026-11-25 found NO newer minimum for universal banks "
+            "(2026 capital reforms found apply to microfinance and community banks only), but this is not proof. Treat as an unconfirmed carry-forward until a reviewer confirms with the BoG.")
 for sc in ("base", "downside", "upside"):
     for y in YEARS:
-        add(sc, f"FY{y}E", "crr_pct", 20.0, "percent", "S-BOG-MPC-MAY26", "reported",
-            "Uniform cash reserve ratio of 20 percent in domestic currency, effective 4 Jun 2026, replacing the earlier dynamic CRR. Held flat; BoG published a Liquidity Coverage Ratio exposure draft on 9 Oct 2026 that could change liquidity rules (not read).")
-        add(sc, f"FY{y}E", "min_car_pct", 13.0, "percent", "S-BOG-MPC-MAR24", "reported",
-            "Regulatory minimum capital adequacy ratio of 13.0 percent as stated in the BoG March 2024 MPC release. Not re-checked for a later change. A reviewer should confirm against the current BoG Capital Requirements Directive.")
-        add(sc, f"FY{y}E", "min_capital_ghs_m", 400.0, "GHS millions", "S-BOG-CAP17", "reported",
-            "Minimum paid-up capital of GHS 400 million required by 31 Dec 2018 (BoG Notice BG/GOV/SEC/2017/19). Not checked whether a newer minimum applies in 2026. Confirm before using.")
+        now = (y == 2026)
+        st = "reported" if now else "estimated"
+        tail = "" if now else " FY2027E onward is a carry-forward estimate: the current rule is held flat."
+        add(sc, f"FY{y}E", "crr_pct", 20.0, "percent", "S-BOG-MPC-MAY26", st, CRR_NOTE + tail)
+        add(sc, f"FY{y}E", "min_car_pct", 13.0, "percent", "S-BOG-MPR-SEP26", st, CAR_NOTE + tail)
+        add(sc, f"FY{y}E", "min_capital_ghs_m", 400.0, "GHS millions", "S-BOG-CAP17", "estimated", CAP_NOTE)
 add("actual", 2024, "crr_pct", None, "percent", "", "unavailable", "A dynamic CRR applied before 4 Jun 2026 (tiers by loan-to-deposit ratio, per a Fitch note). The tier table was not read in full. Follow-up if a bank's history needs it.")
 add("actual", 2025, "crr_pct", None, "percent", "", "unavailable", "Dynamic CRR regime; exact rate by bank depended on its loan-to-deposit ratio.")
 
