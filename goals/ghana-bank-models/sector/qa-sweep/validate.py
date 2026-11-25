@@ -10,6 +10,9 @@ For every folder in banks/ it checks the MODEL-SPEC rules, with three result lev
 It does NOT check numbers against filings. Only a reviewer who opens the source can do that.
 """
 import csv
+import math
+import argparse
+import subprocess
 import json
 import os
 import re
@@ -36,8 +39,9 @@ SECTOR_ASSETS_DEC25 = 446900.0  # GHS m, BoG Summary Nov 2026, banking sector to
 
 def num(x):
     try:
-        return float(x)
-    except Exception:
+        v = float(x)
+        return v if math.isfinite(v) else None
+    except (ValueError, TypeError, OverflowError):
         return None
 
 def read_csv(path):
@@ -47,17 +51,22 @@ def read_csv(path):
         return rows, list(rd.fieldnames or [])
 
 def claim_status(slug):
-    p = os.path.join(CLAIMS, slug + ".md")
-    if not os.path.exists(p):
-        return "", ""
-    owner = status = ""
-    for line in open(p, encoding="utf-8-sig"):
-        m = re.match(r"^(agent|status):\s*(.*)$", line.strip())
-        if m and m.group(1) == "agent" and not owner:
-            owner = m.group(2)
-        if m and m.group(1) == "status":
-            status = m.group(2)
-    return owner, status
+    # A released original is not the active claim; preserve original attribution
+    # in claims, but inspect the active takeover's status.
+    for name in (slug + ".md", slug + "-takeover.md"):
+        p = os.path.join(CLAIMS, name)
+        if not os.path.exists(p):
+            continue
+        owner = status = ""
+        for line in open(p, encoding="utf-8-sig"):
+            m = re.match(r"^(agent|status):\s*(.*)$", line.strip())
+            if m and m.group(1) == "agent" and not owner:
+                owner = m.group(2)
+            if m and m.group(1) == "status":
+                status = m.group(2)
+        if status != "released" or name.endswith("-takeover.md"):
+            return owner, status
+    return "", "released" if os.path.exists(os.path.join(CLAIMS, slug + ".md")) else ""
 
 def check_bank(slug):
     d = os.path.join(BANKS, slug)
@@ -82,13 +91,19 @@ def check_bank(slug):
         return res
     if header != COLS:
         F.append(f"financials.csv columns are {header}, expected {COLS}")
+        if not set(COLS).issubset(header) or len(header) != len(set(header)):
+            return res
     I["history_rows"] = len(rows)
     seen = set()
     V, S = {}, {}
-    for r in rows:
+    for row_index, r in enumerate(rows, start=2):
+        if None in r or any(r.get(k) is None for k in COLS):
+            F.append(f"financials.csv malformed row {row_index}")
+            continue
         k = (r["period"], r["line_item"])
         if k in seen:
             F.append(f"duplicate row {k}")
+            continue
         seen.add(k)
         if r["bank"] != slug:
             F.append(f"row bank '{r['bank']}' != folder '{slug}' ({k})")
@@ -114,7 +129,7 @@ def check_bank(slug):
         S[k] = r["status"]
         if not li.startswith("x_") and r["unit"] not in ("GHS millions", "percent", "%", ""):
             W.append(f"unit '{r['unit']}' on {k}")
-    periods = sorted({r["period"] for r in rows})
+    periods = sorted({p for p, _ in S})
     fy = [p for p in periods if re.fullmatch(r"FY\d{4}", p)]
     I["periods"] = periods
     if len(fy) < 5:
@@ -164,7 +179,7 @@ def check_bank(slug):
             F.append(f"{item} is negative in {neg} (spec: costs are stored positive)")
     # right-of-use convention
     for r in rows:
-        if r["line_item"] == "other_assets" and re.search(r"right[- ]of[- ]use|\bROU\b", r["notes"], re.I) and "property_equipment" not in r["notes"]:
+        if r.get("line_item") == "other_assets" and re.search(r"right[- ]of[- ]use|\bROU\b", r.get("notes") or "", re.I) and "property_equipment" not in (r.get("notes") or ""):
             W.append(f"{r['period']}: right-of-use assets appear to be inside other_assets (spec: property_equipment_intangibles)")
             break
     # size sanity
@@ -179,28 +194,46 @@ def check_bank(slug):
         except Exception as e:
             F.append(f"forecast.csv unreadable: {e}")
             return res
-        for need in ["bank", "scenario", "period", "line_item", "value", "unit", "status"]:
-            if need not in fh:
-                F.append(f"forecast.csv lacks column {need}")
-        if not F or all("forecast.csv" not in x for x in F):
+        required = {"bank", "scenario", "period", "line_item", "value", "unit", "status"}
+        missing_cols = sorted(required - set(fh))
+        for need in missing_cols:
+            F.append(f"forecast.csv lacks column {need}")
+        if len(fh) != len(set(fh)):
+            F.append("forecast.csv contains duplicate column names")
+        if not missing_cols and len(fh) == len(set(fh)):
             fv, keys = {}, set()
-            for r in frows:
-                k = (r.get("scenario"), r.get("period"), r.get("line_item"))
+            for row_index, r in enumerate(frows, start=2):
+                if None in r or any(r.get(k) is None for k in required):
+                    F.append(f"forecast.csv malformed row {row_index}")
+                    continue
+                k = (r["scenario"], r["period"], r["line_item"])
                 if k in keys:
                     F.append(f"duplicate forecast row {k}")
-                    break
+                    continue  # preserve first observation; do not truncate later periods
                 keys.add(k)
-                v = num(r.get("value"))
-                if v is not None:
-                    fv[k] = v
-                if r.get("status") not in ("estimated", "unavailable"):
-                    badstat = locals().get("badstat", 0) + 1
-                li = r.get("line_item", "")
-                if li and li not in ALLOWED and not li.startswith("x_"):
+                li = r["line_item"]
+                if r["bank"] != slug:
+                    F.append(f"forecast row bank '{r['bank']}' != folder '{slug}' ({k})")
+                if k[0] not in SCEN or k[1] not in FYE:
+                    F.append(f"forecast unexpected scenario/period {k}")
+                    continue
+                if not li or (li not in ALLOWED and not li.startswith("x_")):
                     F.append(f"forecast line_item '{li}' is not in the spec and not an x_ item")
-                    break
-            if locals().get("badstat"):
-                W.append(f"{badstat} forecast rows have a status other than estimated/unavailable (spec: estimated)")
+                    continue
+                if li in ALLOWED and r["unit"] not in ("GHS millions", "percent", "%"):
+                    W.append(f"forecast unit '{r['unit']}' on {k}")
+                if r["status"] == "unavailable":
+                    if r["value"].strip():
+                        F.append(f"unavailable forecast row has a value {k}")
+                    continue
+                if r["status"] != "estimated":
+                    F.append(f"forecast invalid status '{r['status']}' on {k}")
+                    # Keep finite value for downstream identities, but report invalid status.
+                v = num(r["value"])
+                if v is None:
+                    F.append(f"forecast missing or non-finite numeric value {k}")
+                    continue
+                fv[k] = v
             have = {(k[0], k[1]) for k in fv}
             miss = [f"{s}|{y}" for s in SCEN for y in FYE if (s, y) not in have]
             if miss:
@@ -233,7 +266,9 @@ def check_bank(slug):
                     if abs(gap) > 25:
                         W.append(f"base FY2026E {item} is {gap:+.0f}% away from 9M-2026 annualised (interest lines that are far off can hide offsetting errors)")
             ta26, ta30 = fv.get(("base", "FY2026E", "total_assets")), fv.get(("base", "FY2030E", "total_assets"))
-            if ta26 and ta30:
+            if ta26 is not None and ta30 is not None and (ta26 <= 0 or ta30 <= 0):
+                F.append("base forecast nonpositive total assets (cannot compute CAGR)")
+            if ta26 is not None and ta30 is not None and ta26 > 0 and ta30 > 0:
                 cagr = ((ta30 / ta26) ** (1 / 4) - 1) * 100
                 I["base_asset_cagr_26_30_pct"] = round(cagr, 1)
                 if cagr > 30 or cagr < -5:
@@ -252,14 +287,29 @@ def check_bank(slug):
     return res
 
 def main():
+    global GOAL, BANKS, CLAIMS, MACRO
+    parser = argparse.ArgumentParser(description="Structural QA diagnostic; not the acceptance gate")
+    parser.add_argument("--input-root", help="Repository root (default: containing checkout)")
+    parser.add_argument("--output-dir", default=HERE)
+    args = parser.parse_args()
+    if args.input_root:
+        GOAL = os.path.join(os.path.abspath(args.input_root), "goals", "ghana-bank-models")
+        BANKS, CLAIMS = os.path.join(GOAL, "banks"), os.path.join(GOAL, "claims")
+        MACRO = os.path.join(GOAL, "sector", "macro-assumptions", "macro.csv")
+    root = os.path.abspath(os.path.join(GOAL, "..", ".."))
+    def git(*cmd):
+        return subprocess.check_output(["git", "-C", root, *cmd], text=True).strip()
+    if git("status", "--porcelain", "--untracked-files=all"):
+        raise SystemExit("QA input checkout must be clean; use an external output directory")
+    source = git("rev-parse", "HEAD")
     slugs = sorted(x for x in os.listdir(BANKS) if os.path.isdir(os.path.join(BANKS, x)) and not x.startswith("__"))
     results = [check_bank(s) for s in slugs]
     for r in results:
-        r["assessed"] = r["info"].get("claim_status") in ("needs-review", "done")
+        r["assessed"] = r["info"].get("claim_status") in ("needs-review", "done", "changes-requested")
         if not r["assessed"]:
             r["wip"] = r["fail"] + r["warn"]
             r["fail"], r["warn"] = [], []
-    out = ["# QA sweep report", "", f"Generated by `sector/qa-sweep/validate.py` over {len(results)} bank folders. Banks still marked `in-progress` are listed as work in progress and are not counted: only `needs-review` and `done` banks are assessed. This checks structure, arithmetic and conventions. **It does not compare numbers with filings.**", "",
+    out = ["# QA sweep report", "", f"Generated by `sector/qa-sweep/validate.py` over {len(results)} bank folders. Source commit: `{source}`. Only submitted claims (needs-review, done, changes-requested, including takeovers) are assessed; unsubmitted models are diagnostic WIP. Claim status is not supervisor acceptance. This checks structure, arithmetic and conventions, not original filings or regulatory compliance.", "",
            "| Bank | Owner | Claim status | FAIL | WARN | History rows | Forecast rows | FY2025 assets (GHS m) |", "| --- | --- | --- | --- | --- | --- | --- | --- |"]
     for r in results:
         I = r["info"]
@@ -280,10 +330,16 @@ def main():
             if more > 0:
                 out.append(f"- ... {more} more FAIL")
             out.append("")
-    with open(os.path.join(HERE, "report.md"), "w", encoding="utf-8") as f:
+    if git("rev-parse", "HEAD") != source or git("status", "--porcelain", "--untracked-files=all"):
+        raise SystemExit("QA input changed during generation")
+    os.makedirs(args.output_dir, exist_ok=True)
+    for r in results:
+        r["source_commit"] = source
+    with open(os.path.join(args.output_dir, "report.md"), "w", encoding="utf-8", newline="\n") as f:
         f.write("\n".join(out) + "\n")
-    with open(os.path.join(HERE, "report.json"), "w", encoding="utf-8") as f:
-        json.dump(results, f, indent=1)
+    with open(os.path.join(args.output_dir, "report.json"), "w", encoding="utf-8", newline="\n") as f:
+        json.dump(results, f, indent=1, allow_nan=False)
+        f.write("\n")
     print(f"{len(results)} banks | FAIL {total_f} | WARN {sum(len(r['warn']) for r in results)}")
     for r in results:
         print(f"  {r['slug']:28s} FAIL {len(r['fail']):3d}  WARN {len(r['warn']):3d}  [{r['info'].get('claim_status','')}{'' if r['assessed'] else ', not assessed'}]")

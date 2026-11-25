@@ -1,5 +1,33 @@
 [
  {
+  "slug": "absa-ghana",
+  "fail": [],
+  "warn": [],
+  "info": {
+   "owner": "claude-helper-1",
+   "claim_status": "needs-review",
+   "history_rows": 300,
+   "periods": [
+    "9M-2025",
+    "9M-2026",
+    "FY2021",
+    "FY2022",
+    "FY2023",
+    "FY2024",
+    "FY2025"
+   ],
+   "identity_failures": 0,
+   "total_assets_fy2025": 31529.847,
+   "forecast_rows": 837,
+   "anchor_gap_interest_income_pct": -0.0,
+   "anchor_gap_interest_expense_pct": -0.0,
+   "anchor_gap_profit_after_tax_pct": -0.2,
+   "base_asset_cagr_26_30_pct": 12.0
+  },
+  "assessed": true,
+  "source_commit": "e73b4e6ee367d2f5e63a3465a0e3a57815917321"
+ },
+ {
   "slug": "access-bank-ghana",
   "fail": [],
   "warn": [],
@@ -23,7 +51,8 @@
    "anchor_gap_profit_after_tax_pct": -1.2,
    "base_asset_cagr_26_30_pct": 12.5
   },
-  "assessed": true
+  "assessed": true,
+  "source_commit": "e73b4e6ee367d2f5e63a3465a0e3a57815917321"
  },
  {
   "slug": "adb",
@@ -52,7 +81,8 @@
    "anchor_gap_profit_after_tax_pct": -31.4,
    "base_asset_cagr_26_30_pct": 8.5
   },
-  "assessed": true
+  "assessed": true,
+  "source_commit": "e73b4e6ee367d2f5e63a3465a0e3a57815917321"
  },
  {
   "slug": "bank-of-africa-ghana",
@@ -79,7 +109,8 @@
    "anchor_gap_profit_after_tax_pct": 10.1,
    "base_asset_cagr_26_30_pct": 12.1
   },
-  "assessed": true
+  "assessed": true,
+  "source_commit": "e73b4e6ee367d2f5e63a3465a0e3a57815917321"
  },
  {
   "slug": "calbank",
@@ -107,7 +138,8 @@
    "anchor_gap_profit_after_tax_pct": -0.4,
    "base_asset_cagr_26_30_pct": 12.5
   },
-  "assessed": true
+  "assessed": true,
+  "source_commit": "e73b4e6ee367d2f5e63a3465a0e3a57815917321"
  },
  {
   "slug": "consolidated-bank-ghana",
@@ -131,7 +163,8 @@
    "forecast_rows": 945,
    "base_asset_cagr_26_30_pct": 12.5
   },
-  "assessed": true
+  "assessed": true,
+  "source_commit": "e73b4e6ee367d2f5e63a3465a0e3a57815917321"
  },
  {
   "slug": "ecobank-ghana",
@@ -159,7 +192,8 @@
    "anchor_gap_profit_after_tax_pct": 4.7,
    "base_asset_cagr_26_30_pct": 12.3
   },
-  "assessed": true
+  "assessed": true,
+  "source_commit": "e73b4e6ee367d2f5e63a3465a0e3a57815917321"
  },
  {
   "slug": "fbnbank-ghana",
@@ -186,7 +220,8 @@
    "anchor_gap_profit_after_tax_pct": -1.8,
    "base_asset_cagr_26_30_pct": 11.5
   },
-  "assessed": true
+  "assessed": true,
+  "source_commit": "e73b4e6ee367d2f5e63a3465a0e3a57815917321"
  },
  {
   "slug": "fidelity-bank-ghana",
@@ -213,7 +248,8 @@
    "anchor_gap_profit_after_tax_pct": 0.6,
    "base_asset_cagr_26_30_pct": 14.3
   },
-  "assessed": true
+  "assessed": true,
+  "source_commit": "e73b4e6ee367d2f5e63a3465a0e3a57815917321"
  },
  {
   "slug": "first-atlantic-bank",
@@ -240,7 +276,8 @@
    "anchor_gap_profit_after_tax_pct": 3.0,
    "base_asset_cagr_26_30_pct": 14.9
   },
-  "assessed": true
+  "assessed": true,
+  "source_commit": "e73b4e6ee367d2f5e63a3465a0e3a57815917321"
  },
  {
   "slug": "first-national-bank-ghana",
@@ -267,7 +304,8 @@
    "anchor_gap_profit_after_tax_pct": 12.1,
    "base_asset_cagr_26_30_pct": 12.3
   },
-  "assessed": true
+  "assessed": true,
+  "source_commit": "e73b4e6ee367d2f5e63a3465a0e3a57815917321"
  },
  {
   "slug": "gcb",
@@ -293,7 +331,8 @@
    "anchor_gap_profit_after_tax_pct": -0.1,
    "base_asset_cagr_26_30_pct": 17.0
   },
-  "assessed": true
+  "assessed": true,
+  "source_commit": "e73b4e6ee367d2f5e63a3465a0e3a57815917321"
  },
  {
   "slug": "gtbank-ghana",
@@ -320,7 +359,8 @@
    "anchor_gap_profit_after_tax_pct": 0.0,
    "base_asset_cagr_26_30_pct": 18.6
   },
-  "assessed": true
+  "assessed": true,
+  "source_commit": "e73b4e6ee367d2f5e63a3465a0e3a57815917321"
  },
  {
   "slug": "nib",
@@ -347,7 +387,8 @@
    "anchor_gap_profit_after_tax_pct": 7.6,
    "base_asset_cagr_26_30_pct": 12.6
   },
-  "assessed": true
+  "assessed": true,
+  "source_commit": "e73b4e6ee367d2f5e63a3465a0e3a57815917321"
  },
  {
   "slug": "omnibsic-bank",
@@ -367,11 +408,11 @@
    ],
    "identity_failures": 0,
    "total_assets_fy2025": 21582.158,
-   "forecast_rows": 840,
+   "forecast_rows": 915,
    "anchor_gap_interest_income_pct": 0.0,
    "anchor_gap_interest_expense_pct": 0.0,
    "anchor_gap_profit_after_tax_pct": -0.3,
-   "base_asset_cagr_26_30_pct": 13.5
+   "base_asset_cagr_26_30_pct": 13.9
   },
   "assessed": false,
   "wip": [
@@ -394,15 +435,22 @@
    "derived row without a formula in notes ('9M-2026', 'other_assets')",
    "derived row without a formula in notes ('9M-2026', 'other_liabilities')",
    "only 4 full fiscal years in history (spec asks for 5)"
-  ]
+  ],
+  "source_commit": "e73b4e6ee367d2f5e63a3465a0e3a57815917321"
  },
  {
   "slug": "prudential-bank",
-  "fail": [],
-  "warn": [],
+  "fail": [
+   "FY2023: gross loans 2035.023 - allowance 915.457 - net loans 1010.841 leaves 108.725 and no x_ suspense/adjustment row explains it",
+   "FY2024: gross loans 1797.721 - allowance 830.569 - net loans 864.378 leaves 102.774 and no x_ suspense/adjustment row explains it"
+  ],
+  "warn": [
+   "no 2026 interim period in history (9M-2026 expected)",
+   "FY2021: right-of-use assets appear to be inside other_assets (spec: property_equipment_intangibles)"
+  ],
   "info": {
-   "owner": "claude-helper-1",
-   "claim_status": "released",
+   "owner": "papa-kojo-agent",
+   "claim_status": "needs-review",
    "history_rows": 238,
    "periods": [
     "FY2021",
@@ -416,13 +464,8 @@
    "forecast_rows": 915,
    "base_asset_cagr_26_30_pct": 10.5
   },
-  "assessed": false,
-  "wip": [
-   "FY2023: gross loans 2035.023 - allowance 915.457 - net loans 1010.841 leaves 108.725 and no x_ suspense/adjustment row explains it",
-   "FY2024: gross loans 1797.721 - allowance 830.569 - net loans 864.378 leaves 102.774 and no x_ suspense/adjustment row explains it",
-   "no 2026 interim period in history (9M-2026 expected)",
-   "FY2021: right-of-use assets appear to be inside other_assets (spec: property_equipment_intangibles)"
-  ]
+  "assessed": true,
+  "source_commit": "e73b4e6ee367d2f5e63a3465a0e3a57815917321"
  },
  {
   "slug": "republic-bank-ghana",
@@ -449,7 +492,8 @@
    "anchor_gap_profit_after_tax_pct": -17.2,
    "base_asset_cagr_26_30_pct": 14.5
   },
-  "assessed": true
+  "assessed": true,
+  "source_commit": "e73b4e6ee367d2f5e63a3465a0e3a57815917321"
  },
  {
   "slug": "societe-generale-ghana",
@@ -476,7 +520,8 @@
    "anchor_gap_profit_after_tax_pct": -3.5,
    "base_asset_cagr_26_30_pct": 12.8
   },
-  "assessed": true
+  "assessed": true,
+  "source_commit": "e73b4e6ee367d2f5e63a3465a0e3a57815917321"
  },
  {
   "slug": "stanbic-bank-ghana",
@@ -484,7 +529,7 @@
   "warn": [],
   "info": {
    "owner": "deepseek",
-   "claim_status": "needs-review",
+   "claim_status": "done",
    "history_rows": 367,
    "periods": [
     "9M-2025",
@@ -503,7 +548,8 @@
    "anchor_gap_profit_after_tax_pct": -2.9,
    "base_asset_cagr_26_30_pct": 13.3
   },
-  "assessed": true
+  "assessed": true,
+  "source_commit": "e73b4e6ee367d2f5e63a3465a0e3a57815917321"
  },
  {
   "slug": "standard-chartered-ghana",
@@ -530,7 +576,8 @@
    "anchor_gap_profit_after_tax_pct": -2.7,
    "base_asset_cagr_26_30_pct": 11.4
   },
-  "assessed": true
+  "assessed": true,
+  "source_commit": "e73b4e6ee367d2f5e63a3465a0e3a57815917321"
  },
  {
   "slug": "uba-ghana",
@@ -557,7 +604,8 @@
    "anchor_gap_profit_after_tax_pct": -2.8,
    "base_asset_cagr_26_30_pct": 13.3
   },
-  "assessed": true
+  "assessed": true,
+  "source_commit": "e73b4e6ee367d2f5e63a3465a0e3a57815917321"
  },
  {
   "slug": "umb",
@@ -577,14 +625,15 @@
    ],
    "identity_failures": 0,
    "total_assets_fy2025": null,
-   "forecast_rows": 825,
-   "base_asset_cagr_26_30_pct": 11.2
+   "forecast_rows": 846,
+   "base_asset_cagr_26_30_pct": 11.5
   },
   "assessed": false,
   "wip": [
    "only 4 full fiscal years in history (spec asks for 5)",
    "no 2026 interim period in history (9M-2026 expected)"
-  ]
+  ],
+  "source_commit": "e73b4e6ee367d2f5e63a3465a0e3a57815917321"
  },
  {
   "slug": "zenith-bank-ghana",
@@ -611,6 +660,7 @@
    "anchor_gap_profit_after_tax_pct": -22.4,
    "base_asset_cagr_26_30_pct": 18.8
   },
-  "assessed": true
+  "assessed": true,
+  "source_commit": "e73b4e6ee367d2f5e63a3465a0e3a57815917321"
  }
 ]
