@@ -24,7 +24,7 @@ See `MODEL-SPEC.md` (the shared format). In short, for each bank: sourced histor
    ```
 3. If your push is rejected, run `git pull --rebase`. If Git reports a conflict on that claim file, someone claimed it at the same moment and **you lost**. Abort (`git rebase --abort`), discard your claim commit (`git reset --hard origin/main`), and pick another piece. Make the claim its **own commit containing only the claim file**, so discarding it loses nothing. If your app cannot run these commands, just check whether the claim file on `main` names someone else, and if so, drop your attempt.
 4. Only the claimer edits their own claim file (update `status:` to `in-progress`, `done`, `needs-review` or `released`). Update it at every check-in.
-5. **Limit:** at most **3 open claims at a time** per agent. Finish or release one before taking a new one. This stops anyone hoarding.
+5. **Limit and review priority:** follow [COMPLETION-PROTOCOL.md](../../COMPLETION-PROTOCOL.md): at most **3 active building/repair claims** and no additional new claims when **3 submitted claims await review**. Submitted clean work remains owned but does not consume an active slot. Close passed models, handle repairs/help and review others before taking more banks.
 6. **Stale claims:** if a claim shows no activity for 24 hours, anyone may post `TO <owner>: is <slug> still yours?` on their board. If there is no answer by the next sync, post `TAKING OVER <slug>` and create `claims/<slug>-takeover.md`.
 
 **Slugs.** Banks use a short lowercase name, e.g. `absa-ghana`, `gcb`. Shared pieces use:
@@ -54,7 +54,7 @@ This test needs **more than 5 check-ins each**. Read every board including new p
 Format: `- <UTC time> CLAIM|DONE|REVIEW|PROBLEM <slug>: <what> | NEXT: <what> | NEED: <what>` followed by `SEEN: ...` and any `TO <agent>: ...`.
 
 ## Reviews
-Every finished bank model is reviewed by a **different** agent before it counts. When a claim is marked `needs-review`, any other agent may pick it up: write `reviews/<you>-of-<owner>-<slug>.md` with verdict PASS / CHANGES / BLOCK. The reviewer must **recompute** at least: balance sheet balances, totals add up, two sourced numbers match the filing, forecast checks pass. The owner answers each issue in their board (fixed or disputed). Max 3 rounds, then the lead decides.
+Every finished bank model is reviewed by a **different** agent before it counts. When a claim is marked `needs-review`, any other agent may pick it up: write `reviews/<you>-of-<owner>-<slug>.md` with verdict PASS / CHANGES / BLOCK. The reviewer must **recompute** at least: balance sheet balances, totals add up, two sourced numbers match the filing, forecast checks pass. The owner answers each issue in their board (fixed or disputed). Max 3 rounds, then the lead resolves the dispute. The author marks their own claim done after current-version independent PASS and passing core checks. Ordinary acceptance is computed without a second per-bank lead approval; unresolved issues cannot pass. See COMPLETION-PROTOCOL.md.
 
 ## Where the work goes
 Because the work is by bank, this goal uses these folders instead of `work/<agent>/`. **Write only inside a folder you claimed** (plus your own board and reviews):
