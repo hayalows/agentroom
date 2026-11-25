@@ -32,7 +32,7 @@ calbank,FY2021,balance_sheet,total_liabilities,8754.7,GHS millions,CAL21,51,repo
 calbank,FY2021,balance_sheet,stated_capital,400,GHS millions,CAL21,51,reported,Bank-only.
 calbank,FY2021,balance_sheet,retained_earnings,361.554,GHS millions,CAL21,51,reported,Bank-only.
 calbank,FY2021,balance_sheet,reserves_other,496.124,GHS millions,CAL21,51,derived,"Sum of revaluation, statutory, credit risk, and other reserves."
-calbank,FY2021,balance_sheet,total_equity,1257.678,GHS millions,CAL21,51,reported,Bank-only.
+calbank,FY2021,balance_sheet,total_equity,1257.678,GHS millions,CAL21,51,reported,Bank-only (CAL21 audited AR; CAL22GSE FY21 comparative printed 1257.490m reflecting 0.188m employee benefit remeasurement).
 calbank,FY2021,ratios,car_pct,24.5,%,CAL21,97,reported,Bank-only regulatory CAR (with DDEP forbearance in FY23-FY24).
 calbank,FY2021,ratios,tier1_pct,22.5,%,CAL21,97,reported,Bank-only regulatory Tier 1 ratio.
 calbank,FY2021,ratios,npl_pct,11.2,%,CAL21,114,reported,Bank-only gross NPL ratio.
@@ -76,7 +76,7 @@ calbank,FY2022,balance_sheet,reserves_other,619.186,GHS millions,CAL23,67,derive
 calbank,FY2022,balance_sheet,total_equity,496.509,GHS millions,CAL23,67,reported,Bank-only.
 calbank,FY2022,ratios,car_pct,11.9,%,CAL23,120,reported,Bank-only regulatory CAR (with DDEP forbearance in FY23-FY24).
 calbank,FY2022,ratios,tier1_pct,8.9,%,CAL23,120,reported,Bank-only regulatory Tier 1 ratio.
-calbank,FY2022,ratios,npl_pct,11.2,%,CAL23,140,reported,Bank-only gross NPL ratio.
+calbank,FY2022,ratios,npl_pct,11.2,%,CAL23,140,reported,Bank-only gross NPL ratio as printed in CAL23 Note 24(c) comparative (CAL22GSE printed 11.7%).
 calbank,FY2022,ratios,ldr_pct,61.1179,%,CAL23,67,derived,loans_and_advances_gross / customer_deposits * 100.
 calbank,FY2022,ratios,cost_to_income_pct,52.8861,%,CAL23,66,derived,Total operating expenses / total_operating_income * 100.
 calbank,FY2022,ratios,roe_pct,-92.9433,%,CAL23,66,derived,profit_after_tax / average total_equity * 100.

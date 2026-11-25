@@ -64,6 +64,17 @@ def run():
         prev = dict(fy25)
         npl_prev = q3['npl_pct']
 
+        q4_loan_g = drv['q4_2026_loan_growth_pct']['value'] / 100.0
+        q4_dep_g = drv['q4_2026_deposit_growth_pct']['value'] / 100.0
+        q4_scale = drv['q4_2026_flow_scale']['value']
+        loan_spread = drv['loan_spread_over_nom_gdp_pct']['value']
+        dep_spread = drv['deposit_spread_over_nom_gdp_pct']['value']
+        opex_spread = drv['opex_spread_over_cpi_pct']['value']
+        npl_step = drv['npl_step_pct']['value']
+        tax_r = drv['tax_rate_pct']['value'] / 100.0
+        payout = drv['dividend_payout_pct']['value'] / 100.0
+        target_car = drv['target_car_pct']['value']
+
         for yr in years:
             pol = macro[(scen, yr, 'policy_rate_pct')]
             tb91 = macro[(scen, yr, 'tbill_91d_pct')]
@@ -75,27 +86,20 @@ def run():
             min_car = macro[(scen, yr, 'min_car_pct')]
 
             nom_gdp = ((1.0 + gdp / 100.0) * (1.0 + cpi / 100.0) - 1.0) * 100.0
-            loan_spread = {'base': 0.5, 'downside': -3.0, 'upside': 2.0}[scen]
-            dep_spread = {'base': 0.0, 'downside': -1.5, 'upside': 1.5}[scen]
-            opex_spread = {'base': 2.0, 'downside': 2.5, 'upside': 1.5}[scen]
-
             y_inv = (0.5 * tb364 + 0.5 * bond + drv['yield_on_investments_spread_over_blend_pct']['value']) / 100.0
             y_loan = (pol + drv['yield_on_loans_spread_over_policy_pct']['value']) / 100.0
             cof = max(0.02, (tb91 + drv['cost_of_funds_spread_over_tbill91_pct']['value']) / 100.0)
             cor = drv['cost_of_risk_pct'][yr] / 100.0
-            tax_r = drv['tax_rate_pct']['value'] / 100.0
 
             if yr == 'FY2026E':
-                q4_loan_g = {'base': 0.03, 'downside': 0.01, 'upside': 0.04}[scen]
-                q4_dep_g = {'base': 0.025, 'downside': 0.01, 'upside': 0.035}[scen]
                 loans_net = q3['loans_and_advances_net'] * (1.0 + q4_loan_g)
                 cust_dep = q3['customer_deposits'] * (1.0 + q4_dep_g)
                 borrowings = q3['borrowings']
                 other_liab = q3['other_liabilities'] * 1.01
+                total_liab = cust_dep + borrowings + other_liab
                 ppe_int = q3['property_equipment_intangibles'] * 1.01
                 oth_assets = q3['other_assets'] * 1.01
 
-                q4_scale = {'base': 1.0 / 3.0, 'downside': 0.28, 'upside': 0.36}[scen]
                 fee_inc = q3['fee_commission_income'] * (1.0 + q4_scale)
                 fee_exp = q3['fee_commission_expense'] * (1.0 + q4_scale)
                 trd_inc = q3['net_trading_income'] * (1.0 + q4_scale)
@@ -104,25 +108,30 @@ def run():
                 da = q3['depreciation_amortisation'] * (1.0 + q4_scale)
                 oth_opex = q3['other_operating_expenses'] * (1.0 + q4_scale)
                 impairment = q3['impairment_charge'] + (0.5 * (q3['loans_and_advances_net'] + loans_net)) * (cor / 4.0)
-                q4_int_inc = (0.5 * (q3['loans_and_advances_net'] + loans_net) * y_loan + q3['investment_securities'] * y_inv) / 4.0
-                q4_int_exp = (0.5 * (q3['customer_deposits'] + cust_dep + q3['borrowings'] + borrowings) * cof) / 4.0
-                int_inc = q3['interest_income'] + q4_int_inc
-                int_exp = q3['interest_expense'] + q4_int_exp
-                nii = int_inc - int_exp
-                toi = nii + (fee_inc - fee_exp) + trd_inc + oth_inc
-                pbt = toi - staff - da - oth_opex - impairment
-                tax = q3['income_tax'] + max(0.0, (pbt - q3['profit_before_tax']) * tax_r)
-                pat = pbt - tax
-                q4_pat = pat - q3['profit_after_tax']
-                total_liab = cust_dep + borrowings + other_liab
-                stated_cap = q3['stated_capital']
-                ret_earn = q3['retained_earnings'] + q4_pat
-                res_other = q3['reserves_other']
-                total_eq = stated_cap + ret_earn + res_other
-                total_assets = total_liab + total_eq
-                rem_assets = total_assets - loans_net - ppe_int - oth_assets
-                cash_bog = max(cust_dep * crr, rem_assets * 0.60)
-                inv_sec = rem_assets - cash_bog
+
+                inv_sec = q3['investment_securities']
+                iter_diff = 0.0
+                for _ in range(15):
+                    inv_prev = inv_sec
+                    q4_int_inc = (0.5 * (q3['loans_and_advances_net'] + loans_net) * y_loan + 0.5 * (q3['investment_securities'] + inv_sec) * y_inv) / 4.0
+                    q4_int_exp = (0.5 * (q3['customer_deposits'] + cust_dep + q3['borrowings'] + borrowings) * cof) / 4.0
+                    int_inc = q3['interest_income'] + q4_int_inc
+                    int_exp = q3['interest_expense'] + q4_int_exp
+                    nii = int_inc - int_exp
+                    toi = nii + (fee_inc - fee_exp) + trd_inc + oth_inc
+                    pbt = toi - staff - da - oth_opex - impairment
+                    tax = q3['income_tax'] + max(0.0, (pbt - q3['profit_before_tax']) * tax_r)
+                    pat = pbt - tax
+                    q4_pat = pat - q3['profit_after_tax']
+                    stated_cap = q3['stated_capital']
+                    ret_earn = q3['retained_earnings'] + q4_pat
+                    res_other = q3['reserves_other']
+                    total_eq = stated_cap + ret_earn + res_other
+                    total_assets = total_liab + total_eq
+                    rem_assets = total_assets - loans_net - ppe_int - oth_assets
+                    cash_bog = max(cust_dep * crr, rem_assets * 0.60)
+                    inv_sec = rem_assets - cash_bog
+                    iter_diff = abs(inv_sec - inv_prev)
             else:
                 loan_g = (nom_gdp + loan_spread) / 100.0
                 dep_g = (nom_gdp + dep_spread) / 100.0
@@ -150,7 +159,9 @@ def run():
                 impairment = avg_loans * cor
 
                 inv_sec = prev['investment_securities'] * (1.0 + dep_g * 0.8)
-                for _ in range(12):
+                iter_diff = 0.0
+                for _ in range(15):
+                    inv_prev = inv_sec
                     avg_inv = 0.5 * (prev['investment_securities'] + inv_sec)
                     int_inc = avg_loans * y_loan + avg_inv * y_inv
                     int_exp = avg_dep * cof
@@ -159,43 +170,49 @@ def run():
                     pbt = toi - staff - da - oth_opex - impairment
                     tax = max(0.0, pbt * tax_r)
                     pat = pbt - tax
+                    div = max(0.0, pat * payout) if (prev['retained_earnings'] + pat > 0) else 0.0
                     stated_cap = prev['stated_capital']
-                    ret_earn = prev['retained_earnings'] + pat
+                    ret_earn = prev['retained_earnings'] + pat - div
                     res_other = prev['reserves_other']
                     total_eq = stated_cap + ret_earn + res_other
                     total_assets = total_liab + total_eq
+                    car_test = (total_eq / (total_assets * rwa_density_q3)) * 100.0
+                    if car_test < target_car and div > 0:
+                        ret_earn = prev['retained_earnings'] + pat
+                        total_eq = stated_cap + ret_earn + res_other
+                        total_assets = total_liab + total_eq
                     rem_assets = total_assets - loans_net - ppe_int - oth_assets
                     cash_bog = max(cust_dep * crr, rem_assets * 0.60)
                     inv_sec = rem_assets - cash_bog
+                    iter_diff = abs(inv_sec - inv_prev)
 
             avg_eq = 0.5 * (prev['total_equity'] + total_eq)
             avg_as = 0.5 * (prev['total_assets'] + total_assets)
             car_pct = (total_eq / (total_assets * rwa_density_q3)) * 100.0
-            npl_step = {'base': -5.0, 'downside': -2.0, 'upside': -7.0}[scen]
             npl_pct = max(10.0, npl_prev + npl_step)
             npl_prev = npl_pct
             ldr_pct = (loans_net / cust_dep) * 100.0
             cti_pct = ((staff + da + oth_opex) / toi) * 100.0
-            roe_pct = (pat / avg_eq) * 100.0
+            roe_pct = None if avg_eq <= 0 else (pat / avg_eq) * 100.0
             roa_pct = (pat / avg_as) * 100.0
 
             items = [
-                ('income_statement', 'interest_income', int_inc, 'GHS millions', 'FY26E anchored on 9M-26+Q4; FY27E+ avg loans*y_loan + avg inv*y_inv (macro.csv).'),
+                ('income_statement', 'interest_income', int_inc, 'GHS millions', 'FY26E = 9M-26 + iterative Q4; FY27E+ = avg loans*y_loan + avg inv*y_inv (macro.csv).'),
                 ('income_statement', 'interest_expense', int_exp, 'GHS millions', 'Linked to macro.csv tbill_91d_pct.'),
                 ('income_statement', 'net_interest_income', nii, 'GHS millions', 'interest_income - interest_expense.'),
                 ('income_statement', 'fee_commission_income', fee_inc, 'GHS millions', 'Linked to nominal GDP (macro.csv).'),
                 ('income_statement', 'fee_commission_expense', fee_exp, 'GHS millions', '0.8x fee growth.'),
                 ('income_statement', 'net_trading_income', trd_inc, 'GHS millions', 'FY26E anchored on 9M-26; FY27E+ trading growth.'),
-                ('income_statement', 'other_operating_income', oth_inc, 'GHS millions', '3% annual growth.'),
+                ('income_statement', 'other_operating_income', oth_inc, 'GHS millions', 'FY26E anchored on 9M-26; FY27E+ 3% growth.'),
                 ('income_statement', 'total_operating_income', toi, 'GHS millions', 'NII + net fees + trading + other operating income.'),
                 ('income_statement', 'staff_costs', staff, 'GHS millions', 'Linked to inflation_cpi_pct (macro.csv).'),
                 ('income_statement', 'depreciation_amortisation', da, 'GHS millions', '3% annual growth.'),
                 ('income_statement', 'other_operating_expenses', oth_opex, 'GHS millions', 'Linked to inflation_cpi_pct (macro.csv).'),
-                ('income_statement', 'impairment_charge', impairment, 'GHS millions', 'avg net loans * cost_of_risk.'),
+                ('income_statement', 'impairment_charge', impairment, 'GHS millions', 'avg net loans * cost_of_risk (independent of NPL path).'),
                 ('income_statement', 'profit_before_tax', pbt, 'GHS millions', 'total_operating_income - opex - impairment.'),
                 ('income_statement', 'income_tax', tax, 'GHS millions', 'profit_before_tax * tax_rate.'),
                 ('income_statement', 'profit_after_tax', pat, 'GHS millions', 'profit_before_tax - income_tax.'),
-                ('balance_sheet', 'cash_and_bog_balances', cash_bog, 'GHS millions', 'Respects >= crr_pct (20%) on customer_deposits.'),
+                ('balance_sheet', 'cash_and_bog_balances', cash_bog, 'GHS millions', 'Proxy screen >= crr_pct (20%) on customer_deposits; includes due_from_banks aggregate.'),
                 ('balance_sheet', 'due_from_banks', None, 'GHS millions', 'Combined with cash_and_bog_balances (same basis as FY23-9M26).'),
                 ('balance_sheet', 'investment_securities', inv_sec, 'GHS millions', 'Balancing liquid asset; solved iteratively with interest_income.'),
                 ('balance_sheet', 'loans_and_advances_gross', None, 'GHS millions', 'Not disclosed in GSE summary statements.'),
@@ -209,16 +226,16 @@ def run():
                 ('balance_sheet', 'borrowings', borrowings, 'GHS millions', 'Held flat.'),
                 ('balance_sheet', 'other_liabilities', other_liab, 'GHS millions', 'Tracks CPI inflation.'),
                 ('balance_sheet', 'total_liabilities', total_liab, 'GHS millions', 'Sum of liability items.'),
-                ('balance_sheet', 'stated_capital', stated_cap, 'GHS millions', 'Held flat.'),
-                ('balance_sheet', 'retained_earnings', ret_earn, 'GHS millions', 'Prior retained_earnings + PAT (0% dividend while accumulated losses clear).'),
+                ('balance_sheet', 'stated_capital', stated_cap, 'GHS millions', 'Held flat (no automatic capital injection assumed).'),
+                ('balance_sheet', 'retained_earnings', ret_earn, 'GHS millions', 'Prior retained_earnings + PAT - dividends.'),
                 ('balance_sheet', 'reserves_other', res_other, 'GHS millions', 'Held flat.'),
                 ('balance_sheet', 'total_equity', total_eq, 'GHS millions', 'stated_capital + retained_earnings + reserves_other.'),
-                ('ratios', 'car_pct', car_pct, '%', 'Proxy anchored on 9M-2026 reported 27.41% CAR.'),
+                ('ratios', 'car_pct', car_pct, '%', 'Proxy anchored on 9M-2026 reported 27.41% CAR (no automatic capital injection assumed).'),
                 ('ratios', 'tier1_pct', None, '%', 'Not projected separately.'),
                 ('ratios', 'npl_pct', npl_pct, '%', 'Estimated recovery path from 66.32% in 9M-2026.'),
                 ('ratios', 'ldr_pct', ldr_pct, '%', 'loans_and_advances_net / customer_deposits * 100 (net basis).'),
                 ('ratios', 'cost_to_income_pct', cti_pct, '%', 'opex / total_operating_income * 100.'),
-                ('ratios', 'roe_pct', roe_pct, '%', 'profit_after_tax / average total_equity * 100.'),
+                ('ratios', 'roe_pct', roe_pct, '%', 'profit_after_tax / average total_equity * 100 (blank when avg_eq <= 0).'),
                 ('ratios', 'roa_pct', roa_pct, '%', 'profit_after_tax / average total_assets * 100.'),
             ]
             for stmt, item, val, unit, note in items:
@@ -235,9 +252,9 @@ def run():
             pbt_diff = pbt - (toi - staff - da - oth_opex - impairment)
             pat_diff = pat - (pbt - tax)
             max_fc_res = max(abs(x) for x in [bs_diff, as_diff, ls_diff, eq_diff, nii_diff, toi_diff, pbt_diff, pat_diff])
-            crr_ok = cash_bog >= cust_dep * crr - 1e-6
+            inv_ok = inv_sec >= 0.0
             car_ok = car_pct >= min_car
-            fc_checks.append((scen, yr, max_fc_res, car_pct, min_car, car_ok, crr_ok, pat, roe_pct))
+            fc_checks.append((scen, yr, max_fc_res, iter_diff, inv_ok, car_pct, min_car, car_ok, pat, roe_pct))
 
             prev = {
                 'loans_and_advances_net': loans_net, 'customer_deposits': cust_dep,
@@ -274,21 +291,23 @@ def run():
         f'- Duplicate `(period, statement, line_item)` keys: **{dups}**',
         '',
         '## 2. Forecast Checks (`FY2026E–FY2030E`, recomputed)',
-        '| Scenario | Year | Max Residual | Est. CAR Proxy (%) | Min CAR (%) | CAR >= Min | CRR >= 20% | Est. PAT (GHS m) | Est. ROE (%) |',
-        '| --- | --- | --- | --- | --- | --- | --- | --- | --- |',
+        '| Scenario | Year | Max Residual | Iter Conv Residual | Inv Sec >= 0 | Est. CAR Proxy (%) | Min CAR (%) | CAR >= Min | Est. PAT (GHS m) | Est. ROE (%) |',
+        '| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |',
     ])
-    for scen, yr, max_res, car_pct, min_car, car_ok, crr_ok, pat, roe_pct in fc_checks:
-        lines.append(f'| {scen} | {yr} | {max_res:.3f} | {car_pct:.2f}% | {min_car:.2f}% | {"PASS" if car_ok else "FAIL"} | {"PASS" if crr_ok else "FAIL"} | {pat:.1f} | {roe_pct:.1f}% |')
+    for scen, yr, max_res, iter_diff, inv_ok, car_pct, min_car, car_ok, pat, roe_pct in fc_checks:
+        roe_str = 'N/A (avg_eq<=0)' if roe_pct is None else f'{roe_pct:.1f}%'
+        lines.append(f'| {scen} | {yr} | {max_res:.3f} | {iter_diff:.6f} | {"PASS" if inv_ok else "FAIL"} | {car_pct:.2f}% | {min_car:.2f}% | {"PASS" if car_ok else "FAIL"} | {pat:.1f} | {roe_str} |')
     lines.extend([
         '',
         '## 3. Spot-checks & Caveats',
         '- `ADB25` p. 1: `total_assets` = `17,887,521` GHS \'000 (`17887.521` GHS m); `profit_after_tax` = `367,291` GHS \'000 (`367.291` GHS m).',
         '- `ADB26Q3` p. 1–2: `customer_deposits` = `15,362,718` GHS \'000 (`15362.718` GHS m); `profit_after_tax` = `301,714` GHS \'000 (`301.714` GHS m).',
-        '- **CAR caveat:** Forecast `car_pct` is a proxy anchored on 9M-2026 reported `27.41%` CAR, not a prudential Tier 1+Tier 2 calculation.',
+        '- **CRR proxy caveat:** `cash_and_bog_balances` includes `due_from_banks` in FY2023–9M-2026 summary statements; `cash_bog >= 20% * customer_deposits` is a liquidity proxy screen, not regulatory BoG cedi CRR compliance.',
+        '- **CAR & solvency caveat:** Forecast `car_pct` is a proxy anchored on `9M-2026` reported `27.41%` CAR with no automatic capital injection assumed. Where `car_pct < 13%` (flagged `FAIL`), that reflects the proxy under stressed/normalizing yields rather than a demonstrated regulatory breach.',
     ])
     with open(CHECKS_PATH, 'w', encoding='utf-8') as f:
         f.write('\n'.join(lines) + '\n')
-    print(f'ADB: wrote {len(fc_rows)} forecast rows, max hist residual={max(x[6] for x in hist_res):.3f}, max fc residual={max(x[2] for x in fc_checks):.3f}')
+    print(f'ADB: wrote {len(fc_rows)} forecast rows, max hist={max(x[6] for x in hist_res):.3f}, max fc={max(x[2] for x in fc_checks):.3f}, max iter={max(x[3] for x in fc_checks):.6f}')
 
 if __name__ == '__main__':
     run()
