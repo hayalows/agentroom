@@ -15,11 +15,11 @@ access-bank-ghana,base,FY2026E,income_statement,income_tax,260.298,GHS millions,
 access-bank-ghana,base,FY2026E,income_statement,profit_after_tax,483.410,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,base,FY2026E,balance_sheet,x_cash_and_cash_equivalents,5132.346,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,base,FY2026E,balance_sheet,x_nonpledged_trading_assets,695.528,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,base,FY2026E,balance_sheet,investment_securities,7243.345,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,base,FY2026E,balance_sheet,investment_securities,7134.802,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,base,FY2026E,balance_sheet,loans_and_advances_net,5660.874,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,base,FY2026E,balance_sheet,property_equipment_intangibles,661.778,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,base,FY2026E,balance_sheet,other_assets,1636.885,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,base,FY2026E,balance_sheet,total_assets,21030.756,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,base,FY2026E,balance_sheet,total_assets,20922.213,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,base,FY2026E,balance_sheet,customer_deposits,15606.616,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,base,FY2026E,balance_sheet,due_to_banks,1150.656,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,base,FY2026E,balance_sheet,borrowings,643.509,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
@@ -27,15 +27,15 @@ access-bank-ghana,base,FY2026E,balance_sheet,x_lease_obligation,42.962,GHS milli
 access-bank-ghana,base,FY2026E,balance_sheet,other_liabilities,1059.171,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,base,FY2026E,balance_sheet,total_liabilities,18502.914,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,base,FY2026E,balance_sheet,stated_capital,400.000,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,base,FY2026E,balance_sheet,retained_earnings,1605.666,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,base,FY2026E,balance_sheet,retained_earnings,1497.122,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,base,FY2026E,balance_sheet,reserves_other,522.177,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,base,FY2026E,balance_sheet,total_equity,2527.843,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,base,FY2026E,ratios,car_pct,16.714,%,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,base,FY2026E,balance_sheet,total_equity,2419.299,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,base,FY2026E,ratios,car_pct,16.079,%,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,base,FY2026E,ratios,npl_pct,4.510,%,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,base,FY2026E,ratios,ldr_pct,36.272,%,MODEL-ESTIMATE,estimated,"Net loans/customer deposits, percent"
 access-bank-ghana,base,FY2026E,ratios,cost_to_income_pct,47.871,%,MODEL-ESTIMATE,estimated,"Operating expenses/pre-impairment operating income, percent"
-access-bank-ghana,base,FY2026E,ratios,roe_pct,21.145,%,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,base,FY2026E,ratios,roa_pct,2.414,%,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,base,FY2026E,ratios,roe_pct,21.659,%,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,base,FY2026E,ratios,roa_pct,2.420,%,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,base,FY2026E,income_statement,fee_commission_income,,GHS millions,MODEL-ESTIMATE,unavailable,Separate component not projected; see assumptions
 access-bank-ghana,base,FY2026E,income_statement,fee_commission_expense,,GHS millions,MODEL-ESTIMATE,unavailable,Separate component not projected; see assumptions
 access-bank-ghana,base,FY2026E,balance_sheet,cash_and_bog_balances,,GHS millions,MODEL-ESTIMATE,unavailable,Separate component not projected; see assumptions
@@ -43,27 +43,27 @@ access-bank-ghana,base,FY2026E,balance_sheet,due_from_banks,,GHS millions,MODEL-
 access-bank-ghana,base,FY2026E,balance_sheet,loans_and_advances_gross,,GHS millions,MODEL-ESTIMATE,unavailable,Separate component not projected; see assumptions
 access-bank-ghana,base,FY2026E,balance_sheet,loan_loss_allowance,,GHS millions,MODEL-ESTIMATE,unavailable,Separate component not projected; see assumptions
 access-bank-ghana,base,FY2026E,ratios,tier1_pct,,%,MODEL-ESTIMATE,unavailable,Separate component not projected; see assumptions
-access-bank-ghana,base,FY2027E,income_statement,interest_income,1327.086,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,base,FY2027E,income_statement,interest_income,1327.628,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,base,FY2027E,income_statement,interest_expense,603.332,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,base,FY2027E,income_statement,net_interest_income,723.753,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,base,FY2027E,income_statement,net_interest_income,724.296,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,base,FY2027E,income_statement,x_net_fee_commission,526.547,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,base,FY2027E,income_statement,net_trading_income,307.709,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,base,FY2027E,income_statement,other_operating_income,71.910,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,base,FY2027E,income_statement,total_operating_income,1629.920,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,base,FY2027E,income_statement,total_operating_income,1630.462,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,base,FY2027E,income_statement,staff_costs,348.529,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,base,FY2027E,income_statement,depreciation_amortisation,84.669,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,base,FY2027E,income_statement,other_operating_expenses,324.828,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,base,FY2027E,income_statement,impairment_charge,60.253,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,base,FY2027E,income_statement,profit_before_tax,811.641,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,base,FY2027E,income_statement,income_tax,284.074,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,base,FY2027E,income_statement,profit_after_tax,527.567,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,base,FY2027E,income_statement,profit_before_tax,812.184,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,base,FY2027E,income_statement,income_tax,284.264,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,base,FY2027E,income_statement,profit_after_tax,527.919,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,base,FY2027E,balance_sheet,x_cash_and_cash_equivalents,5793.136,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,base,FY2027E,balance_sheet,x_nonpledged_trading_assets,695.528,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,base,FY2027E,balance_sheet,investment_securities,8412.422,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,base,FY2027E,balance_sheet,investment_securities,8304.179,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,base,FY2027E,balance_sheet,loans_and_advances_net,6389.711,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,base,FY2027E,balance_sheet,property_equipment_intangibles,681.632,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,base,FY2027E,balance_sheet,other_assets,1669.622,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,base,FY2027E,balance_sheet,total_assets,23642.051,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,base,FY2027E,balance_sheet,total_assets,23533.808,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,base,FY2027E,balance_sheet,customer_deposits,17615.968,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,base,FY2027E,balance_sheet,due_to_banks,1224.729,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,base,FY2027E,balance_sheet,borrowings,643.509,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
@@ -71,15 +71,15 @@ access-bank-ghana,base,FY2027E,balance_sheet,x_lease_obligation,42.962,GHS milli
 access-bank-ghana,base,FY2027E,balance_sheet,other_liabilities,1138.609,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,base,FY2027E,balance_sheet,total_liabilities,20665.777,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,base,FY2027E,balance_sheet,stated_capital,400.000,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,base,FY2027E,balance_sheet,retained_earnings,2054.097,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,base,FY2027E,balance_sheet,retained_earnings,1945.854,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,base,FY2027E,balance_sheet,reserves_other,522.177,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,base,FY2027E,balance_sheet,total_equity,2976.274,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,base,FY2027E,ratios,car_pct,17.505,%,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,base,FY2027E,balance_sheet,total_equity,2868.031,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,base,FY2027E,ratios,car_pct,16.946,%,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,base,FY2027E,ratios,npl_pct,4.510,%,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,base,FY2027E,ratios,ldr_pct,36.272,%,MODEL-ESTIMATE,estimated,"Net loans/customer deposits, percent"
-access-bank-ghana,base,FY2027E,ratios,cost_to_income_pct,46.507,%,MODEL-ESTIMATE,estimated,"Operating expenses/pre-impairment operating income, percent"
-access-bank-ghana,base,FY2027E,ratios,roe_pct,19.170,%,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,base,FY2027E,ratios,roa_pct,2.362,%,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,base,FY2027E,ratios,cost_to_income_pct,46.491,%,MODEL-ESTIMATE,estimated,"Operating expenses/pre-impairment operating income, percent"
+access-bank-ghana,base,FY2027E,ratios,roe_pct,19.969,%,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,base,FY2027E,ratios,roa_pct,2.375,%,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,base,FY2027E,income_statement,fee_commission_income,,GHS millions,MODEL-ESTIMATE,unavailable,Separate component not projected; see assumptions
 access-bank-ghana,base,FY2027E,income_statement,fee_commission_expense,,GHS millions,MODEL-ESTIMATE,unavailable,Separate component not projected; see assumptions
 access-bank-ghana,base,FY2027E,balance_sheet,cash_and_bog_balances,,GHS millions,MODEL-ESTIMATE,unavailable,Separate component not projected; see assumptions
@@ -87,27 +87,27 @@ access-bank-ghana,base,FY2027E,balance_sheet,due_from_banks,,GHS millions,MODEL-
 access-bank-ghana,base,FY2027E,balance_sheet,loans_and_advances_gross,,GHS millions,MODEL-ESTIMATE,unavailable,Separate component not projected; see assumptions
 access-bank-ghana,base,FY2027E,balance_sheet,loan_loss_allowance,,GHS millions,MODEL-ESTIMATE,unavailable,Separate component not projected; see assumptions
 access-bank-ghana,base,FY2027E,ratios,tier1_pct,,%,MODEL-ESTIMATE,unavailable,Separate component not projected; see assumptions
-access-bank-ghana,base,FY2028E,income_statement,interest_income,1465.769,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,base,FY2028E,income_statement,interest_income,1466.655,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,base,FY2028E,income_statement,interest_expense,784.061,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,base,FY2028E,income_statement,net_interest_income,681.708,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,base,FY2028E,income_statement,net_interest_income,682.594,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,base,FY2028E,income_statement,x_net_fee_commission,597.104,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,base,FY2028E,income_statement,net_trading_income,348.942,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,base,FY2028E,income_statement,other_operating_income,81.546,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,base,FY2028E,income_statement,total_operating_income,1709.301,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,base,FY2028E,income_statement,total_operating_income,1710.187,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,base,FY2028E,income_statement,staff_costs,376.412,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,base,FY2028E,income_statement,depreciation_amortisation,87.209,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,base,FY2028E,income_statement,other_operating_expenses,350.814,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,base,FY2028E,income_statement,impairment_charge,68.178,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,base,FY2028E,income_statement,profit_before_tax,826.688,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,base,FY2028E,income_statement,income_tax,289.341,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,base,FY2028E,income_statement,profit_after_tax,537.347,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,base,FY2028E,income_statement,profit_before_tax,827.574,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,base,FY2028E,income_statement,income_tax,289.651,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,base,FY2028E,income_statement,profit_after_tax,537.923,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,base,FY2028E,balance_sheet,x_cash_and_cash_equivalents,6569.416,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,base,FY2028E,balance_sheet,x_nonpledged_trading_assets,695.528,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,base,FY2028E,balance_sheet,investment_securities,9716.509,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,base,FY2028E,balance_sheet,investment_securities,9608.755,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,base,FY2028E,balance_sheet,loans_and_advances_net,7245.933,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,base,FY2028E,balance_sheet,property_equipment_intangibles,702.081,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,base,FY2028E,balance_sheet,other_assets,1703.015,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,base,FY2028E,balance_sheet,total_assets,26632.481,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,base,FY2028E,balance_sheet,total_assets,26524.728,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,base,FY2028E,balance_sheet,customer_deposits,19976.508,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,base,FY2028E,balance_sheet,due_to_banks,1306.786,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,base,FY2028E,balance_sheet,borrowings,643.509,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
@@ -115,15 +115,15 @@ access-bank-ghana,base,FY2028E,balance_sheet,x_lease_obligation,42.962,GHS milli
 access-bank-ghana,base,FY2028E,balance_sheet,other_liabilities,1229.697,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,base,FY2028E,balance_sheet,total_liabilities,23199.462,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,base,FY2028E,balance_sheet,stated_capital,400.000,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,base,FY2028E,balance_sheet,retained_earnings,2510.842,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,base,FY2028E,balance_sheet,retained_earnings,2403.089,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,base,FY2028E,balance_sheet,reserves_other,522.177,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,base,FY2028E,balance_sheet,total_equity,3433.019,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,base,FY2028E,ratios,car_pct,17.924,%,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,base,FY2028E,balance_sheet,total_equity,3325.266,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,base,FY2028E,ratios,car_pct,17.432,%,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,base,FY2028E,ratios,npl_pct,4.510,%,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,base,FY2028E,ratios,ldr_pct,36.272,%,MODEL-ESTIMATE,estimated,"Net loans/customer deposits, percent"
-access-bank-ghana,base,FY2028E,ratios,cost_to_income_pct,47.647,%,MODEL-ESTIMATE,estimated,"Operating expenses/pre-impairment operating income, percent"
-access-bank-ghana,base,FY2028E,ratios,roe_pct,16.768,%,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,base,FY2028E,ratios,roa_pct,2.138,%,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,base,FY2028E,ratios,cost_to_income_pct,47.623,%,MODEL-ESTIMATE,estimated,"Operating expenses/pre-impairment operating income, percent"
+access-bank-ghana,base,FY2028E,ratios,roe_pct,17.371,%,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,base,FY2028E,ratios,roa_pct,2.149,%,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,base,FY2028E,income_statement,fee_commission_income,,GHS millions,MODEL-ESTIMATE,unavailable,Separate component not projected; see assumptions
 access-bank-ghana,base,FY2028E,income_statement,fee_commission_expense,,GHS millions,MODEL-ESTIMATE,unavailable,Separate component not projected; see assumptions
 access-bank-ghana,base,FY2028E,balance_sheet,cash_and_bog_balances,,GHS millions,MODEL-ESTIMATE,unavailable,Separate component not projected; see assumptions
@@ -131,27 +131,27 @@ access-bank-ghana,base,FY2028E,balance_sheet,due_from_banks,,GHS millions,MODEL-
 access-bank-ghana,base,FY2028E,balance_sheet,loans_and_advances_gross,,GHS millions,MODEL-ESTIMATE,unavailable,Separate component not projected; see assumptions
 access-bank-ghana,base,FY2028E,balance_sheet,loan_loss_allowance,,GHS millions,MODEL-ESTIMATE,unavailable,Separate component not projected; see assumptions
 access-bank-ghana,base,FY2028E,ratios,tier1_pct,,%,MODEL-ESTIMATE,unavailable,Separate component not projected; see assumptions
-access-bank-ghana,base,FY2029E,income_statement,interest_income,1614.222,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,base,FY2029E,income_statement,interest_income,1615.494,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,base,FY2029E,income_statement,interest_expense,1000.483,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,base,FY2029E,income_statement,net_interest_income,613.739,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,base,FY2029E,income_statement,net_interest_income,615.011,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,base,FY2029E,income_statement,x_net_fee_commission,675.826,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,base,FY2029E,income_statement,net_trading_income,394.947,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,base,FY2029E,income_statement,other_operating_income,92.297,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,base,FY2029E,income_statement,total_operating_income,1776.809,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,base,FY2029E,income_statement,total_operating_income,1778.082,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,base,FY2029E,income_statement,staff_costs,406.525,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,base,FY2029E,income_statement,depreciation_amortisation,89.825,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,base,FY2029E,income_statement,other_operating_expenses,378.879,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,base,FY2029E,income_statement,impairment_charge,77.236,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,base,FY2029E,income_statement,profit_before_tax,824.345,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,base,FY2029E,income_statement,income_tax,288.521,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,base,FY2029E,income_statement,profit_after_tax,535.824,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,base,FY2029E,income_statement,profit_before_tax,825.617,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,base,FY2029E,income_statement,income_tax,288.966,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,base,FY2029E,income_statement,profit_after_tax,536.651,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,base,FY2029E,balance_sheet,x_cash_and_cash_equivalents,7435.528,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,base,FY2029E,balance_sheet,x_nonpledged_trading_assets,695.528,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,base,FY2029E,balance_sheet,investment_securities,11113.643,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,base,FY2029E,balance_sheet,investment_securities,11006.592,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,base,FY2029E,balance_sheet,loans_and_advances_net,8201.236,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,base,FY2029E,balance_sheet,property_equipment_intangibles,723.143,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,base,FY2029E,balance_sheet,other_assets,1737.075,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,base,FY2029E,balance_sheet,total_assets,29906.154,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,base,FY2029E,balance_sheet,total_assets,29799.103,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,base,FY2029E,balance_sheet,customer_deposits,22610.210,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,base,FY2029E,balance_sheet,due_to_banks,1392.929,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,base,FY2029E,balance_sheet,borrowings,643.509,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
@@ -159,15 +159,15 @@ access-bank-ghana,base,FY2029E,balance_sheet,x_lease_obligation,42.962,GHS milli
 access-bank-ghana,base,FY2029E,balance_sheet,other_liabilities,1328.073,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,base,FY2029E,balance_sheet,total_liabilities,26017.684,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,base,FY2029E,balance_sheet,stated_capital,400.000,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,base,FY2029E,balance_sheet,retained_earnings,2966.293,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,base,FY2029E,balance_sheet,retained_earnings,2859.242,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,base,FY2029E,balance_sheet,reserves_other,522.177,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,base,FY2029E,balance_sheet,total_equity,3888.470,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,base,FY2029E,ratios,car_pct,18.080,%,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,base,FY2029E,balance_sheet,total_equity,3781.419,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,base,FY2029E,ratios,car_pct,17.645,%,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,base,FY2029E,ratios,npl_pct,4.510,%,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,base,FY2029E,ratios,ldr_pct,36.272,%,MODEL-ESTIMATE,estimated,"Net loans/customer deposits, percent"
-access-bank-ghana,base,FY2029E,ratios,cost_to_income_pct,49.258,%,MODEL-ESTIMATE,estimated,"Operating expenses/pre-impairment operating income, percent"
-access-bank-ghana,base,FY2029E,ratios,roe_pct,14.637,%,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,base,FY2029E,ratios,roa_pct,1.895,%,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,base,FY2029E,ratios,cost_to_income_pct,49.223,%,MODEL-ESTIMATE,estimated,"Operating expenses/pre-impairment operating income, percent"
+access-bank-ghana,base,FY2029E,ratios,roe_pct,15.103,%,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,base,FY2029E,ratios,roa_pct,1.906,%,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,base,FY2029E,income_statement,fee_commission_income,,GHS millions,MODEL-ESTIMATE,unavailable,Separate component not projected; see assumptions
 access-bank-ghana,base,FY2029E,income_statement,fee_commission_expense,,GHS millions,MODEL-ESTIMATE,unavailable,Separate component not projected; see assumptions
 access-bank-ghana,base,FY2029E,balance_sheet,cash_and_bog_balances,,GHS millions,MODEL-ESTIMATE,unavailable,Separate component not projected; see assumptions
@@ -175,27 +175,27 @@ access-bank-ghana,base,FY2029E,balance_sheet,due_from_banks,,GHS millions,MODEL-
 access-bank-ghana,base,FY2029E,balance_sheet,loans_and_advances_gross,,GHS millions,MODEL-ESTIMATE,unavailable,Separate component not projected; see assumptions
 access-bank-ghana,base,FY2029E,balance_sheet,loan_loss_allowance,,GHS millions,MODEL-ESTIMATE,unavailable,Separate component not projected; see assumptions
 access-bank-ghana,base,FY2029E,ratios,tier1_pct,,%,MODEL-ESTIMATE,unavailable,Separate component not projected; see assumptions
-access-bank-ghana,base,FY2030E,income_statement,interest_income,1827.041,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,base,FY2030E,income_statement,interest_income,1828.481,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,base,FY2030E,income_statement,interest_expense,1196.365,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,base,FY2030E,income_statement,net_interest_income,630.676,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,base,FY2030E,income_statement,net_interest_income,632.116,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,base,FY2030E,income_statement,x_net_fee_commission,764.927,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,base,FY2030E,income_statement,net_trading_income,447.017,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,base,FY2030E,income_statement,other_operating_income,104.466,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,base,FY2030E,income_statement,total_operating_income,1947.086,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,base,FY2030E,income_statement,total_operating_income,1948.526,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,base,FY2030E,income_statement,staff_costs,439.047,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,base,FY2030E,income_statement,depreciation_amortisation,92.520,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,base,FY2030E,income_statement,other_operating_expenses,409.189,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,base,FY2030E,income_statement,impairment_charge,87.419,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,base,FY2030E,income_statement,profit_before_tax,918.912,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,base,FY2030E,income_statement,income_tax,321.619,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,base,FY2030E,income_statement,profit_after_tax,597.293,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,base,FY2030E,income_statement,profit_before_tax,920.352,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,base,FY2030E,income_statement,income_tax,322.123,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,base,FY2030E,income_statement,profit_after_tax,598.229,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,base,FY2030E,balance_sheet,x_cash_and_cash_equivalents,8415.828,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,base,FY2030E,balance_sheet,x_nonpledged_trading_assets,695.528,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,base,FY2030E,balance_sheet,investment_securities,12682.353,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,base,FY2030E,balance_sheet,investment_securities,12576.098,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,base,FY2030E,balance_sheet,loans_and_advances_net,9282.487,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,base,FY2030E,balance_sheet,property_equipment_intangibles,744.837,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,base,FY2030E,balance_sheet,other_assets,1771.817,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,base,FY2030E,balance_sheet,total_assets,33592.850,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,base,FY2030E,balance_sheet,total_assets,33486.595,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,base,FY2030E,balance_sheet,customer_deposits,25591.141,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,base,FY2030E,balance_sheet,due_to_banks,1484.751,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,base,FY2030E,balance_sheet,borrowings,643.509,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
@@ -203,15 +203,15 @@ access-bank-ghana,base,FY2030E,balance_sheet,x_lease_obligation,42.962,GHS milli
 access-bank-ghana,base,FY2030E,balance_sheet,other_liabilities,1434.319,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,base,FY2030E,balance_sheet,total_liabilities,29196.682,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,base,FY2030E,balance_sheet,stated_capital,400.000,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,base,FY2030E,balance_sheet,retained_earnings,3473.992,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,base,FY2030E,balance_sheet,retained_earnings,3367.736,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,base,FY2030E,balance_sheet,reserves_other,522.177,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,base,FY2030E,balance_sheet,total_equity,4396.169,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,base,FY2030E,ratios,car_pct,18.197,%,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,base,FY2030E,balance_sheet,total_equity,4289.913,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,base,FY2030E,ratios,car_pct,17.814,%,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,base,FY2030E,ratios,npl_pct,4.510,%,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,base,FY2030E,ratios,ldr_pct,36.272,%,MODEL-ESTIMATE,estimated,"Net loans/customer deposits, percent"
-access-bank-ghana,base,FY2030E,ratios,cost_to_income_pct,48.316,%,MODEL-ESTIMATE,estimated,"Operating expenses/pre-impairment operating income, percent"
-access-bank-ghana,base,FY2030E,ratios,roe_pct,14.419,%,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,base,FY2030E,ratios,roa_pct,1.881,%,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,base,FY2030E,ratios,cost_to_income_pct,48.280,%,MODEL-ESTIMATE,estimated,"Operating expenses/pre-impairment operating income, percent"
+access-bank-ghana,base,FY2030E,ratios,roe_pct,14.824,%,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,base,FY2030E,ratios,roa_pct,1.891,%,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,base,FY2030E,income_statement,fee_commission_income,,GHS millions,MODEL-ESTIMATE,unavailable,Separate component not projected; see assumptions
 access-bank-ghana,base,FY2030E,income_statement,fee_commission_expense,,GHS millions,MODEL-ESTIMATE,unavailable,Separate component not projected; see assumptions
 access-bank-ghana,base,FY2030E,balance_sheet,cash_and_bog_balances,,GHS millions,MODEL-ESTIMATE,unavailable,Separate component not projected; see assumptions
@@ -235,11 +235,11 @@ access-bank-ghana,downside,FY2026E,income_statement,income_tax,242.294,GHS milli
 access-bank-ghana,downside,FY2026E,income_statement,profit_after_tax,449.973,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,downside,FY2026E,balance_sheet,x_cash_and_cash_equivalents,5057.239,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,downside,FY2026E,balance_sheet,x_nonpledged_trading_assets,695.528,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,downside,FY2026E,balance_sheet,investment_securities,7158.023,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,downside,FY2026E,balance_sheet,investment_securities,7049.480,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,downside,FY2026E,balance_sheet,loans_and_advances_net,5550.954,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,downside,FY2026E,balance_sheet,property_equipment_intangibles,661.778,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,downside,FY2026E,balance_sheet,other_assets,1636.885,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,downside,FY2026E,balance_sheet,total_assets,20760.407,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,downside,FY2026E,balance_sheet,total_assets,20651.864,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,downside,FY2026E,balance_sheet,customer_deposits,15378.227,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,downside,FY2026E,balance_sheet,due_to_banks,1142.132,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,downside,FY2026E,balance_sheet,borrowings,643.509,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
@@ -247,15 +247,15 @@ access-bank-ghana,downside,FY2026E,balance_sheet,x_lease_obligation,42.962,GHS m
 access-bank-ghana,downside,FY2026E,balance_sheet,other_liabilities,1059.171,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,downside,FY2026E,balance_sheet,total_liabilities,18266.001,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,downside,FY2026E,balance_sheet,stated_capital,400.000,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,downside,FY2026E,balance_sheet,retained_earnings,1572.229,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,downside,FY2026E,balance_sheet,retained_earnings,1463.686,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,downside,FY2026E,balance_sheet,reserves_other,522.177,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,downside,FY2026E,balance_sheet,total_equity,2494.406,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,downside,FY2026E,ratios,car_pct,16.707,%,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,downside,FY2026E,balance_sheet,total_equity,2385.863,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,downside,FY2026E,ratios,car_pct,16.064,%,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,downside,FY2026E,ratios,npl_pct,5.510,%,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,downside,FY2026E,ratios,ldr_pct,36.096,%,MODEL-ESTIMATE,estimated,"Net loans/customer deposits, percent"
 access-bank-ghana,downside,FY2026E,ratios,cost_to_income_pct,47.871,%,MODEL-ESTIMATE,estimated,"Operating expenses/pre-impairment operating income, percent"
-access-bank-ghana,downside,FY2026E,ratios,roe_pct,19.828,%,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,downside,FY2026E,ratios,roa_pct,2.262,%,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,downside,FY2026E,ratios,roe_pct,20.313,%,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,downside,FY2026E,ratios,roa_pct,2.268,%,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,downside,FY2026E,income_statement,fee_commission_income,,GHS millions,MODEL-ESTIMATE,unavailable,Separate component not projected; see assumptions
 access-bank-ghana,downside,FY2026E,income_statement,fee_commission_expense,,GHS millions,MODEL-ESTIMATE,unavailable,Separate component not projected; see assumptions
 access-bank-ghana,downside,FY2026E,balance_sheet,cash_and_bog_balances,,GHS millions,MODEL-ESTIMATE,unavailable,Separate component not projected; see assumptions
@@ -263,27 +263,27 @@ access-bank-ghana,downside,FY2026E,balance_sheet,due_from_banks,,GHS millions,MO
 access-bank-ghana,downside,FY2026E,balance_sheet,loans_and_advances_gross,,GHS millions,MODEL-ESTIMATE,unavailable,Separate component not projected; see assumptions
 access-bank-ghana,downside,FY2026E,balance_sheet,loan_loss_allowance,,GHS millions,MODEL-ESTIMATE,unavailable,Separate component not projected; see assumptions
 access-bank-ghana,downside,FY2026E,ratios,tier1_pct,,%,MODEL-ESTIMATE,unavailable,Separate component not projected; see assumptions
-access-bank-ghana,downside,FY2027E,income_statement,interest_income,1533.875,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,downside,FY2027E,income_statement,interest_income,1532.247,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,downside,FY2027E,income_statement,interest_expense,878.015,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,downside,FY2027E,income_statement,net_interest_income,655.860,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,downside,FY2027E,income_statement,net_interest_income,654.232,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,downside,FY2027E,income_statement,x_net_fee_commission,503.044,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,downside,FY2027E,income_statement,net_trading_income,293.975,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,downside,FY2027E,income_statement,other_operating_income,68.701,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,downside,FY2027E,income_statement,total_operating_income,1521.580,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,downside,FY2027E,income_statement,total_operating_income,1519.952,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,downside,FY2027E,income_statement,staff_costs,345.482,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,downside,FY2027E,income_statement,depreciation_amortisation,81.282,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,downside,FY2027E,income_statement,other_operating_expenses,321.987,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,downside,FY2027E,income_statement,impairment_charge,147.329,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,downside,FY2027E,income_statement,profit_before_tax,625.499,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,downside,FY2027E,income_statement,income_tax,218.925,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,downside,FY2027E,income_statement,profit_after_tax,406.575,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,downside,FY2027E,income_statement,profit_before_tax,623.871,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,downside,FY2027E,income_statement,income_tax,218.355,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,downside,FY2027E,income_statement,profit_after_tax,405.516,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,downside,FY2027E,balance_sheet,x_cash_and_cash_equivalents,5680.796,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,downside,FY2027E,balance_sheet,x_nonpledged_trading_assets,695.528,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,downside,FY2027E,balance_sheet,investment_securities,8287.073,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,downside,FY2027E,balance_sheet,investment_securities,8177.472,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,downside,FY2027E,balance_sheet,loans_and_advances_net,6235.387,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,downside,FY2027E,balance_sheet,property_equipment_intangibles,681.632,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,downside,FY2027E,balance_sheet,other_assets,1669.622,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,downside,FY2027E,balance_sheet,total_assets,23250.038,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,downside,FY2027E,balance_sheet,total_assets,23140.437,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,downside,FY2027E,balance_sheet,customer_deposits,17274.362,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,downside,FY2027E,balance_sheet,due_to_banks,1212.545,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,downside,FY2027E,balance_sheet,borrowings,643.509,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
@@ -291,15 +291,15 @@ access-bank-ghana,downside,FY2027E,balance_sheet,x_lease_obligation,42.962,GHS m
 access-bank-ghana,downside,FY2027E,balance_sheet,other_liabilities,1175.680,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,downside,FY2027E,balance_sheet,total_liabilities,20349.057,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,downside,FY2027E,balance_sheet,stated_capital,400.000,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,downside,FY2027E,balance_sheet,retained_earnings,1978.804,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,downside,FY2027E,balance_sheet,retained_earnings,1869.202,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,downside,FY2027E,balance_sheet,reserves_other,522.177,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,downside,FY2027E,balance_sheet,total_equity,2900.981,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,downside,FY2027E,ratios,car_pct,17.350,%,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,downside,FY2027E,balance_sheet,total_equity,2791.379,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,downside,FY2027E,ratios,car_pct,16.773,%,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,downside,FY2027E,ratios,npl_pct,6.510,%,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,downside,FY2027E,ratios,ldr_pct,36.096,%,MODEL-ESTIMATE,estimated,"Net loans/customer deposits, percent"
-access-bank-ghana,downside,FY2027E,ratios,cost_to_income_pct,49.209,%,MODEL-ESTIMATE,estimated,"Operating expenses/pre-impairment operating income, percent"
-access-bank-ghana,downside,FY2027E,ratios,roe_pct,15.071,%,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,downside,FY2027E,ratios,roa_pct,1.848,%,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,downside,FY2027E,ratios,cost_to_income_pct,49.262,%,MODEL-ESTIMATE,estimated,"Operating expenses/pre-impairment operating income, percent"
+access-bank-ghana,downside,FY2027E,ratios,roe_pct,15.665,%,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,downside,FY2027E,ratios,roa_pct,1.852,%,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,downside,FY2027E,income_statement,fee_commission_income,,GHS millions,MODEL-ESTIMATE,unavailable,Separate component not projected; see assumptions
 access-bank-ghana,downside,FY2027E,income_statement,fee_commission_expense,,GHS millions,MODEL-ESTIMATE,unavailable,Separate component not projected; see assumptions
 access-bank-ghana,downside,FY2027E,balance_sheet,cash_and_bog_balances,,GHS millions,MODEL-ESTIMATE,unavailable,Separate component not projected; see assumptions
@@ -307,27 +307,27 @@ access-bank-ghana,downside,FY2027E,balance_sheet,due_from_banks,,GHS millions,MO
 access-bank-ghana,downside,FY2027E,balance_sheet,loans_and_advances_gross,,GHS millions,MODEL-ESTIMATE,unavailable,Separate component not projected; see assumptions
 access-bank-ghana,downside,FY2027E,balance_sheet,loan_loss_allowance,,GHS millions,MODEL-ESTIMATE,unavailable,Separate component not projected; see assumptions
 access-bank-ghana,downside,FY2027E,ratios,tier1_pct,,%,MODEL-ESTIMATE,unavailable,Separate component not projected; see assumptions
-access-bank-ghana,downside,FY2028E,income_statement,interest_income,1723.577,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,downside,FY2028E,income_statement,interest_income,1721.747,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,downside,FY2028E,income_statement,interest_expense,1180.711,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,downside,FY2028E,income_statement,net_interest_income,542.866,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,downside,FY2028E,income_statement,net_interest_income,541.036,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,downside,FY2028E,income_statement,x_net_fee_commission,565.258,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,downside,FY2028E,income_statement,net_trading_income,330.332,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,downside,FY2028E,income_statement,other_operating_income,77.197,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,downside,FY2028E,income_statement,total_operating_income,1515.653,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,downside,FY2028E,income_statement,total_operating_income,1513.824,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,downside,FY2028E,income_statement,staff_costs,381.757,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,downside,FY2028E,income_statement,depreciation_amortisation,83.720,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,downside,FY2028E,income_statement,other_operating_expenses,355.796,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,downside,FY2028E,income_statement,impairment_charge,165.524,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,downside,FY2028E,income_statement,profit_before_tax,528.855,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,downside,FY2028E,income_statement,income_tax,185.099,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,downside,FY2028E,income_statement,profit_after_tax,343.756,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,downside,FY2028E,income_statement,profit_before_tax,527.026,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,downside,FY2028E,income_statement,income_tax,184.459,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,downside,FY2028E,income_statement,profit_after_tax,342.567,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,downside,FY2028E,balance_sheet,x_cash_and_cash_equivalents,6383.369,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,downside,FY2028E,balance_sheet,x_nonpledged_trading_assets,695.528,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,downside,FY2028E,balance_sheet,investment_securities,9438.088,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,downside,FY2028E,balance_sheet,investment_securities,9327.297,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,downside,FY2028E,balance_sheet,loans_and_advances_net,7006.548,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,downside,FY2028E,balance_sheet,property_equipment_intangibles,702.081,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,downside,FY2028E,balance_sheet,other_assets,1703.015,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,downside,FY2028E,balance_sheet,total_assets,25928.628,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,downside,FY2028E,balance_sheet,total_assets,25817.837,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,downside,FY2028E,balance_sheet,customer_deposits,19410.769,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,downside,FY2028E,balance_sheet,due_to_banks,1287.525,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,downside,FY2028E,balance_sheet,borrowings,643.509,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
@@ -335,15 +335,15 @@ access-bank-ghana,downside,FY2028E,balance_sheet,x_lease_obligation,42.962,GHS m
 access-bank-ghana,downside,FY2028E,balance_sheet,other_liabilities,1299.126,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,downside,FY2028E,balance_sheet,total_liabilities,22683.891,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,downside,FY2028E,balance_sheet,stated_capital,400.000,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,downside,FY2028E,balance_sheet,retained_earnings,2322.560,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,downside,FY2028E,balance_sheet,retained_earnings,2211.769,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,downside,FY2028E,balance_sheet,reserves_other,522.177,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,downside,FY2028E,balance_sheet,total_equity,3244.737,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,downside,FY2028E,ratios,car_pct,17.401,%,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,downside,FY2028E,balance_sheet,total_equity,3133.946,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,downside,FY2028E,ratios,car_pct,16.879,%,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,downside,FY2028E,ratios,npl_pct,7.510,%,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,downside,FY2028E,ratios,ldr_pct,36.096,%,MODEL-ESTIMATE,estimated,"Net loans/customer deposits, percent"
-access-bank-ghana,downside,FY2028E,ratios,cost_to_income_pct,54.186,%,MODEL-ESTIMATE,estimated,"Operating expenses/pre-impairment operating income, percent"
-access-bank-ghana,downside,FY2028E,ratios,roe_pct,11.187,%,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,downside,FY2028E,ratios,roa_pct,1.398,%,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,downside,FY2028E,ratios,cost_to_income_pct,54.252,%,MODEL-ESTIMATE,estimated,"Operating expenses/pre-impairment operating income, percent"
+access-bank-ghana,downside,FY2028E,ratios,roe_pct,11.563,%,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,downside,FY2028E,ratios,roa_pct,1.399,%,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,downside,FY2028E,income_statement,fee_commission_income,,GHS millions,MODEL-ESTIMATE,unavailable,Separate component not projected; see assumptions
 access-bank-ghana,downside,FY2028E,income_statement,fee_commission_expense,,GHS millions,MODEL-ESTIMATE,unavailable,Separate component not projected; see assumptions
 access-bank-ghana,downside,FY2028E,balance_sheet,cash_and_bog_balances,,GHS millions,MODEL-ESTIMATE,unavailable,Separate component not projected; see assumptions
@@ -351,27 +351,27 @@ access-bank-ghana,downside,FY2028E,balance_sheet,due_from_banks,,GHS millions,MO
 access-bank-ghana,downside,FY2028E,balance_sheet,loans_and_advances_gross,,GHS millions,MODEL-ESTIMATE,unavailable,Separate component not projected; see assumptions
 access-bank-ghana,downside,FY2028E,balance_sheet,loan_loss_allowance,,GHS millions,MODEL-ESTIMATE,unavailable,Separate component not projected; see assumptions
 access-bank-ghana,downside,FY2028E,ratios,tier1_pct,,%,MODEL-ESTIMATE,unavailable,Separate component not projected; see assumptions
-access-bank-ghana,downside,FY2029E,income_statement,interest_income,1764.166,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,downside,FY2029E,income_statement,interest_income,1763.217,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,downside,FY2029E,income_statement,interest_expense,1218.030,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,downside,FY2029E,income_statement,net_interest_income,546.135,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,downside,FY2029E,income_statement,net_interest_income,545.187,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,downside,FY2029E,income_statement,x_net_fee_commission,635.350,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,downside,FY2029E,income_statement,net_trading_income,371.293,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,downside,FY2029E,income_statement,other_operating_income,86.770,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,downside,FY2029E,income_statement,total_operating_income,1639.548,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,downside,FY2029E,income_statement,total_operating_income,1638.600,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,downside,FY2029E,income_statement,staff_costs,419.933,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,downside,FY2029E,income_statement,depreciation_amortisation,86.232,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,downside,FY2029E,income_statement,other_operating_expenses,391.376,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,downside,FY2029E,income_statement,impairment_charge,186.024,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,downside,FY2029E,income_statement,profit_before_tax,555.984,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,downside,FY2029E,income_statement,income_tax,194.594,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,downside,FY2029E,income_statement,profit_after_tax,361.389,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,downside,FY2029E,income_statement,profit_before_tax,555.035,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,downside,FY2029E,income_statement,income_tax,194.262,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,downside,FY2029E,income_statement,profit_after_tax,360.773,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,downside,FY2029E,balance_sheet,x_cash_and_cash_equivalents,7174.906,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,downside,FY2029E,balance_sheet,x_nonpledged_trading_assets,695.528,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,downside,FY2029E,balance_sheet,investment_securities,10700.680,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,downside,FY2029E,balance_sheet,investment_securities,10589.272,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,downside,FY2029E,balance_sheet,loans_and_advances_net,7875.360,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,downside,FY2029E,balance_sheet,property_equipment_intangibles,723.143,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,downside,FY2029E,balance_sheet,other_assets,1737.075,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,downside,FY2029E,balance_sheet,total_assets,28906.692,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,downside,FY2029E,balance_sheet,total_assets,28795.285,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,downside,FY2029E,balance_sheet,customer_deposits,21817.704,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,downside,FY2029E,balance_sheet,due_to_banks,1367.352,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,downside,FY2029E,balance_sheet,borrowings,643.509,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
@@ -379,15 +379,15 @@ access-bank-ghana,downside,FY2029E,balance_sheet,x_lease_obligation,42.962,GHS m
 access-bank-ghana,downside,FY2029E,balance_sheet,other_liabilities,1429.039,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,downside,FY2029E,balance_sheet,total_liabilities,25300.566,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,downside,FY2029E,balance_sheet,stated_capital,400.000,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,downside,FY2029E,balance_sheet,retained_earnings,2683.949,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,downside,FY2029E,balance_sheet,retained_earnings,2572.542,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,downside,FY2029E,balance_sheet,reserves_other,522.177,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,downside,FY2029E,balance_sheet,total_equity,3606.126,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,downside,FY2029E,ratios,car_pct,17.347,%,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,downside,FY2029E,balance_sheet,total_equity,3494.719,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,downside,FY2029E,ratios,car_pct,16.876,%,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,downside,FY2029E,ratios,npl_pct,8.510,%,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,downside,FY2029E,ratios,ldr_pct,36.096,%,MODEL-ESTIMATE,estimated,"Net loans/customer deposits, percent"
-access-bank-ghana,downside,FY2029E,ratios,cost_to_income_pct,54.743,%,MODEL-ESTIMATE,estimated,"Operating expenses/pre-impairment operating income, percent"
-access-bank-ghana,downside,FY2029E,ratios,roe_pct,10.550,%,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,downside,FY2029E,ratios,roa_pct,1.318,%,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,downside,FY2029E,ratios,cost_to_income_pct,54.775,%,MODEL-ESTIMATE,estimated,"Operating expenses/pre-impairment operating income, percent"
+access-bank-ghana,downside,FY2029E,ratios,roe_pct,10.885,%,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,downside,FY2029E,ratios,roa_pct,1.321,%,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,downside,FY2029E,income_statement,fee_commission_income,,GHS millions,MODEL-ESTIMATE,unavailable,Separate component not projected; see assumptions
 access-bank-ghana,downside,FY2029E,income_statement,fee_commission_expense,,GHS millions,MODEL-ESTIMATE,unavailable,Separate component not projected; see assumptions
 access-bank-ghana,downside,FY2029E,balance_sheet,cash_and_bog_balances,,GHS millions,MODEL-ESTIMATE,unavailable,Separate component not projected; see assumptions
@@ -395,27 +395,27 @@ access-bank-ghana,downside,FY2029E,balance_sheet,due_from_banks,,GHS millions,MO
 access-bank-ghana,downside,FY2029E,balance_sheet,loans_and_advances_gross,,GHS millions,MODEL-ESTIMATE,unavailable,Separate component not projected; see assumptions
 access-bank-ghana,downside,FY2029E,balance_sheet,loan_loss_allowance,,GHS millions,MODEL-ESTIMATE,unavailable,Separate component not projected; see assumptions
 access-bank-ghana,downside,FY2029E,ratios,tier1_pct,,%,MODEL-ESTIMATE,unavailable,Separate component not projected; see assumptions
-access-bank-ghana,downside,FY2030E,income_statement,interest_income,1876.190,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,downside,FY2030E,income_statement,interest_income,1875.686,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,downside,FY2030E,income_statement,interest_expense,1301.708,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,downside,FY2030E,income_statement,net_interest_income,574.482,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,downside,FY2030E,income_statement,net_interest_income,573.978,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,downside,FY2030E,income_statement,x_net_fee_commission,710.830,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,downside,FY2030E,income_statement,net_trading_income,415.403,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,downside,FY2030E,income_statement,other_operating_income,97.078,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,downside,FY2030E,income_statement,total_operating_income,1797.793,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,downside,FY2030E,income_statement,total_operating_income,1797.289,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,downside,FY2030E,income_statement,staff_costs,459.827,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,downside,FY2030E,income_statement,depreciation_amortisation,88.819,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,downside,FY2030E,income_statement,other_operating_expenses,428.556,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,downside,FY2030E,income_statement,impairment_charge,208.579,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,downside,FY2030E,income_statement,profit_before_tax,612.012,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,downside,FY2030E,income_statement,income_tax,214.204,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,downside,FY2030E,income_statement,profit_after_tax,397.808,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,downside,FY2030E,income_statement,profit_before_tax,611.508,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,downside,FY2030E,income_statement,income_tax,214.028,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,downside,FY2030E,income_statement,profit_after_tax,397.480,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,downside,FY2030E,balance_sheet,x_cash_and_cash_equivalents,8027.285,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,downside,FY2030E,balance_sheet,x_nonpledged_trading_assets,695.528,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,downside,FY2030E,balance_sheet,investment_securities,12063.002,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,downside,FY2030E,balance_sheet,investment_securities,11951.267,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,downside,FY2030E,balance_sheet,loans_and_advances_net,8810.953,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,downside,FY2030E,balance_sheet,property_equipment_intangibles,744.837,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,downside,FY2030E,balance_sheet,other_assets,1771.817,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,downside,FY2030E,balance_sheet,total_assets,32113.422,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,downside,FY2030E,balance_sheet,total_assets,32001.687,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,downside,FY2030E,balance_sheet,customer_deposits,24409.647,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,downside,FY2030E,balance_sheet,due_to_banks,1448.573,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,downside,FY2030E,balance_sheet,borrowings,643.509,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
@@ -423,15 +423,15 @@ access-bank-ghana,downside,FY2030E,balance_sheet,x_lease_obligation,42.962,GHS m
 access-bank-ghana,downside,FY2030E,balance_sheet,other_liabilities,1564.797,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,downside,FY2030E,balance_sheet,total_liabilities,28109.488,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,downside,FY2030E,balance_sheet,stated_capital,400.000,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,downside,FY2030E,balance_sheet,retained_earnings,3081.757,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,downside,FY2030E,balance_sheet,retained_earnings,2970.022,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,downside,FY2030E,balance_sheet,reserves_other,522.177,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,downside,FY2030E,balance_sheet,total_equity,4003.934,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,downside,FY2030E,ratios,car_pct,17.337,%,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,downside,FY2030E,balance_sheet,total_equity,3892.199,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,downside,FY2030E,ratios,car_pct,16.912,%,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,downside,FY2030E,ratios,npl_pct,9.510,%,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,downside,FY2030E,ratios,ldr_pct,36.096,%,MODEL-ESTIMATE,estimated,"Net loans/customer deposits, percent"
-access-bank-ghana,downside,FY2030E,ratios,cost_to_income_pct,54.356,%,MODEL-ESTIMATE,estimated,"Operating expenses/pre-impairment operating income, percent"
-access-bank-ghana,downside,FY2030E,ratios,roe_pct,10.455,%,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,downside,FY2030E,ratios,roa_pct,1.304,%,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,downside,FY2030E,ratios,cost_to_income_pct,54.371,%,MODEL-ESTIMATE,estimated,"Operating expenses/pre-impairment operating income, percent"
+access-bank-ghana,downside,FY2030E,ratios,roe_pct,10.762,%,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,downside,FY2030E,ratios,roa_pct,1.308,%,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,downside,FY2030E,income_statement,fee_commission_income,,GHS millions,MODEL-ESTIMATE,unavailable,Separate component not projected; see assumptions
 access-bank-ghana,downside,FY2030E,income_statement,fee_commission_expense,,GHS millions,MODEL-ESTIMATE,unavailable,Separate component not projected; see assumptions
 access-bank-ghana,downside,FY2030E,balance_sheet,cash_and_bog_balances,,GHS millions,MODEL-ESTIMATE,unavailable,Separate component not projected; see assumptions
@@ -455,11 +455,11 @@ access-bank-ghana,upside,FY2026E,income_statement,income_tax,267.637,GHS million
 access-bank-ghana,upside,FY2026E,income_statement,profit_after_tax,497.040,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,upside,FY2026E,balance_sheet,x_cash_and_cash_equivalents,5182.418,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,upside,FY2026E,balance_sheet,x_nonpledged_trading_assets,695.528,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,upside,FY2026E,balance_sheet,investment_securities,7309.886,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,upside,FY2026E,balance_sheet,investment_securities,7201.343,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,upside,FY2026E,balance_sheet,loans_and_advances_net,5715.834,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,upside,FY2026E,balance_sheet,property_equipment_intangibles,661.778,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,upside,FY2026E,balance_sheet,other_assets,1636.885,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,upside,FY2026E,balance_sheet,total_assets,21202.329,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,upside,FY2026E,balance_sheet,total_assets,21093.785,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,upside,FY2026E,balance_sheet,customer_deposits,15758.876,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,upside,FY2026E,balance_sheet,due_to_banks,1156.338,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,upside,FY2026E,balance_sheet,borrowings,643.509,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
@@ -467,15 +467,15 @@ access-bank-ghana,upside,FY2026E,balance_sheet,x_lease_obligation,42.962,GHS mil
 access-bank-ghana,upside,FY2026E,balance_sheet,other_liabilities,1059.171,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,upside,FY2026E,balance_sheet,total_liabilities,18660.856,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,upside,FY2026E,balance_sheet,stated_capital,400.000,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,upside,FY2026E,balance_sheet,retained_earnings,1619.296,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,upside,FY2026E,balance_sheet,retained_earnings,1510.753,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,upside,FY2026E,balance_sheet,reserves_other,522.177,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,upside,FY2026E,balance_sheet,total_equity,2541.473,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,upside,FY2026E,ratios,car_pct,16.668,%,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,upside,FY2026E,balance_sheet,total_equity,2432.930,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,upside,FY2026E,ratios,car_pct,16.038,%,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,upside,FY2026E,ratios,npl_pct,4.210,%,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,upside,FY2026E,ratios,ldr_pct,36.271,%,MODEL-ESTIMATE,estimated,"Net loans/customer deposits, percent"
 access-bank-ghana,upside,FY2026E,ratios,cost_to_income_pct,47.871,%,MODEL-ESTIMATE,estimated,"Operating expenses/pre-impairment operating income, percent"
-access-bank-ghana,upside,FY2026E,ratios,roe_pct,21.677,%,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,upside,FY2026E,ratios,roa_pct,2.471,%,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,upside,FY2026E,ratios,roe_pct,22.202,%,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,upside,FY2026E,ratios,roa_pct,2.478,%,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,upside,FY2026E,income_statement,fee_commission_income,,GHS millions,MODEL-ESTIMATE,unavailable,Separate component not projected; see assumptions
 access-bank-ghana,upside,FY2026E,income_statement,fee_commission_expense,,GHS millions,MODEL-ESTIMATE,unavailable,Separate component not projected; see assumptions
 access-bank-ghana,upside,FY2026E,balance_sheet,cash_and_bog_balances,,GHS millions,MODEL-ESTIMATE,unavailable,Separate component not projected; see assumptions
@@ -483,27 +483,27 @@ access-bank-ghana,upside,FY2026E,balance_sheet,due_from_banks,,GHS millions,MODE
 access-bank-ghana,upside,FY2026E,balance_sheet,loans_and_advances_gross,,GHS millions,MODEL-ESTIMATE,unavailable,Separate component not projected; see assumptions
 access-bank-ghana,upside,FY2026E,balance_sheet,loan_loss_allowance,,GHS millions,MODEL-ESTIMATE,unavailable,Separate component not projected; see assumptions
 access-bank-ghana,upside,FY2026E,ratios,tier1_pct,,%,MODEL-ESTIMATE,unavailable,Separate component not projected; see assumptions
-access-bank-ghana,upside,FY2027E,income_statement,interest_income,1297.396,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,upside,FY2027E,income_statement,interest_income,1298.481,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,upside,FY2027E,income_statement,interest_expense,531.336,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,upside,FY2027E,income_statement,net_interest_income,766.060,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,upside,FY2027E,income_statement,net_interest_income,767.145,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,upside,FY2027E,income_statement,x_net_fee_commission,541.765,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,upside,FY2027E,income_statement,net_trading_income,316.602,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,upside,FY2027E,income_statement,other_operating_income,73.989,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,upside,FY2027E,income_statement,total_operating_income,1698.415,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,upside,FY2027E,income_statement,total_operating_income,1699.501,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,upside,FY2027E,income_statement,staff_costs,350.539,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,upside,FY2027E,income_statement,depreciation_amortisation,86.362,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,upside,FY2027E,income_statement,other_operating_expenses,326.701,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,upside,FY2027E,income_statement,impairment_charge,36.672,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,upside,FY2027E,income_statement,profit_before_tax,898.141,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,upside,FY2027E,income_statement,income_tax,314.349,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,upside,FY2027E,income_statement,profit_after_tax,583.792,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,upside,FY2027E,income_statement,profit_before_tax,899.226,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,upside,FY2027E,income_statement,income_tax,314.729,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,upside,FY2027E,income_statement,profit_after_tax,584.497,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,upside,FY2027E,balance_sheet,x_cash_and_cash_equivalents,5900.701,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,upside,FY2027E,balance_sheet,x_nonpledged_trading_assets,695.528,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,upside,FY2027E,balance_sheet,investment_securities,8541.695,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,upside,FY2027E,balance_sheet,investment_securities,8433.716,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,upside,FY2027E,balance_sheet,loans_and_advances_net,6508.048,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,upside,FY2027E,balance_sheet,property_equipment_intangibles,681.632,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,upside,FY2027E,balance_sheet,other_assets,1669.622,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,upside,FY2027E,balance_sheet,total_assets,23997.226,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,upside,FY2027E,balance_sheet,total_assets,23889.248,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,upside,FY2027E,balance_sheet,customer_deposits,17943.056,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,upside,FY2027E,balance_sheet,due_to_banks,1236.472,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,upside,FY2027E,balance_sheet,borrowings,643.509,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
@@ -511,15 +511,15 @@ access-bank-ghana,upside,FY2027E,balance_sheet,x_lease_obligation,42.962,GHS mil
 access-bank-ghana,upside,FY2027E,balance_sheet,other_liabilities,1122.721,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,upside,FY2027E,balance_sheet,total_liabilities,20988.720,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,upside,FY2027E,balance_sheet,stated_capital,400.000,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,upside,FY2027E,balance_sheet,retained_earnings,2086.329,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,upside,FY2027E,balance_sheet,retained_earnings,1978.350,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,upside,FY2027E,balance_sheet,reserves_other,522.177,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,upside,FY2027E,balance_sheet,total_equity,3008.506,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,upside,FY2027E,ratios,car_pct,17.433,%,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,upside,FY2027E,balance_sheet,total_equity,2900.527,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,upside,FY2027E,ratios,car_pct,16.883,%,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,upside,FY2027E,ratios,npl_pct,3.910,%,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,upside,FY2027E,ratios,ldr_pct,36.271,%,MODEL-ESTIMATE,estimated,"Net loans/customer deposits, percent"
-access-bank-ghana,upside,FY2027E,ratios,cost_to_income_pct,44.960,%,MODEL-ESTIMATE,estimated,"Operating expenses/pre-impairment operating income, percent"
-access-bank-ghana,upside,FY2027E,ratios,roe_pct,21.038,%,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,upside,FY2027E,ratios,roa_pct,2.583,%,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,upside,FY2027E,ratios,cost_to_income_pct,44.931,%,MODEL-ESTIMATE,estimated,"Operating expenses/pre-impairment operating income, percent"
+access-bank-ghana,upside,FY2027E,ratios,roe_pct,21.918,%,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,upside,FY2027E,ratios,roa_pct,2.599,%,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,upside,FY2027E,income_statement,fee_commission_income,,GHS millions,MODEL-ESTIMATE,unavailable,Separate component not projected; see assumptions
 access-bank-ghana,upside,FY2027E,income_statement,fee_commission_expense,,GHS millions,MODEL-ESTIMATE,unavailable,Separate component not projected; see assumptions
 access-bank-ghana,upside,FY2027E,balance_sheet,cash_and_bog_balances,,GHS millions,MODEL-ESTIMATE,unavailable,Separate component not projected; see assumptions
@@ -527,27 +527,27 @@ access-bank-ghana,upside,FY2027E,balance_sheet,due_from_banks,,GHS millions,MODE
 access-bank-ghana,upside,FY2027E,balance_sheet,loans_and_advances_gross,,GHS millions,MODEL-ESTIMATE,unavailable,Separate component not projected; see assumptions
 access-bank-ghana,upside,FY2027E,balance_sheet,loan_loss_allowance,,GHS millions,MODEL-ESTIMATE,unavailable,Separate component not projected; see assumptions
 access-bank-ghana,upside,FY2027E,ratios,tier1_pct,,%,MODEL-ESTIMATE,unavailable,Separate component not projected; see assumptions
-access-bank-ghana,upside,FY2028E,income_statement,interest_income,1448.174,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,upside,FY2028E,income_statement,interest_income,1449.689,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,upside,FY2028E,income_statement,interest_expense,660.929,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,upside,FY2028E,income_statement,net_interest_income,787.245,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,upside,FY2028E,income_statement,net_interest_income,788.760,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,upside,FY2028E,income_statement,x_net_fee_commission,621.436,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,upside,FY2028E,income_statement,net_trading_income,363.162,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,upside,FY2028E,income_statement,other_operating_income,84.869,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,upside,FY2028E,income_statement,total_operating_income,1856.713,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,upside,FY2028E,income_statement,total_operating_income,1858.228,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,upside,FY2028E,income_statement,staff_costs,375.077,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,upside,FY2028E,income_statement,depreciation_amortisation,88.953,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,upside,FY2028E,income_statement,other_operating_expenses,349.570,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,upside,FY2028E,income_statement,impairment_charge,41.920,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,upside,FY2028E,income_statement,profit_before_tax,1001.193,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,upside,FY2028E,income_statement,income_tax,350.417,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,upside,FY2028E,income_statement,profit_after_tax,650.775,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,upside,FY2028E,income_statement,profit_before_tax,1002.708,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,upside,FY2028E,income_statement,income_tax,350.948,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,upside,FY2028E,income_statement,profit_after_tax,651.760,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,upside,FY2028E,balance_sheet,x_cash_and_cash_equivalents,6768.458,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,upside,FY2028E,balance_sheet,x_nonpledged_trading_assets,695.528,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,upside,FY2028E,balance_sheet,investment_securities,9991.857,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,upside,FY2028E,balance_sheet,investment_securities,9884.666,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,upside,FY2028E,balance_sheet,loans_and_advances_net,7465.122,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,upside,FY2028E,balance_sheet,property_equipment_intangibles,702.081,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,upside,FY2028E,balance_sheet,other_assets,1703.015,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,upside,FY2028E,balance_sheet,total_assets,27326.061,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,upside,FY2028E,balance_sheet,total_assets,27218.870,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,upside,FY2028E,balance_sheet,customer_deposits,20581.762,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,upside,FY2028E,balance_sheet,due_to_banks,1327.390,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,upside,FY2028E,balance_sheet,borrowings,643.509,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
@@ -555,15 +555,15 @@ access-bank-ghana,upside,FY2028E,balance_sheet,x_lease_obligation,42.962,GHS mil
 access-bank-ghana,upside,FY2028E,balance_sheet,other_liabilities,1201.312,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,upside,FY2028E,balance_sheet,total_liabilities,23796.934,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,upside,FY2028E,balance_sheet,stated_capital,400.000,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,upside,FY2028E,balance_sheet,retained_earnings,2606.949,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,upside,FY2028E,balance_sheet,retained_earnings,2499.758,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,upside,FY2028E,balance_sheet,reserves_other,522.177,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,upside,FY2028E,balance_sheet,total_equity,3529.126,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,upside,FY2028E,ratios,car_pct,17.958,%,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,upside,FY2028E,balance_sheet,total_equity,3421.935,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,upside,FY2028E,ratios,car_pct,17.481,%,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,upside,FY2028E,ratios,npl_pct,3.610,%,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,upside,FY2028E,ratios,ldr_pct,36.271,%,MODEL-ESTIMATE,estimated,"Net loans/customer deposits, percent"
-access-bank-ghana,upside,FY2028E,ratios,cost_to_income_pct,43.819,%,MODEL-ESTIMATE,estimated,"Operating expenses/pre-impairment operating income, percent"
-access-bank-ghana,upside,FY2028E,ratios,roe_pct,19.909,%,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,upside,FY2028E,ratios,roa_pct,2.536,%,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,upside,FY2028E,ratios,cost_to_income_pct,43.784,%,MODEL-ESTIMATE,estimated,"Operating expenses/pre-impairment operating income, percent"
+access-bank-ghana,upside,FY2028E,ratios,roe_pct,20.617,%,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,upside,FY2028E,ratios,roa_pct,2.551,%,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,upside,FY2028E,income_statement,fee_commission_income,,GHS millions,MODEL-ESTIMATE,unavailable,Separate component not projected; see assumptions
 access-bank-ghana,upside,FY2028E,income_statement,fee_commission_expense,,GHS millions,MODEL-ESTIMATE,unavailable,Separate component not projected; see assumptions
 access-bank-ghana,upside,FY2028E,balance_sheet,cash_and_bog_balances,,GHS millions,MODEL-ESTIMATE,unavailable,Separate component not projected; see assumptions
@@ -571,27 +571,27 @@ access-bank-ghana,upside,FY2028E,balance_sheet,due_from_banks,,GHS millions,MODE
 access-bank-ghana,upside,FY2028E,balance_sheet,loans_and_advances_gross,,GHS millions,MODEL-ESTIMATE,unavailable,Separate component not projected; see assumptions
 access-bank-ghana,upside,FY2028E,balance_sheet,loan_loss_allowance,,GHS millions,MODEL-ESTIMATE,unavailable,Separate component not projected; see assumptions
 access-bank-ghana,upside,FY2028E,ratios,tier1_pct,,%,MODEL-ESTIMATE,unavailable,Separate component not projected; see assumptions
-access-bank-ghana,upside,FY2029E,income_statement,interest_income,1664.133,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,upside,FY2029E,income_statement,interest_income,1665.873,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,upside,FY2029E,income_statement,interest_expense,877.745,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,upside,FY2029E,income_statement,net_interest_income,786.388,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,upside,FY2029E,income_statement,net_interest_income,788.129,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,upside,FY2029E,income_statement,x_net_fee_commission,714.108,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,upside,FY2029E,income_statement,net_trading_income,417.318,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,upside,FY2029E,income_statement,other_operating_income,97.526,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,upside,FY2029E,income_statement,total_operating_income,2015.340,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,upside,FY2029E,income_statement,total_operating_income,2017.081,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,upside,FY2029E,income_statement,staff_costs,403.208,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,upside,FY2029E,income_statement,depreciation_amortisation,91.622,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,upside,FY2029E,income_statement,other_operating_expenses,375.788,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,upside,FY2029E,income_statement,impairment_charge,48.130,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,upside,FY2029E,income_statement,profit_before_tax,1096.592,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,upside,FY2029E,income_statement,income_tax,383.807,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,upside,FY2029E,income_statement,profit_after_tax,712.785,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,upside,FY2029E,income_statement,profit_before_tax,1098.333,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,upside,FY2029E,income_statement,income_tax,384.416,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,upside,FY2029E,income_statement,profit_after_tax,713.916,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,upside,FY2029E,balance_sheet,x_cash_and_cash_equivalents,7777.804,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,upside,FY2029E,balance_sheet,x_nonpledged_trading_assets,695.528,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,upside,FY2029E,balance_sheet,investment_securities,11642.707,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,upside,FY2029E,balance_sheet,investment_securities,11536.421,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,upside,FY2029E,balance_sheet,loans_and_advances_net,8578.358,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,upside,FY2029E,balance_sheet,property_equipment_intangibles,723.143,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,upside,FY2029E,balance_sheet,other_assets,1737.075,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,upside,FY2029E,balance_sheet,total_assets,31154.616,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,upside,FY2029E,balance_sheet,total_assets,31048.330,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,upside,FY2029E,balance_sheet,customer_deposits,23651.017,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,upside,FY2029E,balance_sheet,due_to_banks,1426.363,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,upside,FY2029E,balance_sheet,borrowings,643.509,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
@@ -599,15 +599,15 @@ access-bank-ghana,upside,FY2029E,balance_sheet,x_lease_obligation,42.962,GHS mil
 access-bank-ghana,upside,FY2029E,balance_sheet,other_liabilities,1291.410,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,upside,FY2029E,balance_sheet,total_liabilities,27055.261,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,upside,FY2029E,balance_sheet,stated_capital,400.000,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,upside,FY2029E,balance_sheet,retained_earnings,3177.177,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,upside,FY2029E,balance_sheet,retained_earnings,3070.891,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,upside,FY2029E,balance_sheet,reserves_other,522.177,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,upside,FY2029E,balance_sheet,total_equity,4099.354,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,upside,FY2029E,ratios,car_pct,18.296,%,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,upside,FY2029E,balance_sheet,total_equity,3993.068,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,upside,FY2029E,ratios,car_pct,17.883,%,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,upside,FY2029E,ratios,npl_pct,3.310,%,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,upside,FY2029E,ratios,ldr_pct,36.271,%,MODEL-ESTIMATE,estimated,"Net loans/customer deposits, percent"
-access-bank-ghana,upside,FY2029E,ratios,cost_to_income_pct,43.200,%,MODEL-ESTIMATE,estimated,"Operating expenses/pre-impairment operating income, percent"
-access-bank-ghana,upside,FY2029E,ratios,roe_pct,18.687,%,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,upside,FY2029E,ratios,roa_pct,2.438,%,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,upside,FY2029E,ratios,cost_to_income_pct,43.162,%,MODEL-ESTIMATE,estimated,"Operating expenses/pre-impairment operating income, percent"
+access-bank-ghana,upside,FY2029E,ratios,roe_pct,19.256,%,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,upside,FY2029E,ratios,roa_pct,2.450,%,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,upside,FY2029E,income_statement,fee_commission_income,,GHS millions,MODEL-ESTIMATE,unavailable,Separate component not projected; see assumptions
 access-bank-ghana,upside,FY2029E,income_statement,fee_commission_expense,,GHS millions,MODEL-ESTIMATE,unavailable,Separate component not projected; see assumptions
 access-bank-ghana,upside,FY2029E,balance_sheet,cash_and_bog_balances,,GHS millions,MODEL-ESTIMATE,unavailable,Separate component not projected; see assumptions
@@ -615,27 +615,27 @@ access-bank-ghana,upside,FY2029E,balance_sheet,due_from_banks,,GHS millions,MODE
 access-bank-ghana,upside,FY2029E,balance_sheet,loans_and_advances_gross,,GHS millions,MODEL-ESTIMATE,unavailable,Separate component not projected; see assumptions
 access-bank-ghana,upside,FY2029E,balance_sheet,loan_loss_allowance,,GHS millions,MODEL-ESTIMATE,unavailable,Separate component not projected; see assumptions
 access-bank-ghana,upside,FY2029E,ratios,tier1_pct,,%,MODEL-ESTIMATE,unavailable,Separate component not projected; see assumptions
-access-bank-ghana,upside,FY2030E,income_statement,interest_income,1921.075,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,upside,FY2030E,income_statement,interest_income,1923.084,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,upside,FY2030E,income_statement,interest_expense,1081.526,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,upside,FY2030E,income_statement,net_interest_income,839.549,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,upside,FY2030E,income_statement,net_interest_income,841.559,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,upside,FY2030E,income_statement,x_net_fee_commission,824.366,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,upside,FY2030E,income_statement,net_trading_income,481.752,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,upside,FY2030E,income_statement,other_operating_income,112.584,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,upside,FY2030E,income_statement,total_operating_income,2258.251,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,upside,FY2030E,income_statement,total_operating_income,2260.261,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,upside,FY2030E,income_statement,staff_costs,435.465,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,upside,FY2030E,income_statement,depreciation_amortisation,94.370,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,upside,FY2030E,income_statement,other_operating_expenses,405.851,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,upside,FY2030E,income_statement,impairment_charge,55.444,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,upside,FY2030E,income_statement,profit_before_tax,1267.122,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,upside,FY2030E,income_statement,income_tax,443.493,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,upside,FY2030E,income_statement,profit_after_tax,823.629,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,upside,FY2030E,income_statement,profit_before_tax,1269.132,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,upside,FY2030E,income_statement,income_tax,444.196,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,upside,FY2030E,income_statement,profit_after_tax,824.936,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,upside,FY2030E,balance_sheet,x_cash_and_cash_equivalents,8978.697,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,upside,FY2030E,balance_sheet,x_nonpledged_trading_assets,695.528,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,upside,FY2030E,balance_sheet,investment_securities,13584.928,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,upside,FY2030E,balance_sheet,investment_securities,13479.687,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,upside,FY2030E,balance_sheet,loans_and_advances_net,9902.857,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,upside,FY2030E,balance_sheet,property_equipment_intangibles,744.837,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,upside,FY2030E,balance_sheet,other_assets,1771.817,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,upside,FY2030E,balance_sheet,total_assets,35678.664,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,upside,FY2030E,balance_sheet,total_assets,35573.423,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,upside,FY2030E,balance_sheet,customer_deposits,27302.734,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,upside,FY2030E,balance_sheet,due_to_banks,1536.479,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,upside,FY2030E,balance_sheet,borrowings,643.509,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
@@ -643,15 +643,15 @@ access-bank-ghana,upside,FY2030E,balance_sheet,x_lease_obligation,42.962,GHS mil
 access-bank-ghana,upside,FY2030E,balance_sheet,other_liabilities,1394.723,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,upside,FY2030E,balance_sheet,total_liabilities,30920.407,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,upside,FY2030E,balance_sheet,stated_capital,400.000,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,upside,FY2030E,balance_sheet,retained_earnings,3836.081,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,upside,FY2030E,balance_sheet,retained_earnings,3730.840,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,upside,FY2030E,balance_sheet,reserves_other,522.177,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,upside,FY2030E,balance_sheet,total_equity,4758.258,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,upside,FY2030E,ratios,car_pct,18.544,%,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,upside,FY2030E,balance_sheet,total_equity,4653.017,GHS millions,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,upside,FY2030E,ratios,car_pct,18.188,%,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,upside,FY2030E,ratios,npl_pct,3.010,%,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,upside,FY2030E,ratios,ldr_pct,36.271,%,MODEL-ESTIMATE,estimated,"Net loans/customer deposits, percent"
-access-bank-ghana,upside,FY2030E,ratios,cost_to_income_pct,41.434,%,MODEL-ESTIMATE,estimated,"Operating expenses/pre-impairment operating income, percent"
-access-bank-ghana,upside,FY2030E,ratios,roe_pct,18.597,%,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
-access-bank-ghana,upside,FY2030E,ratios,roa_pct,2.465,%,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,upside,FY2030E,ratios,cost_to_income_pct,41.397,%,MODEL-ESTIMATE,estimated,"Operating expenses/pre-impairment operating income, percent"
+access-bank-ghana,upside,FY2030E,ratios,roe_pct,19.082,%,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
+access-bank-ghana,upside,FY2030E,ratios,roa_pct,2.476,%,MODEL-ESTIMATE,estimated,Scenario estimate; see assumptions.json
 access-bank-ghana,upside,FY2030E,income_statement,fee_commission_income,,GHS millions,MODEL-ESTIMATE,unavailable,Separate component not projected; see assumptions
 access-bank-ghana,upside,FY2030E,income_statement,fee_commission_expense,,GHS millions,MODEL-ESTIMATE,unavailable,Separate component not projected; see assumptions
 access-bank-ghana,upside,FY2030E,balance_sheet,cash_and_bog_balances,,GHS millions,MODEL-ESTIMATE,unavailable,Separate component not projected; see assumptions
