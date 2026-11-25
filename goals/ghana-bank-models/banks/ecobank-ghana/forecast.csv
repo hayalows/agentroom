@@ -1,616 +1,616 @@
 bank,scenario,period,statement,line_item,value,unit,source_id,status,notes
-ecobank-ghana,base,FY2026E,income_statement,interest_income,4407.489,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26+Q4; FY27E+ avg loans*y_loan + avg inv*y_inv (y_inv linked to macro.csv tbill_364d+bond).
+ecobank-ghana,base,FY2026E,income_statement,interest_income,4427.742,GHS millions,MODEL-ESTIMATE,estimated,FY26E = 9M-26 + iterative Q4; FY27E+ = avg loans*y_loan + avg inv*y_inv (macro.csv).
 ecobank-ghana,base,FY2026E,income_statement,interest_expense,1261.752,GHS millions,MODEL-ESTIMATE,estimated,Linked to macro.csv tbill_91d_pct.
-ecobank-ghana,base,FY2026E,income_statement,net_interest_income,3145.737,GHS millions,MODEL-ESTIMATE,estimated,interest_income - interest_expense.
-ecobank-ghana,base,FY2026E,income_statement,fee_commission_income,799.804,GHS millions,MODEL-ESTIMATE,estimated,Linked to nominal GDP (gdp_growth_pct + inflation_cpi_pct from macro.csv).
-ecobank-ghana,base,FY2026E,income_statement,fee_commission_expense,142.364,GHS millions,MODEL-ESTIMATE,estimated,0.8x fee growth.
-ecobank-ghana,base,FY2026E,income_statement,net_trading_income,816.900,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ trading growth.
-ecobank-ghana,base,FY2026E,income_statement,other_operating_income,60.440,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ 5% growth.
-ecobank-ghana,base,FY2026E,income_statement,total_operating_income,4680.517,GHS millions,MODEL-ESTIMATE,estimated,NII + net fees + trading + other operating income.
-ecobank-ghana,base,FY2026E,income_statement,staff_costs,792.781,GHS millions,MODEL-ESTIMATE,estimated,Linked to inflation_cpi_pct from macro.csv.
-ecobank-ghana,base,FY2026E,income_statement,depreciation_amortisation,92.595,GHS millions,MODEL-ESTIMATE,estimated,4% annual growth.
-ecobank-ghana,base,FY2026E,income_statement,other_operating_expenses,715.025,GHS millions,MODEL-ESTIMATE,estimated,Linked to inflation_cpi_pct from macro.csv.
+ecobank-ghana,base,FY2026E,income_statement,net_interest_income,3165.991,GHS millions,MODEL-ESTIMATE,estimated,interest_income - interest_expense.
+ecobank-ghana,base,FY2026E,income_statement,fee_commission_income,799.784,GHS millions,MODEL-ESTIMATE,estimated,Linked to nominal GDP (macro.csv).
+ecobank-ghana,base,FY2026E,income_statement,fee_commission_expense,142.360,GHS millions,MODEL-ESTIMATE,estimated,0.8x fee growth.
+ecobank-ghana,base,FY2026E,income_statement,net_trading_income,816.880,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ trading growth.
+ecobank-ghana,base,FY2026E,income_statement,other_operating_income,60.438,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ 5% growth.
+ecobank-ghana,base,FY2026E,income_statement,total_operating_income,4700.732,GHS millions,MODEL-ESTIMATE,estimated,NII + net fees + trading + other operating income.
+ecobank-ghana,base,FY2026E,income_statement,staff_costs,792.762,GHS millions,MODEL-ESTIMATE,estimated,Linked to inflation_cpi_pct from macro.csv.
+ecobank-ghana,base,FY2026E,income_statement,depreciation_amortisation,92.592,GHS millions,MODEL-ESTIMATE,estimated,4% annual growth.
+ecobank-ghana,base,FY2026E,income_statement,other_operating_expenses,715.007,GHS millions,MODEL-ESTIMATE,estimated,Linked to inflation_cpi_pct from macro.csv.
 ecobank-ghana,base,FY2026E,income_statement,x_lease_finance_cost,11.417,GHS millions,MODEL-ESTIMATE,estimated,Consistent with historical separate line item.
 ecobank-ghana,base,FY2026E,income_statement,impairment_charge,232.573,GHS millions,MODEL-ESTIMATE,estimated,avg net loans * cost_of_risk.
-ecobank-ghana,base,FY2026E,income_statement,profit_before_tax,2836.126,GHS millions,MODEL-ESTIMATE,estimated,total_operating_income - opex - x_lease_finance_cost - impairment.
-ecobank-ghana,base,FY2026E,income_statement,income_tax,999.242,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax * tax_rate (includes levies).
-ecobank-ghana,base,FY2026E,income_statement,profit_after_tax,1836.884,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax - income_tax.
-ecobank-ghana,base,FY2026E,balance_sheet,cash_and_bog_balances,16878.156,GHS millions,MODEL-ESTIMATE,estimated,Respects >= crr_pct (20%) on customer_deposits; includes due_from_banks aggregate.
+ecobank-ghana,base,FY2026E,income_statement,profit_before_tax,2856.381,GHS millions,MODEL-ESTIMATE,estimated,total_operating_income - opex - x_lease_finance_cost - impairment.
+ecobank-ghana,base,FY2026E,income_statement,income_tax,1006.331,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax * tax_rate (includes levies).
+ecobank-ghana,base,FY2026E,income_statement,profit_after_tax,1850.050,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax - income_tax.
+ecobank-ghana,base,FY2026E,balance_sheet,cash_and_bog_balances,16884.739,GHS millions,MODEL-ESTIMATE,estimated,Proxy screen >= crr_pct (20%) on customer_deposits; includes due_from_banks aggregate.
 ecobank-ghana,base,FY2026E,balance_sheet,due_from_banks,,GHS millions,MODEL-ESTIMATE,unavailable,Not split from cash_and_bog_balances (same basis as historical summary statements).
-ecobank-ghana,base,FY2026E,balance_sheet,investment_securities,16878.156,GHS millions,MODEL-ESTIMATE,estimated,Balancing liquid asset = total_assets - loans - ppe - other - cash; solved iteratively with interest_income.
+ecobank-ghana,base,FY2026E,balance_sheet,investment_securities,16884.739,GHS millions,MODEL-ESTIMATE,estimated,Balancing liquid asset = total_assets - loans - ppe - other - cash; solved iteratively.
 ecobank-ghana,base,FY2026E,balance_sheet,loans_and_advances_gross,,GHS millions,MODEL-ESTIMATE,unavailable,Not split in GSE summary history; net loans projected.
 ecobank-ghana,base,FY2026E,balance_sheet,loan_loss_allowance,,GHS millions,MODEL-ESTIMATE,unavailable,Not split in GSE summary history; net loans projected.
 ecobank-ghana,base,FY2026E,balance_sheet,loans_and_advances_net,16646.865,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ linked to nominal GDP.
 ecobank-ghana,base,FY2026E,balance_sheet,property_equipment_intangibles,1300.886,GHS millions,MODEL-ESTIMATE,estimated,3% annual growth.
 ecobank-ghana,base,FY2026E,balance_sheet,other_assets,3628.413,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
-ecobank-ghana,base,FY2026E,balance_sheet,total_assets,55332.476,GHS millions,MODEL-ESTIMATE,estimated,total_liabilities + total_equity.
+ecobank-ghana,base,FY2026E,balance_sheet,total_assets,55345.642,GHS millions,MODEL-ESTIMATE,estimated,total_liabilities + total_equity.
 ecobank-ghana,base,FY2026E,balance_sheet,customer_deposits,37002.696,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ linked to nominal GDP.
 ecobank-ghana,base,FY2026E,balance_sheet,due_to_banks,6986.480,GHS millions,MODEL-ESTIMATE,estimated,0.5 * deposit_growth.
 ecobank-ghana,base,FY2026E,balance_sheet,borrowings,281.321,GHS millions,MODEL-ESTIMATE,estimated,Held flat.
 ecobank-ghana,base,FY2026E,balance_sheet,other_liabilities,2519.669,GHS millions,MODEL-ESTIMATE,estimated,Tracks CPI inflation.
 ecobank-ghana,base,FY2026E,balance_sheet,total_liabilities,46790.166,GHS millions,MODEL-ESTIMATE,estimated,Sum of liability items.
 ecobank-ghana,base,FY2026E,balance_sheet,stated_capital,416.641,GHS millions,MODEL-ESTIMATE,estimated,Held flat.
-ecobank-ghana,base,FY2026E,balance_sheet,retained_earnings,5737.077,GHS millions,MODEL-ESTIMATE,estimated,Prior retained_earnings + PAT - dividends (9M-26 OCI/div preserved in FY26E).
+ecobank-ghana,base,FY2026E,balance_sheet,retained_earnings,5750.243,GHS millions,MODEL-ESTIMATE,estimated,Prior retained_earnings + PAT - dividends (9M-26 OCI/div preserved in FY26E).
 ecobank-ghana,base,FY2026E,balance_sheet,reserves_other,2388.592,GHS millions,MODEL-ESTIMATE,estimated,Held flat.
-ecobank-ghana,base,FY2026E,balance_sheet,total_equity,8542.310,GHS millions,MODEL-ESTIMATE,estimated,stated_capital + retained_earnings + reserves_other.
-ecobank-ghana,base,FY2026E,ratios,car_pct,18.815,%,MODEL-ESTIMATE,estimated,Proxy only (not prudential RWA): total_equity / (total_assets * 9M-26_RWA_density).
+ecobank-ghana,base,FY2026E,balance_sheet,total_equity,8555.476,GHS millions,MODEL-ESTIMATE,estimated,stated_capital + retained_earnings + reserves_other.
+ecobank-ghana,base,FY2026E,ratios,car_pct,18.840,%,MODEL-ESTIMATE,estimated,Proxy only (not prudential RWA): total_equity / (total_assets * 9M-26_RWA_density).
 ecobank-ghana,base,FY2026E,ratios,tier1_pct,,%,MODEL-ESTIMATE,unavailable,Not projected separately; CET1/Tier 1 unavailable in summary history.
 ecobank-ghana,base,FY2026E,ratios,npl_pct,13.990,%,MODEL-ESTIMATE,estimated,Estimated NPL path anchored on 9M-2026 reported 14.99%.
 ecobank-ghana,base,FY2026E,ratios,ldr_pct,44.988,%,MODEL-ESTIMATE,estimated,loans_and_advances_net / customer_deposits * 100 (net basis).
-ecobank-ghana,base,FY2026E,ratios,cost_to_income_pct,34.437,%,MODEL-ESTIMATE,estimated,(staff + da + other_opex + x_lease_finance_cost) / total_operating_income * 100.
-ecobank-ghana,base,FY2026E,ratios,roe_pct,23.525,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_equity * 100.
-ecobank-ghana,base,FY2026E,ratios,roa_pct,3.623,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_assets * 100.
-ecobank-ghana,base,FY2027E,income_statement,interest_income,5413.733,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26+Q4; FY27E+ avg loans*y_loan + avg inv*y_inv (y_inv linked to macro.csv tbill_364d+bond).
+ecobank-ghana,base,FY2026E,ratios,cost_to_income_pct,34.288,%,MODEL-ESTIMATE,estimated,(staff + da + other_opex + x_lease_finance_cost) / total_operating_income * 100.
+ecobank-ghana,base,FY2026E,ratios,roe_pct,23.674,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_equity * 100.
+ecobank-ghana,base,FY2026E,ratios,roa_pct,3.648,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_assets * 100.
+ecobank-ghana,base,FY2027E,income_statement,interest_income,5414.552,GHS millions,MODEL-ESTIMATE,estimated,FY26E = 9M-26 + iterative Q4; FY27E+ = avg loans*y_loan + avg inv*y_inv (macro.csv).
 ecobank-ghana,base,FY2027E,income_statement,interest_expense,1640.710,GHS millions,MODEL-ESTIMATE,estimated,Linked to macro.csv tbill_91d_pct.
-ecobank-ghana,base,FY2027E,income_statement,net_interest_income,3773.024,GHS millions,MODEL-ESTIMATE,estimated,interest_income - interest_expense.
-ecobank-ghana,base,FY2027E,income_statement,fee_commission_income,902.779,GHS millions,MODEL-ESTIMATE,estimated,Linked to nominal GDP (gdp_growth_pct + inflation_cpi_pct from macro.csv).
-ecobank-ghana,base,FY2027E,income_statement,fee_commission_expense,157.027,GHS millions,MODEL-ESTIMATE,estimated,0.8x fee growth.
-ecobank-ghana,base,FY2027E,income_statement,net_trading_income,882.252,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ trading growth.
-ecobank-ghana,base,FY2027E,income_statement,other_operating_income,63.462,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ 5% growth.
-ecobank-ghana,base,FY2027E,income_statement,total_operating_income,5464.489,GHS millions,MODEL-ESTIMATE,estimated,NII + net fees + trading + other operating income.
-ecobank-ghana,base,FY2027E,income_statement,staff_costs,868.096,GHS millions,MODEL-ESTIMATE,estimated,Linked to inflation_cpi_pct from macro.csv.
-ecobank-ghana,base,FY2027E,income_statement,depreciation_amortisation,96.298,GHS millions,MODEL-ESTIMATE,estimated,4% annual growth.
-ecobank-ghana,base,FY2027E,income_statement,other_operating_expenses,782.953,GHS millions,MODEL-ESTIMATE,estimated,Linked to inflation_cpi_pct from macro.csv.
-ecobank-ghana,base,FY2027E,income_statement,x_lease_finance_cost,11.646,GHS millions,MODEL-ESTIMATE,estimated,Consistent with historical separate line item.
+ecobank-ghana,base,FY2027E,income_statement,net_interest_income,3773.842,GHS millions,MODEL-ESTIMATE,estimated,interest_income - interest_expense.
+ecobank-ghana,base,FY2027E,income_statement,fee_commission_income,902.756,GHS millions,MODEL-ESTIMATE,estimated,Linked to nominal GDP (macro.csv).
+ecobank-ghana,base,FY2027E,income_statement,fee_commission_expense,157.024,GHS millions,MODEL-ESTIMATE,estimated,0.8x fee growth.
+ecobank-ghana,base,FY2027E,income_statement,net_trading_income,882.230,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ trading growth.
+ecobank-ghana,base,FY2027E,income_statement,other_operating_income,63.460,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ 5% growth.
+ecobank-ghana,base,FY2027E,income_statement,total_operating_income,5465.265,GHS millions,MODEL-ESTIMATE,estimated,NII + net fees + trading + other operating income.
+ecobank-ghana,base,FY2027E,income_statement,staff_costs,868.074,GHS millions,MODEL-ESTIMATE,estimated,Linked to inflation_cpi_pct from macro.csv.
+ecobank-ghana,base,FY2027E,income_statement,depreciation_amortisation,96.296,GHS millions,MODEL-ESTIMATE,estimated,4% annual growth.
+ecobank-ghana,base,FY2027E,income_statement,other_operating_expenses,782.933,GHS millions,MODEL-ESTIMATE,estimated,Linked to inflation_cpi_pct from macro.csv.
+ecobank-ghana,base,FY2027E,income_statement,x_lease_finance_cost,11.645,GHS millions,MODEL-ESTIMATE,estimated,Consistent with historical separate line item.
 ecobank-ghana,base,FY2027E,income_statement,impairment_charge,320.431,GHS millions,MODEL-ESTIMATE,estimated,avg net loans * cost_of_risk.
-ecobank-ghana,base,FY2027E,income_statement,profit_before_tax,3385.065,GHS millions,MODEL-ESTIMATE,estimated,total_operating_income - opex - x_lease_finance_cost - impairment.
-ecobank-ghana,base,FY2027E,income_statement,income_tax,1184.773,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax * tax_rate (includes levies).
-ecobank-ghana,base,FY2027E,income_statement,profit_after_tax,2200.292,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax - income_tax.
-ecobank-ghana,base,FY2027E,balance_sheet,cash_and_bog_balances,19194.005,GHS millions,MODEL-ESTIMATE,estimated,Respects >= crr_pct (20%) on customer_deposits; includes due_from_banks aggregate.
+ecobank-ghana,base,FY2027E,income_statement,profit_before_tax,3385.885,GHS millions,MODEL-ESTIMATE,estimated,total_operating_income - opex - x_lease_finance_cost - impairment.
+ecobank-ghana,base,FY2027E,income_statement,income_tax,1185.060,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax * tax_rate (includes levies).
+ecobank-ghana,base,FY2027E,income_statement,profit_after_tax,2200.826,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax - income_tax.
+ecobank-ghana,base,FY2027E,balance_sheet,cash_and_bog_balances,19200.788,GHS millions,MODEL-ESTIMATE,estimated,Proxy screen >= crr_pct (20%) on customer_deposits; includes due_from_banks aggregate.
 ecobank-ghana,base,FY2027E,balance_sheet,due_from_banks,,GHS millions,MODEL-ESTIMATE,unavailable,Not split from cash_and_bog_balances (same basis as historical summary statements).
-ecobank-ghana,base,FY2027E,balance_sheet,investment_securities,19194.005,GHS millions,MODEL-ESTIMATE,estimated,Balancing liquid asset = total_assets - loans - ppe - other - cash; solved iteratively with interest_income.
+ecobank-ghana,base,FY2027E,balance_sheet,investment_securities,19200.788,GHS millions,MODEL-ESTIMATE,estimated,Balancing liquid asset = total_assets - loans - ppe - other - cash; solved iteratively.
 ecobank-ghana,base,FY2027E,balance_sheet,loans_and_advances_gross,,GHS millions,MODEL-ESTIMATE,unavailable,Not split in GSE summary history; net loans projected.
 ecobank-ghana,base,FY2027E,balance_sheet,loan_loss_allowance,,GHS millions,MODEL-ESTIMATE,unavailable,Not split in GSE summary history; net loans projected.
 ecobank-ghana,base,FY2027E,balance_sheet,loans_and_advances_net,18956.618,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ linked to nominal GDP.
 ecobank-ghana,base,FY2027E,balance_sheet,property_equipment_intangibles,1339.913,GHS millions,MODEL-ESTIMATE,estimated,3% annual growth.
 ecobank-ghana,base,FY2027E,balance_sheet,other_assets,3700.981,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
-ecobank-ghana,base,FY2027E,balance_sheet,total_assets,62385.522,GHS millions,MODEL-ESTIMATE,estimated,total_liabilities + total_equity.
+ecobank-ghana,base,FY2027E,balance_sheet,total_assets,62399.088,GHS millions,MODEL-ESTIMATE,estimated,total_liabilities + total_equity.
 ecobank-ghana,base,FY2027E,balance_sheet,customer_deposits,41766.793,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ linked to nominal GDP.
 ecobank-ghana,base,FY2027E,balance_sheet,due_to_banks,7436.234,GHS millions,MODEL-ESTIMATE,estimated,0.5 * deposit_growth.
 ecobank-ghana,base,FY2027E,balance_sheet,borrowings,281.321,GHS millions,MODEL-ESTIMATE,estimated,Held flat.
 ecobank-ghana,base,FY2027E,balance_sheet,other_liabilities,2708.644,GHS millions,MODEL-ESTIMATE,estimated,Tracks CPI inflation.
 ecobank-ghana,base,FY2027E,balance_sheet,total_liabilities,52192.993,GHS millions,MODEL-ESTIMATE,estimated,Sum of liability items.
 ecobank-ghana,base,FY2027E,balance_sheet,stated_capital,416.641,GHS millions,MODEL-ESTIMATE,estimated,Held flat.
-ecobank-ghana,base,FY2027E,balance_sheet,retained_earnings,7387.296,GHS millions,MODEL-ESTIMATE,estimated,Prior retained_earnings + PAT - dividends (9M-26 OCI/div preserved in FY26E).
+ecobank-ghana,base,FY2027E,balance_sheet,retained_earnings,7400.862,GHS millions,MODEL-ESTIMATE,estimated,Prior retained_earnings + PAT - dividends (9M-26 OCI/div preserved in FY26E).
 ecobank-ghana,base,FY2027E,balance_sheet,reserves_other,2388.592,GHS millions,MODEL-ESTIMATE,estimated,Held flat.
-ecobank-ghana,base,FY2027E,balance_sheet,total_equity,10192.529,GHS millions,MODEL-ESTIMATE,estimated,stated_capital + retained_earnings + reserves_other.
-ecobank-ghana,base,FY2027E,ratios,car_pct,19.912,%,MODEL-ESTIMATE,estimated,Proxy only (not prudential RWA): total_equity / (total_assets * 9M-26_RWA_density).
+ecobank-ghana,base,FY2027E,balance_sheet,total_equity,10206.095,GHS millions,MODEL-ESTIMATE,estimated,stated_capital + retained_earnings + reserves_other.
+ecobank-ghana,base,FY2027E,ratios,car_pct,19.934,%,MODEL-ESTIMATE,estimated,Proxy only (not prudential RWA): total_equity / (total_assets * 9M-26_RWA_density).
 ecobank-ghana,base,FY2027E,ratios,tier1_pct,,%,MODEL-ESTIMATE,unavailable,Not projected separately; CET1/Tier 1 unavailable in summary history.
 ecobank-ghana,base,FY2027E,ratios,npl_pct,12.990,%,MODEL-ESTIMATE,estimated,Estimated NPL path anchored on 9M-2026 reported 14.99%.
 ecobank-ghana,base,FY2027E,ratios,ldr_pct,45.387,%,MODEL-ESTIMATE,estimated,loans_and_advances_net / customer_deposits * 100 (net basis).
-ecobank-ghana,base,FY2027E,ratios,cost_to_income_pct,32.190,%,MODEL-ESTIMATE,estimated,(staff + da + other_opex + x_lease_finance_cost) / total_operating_income * 100.
-ecobank-ghana,base,FY2027E,ratios,roe_pct,23.489,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_equity * 100.
+ecobank-ghana,base,FY2027E,ratios,cost_to_income_pct,32.184,%,MODEL-ESTIMATE,estimated,(staff + da + other_opex + x_lease_finance_cost) / total_operating_income * 100.
+ecobank-ghana,base,FY2027E,ratios,roe_pct,23.461,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_equity * 100.
 ecobank-ghana,base,FY2027E,ratios,roa_pct,3.738,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_assets * 100.
-ecobank-ghana,base,FY2028E,income_statement,interest_income,5959.411,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26+Q4; FY27E+ avg loans*y_loan + avg inv*y_inv (y_inv linked to macro.csv tbill_364d+bond).
+ecobank-ghana,base,FY2028E,income_statement,interest_income,5960.219,GHS millions,MODEL-ESTIMATE,estimated,FY26E = 9M-26 + iterative Q4; FY27E+ = avg loans*y_loan + avg inv*y_inv (macro.csv).
 ecobank-ghana,base,FY2028E,income_statement,interest_expense,2363.933,GHS millions,MODEL-ESTIMATE,estimated,Linked to macro.csv tbill_91d_pct.
-ecobank-ghana,base,FY2028E,income_statement,net_interest_income,3595.478,GHS millions,MODEL-ESTIMATE,estimated,interest_income - interest_expense.
-ecobank-ghana,base,FY2028E,income_statement,fee_commission_income,1023.751,GHS millions,MODEL-ESTIMATE,estimated,Linked to nominal GDP (gdp_growth_pct + inflation_cpi_pct from macro.csv).
-ecobank-ghana,base,FY2028E,income_statement,fee_commission_expense,173.861,GHS millions,MODEL-ESTIMATE,estimated,0.8x fee growth.
-ecobank-ghana,base,FY2028E,income_statement,net_trading_income,952.832,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ trading growth.
-ecobank-ghana,base,FY2028E,income_statement,other_operating_income,66.635,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ 5% growth.
-ecobank-ghana,base,FY2028E,income_statement,total_operating_income,5464.835,GHS millions,MODEL-ESTIMATE,estimated,NII + net fees + trading + other operating income.
-ecobank-ghana,base,FY2028E,income_statement,staff_costs,954.905,GHS millions,MODEL-ESTIMATE,estimated,Linked to inflation_cpi_pct from macro.csv.
-ecobank-ghana,base,FY2028E,income_statement,depreciation_amortisation,100.150,GHS millions,MODEL-ESTIMATE,estimated,4% annual growth.
-ecobank-ghana,base,FY2028E,income_statement,other_operating_expenses,861.248,GHS millions,MODEL-ESTIMATE,estimated,Linked to inflation_cpi_pct from macro.csv.
-ecobank-ghana,base,FY2028E,income_statement,x_lease_finance_cost,11.879,GHS millions,MODEL-ESTIMATE,estimated,Consistent with historical separate line item.
+ecobank-ghana,base,FY2028E,income_statement,net_interest_income,3596.287,GHS millions,MODEL-ESTIMATE,estimated,interest_income - interest_expense.
+ecobank-ghana,base,FY2028E,income_statement,fee_commission_income,1023.726,GHS millions,MODEL-ESTIMATE,estimated,Linked to nominal GDP (macro.csv).
+ecobank-ghana,base,FY2028E,income_statement,fee_commission_expense,173.856,GHS millions,MODEL-ESTIMATE,estimated,0.8x fee growth.
+ecobank-ghana,base,FY2028E,income_statement,net_trading_income,952.808,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ trading growth.
+ecobank-ghana,base,FY2028E,income_statement,other_operating_income,66.633,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ 5% growth.
+ecobank-ghana,base,FY2028E,income_statement,total_operating_income,5465.597,GHS millions,MODEL-ESTIMATE,estimated,NII + net fees + trading + other operating income.
+ecobank-ghana,base,FY2028E,income_statement,staff_costs,954.881,GHS millions,MODEL-ESTIMATE,estimated,Linked to inflation_cpi_pct from macro.csv.
+ecobank-ghana,base,FY2028E,income_statement,depreciation_amortisation,100.148,GHS millions,MODEL-ESTIMATE,estimated,4% annual growth.
+ecobank-ghana,base,FY2028E,income_statement,other_operating_expenses,861.226,GHS millions,MODEL-ESTIMATE,estimated,Linked to inflation_cpi_pct from macro.csv.
+ecobank-ghana,base,FY2028E,income_statement,x_lease_finance_cost,11.878,GHS millions,MODEL-ESTIMATE,estimated,Consistent with historical separate line item.
 ecobank-ghana,base,FY2028E,income_statement,impairment_charge,325.144,GHS millions,MODEL-ESTIMATE,estimated,avg net loans * cost_of_risk.
-ecobank-ghana,base,FY2028E,income_statement,profit_before_tax,3211.509,GHS millions,MODEL-ESTIMATE,estimated,total_operating_income - opex - x_lease_finance_cost - impairment.
-ecobank-ghana,base,FY2028E,income_statement,income_tax,1124.028,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax * tax_rate (includes levies).
-ecobank-ghana,base,FY2028E,income_statement,profit_after_tax,2087.481,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax - income_tax.
-ecobank-ghana,base,FY2028E,balance_sheet,cash_and_bog_balances,21710.660,GHS millions,MODEL-ESTIMATE,estimated,Respects >= crr_pct (20%) on customer_deposits; includes due_from_banks aggregate.
+ecobank-ghana,base,FY2028E,income_statement,profit_before_tax,3212.320,GHS millions,MODEL-ESTIMATE,estimated,total_operating_income - opex - x_lease_finance_cost - impairment.
+ecobank-ghana,base,FY2028E,income_statement,income_tax,1124.312,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax * tax_rate (includes levies).
+ecobank-ghana,base,FY2028E,income_statement,profit_after_tax,2088.008,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax - income_tax.
+ecobank-ghana,base,FY2028E,balance_sheet,cash_and_bog_balances,21717.641,GHS millions,MODEL-ESTIMATE,estimated,Proxy screen >= crr_pct (20%) on customer_deposits; includes due_from_banks aggregate.
 ecobank-ghana,base,FY2028E,balance_sheet,due_from_banks,,GHS millions,MODEL-ESTIMATE,unavailable,Not split from cash_and_bog_balances (same basis as historical summary statements).
-ecobank-ghana,base,FY2028E,balance_sheet,investment_securities,21710.660,GHS millions,MODEL-ESTIMATE,estimated,Balancing liquid asset = total_assets - loans - ppe - other - cash; solved iteratively with interest_income.
+ecobank-ghana,base,FY2028E,balance_sheet,investment_securities,21717.641,GHS millions,MODEL-ESTIMATE,estimated,Balancing liquid asset = total_assets - loans - ppe - other - cash; solved iteratively.
 ecobank-ghana,base,FY2028E,balance_sheet,loans_and_advances_gross,,GHS millions,MODEL-ESTIMATE,unavailable,Not split in GSE summary history; net loans projected.
 ecobank-ghana,base,FY2028E,balance_sheet,loan_loss_allowance,,GHS millions,MODEL-ESTIMATE,unavailable,Not split in GSE summary history; net loans projected.
 ecobank-ghana,base,FY2028E,balance_sheet,loans_and_advances_net,21686.371,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ linked to nominal GDP.
 ecobank-ghana,base,FY2028E,balance_sheet,property_equipment_intangibles,1380.110,GHS millions,MODEL-ESTIMATE,estimated,3% annual growth.
 ecobank-ghana,base,FY2028E,balance_sheet,other_assets,3775.001,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
-ecobank-ghana,base,FY2028E,balance_sheet,total_assets,70262.802,GHS millions,MODEL-ESTIMATE,estimated,total_liabilities + total_equity.
+ecobank-ghana,base,FY2028E,balance_sheet,total_assets,70276.763,GHS millions,MODEL-ESTIMATE,estimated,total_liabilities + total_equity.
 ecobank-ghana,base,FY2028E,balance_sheet,customer_deposits,47363.543,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ linked to nominal GDP.
 ecobank-ghana,base,FY2028E,balance_sheet,due_to_banks,7934.462,GHS millions,MODEL-ESTIMATE,estimated,0.5 * deposit_growth.
 ecobank-ghana,base,FY2028E,balance_sheet,borrowings,281.321,GHS millions,MODEL-ESTIMATE,estimated,Held flat.
 ecobank-ghana,base,FY2028E,balance_sheet,other_liabilities,2925.336,GHS millions,MODEL-ESTIMATE,estimated,Tracks CPI inflation.
 ecobank-ghana,base,FY2028E,balance_sheet,total_liabilities,58504.662,GHS millions,MODEL-ESTIMATE,estimated,Sum of liability items.
 ecobank-ghana,base,FY2028E,balance_sheet,stated_capital,416.641,GHS millions,MODEL-ESTIMATE,estimated,Held flat.
-ecobank-ghana,base,FY2028E,balance_sheet,retained_earnings,8952.907,GHS millions,MODEL-ESTIMATE,estimated,Prior retained_earnings + PAT - dividends (9M-26 OCI/div preserved in FY26E).
+ecobank-ghana,base,FY2028E,balance_sheet,retained_earnings,8966.868,GHS millions,MODEL-ESTIMATE,estimated,Prior retained_earnings + PAT - dividends (9M-26 OCI/div preserved in FY26E).
 ecobank-ghana,base,FY2028E,balance_sheet,reserves_other,2388.592,GHS millions,MODEL-ESTIMATE,estimated,Held flat.
-ecobank-ghana,base,FY2028E,balance_sheet,total_equity,11758.140,GHS millions,MODEL-ESTIMATE,estimated,stated_capital + retained_earnings + reserves_other.
-ecobank-ghana,base,FY2028E,ratios,car_pct,20.395,%,MODEL-ESTIMATE,estimated,Proxy only (not prudential RWA): total_equity / (total_assets * 9M-26_RWA_density).
+ecobank-ghana,base,FY2028E,balance_sheet,total_equity,11772.101,GHS millions,MODEL-ESTIMATE,estimated,stated_capital + retained_earnings + reserves_other.
+ecobank-ghana,base,FY2028E,ratios,car_pct,20.415,%,MODEL-ESTIMATE,estimated,Proxy only (not prudential RWA): total_equity / (total_assets * 9M-26_RWA_density).
 ecobank-ghana,base,FY2028E,ratios,tier1_pct,,%,MODEL-ESTIMATE,unavailable,Not projected separately; CET1/Tier 1 unavailable in summary history.
 ecobank-ghana,base,FY2028E,ratios,npl_pct,11.990,%,MODEL-ESTIMATE,estimated,Estimated NPL path anchored on 9M-2026 reported 14.99%.
 ecobank-ghana,base,FY2028E,ratios,ldr_pct,45.787,%,MODEL-ESTIMATE,estimated,loans_and_advances_net / customer_deposits * 100 (net basis).
-ecobank-ghana,base,FY2028E,ratios,cost_to_income_pct,35.283,%,MODEL-ESTIMATE,estimated,(staff + da + other_opex + x_lease_finance_cost) / total_operating_income * 100.
-ecobank-ghana,base,FY2028E,ratios,roe_pct,19.020,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_equity * 100.
-ecobank-ghana,base,FY2028E,ratios,roa_pct,3.147,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_assets * 100.
-ecobank-ghana,base,FY2029E,income_statement,interest_income,6537.437,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26+Q4; FY27E+ avg loans*y_loan + avg inv*y_inv (y_inv linked to macro.csv tbill_364d+bond).
+ecobank-ghana,base,FY2028E,ratios,cost_to_income_pct,35.278,%,MODEL-ESTIMATE,estimated,(staff + da + other_opex + x_lease_finance_cost) / total_operating_income * 100.
+ecobank-ghana,base,FY2028E,ratios,roe_pct,19.001,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_equity * 100.
+ecobank-ghana,base,FY2028E,ratios,roa_pct,3.148,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_assets * 100.
+ecobank-ghana,base,FY2029E,income_statement,interest_income,6538.233,GHS millions,MODEL-ESTIMATE,estimated,FY26E = 9M-26 + iterative Q4; FY27E+ = avg loans*y_loan + avg inv*y_inv (macro.csv).
 ecobank-ghana,base,FY2029E,income_statement,interest_expense,3242.968,GHS millions,MODEL-ESTIMATE,estimated,Linked to macro.csv tbill_91d_pct.
-ecobank-ghana,base,FY2029E,income_statement,net_interest_income,3294.469,GHS millions,MODEL-ESTIMATE,estimated,interest_income - interest_expense.
-ecobank-ghana,base,FY2029E,income_statement,fee_commission_income,1158.722,GHS millions,MODEL-ESTIMATE,estimated,Linked to nominal GDP (gdp_growth_pct + inflation_cpi_pct from macro.csv).
-ecobank-ghana,base,FY2029E,income_statement,fee_commission_expense,192.198,GHS millions,MODEL-ESTIMATE,estimated,0.8x fee growth.
-ecobank-ghana,base,FY2029E,income_statement,net_trading_income,1029.059,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ trading growth.
-ecobank-ghana,base,FY2029E,income_statement,other_operating_income,69.967,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ 5% growth.
-ecobank-ghana,base,FY2029E,income_statement,total_operating_income,5360.019,GHS millions,MODEL-ESTIMATE,estimated,NII + net fees + trading + other operating income.
-ecobank-ghana,base,FY2029E,income_statement,staff_costs,1050.396,GHS millions,MODEL-ESTIMATE,estimated,Linked to inflation_cpi_pct from macro.csv.
-ecobank-ghana,base,FY2029E,income_statement,depreciation_amortisation,104.156,GHS millions,MODEL-ESTIMATE,estimated,4% annual growth.
-ecobank-ghana,base,FY2029E,income_statement,other_operating_expenses,947.373,GHS millions,MODEL-ESTIMATE,estimated,Linked to inflation_cpi_pct from macro.csv.
+ecobank-ghana,base,FY2029E,income_statement,net_interest_income,3295.266,GHS millions,MODEL-ESTIMATE,estimated,interest_income - interest_expense.
+ecobank-ghana,base,FY2029E,income_statement,fee_commission_income,1158.693,GHS millions,MODEL-ESTIMATE,estimated,Linked to nominal GDP (macro.csv).
+ecobank-ghana,base,FY2029E,income_statement,fee_commission_expense,192.193,GHS millions,MODEL-ESTIMATE,estimated,0.8x fee growth.
+ecobank-ghana,base,FY2029E,income_statement,net_trading_income,1029.033,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ trading growth.
+ecobank-ghana,base,FY2029E,income_statement,other_operating_income,69.965,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ 5% growth.
+ecobank-ghana,base,FY2029E,income_statement,total_operating_income,5360.764,GHS millions,MODEL-ESTIMATE,estimated,NII + net fees + trading + other operating income.
+ecobank-ghana,base,FY2029E,income_statement,staff_costs,1050.369,GHS millions,MODEL-ESTIMATE,estimated,Linked to inflation_cpi_pct from macro.csv.
+ecobank-ghana,base,FY2029E,income_statement,depreciation_amortisation,104.154,GHS millions,MODEL-ESTIMATE,estimated,4% annual growth.
+ecobank-ghana,base,FY2029E,income_statement,other_operating_expenses,947.349,GHS millions,MODEL-ESTIMATE,estimated,Linked to inflation_cpi_pct from macro.csv.
 ecobank-ghana,base,FY2029E,income_statement,x_lease_finance_cost,12.116,GHS millions,MODEL-ESTIMATE,estimated,Consistent with historical separate line item.
 ecobank-ghana,base,FY2029E,income_statement,impairment_charge,348.366,GHS millions,MODEL-ESTIMATE,estimated,avg net loans * cost_of_risk.
-ecobank-ghana,base,FY2029E,income_statement,profit_before_tax,2897.613,GHS millions,MODEL-ESTIMATE,estimated,total_operating_income - opex - x_lease_finance_cost - impairment.
-ecobank-ghana,base,FY2029E,income_statement,income_tax,1014.164,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax * tax_rate (includes levies).
-ecobank-ghana,base,FY2029E,income_statement,profit_after_tax,1883.448,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax - income_tax.
-ecobank-ghana,base,FY2029E,balance_sheet,cash_and_bog_balances,24321.243,GHS millions,MODEL-ESTIMATE,estimated,Respects >= crr_pct (20%) on customer_deposits; includes due_from_banks aggregate.
+ecobank-ghana,base,FY2029E,income_statement,profit_before_tax,2898.410,GHS millions,MODEL-ESTIMATE,estimated,total_operating_income - opex - x_lease_finance_cost - impairment.
+ecobank-ghana,base,FY2029E,income_statement,income_tax,1014.443,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax * tax_rate (includes levies).
+ecobank-ghana,base,FY2029E,income_statement,profit_after_tax,1883.966,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax - income_tax.
+ecobank-ghana,base,FY2029E,balance_sheet,cash_and_bog_balances,24328.417,GHS millions,MODEL-ESTIMATE,estimated,Proxy screen >= crr_pct (20%) on customer_deposits; includes due_from_banks aggregate.
 ecobank-ghana,base,FY2029E,balance_sheet,due_from_banks,,GHS millions,MODEL-ESTIMATE,unavailable,Not split from cash_and_bog_balances (same basis as historical summary statements).
-ecobank-ghana,base,FY2029E,balance_sheet,investment_securities,24321.243,GHS millions,MODEL-ESTIMATE,estimated,Balancing liquid asset = total_assets - loans - ppe - other - cash; solved iteratively with interest_income.
+ecobank-ghana,base,FY2029E,balance_sheet,investment_securities,24328.417,GHS millions,MODEL-ESTIMATE,estimated,Balancing liquid asset = total_assets - loans - ppe - other - cash; solved iteratively.
 ecobank-ghana,base,FY2029E,balance_sheet,loans_and_advances_gross,,GHS millions,MODEL-ESTIMATE,unavailable,Not split in GSE summary history; net loans projected.
 ecobank-ghana,base,FY2029E,balance_sheet,loan_loss_allowance,,GHS millions,MODEL-ESTIMATE,unavailable,Not split in GSE summary history; net loans projected.
 ecobank-ghana,base,FY2029E,balance_sheet,loans_and_advances_net,24762.365,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ linked to nominal GDP.
 ecobank-ghana,base,FY2029E,balance_sheet,property_equipment_intangibles,1421.513,GHS millions,MODEL-ESTIMATE,estimated,3% annual growth.
 ecobank-ghana,base,FY2029E,balance_sheet,other_assets,3850.501,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
-ecobank-ghana,base,FY2029E,balance_sheet,total_assets,78676.865,GHS millions,MODEL-ESTIMATE,estimated,total_liabilities + total_equity.
+ecobank-ghana,base,FY2029E,balance_sheet,total_assets,78691.214,GHS millions,MODEL-ESTIMATE,estimated,total_liabilities + total_equity.
 ecobank-ghana,base,FY2029E,balance_sheet,customer_deposits,53607.953,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ linked to nominal GDP.
 ecobank-ghana,base,FY2029E,balance_sheet,due_to_banks,8457.502,GHS millions,MODEL-ESTIMATE,estimated,0.5 * deposit_growth.
 ecobank-ghana,base,FY2029E,balance_sheet,borrowings,281.321,GHS millions,MODEL-ESTIMATE,estimated,Held flat.
 ecobank-ghana,base,FY2029E,balance_sheet,other_liabilities,3159.363,GHS millions,MODEL-ESTIMATE,estimated,Tracks CPI inflation.
 ecobank-ghana,base,FY2029E,balance_sheet,total_liabilities,65506.138,GHS millions,MODEL-ESTIMATE,estimated,Sum of liability items.
 ecobank-ghana,base,FY2029E,balance_sheet,stated_capital,416.641,GHS millions,MODEL-ESTIMATE,estimated,Held flat.
-ecobank-ghana,base,FY2029E,balance_sheet,retained_earnings,10365.493,GHS millions,MODEL-ESTIMATE,estimated,Prior retained_earnings + PAT - dividends (9M-26 OCI/div preserved in FY26E).
+ecobank-ghana,base,FY2029E,balance_sheet,retained_earnings,10379.843,GHS millions,MODEL-ESTIMATE,estimated,Prior retained_earnings + PAT - dividends (9M-26 OCI/div preserved in FY26E).
 ecobank-ghana,base,FY2029E,balance_sheet,reserves_other,2388.592,GHS millions,MODEL-ESTIMATE,estimated,Held flat.
-ecobank-ghana,base,FY2029E,balance_sheet,total_equity,13170.726,GHS millions,MODEL-ESTIMATE,estimated,stated_capital + retained_earnings + reserves_other.
-ecobank-ghana,base,FY2029E,ratios,car_pct,20.402,%,MODEL-ESTIMATE,estimated,Proxy only (not prudential RWA): total_equity / (total_assets * 9M-26_RWA_density).
+ecobank-ghana,base,FY2029E,balance_sheet,total_equity,13185.076,GHS millions,MODEL-ESTIMATE,estimated,stated_capital + retained_earnings + reserves_other.
+ecobank-ghana,base,FY2029E,ratios,car_pct,20.421,%,MODEL-ESTIMATE,estimated,Proxy only (not prudential RWA): total_equity / (total_assets * 9M-26_RWA_density).
 ecobank-ghana,base,FY2029E,ratios,tier1_pct,,%,MODEL-ESTIMATE,unavailable,Not projected separately; CET1/Tier 1 unavailable in summary history.
 ecobank-ghana,base,FY2029E,ratios,npl_pct,10.990,%,MODEL-ESTIMATE,estimated,Estimated NPL path anchored on 9M-2026 reported 14.99%.
 ecobank-ghana,base,FY2029E,ratios,ldr_pct,46.192,%,MODEL-ESTIMATE,estimated,loans_and_advances_net / customer_deposits * 100 (net basis).
-ecobank-ghana,base,FY2029E,ratios,cost_to_income_pct,39.441,%,MODEL-ESTIMATE,estimated,(staff + da + other_opex + x_lease_finance_cost) / total_operating_income * 100.
-ecobank-ghana,base,FY2029E,ratios,roe_pct,15.111,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_equity * 100.
+ecobank-ghana,base,FY2029E,ratios,cost_to_income_pct,39.434,%,MODEL-ESTIMATE,estimated,(staff + da + other_opex + x_lease_finance_cost) / total_operating_income * 100.
+ecobank-ghana,base,FY2029E,ratios,roe_pct,15.098,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_equity * 100.
 ecobank-ghana,base,FY2029E,ratios,roa_pct,2.529,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_assets * 100.
-ecobank-ghana,base,FY2030E,income_statement,interest_income,7339.635,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26+Q4; FY27E+ avg loans*y_loan + avg inv*y_inv (y_inv linked to macro.csv tbill_364d+bond).
+ecobank-ghana,base,FY2030E,income_statement,interest_income,7340.435,GHS millions,MODEL-ESTIMATE,estimated,FY26E = 9M-26 + iterative Q4; FY27E+ = avg loans*y_loan + avg inv*y_inv (macro.csv).
 ecobank-ghana,base,FY2030E,income_statement,interest_expense,3969.562,GHS millions,MODEL-ESTIMATE,estimated,Linked to macro.csv tbill_91d_pct.
-ecobank-ghana,base,FY2030E,income_statement,net_interest_income,3370.073,GHS millions,MODEL-ESTIMATE,estimated,interest_income - interest_expense.
-ecobank-ghana,base,FY2030E,income_statement,fee_commission_income,1311.488,GHS millions,MODEL-ESTIMATE,estimated,Linked to nominal GDP (gdp_growth_pct + inflation_cpi_pct from macro.csv).
-ecobank-ghana,base,FY2030E,income_statement,fee_commission_expense,212.470,GHS millions,MODEL-ESTIMATE,estimated,0.8x fee growth.
-ecobank-ghana,base,FY2030E,income_statement,net_trading_income,1111.383,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ trading growth.
-ecobank-ghana,base,FY2030E,income_statement,other_operating_income,73.465,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ 5% growth.
-ecobank-ghana,base,FY2030E,income_statement,total_operating_income,5653.940,GHS millions,MODEL-ESTIMATE,estimated,NII + net fees + trading + other operating income.
-ecobank-ghana,base,FY2030E,income_statement,staff_costs,1155.435,GHS millions,MODEL-ESTIMATE,estimated,Linked to inflation_cpi_pct from macro.csv.
-ecobank-ghana,base,FY2030E,income_statement,depreciation_amortisation,108.323,GHS millions,MODEL-ESTIMATE,estimated,4% annual growth.
-ecobank-ghana,base,FY2030E,income_statement,other_operating_expenses,1042.110,GHS millions,MODEL-ESTIMATE,estimated,Linked to inflation_cpi_pct from macro.csv.
+ecobank-ghana,base,FY2030E,income_statement,net_interest_income,3370.873,GHS millions,MODEL-ESTIMATE,estimated,interest_income - interest_expense.
+ecobank-ghana,base,FY2030E,income_statement,fee_commission_income,1311.456,GHS millions,MODEL-ESTIMATE,estimated,Linked to nominal GDP (macro.csv).
+ecobank-ghana,base,FY2030E,income_statement,fee_commission_expense,212.465,GHS millions,MODEL-ESTIMATE,estimated,0.8x fee growth.
+ecobank-ghana,base,FY2030E,income_statement,net_trading_income,1111.356,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ trading growth.
+ecobank-ghana,base,FY2030E,income_statement,other_operating_income,73.463,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ 5% growth.
+ecobank-ghana,base,FY2030E,income_statement,total_operating_income,5654.683,GHS millions,MODEL-ESTIMATE,estimated,NII + net fees + trading + other operating income.
+ecobank-ghana,base,FY2030E,income_statement,staff_costs,1155.406,GHS millions,MODEL-ESTIMATE,estimated,Linked to inflation_cpi_pct from macro.csv.
+ecobank-ghana,base,FY2030E,income_statement,depreciation_amortisation,108.320,GHS millions,MODEL-ESTIMATE,estimated,4% annual growth.
+ecobank-ghana,base,FY2030E,income_statement,other_operating_expenses,1042.084,GHS millions,MODEL-ESTIMATE,estimated,Linked to inflation_cpi_pct from macro.csv.
 ecobank-ghana,base,FY2030E,income_statement,x_lease_finance_cost,12.358,GHS millions,MODEL-ESTIMATE,estimated,Consistent with historical separate line item.
 ecobank-ghana,base,FY2030E,income_statement,impairment_charge,397.778,GHS millions,MODEL-ESTIMATE,estimated,avg net loans * cost_of_risk.
-ecobank-ghana,base,FY2030E,income_statement,profit_before_tax,2937.936,GHS millions,MODEL-ESTIMATE,estimated,total_operating_income - opex - x_lease_finance_cost - impairment.
-ecobank-ghana,base,FY2030E,income_statement,income_tax,1028.278,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax * tax_rate (includes levies).
-ecobank-ghana,base,FY2030E,income_statement,profit_after_tax,1909.658,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax - income_tax.
-ecobank-ghana,base,FY2030E,balance_sheet,cash_and_bog_balances,27160.360,GHS millions,MODEL-ESTIMATE,estimated,Respects >= crr_pct (20%) on customer_deposits; includes due_from_banks aggregate.
+ecobank-ghana,base,FY2030E,income_statement,profit_before_tax,2938.737,GHS millions,MODEL-ESTIMATE,estimated,total_operating_income - opex - x_lease_finance_cost - impairment.
+ecobank-ghana,base,FY2030E,income_statement,income_tax,1028.558,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax * tax_rate (includes levies).
+ecobank-ghana,base,FY2030E,income_statement,profit_after_tax,1910.179,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax - income_tax.
+ecobank-ghana,base,FY2030E,balance_sheet,cash_and_bog_balances,27167.730,GHS millions,MODEL-ESTIMATE,estimated,Proxy screen >= crr_pct (20%) on customer_deposits; includes due_from_banks aggregate.
 ecobank-ghana,base,FY2030E,balance_sheet,due_from_banks,,GHS millions,MODEL-ESTIMATE,unavailable,Not split from cash_and_bog_balances (same basis as historical summary statements).
-ecobank-ghana,base,FY2030E,balance_sheet,investment_securities,27160.360,GHS millions,MODEL-ESTIMATE,estimated,Balancing liquid asset = total_assets - loans - ppe - other - cash; solved iteratively with interest_income.
+ecobank-ghana,base,FY2030E,balance_sheet,investment_securities,27167.730,GHS millions,MODEL-ESTIMATE,estimated,Balancing liquid asset = total_assets - loans - ppe - other - cash; solved iteratively.
 ecobank-ghana,base,FY2030E,balance_sheet,loans_and_advances_gross,,GHS millions,MODEL-ESTIMATE,unavailable,Not split in GSE summary history; net loans projected.
 ecobank-ghana,base,FY2030E,balance_sheet,loan_loss_allowance,,GHS millions,MODEL-ESTIMATE,unavailable,Not split in GSE summary history; net loans projected.
 ecobank-ghana,base,FY2030E,balance_sheet,loans_and_advances_net,28274.659,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ linked to nominal GDP.
 ecobank-ghana,base,FY2030E,balance_sheet,property_equipment_intangibles,1464.159,GHS millions,MODEL-ESTIMATE,estimated,3% annual growth.
 ecobank-ghana,base,FY2030E,balance_sheet,other_assets,3927.511,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
-ecobank-ghana,base,FY2030E,balance_sheet,total_assets,87987.049,GHS millions,MODEL-ESTIMATE,estimated,total_liabilities + total_equity.
+ecobank-ghana,base,FY2030E,balance_sheet,total_assets,88001.789,GHS millions,MODEL-ESTIMATE,estimated,total_liabilities + total_equity.
 ecobank-ghana,base,FY2030E,balance_sheet,customer_deposits,60675.625,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ linked to nominal GDP.
 ecobank-ghana,base,FY2030E,balance_sheet,due_to_banks,9015.020,GHS millions,MODEL-ESTIMATE,estimated,0.5 * deposit_growth.
 ecobank-ghana,base,FY2030E,balance_sheet,borrowings,281.321,GHS millions,MODEL-ESTIMATE,estimated,Held flat.
 ecobank-ghana,base,FY2030E,balance_sheet,other_liabilities,3412.112,GHS millions,MODEL-ESTIMATE,estimated,Tracks CPI inflation.
 ecobank-ghana,base,FY2030E,balance_sheet,total_liabilities,73384.078,GHS millions,MODEL-ESTIMATE,estimated,Sum of liability items.
 ecobank-ghana,base,FY2030E,balance_sheet,stated_capital,416.641,GHS millions,MODEL-ESTIMATE,estimated,Held flat.
-ecobank-ghana,base,FY2030E,balance_sheet,retained_earnings,11797.737,GHS millions,MODEL-ESTIMATE,estimated,Prior retained_earnings + PAT - dividends (9M-26 OCI/div preserved in FY26E).
+ecobank-ghana,base,FY2030E,balance_sheet,retained_earnings,11812.477,GHS millions,MODEL-ESTIMATE,estimated,Prior retained_earnings + PAT - dividends (9M-26 OCI/div preserved in FY26E).
 ecobank-ghana,base,FY2030E,balance_sheet,reserves_other,2388.592,GHS millions,MODEL-ESTIMATE,estimated,Held flat.
-ecobank-ghana,base,FY2030E,balance_sheet,total_equity,14602.970,GHS millions,MODEL-ESTIMATE,estimated,stated_capital + retained_earnings + reserves_other.
-ecobank-ghana,base,FY2030E,ratios,car_pct,20.227,%,MODEL-ESTIMATE,estimated,Proxy only (not prudential RWA): total_equity / (total_assets * 9M-26_RWA_density).
+ecobank-ghana,base,FY2030E,balance_sheet,total_equity,14617.710,GHS millions,MODEL-ESTIMATE,estimated,stated_capital + retained_earnings + reserves_other.
+ecobank-ghana,base,FY2030E,ratios,car_pct,20.244,%,MODEL-ESTIMATE,estimated,Proxy only (not prudential RWA): total_equity / (total_assets * 9M-26_RWA_density).
 ecobank-ghana,base,FY2030E,ratios,tier1_pct,,%,MODEL-ESTIMATE,unavailable,Not projected separately; CET1/Tier 1 unavailable in summary history.
 ecobank-ghana,base,FY2030E,ratios,npl_pct,9.990,%,MODEL-ESTIMATE,estimated,Estimated NPL path anchored on 9M-2026 reported 14.99%.
 ecobank-ghana,base,FY2030E,ratios,ldr_pct,46.600,%,MODEL-ESTIMATE,estimated,loans_and_advances_net / customer_deposits * 100 (net basis).
-ecobank-ghana,base,FY2030E,ratios,cost_to_income_pct,41.002,%,MODEL-ESTIMATE,estimated,(staff + da + other_opex + x_lease_finance_cost) / total_operating_income * 100.
-ecobank-ghana,base,FY2030E,ratios,roe_pct,13.752,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_equity * 100.
+ecobank-ghana,base,FY2030E,ratios,cost_to_income_pct,40.996,%,MODEL-ESTIMATE,estimated,(staff + da + other_opex + x_lease_finance_cost) / total_operating_income * 100.
+ecobank-ghana,base,FY2030E,ratios,roe_pct,13.741,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_equity * 100.
 ecobank-ghana,base,FY2030E,ratios,roa_pct,2.292,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_assets * 100.
-ecobank-ghana,downside,FY2026E,income_statement,interest_income,4420.115,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26+Q4; FY27E+ avg loans*y_loan + avg inv*y_inv (y_inv linked to macro.csv tbill_364d+bond).
+ecobank-ghana,downside,FY2026E,income_statement,interest_income,4437.823,GHS millions,MODEL-ESTIMATE,estimated,FY26E = 9M-26 + iterative Q4; FY27E+ = avg loans*y_loan + avg inv*y_inv (macro.csv).
 ecobank-ghana,downside,FY2026E,income_statement,interest_expense,1313.276,GHS millions,MODEL-ESTIMATE,estimated,Linked to macro.csv tbill_91d_pct.
-ecobank-ghana,downside,FY2026E,income_statement,net_interest_income,3106.840,GHS millions,MODEL-ESTIMATE,estimated,interest_income - interest_expense.
-ecobank-ghana,downside,FY2026E,income_statement,fee_commission_income,767.812,GHS millions,MODEL-ESTIMATE,estimated,Linked to nominal GDP (gdp_growth_pct + inflation_cpi_pct from macro.csv).
+ecobank-ghana,downside,FY2026E,income_statement,net_interest_income,3124.547,GHS millions,MODEL-ESTIMATE,estimated,interest_income - interest_expense.
+ecobank-ghana,downside,FY2026E,income_statement,fee_commission_income,767.812,GHS millions,MODEL-ESTIMATE,estimated,Linked to nominal GDP (macro.csv).
 ecobank-ghana,downside,FY2026E,income_statement,fee_commission_expense,136.669,GHS millions,MODEL-ESTIMATE,estimated,0.8x fee growth.
 ecobank-ghana,downside,FY2026E,income_statement,net_trading_income,784.224,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ trading growth.
 ecobank-ghana,downside,FY2026E,income_statement,other_operating_income,58.022,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ 5% growth.
-ecobank-ghana,downside,FY2026E,income_statement,total_operating_income,4580.228,GHS millions,MODEL-ESTIMATE,estimated,NII + net fees + trading + other operating income.
+ecobank-ghana,downside,FY2026E,income_statement,total_operating_income,4597.936,GHS millions,MODEL-ESTIMATE,estimated,NII + net fees + trading + other operating income.
 ecobank-ghana,downside,FY2026E,income_statement,staff_costs,761.070,GHS millions,MODEL-ESTIMATE,estimated,Linked to inflation_cpi_pct from macro.csv.
 ecobank-ghana,downside,FY2026E,income_statement,depreciation_amortisation,88.891,GHS millions,MODEL-ESTIMATE,estimated,4% annual growth.
 ecobank-ghana,downside,FY2026E,income_statement,other_operating_expenses,686.424,GHS millions,MODEL-ESTIMATE,estimated,Linked to inflation_cpi_pct from macro.csv.
 ecobank-ghana,downside,FY2026E,income_statement,x_lease_finance_cost,10.961,GHS millions,MODEL-ESTIMATE,estimated,Consistent with historical separate line item.
 ecobank-ghana,downside,FY2026E,income_statement,impairment_charge,248.169,GHS millions,MODEL-ESTIMATE,estimated,avg net loans * cost_of_risk.
-ecobank-ghana,downside,FY2026E,income_statement,profit_before_tax,2784.713,GHS millions,MODEL-ESTIMATE,estimated,total_operating_income - opex - x_lease_finance_cost - impairment.
-ecobank-ghana,downside,FY2026E,income_statement,income_tax,988.602,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax * tax_rate (includes levies).
-ecobank-ghana,downside,FY2026E,income_statement,profit_after_tax,1796.111,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax - income_tax.
-ecobank-ghana,downside,FY2026E,balance_sheet,cash_and_bog_balances,16722.762,GHS millions,MODEL-ESTIMATE,estimated,Respects >= crr_pct (20%) on customer_deposits; includes due_from_banks aggregate.
+ecobank-ghana,downside,FY2026E,income_statement,profit_before_tax,2802.421,GHS millions,MODEL-ESTIMATE,estimated,total_operating_income - opex - x_lease_finance_cost - impairment.
+ecobank-ghana,downside,FY2026E,income_statement,income_tax,994.977,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax * tax_rate (includes levies).
+ecobank-ghana,downside,FY2026E,income_statement,profit_after_tax,1807.445,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax - income_tax.
+ecobank-ghana,downside,FY2026E,balance_sheet,cash_and_bog_balances,16728.429,GHS millions,MODEL-ESTIMATE,estimated,Proxy screen >= crr_pct (20%) on customer_deposits; includes due_from_banks aggregate.
 ecobank-ghana,downside,FY2026E,balance_sheet,due_from_banks,,GHS millions,MODEL-ESTIMATE,unavailable,Not split from cash_and_bog_balances (same basis as historical summary statements).
-ecobank-ghana,downside,FY2026E,balance_sheet,investment_securities,16722.762,GHS millions,MODEL-ESTIMATE,estimated,Balancing liquid asset = total_assets - loans - ppe - other - cash; solved iteratively with interest_income.
+ecobank-ghana,downside,FY2026E,balance_sheet,investment_securities,16728.429,GHS millions,MODEL-ESTIMATE,estimated,Balancing liquid asset = total_assets - loans - ppe - other - cash; solved iteratively.
 ecobank-ghana,downside,FY2026E,balance_sheet,loans_and_advances_gross,,GHS millions,MODEL-ESTIMATE,unavailable,Not split in GSE summary history; net loans projected.
 ecobank-ghana,downside,FY2026E,balance_sheet,loan_loss_allowance,,GHS millions,MODEL-ESTIMATE,unavailable,Not split in GSE summary history; net loans projected.
 ecobank-ghana,downside,FY2026E,balance_sheet,loans_and_advances_net,16323.625,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ linked to nominal GDP.
 ecobank-ghana,downside,FY2026E,balance_sheet,property_equipment_intangibles,1300.886,GHS millions,MODEL-ESTIMATE,estimated,3% annual growth.
 ecobank-ghana,downside,FY2026E,balance_sheet,other_assets,3628.413,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
-ecobank-ghana,downside,FY2026E,balance_sheet,total_assets,54698.449,GHS millions,MODEL-ESTIMATE,estimated,total_liabilities + total_equity.
+ecobank-ghana,downside,FY2026E,balance_sheet,total_assets,54709.782,GHS millions,MODEL-ESTIMATE,estimated,total_liabilities + total_equity.
 ecobank-ghana,downside,FY2026E,balance_sheet,customer_deposits,36461.193,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ linked to nominal GDP.
 ecobank-ghana,downside,FY2026E,balance_sheet,due_to_banks,6934.728,GHS millions,MODEL-ESTIMATE,estimated,0.5 * deposit_growth.
 ecobank-ghana,downside,FY2026E,balance_sheet,borrowings,281.321,GHS millions,MODEL-ESTIMATE,estimated,Held flat.
 ecobank-ghana,downside,FY2026E,balance_sheet,other_liabilities,2519.669,GHS millions,MODEL-ESTIMATE,estimated,Tracks CPI inflation.
 ecobank-ghana,downside,FY2026E,balance_sheet,total_liabilities,46196.911,GHS millions,MODEL-ESTIMATE,estimated,Sum of liability items.
 ecobank-ghana,downside,FY2026E,balance_sheet,stated_capital,416.641,GHS millions,MODEL-ESTIMATE,estimated,Held flat.
-ecobank-ghana,downside,FY2026E,balance_sheet,retained_earnings,5696.304,GHS millions,MODEL-ESTIMATE,estimated,Prior retained_earnings + PAT - dividends (9M-26 OCI/div preserved in FY26E).
+ecobank-ghana,downside,FY2026E,balance_sheet,retained_earnings,5707.638,GHS millions,MODEL-ESTIMATE,estimated,Prior retained_earnings + PAT - dividends (9M-26 OCI/div preserved in FY26E).
 ecobank-ghana,downside,FY2026E,balance_sheet,reserves_other,2388.592,GHS millions,MODEL-ESTIMATE,estimated,Held flat.
-ecobank-ghana,downside,FY2026E,balance_sheet,total_equity,8501.537,GHS millions,MODEL-ESTIMATE,estimated,stated_capital + retained_earnings + reserves_other.
-ecobank-ghana,downside,FY2026E,ratios,car_pct,18.942,%,MODEL-ESTIMATE,estimated,Proxy only (not prudential RWA): total_equity / (total_assets * 9M-26_RWA_density).
+ecobank-ghana,downside,FY2026E,balance_sheet,total_equity,8512.871,GHS millions,MODEL-ESTIMATE,estimated,stated_capital + retained_earnings + reserves_other.
+ecobank-ghana,downside,FY2026E,ratios,car_pct,18.964,%,MODEL-ESTIMATE,estimated,Proxy only (not prudential RWA): total_equity / (total_assets * 9M-26_RWA_density).
 ecobank-ghana,downside,FY2026E,ratios,tier1_pct,,%,MODEL-ESTIMATE,unavailable,Not projected separately; CET1/Tier 1 unavailable in summary history.
 ecobank-ghana,downside,FY2026E,ratios,npl_pct,16.190,%,MODEL-ESTIMATE,estimated,Estimated NPL path anchored on 9M-2026 reported 14.99%.
 ecobank-ghana,downside,FY2026E,ratios,ldr_pct,44.770,%,MODEL-ESTIMATE,estimated,loans_and_advances_net / customer_deposits * 100 (net basis).
-ecobank-ghana,downside,FY2026E,ratios,cost_to_income_pct,33.783,%,MODEL-ESTIMATE,estimated,(staff + da + other_opex + x_lease_finance_cost) / total_operating_income * 100.
-ecobank-ghana,downside,FY2026E,ratios,roe_pct,23.064,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_equity * 100.
-ecobank-ghana,downside,FY2026E,ratios,roa_pct,3.565,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_assets * 100.
-ecobank-ghana,downside,FY2027E,income_statement,interest_income,6670.040,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26+Q4; FY27E+ avg loans*y_loan + avg inv*y_inv (y_inv linked to macro.csv tbill_364d+bond).
+ecobank-ghana,downside,FY2026E,ratios,cost_to_income_pct,33.653,%,MODEL-ESTIMATE,estimated,(staff + da + other_opex + x_lease_finance_cost) / total_operating_income * 100.
+ecobank-ghana,downside,FY2026E,ratios,roe_pct,23.192,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_equity * 100.
+ecobank-ghana,downside,FY2026E,ratios,roa_pct,3.587,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_assets * 100.
+ecobank-ghana,downside,FY2027E,income_statement,interest_income,6670.938,GHS millions,MODEL-ESTIMATE,estimated,FY26E = 9M-26 + iterative Q4; FY27E+ = avg loans*y_loan + avg inv*y_inv (macro.csv).
 ecobank-ghana,downside,FY2027E,income_statement,interest_expense,3467.899,GHS millions,MODEL-ESTIMATE,estimated,Linked to macro.csv tbill_91d_pct.
-ecobank-ghana,downside,FY2027E,income_statement,net_interest_income,3202.141,GHS millions,MODEL-ESTIMATE,estimated,interest_income - interest_expense.
-ecobank-ghana,downside,FY2027E,income_statement,fee_commission_income,877.839,GHS millions,MODEL-ESTIMATE,estimated,Linked to nominal GDP (gdp_growth_pct + inflation_cpi_pct from macro.csv).
+ecobank-ghana,downside,FY2027E,income_statement,net_interest_income,3203.038,GHS millions,MODEL-ESTIMATE,estimated,interest_income - interest_expense.
+ecobank-ghana,downside,FY2027E,income_statement,fee_commission_income,877.839,GHS millions,MODEL-ESTIMATE,estimated,Linked to nominal GDP (macro.csv).
 ecobank-ghana,downside,FY2027E,income_statement,fee_commission_expense,152.337,GHS millions,MODEL-ESTIMATE,estimated,0.8x fee growth.
 ecobank-ghana,downside,FY2027E,income_statement,net_trading_income,823.435,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ trading growth.
 ecobank-ghana,downside,FY2027E,income_statement,other_operating_income,60.924,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ 5% growth.
-ecobank-ghana,downside,FY2027E,income_statement,total_operating_income,4812.002,GHS millions,MODEL-ESTIMATE,estimated,NII + net fees + trading + other operating income.
+ecobank-ghana,downside,FY2027E,income_statement,total_operating_income,4812.899,GHS millions,MODEL-ESTIMATE,estimated,NII + net fees + trading + other operating income.
 ecobank-ghana,downside,FY2027E,income_statement,staff_costs,863.815,GHS millions,MODEL-ESTIMATE,estimated,Linked to inflation_cpi_pct from macro.csv.
 ecobank-ghana,downside,FY2027E,income_statement,depreciation_amortisation,92.447,GHS millions,MODEL-ESTIMATE,estimated,4% annual growth.
 ecobank-ghana,downside,FY2027E,income_statement,other_operating_expenses,779.092,GHS millions,MODEL-ESTIMATE,estimated,Linked to inflation_cpi_pct from macro.csv.
 ecobank-ghana,downside,FY2027E,income_statement,x_lease_finance_cost,11.180,GHS millions,MODEL-ESTIMATE,estimated,Consistent with historical separate line item.
 ecobank-ghana,downside,FY2027E,income_statement,impairment_charge,606.549,GHS millions,MODEL-ESTIMATE,estimated,avg net loans * cost_of_risk.
-ecobank-ghana,downside,FY2027E,income_statement,profit_before_tax,2458.920,GHS millions,MODEL-ESTIMATE,estimated,total_operating_income - opex - x_lease_finance_cost - impairment.
-ecobank-ghana,downside,FY2027E,income_statement,income_tax,885.211,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax * tax_rate (includes levies).
-ecobank-ghana,downside,FY2027E,income_statement,profit_after_tax,1573.709,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax - income_tax.
-ecobank-ghana,downside,FY2027E,balance_sheet,cash_and_bog_balances,19029.438,GHS millions,MODEL-ESTIMATE,estimated,Respects >= crr_pct (20%) on customer_deposits; includes due_from_banks aggregate.
+ecobank-ghana,downside,FY2027E,income_statement,profit_before_tax,2459.817,GHS millions,MODEL-ESTIMATE,estimated,total_operating_income - opex - x_lease_finance_cost - impairment.
+ecobank-ghana,downside,FY2027E,income_statement,income_tax,885.534,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax * tax_rate (includes levies).
+ecobank-ghana,downside,FY2027E,income_statement,profit_after_tax,1574.283,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax - income_tax.
+ecobank-ghana,downside,FY2027E,balance_sheet,cash_and_bog_balances,19035.349,GHS millions,MODEL-ESTIMATE,estimated,Proxy screen >= crr_pct (20%) on customer_deposits; includes due_from_banks aggregate.
 ecobank-ghana,downside,FY2027E,balance_sheet,due_from_banks,,GHS millions,MODEL-ESTIMATE,unavailable,Not split from cash_and_bog_balances (same basis as historical summary statements).
-ecobank-ghana,downside,FY2027E,balance_sheet,investment_securities,19029.438,GHS millions,MODEL-ESTIMATE,estimated,Balancing liquid asset = total_assets - loans - ppe - other - cash; solved iteratively with interest_income.
+ecobank-ghana,downside,FY2027E,balance_sheet,investment_securities,19035.349,GHS millions,MODEL-ESTIMATE,estimated,Balancing liquid asset = total_assets - loans - ppe - other - cash; solved iteratively.
 ecobank-ghana,downside,FY2027E,balance_sheet,loans_and_advances_gross,,GHS millions,MODEL-ESTIMATE,unavailable,Not split in GSE summary history; net loans projected.
 ecobank-ghana,downside,FY2027E,balance_sheet,loan_loss_allowance,,GHS millions,MODEL-ESTIMATE,unavailable,Not split in GSE summary history; net loans projected.
 ecobank-ghana,downside,FY2027E,balance_sheet,loans_and_advances_net,18336.328,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ linked to nominal GDP.
 ecobank-ghana,downside,FY2027E,balance_sheet,property_equipment_intangibles,1339.913,GHS millions,MODEL-ESTIMATE,estimated,3% annual growth.
 ecobank-ghana,downside,FY2027E,balance_sheet,other_assets,3700.981,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
-ecobank-ghana,downside,FY2027E,balance_sheet,total_assets,61436.099,GHS millions,MODEL-ESTIMATE,estimated,total_liabilities + total_equity.
+ecobank-ghana,downside,FY2027E,balance_sheet,total_assets,61447.920,GHS millions,MODEL-ESTIMATE,estimated,total_liabilities + total_equity.
 ecobank-ghana,downside,FY2027E,balance_sheet,customer_deposits,41139.164,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ linked to nominal GDP.
 ecobank-ghana,downside,FY2027E,balance_sheet,due_to_banks,7379.591,GHS millions,MODEL-ESTIMATE,estimated,0.5 * deposit_growth.
 ecobank-ghana,downside,FY2027E,balance_sheet,borrowings,281.321,GHS millions,MODEL-ESTIMATE,estimated,Held flat.
 ecobank-ghana,downside,FY2027E,balance_sheet,other_liabilities,2796.833,GHS millions,MODEL-ESTIMATE,estimated,Tracks CPI inflation.
 ecobank-ghana,downside,FY2027E,balance_sheet,total_liabilities,51596.909,GHS millions,MODEL-ESTIMATE,estimated,Sum of liability items.
 ecobank-ghana,downside,FY2027E,balance_sheet,stated_capital,416.641,GHS millions,MODEL-ESTIMATE,estimated,Held flat.
-ecobank-ghana,downside,FY2027E,balance_sheet,retained_earnings,7033.957,GHS millions,MODEL-ESTIMATE,estimated,Prior retained_earnings + PAT - dividends (9M-26 OCI/div preserved in FY26E).
+ecobank-ghana,downside,FY2027E,balance_sheet,retained_earnings,7045.778,GHS millions,MODEL-ESTIMATE,estimated,Prior retained_earnings + PAT - dividends (9M-26 OCI/div preserved in FY26E).
 ecobank-ghana,downside,FY2027E,balance_sheet,reserves_other,2388.592,GHS millions,MODEL-ESTIMATE,estimated,Held flat.
-ecobank-ghana,downside,FY2027E,balance_sheet,total_equity,9839.190,GHS millions,MODEL-ESTIMATE,estimated,stated_capital + retained_earnings + reserves_other.
-ecobank-ghana,downside,FY2027E,ratios,car_pct,19.519,%,MODEL-ESTIMATE,estimated,Proxy only (not prudential RWA): total_equity / (total_assets * 9M-26_RWA_density).
+ecobank-ghana,downside,FY2027E,balance_sheet,total_equity,9851.011,GHS millions,MODEL-ESTIMATE,estimated,stated_capital + retained_earnings + reserves_other.
+ecobank-ghana,downside,FY2027E,ratios,car_pct,19.538,%,MODEL-ESTIMATE,estimated,Proxy only (not prudential RWA): total_equity / (total_assets * 9M-26_RWA_density).
 ecobank-ghana,downside,FY2027E,ratios,tier1_pct,,%,MODEL-ESTIMATE,unavailable,Not projected separately; CET1/Tier 1 unavailable in summary history.
 ecobank-ghana,downside,FY2027E,ratios,npl_pct,17.390,%,MODEL-ESTIMATE,estimated,Estimated NPL path anchored on 9M-2026 reported 14.99%.
 ecobank-ghana,downside,FY2027E,ratios,ldr_pct,44.571,%,MODEL-ESTIMATE,estimated,loans_and_advances_net / customer_deposits * 100 (net basis).
-ecobank-ghana,downside,FY2027E,ratios,cost_to_income_pct,36.295,%,MODEL-ESTIMATE,estimated,(staff + da + other_opex + x_lease_finance_cost) / total_operating_income * 100.
-ecobank-ghana,downside,FY2027E,ratios,roe_pct,17.161,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_equity * 100.
-ecobank-ghana,downside,FY2027E,ratios,roa_pct,2.710,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_assets * 100.
-ecobank-ghana,downside,FY2028E,income_statement,interest_income,7614.466,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26+Q4; FY27E+ avg loans*y_loan + avg inv*y_inv (y_inv linked to macro.csv tbill_364d+bond).
+ecobank-ghana,downside,FY2027E,ratios,cost_to_income_pct,36.289,%,MODEL-ESTIMATE,estimated,(staff + da + other_opex + x_lease_finance_cost) / total_operating_income * 100.
+ecobank-ghana,downside,FY2027E,ratios,roe_pct,17.145,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_equity * 100.
+ecobank-ghana,downside,FY2027E,ratios,roa_pct,2.711,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_assets * 100.
+ecobank-ghana,downside,FY2028E,income_statement,interest_income,7615.433,GHS millions,MODEL-ESTIMATE,estimated,FY26E = 9M-26 + iterative Q4; FY27E+ = avg loans*y_loan + avg inv*y_inv (macro.csv).
 ecobank-ghana,downside,FY2028E,income_statement,interest_expense,4910.005,GHS millions,MODEL-ESTIMATE,estimated,Linked to macro.csv tbill_91d_pct.
-ecobank-ghana,downside,FY2028E,income_statement,net_interest_income,2704.461,GHS millions,MODEL-ESTIMATE,estimated,interest_income - interest_expense.
-ecobank-ghana,downside,FY2028E,income_statement,fee_commission_income,1003.963,GHS millions,MODEL-ESTIMATE,estimated,Linked to nominal GDP (gdp_growth_pct + inflation_cpi_pct from macro.csv).
+ecobank-ghana,downside,FY2028E,income_statement,net_interest_income,2705.428,GHS millions,MODEL-ESTIMATE,estimated,interest_income - interest_expense.
+ecobank-ghana,downside,FY2028E,income_statement,fee_commission_income,1003.963,GHS millions,MODEL-ESTIMATE,estimated,Linked to nominal GDP (macro.csv).
 ecobank-ghana,downside,FY2028E,income_statement,fee_commission_expense,169.847,GHS millions,MODEL-ESTIMATE,estimated,0.8x fee growth.
 ecobank-ghana,downside,FY2028E,income_statement,net_trading_income,864.607,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ trading growth.
 ecobank-ghana,downside,FY2028E,income_statement,other_operating_income,63.970,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ 5% growth.
-ecobank-ghana,downside,FY2028E,income_statement,total_operating_income,4467.154,GHS millions,MODEL-ESTIMATE,estimated,NII + net fees + trading + other operating income.
+ecobank-ghana,downside,FY2028E,income_statement,total_operating_income,4468.121,GHS millions,MODEL-ESTIMATE,estimated,NII + net fees + trading + other operating income.
 ecobank-ghana,downside,FY2028E,income_statement,staff_costs,976.110,GHS millions,MODEL-ESTIMATE,estimated,Linked to inflation_cpi_pct from macro.csv.
 ecobank-ghana,downside,FY2028E,income_statement,depreciation_amortisation,96.144,GHS millions,MODEL-ESTIMATE,estimated,4% annual growth.
 ecobank-ghana,downside,FY2028E,income_statement,other_operating_expenses,880.374,GHS millions,MODEL-ESTIMATE,estimated,Linked to inflation_cpi_pct from macro.csv.
 ecobank-ghana,downside,FY2028E,income_statement,x_lease_finance_cost,11.403,GHS millions,MODEL-ESTIMATE,estimated,Consistent with historical separate line item.
 ecobank-ghana,downside,FY2028E,income_statement,impairment_charge,584.106,GHS millions,MODEL-ESTIMATE,estimated,avg net loans * cost_of_risk.
-ecobank-ghana,downside,FY2028E,income_statement,profit_before_tax,1919.016,GHS millions,MODEL-ESTIMATE,estimated,total_operating_income - opex - x_lease_finance_cost - impairment.
-ecobank-ghana,downside,FY2028E,income_statement,income_tax,690.846,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax * tax_rate (includes levies).
-ecobank-ghana,downside,FY2028E,income_statement,profit_after_tax,1228.170,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax - income_tax.
-ecobank-ghana,downside,FY2028E,balance_sheet,cash_and_bog_balances,21391.447,GHS millions,MODEL-ESTIMATE,estimated,Respects >= crr_pct (20%) on customer_deposits; includes due_from_banks aggregate.
+ecobank-ghana,downside,FY2028E,income_statement,profit_before_tax,1919.983,GHS millions,MODEL-ESTIMATE,estimated,total_operating_income - opex - x_lease_finance_cost - impairment.
+ecobank-ghana,downside,FY2028E,income_statement,income_tax,691.194,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax * tax_rate (includes levies).
+ecobank-ghana,downside,FY2028E,income_statement,profit_after_tax,1228.789,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax - income_tax.
+ecobank-ghana,downside,FY2028E,balance_sheet,cash_and_bog_balances,21397.620,GHS millions,MODEL-ESTIMATE,estimated,Proxy screen >= crr_pct (20%) on customer_deposits; includes due_from_banks aggregate.
 ecobank-ghana,downside,FY2028E,balance_sheet,due_from_banks,,GHS millions,MODEL-ESTIMATE,unavailable,Not split from cash_and_bog_balances (same basis as historical summary statements).
-ecobank-ghana,downside,FY2028E,balance_sheet,investment_securities,21391.447,GHS millions,MODEL-ESTIMATE,estimated,Balancing liquid asset = total_assets - loans - ppe - other - cash; solved iteratively with interest_income.
+ecobank-ghana,downside,FY2028E,balance_sheet,investment_securities,21397.620,GHS millions,MODEL-ESTIMATE,estimated,Balancing liquid asset = total_assets - loans - ppe - other - cash; solved iteratively.
 ecobank-ghana,downside,FY2028E,balance_sheet,loans_and_advances_gross,,GHS millions,MODEL-ESTIMATE,unavailable,Not split in GSE summary history; net loans projected.
 ecobank-ghana,downside,FY2028E,balance_sheet,loan_loss_allowance,,GHS millions,MODEL-ESTIMATE,unavailable,Not split in GSE summary history; net loans projected.
 ecobank-ghana,downside,FY2028E,balance_sheet,loans_and_advances_net,20604.073,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ linked to nominal GDP.
 ecobank-ghana,downside,FY2028E,balance_sheet,property_equipment_intangibles,1380.110,GHS millions,MODEL-ESTIMATE,estimated,3% annual growth.
 ecobank-ghana,downside,FY2028E,balance_sheet,other_assets,3775.001,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
-ecobank-ghana,downside,FY2028E,balance_sheet,total_assets,68542.077,GHS millions,MODEL-ESTIMATE,estimated,total_liabilities + total_equity.
+ecobank-ghana,downside,FY2028E,balance_sheet,total_assets,68554.424,GHS millions,MODEL-ESTIMATE,estimated,total_liabilities + total_equity.
 ecobank-ghana,downside,FY2028E,balance_sheet,customer_deposits,46432.746,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ linked to nominal GDP.
 ecobank-ghana,downside,FY2028E,balance_sheet,due_to_banks,7854.375,GHS millions,MODEL-ESTIMATE,estimated,0.5 * deposit_growth.
 ecobank-ghana,downside,FY2028E,balance_sheet,borrowings,281.321,GHS millions,MODEL-ESTIMATE,estimated,Held flat.
 ecobank-ghana,downside,FY2028E,balance_sheet,other_liabilities,3090.500,GHS millions,MODEL-ESTIMATE,estimated,Tracks CPI inflation.
 ecobank-ghana,downside,FY2028E,balance_sheet,total_liabilities,57658.943,GHS millions,MODEL-ESTIMATE,estimated,Sum of liability items.
 ecobank-ghana,downside,FY2028E,balance_sheet,stated_capital,416.641,GHS millions,MODEL-ESTIMATE,estimated,Held flat.
-ecobank-ghana,downside,FY2028E,balance_sheet,retained_earnings,8077.902,GHS millions,MODEL-ESTIMATE,estimated,Prior retained_earnings + PAT - dividends (9M-26 OCI/div preserved in FY26E).
+ecobank-ghana,downside,FY2028E,balance_sheet,retained_earnings,8090.249,GHS millions,MODEL-ESTIMATE,estimated,Prior retained_earnings + PAT - dividends (9M-26 OCI/div preserved in FY26E).
 ecobank-ghana,downside,FY2028E,balance_sheet,reserves_other,2388.592,GHS millions,MODEL-ESTIMATE,estimated,Held flat.
-ecobank-ghana,downside,FY2028E,balance_sheet,total_equity,10883.135,GHS millions,MODEL-ESTIMATE,estimated,stated_capital + retained_earnings + reserves_other.
-ecobank-ghana,downside,FY2028E,ratios,car_pct,19.351,%,MODEL-ESTIMATE,estimated,Proxy only (not prudential RWA): total_equity / (total_assets * 9M-26_RWA_density).
+ecobank-ghana,downside,FY2028E,balance_sheet,total_equity,10895.482,GHS millions,MODEL-ESTIMATE,estimated,stated_capital + retained_earnings + reserves_other.
+ecobank-ghana,downside,FY2028E,ratios,car_pct,19.370,%,MODEL-ESTIMATE,estimated,Proxy only (not prudential RWA): total_equity / (total_assets * 9M-26_RWA_density).
 ecobank-ghana,downside,FY2028E,ratios,tier1_pct,,%,MODEL-ESTIMATE,unavailable,Not projected separately; CET1/Tier 1 unavailable in summary history.
 ecobank-ghana,downside,FY2028E,ratios,npl_pct,18.590,%,MODEL-ESTIMATE,estimated,Estimated NPL path anchored on 9M-2026 reported 14.99%.
 ecobank-ghana,downside,FY2028E,ratios,ldr_pct,44.374,%,MODEL-ESTIMATE,estimated,loans_and_advances_net / customer_deposits * 100 (net basis).
-ecobank-ghana,downside,FY2028E,ratios,cost_to_income_pct,43.966,%,MODEL-ESTIMATE,estimated,(staff + da + other_opex + x_lease_finance_cost) / total_operating_income * 100.
-ecobank-ghana,downside,FY2028E,ratios,roe_pct,11.854,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_equity * 100.
+ecobank-ghana,downside,FY2028E,ratios,cost_to_income_pct,43.957,%,MODEL-ESTIMATE,estimated,(staff + da + other_opex + x_lease_finance_cost) / total_operating_income * 100.
+ecobank-ghana,downside,FY2028E,ratios,roe_pct,11.846,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_equity * 100.
 ecobank-ghana,downside,FY2028E,ratios,roa_pct,1.890,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_assets * 100.
-ecobank-ghana,downside,FY2029E,income_statement,interest_income,7719.868,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26+Q4; FY27E+ avg loans*y_loan + avg inv*y_inv (y_inv linked to macro.csv tbill_364d+bond).
+ecobank-ghana,downside,FY2029E,income_statement,interest_income,7720.765,GHS millions,MODEL-ESTIMATE,estimated,FY26E = 9M-26 + iterative Q4; FY27E+ = avg loans*y_loan + avg inv*y_inv (macro.csv).
 ecobank-ghana,downside,FY2029E,income_statement,interest_expense,4914.416,GHS millions,MODEL-ESTIMATE,estimated,Linked to macro.csv tbill_91d_pct.
-ecobank-ghana,downside,FY2029E,income_statement,net_interest_income,2805.452,GHS millions,MODEL-ESTIMATE,estimated,interest_income - interest_expense.
-ecobank-ghana,downside,FY2029E,income_statement,fee_commission_income,1148.533,GHS millions,MODEL-ESTIMATE,estimated,Linked to nominal GDP (gdp_growth_pct + inflation_cpi_pct from macro.csv).
+ecobank-ghana,downside,FY2029E,income_statement,net_interest_income,2806.349,GHS millions,MODEL-ESTIMATE,estimated,interest_income - interest_expense.
+ecobank-ghana,downside,FY2029E,income_statement,fee_commission_income,1148.533,GHS millions,MODEL-ESTIMATE,estimated,Linked to nominal GDP (macro.csv).
 ecobank-ghana,downside,FY2029E,income_statement,fee_commission_expense,189.413,GHS millions,MODEL-ESTIMATE,estimated,0.8x fee growth.
 ecobank-ghana,downside,FY2029E,income_statement,net_trading_income,907.837,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ trading growth.
 ecobank-ghana,downside,FY2029E,income_statement,other_operating_income,67.168,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ 5% growth.
-ecobank-ghana,downside,FY2029E,income_statement,total_operating_income,4739.578,GHS millions,MODEL-ESTIMATE,estimated,NII + net fees + trading + other operating income.
+ecobank-ghana,downside,FY2029E,income_statement,total_operating_income,4740.475,GHS millions,MODEL-ESTIMATE,estimated,NII + net fees + trading + other operating income.
 ecobank-ghana,downside,FY2029E,income_statement,staff_costs,1098.124,GHS millions,MODEL-ESTIMATE,estimated,Linked to inflation_cpi_pct from macro.csv.
 ecobank-ghana,downside,FY2029E,income_statement,depreciation_amortisation,99.990,GHS millions,MODEL-ESTIMATE,estimated,4% annual growth.
 ecobank-ghana,downside,FY2029E,income_statement,other_operating_expenses,990.420,GHS millions,MODEL-ESTIMATE,estimated,Linked to inflation_cpi_pct from macro.csv.
 ecobank-ghana,downside,FY2029E,income_statement,x_lease_finance_cost,11.632,GHS millions,MODEL-ESTIMATE,estimated,Consistent with historical separate line item.
 ecobank-ghana,downside,FY2029E,income_statement,impairment_charge,547.038,GHS millions,MODEL-ESTIMATE,estimated,avg net loans * cost_of_risk.
-ecobank-ghana,downside,FY2029E,income_statement,profit_before_tax,1992.374,GHS millions,MODEL-ESTIMATE,estimated,total_operating_income - opex - x_lease_finance_cost - impairment.
-ecobank-ghana,downside,FY2029E,income_statement,income_tax,717.255,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax * tax_rate (includes levies).
-ecobank-ghana,downside,FY2029E,income_statement,profit_after_tax,1275.119,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax - income_tax.
-ecobank-ghana,downside,FY2029E,balance_sheet,cash_and_bog_balances,24000.209,GHS millions,MODEL-ESTIMATE,estimated,Respects >= crr_pct (20%) on customer_deposits; includes due_from_banks aggregate.
+ecobank-ghana,downside,FY2029E,income_statement,profit_before_tax,1993.271,GHS millions,MODEL-ESTIMATE,estimated,total_operating_income - opex - x_lease_finance_cost - impairment.
+ecobank-ghana,downside,FY2029E,income_statement,income_tax,717.578,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax * tax_rate (includes levies).
+ecobank-ghana,downside,FY2029E,income_statement,profit_after_tax,1275.693,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax - income_tax.
+ecobank-ghana,downside,FY2029E,balance_sheet,cash_and_bog_balances,24006.626,GHS millions,MODEL-ESTIMATE,estimated,Proxy screen >= crr_pct (20%) on customer_deposits; includes due_from_banks aggregate.
 ecobank-ghana,downside,FY2029E,balance_sheet,due_from_banks,,GHS millions,MODEL-ESTIMATE,unavailable,Not split from cash_and_bog_balances (same basis as historical summary statements).
-ecobank-ghana,downside,FY2029E,balance_sheet,investment_securities,24000.209,GHS millions,MODEL-ESTIMATE,estimated,Balancing liquid asset = total_assets - loans - ppe - other - cash; solved iteratively with interest_income.
+ecobank-ghana,downside,FY2029E,balance_sheet,investment_securities,24006.626,GHS millions,MODEL-ESTIMATE,estimated,Balancing liquid asset = total_assets - loans - ppe - other - cash; solved iteratively.
 ecobank-ghana,downside,FY2029E,balance_sheet,loans_and_advances_gross,,GHS millions,MODEL-ESTIMATE,unavailable,Not split in GSE summary history; net loans projected.
 ecobank-ghana,downside,FY2029E,balance_sheet,loan_loss_allowance,,GHS millions,MODEL-ESTIMATE,unavailable,Not split in GSE summary history; net loans projected.
 ecobank-ghana,downside,FY2029E,balance_sheet,loans_and_advances_net,23158.978,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ linked to nominal GDP.
 ecobank-ghana,downside,FY2029E,balance_sheet,property_equipment_intangibles,1421.513,GHS millions,MODEL-ESTIMATE,estimated,3% annual growth.
 ecobank-ghana,downside,FY2029E,balance_sheet,other_assets,3850.501,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
-ecobank-ghana,downside,FY2029E,balance_sheet,total_assets,76431.410,GHS millions,MODEL-ESTIMATE,estimated,total_liabilities + total_equity.
+ecobank-ghana,downside,FY2029E,balance_sheet,total_assets,76444.245,GHS millions,MODEL-ESTIMATE,estimated,total_liabilities + total_equity.
 ecobank-ghana,downside,FY2029E,balance_sheet,customer_deposits,52422.570,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ linked to nominal GDP.
 ecobank-ghana,downside,FY2029E,balance_sheet,due_to_banks,8360.983,GHS millions,MODEL-ESTIMATE,estimated,0.5 * deposit_growth.
 ecobank-ghana,downside,FY2029E,balance_sheet,borrowings,281.321,GHS millions,MODEL-ESTIMATE,estimated,Held flat.
 ecobank-ghana,downside,FY2029E,balance_sheet,other_liabilities,3399.550,GHS millions,MODEL-ESTIMATE,estimated,Tracks CPI inflation.
 ecobank-ghana,downside,FY2029E,balance_sheet,total_liabilities,64464.424,GHS millions,MODEL-ESTIMATE,estimated,Sum of liability items.
 ecobank-ghana,downside,FY2029E,balance_sheet,stated_capital,416.641,GHS millions,MODEL-ESTIMATE,estimated,Held flat.
-ecobank-ghana,downside,FY2029E,balance_sheet,retained_earnings,9161.753,GHS millions,MODEL-ESTIMATE,estimated,Prior retained_earnings + PAT - dividends (9M-26 OCI/div preserved in FY26E).
+ecobank-ghana,downside,FY2029E,balance_sheet,retained_earnings,9174.588,GHS millions,MODEL-ESTIMATE,estimated,Prior retained_earnings + PAT - dividends (9M-26 OCI/div preserved in FY26E).
 ecobank-ghana,downside,FY2029E,balance_sheet,reserves_other,2388.592,GHS millions,MODEL-ESTIMATE,estimated,Held flat.
-ecobank-ghana,downside,FY2029E,balance_sheet,total_equity,11966.986,GHS millions,MODEL-ESTIMATE,estimated,stated_capital + retained_earnings + reserves_other.
-ecobank-ghana,downside,FY2029E,ratios,car_pct,19.082,%,MODEL-ESTIMATE,estimated,Proxy only (not prudential RWA): total_equity / (total_assets * 9M-26_RWA_density).
+ecobank-ghana,downside,FY2029E,balance_sheet,total_equity,11979.821,GHS millions,MODEL-ESTIMATE,estimated,stated_capital + retained_earnings + reserves_other.
+ecobank-ghana,downside,FY2029E,ratios,car_pct,19.099,%,MODEL-ESTIMATE,estimated,Proxy only (not prudential RWA): total_equity / (total_assets * 9M-26_RWA_density).
 ecobank-ghana,downside,FY2029E,ratios,tier1_pct,,%,MODEL-ESTIMATE,unavailable,Not projected separately; CET1/Tier 1 unavailable in summary history.
 ecobank-ghana,downside,FY2029E,ratios,npl_pct,19.790,%,MODEL-ESTIMATE,estimated,Estimated NPL path anchored on 9M-2026 reported 14.99%.
 ecobank-ghana,downside,FY2029E,ratios,ldr_pct,44.177,%,MODEL-ESTIMATE,estimated,loans_and_advances_net / customer_deposits * 100 (net basis).
-ecobank-ghana,downside,FY2029E,ratios,cost_to_income_pct,46.421,%,MODEL-ESTIMATE,estimated,(staff + da + other_opex + x_lease_finance_cost) / total_operating_income * 100.
-ecobank-ghana,downside,FY2029E,ratios,roe_pct,11.161,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_equity * 100.
-ecobank-ghana,downside,FY2029E,ratios,roa_pct,1.759,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_assets * 100.
-ecobank-ghana,downside,FY2030E,income_statement,interest_income,8150.040,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26+Q4; FY27E+ avg loans*y_loan + avg inv*y_inv (y_inv linked to macro.csv tbill_364d+bond).
+ecobank-ghana,downside,FY2029E,ratios,cost_to_income_pct,46.412,%,MODEL-ESTIMATE,estimated,(staff + da + other_opex + x_lease_finance_cost) / total_operating_income * 100.
+ecobank-ghana,downside,FY2029E,ratios,roe_pct,11.153,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_equity * 100.
+ecobank-ghana,downside,FY2029E,ratios,roa_pct,1.760,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_assets * 100.
+ecobank-ghana,downside,FY2030E,income_statement,interest_income,8150.906,GHS millions,MODEL-ESTIMATE,estimated,FY26E = 9M-26 + iterative Q4; FY27E+ = avg loans*y_loan + avg inv*y_inv (macro.csv).
 ecobank-ghana,downside,FY2030E,income_statement,interest_expense,5165.488,GHS millions,MODEL-ESTIMATE,estimated,Linked to macro.csv tbill_91d_pct.
-ecobank-ghana,downside,FY2030E,income_statement,net_interest_income,2984.551,GHS millions,MODEL-ESTIMATE,estimated,interest_income - interest_expense.
-ecobank-ghana,downside,FY2030E,income_statement,fee_commission_income,1307.950,GHS millions,MODEL-ESTIMATE,estimated,Linked to nominal GDP (gdp_growth_pct + inflation_cpi_pct from macro.csv).
+ecobank-ghana,downside,FY2030E,income_statement,net_interest_income,2985.417,GHS millions,MODEL-ESTIMATE,estimated,interest_income - interest_expense.
+ecobank-ghana,downside,FY2030E,income_statement,fee_commission_income,1307.950,GHS millions,MODEL-ESTIMATE,estimated,Linked to nominal GDP (macro.csv).
 ecobank-ghana,downside,FY2030E,income_statement,fee_commission_expense,210.446,GHS millions,MODEL-ESTIMATE,estimated,0.8x fee growth.
 ecobank-ghana,downside,FY2030E,income_statement,net_trading_income,953.229,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ trading growth.
 ecobank-ghana,downside,FY2030E,income_statement,other_operating_income,70.527,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ 5% growth.
-ecobank-ghana,downside,FY2030E,income_statement,total_operating_income,5105.811,GHS millions,MODEL-ESTIMATE,estimated,NII + net fees + trading + other operating income.
+ecobank-ghana,downside,FY2030E,income_statement,total_operating_income,5106.677,GHS millions,MODEL-ESTIMATE,estimated,NII + net fees + trading + other operating income.
 ecobank-ghana,downside,FY2030E,income_statement,staff_costs,1229.899,GHS millions,MODEL-ESTIMATE,estimated,Linked to inflation_cpi_pct from macro.csv.
 ecobank-ghana,downside,FY2030E,income_statement,depreciation_amortisation,103.990,GHS millions,MODEL-ESTIMATE,estimated,4% annual growth.
 ecobank-ghana,downside,FY2030E,income_statement,other_operating_expenses,1109.271,GHS millions,MODEL-ESTIMATE,estimated,Linked to inflation_cpi_pct from macro.csv.
 ecobank-ghana,downside,FY2030E,income_statement,x_lease_finance_cost,11.864,GHS millions,MODEL-ESTIMATE,estimated,Consistent with historical separate line item.
 ecobank-ghana,downside,FY2030E,income_statement,impairment_charge,539.762,GHS millions,MODEL-ESTIMATE,estimated,avg net loans * cost_of_risk.
-ecobank-ghana,downside,FY2030E,income_statement,profit_before_tax,2111.026,GHS millions,MODEL-ESTIMATE,estimated,total_operating_income - opex - x_lease_finance_cost - impairment.
-ecobank-ghana,downside,FY2030E,income_statement,income_tax,759.969,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax * tax_rate (includes levies).
-ecobank-ghana,downside,FY2030E,income_statement,profit_after_tax,1351.057,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax - income_tax.
-ecobank-ghana,downside,FY2030E,balance_sheet,cash_and_bog_balances,26804.145,GHS millions,MODEL-ESTIMATE,estimated,Respects >= crr_pct (20%) on customer_deposits; includes due_from_banks aggregate.
+ecobank-ghana,downside,FY2030E,income_statement,profit_before_tax,2111.892,GHS millions,MODEL-ESTIMATE,estimated,total_operating_income - opex - x_lease_finance_cost - impairment.
+ecobank-ghana,downside,FY2030E,income_statement,income_tax,760.281,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax * tax_rate (includes levies).
+ecobank-ghana,downside,FY2030E,income_statement,profit_after_tax,1351.611,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax - income_tax.
+ecobank-ghana,downside,FY2030E,balance_sheet,cash_and_bog_balances,26810.798,GHS millions,MODEL-ESTIMATE,estimated,Proxy screen >= crr_pct (20%) on customer_deposits; includes due_from_banks aggregate.
 ecobank-ghana,downside,FY2030E,balance_sheet,due_from_banks,,GHS millions,MODEL-ESTIMATE,unavailable,Not split from cash_and_bog_balances (same basis as historical summary statements).
-ecobank-ghana,downside,FY2030E,balance_sheet,investment_securities,26804.145,GHS millions,MODEL-ESTIMATE,estimated,Balancing liquid asset = total_assets - loans - ppe - other - cash; solved iteratively with interest_income.
+ecobank-ghana,downside,FY2030E,balance_sheet,investment_securities,26810.798,GHS millions,MODEL-ESTIMATE,estimated,Balancing liquid asset = total_assets - loans - ppe - other - cash; solved iteratively.
 ecobank-ghana,downside,FY2030E,balance_sheet,loans_and_advances_gross,,GHS millions,MODEL-ESTIMATE,unavailable,Not split in GSE summary history; net loans projected.
 ecobank-ghana,downside,FY2030E,balance_sheet,loan_loss_allowance,,GHS millions,MODEL-ESTIMATE,unavailable,Not split in GSE summary history; net loans projected.
 ecobank-ghana,downside,FY2030E,balance_sheet,loans_and_advances_net,25910.265,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ linked to nominal GDP.
 ecobank-ghana,downside,FY2030E,balance_sheet,property_equipment_intangibles,1464.159,GHS millions,MODEL-ESTIMATE,estimated,3% annual growth.
 ecobank-ghana,downside,FY2030E,balance_sheet,other_assets,3927.511,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
-ecobank-ghana,downside,FY2030E,balance_sheet,total_assets,84910.225,GHS millions,MODEL-ESTIMATE,estimated,total_liabilities + total_equity.
+ecobank-ghana,downside,FY2030E,balance_sheet,total_assets,84923.531,GHS millions,MODEL-ESTIMATE,estimated,total_liabilities + total_equity.
 ecobank-ghana,downside,FY2030E,balance_sheet,customer_deposits,58912.484,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ linked to nominal GDP.
 ecobank-ghana,downside,FY2030E,balance_sheet,due_to_banks,8878.527,GHS millions,MODEL-ESTIMATE,estimated,0.5 * deposit_growth.
 ecobank-ghana,downside,FY2030E,balance_sheet,borrowings,281.321,GHS millions,MODEL-ESTIMATE,estimated,Held flat.
 ecobank-ghana,downside,FY2030E,balance_sheet,other_liabilities,3722.508,GHS millions,MODEL-ESTIMATE,estimated,Tracks CPI inflation.
 ecobank-ghana,downside,FY2030E,balance_sheet,total_liabilities,71794.840,GHS millions,MODEL-ESTIMATE,estimated,Sum of liability items.
 ecobank-ghana,downside,FY2030E,balance_sheet,stated_capital,416.641,GHS millions,MODEL-ESTIMATE,estimated,Held flat.
-ecobank-ghana,downside,FY2030E,balance_sheet,retained_earnings,10310.151,GHS millions,MODEL-ESTIMATE,estimated,Prior retained_earnings + PAT - dividends (9M-26 OCI/div preserved in FY26E).
+ecobank-ghana,downside,FY2030E,balance_sheet,retained_earnings,10323.457,GHS millions,MODEL-ESTIMATE,estimated,Prior retained_earnings + PAT - dividends (9M-26 OCI/div preserved in FY26E).
 ecobank-ghana,downside,FY2030E,balance_sheet,reserves_other,2388.592,GHS millions,MODEL-ESTIMATE,estimated,Held flat.
-ecobank-ghana,downside,FY2030E,balance_sheet,total_equity,13115.384,GHS millions,MODEL-ESTIMATE,estimated,stated_capital + retained_earnings + reserves_other.
-ecobank-ghana,downside,FY2030E,ratios,car_pct,18.825,%,MODEL-ESTIMATE,estimated,Proxy only (not prudential RWA): total_equity / (total_assets * 9M-26_RWA_density).
+ecobank-ghana,downside,FY2030E,balance_sheet,total_equity,13128.690,GHS millions,MODEL-ESTIMATE,estimated,stated_capital + retained_earnings + reserves_other.
+ecobank-ghana,downside,FY2030E,ratios,car_pct,18.841,%,MODEL-ESTIMATE,estimated,Proxy only (not prudential RWA): total_equity / (total_assets * 9M-26_RWA_density).
 ecobank-ghana,downside,FY2030E,ratios,tier1_pct,,%,MODEL-ESTIMATE,unavailable,Not projected separately; CET1/Tier 1 unavailable in summary history.
 ecobank-ghana,downside,FY2030E,ratios,npl_pct,20.990,%,MODEL-ESTIMATE,estimated,Estimated NPL path anchored on 9M-2026 reported 14.99%.
 ecobank-ghana,downside,FY2030E,ratios,ldr_pct,43.981,%,MODEL-ESTIMATE,estimated,loans_and_advances_net / customer_deposits * 100 (net basis).
-ecobank-ghana,downside,FY2030E,ratios,cost_to_income_pct,48.083,%,MODEL-ESTIMATE,estimated,(staff + da + other_opex + x_lease_finance_cost) / total_operating_income * 100.
-ecobank-ghana,downside,FY2030E,ratios,roe_pct,10.773,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_equity * 100.
+ecobank-ghana,downside,FY2030E,ratios,cost_to_income_pct,48.075,%,MODEL-ESTIMATE,estimated,(staff + da + other_opex + x_lease_finance_cost) / total_operating_income * 100.
+ecobank-ghana,downside,FY2030E,ratios,roe_pct,10.766,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_equity * 100.
 ecobank-ghana,downside,FY2030E,ratios,roa_pct,1.675,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_assets * 100.
-ecobank-ghana,upside,FY2026E,income_statement,interest_income,4390.720,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26+Q4; FY27E+ avg loans*y_loan + avg inv*y_inv (y_inv linked to macro.csv tbill_364d+bond).
+ecobank-ghana,upside,FY2026E,income_statement,interest_income,4413.008,GHS millions,MODEL-ESTIMATE,estimated,FY26E = 9M-26 + iterative Q4; FY27E+ = avg loans*y_loan + avg inv*y_inv (macro.csv).
 ecobank-ghana,upside,FY2026E,income_statement,interest_expense,1241.648,GHS millions,MODEL-ESTIMATE,estimated,Linked to macro.csv tbill_91d_pct.
-ecobank-ghana,upside,FY2026E,income_statement,net_interest_income,3149.072,GHS millions,MODEL-ESTIMATE,estimated,interest_income - interest_expense.
-ecobank-ghana,upside,FY2026E,income_statement,fee_commission_income,815.800,GHS millions,MODEL-ESTIMATE,estimated,Linked to nominal GDP (gdp_growth_pct + inflation_cpi_pct from macro.csv).
+ecobank-ghana,upside,FY2026E,income_statement,net_interest_income,3171.360,GHS millions,MODEL-ESTIMATE,estimated,interest_income - interest_expense.
+ecobank-ghana,upside,FY2026E,income_statement,fee_commission_income,815.800,GHS millions,MODEL-ESTIMATE,estimated,Linked to nominal GDP (macro.csv).
 ecobank-ghana,upside,FY2026E,income_statement,fee_commission_expense,145.211,GHS millions,MODEL-ESTIMATE,estimated,0.8x fee growth.
 ecobank-ghana,upside,FY2026E,income_statement,net_trading_income,833.238,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ trading growth.
 ecobank-ghana,upside,FY2026E,income_statement,other_operating_income,61.649,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ 5% growth.
-ecobank-ghana,upside,FY2026E,income_statement,total_operating_income,4714.548,GHS millions,MODEL-ESTIMATE,estimated,NII + net fees + trading + other operating income.
+ecobank-ghana,upside,FY2026E,income_statement,total_operating_income,4736.835,GHS millions,MODEL-ESTIMATE,estimated,NII + net fees + trading + other operating income.
 ecobank-ghana,upside,FY2026E,income_statement,staff_costs,808.637,GHS millions,MODEL-ESTIMATE,estimated,Linked to inflation_cpi_pct from macro.csv.
 ecobank-ghana,upside,FY2026E,income_statement,depreciation_amortisation,94.447,GHS millions,MODEL-ESTIMATE,estimated,4% annual growth.
 ecobank-ghana,upside,FY2026E,income_statement,other_operating_expenses,729.326,GHS millions,MODEL-ESTIMATE,estimated,Linked to inflation_cpi_pct from macro.csv.
 ecobank-ghana,upside,FY2026E,income_statement,x_lease_finance_cost,11.646,GHS millions,MODEL-ESTIMATE,estimated,Consistent with historical separate line item.
 ecobank-ghana,upside,FY2026E,income_statement,impairment_charge,224.653,GHS millions,MODEL-ESTIMATE,estimated,avg net loans * cost_of_risk.
-ecobank-ghana,upside,FY2026E,income_statement,profit_before_tax,2845.839,GHS millions,MODEL-ESTIMATE,estimated,total_operating_income - opex - x_lease_finance_cost - impairment.
-ecobank-ghana,upside,FY2026E,income_statement,income_tax,994.675,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax * tax_rate (includes levies).
-ecobank-ghana,upside,FY2026E,income_statement,profit_after_tax,1851.164,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax - income_tax.
-ecobank-ghana,upside,FY2026E,balance_sheet,cash_and_bog_balances,17002.237,GHS millions,MODEL-ESTIMATE,estimated,Respects >= crr_pct (20%) on customer_deposits; includes due_from_banks aggregate.
+ecobank-ghana,upside,FY2026E,income_statement,profit_before_tax,2868.127,GHS millions,MODEL-ESTIMATE,estimated,total_operating_income - opex - x_lease_finance_cost - impairment.
+ecobank-ghana,upside,FY2026E,income_statement,income_tax,1002.253,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax * tax_rate (includes levies).
+ecobank-ghana,upside,FY2026E,income_statement,profit_after_tax,1865.874,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax - income_tax.
+ecobank-ghana,upside,FY2026E,balance_sheet,cash_and_bog_balances,17009.592,GHS millions,MODEL-ESTIMATE,estimated,Proxy screen >= crr_pct (20%) on customer_deposits; includes due_from_banks aggregate.
 ecobank-ghana,upside,FY2026E,balance_sheet,due_from_banks,,GHS millions,MODEL-ESTIMATE,unavailable,Not split from cash_and_bog_balances (same basis as historical summary statements).
-ecobank-ghana,upside,FY2026E,balance_sheet,investment_securities,17002.237,GHS millions,MODEL-ESTIMATE,estimated,Balancing liquid asset = total_assets - loans - ppe - other - cash; solved iteratively with interest_income.
+ecobank-ghana,upside,FY2026E,balance_sheet,investment_securities,17009.592,GHS millions,MODEL-ESTIMATE,estimated,Balancing liquid asset = total_assets - loans - ppe - other - cash; solved iteratively.
 ecobank-ghana,upside,FY2026E,balance_sheet,loans_and_advances_gross,,GHS millions,MODEL-ESTIMATE,unavailable,Not split in GSE summary history; net loans projected.
 ecobank-ghana,upside,FY2026E,balance_sheet,loan_loss_allowance,,GHS millions,MODEL-ESTIMATE,unavailable,Not split in GSE summary history; net loans projected.
 ecobank-ghana,upside,FY2026E,balance_sheet,loans_and_advances_net,16808.485,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ linked to nominal GDP.
 ecobank-ghana,upside,FY2026E,balance_sheet,property_equipment_intangibles,1300.886,GHS millions,MODEL-ESTIMATE,estimated,3% annual growth.
 ecobank-ghana,upside,FY2026E,balance_sheet,other_assets,3628.413,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
-ecobank-ghana,upside,FY2026E,balance_sheet,total_assets,55742.259,GHS millions,MODEL-ESTIMATE,estimated,total_liabilities + total_equity.
+ecobank-ghana,upside,FY2026E,balance_sheet,total_assets,55756.969,GHS millions,MODEL-ESTIMATE,estimated,total_liabilities + total_equity.
 ecobank-ghana,upside,FY2026E,balance_sheet,customer_deposits,37363.698,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ linked to nominal GDP.
 ecobank-ghana,upside,FY2026E,balance_sheet,due_to_banks,7020.981,GHS millions,MODEL-ESTIMATE,estimated,0.5 * deposit_growth.
 ecobank-ghana,upside,FY2026E,balance_sheet,borrowings,281.321,GHS millions,MODEL-ESTIMATE,estimated,Held flat.
 ecobank-ghana,upside,FY2026E,balance_sheet,other_liabilities,2519.669,GHS millions,MODEL-ESTIMATE,estimated,Tracks CPI inflation.
 ecobank-ghana,upside,FY2026E,balance_sheet,total_liabilities,47185.669,GHS millions,MODEL-ESTIMATE,estimated,Sum of liability items.
 ecobank-ghana,upside,FY2026E,balance_sheet,stated_capital,416.641,GHS millions,MODEL-ESTIMATE,estimated,Held flat.
-ecobank-ghana,upside,FY2026E,balance_sheet,retained_earnings,5751.357,GHS millions,MODEL-ESTIMATE,estimated,Prior retained_earnings + PAT - dividends (9M-26 OCI/div preserved in FY26E).
+ecobank-ghana,upside,FY2026E,balance_sheet,retained_earnings,5766.067,GHS millions,MODEL-ESTIMATE,estimated,Prior retained_earnings + PAT - dividends (9M-26 OCI/div preserved in FY26E).
 ecobank-ghana,upside,FY2026E,balance_sheet,reserves_other,2388.592,GHS millions,MODEL-ESTIMATE,estimated,Held flat.
-ecobank-ghana,upside,FY2026E,balance_sheet,total_equity,8556.590,GHS millions,MODEL-ESTIMATE,estimated,stated_capital + retained_earnings + reserves_other.
-ecobank-ghana,upside,FY2026E,ratios,car_pct,18.708,%,MODEL-ESTIMATE,estimated,Proxy only (not prudential RWA): total_equity / (total_assets * 9M-26_RWA_density).
+ecobank-ghana,upside,FY2026E,balance_sheet,total_equity,8571.300,GHS millions,MODEL-ESTIMATE,estimated,stated_capital + retained_earnings + reserves_other.
+ecobank-ghana,upside,FY2026E,ratios,car_pct,18.735,%,MODEL-ESTIMATE,estimated,Proxy only (not prudential RWA): total_equity / (total_assets * 9M-26_RWA_density).
 ecobank-ghana,upside,FY2026E,ratios,tier1_pct,,%,MODEL-ESTIMATE,unavailable,Not projected separately; CET1/Tier 1 unavailable in summary history.
 ecobank-ghana,upside,FY2026E,ratios,npl_pct,13.490,%,MODEL-ESTIMATE,estimated,Estimated NPL path anchored on 9M-2026 reported 14.99%.
 ecobank-ghana,upside,FY2026E,ratios,ldr_pct,44.986,%,MODEL-ESTIMATE,estimated,loans_and_advances_net / customer_deposits * 100 (net basis).
-ecobank-ghana,upside,FY2026E,ratios,cost_to_income_pct,34.872,%,MODEL-ESTIMATE,estimated,(staff + da + other_opex + x_lease_finance_cost) / total_operating_income * 100.
-ecobank-ghana,upside,FY2026E,ratios,roe_pct,23.687,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_equity * 100.
-ecobank-ghana,upside,FY2026E,ratios,roa_pct,3.636,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_assets * 100.
-ecobank-ghana,upside,FY2027E,income_statement,interest_income,4984.277,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26+Q4; FY27E+ avg loans*y_loan + avg inv*y_inv (y_inv linked to macro.csv tbill_364d+bond).
+ecobank-ghana,upside,FY2026E,ratios,cost_to_income_pct,34.708,%,MODEL-ESTIMATE,estimated,(staff + da + other_opex + x_lease_finance_cost) / total_operating_income * 100.
+ecobank-ghana,upside,FY2026E,ratios,roe_pct,23.852,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_equity * 100.
+ecobank-ghana,upside,FY2026E,ratios,roa_pct,3.665,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_assets * 100.
+ecobank-ghana,upside,FY2027E,income_statement,interest_income,4985.096,GHS millions,MODEL-ESTIMATE,estimated,FY26E = 9M-26 + iterative Q4; FY27E+ = avg loans*y_loan + avg inv*y_inv (macro.csv).
 ecobank-ghana,upside,FY2027E,income_statement,interest_expense,1092.467,GHS millions,MODEL-ESTIMATE,estimated,Linked to macro.csv tbill_91d_pct.
-ecobank-ghana,upside,FY2027E,income_statement,net_interest_income,3891.809,GHS millions,MODEL-ESTIMATE,estimated,interest_income - interest_expense.
-ecobank-ghana,upside,FY2027E,income_statement,fee_commission_income,916.633,GHS millions,MODEL-ESTIMATE,estimated,Linked to nominal GDP (gdp_growth_pct + inflation_cpi_pct from macro.csv).
+ecobank-ghana,upside,FY2027E,income_statement,net_interest_income,3892.629,GHS millions,MODEL-ESTIMATE,estimated,interest_income - interest_expense.
+ecobank-ghana,upside,FY2027E,income_statement,fee_commission_income,916.633,GHS millions,MODEL-ESTIMATE,estimated,Linked to nominal GDP (macro.csv).
 ecobank-ghana,upside,FY2027E,income_statement,fee_commission_expense,159.570,GHS millions,MODEL-ESTIMATE,estimated,0.8x fee growth.
 ecobank-ghana,upside,FY2027E,income_statement,net_trading_income,916.562,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ trading growth.
 ecobank-ghana,upside,FY2027E,income_statement,other_operating_income,64.731,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ 5% growth.
-ecobank-ghana,upside,FY2027E,income_statement,total_operating_income,5630.165,GHS millions,MODEL-ESTIMATE,estimated,NII + net fees + trading + other operating income.
+ecobank-ghana,upside,FY2027E,income_statement,total_operating_income,5630.985,GHS millions,MODEL-ESTIMATE,estimated,NII + net fees + trading + other operating income.
 ecobank-ghana,upside,FY2027E,income_statement,staff_costs,869.285,GHS millions,MODEL-ESTIMATE,estimated,Linked to inflation_cpi_pct from macro.csv.
 ecobank-ghana,upside,FY2027E,income_statement,depreciation_amortisation,98.224,GHS millions,MODEL-ESTIMATE,estimated,4% annual growth.
 ecobank-ghana,upside,FY2027E,income_statement,other_operating_expenses,784.025,GHS millions,MODEL-ESTIMATE,estimated,Linked to inflation_cpi_pct from macro.csv.
 ecobank-ghana,upside,FY2027E,income_statement,x_lease_finance_cost,11.879,GHS millions,MODEL-ESTIMATE,estimated,Consistent with historical separate line item.
 ecobank-ghana,upside,FY2027E,income_statement,impairment_charge,216.688,GHS millions,MODEL-ESTIMATE,estimated,avg net loans * cost_of_risk.
-ecobank-ghana,upside,FY2027E,income_statement,profit_before_tax,3650.064,GHS millions,MODEL-ESTIMATE,estimated,total_operating_income - opex - x_lease_finance_cost - impairment.
-ecobank-ghana,upside,FY2027E,income_statement,income_tax,1241.022,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax * tax_rate (includes levies).
-ecobank-ghana,upside,FY2027E,income_statement,profit_after_tax,2409.042,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax - income_tax.
-ecobank-ghana,upside,FY2027E,balance_sheet,cash_and_bog_balances,19448.906,GHS millions,MODEL-ESTIMATE,estimated,Respects >= crr_pct (20%) on customer_deposits; includes due_from_banks aggregate.
+ecobank-ghana,upside,FY2027E,income_statement,profit_before_tax,3650.884,GHS millions,MODEL-ESTIMATE,estimated,total_operating_income - opex - x_lease_finance_cost - impairment.
+ecobank-ghana,upside,FY2027E,income_statement,income_tax,1241.300,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax * tax_rate (includes levies).
+ecobank-ghana,upside,FY2027E,income_statement,profit_after_tax,2409.583,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax - income_tax.
+ecobank-ghana,upside,FY2027E,balance_sheet,cash_and_bog_balances,19456.450,GHS millions,MODEL-ESTIMATE,estimated,Proxy screen >= crr_pct (20%) on customer_deposits; includes due_from_banks aggregate.
 ecobank-ghana,upside,FY2027E,balance_sheet,due_from_banks,,GHS millions,MODEL-ESTIMATE,unavailable,Not split from cash_and_bog_balances (same basis as historical summary statements).
-ecobank-ghana,upside,FY2027E,balance_sheet,investment_securities,19448.906,GHS millions,MODEL-ESTIMATE,estimated,Balancing liquid asset = total_assets - loans - ppe - other - cash; solved iteratively with interest_income.
+ecobank-ghana,upside,FY2027E,balance_sheet,investment_securities,19456.450,GHS millions,MODEL-ESTIMATE,estimated,Balancing liquid asset = total_assets - loans - ppe - other - cash; solved iteratively.
 ecobank-ghana,upside,FY2027E,balance_sheet,loans_and_advances_gross,,GHS millions,MODEL-ESTIMATE,unavailable,Not split in GSE summary history; net loans projected.
 ecobank-ghana,upside,FY2027E,balance_sheet,loan_loss_allowance,,GHS millions,MODEL-ESTIMATE,unavailable,Not split in GSE summary history; net loans projected.
 ecobank-ghana,upside,FY2027E,balance_sheet,loans_and_advances_net,19306.226,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ linked to nominal GDP.
 ecobank-ghana,upside,FY2027E,balance_sheet,property_equipment_intangibles,1339.913,GHS millions,MODEL-ESTIMATE,estimated,3% annual growth.
 ecobank-ghana,upside,FY2027E,balance_sheet,other_assets,3700.981,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
-ecobank-ghana,upside,FY2027E,balance_sheet,total_assets,63244.931,GHS millions,MODEL-ESTIMATE,estimated,total_liabilities + total_equity.
+ecobank-ghana,upside,FY2027E,balance_sheet,total_assets,63260.019,GHS millions,MODEL-ESTIMATE,estimated,total_liabilities + total_equity.
 ecobank-ghana,upside,FY2027E,balance_sheet,customer_deposits,42542.306,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ linked to nominal GDP.
 ecobank-ghana,upside,FY2027E,balance_sheet,due_to_banks,7507.535,GHS millions,MODEL-ESTIMATE,estimated,0.5 * deposit_growth.
 ecobank-ghana,upside,FY2027E,balance_sheet,borrowings,281.321,GHS millions,MODEL-ESTIMATE,estimated,Held flat.
 ecobank-ghana,upside,FY2027E,balance_sheet,other_liabilities,2670.849,GHS millions,MODEL-ESTIMATE,estimated,Tracks CPI inflation.
 ecobank-ghana,upside,FY2027E,balance_sheet,total_liabilities,53002.012,GHS millions,MODEL-ESTIMATE,estimated,Sum of liability items.
 ecobank-ghana,upside,FY2027E,balance_sheet,stated_capital,416.641,GHS millions,MODEL-ESTIMATE,estimated,Held flat.
-ecobank-ghana,upside,FY2027E,balance_sheet,retained_earnings,7437.687,GHS millions,MODEL-ESTIMATE,estimated,Prior retained_earnings + PAT - dividends (9M-26 OCI/div preserved in FY26E).
+ecobank-ghana,upside,FY2027E,balance_sheet,retained_earnings,7452.775,GHS millions,MODEL-ESTIMATE,estimated,Prior retained_earnings + PAT - dividends (9M-26 OCI/div preserved in FY26E).
 ecobank-ghana,upside,FY2027E,balance_sheet,reserves_other,2388.592,GHS millions,MODEL-ESTIMATE,estimated,Held flat.
-ecobank-ghana,upside,FY2027E,balance_sheet,total_equity,10242.920,GHS millions,MODEL-ESTIMATE,estimated,stated_capital + retained_earnings + reserves_other.
-ecobank-ghana,upside,FY2027E,ratios,car_pct,19.738,%,MODEL-ESTIMATE,estimated,Proxy only (not prudential RWA): total_equity / (total_assets * 9M-26_RWA_density).
+ecobank-ghana,upside,FY2027E,balance_sheet,total_equity,10258.008,GHS millions,MODEL-ESTIMATE,estimated,stated_capital + retained_earnings + reserves_other.
+ecobank-ghana,upside,FY2027E,ratios,car_pct,19.763,%,MODEL-ESTIMATE,estimated,Proxy only (not prudential RWA): total_equity / (total_assets * 9M-26_RWA_density).
 ecobank-ghana,upside,FY2027E,ratios,tier1_pct,,%,MODEL-ESTIMATE,unavailable,Not projected separately; CET1/Tier 1 unavailable in summary history.
 ecobank-ghana,upside,FY2027E,ratios,npl_pct,11.990,%,MODEL-ESTIMATE,estimated,Estimated NPL path anchored on 9M-2026 reported 14.99%.
 ecobank-ghana,upside,FY2027E,ratios,ldr_pct,45.381,%,MODEL-ESTIMATE,estimated,loans_and_advances_net / customer_deposits * 100 (net basis).
-ecobank-ghana,upside,FY2027E,ratios,cost_to_income_pct,31.321,%,MODEL-ESTIMATE,estimated,(staff + da + other_opex + x_lease_finance_cost) / total_operating_income * 100.
-ecobank-ghana,upside,FY2027E,ratios,roe_pct,25.629,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_equity * 100.
+ecobank-ghana,upside,FY2027E,ratios,cost_to_income_pct,31.316,%,MODEL-ESTIMATE,estimated,(staff + da + other_opex + x_lease_finance_cost) / total_operating_income * 100.
+ecobank-ghana,upside,FY2027E,ratios,roe_pct,25.594,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_equity * 100.
 ecobank-ghana,upside,FY2027E,ratios,roa_pct,4.049,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_assets * 100.
-ecobank-ghana,upside,FY2028E,income_statement,interest_income,5468.274,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26+Q4; FY27E+ avg loans*y_loan + avg inv*y_inv (y_inv linked to macro.csv tbill_364d+bond).
+ecobank-ghana,upside,FY2028E,income_statement,interest_income,5469.057,GHS millions,MODEL-ESTIMATE,estimated,FY26E = 9M-26 + iterative Q4; FY27E+ = avg loans*y_loan + avg inv*y_inv (macro.csv).
 ecobank-ghana,upside,FY2028E,income_statement,interest_expense,1504.589,GHS millions,MODEL-ESTIMATE,estimated,Linked to macro.csv tbill_91d_pct.
-ecobank-ghana,upside,FY2028E,income_statement,net_interest_income,3963.686,GHS millions,MODEL-ESTIMATE,estimated,interest_income - interest_expense.
-ecobank-ghana,upside,FY2028E,income_statement,fee_commission_income,1037.684,GHS millions,MODEL-ESTIMATE,estimated,Linked to nominal GDP (gdp_growth_pct + inflation_cpi_pct from macro.csv).
+ecobank-ghana,upside,FY2028E,income_statement,net_interest_income,3964.468,GHS millions,MODEL-ESTIMATE,estimated,interest_income - interest_expense.
+ecobank-ghana,upside,FY2028E,income_statement,fee_commission_income,1037.684,GHS millions,MODEL-ESTIMATE,estimated,Linked to nominal GDP (macro.csv).
 ecobank-ghana,upside,FY2028E,income_statement,fee_commission_expense,176.428,GHS millions,MODEL-ESTIMATE,estimated,0.8x fee growth.
 ecobank-ghana,upside,FY2028E,income_statement,net_trading_income,1008.218,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ trading growth.
 ecobank-ghana,upside,FY2028E,income_statement,other_operating_income,67.968,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ 5% growth.
-ecobank-ghana,upside,FY2028E,income_statement,total_operating_income,5901.127,GHS millions,MODEL-ESTIMATE,estimated,NII + net fees + trading + other operating income.
+ecobank-ghana,upside,FY2028E,income_statement,total_operating_income,5901.909,GHS millions,MODEL-ESTIMATE,estimated,NII + net fees + trading + other operating income.
 ecobank-ghana,upside,FY2028E,income_statement,staff_costs,943.174,GHS millions,MODEL-ESTIMATE,estimated,Linked to inflation_cpi_pct from macro.csv.
 ecobank-ghana,upside,FY2028E,income_statement,depreciation_amortisation,102.153,GHS millions,MODEL-ESTIMATE,estimated,4% annual growth.
 ecobank-ghana,upside,FY2028E,income_statement,other_operating_expenses,850.667,GHS millions,MODEL-ESTIMATE,estimated,Linked to inflation_cpi_pct from macro.csv.
 ecobank-ghana,upside,FY2028E,income_statement,x_lease_finance_cost,12.116,GHS millions,MODEL-ESTIMATE,estimated,Consistent with historical separate line item.
 ecobank-ghana,upside,FY2028E,income_statement,impairment_charge,229.046,GHS millions,MODEL-ESTIMATE,estimated,avg net loans * cost_of_risk.
-ecobank-ghana,upside,FY2028E,income_statement,profit_before_tax,3763.970,GHS millions,MODEL-ESTIMATE,estimated,total_operating_income - opex - x_lease_finance_cost - impairment.
-ecobank-ghana,upside,FY2028E,income_statement,income_tax,1279.750,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax * tax_rate (includes levies).
-ecobank-ghana,upside,FY2028E,income_statement,profit_after_tax,2484.220,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax - income_tax.
-ecobank-ghana,upside,FY2028E,balance_sheet,cash_and_bog_balances,22242.786,GHS millions,MODEL-ESTIMATE,estimated,Respects >= crr_pct (20%) on customer_deposits; includes due_from_banks aggregate.
+ecobank-ghana,upside,FY2028E,income_statement,profit_before_tax,3764.753,GHS millions,MODEL-ESTIMATE,estimated,total_operating_income - opex - x_lease_finance_cost - impairment.
+ecobank-ghana,upside,FY2028E,income_statement,income_tax,1280.016,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax * tax_rate (includes levies).
+ecobank-ghana,upside,FY2028E,income_statement,profit_after_tax,2484.737,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax - income_tax.
+ecobank-ghana,upside,FY2028E,balance_sheet,cash_and_bog_balances,22250.511,GHS millions,MODEL-ESTIMATE,estimated,Proxy screen >= crr_pct (20%) on customer_deposits; includes due_from_banks aggregate.
 ecobank-ghana,upside,FY2028E,balance_sheet,due_from_banks,,GHS millions,MODEL-ESTIMATE,unavailable,Not split from cash_and_bog_balances (same basis as historical summary statements).
-ecobank-ghana,upside,FY2028E,balance_sheet,investment_securities,22242.786,GHS millions,MODEL-ESTIMATE,estimated,Balancing liquid asset = total_assets - loans - ppe - other - cash; solved iteratively with interest_income.
+ecobank-ghana,upside,FY2028E,balance_sheet,investment_securities,22250.511,GHS millions,MODEL-ESTIMATE,estimated,Balancing liquid asset = total_assets - loans - ppe - other - cash; solved iteratively.
 ecobank-ghana,upside,FY2028E,balance_sheet,loans_and_advances_gross,,GHS millions,MODEL-ESTIMATE,unavailable,Not split in GSE summary history; net loans projected.
 ecobank-ghana,upside,FY2028E,balance_sheet,loan_loss_allowance,,GHS millions,MODEL-ESTIMATE,unavailable,Not split in GSE summary history; net loans projected.
 ecobank-ghana,upside,FY2028E,balance_sheet,loans_and_advances_net,22338.462,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ linked to nominal GDP.
 ecobank-ghana,upside,FY2028E,balance_sheet,property_equipment_intangibles,1380.110,GHS millions,MODEL-ESTIMATE,estimated,3% annual growth.
 ecobank-ghana,upside,FY2028E,balance_sheet,other_assets,3775.001,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
-ecobank-ghana,upside,FY2028E,balance_sheet,total_assets,71979.145,GHS millions,MODEL-ESTIMATE,estimated,total_liabilities + total_equity.
+ecobank-ghana,upside,FY2028E,balance_sheet,total_assets,71994.595,GHS millions,MODEL-ESTIMATE,estimated,total_liabilities + total_equity.
 ecobank-ghana,upside,FY2028E,balance_sheet,customer_deposits,48798.578,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ linked to nominal GDP.
 ecobank-ghana,upside,FY2028E,balance_sheet,due_to_banks,8059.564,GHS millions,MODEL-ESTIMATE,estimated,0.5 * deposit_growth.
 ecobank-ghana,upside,FY2028E,balance_sheet,borrowings,281.321,GHS millions,MODEL-ESTIMATE,estimated,Held flat.
 ecobank-ghana,upside,FY2028E,balance_sheet,other_liabilities,2857.809,GHS millions,MODEL-ESTIMATE,estimated,Tracks CPI inflation.
 ecobank-ghana,upside,FY2028E,balance_sheet,total_liabilities,59997.272,GHS millions,MODEL-ESTIMATE,estimated,Sum of liability items.
 ecobank-ghana,upside,FY2028E,balance_sheet,stated_capital,416.641,GHS millions,MODEL-ESTIMATE,estimated,Held flat.
-ecobank-ghana,upside,FY2028E,balance_sheet,retained_earnings,9176.641,GHS millions,MODEL-ESTIMATE,estimated,Prior retained_earnings + PAT - dividends (9M-26 OCI/div preserved in FY26E).
+ecobank-ghana,upside,FY2028E,balance_sheet,retained_earnings,9192.091,GHS millions,MODEL-ESTIMATE,estimated,Prior retained_earnings + PAT - dividends (9M-26 OCI/div preserved in FY26E).
 ecobank-ghana,upside,FY2028E,balance_sheet,reserves_other,2388.592,GHS millions,MODEL-ESTIMATE,estimated,Held flat.
-ecobank-ghana,upside,FY2028E,balance_sheet,total_equity,11981.874,GHS millions,MODEL-ESTIMATE,estimated,stated_capital + retained_earnings + reserves_other.
-ecobank-ghana,upside,FY2028E,ratios,car_pct,20.288,%,MODEL-ESTIMATE,estimated,Proxy only (not prudential RWA): total_equity / (total_assets * 9M-26_RWA_density).
+ecobank-ghana,upside,FY2028E,balance_sheet,total_equity,11997.324,GHS millions,MODEL-ESTIMATE,estimated,stated_capital + retained_earnings + reserves_other.
+ecobank-ghana,upside,FY2028E,ratios,car_pct,20.309,%,MODEL-ESTIMATE,estimated,Proxy only (not prudential RWA): total_equity / (total_assets * 9M-26_RWA_density).
 ecobank-ghana,upside,FY2028E,ratios,tier1_pct,,%,MODEL-ESTIMATE,unavailable,Not projected separately; CET1/Tier 1 unavailable in summary history.
 ecobank-ghana,upside,FY2028E,ratios,npl_pct,10.490,%,MODEL-ESTIMATE,estimated,Estimated NPL path anchored on 9M-2026 reported 14.99%.
 ecobank-ghana,upside,FY2028E,ratios,ldr_pct,45.777,%,MODEL-ESTIMATE,estimated,loans_and_advances_net / customer_deposits * 100 (net basis).
-ecobank-ghana,upside,FY2028E,ratios,cost_to_income_pct,32.335,%,MODEL-ESTIMATE,estimated,(staff + da + other_opex + x_lease_finance_cost) / total_operating_income * 100.
-ecobank-ghana,upside,FY2028E,ratios,roe_pct,22.355,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_equity * 100.
+ecobank-ghana,upside,FY2028E,ratios,cost_to_income_pct,32.330,%,MODEL-ESTIMATE,estimated,(staff + da + other_opex + x_lease_finance_cost) / total_operating_income * 100.
+ecobank-ghana,upside,FY2028E,ratios,roe_pct,22.329,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_equity * 100.
 ecobank-ghana,upside,FY2028E,ratios,roa_pct,3.674,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_assets * 100.
-ecobank-ghana,upside,FY2029E,income_statement,interest_income,6236.781,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26+Q4; FY27E+ avg loans*y_loan + avg inv*y_inv (y_inv linked to macro.csv tbill_364d+bond).
+ecobank-ghana,upside,FY2029E,income_statement,interest_income,6237.563,GHS millions,MODEL-ESTIMATE,estimated,FY26E = 9M-26 + iterative Q4; FY27E+ = avg loans*y_loan + avg inv*y_inv (macro.csv).
 ecobank-ghana,upside,FY2029E,income_statement,interest_expense,2320.982,GHS millions,MODEL-ESTIMATE,estimated,Linked to macro.csv tbill_91d_pct.
-ecobank-ghana,upside,FY2029E,income_statement,net_interest_income,3915.799,GHS millions,MODEL-ESTIMATE,estimated,interest_income - interest_expense.
-ecobank-ghana,upside,FY2029E,income_statement,fee_commission_income,1176.863,GHS millions,MODEL-ESTIMATE,estimated,Linked to nominal GDP (gdp_growth_pct + inflation_cpi_pct from macro.csv).
+ecobank-ghana,upside,FY2029E,income_statement,net_interest_income,3916.581,GHS millions,MODEL-ESTIMATE,estimated,interest_income - interest_expense.
+ecobank-ghana,upside,FY2029E,income_statement,fee_commission_income,1176.863,GHS millions,MODEL-ESTIMATE,estimated,Linked to nominal GDP (macro.csv).
 ecobank-ghana,upside,FY2029E,income_statement,fee_commission_expense,195.359,GHS millions,MODEL-ESTIMATE,estimated,0.8x fee growth.
 ecobank-ghana,upside,FY2029E,income_statement,net_trading_income,1109.040,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ trading growth.
 ecobank-ghana,upside,FY2029E,income_statement,other_operating_income,71.366,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ 5% growth.
-ecobank-ghana,upside,FY2029E,income_statement,total_operating_income,6077.709,GHS millions,MODEL-ESTIMATE,estimated,NII + net fees + trading + other operating income.
+ecobank-ghana,upside,FY2029E,income_statement,total_operating_income,6078.491,GHS millions,MODEL-ESTIMATE,estimated,NII + net fees + trading + other operating income.
 ecobank-ghana,upside,FY2029E,income_statement,staff_costs,1028.060,GHS millions,MODEL-ESTIMATE,estimated,Linked to inflation_cpi_pct from macro.csv.
 ecobank-ghana,upside,FY2029E,income_statement,depreciation_amortisation,106.240,GHS millions,MODEL-ESTIMATE,estimated,4% annual growth.
 ecobank-ghana,upside,FY2029E,income_statement,other_operating_expenses,927.227,GHS millions,MODEL-ESTIMATE,estimated,Linked to inflation_cpi_pct from macro.csv.
 ecobank-ghana,upside,FY2029E,income_statement,x_lease_finance_cost,12.358,GHS millions,MODEL-ESTIMATE,estimated,Consistent with historical separate line item.
 ecobank-ghana,upside,FY2029E,income_statement,impairment_charge,241.158,GHS millions,MODEL-ESTIMATE,estimated,avg net loans * cost_of_risk.
-ecobank-ghana,upside,FY2029E,income_statement,profit_before_tax,3762.666,GHS millions,MODEL-ESTIMATE,estimated,total_operating_income - opex - x_lease_finance_cost - impairment.
-ecobank-ghana,upside,FY2029E,income_statement,income_tax,1279.307,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax * tax_rate (includes levies).
-ecobank-ghana,upside,FY2029E,income_statement,profit_after_tax,2483.360,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax - income_tax.
-ecobank-ghana,upside,FY2029E,balance_sheet,cash_and_bog_balances,25322.389,GHS millions,MODEL-ESTIMATE,estimated,Respects >= crr_pct (20%) on customer_deposits; includes due_from_banks aggregate.
+ecobank-ghana,upside,FY2029E,income_statement,profit_before_tax,3763.448,GHS millions,MODEL-ESTIMATE,estimated,total_operating_income - opex - x_lease_finance_cost - impairment.
+ecobank-ghana,upside,FY2029E,income_statement,income_tax,1279.572,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax * tax_rate (includes levies).
+ecobank-ghana,upside,FY2029E,income_statement,profit_after_tax,2483.876,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax - income_tax.
+ecobank-ghana,upside,FY2029E,balance_sheet,cash_and_bog_balances,25330.295,GHS millions,MODEL-ESTIMATE,estimated,Proxy screen >= crr_pct (20%) on customer_deposits; includes due_from_banks aggregate.
 ecobank-ghana,upside,FY2029E,balance_sheet,due_from_banks,,GHS millions,MODEL-ESTIMATE,unavailable,Not split from cash_and_bog_balances (same basis as historical summary statements).
-ecobank-ghana,upside,FY2029E,balance_sheet,investment_securities,25322.389,GHS millions,MODEL-ESTIMATE,estimated,Balancing liquid asset = total_assets - loans - ppe - other - cash; solved iteratively with interest_income.
+ecobank-ghana,upside,FY2029E,balance_sheet,investment_securities,25330.295,GHS millions,MODEL-ESTIMATE,estimated,Balancing liquid asset = total_assets - loans - ppe - other - cash; solved iteratively.
 ecobank-ghana,upside,FY2029E,balance_sheet,loans_and_advances_gross,,GHS millions,MODEL-ESTIMATE,unavailable,Not split in GSE summary history; net loans projected.
 ecobank-ghana,upside,FY2029E,balance_sheet,loan_loss_allowance,,GHS millions,MODEL-ESTIMATE,unavailable,Not split in GSE summary history; net loans projected.
 ecobank-ghana,upside,FY2029E,balance_sheet,loans_and_advances_net,25893.070,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ linked to nominal GDP.
 ecobank-ghana,upside,FY2029E,balance_sheet,property_equipment_intangibles,1421.513,GHS millions,MODEL-ESTIMATE,estimated,3% annual growth.
 ecobank-ghana,upside,FY2029E,balance_sheet,other_assets,3850.501,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
-ecobank-ghana,upside,FY2029E,balance_sheet,total_assets,81809.862,GHS millions,MODEL-ESTIMATE,estimated,total_liabilities + total_equity.
+ecobank-ghana,upside,FY2029E,balance_sheet,total_assets,81825.673,GHS millions,MODEL-ESTIMATE,estimated,total_liabilities + total_equity.
 ecobank-ghana,upside,FY2029E,balance_sheet,customer_deposits,56075.666,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ linked to nominal GDP.
 ecobank-ghana,upside,FY2029E,balance_sheet,due_to_banks,8660.505,GHS millions,MODEL-ESTIMATE,estimated,0.5 * deposit_growth.
 ecobank-ghana,upside,FY2029E,balance_sheet,borrowings,281.321,GHS millions,MODEL-ESTIMATE,estimated,Held flat.
 ecobank-ghana,upside,FY2029E,balance_sheet,other_liabilities,3072.144,GHS millions,MODEL-ESTIMATE,estimated,Tracks CPI inflation.
 ecobank-ghana,upside,FY2029E,balance_sheet,total_liabilities,68089.636,GHS millions,MODEL-ESTIMATE,estimated,Sum of liability items.
 ecobank-ghana,upside,FY2029E,balance_sheet,stated_capital,416.641,GHS millions,MODEL-ESTIMATE,estimated,Held flat.
-ecobank-ghana,upside,FY2029E,balance_sheet,retained_earnings,10914.993,GHS millions,MODEL-ESTIMATE,estimated,Prior retained_earnings + PAT - dividends (9M-26 OCI/div preserved in FY26E).
+ecobank-ghana,upside,FY2029E,balance_sheet,retained_earnings,10930.804,GHS millions,MODEL-ESTIMATE,estimated,Prior retained_earnings + PAT - dividends (9M-26 OCI/div preserved in FY26E).
 ecobank-ghana,upside,FY2029E,balance_sheet,reserves_other,2388.592,GHS millions,MODEL-ESTIMATE,estimated,Held flat.
-ecobank-ghana,upside,FY2029E,balance_sheet,total_equity,13720.226,GHS millions,MODEL-ESTIMATE,estimated,stated_capital + retained_earnings + reserves_other.
-ecobank-ghana,upside,FY2029E,ratios,car_pct,20.439,%,MODEL-ESTIMATE,estimated,Proxy only (not prudential RWA): total_equity / (total_assets * 9M-26_RWA_density).
+ecobank-ghana,upside,FY2029E,balance_sheet,total_equity,13736.037,GHS millions,MODEL-ESTIMATE,estimated,stated_capital + retained_earnings + reserves_other.
+ecobank-ghana,upside,FY2029E,ratios,car_pct,20.459,%,MODEL-ESTIMATE,estimated,Proxy only (not prudential RWA): total_equity / (total_assets * 9M-26_RWA_density).
 ecobank-ghana,upside,FY2029E,ratios,tier1_pct,,%,MODEL-ESTIMATE,unavailable,Not projected separately; CET1/Tier 1 unavailable in summary history.
 ecobank-ghana,upside,FY2029E,ratios,npl_pct,8.990,%,MODEL-ESTIMATE,estimated,Estimated NPL path anchored on 9M-2026 reported 14.99%.
 ecobank-ghana,upside,FY2029E,ratios,ldr_pct,46.175,%,MODEL-ESTIMATE,estimated,loans_and_advances_net / customer_deposits * 100 (net basis).
-ecobank-ghana,upside,FY2029E,ratios,cost_to_income_pct,34.123,%,MODEL-ESTIMATE,estimated,(staff + da + other_opex + x_lease_finance_cost) / total_operating_income * 100.
-ecobank-ghana,upside,FY2029E,ratios,roe_pct,19.324,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_equity * 100.
+ecobank-ghana,upside,FY2029E,ratios,cost_to_income_pct,34.118,%,MODEL-ESTIMATE,estimated,(staff + da + other_opex + x_lease_finance_cost) / total_operating_income * 100.
+ecobank-ghana,upside,FY2029E,ratios,roe_pct,19.305,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_equity * 100.
 ecobank-ghana,upside,FY2029E,ratios,roa_pct,3.230,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_assets * 100.
-ecobank-ghana,upside,FY2030E,income_statement,interest_income,7124.090,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26+Q4; FY27E+ avg loans*y_loan + avg inv*y_inv (y_inv linked to macro.csv tbill_364d+bond).
+ecobank-ghana,upside,FY2030E,income_statement,interest_income,7124.870,GHS millions,MODEL-ESTIMATE,estimated,FY26E = 9M-26 + iterative Q4; FY27E+ = avg loans*y_loan + avg inv*y_inv (macro.csv).
 ecobank-ghana,upside,FY2030E,income_statement,interest_expense,2996.276,GHS millions,MODEL-ESTIMATE,estimated,Linked to macro.csv tbill_91d_pct.
-ecobank-ghana,upside,FY2030E,income_statement,net_interest_income,4127.815,GHS millions,MODEL-ESTIMATE,estimated,interest_income - interest_expense.
-ecobank-ghana,upside,FY2030E,income_statement,fee_commission_income,1340.917,GHS millions,MODEL-ESTIMATE,estimated,Linked to nominal GDP (gdp_growth_pct + inflation_cpi_pct from macro.csv).
+ecobank-ghana,upside,FY2030E,income_statement,net_interest_income,4128.594,GHS millions,MODEL-ESTIMATE,estimated,interest_income - interest_expense.
+ecobank-ghana,upside,FY2030E,income_statement,fee_commission_income,1340.917,GHS millions,MODEL-ESTIMATE,estimated,Linked to nominal GDP (macro.csv).
 ecobank-ghana,upside,FY2030E,income_statement,fee_commission_expense,217.145,GHS millions,MODEL-ESTIMATE,estimated,0.8x fee growth.
 ecobank-ghana,upside,FY2030E,income_statement,net_trading_income,1219.944,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ trading growth.
 ecobank-ghana,upside,FY2030E,income_statement,other_operating_income,74.935,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ 5% growth.
-ecobank-ghana,upside,FY2030E,income_statement,total_operating_income,6546.465,GHS millions,MODEL-ESTIMATE,estimated,NII + net fees + trading + other operating income.
+ecobank-ghana,upside,FY2030E,income_statement,total_operating_income,6547.245,GHS millions,MODEL-ESTIMATE,estimated,NII + net fees + trading + other operating income.
 ecobank-ghana,upside,FY2030E,income_statement,staff_costs,1125.725,GHS millions,MODEL-ESTIMATE,estimated,Linked to inflation_cpi_pct from macro.csv.
 ecobank-ghana,upside,FY2030E,income_statement,depreciation_amortisation,110.489,GHS millions,MODEL-ESTIMATE,estimated,4% annual growth.
 ecobank-ghana,upside,FY2030E,income_statement,other_operating_expenses,1015.314,GHS millions,MODEL-ESTIMATE,estimated,Linked to inflation_cpi_pct from macro.csv.
 ecobank-ghana,upside,FY2030E,income_statement,x_lease_finance_cost,12.606,GHS millions,MODEL-ESTIMATE,estimated,Consistent with historical separate line item.
 ecobank-ghana,upside,FY2030E,income_statement,impairment_charge,280.215,GHS millions,MODEL-ESTIMATE,estimated,avg net loans * cost_of_risk.
-ecobank-ghana,upside,FY2030E,income_statement,profit_before_tax,4002.116,GHS millions,MODEL-ESTIMATE,estimated,total_operating_income - opex - x_lease_finance_cost - impairment.
-ecobank-ghana,upside,FY2030E,income_statement,income_tax,1360.720,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax * tax_rate (includes levies).
-ecobank-ghana,upside,FY2030E,income_statement,profit_after_tax,2641.397,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax - income_tax.
-ecobank-ghana,upside,FY2030E,balance_sheet,cash_and_bog_balances,28844.863,GHS millions,MODEL-ESTIMATE,estimated,Respects >= crr_pct (20%) on customer_deposits; includes due_from_banks aggregate.
+ecobank-ghana,upside,FY2030E,income_statement,profit_before_tax,4002.896,GHS millions,MODEL-ESTIMATE,estimated,total_operating_income - opex - x_lease_finance_cost - impairment.
+ecobank-ghana,upside,FY2030E,income_statement,income_tax,1360.985,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax * tax_rate (includes levies).
+ecobank-ghana,upside,FY2030E,income_statement,profit_after_tax,2641.911,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax - income_tax.
+ecobank-ghana,upside,FY2030E,balance_sheet,cash_and_bog_balances,28852.948,GHS millions,MODEL-ESTIMATE,estimated,Proxy screen >= crr_pct (20%) on customer_deposits; includes due_from_banks aggregate.
 ecobank-ghana,upside,FY2030E,balance_sheet,due_from_banks,,GHS millions,MODEL-ESTIMATE,unavailable,Not split from cash_and_bog_balances (same basis as historical summary statements).
-ecobank-ghana,upside,FY2030E,balance_sheet,investment_securities,28844.863,GHS millions,MODEL-ESTIMATE,estimated,Balancing liquid asset = total_assets - loans - ppe - other - cash; solved iteratively with interest_income.
+ecobank-ghana,upside,FY2030E,balance_sheet,investment_securities,28852.948,GHS millions,MODEL-ESTIMATE,estimated,Balancing liquid asset = total_assets - loans - ppe - other - cash; solved iteratively.
 ecobank-ghana,upside,FY2030E,balance_sheet,loans_and_advances_gross,,GHS millions,MODEL-ESTIMATE,unavailable,Not split in GSE summary history; net loans projected.
 ecobank-ghana,upside,FY2030E,balance_sheet,loan_loss_allowance,,GHS millions,MODEL-ESTIMATE,unavailable,Not split in GSE summary history; net loans projected.
 ecobank-ghana,upside,FY2030E,balance_sheet,loans_and_advances_net,30149.890,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ linked to nominal GDP.
 ecobank-ghana,upside,FY2030E,balance_sheet,property_equipment_intangibles,1464.159,GHS millions,MODEL-ESTIMATE,estimated,3% annual growth.
 ecobank-ghana,upside,FY2030E,balance_sheet,other_assets,3927.511,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
-ecobank-ghana,upside,FY2030E,balance_sheet,total_assets,93231.285,GHS millions,MODEL-ESTIMATE,estimated,total_liabilities + total_equity.
+ecobank-ghana,upside,FY2030E,balance_sheet,total_assets,93247.456,GHS millions,MODEL-ESTIMATE,estimated,total_liabilities + total_equity.
 ecobank-ghana,upside,FY2030E,balance_sheet,customer_deposits,64733.748,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ linked to nominal GDP.
 ecobank-ghana,upside,FY2030E,balance_sheet,due_to_banks,9329.096,GHS millions,MODEL-ESTIMATE,estimated,0.5 * deposit_growth.
 ecobank-ghana,upside,FY2030E,balance_sheet,borrowings,281.321,GHS millions,MODEL-ESTIMATE,estimated,Held flat.
 ecobank-ghana,upside,FY2030E,balance_sheet,other_liabilities,3317.916,GHS millions,MODEL-ESTIMATE,estimated,Tracks CPI inflation.
 ecobank-ghana,upside,FY2030E,balance_sheet,total_liabilities,77662.082,GHS millions,MODEL-ESTIMATE,estimated,Sum of liability items.
 ecobank-ghana,upside,FY2030E,balance_sheet,stated_capital,416.641,GHS millions,MODEL-ESTIMATE,estimated,Held flat.
-ecobank-ghana,upside,FY2030E,balance_sheet,retained_earnings,12763.971,GHS millions,MODEL-ESTIMATE,estimated,Prior retained_earnings + PAT - dividends (9M-26 OCI/div preserved in FY26E).
+ecobank-ghana,upside,FY2030E,balance_sheet,retained_earnings,12780.141,GHS millions,MODEL-ESTIMATE,estimated,Prior retained_earnings + PAT - dividends (9M-26 OCI/div preserved in FY26E).
 ecobank-ghana,upside,FY2030E,balance_sheet,reserves_other,2388.592,GHS millions,MODEL-ESTIMATE,estimated,Held flat.
-ecobank-ghana,upside,FY2030E,balance_sheet,total_equity,15569.204,GHS millions,MODEL-ESTIMATE,estimated,stated_capital + retained_earnings + reserves_other.
-ecobank-ghana,upside,FY2030E,ratios,car_pct,20.352,%,MODEL-ESTIMATE,estimated,Proxy only (not prudential RWA): total_equity / (total_assets * 9M-26_RWA_density).
+ecobank-ghana,upside,FY2030E,balance_sheet,total_equity,15585.374,GHS millions,MODEL-ESTIMATE,estimated,stated_capital + retained_earnings + reserves_other.
+ecobank-ghana,upside,FY2030E,ratios,car_pct,20.370,%,MODEL-ESTIMATE,estimated,Proxy only (not prudential RWA): total_equity / (total_assets * 9M-26_RWA_density).
 ecobank-ghana,upside,FY2030E,ratios,tier1_pct,,%,MODEL-ESTIMATE,unavailable,Not projected separately; CET1/Tier 1 unavailable in summary history.
 ecobank-ghana,upside,FY2030E,ratios,npl_pct,7.490,%,MODEL-ESTIMATE,estimated,Estimated NPL path anchored on 9M-2026 reported 14.99%.
 ecobank-ghana,upside,FY2030E,ratios,ldr_pct,46.575,%,MODEL-ESTIMATE,estimated,loans_and_advances_net / customer_deposits * 100 (net basis).
-ecobank-ghana,upside,FY2030E,ratios,cost_to_income_pct,34.586,%,MODEL-ESTIMATE,estimated,(staff + da + other_opex + x_lease_finance_cost) / total_operating_income * 100.
-ecobank-ghana,upside,FY2030E,ratios,roe_pct,18.037,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_equity * 100.
+ecobank-ghana,upside,FY2030E,ratios,cost_to_income_pct,34.581,%,MODEL-ESTIMATE,estimated,(staff + da + other_opex + x_lease_finance_cost) / total_operating_income * 100.
+ecobank-ghana,upside,FY2030E,ratios,roe_pct,18.020,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_equity * 100.
 ecobank-ghana,upside,FY2030E,ratios,roa_pct,3.018,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_assets * 100.
