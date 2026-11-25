@@ -5,7 +5,10 @@
   "capital_event": {
     "amount_m": 1130,
     "date": "2026-10-09",
-    "recognition": "conditional forecast assumes all cash/equity at year end, split and regulatory eligibility unverified; never booked in reported history"
+    "recognition": "conditional forecast assumes all cash/equity at year end, split and regulatory eligibility unverified; never booked in reported history",
+    "accounting_equity_fraction": 1,
+    "cash_fraction": 1,
+    "sensitivity_note": "Hypothetical 80% equity/20% debt with full cash receipt, or 100% equity/80% cash and 20% non-earning other assets. No actual instrument split inferred. All receipts modeled at FY26 closing; new debt accrues funding costs from FY27. Regulatory recognition applies to the modeled equity component."
   },
   "anchor": {
     "year": "FY2025",
@@ -100,5 +103,6 @@
     "Statutory reserve allocation uses Act 930 s34 tier proxy (50%,25%,12.5% based on opening reserve relative to modeled paid-up capital); positive annual PAT only, no distribution. Actual bank treatment or regulatory waiver unverified.",
     "Nominal GDP compounded from real GDP and CPI as approximate proxy, not guidance. Investment yield 50/50 full-year 364-day bill and 10-year bond × scenario factor; loan yield annual average policy + scenario spread; cash yield on opening combined cash with no FY26 return assumed on October event. Funding cost fit from FY24/25 actual interest expense/average liabilities; two observations cannot establish causality. No post-event regulatory return; issuer announcement says above minimum at October event, but no actual CAR number. Conditional year-end proxy may differ and must not be represented as current compliance.",
     "Separate estimated net LDR, CAR proxy and NPL path from unavailable reported regulatory/gross metrics. Cash reserve screen applies hypothetical 40% eligible fraction and 80% of that as stress, never treats all cash as eligible."
-  ]
+  ],
+  "tax_rationale": "Illustrative positive-PBT charge 35% approximates Ghana 25% CIT plus 5% Growth and Sustainability Levy and 5% Financial Sector Recovery Levy; actual tax bases differ. FY25 effective charge 75.955/107.908=70.39%; detailed reconciliation unavailable. No speculative deferred-tax benefit on losses. 45% and FY25 effective-rate stress are hypothetical."
 }
