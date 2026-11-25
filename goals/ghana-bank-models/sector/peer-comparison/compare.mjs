@@ -2,16 +2,20 @@
 // No bank files are modified. The exact-version supervisor is the eligibility gate.
 import fs from 'node:fs';
 import path from 'node:path';
-import {fileURLToPath} from 'node:url';
+import {fileURLToPath,pathToFileURL} from 'node:url';
 import {execFileSync} from 'node:child_process';
-import {evaluateRoom} from '../../../../scripts/completion.mjs';
-import {csv} from '../../../../scripts/bank-gate.mjs';
-const here=path.dirname(fileURLToPath(import.meta.url)),root=path.resolve(here,'../../../..');
+const here=path.dirname(fileURLToPath(import.meta.url));
+const args=process.argv.slice(2), options={};
+for(let i=0;i<args.length;i+=2){if(!['--input-root','--output'].includes(args[i])||!args[i+1]||Object.hasOwn(options,args[i]))throw Error('Usage: compare.mjs [--input-root PATH] [--output PATH]');options[args[i]]=args[i+1];}
+const root=path.resolve(options['--input-root']??path.resolve(here,'../../../..'));
 const goal='ghana-bank-models',dir=path.join(root,'goals',goal);
-const state=await evaluateRoom(root,goal);
+const out=path.resolve(options['--output']??path.join(here,'comparison.csv'));
+const clean=()=>{const changed=execFileSync('git',['status','--porcelain','--untracked-files=all'],{cwd:root,encoding:'utf8'}).trim();if(changed)throw Error('Input checkout must be entirely clean before comparison: '+changed.slice(0,400));};
+clean();
 const sha=execFileSync('git',['rev-parse','HEAD'],{cwd:root,encoding:'utf8'}).trim();
-const changed=execFileSync('git',['status','--porcelain','--','goals/'+goal+'/banks','goals/'+goal+'/claims','goals/'+goal+'/reviews','goals/'+goal+'/sector/macro-assumptions','goals/'+goal+'/availability.json','scripts'],{cwd:root,encoding:'utf8'}).trim();
-if(changed)throw Error('Input tree is not clean; commit or isolate input versions first');
+const {evaluateRoom}=await import(pathToFileURL(path.join(root,'scripts/completion.mjs')).href);
+const {csv}=await import(pathToFileURL(path.join(root,'scripts/bank-gate.mjs')).href);
+const state=await evaluateRoom(root,goal);
 const num=r=>r&&r.value.trim()!==''&&r.status!=='unavailable'&&Number.isFinite(+r.value)?+r.value:null;
 function values(rows,p,s){const result={};for(const r of rows.filter(r=>r.period===p&&(!s||r.scenario===s))){if(Object.hasOwn(result,r.line_item))throw Error('duplicate period/line: '+p+'/'+r.line_item);result[r.line_item]=num(r)}return result;}
 const ratio=(a,b)=>a!=null&&b!=null&&b>0?100*a/b:null,avg=(a,b)=>a!=null&&b!=null?(a+b)/2:null,car=x=>x.car_pct??x.x_car_proxy_pct??null;
@@ -26,5 +30,7 @@ if(!rows.length)throw Error('No accepted models; do not substitute provisional b
 const cols=Object.keys(rows[0]),quote=v=>'"'+String(v??'').replaceAll('"','""')+'"';
 const format=(k,v)=>v==null?'':typeof v==='number'?v.toFixed(k.endsWith('_pct')?4:3):v;
 const content=[cols,...rows.map(r=>cols.map(k=>format(k,r[k])))].map(r=>r.map(quote).join(',')).join('\n')+'\n';
-fs.writeFileSync(path.join(here,'comparison.csv'),content);
+clean();
+if(execFileSync('git',['rev-parse','HEAD'],{cwd:root,encoding:'utf8'}).trim()!==sha)throw Error('Input commit changed during generation');
+fs.writeFileSync(out,content);
 console.log(JSON.stringify({source_commit:sha,accepted:rows.length,roster:state.tasks.length,excluded:state.tasks.filter(t=>t.acceptance!=='accepted').map(t=>({slug:t.slug,stage:t.reviewStage})),totals:Object.fromEntries(['assets_2025_m','customer_deposits_2025_m','pat_2025_m'].map(k=>[k,{total:rows.reduce((a,r)=>a+(r[k]??0),0),n:rows.filter(r=>r[k]!=null).length}]))},null,2));
