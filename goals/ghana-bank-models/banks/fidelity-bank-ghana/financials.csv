@@ -327,3 +327,4 @@
 "fidelity-bank-ghana","FY2025","income_statement","x_corporate_income_tax","397.936","GHS millions","FBL-AR25","133","reported","Included in income_tax, do not add twice."
 "fidelity-bank-ghana","FY2025","income_statement","x_growth_sustainability_levy","73.042","GHS millions","FBL-AR25","133","reported","Included in income_tax, do not add twice."
 "fidelity-bank-ghana","FY2025","income_statement","x_financial_sector_recovery_levy","73.042","GHS millions","FBL-AR25","133","reported","Included in income_tax, do not add twice."
+"fidelity-bank-ghana","FY2025","income_statement","x_fx_usd_15pct_weakening_pnl","-9.185","GHS millions","FBL-AR25","106","reported","Bank hedged USD sensitivity: 15% cedi weakening, not realized income."
