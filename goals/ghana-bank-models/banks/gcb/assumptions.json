@@ -1,0 +1,168 @@
+{
+  "bank": "gcb",
+  "status": "PLACEHOLDER: bank-specific estimated scenario parameters; no numeric shared macro.csv at last sync; not a final forecast",
+  "forecast_periods": [
+    "FY2026E",
+    "FY2027E",
+    "FY2028E",
+    "FY2029E",
+    "FY2030E"
+  ],
+  "macro_file": "../../sector/macro-assumptions/macro.csv",
+  "macro_schema": "../../sector/macro-assumptions/SCHEMA.md",
+  "macro_placeholder": {
+    "status": "PLACEHOLDER",
+    "value": null,
+    "note": "Read shared scenario/year/driver rows before generating forecast; never treat missing macro values as zero."
+  },
+  "anchor": {
+    "period": "9M-2026",
+    "source": "GCB26Q3",
+    "method": "Use observed September balance sheet and year-to-date earnings. Q4 estimated from 9M run rate with scenario multiplier. 9M gross loans and allowance missing: estimate year-end net then gross using explicitly estimated allowance/gross ratio; no historical imputation."
+  },
+  "drivers": {
+    "loan_growth": {
+      "status": "estimated",
+      "method": "2027 onward nominal GDP growth approximation = shared real GDP growth + CPI inflation, plus bank-specific spread in percentage points; 2026 Q4 net loan growth applied to September actual.",
+      "reason": "FY2024/FY2025 gross loan growth approximately 50%/49%; FY2026 September net loans 25,229.224m vs 16,038.002m at FY2025; assume growth normalizes rather than perpetuating exceptional expansion.",
+      "base": {
+        "spread_pp": 4,
+        "q4_pct": 7
+      },
+      "downside": {
+        "spread_pp": -4,
+        "q4_pct": 0
+      },
+      "upside": {
+        "spread_pp": 9,
+        "q4_pct": 12
+      }
+    },
+    "deposit_growth": {
+      "status": "estimated",
+      "method": "Nominal GDP approximation plus spread; 2026 Q4 from September deposit balance.",
+      "reason": "FY2025 deposits grew about 20.5%; September 2026 deposits 50,404.889m versus 41,048.267m at FY2025.",
+      "base": {
+        "spread_pp": 2,
+        "q4_pct": 5
+      },
+      "downside": {
+        "spread_pp": -3,
+        "q4_pct": -2
+      },
+      "upside": {
+        "spread_pp": 6,
+        "q4_pct": 9
+      }
+    },
+    "investment_yield": {
+      "status": "estimated",
+      "method": "Use 50% shared 364-day T-bill and 50% representative government bond yield; portfolio mix proxy, not reported.",
+      "reason": "Government securities repricing matters; maturity-level weighted yield not yet verified.",
+      "weights": {
+        "tbill_364d_pct": 0.5,
+        "govt_bond_yield_pct": 0.5
+      }
+    },
+    "loan_yield": {
+      "status": "estimated",
+      "method": "Shared policy rate plus scenario spread (percentage points).",
+      "reason": "Standalone loan-specific yield has not yet been reconciled to interest-income notes; spreads are analyst stress assumptions.",
+      "base": 8,
+      "downside": 6,
+      "upside": 10
+    },
+    "cost_of_funds": {
+      "status": "estimated",
+      "method": "Interest-bearing funding cost = shared policy rate multiplied by factor; use average deposits and wholesale borrowings; effective blended cost, not quoted deposit rate.",
+      "reason": "FY2025 interest expense 1,571.799m divided by average FY2024–25 deposits and borrowings is approximately 3.86%.",
+      "base": 0.27,
+      "downside": 0.4,
+      "upside": 0.22
+    },
+    "fee_growth": {
+      "status": "estimated",
+      "method": "Shared nominal GDP proxy plus spread; preserve expense/income ratio unless stress applied.",
+      "reason": "FY2025 fee income 1,131.697m vs 780.431m in FY2024; normalize exceptional growth.",
+      "base": 3,
+      "downside": -4,
+      "upside": 7
+    },
+    "opex_growth": {
+      "status": "estimated",
+      "method": "Shared CPI inflation plus percentage-point spread.",
+      "reason": "Staff and other expenses grew rapidly in FY2025; inflation plus growth-related overhead is a transparent sensitivity, not guidance.",
+      "base": 5,
+      "downside": 8,
+      "upside": 3
+    },
+    "cost_of_risk": {
+      "status": "estimated",
+      "method": "Loan impairment charge / mean gross loans; scenario percentage. No repeat of FY2022 DDEP event assumed; stress captured by higher costs, not an unverified sovereign haircut.",
+      "reason": "FY2025 loan impairment 188.797m against mean gross loans approximately 14,881m (1.27%).",
+      "base": 1.3,
+      "downside": 3.5,
+      "upside": 0.8
+    },
+    "npl_pct": {
+      "status": "estimated",
+      "method": "2026 year-end based on reported 9M 4.8%; subsequent scenario target, not forecast from loan-level data.",
+      "base": 5,
+      "downside": 10,
+      "upside": 4
+    },
+    "allowance_to_gross_pct": {
+      "status": "estimated",
+      "method": "Gross loans = net loans / (1 - allowance ratio) at FY2026E; later allowance stock = gross x ratio.",
+      "reason": "FY2025 reported 1,789.120m / 17,827.122m = 10.04%; 9M2026 gross/allowance unavailable. Lower base ratio is a scenario assumption reflecting reported NPL improvement, not an observed allowance.",
+      "base": 7,
+      "downside": 12,
+      "upside": 5
+    },
+    "tax_rate_pct": {
+      "status": "estimated",
+      "method": "Effective tax on positive PBT; no automatic deferred tax benefit for losses.",
+      "reason": "FY2025 effective income tax 35.39%; 9M2026 35.05%. Separate levy treatment pending verification.",
+      "base": 35,
+      "downside": 35,
+      "upside": 35
+    },
+    "dividend_payout_pct": {
+      "status": "estimated",
+      "method": "Payout on positive PAT; constrain if capital target or cash minimum breached.",
+      "reason": "Scenario payout sensitivity, actual historical dividends not yet modeled.",
+      "base": 15,
+      "downside": 0,
+      "upside": 20
+    },
+    "capital_ratio_target_pct": {
+      "status": "estimated",
+      "method": "Management buffer (pp) above shared minimum CAR, not an official target; estimate RWA intensity from FY2025 RWA / assets; independently flag minimum shortfall.",
+      "reason": "FY2025 regulatory capital and RWA disclosed; 9M2026 reported CAR 14.6%; no verified interim RWA/capital breakdown.",
+      "base": 3,
+      "downside": 4,
+      "upside": 4
+    },
+    "q4_income_runrate_multiplier": {
+      "status": "estimated",
+      "method": "Apply to one-third of actual nine-month flows, with downside/upside earnings sensitivity; final model must define line-specific cost multipliers to avoid scaling profit and cost mechanically.",
+      "base": 1,
+      "downside": 0.85,
+      "upside": 1.15
+    },
+    "fx": {
+      "status": "PLACEHOLDER",
+      "method": "Use shared year-end GHS/USD change and verified FX exposure where available; no unverified exposure amount. Explicitly flag unavailable sensitivity until note extraction."
+    },
+    "cash_reserve": {
+      "status": "PLACEHOLDER",
+      "method": "Use shared CRR regulatory input; verify denominator and eligible assets before asserting regulatory compliance."
+    }
+  },
+  "notes": [
+    "All numeric driver assumptions are analyst estimates, not reported bank results or management guidance.",
+    "Scenario values are provisional judgments; revisit on receipt of shared macro.csv and after FY2025/interim note review.",
+    "2026 income statement must retain reported 9M results plus separately estimated Q4; model checks must flag any liquidity or capital shortfall.",
+    "No forecast output generated until formula implementation and shared macro validation."
+  ]
+}
