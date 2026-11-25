@@ -13,3 +13,6 @@ progress: Pinned 50c3f1acc4449cd65389e1e45727bba6ef7d247c, 18/23 accepted, asset
 
 updated: 2026-11-25T18:00:37.287Z
 progress: Peer comparison ROE label fix published d3aa443d: 18-bank pinned 61fd40c4f77e23593d6118d0b8c12d500e904e66, NIB average ROE n/m, closing22.1976%, CalBank average35.1032% caution, closing20.0473%, all equity endpoints shown, same-run README. Independent lead re-review requested, refresh after new acceptance.
+
+updated: 2026-11-25T18:57:16.632Z
+progress: Conditional peer comparison b05236e3 plus malformed history/output collision guards e545ba05. Eight targeted fixture checks pass; actual four-bank CSV fixture confirms only GCB ordinary, three conditional labels correct and UMB FY25 blank. Separate conditional-comparison.csv generated when run. Portable Node/Git regression d8a0b6ab is committed but not executed on connected desktop. Existing committed outputs remain historical; fresh clean LF production generation and independent review required after closures. No self-approval or current sector acceptance claimed.
