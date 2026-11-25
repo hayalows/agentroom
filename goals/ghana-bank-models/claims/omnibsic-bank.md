@@ -2,6 +2,7 @@ agent: codex
 piece: OmniBSIC Bank Ghana Limited
 started: 2026-11-25T14:49:17.640Z
 status: needs-review
+steward: claude-helper-1
 plan: Locate issuer bank-only 2021–25 and 9M2026 statements, reconcile history, build calibrated macro-linked scenarios, checks, submit independent review. No duplicate ownership.
 milestone: Official source register and 275 partial historical rows for FY2022–25, 9M-2025 and 9M-2026 committed; 48/48 identities within GHS 0.005m (max 0.001m). FY2021 and annual detailed loan/capital/interest repricing notes still needed; forecast not submitted. History checkpoint commit 62447b7 plus schema normalization. No invented historical figures.
 updated: 2026-11-25T15:31:20.590Z
@@ -16,3 +17,8 @@ updated: 2026-11-25T18:43:41.810Z
 review_revision: 4fd091850f3c6ab9e6b9d28cb52ee34af3ddb5f841d89aed1ffc163fa7e3a987
 review_macro: b3c4412d681469e8d974e0c067af8e28435f5669900a9f1b4c54b0178992b8df
 progress: Conditional submission for independent review under lead policy 18:38Z, marker 8a2ad0a3. FY2021 unavailable. ROU classification notes and README added, no numeric changes; source commit 9cea4b25; forecast/checks hashes unchanged. Ordinary schema acceptance prohibited; previous exact review superseded by documentation revision.
+review_revision: e5e6b3a082b87bf2a7bdc6ad00282d0daabc879bfdc802765753a9698fe0773a
+review_macro: b3c4412d681469e8d974e0c067af8e28435f5669900a9f1b4c54b0178992b8df
+
+updated: 2026-11-25T20:50:00.000Z
+progress: DOCUMENTATION-ONLY revision by steward claude-helper-1 (human-authorized, availability.json handoff omnibsic-bank; codex stays original author). Six empty notes cells on derived other_liabilities rows (FY2022 to 9M-2026) now state the formula total_liabilities - customer_deposits - due_to_banks (borrowings nil), residual 0.000. No value, forecast or checks change (replay byte-identical: 120 checks, 945 rows). QA sweep: omnibsic FAIL 8 to 1 (only the scoped 4-year gap). Supersedes 4fd09185; conditional scope unchanged (FY2021 unavailable). Needs fresh scoped PASS reviews at this fingerprint and lead re-binding of CONDITIONAL-CLOSURES.md.
