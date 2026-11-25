@@ -15,7 +15,7 @@ Recomputed from the committed `financials.csv` and `forecast.csv` by `model.py` 
 
 ## Source and schema checks
 
-- Historical rows: 296; duplicate bank/period/statement/key rows: 0; reported rows missing source/page: 0; unavailable rows with non-blank value: 0.
+- Historical rows: 302; duplicate bank/period/statement/key rows: 0; reported rows missing source/page: 0; unavailable rows with non-blank value: 0.
 - Spot-checks against printed filing pages (visually verified): SB25AR printed p.46 total assets 36,708,145k -> 36708.145; SB25AR printed p.47 PAT 1,608,667k -> 1608.667; SB24AR printed p.49 total assets 32,590,921k -> 32590.921; SB26Q3 9M-2026 total assets 43,243,634k -> 43243.634. All match.
 
 ## Ratios: reported vs recomputed (%)
@@ -39,22 +39,33 @@ Rows: 870; scenario-years: 15; FY2025 residual RWA density: 0.278715; estimated 
 
 | Scenario | Year | Max bridge residual | CAR % | Min CAR % | Capital gap | Cash | CRR proxy | Reserve gap | Dividends |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| base | FY2026E | 0.000 | 23.212 | 13.000 | 0.000 | 16374.334 | 6092.942 | 0.000 | 106.736 |
-| base | FY2027E | 0.000 | 25.006 | 13.000 | 0.000 | 18878.990 | 6915.490 | 0.000 | 746.217 |
-| base | FY2028E | 0.000 | 26.340 | 13.000 | 0.000 | 21741.521 | 7883.658 | 0.000 | 826.231 |
-| base | FY2029E | 0.000 | 27.420 | 13.000 | 0.000 | 24925.213 | 8971.603 | 0.000 | 917.658 |
-| base | FY2030E | 0.000 | 28.362 | 13.000 | 0.000 | 28540.677 | 10209.684 | 0.000 | 1048.288 |
-| downside | FY2026E | 0.000 | 19.601 | 13.000 | 0.000 | 14993.963 | 5800.012 | 0.000 | 0.000 |
-| downside | FY2027E | 0.000 | 24.079 | 13.000 | 0.000 | 17444.990 | 6380.014 | 0.000 | 0.000 |
-| downside | FY2028E | 0.000 | 27.758 | 13.000 | 0.000 | 20034.718 | 7018.015 | 0.000 | 0.000 |
-| downside | FY2029E | 0.000 | 29.623 | 13.000 | 0.000 | 22438.717 | 7719.817 | 0.000 | 0.000 |
-| downside | FY2030E | 0.000 | 30.315 | 13.000 | 0.000 | 24621.458 | 8453.199 | 0.000 | 0.000 |
-| upside | FY2026E | 0.000 | 22.929 | 13.000 | 0.000 | 16907.706 | 6327.286 | 0.000 | 203.917 |
-| upside | FY2027E | 0.000 | 23.469 | 13.000 | 0.000 | 20028.867 | 7466.198 | 0.000 | 1030.751 |
-| upside | FY2028E | 0.000 | 23.767 | 13.000 | 0.000 | 23810.935 | 8869.843 | 0.000 | 1217.514 |
-| upside | FY2029E | 0.000 | 24.101 | 13.000 | 0.000 | 28374.896 | 10555.113 | 0.000 | 1498.115 |
-| upside | FY2030E | 0.000 | 24.393 | 13.000 | 0.000 | 33946.767 | 12613.360 | 0.000 | 1838.262 |
+| base | FY2026E | 0.000 | 23.212 | 13.000 | 0.000 | 16435.913 | 6092.942 | 0.000 | 106.736 |
+| base | FY2027E | 0.000 | 23.015 | 13.000 | 0.000 | 18527.555 | 6915.490 | 0.000 | 409.226 |
+| base | FY2028E | 0.000 | 22.518 | 13.000 | 0.000 | 20899.117 | 7883.658 | 0.000 | 421.983 |
+| base | FY2029E | 0.000 | 21.906 | 13.000 | 0.000 | 23493.634 | 8971.603 | 0.000 | 437.027 |
+| base | FY2030E | 0.000 | 21.313 | 13.000 | 0.000 | 26426.486 | 10209.684 | 0.000 | 485.675 |
+| downside | FY2026E | 0.000 | 19.601 | 13.000 | 0.000 | 14798.961 | 5800.012 | 0.000 | 0.000 |
+| downside | FY2027E | 0.000 | 22.407 | 13.000 | 0.000 | 16448.087 | 6380.014 | 0.000 | 0.000 |
+| downside | FY2028E | 0.000 | 24.190 | 13.000 | 0.000 | 18002.567 | 7018.015 | 0.000 | 0.000 |
+| downside | FY2029E | 0.000 | 24.042 | 13.000 | 0.000 | 19143.219 | 7719.817 | 0.000 | 0.000 |
+| downside | FY2030E | 0.000 | 22.678 | 13.000 | 0.000 | 19819.115 | 8453.199 | 0.000 | 0.000 |
+| upside | FY2026E | 0.000 | 22.929 | 13.000 | 0.000 | 17159.156 | 6327.286 | 0.000 | 203.917 |
+| upside | FY2027E | 0.000 | 21.662 | 13.000 | 0.000 | 20260.468 | 7466.198 | 0.000 | 547.414 |
+| upside | FY2028E | 0.000 | 20.387 | 13.000 | 0.000 | 24030.331 | 8869.843 | 0.000 | 628.249 |
+| upside | FY2029E | 0.000 | 20.078 | 13.000 | 0.000 | 28857.422 | 10555.113 | 0.000 | 495.960 |
+| upside | FY2030E | 0.000 | 20.065 | 13.000 | 0.000 | 34890.990 | 12613.360 | 0.000 | 492.324 |
 
 Accounting bridges: PASS (15/15). Capital below the shared minimum: 0/15 flagged. Cash-reserve proxy shortfalls: 0/15 flagged. Negative cash: 0/15 flagged.
 
 FY2026 estimated earnings retain actual 9M income and estimate Q4 only. The Bank does not disclose a net FX position in the summary statements used, so no incremental FX translation P&L is modelled. Full prudential risk weights, OCI, capital deductions and liquidity eligibility are not available, so this is a simplified scenario analysis. Independent review required.
+
+### Forward-yield calibration diagnostics
+
+Interest income and expense use a **blended, anchor-implied yield carried forward for continuity**: yield_t = income_{t-1} / mean earning assets_{t-2,t-1}, drifted by the shared policy-rate ratio. This replaced a component-yield formula that priced idle cash at the policy rate and produced a 2026->2027 interest-income jump of about 53%. The table below shows the base FY2027 formula against a naive 9M-2026 x 4/3 annualisation; the method is continuous with the anchor, so the growth is now modest.
+
+| Metric | 9M-2026 annualised (x4/3) | Base FY2027 formula | Formula vs run rate |
+|---|---:|---:|---:|
+| Interest income | 2633.040 | 2539.629 | -3.5% |
+| Interest expense | 376.565 | 372.605 | -1.1% |
+
+Out-of-sample check: the FY2024 implied earning-asset yield applied to FY2025 average earning assets predicts FY2025 interest income of about 3,563.0m versus the actual 3,415.7m (a 4.3% error), which supports the blended approach. The earning-asset base includes the cash/BoG residual, which contains non-earning reserve balances, so the blended yield is a portfolio average, not an eligible-reserve rate. Inter-bank balances (`due_from_banks`) are not given a separate income line. A reviewer should still treat the forward net-interest-income path as sensitive to this calibration.

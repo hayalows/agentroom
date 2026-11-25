@@ -18,11 +18,11 @@ stanbic-bank-ghana,FY2021,income_statement,x_indirect_tax,29.708,GHS millions,SB
 stanbic-bank-ghana,FY2021,income_statement,x_direct_tax,212.764,GHS millions,SB22AR,70,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed. Direct income tax charge/(credit)."
 stanbic-bank-ghana,FY2021,balance_sheet,cash_and_bog_balances,3316.768,GHS millions,SB22AR,70,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed. Reported as a single cash-and-cash-equivalents line (split not disclosed in this filing)."
 stanbic-bank-ghana,FY2021,balance_sheet,due_from_banks,,GHS millions,SB22AR,70,unavailable,"Bank-only (separate) statements; costs/allowances positive, profits signed. Cash and cash equivalents is reported as a single line in this filing; the inter-bank split is unavailable."
-stanbic-bank-ghana,FY2021,balance_sheet,x_trading_assets,1602.113,GHS millions,SB22AR,70,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed. Non-pledged trading assets."
+stanbic-bank-ghana,FY2021,balance_sheet,x_trading_assets,1602.113,GHS millions,SB22AR,70,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed. Non-pledged trading assets (memo; already included in other_assets, non-additive)."
 stanbic-bank-ghana,FY2021,balance_sheet,x_pledged_assets,,GHS millions,SB22AR,70,unavailable,"Bank-only (separate) statements; costs/allowances positive, profits signed. No pledged trading assets line in this filing."
 stanbic-bank-ghana,FY2021,balance_sheet,investment_securities,2772.551,GHS millions,SB22AR,70,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
 stanbic-bank-ghana,FY2021,balance_sheet,loans_and_advances_net,5185.128,GHS millions,SB22AR,70,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
-stanbic-bank-ghana,FY2021,balance_sheet,other_assets,842.747,GHS millions,SB22AR,70,derived,Other assets plus deferred/current tax assets as reported.
+stanbic-bank-ghana,FY2021,balance_sheet,other_assets,2444.86,GHS millions,SB22AR,70,derived,Canonical other assets: other assets plus deferred/current tax assets plus non-pledged trading assets plus pledged trading assets as reported. The x_trading_assets / x_pledged_assets rows are non-additive memos of the trading components already inside this line.
 stanbic-bank-ghana,FY2021,balance_sheet,property_equipment_intangibles,323.79,GHS millions,SB22AR,70,derived,"Property, equipment and right-of-use assets plus intangible assets as reported."
 stanbic-bank-ghana,FY2021,balance_sheet,total_assets,14043.097,GHS millions,SB22AR,70,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
 stanbic-bank-ghana,FY2021,balance_sheet,customer_deposits,9936.698,GHS millions,SB22AR,70,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
@@ -38,16 +38,17 @@ stanbic-bank-ghana,FY2021,balance_sheet,loans_and_advances_gross,5388.433,GHS mi
 stanbic-bank-ghana,FY2021,balance_sheet,loan_loss_allowance,203.305,GHS millions,SB22AR,70,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed. Credit impairment allowance on loans (note 5.1); positive balance."
 stanbic-bank-ghana,FY2021,balance_sheet,x_interest_in_suspense,,GHS millions,SB22AR,70,unavailable,"Bank-only (separate) statements; costs/allowances positive, profits signed. FY2022 interest in suspense is unresolved in the filing; left unavailable rather than guessed."
 stanbic-bank-ghana,FY2021,ratios,car_pct,19.2,percent,SB22SUM,1,reported,Total capital adequacy ratio as reported.
-stanbic-bank-ghana,FY2021,ratios,tier1_pct,17.2,percent,SB22SUM,1,reported,Reported Common Equity Tier 1 ratio (note 5.1 basis).
+stanbic-bank-ghana,FY2021,ratios,x_cet1_pct,17.2,percent,SB22SUM,1,reported,"Reported Common Equity Tier 1 ratio (the summary disclosures label this CET1, not Tier 1)."
+stanbic-bank-ghana,FY2021,ratios,tier1_pct,,percent,,,unavailable,Tier 1 capital and RWA not both available; true Tier 1 ratio unavailable.
 stanbic-bank-ghana,FY2021,ratios,npl_pct,6.7,percent,SB22SUM,1,reported,Gross non-performing loan ratio as reported by the Bank (the AR narrative separately quotes the industry NPL).
 stanbic-bank-ghana,FY2021,balance_sheet,x_tier1_capital,,GHS millions,,,unavailable,Bank-only (separate) statements; audited capital-adequacy note. Tier 1 capital.
 stanbic-bank-ghana,FY2021,balance_sheet,x_tier2_capital,,GHS millions,,,unavailable,Bank-only (separate) statements; audited capital-adequacy note. Tier 2 capital.
 stanbic-bank-ghana,FY2021,balance_sheet,x_regulatory_capital,,GHS millions,,,unavailable,Bank-only (separate) statements; audited capital-adequacy note. Total regulatory capital (Tier 1 + Tier 2).
 stanbic-bank-ghana,FY2021,balance_sheet,x_risk_weighted_assets,,GHS millions,,,unavailable,Bank-only (separate) statements; audited capital-adequacy note. Total risk-weighted assets.
-stanbic-bank-ghana,FY2021,ratios,ldr_pct,,percent,,,unavailable,Not disclosed as a ratio in the bank's summary statements; recomputable in checks.md where inputs exist.
-stanbic-bank-ghana,FY2021,ratios,cost_to_income_pct,,percent,,,unavailable,Not disclosed as a ratio in the bank's summary statements; recomputable in checks.md where inputs exist.
-stanbic-bank-ghana,FY2021,ratios,roe_pct,,percent,,,unavailable,Not disclosed as a ratio in the bank's summary statements; recomputable in checks.md where inputs exist.
-stanbic-bank-ghana,FY2021,ratios,roa_pct,,percent,,,unavailable,Not disclosed as a ratio in the bank's summary statements; recomputable in checks.md where inputs exist.
+stanbic-bank-ghana,FY2021,ratios,ldr_pct,54.227602,percent,SB22AR,70,derived,"Derived (not reported by the Bank): Gross loans and advances / customer deposits (closing balances). Closing-balance basis, so it differs from any average-balance ratio."
+stanbic-bank-ghana,FY2021,ratios,cost_to_income_pct,47.68091,percent,SB22AR,70,derived,"Derived (not reported by the Bank): Operating expenses excluding impairment / total operating income (single period). Closing-balance basis, so it differs from any average-balance ratio."
+stanbic-bank-ghana,FY2021,ratios,roe_pct,20.74917,percent,SB22AR,70,derived,"Derived (not reported by the Bank): Profit after tax / closing equity (single period; not average balances). Closing-balance basis, so it differs from any average-balance ratio."
+stanbic-bank-ghana,FY2021,ratios,roa_pct,2.885332,percent,SB22AR,70,derived,"Derived (not reported by the Bank): Profit after tax / closing total assets (single period). Closing-balance basis, so it differs from any average-balance ratio."
 stanbic-bank-ghana,FY2022,income_statement,interest_income,1504.11,GHS millions,SB22AR,70,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
 stanbic-bank-ghana,FY2022,income_statement,interest_expense,349.497,GHS millions,SB22AR,70,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
 stanbic-bank-ghana,FY2022,income_statement,net_interest_income,1154.613,GHS millions,SB22AR,70,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
@@ -67,11 +68,11 @@ stanbic-bank-ghana,FY2022,income_statement,x_indirect_tax,36.549,GHS millions,SB
 stanbic-bank-ghana,FY2022,income_statement,x_direct_tax,-18.076,GHS millions,SB22AR,70,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed. Direct income tax charge/(credit)."
 stanbic-bank-ghana,FY2022,balance_sheet,cash_and_bog_balances,4342.422,GHS millions,SB22AR,70,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed. Coins and bank notes plus balances with central bank."
 stanbic-bank-ghana,FY2022,balance_sheet,due_from_banks,4250.328,GHS millions,SB22AR,70,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed. Due from other banks and financial institutions (note 2/7)."
-stanbic-bank-ghana,FY2022,balance_sheet,x_trading_assets,1057.969,GHS millions,SB22AR,70,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed. Non-pledged trading assets."
+stanbic-bank-ghana,FY2022,balance_sheet,x_trading_assets,1057.969,GHS millions,SB22AR,70,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed. Non-pledged trading assets (memo; already included in other_assets, non-additive)."
 stanbic-bank-ghana,FY2022,balance_sheet,x_pledged_assets,,GHS millions,SB22AR,70,unavailable,"Bank-only (separate) statements; costs/allowances positive, profits signed. No pledged trading assets line in this filing."
 stanbic-bank-ghana,FY2022,balance_sheet,investment_securities,1186.809,GHS millions,SB22AR,70,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
 stanbic-bank-ghana,FY2022,balance_sheet,loans_and_advances_net,6429.851,GHS millions,SB22AR,70,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
-stanbic-bank-ghana,FY2022,balance_sheet,other_assets,1011.06,GHS millions,SB22AR,70,derived,Other assets plus deferred/current tax assets as reported.
+stanbic-bank-ghana,FY2022,balance_sheet,other_assets,2069.029,GHS millions,SB22AR,70,derived,Canonical other assets: other assets plus deferred/current tax assets plus non-pledged trading assets plus pledged trading assets as reported. The x_trading_assets / x_pledged_assets rows are non-additive memos of the trading components already inside this line.
 stanbic-bank-ghana,FY2022,balance_sheet,property_equipment_intangibles,319.012,GHS millions,SB22AR,70,derived,"Property, equipment and right-of-use assets plus intangible assets as reported."
 stanbic-bank-ghana,FY2022,balance_sheet,total_assets,18597.451,GHS millions,SB22AR,70,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
 stanbic-bank-ghana,FY2022,balance_sheet,customer_deposits,14596.31,GHS millions,SB22AR,70,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
@@ -87,16 +88,17 @@ stanbic-bank-ghana,FY2022,balance_sheet,loans_and_advances_gross,7018.198,GHS mi
 stanbic-bank-ghana,FY2022,balance_sheet,loan_loss_allowance,588.347,GHS millions,SB22AR,70,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed. Credit impairment allowance on loans (note 5.1); positive balance."
 stanbic-bank-ghana,FY2022,balance_sheet,x_interest_in_suspense,,GHS millions,SB22AR,70,unavailable,"Bank-only (separate) statements; costs/allowances positive, profits signed. FY2022 interest in suspense is unresolved in the filing; left unavailable rather than guessed."
 stanbic-bank-ghana,FY2022,ratios,car_pct,12.3,percent,SB22SUM,1,reported,Total capital adequacy ratio as reported.
-stanbic-bank-ghana,FY2022,ratios,tier1_pct,12.3,percent,SB22SUM,1,reported,Reported Common Equity Tier 1 ratio (note 5.1 basis).
+stanbic-bank-ghana,FY2022,ratios,x_cet1_pct,12.3,percent,SB22SUM,1,reported,"Reported Common Equity Tier 1 ratio (the summary disclosures label this CET1, not Tier 1)."
+stanbic-bank-ghana,FY2022,ratios,tier1_pct,12.275603,percent,SB23AR,68,derived,"Tier 1 capital / RWA computed from the audited capital-adequacy note (Tier 1 numerator, not CET1). Close to but definitionally distinct from the reported CET1 ratio."
 stanbic-bank-ghana,FY2022,ratios,npl_pct,8.96,percent,SB22SUM,1,reported,Gross non-performing loan ratio as reported by the Bank (the AR narrative separately quotes the industry NPL).
 stanbic-bank-ghana,FY2022,balance_sheet,x_tier1_capital,1468.539,GHS millions,SB23AR,68,reported,Bank-only (separate) statements; audited capital-adequacy note. Tier 1 capital.
 stanbic-bank-ghana,FY2022,balance_sheet,x_tier2_capital,0,GHS millions,SB23AR,68,reported,Bank-only (separate) statements; audited capital-adequacy note. Tier 2 capital.
 stanbic-bank-ghana,FY2022,balance_sheet,x_regulatory_capital,1468.539,GHS millions,SB23AR,68,reported,Bank-only (separate) statements; audited capital-adequacy note. Total regulatory capital (Tier 1 + Tier 2).
 stanbic-bank-ghana,FY2022,balance_sheet,x_risk_weighted_assets,11963.07,GHS millions,SB23AR,68,reported,Bank-only (separate) statements; audited capital-adequacy note. Total risk-weighted assets.
-stanbic-bank-ghana,FY2022,ratios,ldr_pct,,percent,,,unavailable,Not disclosed as a ratio in the bank's summary statements; recomputable in checks.md where inputs exist.
-stanbic-bank-ghana,FY2022,ratios,cost_to_income_pct,,percent,,,unavailable,Not disclosed as a ratio in the bank's summary statements; recomputable in checks.md where inputs exist.
-stanbic-bank-ghana,FY2022,ratios,roe_pct,,percent,,,unavailable,Not disclosed as a ratio in the bank's summary statements; recomputable in checks.md where inputs exist.
-stanbic-bank-ghana,FY2022,ratios,roa_pct,,percent,,,unavailable,Not disclosed as a ratio in the bank's summary statements; recomputable in checks.md where inputs exist.
+stanbic-bank-ghana,FY2022,ratios,ldr_pct,48.082002,percent,SB22AR,70,derived,"Derived (not reported by the Bank): Gross loans and advances / customer deposits (closing balances). Closing-balance basis, so it differs from any average-balance ratio."
+stanbic-bank-ghana,FY2022,ratios,cost_to_income_pct,46.774383,percent,SB22AR,70,derived,"Derived (not reported by the Bank): Operating expenses excluding impairment / total operating income (single period). Closing-balance basis, so it differs from any average-balance ratio."
+stanbic-bank-ghana,FY2022,ratios,roe_pct,-3.665259,percent,SB22AR,70,derived,"Derived (not reported by the Bank): Profit after tax / closing equity (single period; not average balances). Closing-balance basis, so it differs from any average-balance ratio."
+stanbic-bank-ghana,FY2022,ratios,roa_pct,-0.336578,percent,SB22AR,70,derived,"Derived (not reported by the Bank): Profit after tax / closing total assets (single period). Closing-balance basis, so it differs from any average-balance ratio."
 stanbic-bank-ghana,FY2023,income_statement,interest_income,2463.726,GHS millions,SB23AR,48,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
 stanbic-bank-ghana,FY2023,income_statement,interest_expense,498.256,GHS millions,SB23AR,48,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
 stanbic-bank-ghana,FY2023,income_statement,net_interest_income,1965.47,GHS millions,SB23AR,48,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
@@ -116,11 +118,11 @@ stanbic-bank-ghana,FY2023,income_statement,x_indirect_tax,71.869,GHS millions,SB
 stanbic-bank-ghana,FY2023,income_statement,x_direct_tax,681.204,GHS millions,SB23AR,48,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed. Direct income tax charge/(credit)."
 stanbic-bank-ghana,FY2023,balance_sheet,cash_and_bog_balances,7543.105,GHS millions,SB23AR,48,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed. Coins and bank notes plus balances with central bank."
 stanbic-bank-ghana,FY2023,balance_sheet,due_from_banks,1298.126,GHS millions,SB23AR,48,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed. Due from other banks and financial institutions (note 2/7)."
-stanbic-bank-ghana,FY2023,balance_sheet,x_trading_assets,2055.38,GHS millions,SB23AR,48,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed. Non-pledged trading assets."
+stanbic-bank-ghana,FY2023,balance_sheet,x_trading_assets,2055.38,GHS millions,SB23AR,48,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed. Non-pledged trading assets (memo; already included in other_assets, non-additive)."
 stanbic-bank-ghana,FY2023,balance_sheet,x_pledged_assets,,GHS millions,SB23AR,48,unavailable,"Bank-only (separate) statements; costs/allowances positive, profits signed. No pledged trading assets line in this filing."
 stanbic-bank-ghana,FY2023,balance_sheet,investment_securities,6305.792,GHS millions,SB23AR,48,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
 stanbic-bank-ghana,FY2023,balance_sheet,loans_and_advances_net,5989.342,GHS millions,SB23AR,48,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
-stanbic-bank-ghana,FY2023,balance_sheet,other_assets,1037.822,GHS millions,SB23AR,48,derived,Other assets plus deferred/current tax assets as reported.
+stanbic-bank-ghana,FY2023,balance_sheet,other_assets,3093.202,GHS millions,SB23AR,48,derived,Canonical other assets: other assets plus deferred/current tax assets plus non-pledged trading assets plus pledged trading assets as reported. The x_trading_assets / x_pledged_assets rows are non-additive memos of the trading components already inside this line.
 stanbic-bank-ghana,FY2023,balance_sheet,property_equipment_intangibles,403.971,GHS millions,SB23AR,48,derived,"Property, equipment and right-of-use assets plus intangible assets as reported."
 stanbic-bank-ghana,FY2023,balance_sheet,total_assets,24633.538,GHS millions,SB23AR,48,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
 stanbic-bank-ghana,FY2023,balance_sheet,customer_deposits,18622.654,GHS millions,SB23AR,48,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
@@ -136,16 +138,17 @@ stanbic-bank-ghana,FY2023,balance_sheet,loans_and_advances_gross,6767.842,GHS mi
 stanbic-bank-ghana,FY2023,balance_sheet,loan_loss_allowance,778.5,GHS millions,SB23AR,85,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed. Credit impairment allowance on loans (note 5.1); positive balance."
 stanbic-bank-ghana,FY2023,balance_sheet,x_interest_in_suspense,0,GHS millions,SB23AR,85,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed. Net = gross - allowance exactly in this filing; no separate interest in suspense."
 stanbic-bank-ghana,FY2023,ratios,car_pct,19.6,percent,SB23SUM,1,reported,Total capital adequacy ratio as reported.
-stanbic-bank-ghana,FY2023,ratios,tier1_pct,16.6,percent,SB23SUM,1,reported,Reported Common Equity Tier 1 ratio (note 5.1 basis).
+stanbic-bank-ghana,FY2023,ratios,x_cet1_pct,16.6,percent,SB23SUM,1,reported,"Reported Common Equity Tier 1 ratio (the summary disclosures label this CET1, not Tier 1)."
+stanbic-bank-ghana,FY2023,ratios,tier1_pct,16.645591,percent,SB23AR,68,derived,"Tier 1 capital / RWA computed from the audited capital-adequacy note (Tier 1 numerator, not CET1). Close to but definitionally distinct from the reported CET1 ratio."
 stanbic-bank-ghana,FY2023,ratios,npl_pct,16.24,percent,SB23SUM,1,reported,Gross non-performing loan ratio as reported by the Bank (the AR narrative separately quotes the industry NPL).
 stanbic-bank-ghana,FY2023,balance_sheet,x_tier1_capital,1919.338,GHS millions,SB23AR,68,reported,Bank-only (separate) statements; audited capital-adequacy note. Tier 1 capital.
 stanbic-bank-ghana,FY2023,balance_sheet,x_tier2_capital,345.918,GHS millions,SB23AR,68,reported,Bank-only (separate) statements; audited capital-adequacy note. Tier 2 capital.
 stanbic-bank-ghana,FY2023,balance_sheet,x_regulatory_capital,2265.256,GHS millions,SB23AR,68,reported,Bank-only (separate) statements; audited capital-adequacy note. Total regulatory capital (Tier 1 + Tier 2).
 stanbic-bank-ghana,FY2023,balance_sheet,x_risk_weighted_assets,11530.609,GHS millions,SB23AR,68,reported,Bank-only (separate) statements; audited capital-adequacy note. Total risk-weighted assets.
-stanbic-bank-ghana,FY2023,ratios,ldr_pct,,percent,,,unavailable,Not disclosed as a ratio in the bank's summary statements; recomputable in checks.md where inputs exist.
-stanbic-bank-ghana,FY2023,ratios,cost_to_income_pct,,percent,,,unavailable,Not disclosed as a ratio in the bank's summary statements; recomputable in checks.md where inputs exist.
-stanbic-bank-ghana,FY2023,ratios,roe_pct,,percent,,,unavailable,Not disclosed as a ratio in the bank's summary statements; recomputable in checks.md where inputs exist.
-stanbic-bank-ghana,FY2023,ratios,roa_pct,,percent,,,unavailable,Not disclosed as a ratio in the bank's summary statements; recomputable in checks.md where inputs exist.
+stanbic-bank-ghana,FY2023,ratios,ldr_pct,36.341984,percent,SB23AR,48,derived,"Derived (not reported by the Bank): Gross loans and advances / customer deposits (closing balances). Closing-balance basis, so it differs from any average-balance ratio."
+stanbic-bank-ghana,FY2023,ratios,cost_to_income_pct,38.024739,percent,SB23AR,48,derived,"Derived (not reported by the Bank): Operating expenses excluding impairment / total operating income (single period). Closing-balance basis, so it differs from any average-balance ratio."
+stanbic-bank-ghana,FY2023,ratios,roe_pct,43.012123,percent,SB23AR,48,derived,"Derived (not reported by the Bank): Profit after tax / closing equity (single period; not average balances). Closing-balance basis, so it differs from any average-balance ratio."
+stanbic-bank-ghana,FY2023,ratios,roa_pct,5.197853,percent,SB23AR,48,derived,"Derived (not reported by the Bank): Profit after tax / closing total assets (single period). Closing-balance basis, so it differs from any average-balance ratio."
 stanbic-bank-ghana,FY2024,income_statement,interest_income,3154.821,GHS millions,SB24AR,48,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
 stanbic-bank-ghana,FY2024,income_statement,interest_expense,643.754,GHS millions,SB24AR,48,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
 stanbic-bank-ghana,FY2024,income_statement,net_interest_income,2511.067,GHS millions,SB24AR,48,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
@@ -165,11 +168,11 @@ stanbic-bank-ghana,FY2024,income_statement,x_indirect_tax,63.318,GHS millions,SB
 stanbic-bank-ghana,FY2024,income_statement,x_direct_tax,549.89,GHS millions,SB24AR,48,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed. Direct income tax charge/(credit)."
 stanbic-bank-ghana,FY2024,balance_sheet,cash_and_bog_balances,5887.649,GHS millions,SB24AR,49,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed. Coins and bank notes plus balances with central bank."
 stanbic-bank-ghana,FY2024,balance_sheet,due_from_banks,7913.42,GHS millions,SB24AR,49,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed. Due from other banks and financial institutions (note 2/7)."
-stanbic-bank-ghana,FY2024,balance_sheet,x_trading_assets,2165.532,GHS millions,SB24AR,49,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed. Non-pledged trading assets."
-stanbic-bank-ghana,FY2024,balance_sheet,x_pledged_assets,150.99,GHS millions,SB24AR,49,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed. Pledged trading assets."
+stanbic-bank-ghana,FY2024,balance_sheet,x_trading_assets,2165.532,GHS millions,SB24AR,49,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed. Non-pledged trading assets (memo; already included in other_assets, non-additive)."
+stanbic-bank-ghana,FY2024,balance_sheet,x_pledged_assets,150.99,GHS millions,SB24AR,49,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed. Pledged trading assets (memo; already included in other_assets, non-additive)."
 stanbic-bank-ghana,FY2024,balance_sheet,investment_securities,7165.362,GHS millions,SB24AR,49,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
 stanbic-bank-ghana,FY2024,balance_sheet,loans_and_advances_net,7846.716,GHS millions,SB24AR,49,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
-stanbic-bank-ghana,FY2024,balance_sheet,other_assets,1026.995,GHS millions,SB24AR,49,derived,Other assets plus deferred/current tax assets as reported.
+stanbic-bank-ghana,FY2024,balance_sheet,other_assets,3343.517,GHS millions,SB24AR,49,derived,Canonical other assets: other assets plus deferred/current tax assets plus non-pledged trading assets plus pledged trading assets as reported. The x_trading_assets / x_pledged_assets rows are non-additive memos of the trading components already inside this line.
 stanbic-bank-ghana,FY2024,balance_sheet,property_equipment_intangibles,434.257,GHS millions,SB24AR,49,derived,"Property, equipment and right-of-use assets plus intangible assets as reported."
 stanbic-bank-ghana,FY2024,balance_sheet,total_assets,32590.921,GHS millions,SB24AR,49,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
 stanbic-bank-ghana,FY2024,balance_sheet,customer_deposits,23172.209,GHS millions,SB24AR,49,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
@@ -185,16 +188,17 @@ stanbic-bank-ghana,FY2024,balance_sheet,loans_and_advances_gross,9390.373,GHS mi
 stanbic-bank-ghana,FY2024,balance_sheet,loan_loss_allowance,1209.169,GHS millions,SB24AR,85,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed. Credit impairment allowance on loans (note 5.1); positive balance."
 stanbic-bank-ghana,FY2024,balance_sheet,x_interest_in_suspense,334.488,GHS millions,SB24AR,85,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed. Interest in suspense (note 5.1); bridge: gross - allowance - interest in suspense = net."
 stanbic-bank-ghana,FY2024,ratios,car_pct,19,percent,SB24SUM,1,reported,Total capital adequacy ratio as reported.
-stanbic-bank-ghana,FY2024,ratios,tier1_pct,16,percent,SB24SUM,1,reported,Reported Common Equity Tier 1 ratio (note 5.1 basis).
+stanbic-bank-ghana,FY2024,ratios,x_cet1_pct,16,percent,SB24SUM,1,reported,"Reported Common Equity Tier 1 ratio (the summary disclosures label this CET1, not Tier 1)."
+stanbic-bank-ghana,FY2024,ratios,tier1_pct,16.002048,percent,SB24AR,137,derived,"Tier 1 capital / RWA computed from the audited capital-adequacy note (Tier 1 numerator, not CET1). Close to but definitionally distinct from the reported CET1 ratio."
 stanbic-bank-ghana,FY2024,ratios,npl_pct,17.08,percent,SB24SUM,1,reported,Gross non-performing loan ratio as reported by the Bank (the AR narrative separately quotes the industry NPL).
 stanbic-bank-ghana,FY2024,balance_sheet,x_tier1_capital,2621.42,GHS millions,SB24AR,137,reported,Bank-only (separate) statements; audited capital-adequacy note. Tier 1 capital.
 stanbic-bank-ghana,FY2024,balance_sheet,x_tier2_capital,491.453,GHS millions,SB24AR,137,reported,Bank-only (separate) statements; audited capital-adequacy note. Tier 2 capital.
 stanbic-bank-ghana,FY2024,balance_sheet,x_regulatory_capital,3112.873,GHS millions,SB24AR,137,reported,Bank-only (separate) statements; audited capital-adequacy note. Total regulatory capital (Tier 1 + Tier 2).
 stanbic-bank-ghana,FY2024,balance_sheet,x_risk_weighted_assets,16381.778,GHS millions,SB24AR,137,reported,Bank-only (separate) statements; audited capital-adequacy note. Total risk-weighted assets.
-stanbic-bank-ghana,FY2024,ratios,ldr_pct,,percent,,,unavailable,Not disclosed as a ratio in the bank's summary statements; recomputable in checks.md where inputs exist.
-stanbic-bank-ghana,FY2024,ratios,cost_to_income_pct,,percent,,,unavailable,Not disclosed as a ratio in the bank's summary statements; recomputable in checks.md where inputs exist.
-stanbic-bank-ghana,FY2024,ratios,roe_pct,,percent,,,unavailable,Not disclosed as a ratio in the bank's summary statements; recomputable in checks.md where inputs exist.
-stanbic-bank-ghana,FY2024,ratios,roa_pct,,percent,,,unavailable,Not disclosed as a ratio in the bank's summary statements; recomputable in checks.md where inputs exist.
+stanbic-bank-ghana,FY2024,ratios,ldr_pct,40.524289,percent,SB24AR,48,derived,"Derived (not reported by the Bank): Gross loans and advances / customer deposits (closing balances). Closing-balance basis, so it differs from any average-balance ratio."
+stanbic-bank-ghana,FY2024,ratios,cost_to_income_pct,41.42193,percent,SB24AR,48,derived,"Derived (not reported by the Bank): Operating expenses excluding impairment / total operating income (single period). Closing-balance basis, so it differs from any average-balance ratio."
+stanbic-bank-ghana,FY2024,ratios,roe_pct,28.145644,percent,SB24AR,48,derived,"Derived (not reported by the Bank): Profit after tax / closing equity (single period; not average balances). Closing-balance basis, so it differs from any average-balance ratio."
+stanbic-bank-ghana,FY2024,ratios,roa_pct,3.567257,percent,SB24AR,48,derived,"Derived (not reported by the Bank): Profit after tax / closing total assets (single period). Closing-balance basis, so it differs from any average-balance ratio."
 stanbic-bank-ghana,FY2025,income_statement,interest_income,3415.66,GHS millions,SB25AR,47,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
 stanbic-bank-ghana,FY2025,income_statement,interest_expense,578.935,GHS millions,SB25AR,47,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
 stanbic-bank-ghana,FY2025,income_statement,net_interest_income,2836.725,GHS millions,SB25AR,47,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
@@ -214,11 +218,11 @@ stanbic-bank-ghana,FY2025,income_statement,x_indirect_tax,78.313,GHS millions,SB
 stanbic-bank-ghana,FY2025,income_statement,x_direct_tax,920.552,GHS millions,SB25AR,47,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed. Direct income tax charge/(credit)."
 stanbic-bank-ghana,FY2025,balance_sheet,cash_and_bog_balances,6743.97,GHS millions,SB25AR,46,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed. Coins and bank notes plus balances with central bank."
 stanbic-bank-ghana,FY2025,balance_sheet,due_from_banks,3402.728,GHS millions,SB25AR,46,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed. Due from other banks and financial institutions (note 2/7)."
-stanbic-bank-ghana,FY2025,balance_sheet,x_trading_assets,3783.127,GHS millions,SB25AR,46,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed. Non-pledged trading assets."
-stanbic-bank-ghana,FY2025,balance_sheet,x_pledged_assets,1084.22,GHS millions,SB25AR,46,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed. Pledged trading assets."
+stanbic-bank-ghana,FY2025,balance_sheet,x_trading_assets,3783.127,GHS millions,SB25AR,46,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed. Non-pledged trading assets (memo; already included in other_assets, non-additive)."
+stanbic-bank-ghana,FY2025,balance_sheet,x_pledged_assets,1084.22,GHS millions,SB25AR,46,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed. Pledged trading assets (memo; already included in other_assets, non-additive)."
 stanbic-bank-ghana,FY2025,balance_sheet,investment_securities,11911.532,GHS millions,SB25AR,46,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
 stanbic-bank-ghana,FY2025,balance_sheet,loans_and_advances_net,7652.776,GHS millions,SB25AR,46,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
-stanbic-bank-ghana,FY2025,balance_sheet,other_assets,1707.485,GHS millions,SB25AR,46,derived,Other assets plus deferred/current tax assets as reported.
+stanbic-bank-ghana,FY2025,balance_sheet,other_assets,6574.832,GHS millions,SB25AR,46,derived,Canonical other assets: other assets plus deferred/current tax assets plus non-pledged trading assets plus pledged trading assets as reported. The x_trading_assets / x_pledged_assets rows are non-additive memos of the trading components already inside this line.
 stanbic-bank-ghana,FY2025,balance_sheet,property_equipment_intangibles,422.307,GHS millions,SB25AR,46,derived,"Property, equipment and right-of-use assets plus intangible assets as reported."
 stanbic-bank-ghana,FY2025,balance_sheet,total_assets,36708.145,GHS millions,SB25AR,46,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
 stanbic-bank-ghana,FY2025,balance_sheet,customer_deposits,24013.184,GHS millions,SB25AR,46,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
@@ -234,16 +238,17 @@ stanbic-bank-ghana,FY2025,balance_sheet,loans_and_advances_gross,9820.519,GHS mi
 stanbic-bank-ghana,FY2025,balance_sheet,loan_loss_allowance,1502.63,GHS millions,SB25AR,80,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed. Credit impairment allowance on loans (note 5.1); positive balance."
 stanbic-bank-ghana,FY2025,balance_sheet,x_interest_in_suspense,665.113,GHS millions,SB25AR,80,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed. Interest in suspense (note 5.1); bridge: gross - allowance - interest in suspense = net."
 stanbic-bank-ghana,FY2025,ratios,car_pct,23.2,percent,SB25SUM,1,reported,Total capital adequacy ratio as reported.
-stanbic-bank-ghana,FY2025,ratios,tier1_pct,21.2,percent,SB25SUM,1,reported,Reported Common Equity Tier 1 ratio (note 5.1 basis).
+stanbic-bank-ghana,FY2025,ratios,x_cet1_pct,21.2,percent,SB25SUM,1,reported,"Reported Common Equity Tier 1 ratio (the summary disclosures label this CET1, not Tier 1)."
+stanbic-bank-ghana,FY2025,ratios,tier1_pct,21.171297,percent,SB25AR,132,derived,"Tier 1 capital / RWA computed from the audited capital-adequacy note (Tier 1 numerator, not CET1). Close to but definitionally distinct from the reported CET1 ratio."
 stanbic-bank-ghana,FY2025,ratios,npl_pct,24.63,percent,SB25SUM,1,reported,Gross non-performing loan ratio as reported by the Bank (the AR narrative separately quotes the industry NPL).
 stanbic-bank-ghana,FY2025,balance_sheet,x_tier1_capital,3665.705,GHS millions,SB25AR,132,reported,Bank-only (separate) statements; audited capital-adequacy note. Tier 1 capital.
 stanbic-bank-ghana,FY2025,balance_sheet,x_tier2_capital,346.29,GHS millions,SB25AR,132,reported,Bank-only (separate) statements; audited capital-adequacy note. Tier 2 capital.
 stanbic-bank-ghana,FY2025,balance_sheet,x_regulatory_capital,4011.995,GHS millions,SB25AR,132,reported,Bank-only (separate) statements; audited capital-adequacy note. Total regulatory capital (Tier 1 + Tier 2).
 stanbic-bank-ghana,FY2025,balance_sheet,x_risk_weighted_assets,17314.504,GHS millions,SB25AR,132,reported,Bank-only (separate) statements; audited capital-adequacy note. Total risk-weighted assets.
-stanbic-bank-ghana,FY2025,ratios,ldr_pct,,percent,,,unavailable,Not disclosed as a ratio in the bank's summary statements; recomputable in checks.md where inputs exist.
-stanbic-bank-ghana,FY2025,ratios,cost_to_income_pct,,percent,,,unavailable,Not disclosed as a ratio in the bank's summary statements; recomputable in checks.md where inputs exist.
-stanbic-bank-ghana,FY2025,ratios,roe_pct,,percent,,,unavailable,Not disclosed as a ratio in the bank's summary statements; recomputable in checks.md where inputs exist.
-stanbic-bank-ghana,FY2025,ratios,roa_pct,,percent,,,unavailable,Not disclosed as a ratio in the bank's summary statements; recomputable in checks.md where inputs exist.
+stanbic-bank-ghana,FY2025,ratios,ldr_pct,40.896363,percent,SB25AR,47,derived,"Derived (not reported by the Bank): Gross loans and advances / customer deposits (closing balances). Closing-balance basis, so it differs from any average-balance ratio."
+stanbic-bank-ghana,FY2025,ratios,cost_to_income_pct,40.411902,percent,SB25AR,47,derived,"Derived (not reported by the Bank): Operating expenses excluding impairment / total operating income (single period). Closing-balance basis, so it differs from any average-balance ratio."
+stanbic-bank-ghana,FY2025,ratios,roe_pct,28.028824,percent,SB25AR,47,derived,"Derived (not reported by the Bank): Profit after tax / closing equity (single period; not average balances). Closing-balance basis, so it differs from any average-balance ratio."
+stanbic-bank-ghana,FY2025,ratios,roa_pct,4.382316,percent,SB25AR,47,derived,"Derived (not reported by the Bank): Profit after tax / closing total assets (single period). Closing-balance basis, so it differs from any average-balance ratio."
 stanbic-bank-ghana,9M-2026,income_statement,interest_income,1974.78,GHS millions,SB26Q3,1,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
 stanbic-bank-ghana,9M-2026,income_statement,interest_expense,282.424,GHS millions,SB26Q3,1,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
 stanbic-bank-ghana,9M-2026,income_statement,net_interest_income,1692.356,GHS millions,SB26Q3,1,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
@@ -263,11 +268,11 @@ stanbic-bank-ghana,9M-2026,income_statement,x_indirect_tax,36.323,GHS millions,S
 stanbic-bank-ghana,9M-2026,income_statement,x_direct_tax,465.606,GHS millions,SB26Q3,1,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed. Direct income tax charge/(credit)."
 stanbic-bank-ghana,9M-2026,balance_sheet,cash_and_bog_balances,15778.12,GHS millions,SB26Q3,1,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed. Reported as a single cash-and-cash-equivalents line (split not disclosed in this filing)."
 stanbic-bank-ghana,9M-2026,balance_sheet,due_from_banks,,GHS millions,SB26Q3,1,unavailable,"Bank-only (separate) statements; costs/allowances positive, profits signed. Cash and cash equivalents is reported as a single line in this filing; the inter-bank split is unavailable."
-stanbic-bank-ghana,9M-2026,balance_sheet,x_trading_assets,3107.39,GHS millions,SB26Q3,1,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed. Non-pledged trading assets."
-stanbic-bank-ghana,9M-2026,balance_sheet,x_pledged_assets,997.908,GHS millions,SB26Q3,1,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed. Pledged trading assets."
+stanbic-bank-ghana,9M-2026,balance_sheet,x_trading_assets,3107.39,GHS millions,SB26Q3,1,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed. Non-pledged trading assets (memo; already included in other_assets, non-additive)."
+stanbic-bank-ghana,9M-2026,balance_sheet,x_pledged_assets,997.908,GHS millions,SB26Q3,1,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed. Pledged trading assets (memo; already included in other_assets, non-additive)."
 stanbic-bank-ghana,9M-2026,balance_sheet,investment_securities,12622.184,GHS millions,SB26Q3,1,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
 stanbic-bank-ghana,9M-2026,balance_sheet,loans_and_advances_net,9027.632,GHS millions,SB26Q3,1,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
-stanbic-bank-ghana,9M-2026,balance_sheet,other_assets,1150.748,GHS millions,SB26Q3,1,derived,Other assets plus deferred/current tax assets as reported.
+stanbic-bank-ghana,9M-2026,balance_sheet,other_assets,5256.046,GHS millions,SB26Q3,1,derived,Canonical other assets: other assets plus deferred/current tax assets plus non-pledged trading assets plus pledged trading assets as reported. The x_trading_assets / x_pledged_assets rows are non-additive memos of the trading components already inside this line.
 stanbic-bank-ghana,9M-2026,balance_sheet,property_equipment_intangibles,559.652,GHS millions,SB26Q3,1,derived,"Property, equipment and right-of-use assets plus intangible assets as reported."
 stanbic-bank-ghana,9M-2026,balance_sheet,total_assets,43243.634,GHS millions,SB26Q3,1,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
 stanbic-bank-ghana,9M-2026,balance_sheet,customer_deposits,29292.992,GHS millions,SB26Q3,1,reported,"Bank-only (separate) statements; costs/allowances positive, profits signed."
@@ -283,15 +288,16 @@ stanbic-bank-ghana,9M-2026,balance_sheet,loans_and_advances_gross,,GHS millions,
 stanbic-bank-ghana,9M-2026,balance_sheet,loan_loss_allowance,,GHS millions,,,unavailable,"Bank-only (separate) statements; costs/allowances positive, profits signed. Not disclosed in the interim summary."
 stanbic-bank-ghana,9M-2026,balance_sheet,x_interest_in_suspense,,GHS millions,,,unavailable,"Bank-only (separate) statements; costs/allowances positive, profits signed. FY2022 interest in suspense is unresolved in the filing; left unavailable rather than guessed."
 stanbic-bank-ghana,9M-2026,ratios,car_pct,23.32,percent,SB26Q3,1,reported,Total capital adequacy ratio as reported.
-stanbic-bank-ghana,9M-2026,ratios,tier1_pct,21.32,percent,SB26Q3,1,reported,Reported Common Equity Tier 1 ratio (note 5.1 basis).
+stanbic-bank-ghana,9M-2026,ratios,x_cet1_pct,21.32,percent,SB26Q3,1,reported,"Reported Common Equity Tier 1 ratio (the summary disclosures label this CET1, not Tier 1)."
+stanbic-bank-ghana,9M-2026,ratios,tier1_pct,,percent,,,unavailable,Tier 1 capital and RWA not both available; true Tier 1 ratio unavailable.
 stanbic-bank-ghana,9M-2026,ratios,npl_pct,9.54,percent,SB26Q3,1,reported,Gross non-performing loan ratio as reported by the Bank (the AR narrative separately quotes the industry NPL).
 stanbic-bank-ghana,9M-2026,balance_sheet,x_tier1_capital,,GHS millions,,,unavailable,Bank-only (separate) statements; audited capital-adequacy note. Tier 1 capital.
 stanbic-bank-ghana,9M-2026,balance_sheet,x_tier2_capital,,GHS millions,,,unavailable,Bank-only (separate) statements; audited capital-adequacy note. Tier 2 capital.
 stanbic-bank-ghana,9M-2026,balance_sheet,x_regulatory_capital,,GHS millions,,,unavailable,Bank-only (separate) statements; audited capital-adequacy note. Total regulatory capital (Tier 1 + Tier 2).
 stanbic-bank-ghana,9M-2026,balance_sheet,x_risk_weighted_assets,,GHS millions,,,unavailable,Bank-only (separate) statements; audited capital-adequacy note. Total risk-weighted assets.
-stanbic-bank-ghana,9M-2026,ratios,ldr_pct,,percent,,,unavailable,Not disclosed as a ratio in the bank's summary statements; recomputable in checks.md where inputs exist.
-stanbic-bank-ghana,9M-2026,ratios,cost_to_income_pct,,percent,,,unavailable,Not disclosed as a ratio in the bank's summary statements; recomputable in checks.md where inputs exist.
-stanbic-bank-ghana,9M-2026,ratios,roe_pct,,percent,,,unavailable,Not disclosed as a ratio in the bank's summary statements; recomputable in checks.md where inputs exist.
-stanbic-bank-ghana,9M-2026,ratios,roa_pct,,percent,,,unavailable,Not disclosed as a ratio in the bank's summary statements; recomputable in checks.md where inputs exist.
+stanbic-bank-ghana,9M-2026,ratios,ldr_pct,,percent,SB26Q3,1,unavailable,"Derived (not reported by the Bank): Gross loans and advances / customer deposits (closing balances). Closing-balance basis, so it differs from any average-balance ratio."
+stanbic-bank-ghana,9M-2026,ratios,cost_to_income_pct,46.533621,percent,SB26Q3,1,derived,"Derived (not reported by the Bank): Operating expenses excluding impairment / total operating income (single period). Closing-balance basis, so it differs from any average-balance ratio."
+stanbic-bank-ghana,9M-2026,ratios,roe_pct,16.382467,percent,SB26Q3,1,derived,"Derived (not reported by the Bank): Profit after tax / closing equity (single period; not average balances). Closing-balance basis, so it differs from any average-balance ratio."
+stanbic-bank-ghana,9M-2026,ratios,roa_pct,2.089984,percent,SB26Q3,1,derived,"Derived (not reported by the Bank): Profit after tax / closing total assets (single period). Closing-balance basis, so it differs from any average-balance ratio."
 stanbic-bank-ghana,FY2021,balance_sheet,x_regulatory_gross_loans,5466.71,GHS millions,SB21AR,107,reported,"Regulatory-basis gross loans (risk note 30). The note 5.1 gross of 5,388.433m is already net of the 78.277m interest in suspense below, so this is disclosed for transparency and NOT used to re-derive net loans."
 stanbic-bank-ghana,FY2021,balance_sheet,x_iis_regulatory,78.277,GHS millions,SB21AR,107,reported,"Interest in suspense on the regulatory basis (risk note 30): 5,466.710 - 78.277 - 203.305 = 5,185.128 net."

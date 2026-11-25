@@ -170,15 +170,17 @@ for p in PERIODS:
         "reported" if b["due_from_banks"] is not None else "unavailable",
         BANKONLY + (" Due from other banks and financial institutions (note 2/7)." if b["due_from_banks"] is not None
                     else " Cash and cash equivalents is reported as a single line in this filing; the inter-bank split is unavailable."))
-    rep("x_trading_assets", b["trading"], "Non-pledged trading assets.")
+    rep("x_trading_assets", b["trading"], "Non-pledged trading assets (memo; already included in other_assets, non-additive).")
     add(p, "balance_sheet", "x_pledged_assets", b["pledged"], "GHS millions", b["src"], b["pg"],
         "reported" if b["pledged"] is not None else "unavailable",
-        BANKONLY + (" Pledged trading assets." if b["pledged"] is not None else " No pledged trading assets line in this filing."))
+        BANKONLY + (" Pledged trading assets (memo; already included in other_assets, non-additive)." if b["pledged"] is not None else " No pledged trading assets line in this filing."))
     rep("investment_securities", b["inv"])
     rep("loans_and_advances_net", b["loans_net"])
-    oth = (b["oth"] or 0) + (b["dta"] or 0)
+    oth = (b["oth"] or 0) + (b["dta"] or 0) + (b["trading"] or 0) + (b["pledged"] or 0)
     add(p, "balance_sheet", "other_assets", oth, "GHS millions", b["src"], b["pg"], "derived",
-        "Other assets plus deferred/current tax assets as reported.")
+        "Canonical other assets: other assets plus deferred/current tax assets plus non-pledged trading assets plus "
+        "pledged trading assets as reported. The x_trading_assets / x_pledged_assets rows are non-additive memos of the "
+        "trading components already inside this line.")
     ppe = (b["ppe"] or 0) + (b["intang"] or 0)
     add(p, "balance_sheet", "property_equipment_intangibles", ppe, "GHS millions", b["src"], b["pg"], "derived",
         "Property, equipment and right-of-use assets plus intangible assets as reported.")
@@ -236,9 +238,21 @@ for p in PERIODS:
         add(p, "balance_sheet", item, c[key], "GHS millions", c["src"], c["pg"],
             "reported" if c[key] is not None else "unavailable", nreg + " " + lab)
 
-    for item in ["ldr_pct", "cost_to_income_pct", "roe_pct", "roa_pct"]:
-        add(p, "ratios", item, None, "percent", "", "", "unavailable",
-            "Not disclosed as a ratio in the bank's summary statements; recomputable in checks.md where inputs exist.")
+    # Derived historical ratios (closing-balance basis; not reported by the Bank).
+    ldr = None if (l["gross"] is None or not b["dep_cust"]) else 100.0 * l["gross"] / b["dep_cust"]
+    tii = (d["nii"] + d["netfee"] + d["nt"] + d["ooi"])
+    cst = d["staff"] + d["da"] + d["ooe"]
+    cir = None if not tii else 100.0 * cst / tii
+    roe = None if not b["te"] else 100.0 * d["pat"] / b["te"]
+    roa = None if not b["ta"] else 100.0 * d["pat"] / b["ta"]
+    for item, val, lab in [
+        ("ldr_pct", ldr, "Gross loans and advances / customer deposits (closing balances)."),
+        ("cost_to_income_pct", cir, "Operating expenses excluding impairment / total operating income (single period)."),
+        ("roe_pct", roe, "Profit after tax / closing equity (single period; not average balances)."),
+        ("roa_pct", roa, "Profit after tax / closing total assets (single period).")]:
+        add(p, "ratios", item, val, "percent", d["src"], d["pg"],
+            "derived" if val is not None else "unavailable",
+            "Derived (not reported by the Bank): " + lab + " Closing-balance basis, so it differs from any average-balance ratio.")
 
 # FY2021 regulatory-basis loan detail (kept in balance_sheet as x_ rows; not deducted again).
 add("FY2021", "balance_sheet", "x_regulatory_gross_loans", REG21["reg_gross"], "GHS millions", REG21["src"], REG21["pg"],

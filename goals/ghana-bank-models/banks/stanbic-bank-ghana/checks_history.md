@@ -15,7 +15,7 @@ Recomputed from the committed `financials.csv`. GHS millions; ratios in percent;
 
 ## Source and schema checks
 
-- Historical rows: 296; duplicate keys: 0; reported rows missing source/page: 0; unavailable rows with a value: 0.
+- Historical rows: 302; duplicate keys: 0; reported rows missing source/page: 0; unavailable rows with a value: 0.
 - Spot-checks against the audited pages: FY2025 total assets 36,708,145k = 36708.145; FY2025 PAT 1,608,667k = 1608.667; FY2024 total assets 32,590,921k = 32590.921; 9M-2026 total assets 43,243,634k = 43243.634.
 
 ## Reported vs derived ratios (%)

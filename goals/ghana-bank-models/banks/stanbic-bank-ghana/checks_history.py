@@ -38,8 +38,7 @@ for p in PERIODS:
     ta, tl, te = hv(p, "total_assets"), hv(p, "total_liabilities"), hv(p, "total_equity")
     r1 = None if None in (ta, tl, te) else ta - tl - te
     cash = hv(p, "cash_and_bog_balances")
-    comps = [hv(p, x) for x in ["due_from_banks", "x_trading_assets", "x_pledged_assets",
-                                "investment_securities", "loans_and_advances_net",
+    comps = [hv(p, x) for x in ["due_from_banks", "investment_securities", "loans_and_advances_net",
                                 "property_equipment_intangibles", "other_assets"]]
     comps = [0.0 if c is None else c for c in comps]
     r2 = None if (ta is None or cash is None) else ta - cash - sum(comps)

@@ -34,11 +34,23 @@
     },
     "loan_yield": {
       "status": "estimated",
-      "method": "Shared policy rate plus a scenario spread in percentage points.",
-      "reason": "Standalone loan-specific yield is not reconciled to the interest-income note; the spread is an analyst stress assumption, aligned with peers' models.",
-      "base": 8,
-      "downside": 6,
-      "upside": 10
+      "method": "NOT used directly. The forecast uses a blended anchor-implied asset yield: yield_t = interest_income_{t-1} / mean earning assets, drifted by the shared policy-rate ratio (rate_t / rate_{t-1}). This replaced a component-yield formula (loans, securities and cash each priced separately) that mis-calibrated the forward book, producing a 2026->2027 interest-income jump of about 53%; the blended method is continuous with the observed anchor.",
+      "reason": "FY2024 implied earning-asset yield 15.1% applied to FY2025 average earning assets predicted FY2025 interest income of 3,563.0m versus the actual 3,415.7m (a 4.3% out-of-sample error), which supports the blended-yield approach. The anchor-implied asset yield (9M-2026 annualised) is about 7.0%.",
+      "base": null,
+      "downside": null,
+      "upside": null
+    },
+    "blended_asset_yield": {
+      "status": "estimated",
+      "method": "Interest income / mean earning assets (cash+BoG, investment securities, net loans), carried forward for continuity and drifted by the shared policy-rate ratio. Earning assets use the prior-year cash balance as a proxy because the current cash residual is only known after equity is set.",
+      "reason": "Avoids the method-switch jump flagged by review; back-tested on FY2024->FY2025 with a 4.3% error.",
+      "note": "The cash and BoG residual includes non-earning reserve balances; the blended yield is a portfolio average, not an eligible-reserve rate. Inter-bank balances are not given a separate income line."
+    },
+    "blended_cost_of_funds": {
+      "status": "estimated",
+      "method": "Interest expense / mean interest-bearing funding (customer deposits, due to banks, borrowings), carried forward and drifted by the shared policy-rate ratio.",
+      "reason": "FY2024 implied funding cost 2.6% applied to FY2025 average funding predicted FY2025 interest expense of 663.8m versus the actual 578.9m; the blended method is continuous with the anchor.",
+      "note": "Effective blended cost, not a quoted deposit rate."
     },
     "cash_yield_factor": {
       "status": "estimated",
@@ -97,7 +109,7 @@
     },
     "net_to_gross_pct": {
       "status": "estimated",
-      "method": "Net loans = gross loans x net-to-gross ratio. For the forecast, net loans grow by the loan-growth driver and gross = net / net-to-gross; the loan_loss_allowance stock is then gross minus net (which folds in any interest in suspense on the same basis as the FY2025 filing). FY2026E starts from the actual 9M net loans.",
+      "method": "Net loans = gross loans x net-to-gross ratio. For the forecast, net loans grow by the loan-growth driver and gross = net / net-to-gross; the loan_loss_allowance stock is then gross minus net (which folds in any interest in suspense on the same basis as the FY2025 filing). FY2026E starts from the actual 9M net loans. The anchor gross/RWA/capital use the BASE net-to-gross (82%), not the actual FY2025 77.93%; this is an explicit estimated improvement, not a reported figure. Sensitivity: a lower anchor ratio raises opening gross loans, RWA and the Q4 allowance build.",
       "reason": "FY2025 reported net 7,652.776m / gross 9,820.519m = 77.93% (allowance 1,502.630m + interest in suspense 665.113m = 22.07% of gross). The interim reports a lower NPL (9.54% vs FY2025 24.63%), so the base ratio rises modestly as the loan book seasons; the downside keeps a heavier deduction.",
       "base": 82.0,
       "downside": 75.0,

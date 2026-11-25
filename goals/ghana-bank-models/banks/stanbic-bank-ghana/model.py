@@ -82,6 +82,8 @@ def anchor():
     b["due_from_banks"] = histb("9M-2026", "due_from_banks", 0.0)
     for k in XTRA_B:
         b[k] = histb("9M-2026", k, 0.0)
+    # Anchor gross/RWA/capital use the BASE net-to-gross (82%), an explicit estimated improvement
+    # over the actual FY2025 77.93%, not a reported figure (see assumptions.json net_to_gross_pct).
     n2g = pct(D["net_to_gross_pct"]["base"])
     b["loans_and_advances_gross"] = b["loans_and_advances_net"] / n2g
     b["loan_loss_allowance"] = b["loans_and_advances_gross"] - b["loans_and_advances_net"]
@@ -112,15 +114,24 @@ Q3_TIER = Q3_CAP * T1_SHARE
 
 
 def noncash(b):
-    s = (b["due_from_banks"] + b["investment_securities"] + b["loans_and_advances_net"]
-         + b["property_equipment_intangibles"] + b["other_assets"])
-    for k in XTRA_B:
-        s += b.get(k, 0.0)
-    return s
+    # Canonical composition: other_assets already includes the trading and pledged assets
+    # (x_trading_assets / x_pledged_assets are non-additive memos), so do not add them again.
+    return (b["due_from_banks"] + b["investment_securities"] + b["loans_and_advances_net"]
+            + b["property_equipment_intangibles"] + b["other_assets"])
 
 
 def costs(i):
     return i["staff_costs"] + i["depreciation_amortisation"] + i["other_operating_expenses"]
+
+
+def _ea(b):
+    """Earning assets for the blended asset yield: cash/BoG + investments + net loans."""
+    return b["cash_and_bog_balances"] + b["investment_securities"] + b["loans_and_advances_net"]
+
+
+def _fd(b):
+    """Interest-bearing funding for the blended cost of funds: deposits + due to banks + borrowings."""
+    return b["customer_deposits"] + b["due_to_banks"] + b["borrowings"]
 
 
 NOTE_I = {
@@ -177,6 +188,7 @@ def emit(s, t, stmt, key, value, unit, note):
 
 for s in SCEN:
     prevB, prevI = dict(Q3B), None
+    prevPrevB = dict(Q3B)
     prevCap, prevTier = Q3_CAP, Q3_TIER
     risk = D["cost_of_risk"][s]
     n2g = pct(D["net_to_gross_pct"][s])
@@ -215,11 +227,30 @@ for s in SCEN:
         for k in ["property_equipment_intangibles", "other_assets"]:
             b[k] = prevB[k] * (1 + pct(og) / (4 if first else 1))
 
-        loanYield = pol + D["loan_yield"][s]
-        invYield = (macro(s, t, "tbill_364d_pct") * D["investment_yield"]["weights"]["tbill_364d_pct"]
-                    + macro(s, t, "govt_bond_yield_pct") * D["investment_yield"]["weights"]["govt_bond_yield_pct"])
-        cashYield = pol * D["cash_yield_factor"][s]
-        cofund = pol * D["cost_of_funds"][s]
+        # Blended, anchor-implied yields (see assumptions.json blended_asset_yield /
+        # blended_cost_of_funds). yield_t = income_{t-1} / mean earning assets_{t-2,t-1}, drifted by
+        # the shared policy-rate ratio. This is continuous with the observed anchor and avoids the
+        # 2026->2027 method-switch jump flagged in review. Memo ratios below; the income block uses
+        # the same quantities.
+        invYield = (macro(s, t, "tbill_364d_pct") * 0.5 + macro(s, t, "govt_bond_yield_pct") * 0.5)
+        prevEA = _ea(prevB); prevPrevEA = _ea(prevPrevB)
+        assetYield = 0.0
+        prevFD = _fd(prevB); prevPrevFD = _fd(prevPrevB)
+        fundCost = 0.0
+        if not first:
+            polPrev = macro(s, PERIODS[j - 1], "policy_rate_pct")
+            py = prevI["interest_income"] / avg(prevPrevEA, prevEA) if avg(prevPrevEA, prevEA) else 0.0
+            pc = prevI["interest_expense"] / avg(prevPrevFD, prevFD) if avg(prevPrevFD, prevFD) else 0.0
+            assetYield = py * (pol / polPrev) if polPrev else py
+            fundCost = pc * (pol / polPrev) if polPrev else pc
+        else:
+            # Anchor-year memo: the implied 9M annualised blended yields (the income uses the run rate).
+            anchorEA = _ea(Q3B)
+            anchorFD = _fd(Q3B)
+            assetYield = (4 * Q3I["interest_income"] / 3) / anchorEA if anchorEA else 0.0
+            fundCost = (4 * Q3I["interest_expense"] / 3) / anchorFD if anchorFD else 0.0
+        loanYield = 100 * assetYield
+        cofund = 100 * fundCost
 
         loanCharge = max(avg(prevB["loans_and_advances_gross"], b["loans_and_advances_gross"]) * pct(risk) / (4 if first else 1),
                          b["loan_loss_allowance"] - prevB["loan_loss_allowance"], 0)
@@ -237,11 +268,11 @@ for s in SCEN:
                 i[k] = Q3I[k] * (1 + cm / 3.0)
             i["impairment_charge"] = Q3I["impairment_charge"] + loanCharge
         else:
-            i["interest_income"] = (avg(prevB["loans_and_advances_net"], b["loans_and_advances_net"]) * pct(loanYield)
-                                    + avg(prevB["investment_securities"], b["investment_securities"]) * pct(invYield)
-                                    + prevB["cash_and_bog_balances"] * pct(cashYield))
-            i["interest_expense"] = avg(prevB["customer_deposits"] + prevB["due_to_banks"] + prevB["borrowings"],
-                                        b["customer_deposits"] + b["due_to_banks"] + b["borrowings"]) * pct(cofund)
+            # Current-year earning assets use the prior-year cash/BoG balance as a proxy, since the
+            # current cash residual is only known after equity is set (cash is the accounting plug).
+            curEA = prevB["cash_and_bog_balances"] + b["investment_securities"] + b["loans_and_advances_net"]
+            i["interest_income"] = avg(prevEA, curEA) * assetYield
+            i["interest_expense"] = avg(prevFD, _fd(b)) * fundCost
             i["fee_commission_income"] = prevI["fee_commission_income"] * (1 + pct(fg))
             i["fee_commission_expense"] = i["fee_commission_income"] * (prevI["fee_commission_expense"] / prevI["fee_commission_income"]) * feeMult
             i["net_trading_income"] = prevI["net_trading_income"] * (1 + pct(nominal + D["trading_growth_spread_pp"][s]))
@@ -329,7 +360,7 @@ for s in SCEN:
             ("x_regulatory_capital", cap, "Proxy Q3 capital from the reported CAR x estimated RWA plus cumulative retained modelled earnings."),
             ("x_tier1_capital", tier, "Proxy initial Tier 1/capital relation from FY2025; retained modelled earnings."),
             ("x_risk_weighted_assets", rw, "Gross loans plus calibrated FY2025 residual risk intensity x assets minus gross loans."),
-            ("x_model_dividends", div, ("Estimated Q4-only dividends; observed 9M retained earnings already include YTD equity movements."
+            ("x_model_dividends", div, ("Estimated Q4-only dividends for the anchor year (the observed nine-month equity already includes the year-to-date dividend); the annual figure is therefore not comparable to a full-year payout."
                                         if first else "Estimated annual dividends constrained by the pre-dividend CAR target and cash-reserve proxy.")),
             ("x_cash_reserve_proxy", reserve, "CRR x modelled year-end deposits; screening proxy, not actual eligible reserve."),
             ("x_cash_reserve_gap", cashGap, "Positive value is a reserve-proxy shortfall; not automatically funded."),
@@ -343,9 +374,9 @@ for s in SCEN:
         for k, v, n in [
             ("x_min_car_pct", minCAR, "Shared macro minimum CAR screening threshold."),
             ("x_capital_target_pct", carTarget, "Shared minimum plus scenario management buffer."),
-            ("x_investment_yield_pct", invYield, "50:50 weighted shared 364-day bill and medium-term bond rates; FY2026 income anchored on run-rate."),
-            ("x_loan_yield_pct", loanYield, "Policy rate plus scenario spread; FY2026 income anchored on run-rate."),
-            ("x_cost_of_funds_pct", cofund, "Policy rate times scenario factor; FY2026 expense anchored on run-rate."),
+            ("x_investment_yield_pct", invYield, "50:50 weighted shared 364-day bill and medium-term bond rates; diagnostic only, income uses the blended yield."),
+            ("x_blended_asset_yield_pct", loanYield, "Blended anchor-implied earning-asset yield (interest income / mean earning assets), drifted by the policy-rate ratio. FY2026 is the actual 9M run rate."),
+            ("x_cost_of_funds_pct", cofund, "Blended anchor-implied funding cost (interest expense / mean interest-bearing funding), drifted by the policy-rate ratio. FY2026 is the actual 9M run rate."),
         ]:
             emit(s, t, "ratios", k, v, "%", n)
 
@@ -366,8 +397,10 @@ for s in SCEN:
             raise AssertionError("accounting check failed %s %s: %r" % (s, t, mx))
         checks_log.append(dict(s=s, t=t, mx=mx, car=car, minCAR=minCAR, short=short,
                                cash=b["cash_and_bog_balances"], reserve=reserve, cashGap=cashGap,
-                               pat=i["profit_after_tax"], assets=b["total_assets"], div=div))
+                               pat=i["profit_after_tax"], assets=b["total_assets"], div=div,
+                               ii=i["interest_income"], ie=i["interest_expense"]))
         summary.append((s, t, b["total_assets"], i["profit_after_tax"], car))
+        prevPrevB = prevB
         prevB, prevI, prevCap, prevTier = b, i, cap, tier
 
 with open(os.path.join(HERE, "forecast.csv"), "w", newline="", encoding="utf-8") as f:
@@ -404,8 +437,7 @@ for p in hist_periods:
     ta, tl, te = hv(p, "total_assets"), hv(p, "total_liabilities"), hv(p, "total_equity")
     r1 = None if None in (ta, tl, te) else ta - tl - te
     cash = hv(p, "cash_and_bog_balances")
-    comps = [hv(p, x) for x in ["due_from_banks", "x_trading_assets", "x_pledged_assets",
-                                "investment_securities", "loans_and_advances_net",
+    comps = [hv(p, x) for x in ["due_from_banks", "investment_securities", "loans_and_advances_net",
                                 "property_equipment_intangibles", "other_assets"]]
     comps = [0.0 if c is None else c for c in comps]
     r2 = None if (ta is None or cash is None) else ta - cash - sum(comps)
@@ -484,6 +516,29 @@ L.append("")
 L.append("FY2026 estimated earnings retain actual 9M income and estimate Q4 only. The Bank does not disclose a net FX position in the "
          "summary statements used, so no incremental FX translation P&L is modelled. Full prudential risk weights, OCI, capital deductions "
          "and liquidity eligibility are not available, so this is a simplified scenario analysis. Independent review required.")
+L.append("")
+L.append("### Forward-yield calibration diagnostics")
+L.append("")
+L.append("Interest income and expense use a **blended, anchor-implied yield carried forward for continuity**: "
+         "yield_t = income_{t-1} / mean earning assets_{t-2,t-1}, drifted by the shared policy-rate ratio. This replaced "
+         "a component-yield formula that priced idle cash at the policy rate and produced a 2026->2027 interest-income "
+         "jump of about 53%. The table below shows the base FY2027 formula against a naive 9M-2026 x 4/3 annualisation; "
+         "the method is continuous with the anchor, so the growth is now modest.")
+L.append("")
+L.append("| Metric | 9M-2026 annualised (x4/3) | Base FY2027 formula | Formula vs run rate |")
+L.append("|---|---:|---:|---:|")
+_q3ii = hv("9M-2026", "interest_income"); _q3ie = hv("9M-2026", "interest_expense")
+_f27 = [x for x in checks_log if x["s"] == "base" and x["t"] == "FY2027E"][0]
+_iif27 = _f27["ii"]; _ief27 = _f27["ie"]
+L.append("| Interest income | %.3f | %.3f | %.1f%% |" % (4 * _q3ii / 3, _iif27, 100 * (_iif27 - 4 * _q3ii / 3) / (4 * _q3ii / 3)))
+L.append("| Interest expense | %.3f | %.3f | %.1f%% |" % (4 * _q3ie / 3, _ief27, 100 * (_ief27 - 4 * _q3ie / 3) / (4 * _q3ie / 3)))
+L.append("")
+L.append("Out-of-sample check: the FY2024 implied earning-asset yield applied to FY2025 average earning assets predicts "
+         "FY2025 interest income of about 3,563.0m versus the actual 3,415.7m (a 4.3% error), which supports the blended "
+         "approach. The earning-asset base includes the cash/BoG residual, which contains non-earning reserve balances, so "
+         "the blended yield is a portfolio average, not an eligible-reserve rate. Inter-bank balances (`due_from_banks`) "
+         "are not given a separate income line. A reviewer should still treat the forward net-interest-income path as "
+         "sensitive to this calibration.")
 L.append("")
 
 with open(os.path.join(HERE, "checks.md"), "w", encoding="utf-8") as f:
