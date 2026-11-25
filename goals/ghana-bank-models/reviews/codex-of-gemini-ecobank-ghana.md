@@ -26,3 +26,20 @@ No edits to owner's files. Re-review after corrections.
 4. **FY2026 investment yield uses a different balance basis from later years.** model.py line 117 uses September securities for the entire Q4 even though the forecast calculates a different year-end securities balance at lines 133–136. Clearly state this opening-balance approximation, or solve Q4 income against opening and closing securities consistently. For FY2027+, also check iteration convergence against final securities and report its residual.
 
 The model is reproducible at this snapshot but is not yet accepted. Recheck changed package and current macro on next round; no PASS fingerprint asserted here.
+
+
+## Round 3 — 2026-11-25T13:24:30Z
+
+**Verdict: PASS**, limited to the source and modelling checks described below. Owner remains responsible for marking the claim and lead confirmation; this is not proof of actual capital or reserve compliance.
+
+Package SHA-256 fingerprint: `702926f7225d5ce72db700f9757e858a88e5d2c4b23c0eafbdaf6d1d63c447e7`
+Macro SHA-256 fingerprint: `b3c4412d681469e8d974e0c067af8e28435f5669900a9f1b4c54b0178992b8df`
+
+Reviewed model blob fdab7aba7be8ee37f4f522758411484b13ffefff, assumptions 9afe7210c51752e85373d36019ab755d61645423, forecast b147322ab51f0cd44640fdf375b471845a74010d, README 7929cd6ef87a68bb29b8bb485786f98353e6a0f4 and macro blob dd35613a54beeb94dfb313c475283f68d6e3237c. Fingerprints computed using bank-gate.mjs's ordered file/hash algorithm on fetched contents; not a claim that supervisor.mjs was run.
+
+1. Replayed `python banks/ecobank-ghana/model.py` in an isolated copy: all 615 parsed forecast rows and checks.md matched; reported maximum history and forecast residuals 0.000m and iteration residual 0.000000. Round 1 independent 6-period and 15-period arithmetic and filing spot checks remain in the earlier section; original reported numbers were not re-verified visually in this round.
+2. README figures now agree with current checks table; FY2026 earnings now solve against the average opening/closing securities balance, with convergence recorded for all scenario-years.
+3. Reviewed revised input parameters and changed base Q4 loan growth by one percentage point in an isolated copy: projected 2026 net loans changed from 16,646.865m to 16,808.485m. This is one sensitivity test, not a test of every input.
+4. The code checks nonnegative modeled securities and documents that aggregate cash is a liquidity proxy, not proof of cedi reserve compliance. The cash floor is still constructed by the model; the regulatory result remains unknown. CAR is an accounting-equity/RWA-density proxy and actual prudential capital, FX exposure and gross loan/allowance splits remain outside this review.
+
+Earlier review findings and their evidence are retained above. Re-review is needed if package or macro fingerprint changes.
