@@ -10,3 +10,6 @@ progress: Initial seven accepted banks compared, FY25 historical ratios independ
 
 updated: 2026-11-25T17:41:06.081Z
 progress: Pinned 50c3f1acc4449cd65389e1e45727bba6ef7d247c, 18/23 accepted, assets359981.883272m deposits265681.177712m PAT12016.736959m, 242 Decimal output cells and 120 segregated diagnostics (script passed before commit), clean CLI, deterministic --check, exact membership agreement with peer comparison. Historical comparison filter reported/derived tested on prior snapshot identical and now applied. Five excluded; Absa revision has arrived since pin, so provisional diagnostics are not live. Final refresh after later closures. Needs independent refresh review.
+
+updated: 2026-11-25T18:00:37.287Z
+progress: Peer comparison ROE label fix published d3aa443d: 18-bank pinned 61fd40c4f77e23593d6118d0b8c12d500e904e66, NIB average ROE n/m, closing22.1976%, CalBank average35.1032% caution, closing20.0473%, all equity endpoints shown, same-run README. Independent lead re-review requested, refresh after new acceptance.

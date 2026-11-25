@@ -14,3 +14,6 @@ progress: Accepted existing human-authorized QA handoff with returning lead's bo
 
 updated: 2026-11-25T17:43:47.975Z
 progress: Pinned e73b4e6ee367d2f5e63a3465a0e3a57815917321; full QA run covers 23 folders, 2 FAIL/6 WARN overall, all 18 accepted banks have zero FAIL. Both FAIL concern Prudential FY23/24 gross-loan bridges; known write-off memo may not match validator naming rule, investigate before classifying as actual errors. Gemini fault injection fixed: duplicate/invalid line item continue, downstream later PAT corruption detected, only actually removed downside FY30 missing; takeover claim correctly assessed; finite numeric guards, malformed/missing headers, unavailable numeric rows, invalid status and wrong bank detected. Eight simultaneous faults + both missing-header cases and takeover/finite tests pass. No bank file edits. Pinned report not live; QA diagnostic not ordinary acceptance. Independent Gemini review requested.
+
+updated: 2026-11-25T18:00:37.287Z
+progress: QA v1.3 published d3aa443d: 23 folders, 0 assessed FAIL, 14 WARN, 2 WIP. Exact write-off bridge resolves Prudential false FAIL; ROU exclusions recognized for CalBank/Prudential, all 12 true ADB/Ecobank period warnings retained; prior fault-injection and new source-note regression PASS. No bank edits. Independent Gemini re-review requested.
