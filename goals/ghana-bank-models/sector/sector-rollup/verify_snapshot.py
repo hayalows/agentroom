@@ -82,17 +82,30 @@ if m['schema']>=3:
         forecast='|' in period
         scenario,period=period.split('|') if forecast else (None,period)
         source='forecast.csv' if forecast else 'financials.csv'
-        if any(e['bank']==bank and e['table']==source.removesuffix('.csv') for e in m['diagnosticErrors']):
-            assert r['value']=='',r
-            continue
         filename=goal/'banks'/bank/source
         source_rows=read(filename) if filename.exists() else []
+        def invalid(x):
+            status=x.get('status')
+            if x.get('bank')!=bank or not x.get('period') or not x.get('line_item'):return True
+            if status not in (('estimated','unavailable') if forecast else ('reported','derived','estimated','unavailable')):return True
+            if forecast and (x.get('scenario') not in ('base','downside','upside') or not re.fullmatch(r'FY(?:202[6-9]|2030)E',x['period'])):return True
+            value=x.get('value','').strip()
+            if status=='unavailable':return bool(value)
+            try:return not value or not D(value).is_finite()
+            except Exception:return True
+        keys=[(x.get('scenario') if forecast else None,x.get('period'),x.get('line_item')) for x in source_rows]
+        malformed=any(invalid(x) for x in source_rows) or len(set(keys))!=len(keys)
+        diagnosed=any(e['bank']==bank and e['table']==source.removesuffix('.csv') for e in m['diagnosticErrors'])
+        assert malformed==diagnosed,(bank,source,malformed,diagnosed)
+        if malformed:
+            assert r['value']=='',r
+            continue
         matches=[x for x in source_rows if x['period']==period and x['line_item']==item and (not forecast or x['scenario']==scenario)]
         assert len(matches)<=1,r
         value=None
         if matches:
             x=matches[0]
-            allowed=(x['status']!='unavailable') if forecast else (x['status'] in ('reported','derived'))
+            allowed=(x['status']=='estimated') if forecast else (x['status'] in ('reported','derived'))
             if allowed and x['value'].strip():
                 try:
                     d=D(x['value'])
