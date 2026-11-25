@@ -1,0 +1,248 @@
+bank,period,statement,line_item,value,unit,source_id,page,status,notes
+calbank,FY2021,income_statement,interest_income,976.587,GHS millions,CAL21,50,reported,"Bank-only; expenses positive, impairment gains/tax benefits negative."
+calbank,FY2021,income_statement,interest_expense,511.254,GHS millions,CAL21,50,reported,"Bank-only; expenses positive, impairment gains/tax benefits negative."
+calbank,FY2021,income_statement,net_interest_income,465.333,GHS millions,CAL21,50,reported,"Bank-only; expenses positive, impairment gains/tax benefits negative."
+calbank,FY2021,income_statement,fee_commission_income,62.483,GHS millions,CAL21,50,reported,"Bank-only; expenses positive, impairment gains/tax benefits negative."
+calbank,FY2021,income_statement,fee_commission_expense,23.745,GHS millions,CAL21,50,reported,"Bank-only; expenses positive, impairment gains/tax benefits negative."
+calbank,FY2021,income_statement,net_trading_income,219.1,GHS millions,CAL21,50,derived,Net trading income plus net gains on derivative assets.
+calbank,FY2021,income_statement,other_operating_income,6.429,GHS millions,CAL21,50,reported,"Bank-only; expenses positive, impairment gains/tax benefits negative."
+calbank,FY2021,income_statement,total_operating_income,729.6,GHS millions,CAL21,50,reported,"Bank-only; expenses positive, impairment gains/tax benefits negative."
+calbank,FY2021,income_statement,staff_costs,151.11,GHS millions,CAL21,50,reported,"Bank-only; expenses positive, impairment gains/tax benefits negative."
+calbank,FY2021,income_statement,depreciation_amortisation,37.721,GHS millions,CAL21,50,reported,"Bank-only; expenses positive, impairment gains/tax benefits negative."
+calbank,FY2021,income_statement,other_operating_expenses,128.694,GHS millions,CAL21,50,reported,"Bank-only; expenses positive, impairment gains/tax benefits negative."
+calbank,FY2021,income_statement,impairment_charge,82.375,GHS millions,CAL21,50,reported,"Bank-only; expenses positive, impairment gains/tax benefits negative."
+calbank,FY2021,income_statement,profit_before_tax,325.674,GHS millions,CAL21,50,reported,"Bank-only; expenses positive, impairment gains/tax benefits negative."
+calbank,FY2021,income_statement,income_tax,110.435,GHS millions,CAL21,50,reported,"Bank-only; expenses positive, impairment gains/tax benefits negative."
+calbank,FY2021,income_statement,profit_after_tax,215.239,GHS millions,CAL21,50,reported,"Bank-only; expenses positive, impairment gains/tax benefits negative."
+calbank,FY2021,income_statement,x_lease_finance_cost,4.026,GHS millions,CAL21,50,reported,Finance cost on lease liabilities reported separately in operating expenses.
+calbank,FY2021,balance_sheet,cash_and_bog_balances,1307.694,GHS millions,CAL21,51,reported,Reported as Cash and cash equivalents; includes balances with other banks.
+calbank,FY2021,balance_sheet,due_from_banks,,GHS millions,,,unavailable,Not split from Cash and cash equivalents on balance sheet face.
+calbank,FY2021,balance_sheet,investment_securities,4946.98,GHS millions,CAL21,51,reported,Bank-only investment securities (trading assets in other_assets).
+calbank,FY2021,balance_sheet,loans_and_advances_gross,2452.92,GHS millions,CAL21,114,reported,Bank-only gross loans from Note 24/26.
+calbank,FY2021,balance_sheet,loan_loss_allowance,213.4,GHS millions,CAL21,114,reported,Bank-only accumulated impairment allowance from Note 24/26.
+calbank,FY2021,balance_sheet,loans_and_advances_net,2239.52,GHS millions,CAL21,51,reported,Bank-only.
+calbank,FY2021,balance_sheet,property_equipment_intangibles,487,GHS millions,CAL21,51,derived,"Property, plant & equipment plus intangible assets."
+calbank,FY2021,balance_sheet,other_assets,1031.184,GHS millions,CAL21,51,derived,"Sum of trading assets, subsidiaries, tax assets, ROU assets, assets held for sale (FY21), and other assets."
+calbank,FY2021,balance_sheet,total_assets,10012.378,GHS millions,CAL21,51,reported,Bank-only.
+calbank,FY2021,balance_sheet,customer_deposits,5161.933,GHS millions,CAL21,51,reported,Bank-only.
+calbank,FY2021,balance_sheet,due_to_banks,1150.134,GHS millions,CAL21,51,reported,Deposits from banks and other financial institutions.
+calbank,FY2021,balance_sheet,borrowings,2214.267,GHS millions,CAL21,51,reported,Bank-only.
+calbank,FY2021,balance_sheet,other_liabilities,228.366,GHS millions,CAL21,51,derived,"Sum of current tax liabilities (if any), lease liabilities, and other liabilities."
+calbank,FY2021,balance_sheet,total_liabilities,8754.7,GHS millions,CAL21,51,reported,Bank-only.
+calbank,FY2021,balance_sheet,stated_capital,400,GHS millions,CAL21,51,reported,Bank-only.
+calbank,FY2021,balance_sheet,retained_earnings,361.554,GHS millions,CAL21,51,reported,Bank-only.
+calbank,FY2021,balance_sheet,reserves_other,496.124,GHS millions,CAL21,51,derived,"Sum of revaluation, statutory, credit risk, and other reserves."
+calbank,FY2021,balance_sheet,total_equity,1257.678,GHS millions,CAL21,51,reported,Bank-only.
+calbank,FY2021,ratios,car_pct,24.5,%,CAL21,97,reported,Bank-only regulatory CAR (with DDEP forbearance in FY23-FY24).
+calbank,FY2021,ratios,tier1_pct,22.5,%,CAL21,97,reported,Bank-only regulatory Tier 1 ratio.
+calbank,FY2021,ratios,npl_pct,11.2,%,CAL21,114,reported,Bank-only gross NPL ratio.
+calbank,FY2021,ratios,ldr_pct,47.5194,%,CAL21,51,derived,loans_and_advances_gross / customer_deposits * 100.
+calbank,FY2021,ratios,cost_to_income_pct,44.0722,%,CAL21,50,derived,Total operating expenses / total_operating_income * 100.
+calbank,FY2021,ratios,roe_pct,18.1666,%,CAL21,50,derived,profit_after_tax / average total_equity * 100.
+calbank,FY2021,ratios,roa_pct,2.4028,%,CAL21,50,derived,profit_after_tax / average total_assets * 100.
+calbank,FY2022,income_statement,interest_income,1275.872,GHS millions,CAL23,66,reported,"Bank-only; expenses positive, impairment gains/tax benefits negative."
+calbank,FY2022,income_statement,interest_expense,689.73,GHS millions,CAL23,66,reported,"Bank-only; expenses positive, impairment gains/tax benefits negative."
+calbank,FY2022,income_statement,net_interest_income,586.142,GHS millions,CAL23,66,reported,"Bank-only; expenses positive, impairment gains/tax benefits negative."
+calbank,FY2022,income_statement,fee_commission_income,84.554,GHS millions,CAL23,66,reported,"Bank-only; expenses positive, impairment gains/tax benefits negative."
+calbank,FY2022,income_statement,fee_commission_expense,18.288,GHS millions,CAL23,66,reported,"Bank-only; expenses positive, impairment gains/tax benefits negative."
+calbank,FY2022,income_statement,net_trading_income,114.773,GHS millions,CAL23,66,reported,Bank-only.
+calbank,FY2022,income_statement,other_operating_income,0.923,GHS millions,CAL23,66,reported,"Bank-only; expenses positive, impairment gains/tax benefits negative."
+calbank,FY2022,income_statement,total_operating_income,768.104,GHS millions,CAL23,66,reported,"Bank-only; expenses positive, impairment gains/tax benefits negative."
+calbank,FY2022,income_statement,staff_costs,155.567,GHS millions,CAL23,66,reported,"Bank-only; expenses positive, impairment gains/tax benefits negative."
+calbank,FY2022,income_statement,depreciation_amortisation,47.112,GHS millions,CAL23,66,reported,"Bank-only; expenses positive, impairment gains/tax benefits negative."
+calbank,FY2022,income_statement,other_operating_expenses,199.456,GHS millions,CAL23,66,reported,"Bank-only; expenses positive, impairment gains/tax benefits negative."
+calbank,FY2022,income_statement,impairment_charge,1442.221,GHS millions,CAL23,66,reported,"Bank-only; expenses positive, impairment gains/tax benefits negative."
+calbank,FY2022,income_statement,profit_before_tax,-1080.337,GHS millions,CAL23,66,reported,"Bank-only; expenses positive, impairment gains/tax benefits negative."
+calbank,FY2022,income_statement,income_tax,-265.137,GHS millions,CAL23,66,reported,"Bank-only; expenses positive, impairment gains/tax benefits negative."
+calbank,FY2022,income_statement,profit_after_tax,-815.2,GHS millions,CAL23,66,reported,"Bank-only; expenses positive, impairment gains/tax benefits negative."
+calbank,FY2022,income_statement,x_lease_finance_cost,4.085,GHS millions,CAL23,66,reported,Finance cost on lease liabilities reported separately in operating expenses.
+calbank,FY2022,balance_sheet,cash_and_bog_balances,2008.87,GHS millions,CAL23,67,reported,Reported as Cash and cash equivalents; includes balances with other banks.
+calbank,FY2022,balance_sheet,due_from_banks,,GHS millions,,,unavailable,Not split from Cash and cash equivalents on balance sheet face.
+calbank,FY2022,balance_sheet,investment_securities,2675.533,GHS millions,CAL23,67,reported,Bank-only investment securities (trading assets in other_assets).
+calbank,FY2022,balance_sheet,loans_and_advances_gross,3738.077,GHS millions,CAL23,140,reported,Bank-only gross loans from Note 24/26.
+calbank,FY2022,balance_sheet,loan_loss_allowance,547.718,GHS millions,CAL23,140,reported,Bank-only accumulated impairment allowance from Note 24/26.
+calbank,FY2022,balance_sheet,loans_and_advances_net,3190.359,GHS millions,CAL23,67,reported,Bank-only.
+calbank,FY2022,balance_sheet,property_equipment_intangibles,704.05,GHS millions,CAL23,67,derived,"Property, plant & equipment plus intangible assets."
+calbank,FY2022,balance_sheet,other_assets,640.442,GHS millions,CAL23,67,derived,"Sum of trading assets, subsidiaries, tax assets, ROU assets, assets held for sale (FY21), and other assets."
+calbank,FY2022,balance_sheet,total_assets,9219.254,GHS millions,CAL23,67,reported,Bank-only.
+calbank,FY2022,balance_sheet,customer_deposits,6116.174,GHS millions,CAL23,67,reported,Bank-only.
+calbank,FY2022,balance_sheet,due_to_banks,622.594,GHS millions,CAL23,67,reported,Deposits from banks and other financial institutions.
+calbank,FY2022,balance_sheet,borrowings,1610.95,GHS millions,CAL23,67,reported,Bank-only.
+calbank,FY2022,balance_sheet,other_liabilities,373.027,GHS millions,CAL23,67,derived,"Sum of current tax liabilities (if any), lease liabilities, and other liabilities."
+calbank,FY2022,balance_sheet,total_liabilities,8722.745,GHS millions,CAL23,67,reported,Bank-only.
+calbank,FY2022,balance_sheet,stated_capital,400,GHS millions,CAL23,67,reported,Bank-only.
+calbank,FY2022,balance_sheet,retained_earnings,-522.677,GHS millions,CAL23,67,reported,Bank-only.
+calbank,FY2022,balance_sheet,reserves_other,619.186,GHS millions,CAL23,67,derived,"Sum of revaluation, statutory, credit risk, and other reserves."
+calbank,FY2022,balance_sheet,total_equity,496.509,GHS millions,CAL23,67,reported,Bank-only.
+calbank,FY2022,ratios,car_pct,11.9,%,CAL23,120,reported,Bank-only regulatory CAR (with DDEP forbearance in FY23-FY24).
+calbank,FY2022,ratios,tier1_pct,8.9,%,CAL23,120,reported,Bank-only regulatory Tier 1 ratio.
+calbank,FY2022,ratios,npl_pct,11.2,%,CAL23,140,reported,Bank-only gross NPL ratio.
+calbank,FY2022,ratios,ldr_pct,61.1179,%,CAL23,67,derived,loans_and_advances_gross / customer_deposits * 100.
+calbank,FY2022,ratios,cost_to_income_pct,52.8861,%,CAL23,66,derived,Total operating expenses / total_operating_income * 100.
+calbank,FY2022,ratios,roe_pct,-92.9433,%,CAL23,66,derived,profit_after_tax / average total_equity * 100.
+calbank,FY2022,ratios,roa_pct,-8.4777,%,CAL23,66,derived,profit_after_tax / average total_assets * 100.
+calbank,FY2023,income_statement,interest_income,1094.092,GHS millions,CAL24,65,reported,"Bank-only; expenses positive, impairment gains/tax benefits negative."
+calbank,FY2023,income_statement,interest_expense,558.735,GHS millions,CAL24,65,reported,"Bank-only; expenses positive, impairment gains/tax benefits negative."
+calbank,FY2023,income_statement,net_interest_income,535.357,GHS millions,CAL24,65,reported,"Bank-only; expenses positive, impairment gains/tax benefits negative."
+calbank,FY2023,income_statement,fee_commission_income,126.36,GHS millions,CAL24,65,reported,"Bank-only; expenses positive, impairment gains/tax benefits negative."
+calbank,FY2023,income_statement,fee_commission_expense,27.405,GHS millions,CAL24,65,reported,"Bank-only; expenses positive, impairment gains/tax benefits negative."
+calbank,FY2023,income_statement,net_trading_income,176.807,GHS millions,CAL24,65,reported,Bank-only.
+calbank,FY2023,income_statement,other_operating_income,-0.277,GHS millions,CAL24,65,reported,"Bank-only; expenses positive, impairment gains/tax benefits negative."
+calbank,FY2023,income_statement,total_operating_income,810.842,GHS millions,CAL24,65,reported,"Bank-only; expenses positive, impairment gains/tax benefits negative."
+calbank,FY2023,income_statement,staff_costs,170.495,GHS millions,CAL24,65,reported,"Bank-only; expenses positive, impairment gains/tax benefits negative."
+calbank,FY2023,income_statement,depreciation_amortisation,54.097,GHS millions,CAL24,65,reported,"Bank-only; expenses positive, impairment gains/tax benefits negative."
+calbank,FY2023,income_statement,other_operating_expenses,311.944,GHS millions,CAL24,65,reported,"Bank-only; expenses positive, impairment gains/tax benefits negative."
+calbank,FY2023,income_statement,impairment_charge,1229.498,GHS millions,CAL24,65,reported,"Bank-only; expenses positive, impairment gains/tax benefits negative."
+calbank,FY2023,income_statement,profit_before_tax,-959.843,GHS millions,CAL24,65,reported,"Bank-only; expenses positive, impairment gains/tax benefits negative."
+calbank,FY2023,income_statement,income_tax,-279.565,GHS millions,CAL24,65,reported,"Bank-only; expenses positive, impairment gains/tax benefits negative."
+calbank,FY2023,income_statement,profit_after_tax,-680.278,GHS millions,CAL24,65,reported,"Bank-only; expenses positive, impairment gains/tax benefits negative."
+calbank,FY2023,income_statement,x_lease_finance_cost,4.651,GHS millions,CAL24,65,reported,Finance cost on lease liabilities reported separately in operating expenses.
+calbank,FY2023,balance_sheet,cash_and_bog_balances,2320.963,GHS millions,CAL24,66,reported,Reported as Cash and cash equivalents; includes balances with other banks.
+calbank,FY2023,balance_sheet,due_from_banks,,GHS millions,,,unavailable,Not split from Cash and cash equivalents on balance sheet face.
+calbank,FY2023,balance_sheet,investment_securities,2982.682,GHS millions,CAL24,66,reported,Bank-only investment securities (trading assets in other_assets).
+calbank,FY2023,balance_sheet,loans_and_advances_gross,3850.332,GHS millions,CAL24,141,reported,Bank-only gross loans from Note 24/26.
+calbank,FY2023,balance_sheet,loan_loss_allowance,1095.553,GHS millions,CAL24,141,reported,Bank-only accumulated impairment allowance from Note 24/26.
+calbank,FY2023,balance_sheet,loans_and_advances_net,2754.779,GHS millions,CAL24,66,reported,Bank-only.
+calbank,FY2023,balance_sheet,property_equipment_intangibles,717.993,GHS millions,CAL24,66,derived,"Property, plant & equipment plus intangible assets."
+calbank,FY2023,balance_sheet,other_assets,1093.016,GHS millions,CAL24,66,derived,"Sum of trading assets, subsidiaries, tax assets, ROU assets, assets held for sale (FY21), and other assets."
+calbank,FY2023,balance_sheet,total_assets,9869.433,GHS millions,CAL24,66,reported,Bank-only.
+calbank,FY2023,balance_sheet,customer_deposits,6945.627,GHS millions,CAL24,66,reported,Bank-only.
+calbank,FY2023,balance_sheet,due_to_banks,555.001,GHS millions,CAL24,66,reported,Deposits from banks and other financial institutions.
+calbank,FY2023,balance_sheet,borrowings,1292.718,GHS millions,CAL24,66,reported,Bank-only.
+calbank,FY2023,balance_sheet,other_liabilities,1260.99,GHS millions,CAL24,66,derived,"Sum of current tax liabilities (if any), lease liabilities, and other liabilities."
+calbank,FY2023,balance_sheet,total_liabilities,10054.336,GHS millions,CAL24,66,reported,Bank-only.
+calbank,FY2023,balance_sheet,stated_capital,400,GHS millions,CAL24,66,reported,Bank-only.
+calbank,FY2023,balance_sheet,retained_earnings,-1202.955,GHS millions,CAL24,66,reported,Bank-only.
+calbank,FY2023,balance_sheet,reserves_other,618.052,GHS millions,CAL24,66,derived,"Sum of revaluation, statutory, credit risk, and other reserves."
+calbank,FY2023,balance_sheet,total_equity,-184.903,GHS millions,CAL24,66,reported,Bank-only.
+calbank,FY2023,ratios,car_pct,-9.9,%,CAL24,120,reported,Bank-only regulatory CAR (with DDEP forbearance in FY23-FY24).
+calbank,FY2023,ratios,tier1_pct,-12.9,%,CAL24,120,reported,Bank-only regulatory Tier 1 ratio.
+calbank,FY2023,ratios,npl_pct,33.2,%,CAL24,141,reported,Bank-only gross NPL ratio.
+calbank,FY2023,ratios,ldr_pct,55.4353,%,CAL24,66,derived,loans_and_advances_gross / customer_deposits * 100.
+calbank,FY2023,ratios,cost_to_income_pct,66.7438,%,CAL24,65,derived,Total operating expenses / total_operating_income * 100.
+calbank,FY2023,ratios,roe_pct,-436.627,%,CAL24,65,derived,profit_after_tax / average total_equity * 100.
+calbank,FY2023,ratios,roa_pct,-7.1276,%,CAL24,65,derived,profit_after_tax / average total_assets * 100.
+calbank,FY2024,income_statement,interest_income,930.509,GHS millions,CAL25,64,reported,"Bank-only; expenses positive, impairment gains/tax benefits negative."
+calbank,FY2024,income_statement,interest_expense,478.514,GHS millions,CAL25,64,reported,"Bank-only; expenses positive, impairment gains/tax benefits negative."
+calbank,FY2024,income_statement,net_interest_income,451.995,GHS millions,CAL25,64,reported,"Bank-only; expenses positive, impairment gains/tax benefits negative."
+calbank,FY2024,income_statement,fee_commission_income,223.849,GHS millions,CAL25,64,reported,"Bank-only; expenses positive, impairment gains/tax benefits negative."
+calbank,FY2024,income_statement,fee_commission_expense,44.259,GHS millions,CAL25,64,reported,"Bank-only; expenses positive, impairment gains/tax benefits negative."
+calbank,FY2024,income_statement,net_trading_income,90.174,GHS millions,CAL25,64,reported,Bank-only.
+calbank,FY2024,income_statement,other_operating_income,51.617,GHS millions,CAL25,64,reported,"Bank-only; expenses positive, impairment gains/tax benefits negative."
+calbank,FY2024,income_statement,total_operating_income,773.376,GHS millions,CAL25,64,reported,"Bank-only; expenses positive, impairment gains/tax benefits negative."
+calbank,FY2024,income_statement,staff_costs,219.107,GHS millions,CAL25,64,reported,"Bank-only; expenses positive, impairment gains/tax benefits negative."
+calbank,FY2024,income_statement,depreciation_amortisation,58.763,GHS millions,CAL25,64,reported,"Bank-only; expenses positive, impairment gains/tax benefits negative."
+calbank,FY2024,income_statement,other_operating_expenses,287.361,GHS millions,CAL25,64,reported,"Bank-only; expenses positive, impairment gains/tax benefits negative."
+calbank,FY2024,income_statement,impairment_charge,-192.804,GHS millions,CAL25,64,reported,"Bank-only; expenses positive, impairment gains/tax benefits negative."
+calbank,FY2024,income_statement,profit_before_tax,396.148,GHS millions,CAL25,64,reported,"Bank-only; expenses positive, impairment gains/tax benefits negative."
+calbank,FY2024,income_statement,income_tax,139.755,GHS millions,CAL25,64,reported,"Bank-only; expenses positive, impairment gains/tax benefits negative."
+calbank,FY2024,income_statement,profit_after_tax,256.393,GHS millions,CAL25,64,reported,"Bank-only; expenses positive, impairment gains/tax benefits negative."
+calbank,FY2024,income_statement,x_lease_finance_cost,4.801,GHS millions,CAL25,64,reported,Finance cost on lease liabilities reported separately in operating expenses.
+calbank,FY2024,balance_sheet,cash_and_bog_balances,2808.619,GHS millions,CAL25,65,reported,Reported as Cash and cash equivalents; includes balances with other banks.
+calbank,FY2024,balance_sheet,due_from_banks,,GHS millions,,,unavailable,Not split from Cash and cash equivalents on balance sheet face.
+calbank,FY2024,balance_sheet,investment_securities,4876.244,GHS millions,CAL25,65,reported,Bank-only investment securities (trading assets in other_assets).
+calbank,FY2024,balance_sheet,loans_and_advances_gross,3466.3,GHS millions,CAL25,142,reported,Bank-only gross loans from Note 24/26.
+calbank,FY2024,balance_sheet,loan_loss_allowance,1364.304,GHS millions,CAL25,142,reported,Bank-only accumulated impairment allowance from Note 24/26.
+calbank,FY2024,balance_sheet,loans_and_advances_net,2101.996,GHS millions,CAL25,65,reported,Bank-only.
+calbank,FY2024,balance_sheet,property_equipment_intangibles,651.205,GHS millions,CAL25,65,derived,"Property, plant & equipment plus intangible assets."
+calbank,FY2024,balance_sheet,other_assets,1220.63,GHS millions,CAL25,65,derived,"Sum of trading assets, subsidiaries, tax assets, ROU assets, assets held for sale (FY21), and other assets."
+calbank,FY2024,balance_sheet,total_assets,11658.694,GHS millions,CAL25,65,reported,Bank-only.
+calbank,FY2024,balance_sheet,customer_deposits,9431.527,GHS millions,CAL25,65,reported,Bank-only.
+calbank,FY2024,balance_sheet,due_to_banks,255.166,GHS millions,CAL25,65,reported,Deposits from banks and other financial institutions.
+calbank,FY2024,balance_sheet,borrowings,1537.162,GHS millions,CAL25,65,reported,Bank-only.
+calbank,FY2024,balance_sheet,other_liabilities,217.503,GHS millions,CAL25,65,derived,"Sum of current tax liabilities (if any), lease liabilities, and other liabilities."
+calbank,FY2024,balance_sheet,total_liabilities,11441.358,GHS millions,CAL25,65,reported,Bank-only.
+calbank,FY2024,balance_sheet,stated_capital,545.846,GHS millions,CAL25,65,reported,Bank-only.
+calbank,FY2024,balance_sheet,retained_earnings,-1209.108,GHS millions,CAL25,65,reported,Bank-only.
+calbank,FY2024,balance_sheet,reserves_other,880.598,GHS millions,CAL25,65,derived,"Sum of revaluation, statutory, credit risk, and other reserves."
+calbank,FY2024,balance_sheet,total_equity,217.336,GHS millions,CAL25,65,reported,Bank-only.
+calbank,FY2024,ratios,car_pct,-7.22,%,CAL25,122,reported,Bank-only regulatory CAR (with DDEP forbearance in FY23-FY24).
+calbank,FY2024,ratios,tier1_pct,-9.17,%,CAL25,122,reported,Bank-only regulatory Tier 1 ratio.
+calbank,FY2024,ratios,npl_pct,47.51,%,CAL25,142,reported,Bank-only gross NPL ratio.
+calbank,FY2024,ratios,ldr_pct,36.7523,%,CAL25,65,derived,loans_and_advances_gross / customer_deposits * 100.
+calbank,FY2024,ratios,cost_to_income_pct,73.707,%,CAL25,64,derived,Total operating expenses / total_operating_income * 100.
+calbank,FY2024,ratios,roe_pct,1581.0625,%,CAL25,64,derived,profit_after_tax / average total_equity * 100.
+calbank,FY2024,ratios,roa_pct,2.3819,%,CAL25,64,derived,profit_after_tax / average total_assets * 100.
+calbank,FY2025,income_statement,interest_income,869.97,GHS millions,CAL25,64,reported,"Bank-only; expenses positive, impairment gains/tax benefits negative."
+calbank,FY2025,income_statement,interest_expense,370.268,GHS millions,CAL25,64,reported,"Bank-only; expenses positive, impairment gains/tax benefits negative."
+calbank,FY2025,income_statement,net_interest_income,499.702,GHS millions,CAL25,64,reported,"Bank-only; expenses positive, impairment gains/tax benefits negative."
+calbank,FY2025,income_statement,fee_commission_income,223.784,GHS millions,CAL25,64,reported,"Bank-only; expenses positive, impairment gains/tax benefits negative."
+calbank,FY2025,income_statement,fee_commission_expense,45.4,GHS millions,CAL25,64,reported,"Bank-only; expenses positive, impairment gains/tax benefits negative."
+calbank,FY2025,income_statement,net_trading_income,148.835,GHS millions,CAL25,64,reported,Bank-only.
+calbank,FY2025,income_statement,other_operating_income,40.767,GHS millions,CAL25,64,reported,"Bank-only; expenses positive, impairment gains/tax benefits negative."
+calbank,FY2025,income_statement,total_operating_income,867.688,GHS millions,CAL25,64,reported,"Bank-only; expenses positive, impairment gains/tax benefits negative."
+calbank,FY2025,income_statement,staff_costs,301.514,GHS millions,CAL25,64,reported,"Bank-only; expenses positive, impairment gains/tax benefits negative."
+calbank,FY2025,income_statement,depreciation_amortisation,60.46,GHS millions,CAL25,64,reported,"Bank-only; expenses positive, impairment gains/tax benefits negative."
+calbank,FY2025,income_statement,other_operating_expenses,221.134,GHS millions,CAL25,64,reported,"Bank-only; expenses positive, impairment gains/tax benefits negative."
+calbank,FY2025,income_statement,impairment_charge,-193.725,GHS millions,CAL25,64,reported,"Bank-only; expenses positive, impairment gains/tax benefits negative."
+calbank,FY2025,income_statement,profit_before_tax,474.441,GHS millions,CAL25,64,reported,"Bank-only; expenses positive, impairment gains/tax benefits negative."
+calbank,FY2025,income_statement,income_tax,168.029,GHS millions,CAL25,64,reported,"Bank-only; expenses positive, impairment gains/tax benefits negative."
+calbank,FY2025,income_statement,profit_after_tax,306.412,GHS millions,CAL25,64,reported,"Bank-only; expenses positive, impairment gains/tax benefits negative."
+calbank,FY2025,income_statement,x_lease_finance_cost,3.864,GHS millions,CAL25,64,reported,Finance cost on lease liabilities reported separately in operating expenses.
+calbank,FY2025,balance_sheet,cash_and_bog_balances,1743.518,GHS millions,CAL25,65,reported,Reported as Cash and cash equivalents; includes balances with other banks.
+calbank,FY2025,balance_sheet,due_from_banks,,GHS millions,,,unavailable,Not split from Cash and cash equivalents on balance sheet face.
+calbank,FY2025,balance_sheet,investment_securities,7041.694,GHS millions,CAL25,65,reported,Bank-only investment securities (trading assets in other_assets).
+calbank,FY2025,balance_sheet,loans_and_advances_gross,1290.234,GHS millions,CAL25,142,reported,Bank-only gross loans from Note 24/26.
+calbank,FY2025,balance_sheet,loan_loss_allowance,219.354,GHS millions,CAL25,142,reported,Bank-only accumulated impairment allowance from Note 24/26.
+calbank,FY2025,balance_sheet,loans_and_advances_net,1070.88,GHS millions,CAL25,65,reported,Bank-only.
+calbank,FY2025,balance_sheet,property_equipment_intangibles,783.785,GHS millions,CAL25,65,derived,"Property, plant & equipment plus intangible assets."
+calbank,FY2025,balance_sheet,other_assets,1259.606,GHS millions,CAL25,65,derived,"Sum of trading assets, subsidiaries, tax assets, ROU assets, assets held for sale (FY21), and other assets."
+calbank,FY2025,balance_sheet,total_assets,11899.483,GHS millions,CAL25,65,reported,Bank-only.
+calbank,FY2025,balance_sheet,customer_deposits,8657.596,GHS millions,CAL25,65,reported,Bank-only.
+calbank,FY2025,balance_sheet,due_to_banks,434.855,GHS millions,CAL25,65,reported,Deposits from banks and other financial institutions.
+calbank,FY2025,balance_sheet,borrowings,1023.868,GHS millions,CAL25,65,reported,Bank-only.
+calbank,FY2025,balance_sheet,other_liabilities,254.722,GHS millions,CAL25,65,derived,"Sum of current tax liabilities (if any), lease liabilities, and other liabilities."
+calbank,FY2025,balance_sheet,total_liabilities,10371.041,GHS millions,CAL25,65,reported,Bank-only.
+calbank,FY2025,balance_sheet,stated_capital,1421.535,GHS millions,CAL25,65,reported,Bank-only.
+calbank,FY2025,balance_sheet,retained_earnings,-858.272,GHS millions,CAL25,65,reported,Bank-only.
+calbank,FY2025,balance_sheet,reserves_other,965.179,GHS millions,CAL25,65,derived,"Sum of revaluation, statutory, credit risk, and other reserves."
+calbank,FY2025,balance_sheet,total_equity,1528.442,GHS millions,CAL25,65,reported,Bank-only.
+calbank,FY2025,ratios,car_pct,18.87,%,CAL25,122,reported,Bank-only regulatory CAR (with DDEP forbearance in FY23-FY24).
+calbank,FY2025,ratios,tier1_pct,16.87,%,CAL25,122,reported,Bank-only regulatory Tier 1 ratio.
+calbank,FY2025,ratios,npl_pct,17.04,%,CAL25,142,reported,Bank-only gross NPL ratio.
+calbank,FY2025,ratios,ldr_pct,14.9029,%,CAL25,65,derived,loans_and_advances_gross / customer_deposits * 100.
+calbank,FY2025,ratios,cost_to_income_pct,67.6478,%,CAL25,64,derived,Total operating expenses / total_operating_income * 100.
+calbank,FY2025,ratios,roe_pct,35.1032,%,CAL25,64,derived,profit_after_tax / average total_equity * 100.
+calbank,FY2025,ratios,roa_pct,2.6013,%,CAL25,64,derived,profit_after_tax / average total_assets * 100.
+calbank,9M-2026,income_statement,interest_income,663.07,GHS millions,CAL26Q3,1,reported,"Bank-only; expenses positive, impairment gains/tax benefits negative."
+calbank,9M-2026,income_statement,interest_expense,151.631,GHS millions,CAL26Q3,1,reported,"Bank-only; expenses positive, impairment gains/tax benefits negative."
+calbank,9M-2026,income_statement,net_interest_income,511.439,GHS millions,CAL26Q3,1,reported,"Bank-only; expenses positive, impairment gains/tax benefits negative."
+calbank,9M-2026,income_statement,fee_commission_income,231.253,GHS millions,CAL26Q3,1,reported,"Bank-only; expenses positive, impairment gains/tax benefits negative."
+calbank,9M-2026,income_statement,fee_commission_expense,30.074,GHS millions,CAL26Q3,1,reported,"Bank-only; expenses positive, impairment gains/tax benefits negative."
+calbank,9M-2026,income_statement,net_trading_income,253.481,GHS millions,CAL26Q3,1,reported,Bank-only.
+calbank,9M-2026,income_statement,other_operating_income,5.668,GHS millions,CAL26Q3,1,reported,"Bank-only; expenses positive, impairment gains/tax benefits negative."
+calbank,9M-2026,income_statement,total_operating_income,971.767,GHS millions,CAL26Q3,1,reported,"Bank-only; expenses positive, impairment gains/tax benefits negative."
+calbank,9M-2026,income_statement,staff_costs,268.238,GHS millions,CAL26Q3,1,reported,"Bank-only; expenses positive, impairment gains/tax benefits negative."
+calbank,9M-2026,income_statement,depreciation_amortisation,48.034,GHS millions,CAL26Q3,1,reported,"Bank-only; expenses positive, impairment gains/tax benefits negative."
+calbank,9M-2026,income_statement,other_operating_expenses,179.683,GHS millions,CAL26Q3,1,reported,"Bank-only; expenses positive, impairment gains/tax benefits negative."
+calbank,9M-2026,income_statement,impairment_charge,-3.49,GHS millions,CAL26Q3,1,reported,"Bank-only; expenses positive, impairment gains/tax benefits negative."
+calbank,9M-2026,income_statement,profit_before_tax,477.256,GHS millions,CAL26Q3,1,reported,"Bank-only; expenses positive, impairment gains/tax benefits negative."
+calbank,9M-2026,income_statement,income_tax,155.586,GHS millions,CAL26Q3,1,reported,"Bank-only; expenses positive, impairment gains/tax benefits negative."
+calbank,9M-2026,income_statement,profit_after_tax,321.67,GHS millions,CAL26Q3,1,reported,"Bank-only; expenses positive, impairment gains/tax benefits negative."
+calbank,9M-2026,income_statement,x_lease_finance_cost,2.046,GHS millions,CAL26Q3,1,reported,Finance cost on lease liabilities reported separately in operating expenses.
+calbank,9M-2026,balance_sheet,cash_and_bog_balances,3199.633,GHS millions,CAL26Q3,2,reported,Reported as Cash and cash equivalents; includes balances with other banks.
+calbank,9M-2026,balance_sheet,due_from_banks,,GHS millions,,,unavailable,Not split from Cash and cash equivalents on balance sheet face.
+calbank,9M-2026,balance_sheet,investment_securities,6885.43,GHS millions,CAL26Q3,2,reported,Bank-only investment securities (trading assets in other_assets).
+calbank,9M-2026,balance_sheet,loans_and_advances_gross,,GHS millions,,,unavailable,Not disclosed in Q3 summary statement.
+calbank,9M-2026,balance_sheet,loan_loss_allowance,,GHS millions,,,unavailable,Not disclosed in Q3 summary statement.
+calbank,9M-2026,balance_sheet,loans_and_advances_net,2054.166,GHS millions,CAL26Q3,2,reported,Bank-only.
+calbank,9M-2026,balance_sheet,property_equipment_intangibles,759.31,GHS millions,CAL26Q3,2,derived,"Property, plant & equipment plus intangible assets."
+calbank,9M-2026,balance_sheet,other_assets,1651.161,GHS millions,CAL26Q3,2,derived,"Sum of trading assets, subsidiaries, tax assets, ROU assets, assets held for sale (FY21), and other assets."
+calbank,9M-2026,balance_sheet,total_assets,14549.7,GHS millions,CAL26Q3,2,reported,Bank-only.
+calbank,9M-2026,balance_sheet,customer_deposits,10633.698,GHS millions,CAL26Q3,2,reported,Bank-only.
+calbank,9M-2026,balance_sheet,due_to_banks,474.453,GHS millions,CAL26Q3,2,reported,Deposits from banks and other financial institutions.
+calbank,9M-2026,balance_sheet,borrowings,1079.686,GHS millions,CAL26Q3,2,reported,Bank-only.
+calbank,9M-2026,balance_sheet,other_liabilities,511.751,GHS millions,CAL26Q3,2,derived,"Sum of current tax liabilities (if any), lease liabilities, and other liabilities."
+calbank,9M-2026,balance_sheet,total_liabilities,12699.588,GHS millions,CAL26Q3,2,reported,Bank-only.
+calbank,9M-2026,balance_sheet,stated_capital,1421.535,GHS millions,CAL26Q3,2,reported,Bank-only.
+calbank,9M-2026,balance_sheet,retained_earnings,-561.729,GHS millions,CAL26Q3,2,reported,Bank-only.
+calbank,9M-2026,balance_sheet,reserves_other,990.306,GHS millions,CAL26Q3,2,derived,"Sum of revaluation, statutory, credit risk, and other reserves."
+calbank,9M-2026,balance_sheet,total_equity,1850.112,GHS millions,CAL26Q3,2,reported,Bank-only.
+calbank,9M-2026,ratios,car_pct,18.4,%,CAL26Q3,5,reported,Bank-only regulatory CAR (with DDEP forbearance in FY23-FY24).
+calbank,9M-2026,ratios,tier1_pct,,%,,,unavailable,Q3 summary discloses CET1 (16.4%) rather than total Tier 1.
+calbank,9M-2026,ratios,x_cet1_pct,16.4,%,CAL26Q3,5,reported,Bank-only CET1 ratio.
+calbank,9M-2026,ratios,npl_pct,8.5,%,CAL26Q3,5,reported,Bank-only gross NPL ratio.
+calbank,9M-2026,ratios,ldr_pct,19.3175,%,CAL26Q3,2,derived,loans_and_advances_net / customer_deposits * 100 (gross loans unavailable in Q3).
+calbank,9M-2026,ratios,cost_to_income_pct,51.247,%,CAL26Q3,1,derived,Total operating expenses / total_operating_income * 100.
+calbank,9M-2026,ratios,roe_pct,,%,,,unavailable,Interim 9M-2026; annualised ROE not reported.
+calbank,9M-2026,ratios,roa_pct,,%,,,unavailable,Interim 9M-2026; annualised ROA not reported.
