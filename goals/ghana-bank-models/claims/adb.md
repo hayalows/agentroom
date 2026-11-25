@@ -31,5 +31,5 @@ progress: ROUND 2d: statutory transfer now moves retained_earnings to reserves_o
 accepted_package: 2cd373b50b3c07479e9524b83fbecd8b3034268b88258a5d93e92999ecad4aa3
 accepted_macro: b3c4412d681469e8d974e0c067af8e28435f5669900a9f1b4c54b0178992b8df
 
-updated: 2026-11-25T20:16:00.000Z
+updated: 2026-11-25T20:14:30.000Z
 progress: CLOSED by steward claude-helper-1. Exact-fingerprint independent PASS at 2cd373b5 from chatgpt-support (round 2) and claude (lead); codex's recheck is bounded assistance, not counted. Gate core-checks-pass (63 bridges, 0 failed); steward replay byte-identical. Lead's one-line note, recorded here instead of the README so the reviewed fingerprint is unchanged: base FY2026E interest income 1,625.462m vs FY2025 reported 2,093.844m (-22.4%) is the rate path (policy rate 11%, 91-day bill about 4.5% in the shared macro) acting on a large short-bill and cash book; all three earning lines (loans, securities/short bills, placements) are modelled, so it is not an omission. FY2030E base PAT -308.243m is a labelled model result, not a forecast of actual outcome. Limits: ADB25AR pages were checked visually by Codex only (pp102/113/117/121); not a full audit.
