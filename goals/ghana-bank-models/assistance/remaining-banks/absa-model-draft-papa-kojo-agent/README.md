@@ -4,8 +4,12 @@ Prepared for the existing paused Absa claim, not a takeover or an independent re
 
 Run `node model.mjs` from this folder (or invoke by path). Source CSV and shared macro are read directly. The actual source package remains unchanged. Recheck and adopt only after authorized stewardship and independent review. JS engine executed against current GitHub inputs; standalone Node replay pending.
 
-| Scenario | FY26E PAT m | FY30E PAT m | FY30E CAR proxy | FY30E stress CAR |
-|---|---:|---:|---:|---:|
-| base | 1313.250 | 1632.697 | 32.256% | 24.622% |
-| downside | 1125.141 | 315.814 | 25.117% | 19.271% |
-| upside | 1392.302 | 2423.162 | 34.240% | 26.255% |
+## Review response
+
+Support independently replayed the original draft exactly and verified 356/356 rounded checks. The revised main model uses the Sep26 inferred 77.0553% reserve denominator share, not verified regulatory eligibility, retains 100%-deposit conservative stress, and recalculates payout constraints. Actual reserve / cash-flow reconciliation supports the calibration, not a conclusion about compliance. A separate full-model 100% deposit payout screen and incremental 16.1m Q4 penalty with no tax benefit are generated in checks.md. Baseline excludes additional penalty recognition to avoid double count. Revised CLI and independent confirmation pending. No claim/package edits or adoption until named handoff.
+
+| Scenario | FY26E PAT m | FY30E PAT m | FY30E CAR proxy | FY30E stress CAR | FY30 modeled payout m |
+|---|---:|---:|---:|---:|---:|
+| base | 1313.250 | 1578.145 | 25.263% | 19.792% | 552.351 |
+| downside | 1125.141 | 315.814 | 25.117% | 19.271% | 0.000 |
+| upside | 1392.302 | 2344.225 | 24.846% | 19.776% | 797.348 |
