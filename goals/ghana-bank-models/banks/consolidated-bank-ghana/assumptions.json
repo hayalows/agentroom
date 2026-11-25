@@ -2,7 +2,7 @@
   "bank": "consolidated-bank-ghana",
   "status": "estimated",
   "macro_file": "../../sector/macro-assumptions/macro.csv",
-  "anchor": "H1-2026 audited history excluded from forecast assumptions; H1 actual unaudited P&L preserved and second half modeled. June balance sheet is opening stock. No Q3 issuer filing located.",
+  "anchor": "FY2026E preserves reported H1-2026 unaudited P&L and models the second half. June balance sheet is opening stock. No Q3 issuer filing located.",
   "calibration": {
     "loan_yield_pct": 18,
     "bank_placement_yield_pct": 6.5,
@@ -130,7 +130,7 @@
     "fee_expense_ratio": "H1 expense / income",
     "fx_method": "Use reported FY2025 USD net short exposure (GHS60.283m), express at shared 2025 year-end FX, hold USD amount fixed from FY2027; increment P&L for FX change, residual cash reflects P&L, no separate gross asset/liability FX stocks. No separate H2 FX shock because June FX inventory unavailable; H2 trading run-rate includes ordinary FX activity.",
     "capital_method": "FY2025 actual RWA minus gross loans divided by total assets minus gross loans as residual risk intensity; H1 gross estimated using FY2025 allowance ratio. H1 regulatory capital = estimated RWA times reported 14.91%; CET1 proxy likewise 13.74%, no identification with Tier1. Post-H1 modeled profit/loss changes total and CET1 capital one-for-one; no new relief or injection assumed. Screen 13% shared min and management buffer +3pp; flag any gap. No accounting equity substitution.",
-    "cash_method": "H1 combined cash split at FY2025 due-from-banks share. Securities grow by scenario fraction of deposit change, other noncash assets explicit, cash is residual; no funding or capital injection to force feasibility. Compare estimated cash with shared CRR times deposits, not evidence of actual eligible reserves or bank-specific dispensation.",
+    "cash_method": "H1 combined cash split at FY2025 due-from-banks share. Securities grow by scenario fraction of deposit change, other noncash assets explicit, cash is residual; no funding or capital injection to force feasibility. Compare estimated cash with shared CRR times deposits, not evidence of actual eligible reserves or bank-specific dispensation. CBG25AR p118 says 25% CRR was waived in 2025; 2026 waiver status not verified. Shared 20% screen represents standard-requirement sensitivity only.",
     "credit_method": "H1 net loan actual grossed up at FY2025 allowance ratio; target allowance stock and NPL path illustrative, independent of each other. Modeled risk charge floored at stock build; release/write-off difference is implied unallocated movement. Historical sovereign modification losses not repeated. Downside credit charges and cost pressure explicit.",
     "reserve_method": "50% positive post-H1 earnings transferred to statutory reserve while below stated capital (CBG H1 2026 actual 50%); not distributed. No dividend even if retained deficit closes. No future owner transactions assumed.",
     "rationale": "CBG's 2025 impairment loss, thin capital buffer, retained deficit and June 2026 NPL above 33% motivate cautious lending and no distributions. No new government support assumed. Loan/deposit, fee and opex spreads are analyst judgments, not bank guidance."
