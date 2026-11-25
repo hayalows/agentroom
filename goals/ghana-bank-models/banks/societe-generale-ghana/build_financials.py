@@ -115,6 +115,18 @@ RATIO = {
  "9M-2026": dict(src="SG26Q3", pg="1", car=18.52, car_note="CAR 18.52% at 30 Sep 2026 (unaudited).", npl=13.98, npl_pg="1"),
 }
 
+# Regulatory capital note (GHS millions): CET1, Tier 2, total regulatory capital, total RWA, and
+# the bank's reported CET1/RWA ratio. These are the audited capital-adequacy disclosures, so the
+# forecast can be calibrated on real RWA and capital rather than a pure proxy.
+CAP = {
+ "FY2021": dict(src="SG21AR", pg="111", cet1=810.296427, cet2=61.835129, cap=872.131557, rwa=3897.453985, cet1_pct=20.79),
+ "FY2022": dict(src="SG22AR", pg="113", cet1=849.664260, cet2=74.202155, cap=923.866416, rwa=5773.200640, cet1_pct=14.72),
+ "FY2023": dict(src="SG23AR", pg="127", cet1=1223.423861, cet2=74.202155, cap=1297.626016, rwa=6936.077505, cet1_pct=17.64),
+ "FY2024": dict(src="SG24AR", pg="133", cet1=1626.705277, cet2=290.339900, cap=1917.045177, rwa=9677.996677, cet1_pct=16.81),
+ "FY2025": dict(src="SG25AR", pg="133", cet1=1746.913789, cet2=163.322103, cap=1910.235892, rwa=8166.105152, cet1_pct=21.39),
+ "9M-2026": dict(src=None, pg=None, cet1=None, cet2=None, cap=None, rwa=None, cet1_pct=None),
+}
+
 PERIODS = ["FY2021", "FY2022", "FY2023", "FY2024", "FY2025", "9M-2026"]
 BANKONLY = "Bank-only (separate) statements; costs/allowances positive, profits signed."
 
@@ -146,6 +158,8 @@ for p in PERIODS:
     def rep(item, val, extra=""):
         add(p, "balance_sheet", item, val, "GHS millions", b["src"], b["pg"], "reported", BANKONLY + (" " + extra if extra else ""))
     rep("cash_and_bog_balances", b["cash"])
+    add(p, "balance_sheet", "due_from_banks", None, "GHS millions", b["src"], b["pg"], "unavailable",
+        "Cash and cash equivalents (note 17) is the only asset-side bank balance; the Bank reports no separate 'due from banks' line. Deposits from banks appear on the liability side as due_to_banks.")
     if b["trading"] is not None:
         rep("x_trading_assets", b["trading"], "Non-pledged trading assets.")
     if b["deriv_a"] is not None:
@@ -193,7 +207,19 @@ for p in PERIODS:
     r = RATIO[p]
     add(p, "ratios", "car_pct", r["car"], "percent", r["src"], r["pg"], "reported", r["car_note"])
     add(p, "ratios", "npl_pct", r["npl"], "percent", r["src"], r["npl_pg"], "reported", "Gross non-performing loan ratio as reported.")
-    for item in ["tier1_pct", "ldr_pct", "cost_to_income_pct", "roe_pct", "roa_pct"]:
+
+    c = CAP[p]
+    nreg = "Bank-only (separate) statements; audited capital-adequacy note."
+    add(p, "balance_sheet", "x_cet1_capital", c["cet1"], "GHS millions", c["src"], c["pg"],
+        "reported" if c["cet1"] is not None else "unavailable", nreg + " Common Equity Tier 1 capital.")
+    add(p, "balance_sheet", "x_total_regulatory_capital", c["cap"], "GHS millions", c["src"], c["pg"],
+        "reported" if c["cap"] is not None else "unavailable", nreg + " Total regulatory capital (CET1 + Tier 2).")
+    add(p, "balance_sheet", "x_risk_weighted_assets", c["rwa"], "GHS millions", c["src"], c["pg"],
+        "reported" if c["rwa"] is not None else "unavailable", nreg + " Total risk-weighted assets.")
+    add(p, "ratios", "tier1_pct", c["cet1_pct"], "percent", c["src"], c["pg"],
+        "reported" if c["cet1_pct"] is not None else "unavailable", nreg + " Common Equity Tier 1 / RWA as reported.")
+
+    for item in ["ldr_pct", "cost_to_income_pct", "roe_pct", "roa_pct"]:
         add(p, "ratios", item, None, "percent", "", "", "unavailable",
             "Not disclosed as a ratio in the bank's summary statements; recomputable in checks.md where inputs exist.")
 
