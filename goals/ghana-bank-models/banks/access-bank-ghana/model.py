@@ -1,4 +1,4 @@
-"""Access Ghana scenario estimates; standard library; amounts in GHS millions."""
+"""Access Ghana estimates use the shared sector/macro-assumptions/macro.csv."""
 import csv, json, os
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -38,7 +38,7 @@ for scenario, a in settings['scenarios'].items():
             nii=interest-expense; op=nii+netfee+trading+otherinc
             pbt=op-staff-depn-otherexp-impairment
             tax=q['income_tax']+max(0,pbt-q['profit_before_tax'])*0.35
-            pat=pbt-tax; retained=q['retained_earnings']+pat-q['profit_after_tax']; reserve=q['reserves_other']
+            pat=pbt-tax; retained=q['retained_earnings']+pat-q['profit_after_tax']-settings['scheduled_q4_dividend_ghs_m']; reserve=q['reserves_other']
         else:
             policy_delta=(m('policy_rate_pct')-macro[(scenario,f'FY{year-1}E','policy_rate_pct')])/100
             bill_delta=(m('tbill_91d_pct')-macro[(scenario,f'FY{year-1}E','tbill_91d_pct')])/100
