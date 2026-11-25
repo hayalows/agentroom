@@ -29,33 +29,28 @@
     },
     "investment_yield": {
       "status": "estimated",
-      "method": "Use 50% shared 364-day T-bill and 50% representative medium-term government bond yield; a portfolio mix proxy, not a reported yield.",
-      "reason": "The Bank's investment securities book is small relative to loans and cash; the blended 364-day bill and 10-year post-DDEP yield is a transparent proxy for the securities yield.",
-      "weights": { "tbill_364d_pct": 0.5, "govt_bond_yield_pct": 0.5 }
+      "method": "Securities yield starts at the FY2025 note-8 IMPLIED yield on the amortised-cost (unpledged + pledged) securities book and reprises only PARTIALLY toward the shared 364-day T-bill rate (proportional pass-through beta, see model.py Y25_IMPL/PASSTHRU). FVTPL securities are EXCLUDED (their return is in the net FVTPL line).",
+      "reason": "The Bank's amortised-cost securities book is largely held to maturity, so its yield is locked near its purchase level; full pass-through to the current bill rate would be unrealistic. The FY2025 implied securities yield and the partial-repricing betas are shown in checks.md.",
+      "passthru_beta": 0.5
     },
     "loan_yield": {
       "status": "estimated",
-      "method": "Shared policy rate plus a scenario spread in percentage points.",
-      "reason": "Bank FY2025 interest income 1,246.642m on average interest-earning assets is consistent with a loans yield above the policy rate. The spread is an analyst stress assumption aligned with peers' models, not a reconciled loan-specific yield.",
-      "base": 8,
-      "downside": 6,
-      "upside": 10
+      "method": "Loan yield starts at the FY2025 note-8 IMPLIED yield on average gross loans and reprises only PARTIALLY toward the shared policy rate (proportional pass-through beta, see model.py Y25_IMPL/PASSTHRU).",
+      "reason": "The FY2025 note-8 interest income on loans (506.986m) on average gross loans of ~3,477m implies an effective loan yield of about 14.6%, well below the 18% policy rate and the 22.22% average lending rate; much of the book is fixed/slow-repricing, so the model anchors on that implied level and reprises only partially as the policy rate falls. The implied level, the pass-through beta and the resulting path are shown in checks.md.",
+      "passthru_beta": 0.6
     },
     "cash_yield_factor": {
       "status": "estimated",
-      "method": "Cash and BoG balances yield = shared policy rate multiplied by this factor; effective blended yield, not a quoted reserve rate.",
-      "reason": "The Bank holds a very large cash and BoG balance (6,033.188m at FY2025, 45-50% of assets) that earns a low yield relative to the policy rate.",
-      "base": 0.3,
-      "downside": 0.34,
-      "upside": 0.26
+      "method": "Cash and BoG balances yield starts at the FY2025 note-8 IMPLIED cash yield and reprises only PARTIALLY toward the shared policy rate (proportional pass-through beta). The earning cash base EXCLUDES the CRR-proxy reserve (non-earning).",
+      "reason": "The Bank holds a very large cash and BoG balance (6,033.188m at FY2025, 45-50% of assets) that earns a low yield relative to the policy rate; the FY2025 implied cash yield anchors the path.",
+      "passthru_beta": 0.5
     },
     "cost_of_funds": {
       "status": "estimated",
-      "method": "Interest-bearing funding cost = shared policy rate multiplied by this factor; applied to average customer deposits, due to banks and borrowings; effective blended cost, not a quoted deposit rate.",
-      "reason": "FY2025 interest expense 538.132m against average FY2024-FY2025 deposits plus borrowings of roughly 9,154m is about 5.9%, and the policy rate was 18%; the factor is about 0.33. 9M-2026 annualises to a similar level.",
-      "base": 0.32,
-      "downside": 0.36,
-      "upside": 0.26
+      "method": "Split funding cost. Customer deposits and wholesale funding (due to banks + borrowings + bonds) are priced SEPARATELY: each starts at its FY2025 note-9 IMPLIED cost and reprises only PARTIALLY toward the shared policy rate (proportional pass-through beta, see model.py Y25_IMPL/PASSTHRU). The blended x_cost_of_funds_pct is the balance-weighted average for reporting only.",
+      "reason": "FY2025 note-9 (printed p.106) splits interest expense into deposits from banks 3.683m, customer deposits 227.208m, debt securities 18.376m, borrowed funds 288.265m and lease 0.600m (total 538.132m). Borrowed funds alone are 288.265m and grew from 214.897m in FY2024, so a single blended factor hides materially cheaper customer deposits against much more expensive wholesale funding. The split matters because the Bank has shifted toward wholesale funding (borrowings 2,767.292m at 9M-2026 vs 2,091.662m at FY2025). Wholesale repricing is a sensitivity via the policy-rate pass-through on the note-9 wholesale factor.",
+      "deposit_passthru_beta": 0.5,
+      "wholesale_passthru_beta": 0.6
     },
     "fee_growth": {
       "status": "estimated",
@@ -114,8 +109,8 @@
     },
     "statutory_reserve_transfer_pct": {
       "status": "estimated",
-      "method": "Annual transfer from retained earnings (income surplus) to the statutory reserve fund, as a share of positive PAT. An internal equity transfer, so total equity and regulatory capital are unaffected; it caps distributable retained earnings for dividends.",
-      "reason": "Source-confirmed 25% of positive PAT: FY2024 transfer 46.926m (286.926/187.702) and FY2025 transfer 63.648m (288.101/254.590) from the statement of changes in equity. The Bank also tops up the regulatory credit risk reserve (10.743m FY2025, 18.500m FY2024); that smaller top-up is not separately modelled. The observed 9M-2026 reserves already include the FY2025 transfers, so the model adds only the Q4 transfer in the anchor year.",
+      "method": "Annual transfer from retained earnings (income surplus) to the statutory reserve fund, as a share of positive PAT. An internal equity transfer, so total equity and regulatory capital are unaffected; it caps distributable retained earnings for dividends. The statutory FUND is tracked separately (x_statutory_reserve_fund_fc) so the Act 930 s34 threshold can be tested; the Act 930 s34 band (a function of statutory fund / paid-up capital) is reported as x_statutory_band_transfer / x_statutory_band_pct, a sensitivity.",
+      "reason": "Source-confirmed 25% of positive PAT: FY2024 transfer 46.926m and FY2025 transfer 63.648m (statement of changes in equity). The FY2025 closing statutory fund was 368.101m and stated capital 401.191m, so the fund is BELOW stated capital; under Bank of Ghana practice (Act 930 s34; the Bank's own policy note, printed p.139) the transfer is 50% while the fund is below 25% of paid-up capital, 37.5% at 25-50%, 25% at 50-75% and 12.5% at 75%+. The Bank actually APPLIED 25% in both FY2024 and FY2025. The base case therefore keeps a CONSERVATIVE 25% policy, explicitly LABELLED as a policy choice and NOT a statutory requirement; the Act 930 s34 band is supplied as a sensitivity. The observed 9M-2026 statutory fund equals the FY2025 closing 368.101m (no transfer in the nine months), so the anchor year adds only the transfer on estimated positive Q4 PAT; the full-year 2026 statutory movement is genuinely unavailable and is not invented.",
       "base": 25,
       "downside": 25,
       "upside": 25
@@ -137,8 +132,8 @@
     },
     "fx": {
       "status": "estimated",
-      "method": "The Bank reports revaluation and foreign-exchange movements inside other income, pensions and other comprehensive income but does not disclose a separate net monetary FX position in the summary statements used, so no incremental FX translation P&L is modelled; the balance sheet is not revalued by currency. Flagged rather than guessed.",
-      "reason": "Avoid inventing a currency split that is not in the sources. The Bank's statements of cash flows record exchange differences of 13.306m (9M-2026) and 41.574m (9M-2025)."
+      "method": "The Bank reports a net on-balance-sheet FX position (RB25AR printed p.180) and a 10% currency-move sensitivity (p.182), but the model keeps a central NO-FX-REVALUATION assumption: the balance sheet is not revalued by currency and no incremental FX translation P&L is modelled in the base, downside or upside path. The reported FY2025 exposure and the bounded 10% sensitivity are carried as reference data (x_fx_net_on_bs_eur/usd/gbp and x_fx_sens_pl_*/x_fx_sens_equity_*) and discussed in checks.md, not folded into the forecast.",
+      "reason": "Not inventing a currency split in the forecast, but not claiming disclosure is absent either. FY2025 bank net on-balance-sheet exposure: EUR -1.262m, USD -14.593m, GBP -1.555m (FY2024 comparatives +0.166m/+16.388m/+1.392m). A 10% move is about -0.126m/-1.437m/-0.156m P&L (total -1.719m if jointly applied) and -0.082m/-0.934m/-0.101m equity (total -1.117m) on the FY2025 position, immaterial against model PAT; the interim currency split is unknown, so the sensitivity is a bounded FY2025 reference only."
     },
     "cash_reserve": {
       "status": "estimated",
@@ -146,7 +141,7 @@
     },
     "model_structure": {
       "status": "estimated",
-      "method": "Hold non-core balance sheet lines proportional to deposit growth, except property/other assets grow with opex; stated capital and other reserves held constant; securities follow deposit growth; cash balances plug the accounting identity, flagging negative balances or a reserve shortfall without automatically borrowing. RWA = gross loans + FY2025 calibrated residual risk intensity x (total assets minus gross loans). Q3 regulatory capital anchored on reported CAR x estimated RWA; Tier 1 capital anchored using the FY2025 Tier 1 / total regulatory capital relationship. Retained profit increments regulatory capital; dividends constrained to pre-dividend cash and the CAR buffer. Report a proxy, not a regulatory return.",
+      "method": "Hold non-core balance sheet lines proportional to deposit growth, except property/other assets grow with opex; stated capital and other reserves held constant; securities follow deposit growth; cash balances plug the accounting identity, flagging negative balances or a reserve shortfall without automatically borrowing. Earning base: loans at GROSS carrying amount, amortised-cost securities = unpledged amortised-cost investment securities (note 21c) PLUS pledged assets (note 20, amortised-cost financial assets), and EARNING cash (cash and BoG balances less a CRR-proxy reserve). FVTPL securities are EXCLUDED from the amortised-cost yield (their return sits in the net FVTPL line). Securities/cash yields and deposit/wholesale costs are calibrated from the FY2025 note-8/note-9 split (RB25AR printed pp.106); loans keep the forward policy-plus-spread driver. RWA = gross loans + FY2025 calibrated residual risk intensity x (total assets minus gross loans). Q3 regulatory capital anchored on reported CAR x estimated RWA; Tier 1 capital anchored using the FY2025 Tier 1 / total regulatory capital relationship. Retained profit increments regulatory capital; dividends constrained to pre-dividend cash and the CAR buffer. Report a proxy, not a regulatory return.",
       "q4_cost_multiplier": { "base": 1, "downside": 1.1, "upside": 1 },
       "q4_funding_multiplier": { "base": 1, "downside": 1.25, "upside": 0.9 },
       "fee_expense_ratio_multiplier": { "base": 1, "downside": 1.1, "upside": 0.95 },
@@ -162,7 +157,9 @@
     "The Bank (separate) column is used throughout. The narrative 'NET PROFIT' and 5-year-highlight tables in the annual reports carry BOTH a Bank and a Group column; only the Bank column is used here, never the Group.",
     "2026 income must retain reported 9M results plus separately estimated Q4; model checks must flag any liquidity or capital shortfall.",
     "Shared macro v1 numeric paths are used; canonical macro fingerprint b3c4412d681469e8d974e0c067af8e28435f5669900a9f1b4c54b0178992b8df. Regulatory minimum CAR of 13.0% and CRR of 20% are taken from the shared macro file.",
-    "Republic Bank (Ghana) PLC is a Bank (separate) model; Group/consolidated figures are never mixed in."
+    "Republic Bank (Ghana) PLC is a Bank (separate) model; Group/consolidated figures are never mixed in.",
+    "Note-9 inconsistency: the note prints a net-interest-income subtotal (693.096m FY2025 bank) that disagrees with the face income statement (708.510m). The face statement is used; the note-9 interest-income (1,246.642m) and interest-expense (538.132m) components reconcile to the face figure. Disclosed in checks.md.",
+    "The FY2025 ICAAP forward (2026) CAR of 18.11% and the model's FY2026E base CAR proxy are compared in checks.md and are NOT forced to agree: they use different methodologies and dates."
   ],
   "macro_snapshot": {
     "path": "../../sector/macro-assumptions/macro.csv",

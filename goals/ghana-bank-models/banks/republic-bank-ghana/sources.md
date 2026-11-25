@@ -5,12 +5,12 @@ Scope: **standalone Bank** (separate financial statements), 31 December fiscal y
 | source_id | title | publisher | URL | period covered | retrieved |
 | --- | --- | --- | --- | --- | --- |
 | RB21FS | 2021 Audited Financial Statements (RBGH 2021 v7 FINAL FS) | Republic Bank (Ghana) PLC | https://www.republicghana.com/wp-content/uploads/2022/04/RBGH-2021-v7-FINAL-FS-04-04-22.pdf | FY2021 (with FY2020 comparatives) | 2026-11-25 |
-| RB23AR | 2022/2023 Annual Report (bank + group statements) | Republic Bank (Ghana) PLC | https://www.republicghana.com/ | FY2023 (with FY2022 comparatives) | 2026-11-25 |
-| RB24AR | 2024 Annual Report and Financial Statements | Republic Bank (Ghana) PLC | https://www.republicghana.com/ | FY2024 (with FY2023 comparatives) | 2026-11-25 |
-| RB24SUM | 2024 audited summary financial statements | Republic Bank (Ghana) PLC | https://www.republicghana.com/ | FY2024/FY2023 summary | 2026-11-25 |
-| RB25AR | RFHL 2025 Annual Report containing Republic Bank (Ghana) PLC 2025 statements | Republic Financial Holdings Limited | https://www.republicghana.com/ | FY2025 (with FY2024 comparatives) | 2026-11-25 |
-| RB26Q3 | Q3 2026 Unaudited Financial Statements | Republic Bank (Ghana) PLC | https://www.republicghana.com/ | 9M-2026 (with 9M-2025 comparatives) | 2026-11-25 |
-| RB26Q2 | Q2 2026 Unaudited Financial Statements | Republic Bank (Ghana) PLC | https://www.republicghana.com/ | H1-2026 (cross-check) | 2026-11-25 |
+| RB23AR | 2022/2023 Annual Report (bank + group statements) | Republic Bank (Ghana) PLC | https://www.republicghana.com/investor-relations/annual-report/ | FY2023 (with FY2022 comparatives) | 2026-11-25 |
+| RB24AR | 2024 Annual Report and Financial Statements | Republic Bank (Ghana) PLC | https://www.republicghana.com/investor-relations/annual-report/ | FY2024 (with FY2023 comparatives) | 2026-11-25 |
+| RB24SUM | 2024 audited summary financial statements | Republic Bank (Ghana) PLC | https://www.republicghana.com/investor-relations/annual-report/ | FY2024/FY2023 summary | 2026-11-25 |
+| RB25AR | 2025 Annual Report and Financial Statements (the Ghana Bank's OWN annual report, bank + group statements) | Republic Bank (Ghana) PLC | https://www.republicghana.com/wp-content/uploads/2026/04/REPUBLIC-BANK-GHANA-ANNUAL-REPORT-2025.pdf | FY2025 (with FY2024 comparatives) | 2026-11-25 |
+| RB26Q3 | Q3 2026 Unaudited Financial Statements (GSE PR-419, dated 27 Oct 2026) | Republic Bank (Ghana) PLC | https://gse.com.gh/financial-statements/ | 9M-2026 (with 9M-2025 comparatives) | 2026-11-25 |
+| RB26Q2 | Q2 2026 Unaudited Financial Statements | Republic Bank (Ghana) PLC | https://gse.com.gh/financial-statements/ | H1-2026 (cross-check) | 2026-11-25 |
 | BOGREG | Register of licensed banks | Bank of Ghana | https://www.bog.gov.gh/supervision-regulation/registered-institutions/banks/ | current register | 2026-11-25 |
 | GSELIST | Republic Bank (Ghana) PLC issuer profile | Ghana Stock Exchange | https://gse.com.gh/ | listing status | 2026-11-25 |
 
@@ -39,7 +39,8 @@ The shared macro file and its regulatory drivers live in `../../sector/macro-ass
 - **Domestic Debt Exchange Programme (2022--2023).** The Bank participated. The FY2022 impairment charge jumped to GHS237.662m (RB23AR p.59), causing a bank loss before tax of -26.105m and a loss after tax of -66.837m; the FY2023 charge fell back to 66.773m. From FY2022 the Bank applied Bank of Ghana DDEP **forbearance** in its capital computation (minimum CAR held at 10%, losses spread over four years, Tier 2 cap raised to 3% of RWA); the reliefs were **withdrawn in December 2025** (RB25AR p.189), so FY2025 CAR is stated without them. No separate DDEP haircut is modelled; the accounting effect flows through the reported impairment and the capital note.
 - **Capital and reserves.** CAR is taken from the audited capital-management note (see page map). The regulatory minimum CAR of 13.0% and the cash reserve ratio of 20% are taken from the shared macro file, which cites the Bank of Ghana notices; they are not re-derived here.
 - **Levies and special taxes.** The growth & sustainability levy and the financial sector recovery levy are reported separately (see the income tax fork above) and are kept as `x_` memos.
-- **Cedi depreciation.** The Bank reports exchange differences inside its cash-flow statement (13.306m in 9M-2026, 41.574m in 9M-2025) but does not disclose a separate net monetary FX position in the summary statements used, so **no FX revaluation is modelled** (see `assumptions.json` driver `fx`). Flagged rather than guessed.
+- **Cedi depreciation.** The Bank reports exchange differences inside its cash-flow statement (13.306m in 9M-2026, 41.574m in 9M-2025). Its FY2025 report also discloses the net on-balance-sheet FX exposure (p.180: EUR -1.262m, USD -14.593m, GBP -1.555m) and a 10% currency-move sensitivity (p.182: P&L -0.126m/-1.437m/-0.156m, equity -0.082m/-0.934m/-0.101m), recorded here as reference data with a bounded sensitivity. The **central** case still keeps a no-FX-revaluation assumption because the interim FX split is not disclosed; the reference sensitivity is immaterial against model PAT. Flagged rather than guessed.
+- **Note 9 printed NII subtotal.** Note 9 (effective-interest interest expense) prints a net-interest-income subtotal of 693.096m that does not equal the face income-statement NII of 708.510m; the note's components (interest income 1,246.642m less interest expense 538.132m) tie to the face figure, so the face statement is used and the printed subtotal inconsistency is disclosed (see `checks.md`).
 
 ## Known gaps / follow-ups
 

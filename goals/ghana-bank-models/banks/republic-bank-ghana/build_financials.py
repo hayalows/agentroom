@@ -137,6 +137,37 @@ LOANS = {
  "9M-2025": dict(src=None, pg="", gross=None, allow=None),
 }
 
+# --------------------------------------------------- interest-income / funding split (BANK)
+# Note 8 (interest income by earning asset) and note 9 (interest expense by funding source),
+# kept as NONADDITIVE x_ memos for the earning-base / funding calibration and back-test.
+# GHS thousands. Available from the 2024 and 2025 annual reports (FY2023-FY2025); not disclosed
+# in the 2021 statements or the interim summary.
+ISPLIT = {
+ "FY2023": dict(src="RB24AR", pg="102", cash=250267, loans=451685, inv=245260,
+   dep_banks=10603, dep_cust=380627, debt_sec=18198, borrowed=4055, lease=2124, other=4979),
+ "FY2024": dict(src="RB24AR", pg="102", cash=283045, loans=564598, inv=318682,
+   dep_banks=5300, dep_cust=314579, debt_sec=18376, borrowed=214897, lease=2946, other=0),
+ "FY2025": dict(src="RB25AR", pg="106", cash=404318, loans=506986, inv=335338,
+   dep_banks=3683, dep_cust=227208, debt_sec=18376, borrowed=288265, lease=600, other=0),
+}
+
+# Investment securities at FVTPL (note 21b); excluded from the amortised-cost securities yield.
+# GHS thousands. (value, source_id, printed page). FY2021/FY2022 not split out in the 2021
+# statements (the FY2022 comparative 11,185 is labelled FVOCI, not FVTPL), so they are left out.
+FVTPL = {
+ "FY2023": (48934, "RB24AR", "109"),
+ "FY2024": (52647, "RB24AR", "109"),
+ "FY2025": (72717, "RB25AR", "113"),
+}
+
+# Investment securities measured at amortised cost (note 21c, BANK column); the earning asset
+# behind the note-8 "Investment securities at amortised cost" interest income. GHS thousands.
+# Only FY2024 and FY2025 are disclosed on the same basis used for the earning-base calibration.
+AMCOST = {
+ "FY2024": (1538879, "RB25AR", "114"),
+ "FY2025": (178894, "RB25AR", "114"),
+}
+
 # ---------------------------------------------------------------- reported ratios
 RATIO = {
  "FY2021": dict(src="RB21FS", pg="151", car=27.63, car_note="Capital adequacy ratio 27.63% at 31 Dec 2021 per the audited capital-management note (printed p.151); Tier 1/RWA 25.63%.", npl=15.32, npl_pg="94"),
@@ -266,6 +297,74 @@ for p in PERIODS:
     add(p, "balance_sheet", "loan_loss_allowance", l["allow"], "GHS millions", l["src"], l["pg"],
         "reported" if l["allow"] is not None else "unavailable",
         BANKONLY + (" ECL allowance on loans and advances (loans note 22c); positive balance." if l["allow"] is not None else " Not disclosed in the interim summary."))
+
+    # Statutory reserve fund tracked separately (Act 930 s34 bands apply while it is below stated
+    # capital). Memo only; already inside canonical reserves_other, so do not add again.
+    add(p, "balance_sheet", "x_statutory_reserve_fund", b["statres"], "GHS millions", b["src"], b["pg"], "reported",
+        BANKONLY + " Statutory reserve fund, tracked separately so the Act 930 s34 transfer threshold (fund below stated capital) can be tested. Memo only; already inside reserves_other.")
+    fv = FVTPL.get(p)
+    add(p, "balance_sheet", "x_investment_securities_fvtpl", fv[0] if fv else None,
+        "GHS millions", (fv[1] if fv else b["src"]), (fv[2] if fv else b["pg"]),
+        "reported" if fv else "unavailable",
+        BANKONLY + (" Investment securities at fair value through P&L (note 21b), excluded from the amortised-cost securities yield. Memo only; already inside investment_securities."
+                    if fv else " Investment securities at FVTPL not split out in this period's statements."))
+    add(p, "balance_sheet", "x_bonds", b["bonds"], "GHS millions", b["src"], b["pg"],
+        "reported" if b["bonds"] else "reported",
+        BANKONLY + " Bonds issued (part of the wholesale funding base). Memo only; already inside other_liabilities.")
+    amc = AMCOST.get(p)
+    add(p, "balance_sheet", "x_investment_amortised_cost", amc[0] if amc else None,
+        "GHS millions", (amc[1] if amc else b["src"]), (amc[2] if amc else b["pg"]),
+        "reported" if amc else "unavailable",
+        BANKONLY + (" Unpledged investment securities measured at amortised cost (note 21c), the earning asset behind note-8 investment-securities interest income. Memo only; already inside investment_securities. Pledged amortised-cost securities sit in x_pledged_assets."
+                    if amc else " Amortised-cost security split not disclosed on this basis in this period's statements."))
+
+    # Note 8 / note 9 earning and funding splits (nonadditive memos).
+    sp = ISPLIT.get(p)
+    if sp:
+        for key, item in [("cash", "x_interest_income_cash"), ("loans", "x_interest_income_loans"),
+                          ("inv", "x_interest_income_investment_securities")]:
+            add(p, "income_statement", item, sp[key], "GHS millions", sp["src"], sp["pg"], "reported",
+                BANKONLY + " Interest income by earning asset, note 8 (effective-interest method). Memo only; the components sum to the face interest income.")
+        for key, item in [("dep_banks", "x_interest_expense_deposits_from_banks"),
+                          ("dep_cust", "x_interest_expense_deposits_from_customers"),
+                          ("debt_sec", "x_interest_expense_debt_securities"),
+                          ("borrowed", "x_interest_expense_borrowed_funds"),
+                          ("lease", "x_interest_expense_lease_liabilities"),
+                          ("other", "x_interest_expense_other")]:
+            add(p, "income_statement", item, sp.get(key), "GHS millions", sp["src"], sp["pg"], "reported",
+                BANKONLY + " Interest expense by funding source, note 9 (effective-interest method). Memo only; the components sum to the face interest expense.")
+    else:
+        for item in ["x_interest_income_cash", "x_interest_income_loans", "x_interest_income_investment_securities",
+                     "x_interest_expense_deposits_from_banks", "x_interest_expense_deposits_from_customers",
+                     "x_interest_expense_debt_securities", "x_interest_expense_borrowed_funds", "x_interest_expense_lease_liabilities",
+                     "x_interest_expense_other"]:
+            add(p, "income_statement", item, None, "GHS millions", INC[p]["src"], INC[p]["pg"], "unavailable",
+                "Note 8 / note 9 earning/funding split not disclosed in this period's statements (FY2021/FY2022 statements and the interim summary omit it).")
+
+    # Foreign-currency net on-balance-sheet exposure and 10% currency-move sensitivity (bank).
+    # RB25AR printed pp.179-181 (FY2025) and the FY2024 comparative. GHS thousands.
+    if p == "FY2025":
+        for cur, net, pl, eq in [("eur", -1262, -126, -82), ("usd", -14593, -1437, -934), ("gbp", -1555, -156, -101)]:
+            add(p, "balance_sheet", "x_fx_net_on_bs_" + cur, net, "GHS millions", "RB25AR", "180", "reported",
+                BANKONLY + " Net on-balance-sheet foreign-currency exposure at 31 Dec 2025 (financial-position currency note); negative = net liability position.")
+            add(p, "income_statement", "x_fx_sens_pl_" + cur, pl, "GHS millions", "RB25AR", "182", "reported",
+                BANKONLY + " Reported impact on profit or loss of a 10% change in the currency, FY2025 (sensitivity note).")
+            add(p, "balance_sheet", "x_fx_sens_equity_" + cur, eq, "GHS millions", "RB25AR", "182", "reported",
+                BANKONLY + " Reported impact on equity of a 10% change in the currency, FY2025 (sensitivity note).")
+    elif p == "FY2024":
+        for cur, net in [("eur", 166), ("usd", 16388), ("gbp", 1392)]:
+            add(p, "balance_sheet", "x_fx_net_on_bs_" + cur, net, "GHS millions", "RB25AR", "180", "reported",
+                BANKONLY + " Net on-balance-sheet foreign-currency exposure at 31 Dec 2024 (FY2025 report comparative); positive = net asset position.")
+
+    if p == "FY2025":
+        add(p, "income_statement", "x_note9_printed_nii", 693096, "GHS millions", "RB25AR", "106", "reported",
+            BANKONLY + " Note 9 (effective-interest interest expense) prints a net-interest-income subtotal of 693.096m that does NOT equal the face income-statement NII of 708.510m. The face statement is used; the note components (interest income 1,246.642m less interest expense 538.132m = 708.510m) reconcile to the face figure, so the note's 693.096m subtotal is a printing inconsistency disclosed here.")
+        add(p, "ratios", "x_icaap_2026_car_pct", 18.11, "percent", "RB25AR", "190", "reported",
+            "Bank's own ICAAP forward (2026) capital-adequacy estimate 18.11% (regulated capital 1,049.935m / RWA 5,798.105m), printed in the FY2025 report. A dated internal projection, not a forecast anchor.")
+        add(p, "balance_sheet", "x_icaap_2026_capital", 1049935, "GHS millions", "RB25AR", "190", "reported",
+            BANKONLY + " ICAAP forward (2026) total regulatory capital 1,049.935m.")
+        add(p, "balance_sheet", "x_icaap_2026_rwa", 5798105, "GHS millions", "RB25AR", "190", "reported",
+            BANKONLY + " ICAAP forward (2026) risk-weighted assets 5,798.105m.")
 
     if p == "9M-2026":
         add(p, "balance_sheet", "x_ytd_dividends", 42598, "GHS millions", "RB26Q3", "1", "reported",
