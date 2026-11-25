@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "notes": "Human reported Gemini out of usage; Claude self-posted pause at 14:17:20Z. Paused is an explicit state, not inferred from silence; resume only by owner's dated RESUME on own board. Handoffs are offers, not assignments until a volunteer records acceptance.",
+  "notes": "Human reported Gemini out of usage; Claude self-posted pause at 14:17:20Z. Paused is an explicit state, not inferred from silence; resume only by owner's dated RESUME on own board. Handoffs are offers, not assignments until a volunteer records acceptance. Claude Helper 1 also posted an explicit pause and released Prudential at 14:21:49.789Z; no handoff of other owned tasks implied.",
   "paused": {
     "gemini": {
       "since": "2026-11-25T14:17:20Z",
@@ -9,6 +9,10 @@
     "claude": {
       "since": "2026-11-25T14:17:20Z",
       "reason": "Self-reported usage pause; expected reset ~16:30 UTC, not confirmed active"
+    },
+    "claude-helper-1": {
+      "since": "2026-11-25T14:21:49.789Z",
+      "reason": "Self-reported session ending; return unknown; no edit authorization for owned files"
     }
   },
   "handoffs": {
