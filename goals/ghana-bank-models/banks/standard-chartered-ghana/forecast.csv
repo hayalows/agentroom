@@ -1,0 +1,541 @@
+bank,scenario,period,statement,line_item,value,unit,status,notes
+standard-chartered-ghana,base,FY2026E,income_statement,interest_income,830.915,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
+standard-chartered-ghana,base,FY2026E,income_statement,interest_expense,109.264,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
+standard-chartered-ghana,base,FY2026E,income_statement,net_interest_income,721.651,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
+standard-chartered-ghana,base,FY2026E,income_statement,fee_commission_income,278.239,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
+standard-chartered-ghana,base,FY2026E,income_statement,fee_commission_expense,67.465,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
+standard-chartered-ghana,base,FY2026E,income_statement,net_trading_income,568.275,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
+standard-chartered-ghana,base,FY2026E,income_statement,other_operating_income,21.672,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
+standard-chartered-ghana,base,FY2026E,income_statement,total_operating_income,1522.371,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
+standard-chartered-ghana,base,FY2026E,income_statement,staff_costs,606.379,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
+standard-chartered-ghana,base,FY2026E,income_statement,depreciation_amortisation,39.324,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
+standard-chartered-ghana,base,FY2026E,income_statement,other_operating_expenses,235.636,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
+standard-chartered-ghana,base,FY2026E,income_statement,impairment_charge,-73.963,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
+standard-chartered-ghana,base,FY2026E,income_statement,profit_before_tax,714.995,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
+standard-chartered-ghana,base,FY2026E,income_statement,income_tax,243.098,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
+standard-chartered-ghana,base,FY2026E,income_statement,profit_after_tax,471.897,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
+standard-chartered-ghana,base,FY2026E,income_statement,x_dividends_paid,673.482,GHS millions,estimated,Dividends paid in the year. FY2026E is the 673.482m actually paid in 9M-2026.
+standard-chartered-ghana,base,FY2026E,balance_sheet,cash_and_bog_balances,2996.459,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
+standard-chartered-ghana,base,FY2026E,balance_sheet,due_from_banks,4698.653,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit. Due from banks and securities are the plug (liquid assets) split at the 30 Sep 2026 mix.
+standard-chartered-ghana,base,FY2026E,balance_sheet,investment_securities,2843.326,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit. Due from banks and securities are the plug (liquid assets) split at the 30 Sep 2026 mix.
+standard-chartered-ghana,base,FY2026E,balance_sheet,loans_and_advances_net,2538.490,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
+standard-chartered-ghana,base,FY2026E,balance_sheet,property_equipment_intangibles,178.973,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
+standard-chartered-ghana,base,FY2026E,balance_sheet,other_assets,1483.949,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
+standard-chartered-ghana,base,FY2026E,balance_sheet,total_assets,14739.851,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
+standard-chartered-ghana,base,FY2026E,balance_sheet,customer_deposits,10477.131,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
+standard-chartered-ghana,base,FY2026E,balance_sheet,due_to_banks,305.643,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
+standard-chartered-ghana,base,FY2026E,balance_sheet,other_liabilities,1364.674,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
+standard-chartered-ghana,base,FY2026E,balance_sheet,total_liabilities,12147.448,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
+standard-chartered-ghana,base,FY2026E,balance_sheet,stated_capital,400.000,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
+standard-chartered-ghana,base,FY2026E,balance_sheet,retained_earnings,1265.328,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
+standard-chartered-ghana,base,FY2026E,balance_sheet,reserves_other,927.074,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
+standard-chartered-ghana,base,FY2026E,balance_sheet,total_equity,2592.403,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
+standard-chartered-ghana,base,FY2026E,balance_sheet,borrowings,0.000,GHS millions,estimated,None assumed.
+standard-chartered-ghana,base,FY2026E,ratios,x_car_proxy_pct,23.994,percent,estimated,"PROXY, not the regulatory ratio: book equity / (risk-weight density x total assets). Density is the 30 Sep 2026 implied value."
+standard-chartered-ghana,base,FY2026E,ratios,x_roe_pct,17.470,percent,estimated,Profit after tax / average of opening and closing equity.
+standard-chartered-ghana,base,FY2026E,ratios,x_cost_to_income_pct,57.893,percent,estimated,Operating expenses / operating income before impairment.
+standard-chartered-ghana,base,FY2026E,ratios,x_ldr_pct,24.229,percent,estimated,Net loans / customer deposits.
+standard-chartered-ghana,base,FY2027E,income_statement,interest_income,902.710,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,base,FY2027E,income_statement,interest_expense,80.740,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,base,FY2027E,income_statement,net_interest_income,821.970,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,base,FY2027E,income_statement,fee_commission_income,304.671,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,base,FY2027E,income_statement,fee_commission_expense,67.028,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,base,FY2027E,income_statement,net_trading_income,511.447,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,base,FY2027E,income_statement,other_operating_income,21.672,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,base,FY2027E,income_statement,total_operating_income,1592.733,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,base,FY2027E,income_statement,staff_costs,670.048,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,base,FY2027E,income_statement,depreciation_amortisation,42.273,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,base,FY2027E,income_statement,other_operating_expenses,258.021,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,base,FY2027E,income_statement,impairment_charge,14.279,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,base,FY2027E,income_statement,profit_before_tax,608.111,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,base,FY2027E,income_statement,income_tax,206.758,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,base,FY2027E,income_statement,profit_after_tax,401.353,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,base,FY2027E,income_statement,x_dividends_paid,330.328,GHS millions,estimated,Dividends paid in the year. FY2026E is the 673.482m actually paid in 9M-2026.
+standard-chartered-ghana,base,FY2027E,balance_sheet,cash_and_bog_balances,3382.254,GHS millions,estimated,Estimate.
+standard-chartered-ghana,base,FY2027E,balance_sheet,due_from_banks,4966.509,GHS millions,estimated,Estimate. Due from banks and securities are the plug (liquid assets) split at the 30 Sep 2026 mix.
+standard-chartered-ghana,base,FY2027E,balance_sheet,investment_securities,3005.415,GHS millions,estimated,Estimate. Due from banks and securities are the plug (liquid assets) split at the 30 Sep 2026 mix.
+standard-chartered-ghana,base,FY2027E,balance_sheet,loans_and_advances_net,3173.112,GHS millions,estimated,Estimate.
+standard-chartered-ghana,base,FY2027E,balance_sheet,property_equipment_intangibles,178.973,GHS millions,estimated,Estimate.
+standard-chartered-ghana,base,FY2027E,balance_sheet,other_assets,1595.245,GHS millions,estimated,Estimate.
+standard-chartered-ghana,base,FY2027E,balance_sheet,total_assets,16301.509,GHS millions,estimated,Estimate.
+standard-chartered-ghana,base,FY2027E,balance_sheet,customer_deposits,11826.062,GHS millions,estimated,Estimate.
+standard-chartered-ghana,base,FY2027E,balance_sheet,due_to_banks,344.995,GHS millions,estimated,Estimate.
+standard-chartered-ghana,base,FY2027E,balance_sheet,other_liabilities,1467.025,GHS millions,estimated,Estimate.
+standard-chartered-ghana,base,FY2027E,balance_sheet,total_liabilities,13638.081,GHS millions,estimated,Estimate.
+standard-chartered-ghana,base,FY2027E,balance_sheet,stated_capital,400.000,GHS millions,estimated,Estimate.
+standard-chartered-ghana,base,FY2027E,balance_sheet,retained_earnings,1286.184,GHS millions,estimated,Estimate.
+standard-chartered-ghana,base,FY2027E,balance_sheet,reserves_other,977.243,GHS millions,estimated,Estimate.
+standard-chartered-ghana,base,FY2027E,balance_sheet,total_equity,2663.428,GHS millions,estimated,Estimate.
+standard-chartered-ghana,base,FY2027E,balance_sheet,borrowings,0.000,GHS millions,estimated,None assumed.
+standard-chartered-ghana,base,FY2027E,ratios,x_car_proxy_pct,22.290,percent,estimated,"PROXY, not the regulatory ratio: book equity / (risk-weight density x total assets). Density is the 30 Sep 2026 implied value."
+standard-chartered-ghana,base,FY2027E,ratios,x_roe_pct,15.273,percent,estimated,Profit after tax / average of opening and closing equity.
+standard-chartered-ghana,base,FY2027E,ratios,x_cost_to_income_pct,60.923,percent,estimated,Operating expenses / operating income before impairment.
+standard-chartered-ghana,base,FY2027E,ratios,x_ldr_pct,26.832,percent,estimated,Net loans / customer deposits.
+standard-chartered-ghana,base,FY2028E,income_statement,interest_income,1107.022,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,base,FY2028E,income_statement,interest_expense,84.834,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,base,FY2028E,income_statement,net_interest_income,1022.188,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,base,FY2028E,income_statement,fee_commission_income,335.138,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,base,FY2028E,income_statement,fee_commission_expense,73.730,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,base,FY2028E,income_statement,net_trading_income,460.302,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,base,FY2028E,income_statement,other_operating_income,21.672,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,base,FY2028E,income_statement,total_operating_income,1765.570,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,base,FY2028E,income_statement,staff_costs,743.754,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,base,FY2028E,income_statement,depreciation_amortisation,45.655,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,base,FY2028E,income_statement,other_operating_expenses,283.824,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,base,FY2028E,income_statement,impairment_charge,17.452,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,base,FY2028E,income_statement,profit_before_tax,674.886,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,base,FY2028E,income_statement,income_tax,229.461,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,base,FY2028E,income_statement,profit_after_tax,445.425,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,base,FY2028E,income_statement,x_dividends_paid,280.947,GHS millions,estimated,Dividends paid in the year. FY2026E is the 673.482m actually paid in 9M-2026.
+standard-chartered-ghana,base,FY2028E,balance_sheet,cash_and_bog_balances,3835.476,GHS millions,estimated,Estimate.
+standard-chartered-ghana,base,FY2028E,balance_sheet,due_from_banks,5400.925,GHS millions,estimated,Estimate. Due from banks and securities are the plug (liquid assets) split at the 30 Sep 2026 mix.
+standard-chartered-ghana,base,FY2028E,balance_sheet,investment_securities,3268.296,GHS millions,estimated,Estimate. Due from banks and securities are the plug (liquid assets) split at the 30 Sep 2026 mix.
+standard-chartered-ghana,base,FY2028E,balance_sheet,loans_and_advances_net,3807.735,GHS millions,estimated,Estimate.
+standard-chartered-ghana,base,FY2028E,balance_sheet,property_equipment_intangibles,178.973,GHS millions,estimated,Estimate.
+standard-chartered-ghana,base,FY2028E,balance_sheet,other_assets,1722.865,GHS millions,estimated,Estimate.
+standard-chartered-ghana,base,FY2028E,balance_sheet,total_assets,18214.270,GHS millions,estimated,Estimate.
+standard-chartered-ghana,base,FY2028E,balance_sheet,customer_deposits,13410.754,GHS millions,estimated,Estimate.
+standard-chartered-ghana,base,FY2028E,balance_sheet,due_to_banks,391.224,GHS millions,estimated,Estimate.
+standard-chartered-ghana,base,FY2028E,balance_sheet,other_liabilities,1584.387,GHS millions,estimated,Estimate.
+standard-chartered-ghana,base,FY2028E,balance_sheet,total_liabilities,15386.364,GHS millions,estimated,Estimate.
+standard-chartered-ghana,base,FY2028E,balance_sheet,stated_capital,400.000,GHS millions,estimated,Estimate.
+standard-chartered-ghana,base,FY2028E,balance_sheet,retained_earnings,1394.984,GHS millions,estimated,Estimate.
+standard-chartered-ghana,base,FY2028E,balance_sheet,reserves_other,1032.922,GHS millions,estimated,Estimate.
+standard-chartered-ghana,base,FY2028E,balance_sheet,total_equity,2827.906,GHS millions,estimated,Estimate.
+standard-chartered-ghana,base,FY2028E,balance_sheet,borrowings,0.000,GHS millions,estimated,None assumed.
+standard-chartered-ghana,base,FY2028E,ratios,x_car_proxy_pct,21.181,percent,estimated,"PROXY, not the regulatory ratio: book equity / (risk-weight density x total assets). Density is the 30 Sep 2026 implied value."
+standard-chartered-ghana,base,FY2028E,ratios,x_roe_pct,16.223,percent,estimated,Profit after tax / average of opening and closing equity.
+standard-chartered-ghana,base,FY2028E,ratios,x_cost_to_income_pct,60.787,percent,estimated,Operating expenses / operating income before impairment.
+standard-chartered-ghana,base,FY2028E,ratios,x_ldr_pct,28.393,percent,estimated,Net loans / customer deposits.
+standard-chartered-ghana,base,FY2029E,income_statement,interest_income,1316.204,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,base,FY2029E,income_statement,interest_expense,91.176,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,base,FY2029E,income_statement,net_interest_income,1225.028,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,base,FY2029E,income_statement,fee_commission_income,368.652,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,base,FY2029E,income_statement,fee_commission_expense,81.104,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,base,FY2029E,income_statement,net_trading_income,414.272,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,base,FY2029E,income_statement,other_operating_income,21.672,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,base,FY2029E,income_statement,total_operating_income,1948.521,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,base,FY2029E,income_statement,staff_costs,825.567,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,base,FY2029E,income_statement,depreciation_amortisation,49.308,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,base,FY2029E,income_statement,other_operating_expenses,312.206,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,base,FY2029E,income_statement,impairment_charge,20.467,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,base,FY2029E,income_statement,profit_before_tax,740.974,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,base,FY2029E,income_statement,income_tax,251.931,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,base,FY2029E,income_statement,profit_after_tax,489.043,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,base,FY2029E,income_statement,x_dividends_paid,311.797,GHS millions,estimated,Dividends paid in the year. FY2026E is the 673.482m actually paid in 9M-2026.
+standard-chartered-ghana,base,FY2029E,balance_sheet,cash_and_bog_balances,4341.145,GHS millions,estimated,Estimate.
+standard-chartered-ghana,base,FY2029E,balance_sheet,due_from_banks,5967.226,GHS millions,estimated,Estimate. Due from banks and securities are the plug (liquid assets) split at the 30 Sep 2026 mix.
+standard-chartered-ghana,base,FY2029E,balance_sheet,investment_securities,3610.986,GHS millions,estimated,Estimate. Due from banks and securities are the plug (liquid assets) split at the 30 Sep 2026 mix.
+standard-chartered-ghana,base,FY2029E,balance_sheet,loans_and_advances_net,4378.895,GHS millions,estimated,Estimate.
+standard-chartered-ghana,base,FY2029E,balance_sheet,property_equipment_intangibles,178.973,GHS millions,estimated,Estimate.
+standard-chartered-ghana,base,FY2029E,balance_sheet,other_assets,1860.694,GHS millions,estimated,Estimate.
+standard-chartered-ghana,base,FY2029E,balance_sheet,total_assets,20337.919,GHS millions,estimated,Estimate.
+standard-chartered-ghana,base,FY2029E,balance_sheet,customer_deposits,15178.828,GHS millions,estimated,Estimate.
+standard-chartered-ghana,base,FY2029E,balance_sheet,due_to_banks,442.803,GHS millions,estimated,Estimate.
+standard-chartered-ghana,base,FY2029E,balance_sheet,other_liabilities,1711.137,GHS millions,estimated,Estimate.
+standard-chartered-ghana,base,FY2029E,balance_sheet,total_liabilities,17332.768,GHS millions,estimated,Estimate.
+standard-chartered-ghana,base,FY2029E,balance_sheet,stated_capital,400.000,GHS millions,estimated,Estimate.
+standard-chartered-ghana,base,FY2029E,balance_sheet,retained_earnings,1511.099,GHS millions,estimated,Estimate.
+standard-chartered-ghana,base,FY2029E,balance_sheet,reserves_other,1094.052,GHS millions,estimated,Estimate.
+standard-chartered-ghana,base,FY2029E,balance_sheet,total_equity,3005.151,GHS millions,estimated,Estimate.
+standard-chartered-ghana,base,FY2029E,balance_sheet,borrowings,0.000,GHS millions,estimated,None assumed.
+standard-chartered-ghana,base,FY2029E,ratios,x_car_proxy_pct,20.158,percent,estimated,"PROXY, not the regulatory ratio: book equity / (risk-weight density x total assets). Density is the 30 Sep 2026 implied value."
+standard-chartered-ghana,base,FY2029E,ratios,x_roe_pct,16.768,percent,estimated,Profit after tax / average of opening and closing equity.
+standard-chartered-ghana,base,FY2029E,ratios,x_cost_to_income_pct,60.922,percent,estimated,Operating expenses / operating income before impairment.
+standard-chartered-ghana,base,FY2029E,ratios,x_ldr_pct,28.849,percent,estimated,Net loans / customer deposits.
+standard-chartered-ghana,base,FY2030E,income_statement,interest_income,1519.971,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,base,FY2030E,income_statement,interest_expense,100.408,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,base,FY2030E,income_statement,net_interest_income,1419.563,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,base,FY2030E,income_statement,fee_commission_income,405.518,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,base,FY2030E,income_statement,fee_commission_expense,89.214,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,base,FY2030E,income_statement,net_trading_income,372.845,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,base,FY2030E,income_statement,other_operating_income,21.672,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,base,FY2030E,income_statement,total_operating_income,2130.383,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,base,FY2030E,income_statement,staff_costs,916.379,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,base,FY2030E,income_statement,depreciation_amortisation,53.252,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,base,FY2030E,income_statement,other_operating_expenses,343.427,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,base,FY2030E,income_statement,impairment_charge,23.208,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,base,FY2030E,income_statement,profit_before_tax,794.117,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,base,FY2030E,income_statement,income_tax,270.000,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,base,FY2030E,income_statement,profit_after_tax,524.118,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,base,FY2030E,income_statement,x_dividends_paid,342.330,GHS millions,estimated,Dividends paid in the year. FY2026E is the 673.482m actually paid in 9M-2026.
+standard-chartered-ghana,base,FY2030E,balance_sheet,cash_and_bog_balances,4913.481,GHS millions,estimated,Estimate.
+standard-chartered-ghana,base,FY2030E,balance_sheet,due_from_banks,6672.197,GHS millions,estimated,Estimate. Due from banks and securities are the plug (liquid assets) split at the 30 Sep 2026 mix.
+standard-chartered-ghana,base,FY2030E,balance_sheet,investment_securities,4037.590,GHS millions,estimated,Estimate. Due from banks and securities are the plug (liquid assets) split at the 30 Sep 2026 mix.
+standard-chartered-ghana,base,FY2030E,balance_sheet,loans_and_advances_net,4904.363,GHS millions,estimated,Estimate.
+standard-chartered-ghana,base,FY2030E,balance_sheet,property_equipment_intangibles,178.973,GHS millions,estimated,Estimate.
+standard-chartered-ghana,base,FY2030E,balance_sheet,other_assets,2009.549,GHS millions,estimated,Estimate.
+standard-chartered-ghana,base,FY2030E,balance_sheet,total_assets,22716.153,GHS millions,estimated,Estimate.
+standard-chartered-ghana,base,FY2030E,balance_sheet,customer_deposits,17180.004,GHS millions,estimated,Estimate.
+standard-chartered-ghana,base,FY2030E,balance_sheet,due_to_banks,501.182,GHS millions,estimated,Estimate.
+standard-chartered-ghana,base,FY2030E,balance_sheet,other_liabilities,1848.028,GHS millions,estimated,Estimate.
+standard-chartered-ghana,base,FY2030E,balance_sheet,total_liabilities,19529.215,GHS millions,estimated,Estimate.
+standard-chartered-ghana,base,FY2030E,balance_sheet,stated_capital,400.000,GHS millions,estimated,Estimate.
+standard-chartered-ghana,base,FY2030E,balance_sheet,retained_earnings,1627.372,GHS millions,estimated,Estimate.
+standard-chartered-ghana,base,FY2030E,balance_sheet,reserves_other,1159.567,GHS millions,estimated,Estimate.
+standard-chartered-ghana,base,FY2030E,balance_sheet,total_equity,3186.939,GHS millions,estimated,Estimate.
+standard-chartered-ghana,base,FY2030E,balance_sheet,borrowings,0.000,GHS millions,estimated,None assumed.
+standard-chartered-ghana,base,FY2030E,ratios,x_car_proxy_pct,19.140,percent,estimated,"PROXY, not the regulatory ratio: book equity / (risk-weight density x total assets). Density is the 30 Sep 2026 implied value."
+standard-chartered-ghana,base,FY2030E,ratios,x_roe_pct,16.929,percent,estimated,Profit after tax / average of opening and closing equity.
+standard-chartered-ghana,base,FY2030E,ratios,x_cost_to_income_pct,61.635,percent,estimated,Operating expenses / operating income before impairment.
+standard-chartered-ghana,base,FY2030E,ratios,x_ldr_pct,28.547,percent,estimated,Net loans / customer deposits.
+standard-chartered-ghana,downside,FY2026E,income_statement,interest_income,830.915,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
+standard-chartered-ghana,downside,FY2026E,income_statement,interest_expense,109.264,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
+standard-chartered-ghana,downside,FY2026E,income_statement,net_interest_income,721.651,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
+standard-chartered-ghana,downside,FY2026E,income_statement,fee_commission_income,278.239,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
+standard-chartered-ghana,downside,FY2026E,income_statement,fee_commission_expense,67.465,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
+standard-chartered-ghana,downside,FY2026E,income_statement,net_trading_income,568.275,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
+standard-chartered-ghana,downside,FY2026E,income_statement,other_operating_income,21.672,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
+standard-chartered-ghana,downside,FY2026E,income_statement,total_operating_income,1522.371,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
+standard-chartered-ghana,downside,FY2026E,income_statement,staff_costs,606.379,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
+standard-chartered-ghana,downside,FY2026E,income_statement,depreciation_amortisation,39.324,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
+standard-chartered-ghana,downside,FY2026E,income_statement,other_operating_expenses,235.636,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
+standard-chartered-ghana,downside,FY2026E,income_statement,impairment_charge,-73.963,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
+standard-chartered-ghana,downside,FY2026E,income_statement,profit_before_tax,714.995,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
+standard-chartered-ghana,downside,FY2026E,income_statement,income_tax,243.098,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
+standard-chartered-ghana,downside,FY2026E,income_statement,profit_after_tax,471.897,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
+standard-chartered-ghana,downside,FY2026E,income_statement,x_dividends_paid,673.482,GHS millions,estimated,Dividends paid in the year. FY2026E is the 673.482m actually paid in 9M-2026.
+standard-chartered-ghana,downside,FY2026E,balance_sheet,cash_and_bog_balances,2996.459,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
+standard-chartered-ghana,downside,FY2026E,balance_sheet,due_from_banks,4698.653,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit. Due from banks and securities are the plug (liquid assets) split at the 30 Sep 2026 mix.
+standard-chartered-ghana,downside,FY2026E,balance_sheet,investment_securities,2843.326,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit. Due from banks and securities are the plug (liquid assets) split at the 30 Sep 2026 mix.
+standard-chartered-ghana,downside,FY2026E,balance_sheet,loans_and_advances_net,2538.490,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
+standard-chartered-ghana,downside,FY2026E,balance_sheet,property_equipment_intangibles,178.973,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
+standard-chartered-ghana,downside,FY2026E,balance_sheet,other_assets,1483.949,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
+standard-chartered-ghana,downside,FY2026E,balance_sheet,total_assets,14739.851,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
+standard-chartered-ghana,downside,FY2026E,balance_sheet,customer_deposits,10477.131,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
+standard-chartered-ghana,downside,FY2026E,balance_sheet,due_to_banks,305.643,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
+standard-chartered-ghana,downside,FY2026E,balance_sheet,other_liabilities,1364.674,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
+standard-chartered-ghana,downside,FY2026E,balance_sheet,total_liabilities,12147.448,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
+standard-chartered-ghana,downside,FY2026E,balance_sheet,stated_capital,400.000,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
+standard-chartered-ghana,downside,FY2026E,balance_sheet,retained_earnings,1265.328,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
+standard-chartered-ghana,downside,FY2026E,balance_sheet,reserves_other,927.074,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
+standard-chartered-ghana,downside,FY2026E,balance_sheet,total_equity,2592.403,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
+standard-chartered-ghana,downside,FY2026E,balance_sheet,borrowings,0.000,GHS millions,estimated,None assumed.
+standard-chartered-ghana,downside,FY2026E,ratios,x_car_proxy_pct,23.994,percent,estimated,"PROXY, not the regulatory ratio: book equity / (risk-weight density x total assets). Density is the 30 Sep 2026 implied value."
+standard-chartered-ghana,downside,FY2026E,ratios,x_roe_pct,17.470,percent,estimated,Profit after tax / average of opening and closing equity.
+standard-chartered-ghana,downside,FY2026E,ratios,x_cost_to_income_pct,57.893,percent,estimated,Operating expenses / operating income before impairment.
+standard-chartered-ghana,downside,FY2026E,ratios,x_ldr_pct,24.229,percent,estimated,Net loans / customer deposits.
+standard-chartered-ghana,downside,FY2027E,income_statement,interest_income,1225.636,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,downside,FY2027E,income_statement,interest_expense,94.970,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,downside,FY2027E,income_statement,net_interest_income,1130.666,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,downside,FY2027E,income_statement,fee_commission_income,314.410,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,downside,FY2027E,income_statement,fee_commission_expense,69.170,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,downside,FY2027E,income_statement,net_trading_income,426.206,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,downside,FY2027E,income_statement,other_operating_income,21.672,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,downside,FY2027E,income_statement,total_operating_income,1823.783,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,downside,FY2027E,income_statement,staff_costs,691.272,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,downside,FY2027E,income_statement,depreciation_amortisation,43.650,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,downside,FY2027E,income_statement,other_operating_expenses,266.269,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,downside,FY2027E,income_statement,impairment_charge,39.600,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,downside,FY2027E,income_statement,profit_before_tax,782.993,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,downside,FY2027E,income_statement,income_tax,266.218,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,downside,FY2027E,income_statement,profit_after_tax,516.775,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,downside,FY2027E,income_statement,x_dividends_paid,235.948,GHS millions,estimated,Dividends paid in the year. FY2026E is the 673.482m actually paid in 9M-2026.
+standard-chartered-ghana,downside,FY2027E,balance_sheet,cash_and_bog_balances,3305.994,GHS millions,estimated,Estimate.
+standard-chartered-ghana,downside,FY2027E,balance_sheet,due_from_banks,5240.011,GHS millions,estimated,Estimate. Due from banks and securities are the plug (liquid assets) split at the 30 Sep 2026 mix.
+standard-chartered-ghana,downside,FY2027E,balance_sheet,investment_securities,3170.922,GHS millions,estimated,Estimate. Due from banks and securities are the plug (liquid assets) split at the 30 Sep 2026 mix.
+standard-chartered-ghana,downside,FY2027E,balance_sheet,loans_and_advances_net,2741.569,GHS millions,estimated,Estimate.
+standard-chartered-ghana,downside,FY2027E,balance_sheet,property_equipment_intangibles,178.973,GHS millions,estimated,Estimate.
+standard-chartered-ghana,downside,FY2027E,balance_sheet,other_assets,1647.183,GHS millions,estimated,Estimate.
+standard-chartered-ghana,downside,FY2027E,balance_sheet,total_assets,16284.652,GHS millions,estimated,Estimate.
+standard-chartered-ghana,downside,FY2027E,balance_sheet,customer_deposits,11559.419,GHS millions,estimated,Estimate.
+standard-chartered-ghana,downside,FY2027E,balance_sheet,due_to_banks,337.216,GHS millions,estimated,Estimate.
+standard-chartered-ghana,downside,FY2027E,balance_sheet,other_liabilities,1514.788,GHS millions,estimated,Estimate.
+standard-chartered-ghana,downside,FY2027E,balance_sheet,total_liabilities,13411.423,GHS millions,estimated,Estimate.
+standard-chartered-ghana,downside,FY2027E,balance_sheet,stated_capital,400.000,GHS millions,estimated,Estimate.
+standard-chartered-ghana,downside,FY2027E,balance_sheet,retained_earnings,1481.558,GHS millions,estimated,Estimate.
+standard-chartered-ghana,downside,FY2027E,balance_sheet,reserves_other,991.671,GHS millions,estimated,Estimate.
+standard-chartered-ghana,downside,FY2027E,balance_sheet,total_equity,2873.230,GHS millions,estimated,Estimate.
+standard-chartered-ghana,downside,FY2027E,balance_sheet,borrowings,0.000,GHS millions,estimated,None assumed.
+standard-chartered-ghana,downside,FY2027E,ratios,x_car_proxy_pct,24.071,percent,estimated,"PROXY, not the regulatory ratio: book equity / (risk-weight density x total assets). Density is the 30 Sep 2026 implied value."
+standard-chartered-ghana,downside,FY2027E,ratios,x_roe_pct,18.910,percent,estimated,Profit after tax / average of opening and closing equity.
+standard-chartered-ghana,downside,FY2027E,ratios,x_cost_to_income_pct,54.896,percent,estimated,Operating expenses / operating income before impairment.
+standard-chartered-ghana,downside,FY2027E,ratios,x_ldr_pct,23.717,percent,estimated,Net loans / customer deposits.
+standard-chartered-ghana,downside,FY2028E,income_statement,interest_income,1540.431,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,downside,FY2028E,income_statement,interest_expense,117.375,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,downside,FY2028E,income_statement,net_interest_income,1423.056,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,downside,FY2028E,income_statement,fee_commission_income,353.711,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,downside,FY2028E,income_statement,fee_commission_expense,77.816,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,downside,FY2028E,income_statement,net_trading_income,319.654,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,downside,FY2028E,income_statement,other_operating_income,21.672,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,downside,FY2028E,income_statement,total_operating_income,2040.277,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,downside,FY2028E,income_statement,staff_costs,784.593,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,downside,FY2028E,income_statement,depreciation_amortisation,48.233,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,downside,FY2028E,income_statement,other_operating_expenses,299.552,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,downside,FY2028E,income_statement,impairment_charge,42.357,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,downside,FY2028E,income_statement,profit_before_tax,865.542,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,downside,FY2028E,income_statement,income_tax,294.284,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,downside,FY2028E,income_statement,profit_after_tax,571.258,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,downside,FY2028E,income_statement,x_dividends_paid,258.388,GHS millions,estimated,Dividends paid in the year. FY2026E is the 673.482m actually paid in 9M-2026.
+standard-chartered-ghana,downside,FY2028E,balance_sheet,cash_and_bog_balances,3648.743,GHS millions,estimated,Estimate.
+standard-chartered-ghana,downside,FY2028E,balance_sheet,due_from_banks,5878.654,GHS millions,estimated,Estimate. Due from banks and securities are the plug (liquid assets) split at the 30 Sep 2026 mix.
+standard-chartered-ghana,downside,FY2028E,balance_sheet,investment_securities,3557.388,GHS millions,estimated,Estimate. Due from banks and securities are the plug (liquid assets) split at the 30 Sep 2026 mix.
+standard-chartered-ghana,downside,FY2028E,balance_sheet,loans_and_advances_net,2906.063,GHS millions,estimated,Estimate.
+standard-chartered-ghana,downside,FY2028E,balance_sheet,property_equipment_intangibles,178.973,GHS millions,estimated,Estimate.
+standard-chartered-ghana,downside,FY2028E,balance_sheet,other_assets,1820.138,GHS millions,estimated,Estimate.
+standard-chartered-ghana,downside,FY2028E,balance_sheet,total_assets,17989.959,GHS millions,estimated,Estimate.
+standard-chartered-ghana,downside,FY2028E,balance_sheet,customer_deposits,12757.841,GHS millions,estimated,Estimate.
+standard-chartered-ghana,downside,FY2028E,balance_sheet,due_to_banks,372.177,GHS millions,estimated,Estimate.
+standard-chartered-ghana,downside,FY2028E,balance_sheet,other_liabilities,1673.841,GHS millions,estimated,Estimate.
+standard-chartered-ghana,downside,FY2028E,balance_sheet,total_liabilities,14803.859,GHS millions,estimated,Estimate.
+standard-chartered-ghana,downside,FY2028E,balance_sheet,stated_capital,400.000,GHS millions,estimated,Estimate.
+standard-chartered-ghana,downside,FY2028E,balance_sheet,retained_earnings,1723.021,GHS millions,estimated,Estimate.
+standard-chartered-ghana,downside,FY2028E,balance_sheet,reserves_other,1063.078,GHS millions,estimated,Estimate.
+standard-chartered-ghana,downside,FY2028E,balance_sheet,total_equity,3186.100,GHS millions,estimated,Estimate.
+standard-chartered-ghana,downside,FY2028E,balance_sheet,borrowings,0.000,GHS millions,estimated,None assumed.
+standard-chartered-ghana,downside,FY2028E,ratios,x_car_proxy_pct,24.162,percent,estimated,"PROXY, not the regulatory ratio: book equity / (risk-weight density x total assets). Density is the 30 Sep 2026 implied value."
+standard-chartered-ghana,downside,FY2028E,ratios,x_roe_pct,18.855,percent,estimated,Profit after tax / average of opening and closing equity.
+standard-chartered-ghana,downside,FY2028E,ratios,x_cost_to_income_pct,55.501,percent,estimated,Operating expenses / operating income before impairment.
+standard-chartered-ghana,downside,FY2028E,ratios,x_ldr_pct,22.779,percent,estimated,Net loans / customer deposits.
+standard-chartered-ghana,downside,FY2029E,income_statement,interest_income,1544.236,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,downside,FY2029E,income_statement,interest_expense,120.309,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,downside,FY2029E,income_statement,net_interest_income,1423.926,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,downside,FY2029E,income_statement,fee_commission_income,396.156,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,downside,FY2029E,income_statement,fee_commission_expense,87.154,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,downside,FY2029E,income_statement,net_trading_income,239.741,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,downside,FY2029E,income_statement,other_operating_income,21.672,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,downside,FY2029E,income_statement,total_operating_income,1994.341,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,downside,FY2029E,income_statement,staff_costs,886.590,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,downside,FY2029E,income_statement,depreciation_amortisation,53.056,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,downside,FY2029E,income_statement,other_operating_expenses,335.499,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,downside,FY2029E,income_statement,impairment_charge,45.335,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,downside,FY2029E,income_statement,profit_before_tax,673.861,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,downside,FY2029E,income_statement,income_tax,229.113,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,downside,FY2029E,income_statement,profit_after_tax,444.748,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,downside,FY2029E,income_statement,x_dividends_paid,285.629,GHS millions,estimated,Dividends paid in the year. FY2026E is the 673.482m actually paid in 9M-2026.
+standard-chartered-ghana,downside,FY2029E,balance_sheet,cash_and_bog_balances,4028.212,GHS millions,estimated,Estimate.
+standard-chartered-ghana,downside,FY2029E,balance_sheet,due_from_banks,6438.144,GHS millions,estimated,Estimate. Due from banks and securities are the plug (liquid assets) split at the 30 Sep 2026 mix.
+standard-chartered-ghana,downside,FY2029E,balance_sheet,investment_securities,3895.955,GHS millions,estimated,Estimate. Due from banks and securities are the plug (liquid assets) split at the 30 Sep 2026 mix.
+standard-chartered-ghana,downside,FY2029E,balance_sheet,loans_and_advances_net,3138.548,GHS millions,estimated,Estimate.
+standard-chartered-ghana,downside,FY2029E,balance_sheet,property_equipment_intangibles,178.973,GHS millions,estimated,Estimate.
+standard-chartered-ghana,downside,FY2029E,balance_sheet,other_assets,2002.151,GHS millions,estimated,Estimate.
+standard-chartered-ghana,downside,FY2029E,balance_sheet,total_assets,19681.984,GHS millions,estimated,Estimate.
+standard-chartered-ghana,downside,FY2029E,balance_sheet,customer_deposits,14084.657,GHS millions,estimated,Estimate.
+standard-chartered-ghana,downside,FY2029E,balance_sheet,due_to_banks,410.883,GHS millions,estimated,Estimate.
+standard-chartered-ghana,downside,FY2029E,balance_sheet,other_liabilities,1841.225,GHS millions,estimated,Estimate.
+standard-chartered-ghana,downside,FY2029E,balance_sheet,total_liabilities,16336.765,GHS millions,estimated,Estimate.
+standard-chartered-ghana,downside,FY2029E,balance_sheet,stated_capital,400.000,GHS millions,estimated,Estimate.
+standard-chartered-ghana,downside,FY2029E,balance_sheet,retained_earnings,1826.547,GHS millions,estimated,Estimate.
+standard-chartered-ghana,downside,FY2029E,balance_sheet,reserves_other,1118.672,GHS millions,estimated,Estimate.
+standard-chartered-ghana,downside,FY2029E,balance_sheet,total_equity,3345.219,GHS millions,estimated,Estimate.
+standard-chartered-ghana,downside,FY2029E,balance_sheet,borrowings,0.000,GHS millions,estimated,None assumed.
+standard-chartered-ghana,downside,FY2029E,ratios,x_car_proxy_pct,23.187,percent,estimated,"PROXY, not the regulatory ratio: book equity / (risk-weight density x total assets). Density is the 30 Sep 2026 implied value."
+standard-chartered-ghana,downside,FY2029E,ratios,x_roe_pct,13.619,percent,estimated,Profit after tax / average of opening and closing equity.
+standard-chartered-ghana,downside,FY2029E,ratios,x_cost_to_income_pct,63.938,percent,estimated,Operating expenses / operating income before impairment.
+standard-chartered-ghana,downside,FY2029E,ratios,x_ldr_pct,22.283,percent,estimated,Net loans / customer deposits.
+standard-chartered-ghana,downside,FY2030E,income_statement,interest_income,1598.639,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,downside,FY2030E,income_statement,interest_expense,117.206,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,downside,FY2030E,income_statement,net_interest_income,1481.434,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,downside,FY2030E,income_statement,fee_commission_income,441.714,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,downside,FY2030E,income_statement,fee_commission_expense,97.177,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,downside,FY2030E,income_statement,net_trading_income,179.806,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,downside,FY2030E,income_statement,other_operating_income,21.672,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,downside,FY2030E,income_statement,total_operating_income,2027.449,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,downside,FY2030E,income_statement,staff_costs,997.414,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,downside,FY2030E,income_statement,depreciation_amortisation,58.096,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,downside,FY2030E,income_statement,other_operating_expenses,374.081,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,downside,FY2030E,income_statement,impairment_charge,48.961,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,downside,FY2030E,income_statement,profit_before_tax,548.896,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,downside,FY2030E,income_statement,income_tax,186.624,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,downside,FY2030E,income_statement,profit_after_tax,362.271,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,downside,FY2030E,income_statement,x_dividends_paid,222.374,GHS millions,estimated,Dividends paid in the year. FY2026E is the 673.482m actually paid in 9M-2026.
+standard-chartered-ghana,downside,FY2030E,balance_sheet,cash_and_bog_balances,4426.199,GHS millions,estimated,Estimate.
+standard-chartered-ghana,downside,FY2030E,balance_sheet,due_from_banks,7003.639,GHS millions,estimated,Estimate. Due from banks and securities are the plug (liquid assets) split at the 30 Sep 2026 mix.
+standard-chartered-ghana,downside,FY2030E,balance_sheet,investment_securities,4238.157,GHS millions,estimated,Estimate. Due from banks and securities are the plug (liquid assets) split at the 30 Sep 2026 mix.
+standard-chartered-ghana,downside,FY2030E,balance_sheet,loans_and_advances_net,3389.632,GHS millions,estimated,Estimate.
+standard-chartered-ghana,downside,FY2030E,balance_sheet,property_equipment_intangibles,178.973,GHS millions,estimated,Estimate.
+standard-chartered-ghana,downside,FY2030E,balance_sheet,other_assets,2192.356,GHS millions,estimated,Estimate.
+standard-chartered-ghana,downside,FY2030E,balance_sheet,total_assets,21428.957,GHS millions,estimated,Estimate.
+standard-chartered-ghana,downside,FY2030E,balance_sheet,customer_deposits,15476.221,GHS millions,estimated,Estimate.
+standard-chartered-ghana,downside,FY2030E,balance_sheet,due_to_banks,451.478,GHS millions,estimated,Estimate.
+standard-chartered-ghana,downside,FY2030E,balance_sheet,other_liabilities,2016.141,GHS millions,estimated,Estimate.
+standard-chartered-ghana,downside,FY2030E,balance_sheet,total_liabilities,17943.841,GHS millions,estimated,Estimate.
+standard-chartered-ghana,downside,FY2030E,balance_sheet,stated_capital,400.000,GHS millions,estimated,Estimate.
+standard-chartered-ghana,downside,FY2030E,balance_sheet,retained_earnings,1921.160,GHS millions,estimated,Estimate.
+standard-chartered-ghana,downside,FY2030E,balance_sheet,reserves_other,1163.956,GHS millions,estimated,Estimate.
+standard-chartered-ghana,downside,FY2030E,balance_sheet,total_equity,3485.116,GHS millions,estimated,Estimate.
+standard-chartered-ghana,downside,FY2030E,balance_sheet,borrowings,0.000,GHS millions,estimated,None assumed.
+standard-chartered-ghana,downside,FY2030E,ratios,x_car_proxy_pct,22.188,percent,estimated,"PROXY, not the regulatory ratio: book equity / (risk-weight density x total assets). Density is the 30 Sep 2026 implied value."
+standard-chartered-ghana,downside,FY2030E,ratios,x_roe_pct,10.608,percent,estimated,Profit after tax / average of opening and closing equity.
+standard-chartered-ghana,downside,FY2030E,ratios,x_cost_to_income_pct,70.512,percent,estimated,Operating expenses / operating income before impairment.
+standard-chartered-ghana,downside,FY2030E,ratios,x_ldr_pct,21.902,percent,estimated,Net loans / customer deposits.
+standard-chartered-ghana,upside,FY2026E,income_statement,interest_income,830.915,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
+standard-chartered-ghana,upside,FY2026E,income_statement,interest_expense,109.264,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
+standard-chartered-ghana,upside,FY2026E,income_statement,net_interest_income,721.651,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
+standard-chartered-ghana,upside,FY2026E,income_statement,fee_commission_income,278.239,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
+standard-chartered-ghana,upside,FY2026E,income_statement,fee_commission_expense,67.465,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
+standard-chartered-ghana,upside,FY2026E,income_statement,net_trading_income,568.275,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
+standard-chartered-ghana,upside,FY2026E,income_statement,other_operating_income,21.672,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
+standard-chartered-ghana,upside,FY2026E,income_statement,total_operating_income,1522.371,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
+standard-chartered-ghana,upside,FY2026E,income_statement,staff_costs,606.379,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
+standard-chartered-ghana,upside,FY2026E,income_statement,depreciation_amortisation,39.324,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
+standard-chartered-ghana,upside,FY2026E,income_statement,other_operating_expenses,235.636,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
+standard-chartered-ghana,upside,FY2026E,income_statement,impairment_charge,-73.963,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
+standard-chartered-ghana,upside,FY2026E,income_statement,profit_before_tax,714.995,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
+standard-chartered-ghana,upside,FY2026E,income_statement,income_tax,243.098,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
+standard-chartered-ghana,upside,FY2026E,income_statement,profit_after_tax,471.897,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
+standard-chartered-ghana,upside,FY2026E,income_statement,x_dividends_paid,673.482,GHS millions,estimated,Dividends paid in the year. FY2026E is the 673.482m actually paid in 9M-2026.
+standard-chartered-ghana,upside,FY2026E,balance_sheet,cash_and_bog_balances,2996.459,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
+standard-chartered-ghana,upside,FY2026E,balance_sheet,due_from_banks,4698.653,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit. Due from banks and securities are the plug (liquid assets) split at the 30 Sep 2026 mix.
+standard-chartered-ghana,upside,FY2026E,balance_sheet,investment_securities,2843.326,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit. Due from banks and securities are the plug (liquid assets) split at the 30 Sep 2026 mix.
+standard-chartered-ghana,upside,FY2026E,balance_sheet,loans_and_advances_net,2538.490,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
+standard-chartered-ghana,upside,FY2026E,balance_sheet,property_equipment_intangibles,178.973,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
+standard-chartered-ghana,upside,FY2026E,balance_sheet,other_assets,1483.949,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
+standard-chartered-ghana,upside,FY2026E,balance_sheet,total_assets,14739.851,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
+standard-chartered-ghana,upside,FY2026E,balance_sheet,customer_deposits,10477.131,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
+standard-chartered-ghana,upside,FY2026E,balance_sheet,due_to_banks,305.643,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
+standard-chartered-ghana,upside,FY2026E,balance_sheet,other_liabilities,1364.674,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
+standard-chartered-ghana,upside,FY2026E,balance_sheet,total_liabilities,12147.448,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
+standard-chartered-ghana,upside,FY2026E,balance_sheet,stated_capital,400.000,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
+standard-chartered-ghana,upside,FY2026E,balance_sheet,retained_earnings,1265.328,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
+standard-chartered-ghana,upside,FY2026E,balance_sheet,reserves_other,927.074,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
+standard-chartered-ghana,upside,FY2026E,balance_sheet,total_equity,2592.403,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
+standard-chartered-ghana,upside,FY2026E,balance_sheet,borrowings,0.000,GHS millions,estimated,None assumed.
+standard-chartered-ghana,upside,FY2026E,ratios,x_car_proxy_pct,23.994,percent,estimated,"PROXY, not the regulatory ratio: book equity / (risk-weight density x total assets). Density is the 30 Sep 2026 implied value."
+standard-chartered-ghana,upside,FY2026E,ratios,x_roe_pct,17.470,percent,estimated,Profit after tax / average of opening and closing equity.
+standard-chartered-ghana,upside,FY2026E,ratios,x_cost_to_income_pct,57.893,percent,estimated,Operating expenses / operating income before impairment.
+standard-chartered-ghana,upside,FY2026E,ratios,x_ldr_pct,24.229,percent,estimated,Net loans / customer deposits.
+standard-chartered-ghana,upside,FY2027E,income_statement,interest_income,811.615,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,upside,FY2027E,income_statement,interest_expense,77.793,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,upside,FY2027E,income_statement,net_interest_income,733.822,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,upside,FY2027E,income_statement,fee_commission_income,300.498,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,upside,FY2027E,income_statement,fee_commission_expense,66.110,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,upside,FY2027E,income_statement,net_trading_income,568.275,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,upside,FY2027E,income_statement,other_operating_income,21.672,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,upside,FY2027E,income_statement,total_operating_income,1558.157,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,upside,FY2027E,income_statement,staff_costs,660.953,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,upside,FY2027E,income_statement,depreciation_amortisation,41.683,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,upside,FY2027E,income_statement,other_operating_expenses,254.487,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,upside,FY2027E,income_statement,impairment_charge,7.362,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,upside,FY2027E,income_statement,profit_before_tax,593.672,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,upside,FY2027E,income_statement,income_tax,201.849,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,upside,FY2027E,income_statement,profit_after_tax,391.824,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,upside,FY2027E,income_statement,x_dividends_paid,377.517,GHS millions,estimated,Dividends paid in the year. FY2026E is the 673.482m actually paid in 9M-2026.
+standard-chartered-ghana,upside,FY2027E,balance_sheet,cash_and_bog_balances,3456.716,GHS millions,estimated,Estimate.
+standard-chartered-ghana,upside,FY2027E,balance_sheet,due_from_banks,4942.128,GHS millions,estimated,Estimate. Due from banks and securities are the plug (liquid assets) split at the 30 Sep 2026 mix.
+standard-chartered-ghana,upside,FY2027E,balance_sheet,investment_securities,2990.662,GHS millions,estimated,Estimate. Due from banks and securities are the plug (liquid assets) split at the 30 Sep 2026 mix.
+standard-chartered-ghana,upside,FY2027E,balance_sheet,loans_and_advances_net,3350.807,GHS millions,estimated,Estimate.
+standard-chartered-ghana,upside,FY2027E,balance_sheet,property_equipment_intangibles,178.973,GHS millions,estimated,Estimate.
+standard-chartered-ghana,upside,FY2027E,balance_sheet,other_assets,1572.986,GHS millions,estimated,Estimate.
+standard-chartered-ghana,upside,FY2027E,balance_sheet,total_assets,16492.272,GHS millions,estimated,Estimate.
+standard-chartered-ghana,upside,FY2027E,balance_sheet,customer_deposits,12086.418,GHS millions,estimated,Estimate.
+standard-chartered-ghana,upside,FY2027E,balance_sheet,due_to_banks,352.590,GHS millions,estimated,Estimate.
+standard-chartered-ghana,upside,FY2027E,balance_sheet,other_liabilities,1446.554,GHS millions,estimated,Estimate.
+standard-chartered-ghana,upside,FY2027E,balance_sheet,total_liabilities,13885.563,GHS millions,estimated,Estimate.
+standard-chartered-ghana,upside,FY2027E,balance_sheet,stated_capital,400.000,GHS millions,estimated,Estimate.
+standard-chartered-ghana,upside,FY2027E,balance_sheet,retained_earnings,1230.657,GHS millions,estimated,Estimate.
+standard-chartered-ghana,upside,FY2027E,balance_sheet,reserves_other,976.052,GHS millions,estimated,Estimate.
+standard-chartered-ghana,upside,FY2027E,balance_sheet,total_equity,2606.709,GHS millions,estimated,Estimate.
+standard-chartered-ghana,upside,FY2027E,balance_sheet,borrowings,0.000,GHS millions,estimated,None assumed.
+standard-chartered-ghana,upside,FY2027E,ratios,x_car_proxy_pct,21.563,percent,estimated,"PROXY, not the regulatory ratio: book equity / (risk-weight density x total assets). Density is the 30 Sep 2026 implied value."
+standard-chartered-ghana,upside,FY2027E,ratios,x_roe_pct,15.073,percent,estimated,Profit after tax / average of opening and closing equity.
+standard-chartered-ghana,upside,FY2027E,ratios,x_cost_to_income_pct,61.427,percent,estimated,Operating expenses / operating income before impairment.
+standard-chartered-ghana,upside,FY2027E,ratios,x_ldr_pct,27.724,percent,estimated,Net loans / customer deposits.
+standard-chartered-ghana,upside,FY2028E,income_statement,interest_income,971.988,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,upside,FY2028E,income_statement,interest_expense,78.833,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,upside,FY2028E,income_statement,net_interest_income,893.156,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,upside,FY2028E,income_statement,fee_commission_income,327.543,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,upside,FY2028E,income_statement,fee_commission_expense,72.059,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,upside,FY2028E,income_statement,net_trading_income,568.275,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,upside,FY2028E,income_statement,other_operating_income,21.672,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,upside,FY2028E,income_statement,total_operating_income,1738.585,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,upside,FY2028E,income_statement,staff_costs,727.048,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,upside,FY2028E,income_statement,depreciation_amortisation,44.601,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,upside,FY2028E,income_statement,other_operating_expenses,277.391,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,upside,FY2028E,income_statement,impairment_charge,9.424,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,upside,FY2028E,income_statement,profit_before_tax,680.121,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,upside,FY2028E,income_statement,income_tax,231.241,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,upside,FY2028E,income_statement,profit_after_tax,448.880,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,upside,FY2028E,income_statement,x_dividends_paid,313.459,GHS millions,estimated,Dividends paid in the year. FY2026E is the 673.482m actually paid in 9M-2026.
+standard-chartered-ghana,upside,FY2028E,balance_sheet,cash_and_bog_balances,4016.911,GHS millions,estimated,Estimate.
+standard-chartered-ghana,upside,FY2028E,balance_sheet,due_from_banks,5405.976,GHS millions,estimated,Estimate. Due from banks and securities are the plug (liquid assets) split at the 30 Sep 2026 mix.
+standard-chartered-ghana,upside,FY2028E,balance_sheet,investment_securities,3271.353,GHS millions,estimated,Estimate. Due from banks and securities are the plug (liquid assets) split at the 30 Sep 2026 mix.
+standard-chartered-ghana,upside,FY2028E,balance_sheet,loans_and_advances_net,4188.508,GHS millions,estimated,Estimate.
+standard-chartered-ghana,upside,FY2028E,balance_sheet,property_equipment_intangibles,178.973,GHS millions,estimated,Estimate.
+standard-chartered-ghana,upside,FY2028E,balance_sheet,other_assets,1683.095,GHS millions,estimated,Estimate.
+standard-chartered-ghana,upside,FY2028E,balance_sheet,total_assets,18744.817,GHS millions,estimated,Estimate.
+standard-chartered-ghana,upside,FY2028E,balance_sheet,customer_deposits,14045.143,GHS millions,estimated,Estimate.
+standard-chartered-ghana,upside,FY2028E,balance_sheet,due_to_banks,409.730,GHS millions,estimated,Estimate.
+standard-chartered-ghana,upside,FY2028E,balance_sheet,other_liabilities,1547.813,GHS millions,estimated,Estimate.
+standard-chartered-ghana,upside,FY2028E,balance_sheet,total_liabilities,16002.687,GHS millions,estimated,Estimate.
+standard-chartered-ghana,upside,FY2028E,balance_sheet,stated_capital,400.000,GHS millions,estimated,Estimate.
+standard-chartered-ghana,upside,FY2028E,balance_sheet,retained_earnings,1309.968,GHS millions,estimated,Estimate.
+standard-chartered-ghana,upside,FY2028E,balance_sheet,reserves_other,1032.162,GHS millions,estimated,Estimate.
+standard-chartered-ghana,upside,FY2028E,balance_sheet,total_equity,2742.130,GHS millions,estimated,Estimate.
+standard-chartered-ghana,upside,FY2028E,balance_sheet,borrowings,0.000,GHS millions,estimated,None assumed.
+standard-chartered-ghana,upside,FY2028E,ratios,x_car_proxy_pct,19.957,percent,estimated,"PROXY, not the regulatory ratio: book equity / (risk-weight density x total assets). Density is the 30 Sep 2026 implied value."
+standard-chartered-ghana,upside,FY2028E,ratios,x_roe_pct,16.784,percent,estimated,Profit after tax / average of opening and closing equity.
+standard-chartered-ghana,upside,FY2028E,ratios,x_cost_to_income_pct,60.339,percent,estimated,Operating expenses / operating income before impairment.
+standard-chartered-ghana,upside,FY2028E,ratios,x_ldr_pct,29.822,percent,estimated,Net loans / customer deposits.
+standard-chartered-ghana,upside,FY2029E,income_statement,interest_income,1217.734,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,upside,FY2029E,income_statement,interest_expense,89.076,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,upside,FY2029E,income_statement,net_interest_income,1128.658,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,upside,FY2029E,income_statement,fee_commission_income,358.659,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,upside,FY2029E,income_statement,fee_commission_expense,78.905,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,upside,FY2029E,income_statement,net_trading_income,568.275,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,upside,FY2029E,income_statement,other_operating_income,21.672,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,upside,FY2029E,income_statement,total_operating_income,1998.359,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,upside,FY2029E,income_statement,staff_costs,803.388,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,upside,FY2029E,income_statement,depreciation_amortisation,47.946,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,upside,FY2029E,income_statement,other_operating_expenses,303.743,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,upside,FY2029E,income_statement,impairment_charge,11.518,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,upside,FY2029E,income_statement,profit_before_tax,831.763,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,upside,FY2029E,income_statement,income_tax,282.800,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,upside,FY2029E,income_statement,profit_after_tax,548.964,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,upside,FY2029E,income_statement,x_dividends_paid,359.104,GHS millions,estimated,Dividends paid in the year. FY2026E is the 673.482m actually paid in 9M-2026.
+standard-chartered-ghana,upside,FY2029E,balance_sheet,cash_and_bog_balances,4676.186,GHS millions,estimated,Estimate.
+standard-chartered-ghana,upside,FY2029E,balance_sheet,due_from_banks,6063.330,GHS millions,estimated,Estimate. Due from banks and securities are the plug (liquid assets) split at the 30 Sep 2026 mix.
+standard-chartered-ghana,upside,FY2029E,balance_sheet,investment_securities,3669.142,GHS millions,estimated,Estimate. Due from banks and securities are the plug (liquid assets) split at the 30 Sep 2026 mix.
+standard-chartered-ghana,upside,FY2029E,balance_sheet,loans_and_advances_net,5026.210,GHS millions,estimated,Estimate.
+standard-chartered-ghana,upside,FY2029E,balance_sheet,property_equipment_intangibles,178.973,GHS millions,estimated,Estimate.
+standard-chartered-ghana,upside,FY2029E,balance_sheet,other_assets,1809.327,GHS millions,estimated,Estimate.
+standard-chartered-ghana,upside,FY2029E,balance_sheet,total_assets,21423.169,GHS millions,estimated,Estimate.
+standard-chartered-ghana,upside,FY2029E,balance_sheet,customer_deposits,16350.302,GHS millions,estimated,Estimate.
+standard-chartered-ghana,upside,FY2029E,balance_sheet,due_to_banks,476.977,GHS millions,estimated,Estimate.
+standard-chartered-ghana,upside,FY2029E,balance_sheet,other_liabilities,1663.899,GHS millions,estimated,Estimate.
+standard-chartered-ghana,upside,FY2029E,balance_sheet,total_liabilities,18491.179,GHS millions,estimated,Estimate.
+standard-chartered-ghana,upside,FY2029E,balance_sheet,stated_capital,400.000,GHS millions,estimated,Estimate.
+standard-chartered-ghana,upside,FY2029E,balance_sheet,retained_earnings,1431.207,GHS millions,estimated,Estimate.
+standard-chartered-ghana,upside,FY2029E,balance_sheet,reserves_other,1100.783,GHS millions,estimated,Estimate.
+standard-chartered-ghana,upside,FY2029E,balance_sheet,total_equity,2931.990,GHS millions,estimated,Estimate.
+standard-chartered-ghana,upside,FY2029E,balance_sheet,borrowings,0.000,GHS millions,estimated,None assumed.
+standard-chartered-ghana,upside,FY2029E,ratios,x_car_proxy_pct,18.671,percent,estimated,"PROXY, not the regulatory ratio: book equity / (risk-weight density x total assets). Density is the 30 Sep 2026 implied value."
+standard-chartered-ghana,upside,FY2029E,ratios,x_roe_pct,19.350,percent,estimated,Profit after tax / average of opening and closing equity.
+standard-chartered-ghana,upside,FY2029E,ratios,x_cost_to_income_pct,57.801,percent,estimated,Operating expenses / operating income before impairment.
+standard-chartered-ghana,upside,FY2029E,ratios,x_ldr_pct,30.741,percent,estimated,Net loans / customer deposits.
+standard-chartered-ghana,upside,FY2030E,income_statement,interest_income,1447.450,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,upside,FY2030E,income_statement,interest_expense,103.948,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,upside,FY2030E,income_statement,net_interest_income,1343.502,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,upside,FY2030E,income_statement,fee_commission_income,394.525,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,upside,FY2030E,income_statement,fee_commission_expense,86.796,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,upside,FY2030E,income_statement,net_trading_income,568.275,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,upside,FY2030E,income_statement,other_operating_income,21.672,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,upside,FY2030E,income_statement,total_operating_income,2241.178,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,upside,FY2030E,income_statement,staff_costs,891.761,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,upside,FY2030E,income_statement,depreciation_amortisation,51.782,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,upside,FY2030E,income_statement,other_operating_expenses,334.117,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,upside,FY2030E,income_statement,impairment_charge,13.508,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,upside,FY2030E,income_statement,profit_before_tax,950.010,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,upside,FY2030E,income_statement,income_tax,323.003,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,upside,FY2030E,income_statement,profit_after_tax,627.007,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+standard-chartered-ghana,upside,FY2030E,income_statement,x_dividends_paid,439.171,GHS millions,estimated,Dividends paid in the year. FY2026E is the 673.482m actually paid in 9M-2026.
+standard-chartered-ghana,upside,FY2030E,balance_sheet,cash_and_bog_balances,5468.332,GHS millions,estimated,Estimate.
+standard-chartered-ghana,upside,FY2030E,balance_sheet,due_from_banks,6985.785,GHS millions,estimated,Estimate. Due from banks and securities are the plug (liquid assets) split at the 30 Sep 2026 mix.
+standard-chartered-ghana,upside,FY2030E,balance_sheet,investment_securities,4227.353,GHS millions,estimated,Estimate. Due from banks and securities are the plug (liquid assets) split at the 30 Sep 2026 mix.
+standard-chartered-ghana,upside,FY2030E,balance_sheet,loans_and_advances_net,5780.142,GHS millions,estimated,Estimate.
+standard-chartered-ghana,upside,FY2030E,balance_sheet,property_equipment_intangibles,178.973,GHS millions,estimated,Estimate.
+standard-chartered-ghana,upside,FY2030E,balance_sheet,other_assets,1954.073,GHS millions,estimated,Estimate.
+standard-chartered-ghana,upside,FY2030E,balance_sheet,total_assets,24594.658,GHS millions,estimated,Estimate.
+standard-chartered-ghana,upside,FY2030E,balance_sheet,customer_deposits,19120.044,GHS millions,estimated,Estimate.
+standard-chartered-ghana,upside,FY2030E,balance_sheet,due_to_banks,557.777,GHS millions,estimated,Estimate.
+standard-chartered-ghana,upside,FY2030E,balance_sheet,other_liabilities,1797.011,GHS millions,estimated,Estimate.
+standard-chartered-ghana,upside,FY2030E,balance_sheet,total_liabilities,21474.832,GHS millions,estimated,Estimate.
+standard-chartered-ghana,upside,FY2030E,balance_sheet,stated_capital,400.000,GHS millions,estimated,Estimate.
+standard-chartered-ghana,upside,FY2030E,balance_sheet,retained_earnings,1540.667,GHS millions,estimated,Estimate.
+standard-chartered-ghana,upside,FY2030E,balance_sheet,reserves_other,1179.159,GHS millions,estimated,Estimate.
+standard-chartered-ghana,upside,FY2030E,balance_sheet,total_equity,3119.826,GHS millions,estimated,Estimate.
+standard-chartered-ghana,upside,FY2030E,balance_sheet,borrowings,0.000,GHS millions,estimated,None assumed.
+standard-chartered-ghana,upside,FY2030E,ratios,x_car_proxy_pct,17.306,percent,estimated,"PROXY, not the regulatory ratio: book equity / (risk-weight density x total assets). Density is the 30 Sep 2026 implied value."
+standard-chartered-ghana,upside,FY2030E,ratios,x_roe_pct,20.721,percent,estimated,Profit after tax / average of opening and closing equity.
+standard-chartered-ghana,upside,FY2030E,ratios,x_cost_to_income_pct,57.008,percent,estimated,Operating expenses / operating income before impairment.
+standard-chartered-ghana,upside,FY2030E,ratios,x_ldr_pct,30.231,percent,estimated,Net loans / customer deposits.
