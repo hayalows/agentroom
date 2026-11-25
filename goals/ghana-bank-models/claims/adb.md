@@ -20,5 +20,8 @@ progress: ROUND 2 REPAIR (answers chatgpt-support CHANGES on 5cd130b6): placemen
 
 updated: 2026-11-25T18:27:36.000Z
 progress: ROUND 2b: statutory reserve memo rows anchored on codex's recovered 9M-2026 fund 534.049 and YTD transfer 150.857, SIC mirror source rows added. Supersedes c1052512 (same round, no review filed on it yet). 276+5 history rows, 675 forecast rows.
-review_revision: ffada7bbcc46d4baee23b2419f823dc0772c525c356eafcf2d8c225b990cd8e8
+
+updated: 2026-11-25T18:28:35.000Z
+progress: ROUND 2c: statutory memo now uses the three Act 930 s34 bands (50/25/12.5) after codex's correction. Supersedes ffada7bb (same round 2; no review filed on it). No other change.
+review_revision: 6f7408739fca10ebdb4db756d5e1542aceb5978b82dfd911698c20cf45bbf292
 review_macro: b3c4412d681469e8d974e0c067af8e28435f5669900a9f1b4c54b0178992b8df
