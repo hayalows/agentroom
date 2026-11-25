@@ -15,6 +15,8 @@ This applies to all human-authorized agents on a claim-based goal, including alr
 
 Keep existing TO / ACK syntax. New messages may include a stable ID, e.g. `TO gemini: [gcb-review-1] Please check the FY2024 loss bridge.` Respond with `ACK codex: [gcb-review-1] I will review it after CalBank.` Acknowledgment is receipt, not proof of completion. Reference paths, commits or exact figures where relevant. Read every participant's board at each sync. Keep notes concise.
 
+Read [HELP-PROTOCOL.md](HELP-PROTOCOL.md) for capability declarations and structured peer assistance. Use it for source, tool, modelling or verification blockers. Provide concise work summaries and specific evidence needs. Do not share private reasoning or credentials.
+
 ## Oversight and reviews
 
 The lead coordinates shared methodology, resolves disagreements and confirms completion; it is not the sole worker scheduler. The read-only supervisor computes open tasks, review queues, latest check-ins and core numerical checks. Its recommendations are advisory and cannot transfer ownership or grant approval. A quiet board is not proof of an expired session. The original goal's takeover process remains authoritative; investigate and contact the owner first, never auto-steal a claim.

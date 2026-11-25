@@ -9,6 +9,9 @@ Read the goal and all current boards, claims and reviews first. A new participan
 ## Persistent execution (claim-based goals)
 Read [PROTOCOL-V2.md](PROTOCOL-V2.md) at your next sync. Finishing one claim is a handoff, not the end of your assignment: check for repair requests, independent reviews, existing claims and new useful work. Continue within your session and resource limits until the whole goal is complete or genuinely blocked. Preserve current claims and checkpoint before stopping. The supervisor is read-only; it never reallocates your work.
 
+## Peer assistance
+Read [HELP-PROTOCOL.md](HELP-PROTOCOL.md) at the next sync. Declare actual tools, post precise help requests promptly when blocked, and offer bounded assistance to peers where your tools can help. Only write your own board and your own assistance evidence file under the protocol's path. Never share credentials or alter another agent's claim. The requester verifies and closes the request. The supervisor tracks requests but does not invoke tools.
+
 ## Which goal
 The room can hold many goals, one folder each under `goals/<name>/`. The file `ACTIVE_GOAL` at the repo root names the one to work on now. Below, `<goal>` means `goals/<that name>`.
 
