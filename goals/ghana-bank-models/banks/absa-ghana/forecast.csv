@@ -16,30 +16,43 @@ absa-ghana,base,FY2026E,income_statement,income_tax,724.725,GHS millions,estimat
 absa-ghana,base,FY2026E,income_statement,profit_after_tax,1310.683,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
 absa-ghana,base,FY2026E,income_statement,x_dividends_paid,1115.000,GHS millions,estimated,"FY2026E: 1,115m actually paid in 9M-2026 (in the equity base); none is added for Q4."
 absa-ghana,base,FY2026E,income_statement,x_statutory_reserve_transfer,163.835,GHS millions,estimated,Act 930 s34 tiers on profit after tax (see model.py stat_transfer).
-absa-ghana,base,FY2026E,balance_sheet,cash_and_bog_balances,9193.018,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
-absa-ghana,base,FY2026E,balance_sheet,investment_securities,8317.323,GHS millions,estimated,"Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit. Securities are the plug (liquid assets) after cash, loans, other assets and property."
-absa-ghana,base,FY2026E,balance_sheet,loans_and_advances_net,11528.344,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
-absa-ghana,base,FY2026E,balance_sheet,property_equipment_intangibles,1006.701,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
-absa-ghana,base,FY2026E,balance_sheet,due_from_banks,666.240,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
-absa-ghana,base,FY2026E,balance_sheet,other_assets,5559.489,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
-absa-ghana,base,FY2026E,balance_sheet,total_assets,36271.115,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
-absa-ghana,base,FY2026E,balance_sheet,customer_deposits,21185.474,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
-absa-ghana,base,FY2026E,balance_sheet,due_to_banks,631.714,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
-absa-ghana,base,FY2026E,balance_sheet,borrowings,5754.475,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
-absa-ghana,base,FY2026E,balance_sheet,other_liabilities,2498.884,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
-absa-ghana,base,FY2026E,balance_sheet,total_liabilities,30070.547,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
-absa-ghana,base,FY2026E,balance_sheet,retained_earnings,4181.570,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
-absa-ghana,base,FY2026E,balance_sheet,reserves_other,1618.998,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
-absa-ghana,base,FY2026E,balance_sheet,total_equity,6200.568,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
+absa-ghana,base,FY2026E,balance_sheet,cash_and_bog_balances,9193.018,GHS millions,estimated,"Estimate. FY2026E carries the 30 Sep 2026 loans, deposits, borrowings, other assets and property forward; equity adds Q4 profit, and cash, due from banks and the securities plug are recomputed."
+absa-ghana,base,FY2026E,balance_sheet,investment_securities,8317.323,GHS millions,estimated,"Estimate. FY2026E carries the 30 Sep 2026 loans, deposits, borrowings, other assets and property forward; equity adds Q4 profit, and cash, due from banks and the securities plug are recomputed. Securities are the plug (liquid assets) after cash, loans, other assets and property."
+absa-ghana,base,FY2026E,balance_sheet,loans_and_advances_net,11528.344,GHS millions,estimated,"Estimate. FY2026E carries the 30 Sep 2026 loans, deposits, borrowings, other assets and property forward; equity adds Q4 profit, and cash, due from banks and the securities plug are recomputed."
+absa-ghana,base,FY2026E,balance_sheet,property_equipment_intangibles,1006.701,GHS millions,estimated,"Estimate. FY2026E carries the 30 Sep 2026 loans, deposits, borrowings, other assets and property forward; equity adds Q4 profit, and cash, due from banks and the securities plug are recomputed."
+absa-ghana,base,FY2026E,balance_sheet,due_from_banks,666.240,GHS millions,estimated,"Estimate. FY2026E carries the 30 Sep 2026 loans, deposits, borrowings, other assets and property forward; equity adds Q4 profit, and cash, due from banks and the securities plug are recomputed."
+absa-ghana,base,FY2026E,balance_sheet,other_assets,5559.489,GHS millions,estimated,"Estimate. FY2026E carries the 30 Sep 2026 loans, deposits, borrowings, other assets and property forward; equity adds Q4 profit, and cash, due from banks and the securities plug are recomputed."
+absa-ghana,base,FY2026E,balance_sheet,total_assets,36271.115,GHS millions,estimated,"Estimate. FY2026E carries the 30 Sep 2026 loans, deposits, borrowings, other assets and property forward; equity adds Q4 profit, and cash, due from banks and the securities plug are recomputed."
+absa-ghana,base,FY2026E,balance_sheet,customer_deposits,21185.474,GHS millions,estimated,"Estimate. FY2026E carries the 30 Sep 2026 loans, deposits, borrowings, other assets and property forward; equity adds Q4 profit, and cash, due from banks and the securities plug are recomputed."
+absa-ghana,base,FY2026E,balance_sheet,due_to_banks,631.714,GHS millions,estimated,"Estimate. FY2026E carries the 30 Sep 2026 loans, deposits, borrowings, other assets and property forward; equity adds Q4 profit, and cash, due from banks and the securities plug are recomputed."
+absa-ghana,base,FY2026E,balance_sheet,borrowings,5754.475,GHS millions,estimated,"Estimate. FY2026E carries the 30 Sep 2026 loans, deposits, borrowings, other assets and property forward; equity adds Q4 profit, and cash, due from banks and the securities plug are recomputed."
+absa-ghana,base,FY2026E,balance_sheet,other_liabilities,2498.884,GHS millions,estimated,"Estimate. FY2026E carries the 30 Sep 2026 loans, deposits, borrowings, other assets and property forward; equity adds Q4 profit, and cash, due from banks and the securities plug are recomputed."
+absa-ghana,base,FY2026E,balance_sheet,total_liabilities,30070.547,GHS millions,estimated,"Estimate. FY2026E carries the 30 Sep 2026 loans, deposits, borrowings, other assets and property forward; equity adds Q4 profit, and cash, due from banks and the securities plug are recomputed."
+absa-ghana,base,FY2026E,balance_sheet,retained_earnings,4181.571,GHS millions,estimated,"Estimate. FY2026E carries the 30 Sep 2026 loans, deposits, borrowings, other assets and property forward; equity adds Q4 profit, and cash, due from banks and the securities plug are recomputed."
+absa-ghana,base,FY2026E,balance_sheet,reserves_other,1618.997,GHS millions,estimated,"Estimate. FY2026E carries the 30 Sep 2026 loans, deposits, borrowings, other assets and property forward; equity adds Q4 profit, and cash, due from banks and the securities plug are recomputed."
+absa-ghana,base,FY2026E,balance_sheet,total_equity,6200.568,GHS millions,estimated,"Estimate. FY2026E carries the 30 Sep 2026 loans, deposits, borrowings, other assets and property forward; equity adds Q4 profit, and cash, due from banks and the securities plug are recomputed."
 absa-ghana,base,FY2026E,balance_sheet,stated_capital,400.000,GHS millions,estimated,Held at 400m; no issue assumed. Matches the shared minimum paid-up capital.
 absa-ghana,base,FY2026E,ratios,x_car_proxy_pct,19.935,percent,estimated,"PROXY, not the regulatory ratio: the reported 19.06% CAR at 30 Sep 2026 scaled by the change in equity / total assets since then (no regulatory-capital history was available)."
 absa-ghana,base,FY2026E,ratios,roe_pct,21.533,percent,estimated,Estimate. Profit after tax / average of opening and closing equity.
 absa-ghana,base,FY2026E,ratios,roa_pct,3.866,percent,estimated,Estimate. Profit after tax / average of opening and closing total assets.
 absa-ghana,base,FY2026E,ratios,cost_to_income_pct,43.157,percent,estimated,Estimate. (Staff + depreciation + other expenses) / operating income before impairment.
-absa-ghana,base,FY2026E,ratios,ldr_pct,54.416,percent,estimated,Estimate. NET loans / customer deposits (gross loans are not forecast).
+absa-ghana,base,FY2026E,ratios,x_net_ldr_pct,54.416,percent,estimated,Estimate. NET loans / customer deposits. The canonical ldr_pct is unavailable because gross loans are not in the source pack.
+absa-ghana,base,FY2026E,balance_sheet,x_statutory_reserve,1306.804,GHS millions,estimated,Statutory reserve balance after the Act 930 s34 transfer (FY2026E: 9M-2026 balance plus the Q4 top-up).
+absa-ghana,base,FY2026E,balance_sheet,x_credit_risk_reserve,317.614,GHS millions,estimated,Held at the 30 Sep 2026 balance.
+absa-ghana,base,FY2026E,income_statement,x_statutory_transfer_full_year,163.835,GHS millions,estimated,Full-year Act 930 s34 requirement on full-year profit after tax. 123.167m of it was already transferred in 9M-2026.
+absa-ghana,base,FY2026E,income_statement,x_q4_statutory_transfer,40.668,GHS millions,estimated,Full-year requirement less the 123.167m actually transferred in 9M-2026 (never negative).
+absa-ghana,base,FY2026E,balance_sheet,x_reserve_requirement_calibrated,3264.904,GHS millions,estimated,"ILLUSTRATIVE PROXY, not the regulatory calculation: macro CRR x 77.06% x customer deposits, where 77.06% = 3,264.9m mandatory reserves / (20% x 21,185.5m deposits) at 30 Sep 2026 (inferred)."
+absa-ghana,base,FY2026E,balance_sheet,x_eligible_reserve_cash,3264.904,GHS millions,estimated,"Mandatory-reserve share of cash (35.51%, observed at 30 Sep 2026) x modelled cash and bank balances. Proxy."
+absa-ghana,base,FY2026E,balance_sheet,x_reserve_gap_calibrated,0.000,GHS millions,estimated,"max(0, calibrated requirement - eligible reserve cash). Proxy; the issuer reports no liquidity breach."
+absa-ghana,base,FY2026E,balance_sheet,x_reserve_gap_full_deposit_stress,972.191,GHS millions,estimated,"STRESS: max(0, CRR x all customer deposits - eligible reserve cash). Not a regulatory result."
+absa-ghana,base,FY2026E,balance_sheet,x_reserve_gap_eligibility_stress,652.981,GHS millions,estimated,STRESS: calibrated requirement against eligible reserve cash 20% lower than observed. Not a regulatory result.
+absa-ghana,base,FY2026E,ratios,x_car_stress_pct,16.310,percent,estimated,HYPOTHETICAL stress: capital proxy with the numerator 10% lower and risk-weighted assets 10% higher. Not a regulatory result.
+absa-ghana,base,FY2026E,ratios,x_car_stress_shortfall_vs_min_pct,0.000,percent,estimated,"max(0, shared minimum CAR - stressed proxy), percentage points. Zero means no shortfall in this stress."
+absa-ghana,base,FY2026E,ratios,x_car_stress_shortfall_vs_target_pct,0.000,percent,estimated,"max(0, 15% dividend target - stressed proxy), percentage points."
 absa-ghana,base,FY2026E,balance_sheet,loans_and_advances_gross,,GHS millions,unavailable,Gross loans are not in the source pack (annual note not extracted) and are not forecast.
 absa-ghana,base,FY2026E,balance_sheet,loan_loss_allowance,,GHS millions,unavailable,Allowance is not in the source pack and is not forecast; impairment is driven by a cost of risk on net loans.
 absa-ghana,base,FY2026E,ratios,npl_pct,,percent,unavailable,No NPL path is forecast. Reported NPL was 14.09% (Sep 2025) and 11.32% (Sep 2026); cost of risk is an independent assumption.
+absa-ghana,base,FY2026E,ratios,ldr_pct,,percent,unavailable,Gross loans are not in the source pack; the net ratio is stored as x_net_ldr_pct.
 absa-ghana,base,FY2026E,ratios,car_pct,,percent,unavailable,Regulatory CAR is not forecast; see x_car_proxy_pct (accounting proxy).
 absa-ghana,base,FY2026E,ratios,tier1_pct,,percent,unavailable,Tier 1 is not forecast.
 absa-ghana,base,FY2027E,income_statement,interest_income,3514.723,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
@@ -71,7 +84,7 @@ absa-ghana,base,FY2027E,balance_sheet,due_to_banks,725.681,GHS millions,estimate
 absa-ghana,base,FY2027E,balance_sheet,borrowings,5754.475,GHS millions,estimated,Estimate.
 absa-ghana,base,FY2027E,balance_sheet,other_liabilities,2686.300,GHS millions,estimated,Estimate.
 absa-ghana,base,FY2027E,balance_sheet,total_liabilities,33503.270,GHS millions,estimated,Estimate.
-absa-ghana,base,FY2027E,balance_sheet,retained_earnings,4829.490,GHS millions,estimated,Estimate.
+absa-ghana,base,FY2027E,balance_sheet,retained_earnings,4829.491,GHS millions,estimated,Estimate.
 absa-ghana,base,FY2027E,balance_sheet,reserves_other,1805.178,GHS millions,estimated,Estimate.
 absa-ghana,base,FY2027E,balance_sheet,total_equity,7034.669,GHS millions,estimated,Estimate.
 absa-ghana,base,FY2027E,balance_sheet,stated_capital,400.000,GHS millions,estimated,Held at 400m; no issue assumed. Matches the shared minimum paid-up capital.
@@ -79,10 +92,22 @@ absa-ghana,base,FY2027E,ratios,x_car_proxy_pct,20.236,percent,estimated,"PROXY, 
 absa-ghana,base,FY2027E,ratios,roe_pct,22.507,percent,estimated,Estimate. Profit after tax / average of opening and closing equity.
 absa-ghana,base,FY2027E,ratios,roa_pct,3.878,percent,estimated,Estimate. Profit after tax / average of opening and closing total assets.
 absa-ghana,base,FY2027E,ratios,cost_to_income_pct,42.061,percent,estimated,Estimate. (Staff + depreciation + other expenses) / operating income before impairment.
-absa-ghana,base,FY2027E,ratios,ldr_pct,54.475,percent,estimated,Estimate. NET loans / customer deposits (gross loans are not forecast).
+absa-ghana,base,FY2027E,ratios,x_net_ldr_pct,54.475,percent,estimated,Estimate. NET loans / customer deposits. The canonical ldr_pct is unavailable because gross loans are not in the source pack.
+absa-ghana,base,FY2027E,balance_sheet,x_statutory_reserve,1492.985,GHS millions,estimated,Statutory reserve balance after the Act 930 s34 transfer (FY2026E: 9M-2026 balance plus the Q4 top-up).
+absa-ghana,base,FY2027E,balance_sheet,x_credit_risk_reserve,317.614,GHS millions,estimated,Held at the 30 Sep 2026 balance.
+absa-ghana,base,FY2027E,income_statement,x_statutory_transfer_full_year,186.180,GHS millions,estimated,Full-year Act 930 s34 requirement on full-year profit after tax.
+absa-ghana,base,FY2027E,balance_sheet,x_reserve_requirement_calibrated,3750.558,GHS millions,estimated,"ILLUSTRATIVE PROXY, not the regulatory calculation: macro CRR x 77.06% x customer deposits, where 77.06% = 3,264.9m mandatory reserves / (20% x 21,185.5m deposits) at 30 Sep 2026 (inferred)."
+absa-ghana,base,FY2027E,balance_sheet,x_eligible_reserve_cash,3750.558,GHS millions,estimated,"Mandatory-reserve share of cash (35.51%, observed at 30 Sep 2026) x modelled cash and bank balances. Proxy."
+absa-ghana,base,FY2027E,balance_sheet,x_reserve_gap_calibrated,0.000,GHS millions,estimated,"max(0, calibrated requirement - eligible reserve cash). Proxy; the issuer reports no liquidity breach."
+absa-ghana,base,FY2027E,balance_sheet,x_reserve_gap_full_deposit_stress,1116.804,GHS millions,estimated,"STRESS: max(0, CRR x all customer deposits - eligible reserve cash). Not a regulatory result."
+absa-ghana,base,FY2027E,balance_sheet,x_reserve_gap_eligibility_stress,750.112,GHS millions,estimated,STRESS: calibrated requirement against eligible reserve cash 20% lower than observed. Not a regulatory result.
+absa-ghana,base,FY2027E,ratios,x_car_stress_pct,16.557,percent,estimated,HYPOTHETICAL stress: capital proxy with the numerator 10% lower and risk-weighted assets 10% higher. Not a regulatory result.
+absa-ghana,base,FY2027E,ratios,x_car_stress_shortfall_vs_min_pct,0.000,percent,estimated,"max(0, shared minimum CAR - stressed proxy), percentage points. Zero means no shortfall in this stress."
+absa-ghana,base,FY2027E,ratios,x_car_stress_shortfall_vs_target_pct,0.000,percent,estimated,"max(0, 15% dividend target - stressed proxy), percentage points."
 absa-ghana,base,FY2027E,balance_sheet,loans_and_advances_gross,,GHS millions,unavailable,Gross loans are not in the source pack (annual note not extracted) and are not forecast.
 absa-ghana,base,FY2027E,balance_sheet,loan_loss_allowance,,GHS millions,unavailable,Allowance is not in the source pack and is not forecast; impairment is driven by a cost of risk on net loans.
 absa-ghana,base,FY2027E,ratios,npl_pct,,percent,unavailable,No NPL path is forecast. Reported NPL was 14.09% (Sep 2025) and 11.32% (Sep 2026); cost of risk is an independent assumption.
+absa-ghana,base,FY2027E,ratios,ldr_pct,,percent,unavailable,Gross loans are not in the source pack; the net ratio is stored as x_net_ldr_pct.
 absa-ghana,base,FY2027E,ratios,car_pct,,percent,unavailable,Regulatory CAR is not forecast; see x_car_proxy_pct (accounting proxy).
 absa-ghana,base,FY2027E,ratios,tier1_pct,,percent,unavailable,Tier 1 is not forecast.
 absa-ghana,base,FY2028E,income_statement,interest_income,3863.798,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
@@ -114,18 +139,30 @@ absa-ghana,base,FY2028E,balance_sheet,due_to_banks,837.436,GHS millions,estimate
 absa-ghana,base,FY2028E,balance_sheet,borrowings,5754.475,GHS millions,estimated,Estimate.
 absa-ghana,base,FY2028E,balance_sheet,other_liabilities,2901.204,GHS millions,estimated,Estimate.
 absa-ghana,base,FY2028E,balance_sheet,total_liabilities,37577.798,GHS millions,estimated,Estimate.
-absa-ghana,base,FY2028E,balance_sheet,retained_earnings,5440.674,GHS millions,estimated,Estimate.
-absa-ghana,base,FY2028E,balance_sheet,reserves_other,1998.879,GHS millions,estimated,Estimate.
+absa-ghana,base,FY2028E,balance_sheet,retained_earnings,5440.675,GHS millions,estimated,Estimate.
+absa-ghana,base,FY2028E,balance_sheet,reserves_other,1998.878,GHS millions,estimated,Estimate.
 absa-ghana,base,FY2028E,balance_sheet,total_equity,7839.553,GHS millions,estimated,Estimate.
 absa-ghana,base,FY2028E,balance_sheet,stated_capital,400.000,GHS millions,estimated,Held at 400m; no issue assumed. Matches the shared minimum paid-up capital.
 absa-ghana,base,FY2028E,ratios,x_car_proxy_pct,20.129,percent,estimated,"PROXY, not the regulatory ratio: the reported 19.06% CAR at 30 Sep 2026 scaled by the change in equity / total assets since then (no regulatory-capital history was available)."
 absa-ghana,base,FY2028E,ratios,roe_pct,20.836,percent,estimated,Estimate. Profit after tax / average of opening and closing equity.
 absa-ghana,base,FY2028E,ratios,roa_pct,3.606,percent,estimated,Estimate. Profit after tax / average of opening and closing total assets.
 absa-ghana,base,FY2028E,ratios,cost_to_income_pct,42.951,percent,estimated,Estimate. (Staff + depreciation + other expenses) / operating income before impairment.
-absa-ghana,base,FY2028E,ratios,ldr_pct,53.343,percent,estimated,Estimate. NET loans / customer deposits (gross loans are not forecast).
+absa-ghana,base,FY2028E,ratios,x_net_ldr_pct,53.343,percent,estimated,Estimate. NET loans / customer deposits. The canonical ldr_pct is unavailable because gross loans are not in the source pack.
+absa-ghana,base,FY2028E,balance_sheet,x_statutory_reserve,1686.685,GHS millions,estimated,Statutory reserve balance after the Act 930 s34 transfer (FY2026E: 9M-2026 balance plus the Q4 top-up).
+absa-ghana,base,FY2028E,balance_sheet,x_credit_risk_reserve,317.614,GHS millions,estimated,Held at the 30 Sep 2026 balance.
+absa-ghana,base,FY2028E,income_statement,x_statutory_transfer_full_year,193.701,GHS millions,estimated,Full-year Act 930 s34 requirement on full-year profit after tax.
+absa-ghana,base,FY2028E,balance_sheet,x_reserve_requirement_calibrated,4328.144,GHS millions,estimated,"ILLUSTRATIVE PROXY, not the regulatory calculation: macro CRR x 77.06% x customer deposits, where 77.06% = 3,264.9m mandatory reserves / (20% x 21,185.5m deposits) at 30 Sep 2026 (inferred)."
+absa-ghana,base,FY2028E,balance_sheet,x_eligible_reserve_cash,4328.144,GHS millions,estimated,"Mandatory-reserve share of cash (35.51%, observed at 30 Sep 2026) x modelled cash and bank balances. Proxy."
+absa-ghana,base,FY2028E,balance_sheet,x_reserve_gap_calibrated,0.000,GHS millions,estimated,"max(0, calibrated requirement - eligible reserve cash). Proxy; the issuer reports no liquidity breach."
+absa-ghana,base,FY2028E,balance_sheet,x_reserve_gap_full_deposit_stress,1288.792,GHS millions,estimated,"STRESS: max(0, CRR x all customer deposits - eligible reserve cash). Not a regulatory result."
+absa-ghana,base,FY2028E,balance_sheet,x_reserve_gap_eligibility_stress,865.629,GHS millions,estimated,STRESS: calibrated requirement against eligible reserve cash 20% lower than observed. Not a regulatory result.
+absa-ghana,base,FY2028E,ratios,x_car_stress_pct,16.469,percent,estimated,HYPOTHETICAL stress: capital proxy with the numerator 10% lower and risk-weighted assets 10% higher. Not a regulatory result.
+absa-ghana,base,FY2028E,ratios,x_car_stress_shortfall_vs_min_pct,0.000,percent,estimated,"max(0, shared minimum CAR - stressed proxy), percentage points. Zero means no shortfall in this stress."
+absa-ghana,base,FY2028E,ratios,x_car_stress_shortfall_vs_target_pct,0.000,percent,estimated,"max(0, 15% dividend target - stressed proxy), percentage points."
 absa-ghana,base,FY2028E,balance_sheet,loans_and_advances_gross,,GHS millions,unavailable,Gross loans are not in the source pack (annual note not extracted) and are not forecast.
 absa-ghana,base,FY2028E,balance_sheet,loan_loss_allowance,,GHS millions,unavailable,Allowance is not in the source pack and is not forecast; impairment is driven by a cost of risk on net loans.
 absa-ghana,base,FY2028E,ratios,npl_pct,,percent,unavailable,No NPL path is forecast. Reported NPL was 14.09% (Sep 2025) and 11.32% (Sep 2026); cost of risk is an independent assumption.
+absa-ghana,base,FY2028E,ratios,ldr_pct,,percent,unavailable,Gross loans are not in the source pack; the net ratio is stored as x_net_ldr_pct.
 absa-ghana,base,FY2028E,ratios,car_pct,,percent,unavailable,Regulatory CAR is not forecast; see x_car_proxy_pct (accounting proxy).
 absa-ghana,base,FY2028E,ratios,tier1_pct,,percent,unavailable,Tier 1 is not forecast.
 absa-ghana,base,FY2029E,income_statement,interest_income,4180.335,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
@@ -158,17 +195,29 @@ absa-ghana,base,FY2029E,balance_sheet,borrowings,5754.475,GHS millions,estimated
 absa-ghana,base,FY2029E,balance_sheet,other_liabilities,3133.301,GHS millions,estimated,Estimate.
 absa-ghana,base,FY2029E,balance_sheet,total_liabilities,42201.429,GHS millions,estimated,Estimate.
 absa-ghana,base,FY2029E,balance_sheet,retained_earnings,6045.044,GHS millions,estimated,Estimate.
-absa-ghana,base,FY2029E,balance_sheet,reserves_other,2195.904,GHS millions,estimated,Estimate.
+absa-ghana,base,FY2029E,balance_sheet,reserves_other,2195.903,GHS millions,estimated,Estimate.
 absa-ghana,base,FY2029E,balance_sheet,total_equity,8640.947,GHS millions,estimated,Estimate.
 absa-ghana,base,FY2029E,balance_sheet,stated_capital,400.000,GHS millions,estimated,Held at 400m; no issue assumed. Matches the shared minimum paid-up capital.
 absa-ghana,base,FY2029E,ratios,x_car_proxy_pct,19.819,percent,estimated,"PROXY, not the regulatory ratio: the reported 19.06% CAR at 30 Sep 2026 scaled by the change in equity / total assets since then (no regulatory-capital history was available)."
 absa-ghana,base,FY2029E,ratios,roe_pct,19.128,percent,estimated,Estimate. Profit after tax / average of opening and closing equity.
 absa-ghana,base,FY2029E,ratios,roa_pct,3.275,percent,estimated,Estimate. Profit after tax / average of opening and closing total assets.
 absa-ghana,base,FY2029E,ratios,cost_to_income_pct,44.364,percent,estimated,Estimate. (Staff + depreciation + other expenses) / operating income before impairment.
-absa-ghana,base,FY2029E,ratios,ldr_pct,51.405,percent,estimated,Estimate. NET loans / customer deposits (gross loans are not forecast).
+absa-ghana,base,FY2029E,ratios,x_net_ldr_pct,51.405,percent,estimated,Estimate. NET loans / customer deposits. The canonical ldr_pct is unavailable because gross loans are not in the source pack.
+absa-ghana,base,FY2029E,balance_sheet,x_statutory_reserve,1883.710,GHS millions,estimated,Statutory reserve balance after the Act 930 s34 transfer (FY2026E: 9M-2026 balance plus the Q4 top-up).
+absa-ghana,base,FY2029E,balance_sheet,x_credit_risk_reserve,317.614,GHS millions,estimated,Held at the 30 Sep 2026 balance.
+absa-ghana,base,FY2029E,income_statement,x_statutory_transfer_full_year,197.025,GHS millions,estimated,Full-year Act 930 s34 requirement on full-year profit after tax.
+absa-ghana,base,FY2029E,balance_sheet,x_reserve_requirement_calibrated,4985.330,GHS millions,estimated,"ILLUSTRATIVE PROXY, not the regulatory calculation: macro CRR x 77.06% x customer deposits, where 77.06% = 3,264.9m mandatory reserves / (20% x 21,185.5m deposits) at 30 Sep 2026 (inferred)."
+absa-ghana,base,FY2029E,balance_sheet,x_eligible_reserve_cash,4985.330,GHS millions,estimated,"Mandatory-reserve share of cash (35.51%, observed at 30 Sep 2026) x modelled cash and bank balances. Proxy."
+absa-ghana,base,FY2029E,balance_sheet,x_reserve_gap_calibrated,0.000,GHS millions,estimated,"max(0, calibrated requirement - eligible reserve cash). Proxy; the issuer reports no liquidity breach."
+absa-ghana,base,FY2029E,balance_sheet,x_reserve_gap_full_deposit_stress,1484.482,GHS millions,estimated,"STRESS: max(0, CRR x all customer deposits - eligible reserve cash). Not a regulatory result."
+absa-ghana,base,FY2029E,balance_sheet,x_reserve_gap_eligibility_stress,997.066,GHS millions,estimated,STRESS: calibrated requirement against eligible reserve cash 20% lower than observed. Not a regulatory result.
+absa-ghana,base,FY2029E,ratios,x_car_stress_pct,16.216,percent,estimated,HYPOTHETICAL stress: capital proxy with the numerator 10% lower and risk-weighted assets 10% higher. Not a regulatory result.
+absa-ghana,base,FY2029E,ratios,x_car_stress_shortfall_vs_min_pct,0.000,percent,estimated,"max(0, shared minimum CAR - stressed proxy), percentage points. Zero means no shortfall in this stress."
+absa-ghana,base,FY2029E,ratios,x_car_stress_shortfall_vs_target_pct,0.000,percent,estimated,"max(0, 15% dividend target - stressed proxy), percentage points."
 absa-ghana,base,FY2029E,balance_sheet,loans_and_advances_gross,,GHS millions,unavailable,Gross loans are not in the source pack (annual note not extracted) and are not forecast.
 absa-ghana,base,FY2029E,balance_sheet,loan_loss_allowance,,GHS millions,unavailable,Allowance is not in the source pack and is not forecast; impairment is driven by a cost of risk on net loans.
 absa-ghana,base,FY2029E,ratios,npl_pct,,percent,unavailable,No NPL path is forecast. Reported NPL was 14.09% (Sep 2025) and 11.32% (Sep 2026); cost of risk is an independent assumption.
+absa-ghana,base,FY2029E,ratios,ldr_pct,,percent,unavailable,Gross loans are not in the source pack; the net ratio is stored as x_net_ldr_pct.
 absa-ghana,base,FY2029E,ratios,car_pct,,percent,unavailable,Regulatory CAR is not forecast; see x_car_proxy_pct (accounting proxy).
 absa-ghana,base,FY2029E,ratios,tier1_pct,,percent,unavailable,Tier 1 is not forecast.
 absa-ghana,base,FY2030E,income_statement,interest_income,4606.305,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
@@ -200,18 +249,30 @@ absa-ghana,base,FY2030E,balance_sheet,due_to_banks,1111.057,GHS millions,estimat
 absa-ghana,base,FY2030E,balance_sheet,borrowings,5754.475,GHS millions,estimated,Estimate.
 absa-ghana,base,FY2030E,balance_sheet,other_liabilities,3383.965,GHS millions,estimated,Estimate.
 absa-ghana,base,FY2030E,balance_sheet,total_liabilities,47510.438,GHS millions,estimated,Estimate.
-absa-ghana,base,FY2030E,balance_sheet,retained_earnings,6706.913,GHS millions,estimated,Estimate.
-absa-ghana,base,FY2030E,balance_sheet,reserves_other,2403.042,GHS millions,estimated,Estimate.
+absa-ghana,base,FY2030E,balance_sheet,retained_earnings,6706.914,GHS millions,estimated,Estimate.
+absa-ghana,base,FY2030E,balance_sheet,reserves_other,2403.041,GHS millions,estimated,Estimate.
 absa-ghana,base,FY2030E,balance_sheet,total_equity,9509.955,GHS millions,estimated,Estimate.
 absa-ghana,base,FY2030E,balance_sheet,stated_capital,400.000,GHS millions,estimated,Held at 400m; no issue assumed. Matches the shared minimum paid-up capital.
 absa-ghana,base,FY2030E,ratios,x_car_proxy_pct,19.449,percent,estimated,"PROXY, not the regulatory ratio: the reported 19.06% CAR at 30 Sep 2026 scaled by the change in equity / total assets since then (no regulatory-capital history was available)."
 absa-ghana,base,FY2030E,ratios,roe_pct,18.259,percent,estimated,Estimate. Profit after tax / average of opening and closing equity.
 absa-ghana,base,FY2030E,ratios,roa_pct,3.073,percent,estimated,Estimate. Profit after tax / average of opening and closing total assets.
 absa-ghana,base,FY2030E,ratios,cost_to_income_pct,45.112,percent,estimated,Estimate. (Staff + depreciation + other expenses) / operating income before impairment.
-absa-ghana,base,FY2030E,ratios,ldr_pct,49.091,percent,estimated,Estimate. NET loans / customer deposits (gross loans are not forecast).
+absa-ghana,base,FY2030E,ratios,x_net_ldr_pct,49.091,percent,estimated,Estimate. NET loans / customer deposits. The canonical ldr_pct is unavailable because gross loans are not in the source pack.
+absa-ghana,base,FY2030E,balance_sheet,x_statutory_reserve,2090.848,GHS millions,estimated,Statutory reserve balance after the Act 930 s34 transfer (FY2026E: 9M-2026 balance plus the Q4 top-up).
+absa-ghana,base,FY2030E,balance_sheet,x_credit_risk_reserve,317.614,GHS millions,estimated,Held at the 30 Sep 2026 balance.
+absa-ghana,base,FY2030E,income_statement,x_statutory_transfer_full_year,207.138,GHS millions,estimated,Full-year Act 930 s34 requirement on full-year profit after tax.
+absa-ghana,base,FY2030E,balance_sheet,x_reserve_requirement_calibrated,5742.302,GHS millions,estimated,"ILLUSTRATIVE PROXY, not the regulatory calculation: macro CRR x 77.06% x customer deposits, where 77.06% = 3,264.9m mandatory reserves / (20% x 21,185.5m deposits) at 30 Sep 2026 (inferred)."
+absa-ghana,base,FY2030E,balance_sheet,x_eligible_reserve_cash,5742.302,GHS millions,estimated,"Mandatory-reserve share of cash (35.51%, observed at 30 Sep 2026) x modelled cash and bank balances. Proxy."
+absa-ghana,base,FY2030E,balance_sheet,x_reserve_gap_calibrated,0.000,GHS millions,estimated,"max(0, calibrated requirement - eligible reserve cash). Proxy; the issuer reports no liquidity breach."
+absa-ghana,base,FY2030E,balance_sheet,x_reserve_gap_full_deposit_stress,1709.886,GHS millions,estimated,"STRESS: max(0, CRR x all customer deposits - eligible reserve cash). Not a regulatory result."
+absa-ghana,base,FY2030E,balance_sheet,x_reserve_gap_eligibility_stress,1148.460,GHS millions,estimated,STRESS: calibrated requirement against eligible reserve cash 20% lower than observed. Not a regulatory result.
+absa-ghana,base,FY2030E,ratios,x_car_stress_pct,15.913,percent,estimated,HYPOTHETICAL stress: capital proxy with the numerator 10% lower and risk-weighted assets 10% higher. Not a regulatory result.
+absa-ghana,base,FY2030E,ratios,x_car_stress_shortfall_vs_min_pct,0.000,percent,estimated,"max(0, shared minimum CAR - stressed proxy), percentage points. Zero means no shortfall in this stress."
+absa-ghana,base,FY2030E,ratios,x_car_stress_shortfall_vs_target_pct,0.000,percent,estimated,"max(0, 15% dividend target - stressed proxy), percentage points."
 absa-ghana,base,FY2030E,balance_sheet,loans_and_advances_gross,,GHS millions,unavailable,Gross loans are not in the source pack (annual note not extracted) and are not forecast.
 absa-ghana,base,FY2030E,balance_sheet,loan_loss_allowance,,GHS millions,unavailable,Allowance is not in the source pack and is not forecast; impairment is driven by a cost of risk on net loans.
 absa-ghana,base,FY2030E,ratios,npl_pct,,percent,unavailable,No NPL path is forecast. Reported NPL was 14.09% (Sep 2025) and 11.32% (Sep 2026); cost of risk is an independent assumption.
+absa-ghana,base,FY2030E,ratios,ldr_pct,,percent,unavailable,Gross loans are not in the source pack; the net ratio is stored as x_net_ldr_pct.
 absa-ghana,base,FY2030E,ratios,car_pct,,percent,unavailable,Regulatory CAR is not forecast; see x_car_proxy_pct (accounting proxy).
 absa-ghana,base,FY2030E,ratios,tier1_pct,,percent,unavailable,Tier 1 is not forecast.
 absa-ghana,base,FY2026E,income_statement,x_q4_implied_profit_before_tax,504.422,GHS millions,estimated,FY2026E profit before tax less 9M-2026 actual.
@@ -234,30 +295,43 @@ absa-ghana,downside,FY2026E,income_statement,income_tax,724.725,GHS millions,est
 absa-ghana,downside,FY2026E,income_statement,profit_after_tax,1310.683,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
 absa-ghana,downside,FY2026E,income_statement,x_dividends_paid,1115.000,GHS millions,estimated,"FY2026E: 1,115m actually paid in 9M-2026 (in the equity base); none is added for Q4."
 absa-ghana,downside,FY2026E,income_statement,x_statutory_reserve_transfer,163.835,GHS millions,estimated,Act 930 s34 tiers on profit after tax (see model.py stat_transfer).
-absa-ghana,downside,FY2026E,balance_sheet,cash_and_bog_balances,9193.018,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
-absa-ghana,downside,FY2026E,balance_sheet,investment_securities,8317.323,GHS millions,estimated,"Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit. Securities are the plug (liquid assets) after cash, loans, other assets and property."
-absa-ghana,downside,FY2026E,balance_sheet,loans_and_advances_net,11528.344,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
-absa-ghana,downside,FY2026E,balance_sheet,property_equipment_intangibles,1006.701,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
-absa-ghana,downside,FY2026E,balance_sheet,due_from_banks,666.240,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
-absa-ghana,downside,FY2026E,balance_sheet,other_assets,5559.489,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
-absa-ghana,downside,FY2026E,balance_sheet,total_assets,36271.115,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
-absa-ghana,downside,FY2026E,balance_sheet,customer_deposits,21185.474,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
-absa-ghana,downside,FY2026E,balance_sheet,due_to_banks,631.714,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
-absa-ghana,downside,FY2026E,balance_sheet,borrowings,5754.475,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
-absa-ghana,downside,FY2026E,balance_sheet,other_liabilities,2498.884,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
-absa-ghana,downside,FY2026E,balance_sheet,total_liabilities,30070.547,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
-absa-ghana,downside,FY2026E,balance_sheet,retained_earnings,4181.570,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
-absa-ghana,downside,FY2026E,balance_sheet,reserves_other,1618.998,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
-absa-ghana,downside,FY2026E,balance_sheet,total_equity,6200.568,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
+absa-ghana,downside,FY2026E,balance_sheet,cash_and_bog_balances,9193.018,GHS millions,estimated,"Estimate. FY2026E carries the 30 Sep 2026 loans, deposits, borrowings, other assets and property forward; equity adds Q4 profit, and cash, due from banks and the securities plug are recomputed."
+absa-ghana,downside,FY2026E,balance_sheet,investment_securities,8317.323,GHS millions,estimated,"Estimate. FY2026E carries the 30 Sep 2026 loans, deposits, borrowings, other assets and property forward; equity adds Q4 profit, and cash, due from banks and the securities plug are recomputed. Securities are the plug (liquid assets) after cash, loans, other assets and property."
+absa-ghana,downside,FY2026E,balance_sheet,loans_and_advances_net,11528.344,GHS millions,estimated,"Estimate. FY2026E carries the 30 Sep 2026 loans, deposits, borrowings, other assets and property forward; equity adds Q4 profit, and cash, due from banks and the securities plug are recomputed."
+absa-ghana,downside,FY2026E,balance_sheet,property_equipment_intangibles,1006.701,GHS millions,estimated,"Estimate. FY2026E carries the 30 Sep 2026 loans, deposits, borrowings, other assets and property forward; equity adds Q4 profit, and cash, due from banks and the securities plug are recomputed."
+absa-ghana,downside,FY2026E,balance_sheet,due_from_banks,666.240,GHS millions,estimated,"Estimate. FY2026E carries the 30 Sep 2026 loans, deposits, borrowings, other assets and property forward; equity adds Q4 profit, and cash, due from banks and the securities plug are recomputed."
+absa-ghana,downside,FY2026E,balance_sheet,other_assets,5559.489,GHS millions,estimated,"Estimate. FY2026E carries the 30 Sep 2026 loans, deposits, borrowings, other assets and property forward; equity adds Q4 profit, and cash, due from banks and the securities plug are recomputed."
+absa-ghana,downside,FY2026E,balance_sheet,total_assets,36271.115,GHS millions,estimated,"Estimate. FY2026E carries the 30 Sep 2026 loans, deposits, borrowings, other assets and property forward; equity adds Q4 profit, and cash, due from banks and the securities plug are recomputed."
+absa-ghana,downside,FY2026E,balance_sheet,customer_deposits,21185.474,GHS millions,estimated,"Estimate. FY2026E carries the 30 Sep 2026 loans, deposits, borrowings, other assets and property forward; equity adds Q4 profit, and cash, due from banks and the securities plug are recomputed."
+absa-ghana,downside,FY2026E,balance_sheet,due_to_banks,631.714,GHS millions,estimated,"Estimate. FY2026E carries the 30 Sep 2026 loans, deposits, borrowings, other assets and property forward; equity adds Q4 profit, and cash, due from banks and the securities plug are recomputed."
+absa-ghana,downside,FY2026E,balance_sheet,borrowings,5754.475,GHS millions,estimated,"Estimate. FY2026E carries the 30 Sep 2026 loans, deposits, borrowings, other assets and property forward; equity adds Q4 profit, and cash, due from banks and the securities plug are recomputed."
+absa-ghana,downside,FY2026E,balance_sheet,other_liabilities,2498.884,GHS millions,estimated,"Estimate. FY2026E carries the 30 Sep 2026 loans, deposits, borrowings, other assets and property forward; equity adds Q4 profit, and cash, due from banks and the securities plug are recomputed."
+absa-ghana,downside,FY2026E,balance_sheet,total_liabilities,30070.547,GHS millions,estimated,"Estimate. FY2026E carries the 30 Sep 2026 loans, deposits, borrowings, other assets and property forward; equity adds Q4 profit, and cash, due from banks and the securities plug are recomputed."
+absa-ghana,downside,FY2026E,balance_sheet,retained_earnings,4181.571,GHS millions,estimated,"Estimate. FY2026E carries the 30 Sep 2026 loans, deposits, borrowings, other assets and property forward; equity adds Q4 profit, and cash, due from banks and the securities plug are recomputed."
+absa-ghana,downside,FY2026E,balance_sheet,reserves_other,1618.997,GHS millions,estimated,"Estimate. FY2026E carries the 30 Sep 2026 loans, deposits, borrowings, other assets and property forward; equity adds Q4 profit, and cash, due from banks and the securities plug are recomputed."
+absa-ghana,downside,FY2026E,balance_sheet,total_equity,6200.568,GHS millions,estimated,"Estimate. FY2026E carries the 30 Sep 2026 loans, deposits, borrowings, other assets and property forward; equity adds Q4 profit, and cash, due from banks and the securities plug are recomputed."
 absa-ghana,downside,FY2026E,balance_sheet,stated_capital,400.000,GHS millions,estimated,Held at 400m; no issue assumed. Matches the shared minimum paid-up capital.
 absa-ghana,downside,FY2026E,ratios,x_car_proxy_pct,19.935,percent,estimated,"PROXY, not the regulatory ratio: the reported 19.06% CAR at 30 Sep 2026 scaled by the change in equity / total assets since then (no regulatory-capital history was available)."
 absa-ghana,downside,FY2026E,ratios,roe_pct,21.533,percent,estimated,Estimate. Profit after tax / average of opening and closing equity.
 absa-ghana,downside,FY2026E,ratios,roa_pct,3.866,percent,estimated,Estimate. Profit after tax / average of opening and closing total assets.
 absa-ghana,downside,FY2026E,ratios,cost_to_income_pct,43.157,percent,estimated,Estimate. (Staff + depreciation + other expenses) / operating income before impairment.
-absa-ghana,downside,FY2026E,ratios,ldr_pct,54.416,percent,estimated,Estimate. NET loans / customer deposits (gross loans are not forecast).
+absa-ghana,downside,FY2026E,ratios,x_net_ldr_pct,54.416,percent,estimated,Estimate. NET loans / customer deposits. The canonical ldr_pct is unavailable because gross loans are not in the source pack.
+absa-ghana,downside,FY2026E,balance_sheet,x_statutory_reserve,1306.804,GHS millions,estimated,Statutory reserve balance after the Act 930 s34 transfer (FY2026E: 9M-2026 balance plus the Q4 top-up).
+absa-ghana,downside,FY2026E,balance_sheet,x_credit_risk_reserve,317.614,GHS millions,estimated,Held at the 30 Sep 2026 balance.
+absa-ghana,downside,FY2026E,income_statement,x_statutory_transfer_full_year,163.835,GHS millions,estimated,Full-year Act 930 s34 requirement on full-year profit after tax. 123.167m of it was already transferred in 9M-2026.
+absa-ghana,downside,FY2026E,income_statement,x_q4_statutory_transfer,40.668,GHS millions,estimated,Full-year requirement less the 123.167m actually transferred in 9M-2026 (never negative).
+absa-ghana,downside,FY2026E,balance_sheet,x_reserve_requirement_calibrated,3264.904,GHS millions,estimated,"ILLUSTRATIVE PROXY, not the regulatory calculation: macro CRR x 77.06% x customer deposits, where 77.06% = 3,264.9m mandatory reserves / (20% x 21,185.5m deposits) at 30 Sep 2026 (inferred)."
+absa-ghana,downside,FY2026E,balance_sheet,x_eligible_reserve_cash,3264.904,GHS millions,estimated,"Mandatory-reserve share of cash (35.51%, observed at 30 Sep 2026) x modelled cash and bank balances. Proxy."
+absa-ghana,downside,FY2026E,balance_sheet,x_reserve_gap_calibrated,0.000,GHS millions,estimated,"max(0, calibrated requirement - eligible reserve cash). Proxy; the issuer reports no liquidity breach."
+absa-ghana,downside,FY2026E,balance_sheet,x_reserve_gap_full_deposit_stress,972.191,GHS millions,estimated,"STRESS: max(0, CRR x all customer deposits - eligible reserve cash). Not a regulatory result."
+absa-ghana,downside,FY2026E,balance_sheet,x_reserve_gap_eligibility_stress,652.981,GHS millions,estimated,STRESS: calibrated requirement against eligible reserve cash 20% lower than observed. Not a regulatory result.
+absa-ghana,downside,FY2026E,ratios,x_car_stress_pct,16.310,percent,estimated,HYPOTHETICAL stress: capital proxy with the numerator 10% lower and risk-weighted assets 10% higher. Not a regulatory result.
+absa-ghana,downside,FY2026E,ratios,x_car_stress_shortfall_vs_min_pct,0.000,percent,estimated,"max(0, shared minimum CAR - stressed proxy), percentage points. Zero means no shortfall in this stress."
+absa-ghana,downside,FY2026E,ratios,x_car_stress_shortfall_vs_target_pct,0.000,percent,estimated,"max(0, 15% dividend target - stressed proxy), percentage points."
 absa-ghana,downside,FY2026E,balance_sheet,loans_and_advances_gross,,GHS millions,unavailable,Gross loans are not in the source pack (annual note not extracted) and are not forecast.
 absa-ghana,downside,FY2026E,balance_sheet,loan_loss_allowance,,GHS millions,unavailable,Allowance is not in the source pack and is not forecast; impairment is driven by a cost of risk on net loans.
 absa-ghana,downside,FY2026E,ratios,npl_pct,,percent,unavailable,No NPL path is forecast. Reported NPL was 14.09% (Sep 2025) and 11.32% (Sep 2026); cost of risk is an independent assumption.
+absa-ghana,downside,FY2026E,ratios,ldr_pct,,percent,unavailable,Gross loans are not in the source pack; the net ratio is stored as x_net_ldr_pct.
 absa-ghana,downside,FY2026E,ratios,car_pct,,percent,unavailable,Regulatory CAR is not forecast; see x_car_proxy_pct (accounting proxy).
 absa-ghana,downside,FY2026E,ratios,tier1_pct,,percent,unavailable,Tier 1 is not forecast.
 absa-ghana,downside,FY2027E,income_statement,interest_income,4216.533,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
@@ -289,18 +363,30 @@ absa-ghana,downside,FY2027E,balance_sheet,due_to_banks,703.287,GHS millions,esti
 absa-ghana,downside,FY2027E,balance_sheet,borrowings,5754.475,GHS millions,estimated,Estimate.
 absa-ghana,downside,FY2027E,balance_sheet,other_liabilities,2773.761,GHS millions,estimated,Estimate.
 absa-ghana,downside,FY2027E,balance_sheet,total_liabilities,32817.312,GHS millions,estimated,Estimate.
-absa-ghana,downside,FY2027E,balance_sheet,retained_earnings,5170.568,GHS millions,estimated,Estimate.
-absa-ghana,downside,FY2027E,balance_sheet,reserves_other,1816.456,GHS millions,estimated,Estimate.
+absa-ghana,downside,FY2027E,balance_sheet,retained_earnings,5170.569,GHS millions,estimated,Estimate.
+absa-ghana,downside,FY2027E,balance_sheet,reserves_other,1816.455,GHS millions,estimated,Estimate.
 absa-ghana,downside,FY2027E,balance_sheet,total_equity,7387.024,GHS millions,estimated,Estimate.
 absa-ghana,downside,FY2027E,balance_sheet,stated_capital,400.000,GHS millions,estimated,Held at 400m; no issue assumed. Matches the shared minimum paid-up capital.
 absa-ghana,downside,FY2027E,ratios,x_car_proxy_pct,21.426,percent,estimated,"PROXY, not the regulatory ratio: the reported 19.06% CAR at 30 Sep 2026 scaled by the change in equity / total assets since then (no regulatory-capital history was available)."
 absa-ghana,downside,FY2027E,ratios,roe_pct,23.252,percent,estimated,Estimate. Profit after tax / average of opening and closing equity.
 absa-ghana,downside,FY2027E,ratios,roa_pct,4.131,percent,estimated,Estimate. Profit after tax / average of opening and closing total assets.
 absa-ghana,downside,FY2027E,ratios,cost_to_income_pct,39.255,percent,estimated,Estimate. (Staff + depreciation + other expenses) / operating income before impairment.
-absa-ghana,downside,FY2027E,ratios,ldr_pct,50.833,percent,estimated,Estimate. NET loans / customer deposits (gross loans are not forecast).
+absa-ghana,downside,FY2027E,ratios,x_net_ldr_pct,50.833,percent,estimated,Estimate. NET loans / customer deposits. The canonical ldr_pct is unavailable because gross loans are not in the source pack.
+absa-ghana,downside,FY2027E,balance_sheet,x_statutory_reserve,1504.262,GHS millions,estimated,Statutory reserve balance after the Act 930 s34 transfer (FY2026E: 9M-2026 balance plus the Q4 top-up).
+absa-ghana,downside,FY2027E,balance_sheet,x_credit_risk_reserve,317.614,GHS millions,estimated,Held at the 30 Sep 2026 balance.
+absa-ghana,downside,FY2027E,income_statement,x_statutory_transfer_full_year,197.458,GHS millions,estimated,Full-year Act 930 s34 requirement on full-year profit after tax.
+absa-ghana,downside,FY2027E,balance_sheet,x_reserve_requirement_calibrated,3634.818,GHS millions,estimated,"ILLUSTRATIVE PROXY, not the regulatory calculation: macro CRR x 77.06% x customer deposits, where 77.06% = 3,264.9m mandatory reserves / (20% x 21,185.5m deposits) at 30 Sep 2026 (inferred)."
+absa-ghana,downside,FY2027E,balance_sheet,x_eligible_reserve_cash,3634.818,GHS millions,estimated,"Mandatory-reserve share of cash (35.51%, observed at 30 Sep 2026) x modelled cash and bank balances. Proxy."
+absa-ghana,downside,FY2027E,balance_sheet,x_reserve_gap_calibrated,0.000,GHS millions,estimated,"max(0, calibrated requirement - eligible reserve cash). Proxy; the issuer reports no liquidity breach."
+absa-ghana,downside,FY2027E,balance_sheet,x_reserve_gap_full_deposit_stress,1082.340,GHS millions,estimated,"STRESS: max(0, CRR x all customer deposits - eligible reserve cash). Not a regulatory result."
+absa-ghana,downside,FY2027E,balance_sheet,x_reserve_gap_eligibility_stress,726.964,GHS millions,estimated,STRESS: calibrated requirement against eligible reserve cash 20% lower than observed. Not a regulatory result.
+absa-ghana,downside,FY2027E,ratios,x_car_stress_pct,17.530,percent,estimated,HYPOTHETICAL stress: capital proxy with the numerator 10% lower and risk-weighted assets 10% higher. Not a regulatory result.
+absa-ghana,downside,FY2027E,ratios,x_car_stress_shortfall_vs_min_pct,0.000,percent,estimated,"max(0, shared minimum CAR - stressed proxy), percentage points. Zero means no shortfall in this stress."
+absa-ghana,downside,FY2027E,ratios,x_car_stress_shortfall_vs_target_pct,0.000,percent,estimated,"max(0, 15% dividend target - stressed proxy), percentage points."
 absa-ghana,downside,FY2027E,balance_sheet,loans_and_advances_gross,,GHS millions,unavailable,Gross loans are not in the source pack (annual note not extracted) and are not forecast.
 absa-ghana,downside,FY2027E,balance_sheet,loan_loss_allowance,,GHS millions,unavailable,Allowance is not in the source pack and is not forecast; impairment is driven by a cost of risk on net loans.
 absa-ghana,downside,FY2027E,ratios,npl_pct,,percent,unavailable,No NPL path is forecast. Reported NPL was 14.09% (Sep 2025) and 11.32% (Sep 2026); cost of risk is an independent assumption.
+absa-ghana,downside,FY2027E,ratios,ldr_pct,,percent,unavailable,Gross loans are not in the source pack; the net ratio is stored as x_net_ldr_pct.
 absa-ghana,downside,FY2027E,ratios,car_pct,,percent,unavailable,Regulatory CAR is not forecast; see x_car_proxy_pct (accounting proxy).
 absa-ghana,downside,FY2027E,ratios,tier1_pct,,percent,unavailable,Tier 1 is not forecast.
 absa-ghana,downside,FY2028E,income_statement,interest_income,4870.192,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
@@ -340,10 +426,22 @@ absa-ghana,downside,FY2028E,ratios,x_car_proxy_pct,22.556,percent,estimated,"PRO
 absa-ghana,downside,FY2028E,ratios,roe_pct,21.126,percent,estimated,Estimate. Profit after tax / average of opening and closing equity.
 absa-ghana,downside,FY2028E,ratios,roa_pct,3.989,percent,estimated,Estimate. Profit after tax / average of opening and closing total assets.
 absa-ghana,downside,FY2028E,ratios,cost_to_income_pct,40.411,percent,estimated,Estimate. (Staff + depreciation + other expenses) / operating income before impairment.
-absa-ghana,downside,FY2028E,ratios,ldr_pct,47.471,percent,estimated,Estimate. NET loans / customer deposits (gross loans are not forecast).
+absa-ghana,downside,FY2028E,ratios,x_net_ldr_pct,47.471,percent,estimated,Estimate. NET loans / customer deposits. The canonical ldr_pct is unavailable because gross loans are not in the source pack.
+absa-ghana,downside,FY2028E,balance_sheet,x_statutory_reserve,1715.377,GHS millions,estimated,Statutory reserve balance after the Act 930 s34 transfer (FY2026E: 9M-2026 balance plus the Q4 top-up).
+absa-ghana,downside,FY2028E,balance_sheet,x_credit_risk_reserve,317.614,GHS millions,estimated,Held at the 30 Sep 2026 balance.
+absa-ghana,downside,FY2028E,income_statement,x_statutory_transfer_full_year,211.115,GHS millions,estimated,Full-year Act 930 s34 requirement on full-year profit after tax.
+absa-ghana,downside,FY2028E,balance_sheet,x_reserve_requirement_calibrated,4048.006,GHS millions,estimated,"ILLUSTRATIVE PROXY, not the regulatory calculation: macro CRR x 77.06% x customer deposits, where 77.06% = 3,264.9m mandatory reserves / (20% x 21,185.5m deposits) at 30 Sep 2026 (inferred)."
+absa-ghana,downside,FY2028E,balance_sheet,x_eligible_reserve_cash,4048.006,GHS millions,estimated,"Mandatory-reserve share of cash (35.51%, observed at 30 Sep 2026) x modelled cash and bank balances. Proxy."
+absa-ghana,downside,FY2028E,balance_sheet,x_reserve_gap_calibrated,0.000,GHS millions,estimated,"max(0, calibrated requirement - eligible reserve cash). Proxy; the issuer reports no liquidity breach."
+absa-ghana,downside,FY2028E,balance_sheet,x_reserve_gap_full_deposit_stress,1205.375,GHS millions,estimated,"STRESS: max(0, CRR x all customer deposits - eligible reserve cash). Not a regulatory result."
+absa-ghana,downside,FY2028E,balance_sheet,x_reserve_gap_eligibility_stress,809.601,GHS millions,estimated,STRESS: calibrated requirement against eligible reserve cash 20% lower than observed. Not a regulatory result.
+absa-ghana,downside,FY2028E,ratios,x_car_stress_pct,18.455,percent,estimated,HYPOTHETICAL stress: capital proxy with the numerator 10% lower and risk-weighted assets 10% higher. Not a regulatory result.
+absa-ghana,downside,FY2028E,ratios,x_car_stress_shortfall_vs_min_pct,0.000,percent,estimated,"max(0, shared minimum CAR - stressed proxy), percentage points. Zero means no shortfall in this stress."
+absa-ghana,downside,FY2028E,ratios,x_car_stress_shortfall_vs_target_pct,0.000,percent,estimated,"max(0, 15% dividend target - stressed proxy), percentage points."
 absa-ghana,downside,FY2028E,balance_sheet,loans_and_advances_gross,,GHS millions,unavailable,Gross loans are not in the source pack (annual note not extracted) and are not forecast.
 absa-ghana,downside,FY2028E,balance_sheet,loan_loss_allowance,,GHS millions,unavailable,Allowance is not in the source pack and is not forecast; impairment is driven by a cost of risk on net loans.
 absa-ghana,downside,FY2028E,ratios,npl_pct,,percent,unavailable,No NPL path is forecast. Reported NPL was 14.09% (Sep 2025) and 11.32% (Sep 2026); cost of risk is an independent assumption.
+absa-ghana,downside,FY2028E,ratios,ldr_pct,,percent,unavailable,Gross loans are not in the source pack; the net ratio is stored as x_net_ldr_pct.
 absa-ghana,downside,FY2028E,ratios,car_pct,,percent,unavailable,Regulatory CAR is not forecast; see x_car_proxy_pct (accounting proxy).
 absa-ghana,downside,FY2028E,ratios,tier1_pct,,percent,unavailable,Tier 1 is not forecast.
 absa-ghana,downside,FY2029E,income_statement,interest_income,4863.160,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
@@ -375,18 +473,30 @@ absa-ghana,downside,FY2029E,balance_sheet,due_to_banks,872.522,GHS millions,esti
 absa-ghana,downside,FY2029E,balance_sheet,borrowings,5754.475,GHS millions,estimated,Estimate.
 absa-ghana,downside,FY2029E,balance_sheet,other_liabilities,3371.507,GHS millions,estimated,Estimate.
 absa-ghana,downside,FY2029E,balance_sheet,total_liabilities,39259.833,GHS millions,estimated,Estimate.
-absa-ghana,downside,FY2029E,balance_sheet,retained_earnings,6948.159,GHS millions,estimated,Estimate.
-absa-ghana,downside,FY2029E,balance_sheet,reserves_other,2210.479,GHS millions,estimated,Estimate.
+absa-ghana,downside,FY2029E,balance_sheet,retained_earnings,6948.160,GHS millions,estimated,Estimate.
+absa-ghana,downside,FY2029E,balance_sheet,reserves_other,2210.478,GHS millions,estimated,Estimate.
 absa-ghana,downside,FY2029E,balance_sheet,total_equity,9558.638,GHS millions,estimated,Estimate.
 absa-ghana,downside,FY2029E,balance_sheet,stated_capital,400.000,GHS millions,estimated,Held at 400m; no issue assumed. Matches the shared minimum paid-up capital.
 absa-ghana,downside,FY2029E,ratios,x_car_proxy_pct,22.833,percent,estimated,"PROXY, not the regulatory ratio: the reported 19.06% CAR at 30 Sep 2026 scaled by the change in equity / total assets since then (no regulatory-capital history was available)."
 absa-ghana,downside,FY2029E,ratios,roe_pct,16.115,percent,estimated,Estimate. Profit after tax / average of opening and closing equity.
 absa-ghana,downside,FY2029E,ratios,roa_pct,3.137,percent,estimated,Estimate. Profit after tax / average of opening and closing total assets.
 absa-ghana,downside,FY2029E,ratios,cost_to_income_pct,45.566,percent,estimated,Estimate. (Staff + depreciation + other expenses) / operating income before impairment.
-absa-ghana,downside,FY2029E,ratios,ldr_pct,44.743,percent,estimated,Estimate. NET loans / customer deposits (gross loans are not forecast).
+absa-ghana,downside,FY2029E,ratios,x_net_ldr_pct,44.743,percent,estimated,Estimate. NET loans / customer deposits. The canonical ldr_pct is unavailable because gross loans are not in the source pack.
+absa-ghana,downside,FY2029E,balance_sheet,x_statutory_reserve,1898.285,GHS millions,estimated,Statutory reserve balance after the Act 930 s34 transfer (FY2026E: 9M-2026 balance plus the Q4 top-up).
+absa-ghana,downside,FY2029E,balance_sheet,x_credit_risk_reserve,317.614,GHS millions,estimated,Held at the 30 Sep 2026 balance.
+absa-ghana,downside,FY2029E,income_statement,x_statutory_transfer_full_year,182.909,GHS millions,estimated,Full-year Act 930 s34 requirement on full-year profit after tax.
+absa-ghana,downside,FY2029E,balance_sheet,x_reserve_requirement_calibrated,4509.478,GHS millions,estimated,"ILLUSTRATIVE PROXY, not the regulatory calculation: macro CRR x 77.06% x customer deposits, where 77.06% = 3,264.9m mandatory reserves / (20% x 21,185.5m deposits) at 30 Sep 2026 (inferred)."
+absa-ghana,downside,FY2029E,balance_sheet,x_eligible_reserve_cash,4509.478,GHS millions,estimated,"Mandatory-reserve share of cash (35.51%, observed at 30 Sep 2026) x modelled cash and bank balances. Proxy."
+absa-ghana,downside,FY2029E,balance_sheet,x_reserve_gap_calibrated,0.000,GHS millions,estimated,"max(0, calibrated requirement - eligible reserve cash). Proxy; the issuer reports no liquidity breach."
+absa-ghana,downside,FY2029E,balance_sheet,x_reserve_gap_full_deposit_stress,1342.788,GHS millions,estimated,"STRESS: max(0, CRR x all customer deposits - eligible reserve cash). Not a regulatory result."
+absa-ghana,downside,FY2029E,balance_sheet,x_reserve_gap_eligibility_stress,901.896,GHS millions,estimated,STRESS: calibrated requirement against eligible reserve cash 20% lower than observed. Not a regulatory result.
+absa-ghana,downside,FY2029E,ratios,x_car_stress_pct,18.681,percent,estimated,HYPOTHETICAL stress: capital proxy with the numerator 10% lower and risk-weighted assets 10% higher. Not a regulatory result.
+absa-ghana,downside,FY2029E,ratios,x_car_stress_shortfall_vs_min_pct,0.000,percent,estimated,"max(0, shared minimum CAR - stressed proxy), percentage points. Zero means no shortfall in this stress."
+absa-ghana,downside,FY2029E,ratios,x_car_stress_shortfall_vs_target_pct,0.000,percent,estimated,"max(0, 15% dividend target - stressed proxy), percentage points."
 absa-ghana,downside,FY2029E,balance_sheet,loans_and_advances_gross,,GHS millions,unavailable,Gross loans are not in the source pack (annual note not extracted) and are not forecast.
 absa-ghana,downside,FY2029E,balance_sheet,loan_loss_allowance,,GHS millions,unavailable,Allowance is not in the source pack and is not forecast; impairment is driven by a cost of risk on net loans.
 absa-ghana,downside,FY2029E,ratios,npl_pct,,percent,unavailable,No NPL path is forecast. Reported NPL was 14.09% (Sep 2025) and 11.32% (Sep 2026); cost of risk is an independent assumption.
+absa-ghana,downside,FY2029E,ratios,ldr_pct,,percent,unavailable,Gross loans are not in the source pack; the net ratio is stored as x_net_ldr_pct.
 absa-ghana,downside,FY2029E,ratios,car_pct,,percent,unavailable,Regulatory CAR is not forecast; see x_car_proxy_pct (accounting proxy).
 absa-ghana,downside,FY2029E,ratios,tier1_pct,,percent,unavailable,Tier 1 is not forecast.
 absa-ghana,downside,FY2030E,income_statement,interest_income,4997.102,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
@@ -418,18 +528,30 @@ absa-ghana,downside,FY2030E,balance_sheet,due_to_banks,967.452,GHS millions,esti
 absa-ghana,downside,FY2030E,balance_sheet,borrowings,5754.475,GHS millions,estimated,Estimate.
 absa-ghana,downside,FY2030E,balance_sheet,other_liabilities,3691.800,GHS millions,estimated,Estimate.
 absa-ghana,downside,FY2030E,balance_sheet,total_liabilities,42858.690,GHS millions,estimated,Estimate.
-absa-ghana,downside,FY2030E,balance_sheet,retained_earnings,7699.898,GHS millions,estimated,Estimate.
-absa-ghana,downside,FY2030E,balance_sheet,reserves_other,2380.582,GHS millions,estimated,Estimate.
+absa-ghana,downside,FY2030E,balance_sheet,retained_earnings,7699.899,GHS millions,estimated,Estimate.
+absa-ghana,downside,FY2030E,balance_sheet,reserves_other,2380.581,GHS millions,estimated,Estimate.
 absa-ghana,downside,FY2030E,balance_sheet,total_equity,10480.480,GHS millions,estimated,Estimate.
 absa-ghana,downside,FY2030E,balance_sheet,stated_capital,400.000,GHS millions,estimated,Held at 400m; no issue assumed. Matches the shared minimum paid-up capital.
 absa-ghana,downside,FY2030E,ratios,x_car_proxy_pct,22.913,percent,estimated,"PROXY, not the regulatory ratio: the reported 19.06% CAR at 30 Sep 2026 scaled by the change in equity / total assets since then (no regulatory-capital history was available)."
 absa-ghana,downside,FY2030E,ratios,roe_pct,13.582,percent,estimated,Estimate. Profit after tax / average of opening and closing equity.
 absa-ghana,downside,FY2030E,ratios,roa_pct,2.664,percent,estimated,Estimate. Profit after tax / average of opening and closing total assets.
 absa-ghana,downside,FY2030E,ratios,cost_to_income_pct,49.195,percent,estimated,Estimate. (Staff + depreciation + other expenses) / operating income before impairment.
-absa-ghana,downside,FY2030E,ratios,ldr_pct,42.371,percent,estimated,Estimate. NET loans / customer deposits (gross loans are not forecast).
+absa-ghana,downside,FY2030E,ratios,x_net_ldr_pct,42.371,percent,estimated,Estimate. NET loans / customer deposits. The canonical ldr_pct is unavailable because gross loans are not in the source pack.
+absa-ghana,downside,FY2030E,balance_sheet,x_statutory_reserve,2068.388,GHS millions,estimated,Statutory reserve balance after the Act 930 s34 transfer (FY2026E: 9M-2026 balance plus the Q4 top-up).
+absa-ghana,downside,FY2030E,balance_sheet,x_credit_risk_reserve,317.614,GHS millions,estimated,Held at the 30 Sep 2026 balance.
+absa-ghana,downside,FY2030E,income_statement,x_statutory_transfer_full_year,170.103,GHS millions,estimated,Full-year Act 930 s34 requirement on full-year profit after tax.
+absa-ghana,downside,FY2030E,balance_sheet,x_reserve_requirement_calibrated,5000.109,GHS millions,estimated,"ILLUSTRATIVE PROXY, not the regulatory calculation: macro CRR x 77.06% x customer deposits, where 77.06% = 3,264.9m mandatory reserves / (20% x 21,185.5m deposits) at 30 Sep 2026 (inferred)."
+absa-ghana,downside,FY2030E,balance_sheet,x_eligible_reserve_cash,5000.109,GHS millions,estimated,"Mandatory-reserve share of cash (35.51%, observed at 30 Sep 2026) x modelled cash and bank balances. Proxy."
+absa-ghana,downside,FY2030E,balance_sheet,x_reserve_gap_calibrated,0.000,GHS millions,estimated,"max(0, calibrated requirement - eligible reserve cash). Proxy; the issuer reports no liquidity breach."
+absa-ghana,downside,FY2030E,balance_sheet,x_reserve_gap_full_deposit_stress,1488.883,GHS millions,estimated,"STRESS: max(0, CRR x all customer deposits - eligible reserve cash). Not a regulatory result."
+absa-ghana,downside,FY2030E,balance_sheet,x_reserve_gap_eligibility_stress,1000.022,GHS millions,estimated,STRESS: calibrated requirement against eligible reserve cash 20% lower than observed. Not a regulatory result.
+absa-ghana,downside,FY2030E,ratios,x_car_stress_pct,18.747,percent,estimated,HYPOTHETICAL stress: capital proxy with the numerator 10% lower and risk-weighted assets 10% higher. Not a regulatory result.
+absa-ghana,downside,FY2030E,ratios,x_car_stress_shortfall_vs_min_pct,0.000,percent,estimated,"max(0, shared minimum CAR - stressed proxy), percentage points. Zero means no shortfall in this stress."
+absa-ghana,downside,FY2030E,ratios,x_car_stress_shortfall_vs_target_pct,0.000,percent,estimated,"max(0, 15% dividend target - stressed proxy), percentage points."
 absa-ghana,downside,FY2030E,balance_sheet,loans_and_advances_gross,,GHS millions,unavailable,Gross loans are not in the source pack (annual note not extracted) and are not forecast.
 absa-ghana,downside,FY2030E,balance_sheet,loan_loss_allowance,,GHS millions,unavailable,Allowance is not in the source pack and is not forecast; impairment is driven by a cost of risk on net loans.
 absa-ghana,downside,FY2030E,ratios,npl_pct,,percent,unavailable,No NPL path is forecast. Reported NPL was 14.09% (Sep 2025) and 11.32% (Sep 2026); cost of risk is an independent assumption.
+absa-ghana,downside,FY2030E,ratios,ldr_pct,,percent,unavailable,Gross loans are not in the source pack; the net ratio is stored as x_net_ldr_pct.
 absa-ghana,downside,FY2030E,ratios,car_pct,,percent,unavailable,Regulatory CAR is not forecast; see x_car_proxy_pct (accounting proxy).
 absa-ghana,downside,FY2030E,ratios,tier1_pct,,percent,unavailable,Tier 1 is not forecast.
 absa-ghana,downside,FY2026E,income_statement,x_q4_implied_profit_before_tax,504.422,GHS millions,estimated,FY2026E profit before tax less 9M-2026 actual.
@@ -452,30 +574,43 @@ absa-ghana,upside,FY2026E,income_statement,income_tax,724.725,GHS millions,estim
 absa-ghana,upside,FY2026E,income_statement,profit_after_tax,1310.683,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
 absa-ghana,upside,FY2026E,income_statement,x_dividends_paid,1115.000,GHS millions,estimated,"FY2026E: 1,115m actually paid in 9M-2026 (in the equity base); none is added for Q4."
 absa-ghana,upside,FY2026E,income_statement,x_statutory_reserve_transfer,163.835,GHS millions,estimated,Act 930 s34 tiers on profit after tax (see model.py stat_transfer).
-absa-ghana,upside,FY2026E,balance_sheet,cash_and_bog_balances,9193.018,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
-absa-ghana,upside,FY2026E,balance_sheet,investment_securities,8317.323,GHS millions,estimated,"Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit. Securities are the plug (liquid assets) after cash, loans, other assets and property."
-absa-ghana,upside,FY2026E,balance_sheet,loans_and_advances_net,11528.344,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
-absa-ghana,upside,FY2026E,balance_sheet,property_equipment_intangibles,1006.701,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
-absa-ghana,upside,FY2026E,balance_sheet,due_from_banks,666.240,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
-absa-ghana,upside,FY2026E,balance_sheet,other_assets,5559.489,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
-absa-ghana,upside,FY2026E,balance_sheet,total_assets,36271.115,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
-absa-ghana,upside,FY2026E,balance_sheet,customer_deposits,21185.474,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
-absa-ghana,upside,FY2026E,balance_sheet,due_to_banks,631.714,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
-absa-ghana,upside,FY2026E,balance_sheet,borrowings,5754.475,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
-absa-ghana,upside,FY2026E,balance_sheet,other_liabilities,2498.884,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
-absa-ghana,upside,FY2026E,balance_sheet,total_liabilities,30070.547,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
-absa-ghana,upside,FY2026E,balance_sheet,retained_earnings,4181.570,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
-absa-ghana,upside,FY2026E,balance_sheet,reserves_other,1618.998,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
-absa-ghana,upside,FY2026E,balance_sheet,total_equity,6200.568,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
+absa-ghana,upside,FY2026E,balance_sheet,cash_and_bog_balances,9193.018,GHS millions,estimated,"Estimate. FY2026E carries the 30 Sep 2026 loans, deposits, borrowings, other assets and property forward; equity adds Q4 profit, and cash, due from banks and the securities plug are recomputed."
+absa-ghana,upside,FY2026E,balance_sheet,investment_securities,8317.323,GHS millions,estimated,"Estimate. FY2026E carries the 30 Sep 2026 loans, deposits, borrowings, other assets and property forward; equity adds Q4 profit, and cash, due from banks and the securities plug are recomputed. Securities are the plug (liquid assets) after cash, loans, other assets and property."
+absa-ghana,upside,FY2026E,balance_sheet,loans_and_advances_net,11528.344,GHS millions,estimated,"Estimate. FY2026E carries the 30 Sep 2026 loans, deposits, borrowings, other assets and property forward; equity adds Q4 profit, and cash, due from banks and the securities plug are recomputed."
+absa-ghana,upside,FY2026E,balance_sheet,property_equipment_intangibles,1006.701,GHS millions,estimated,"Estimate. FY2026E carries the 30 Sep 2026 loans, deposits, borrowings, other assets and property forward; equity adds Q4 profit, and cash, due from banks and the securities plug are recomputed."
+absa-ghana,upside,FY2026E,balance_sheet,due_from_banks,666.240,GHS millions,estimated,"Estimate. FY2026E carries the 30 Sep 2026 loans, deposits, borrowings, other assets and property forward; equity adds Q4 profit, and cash, due from banks and the securities plug are recomputed."
+absa-ghana,upside,FY2026E,balance_sheet,other_assets,5559.489,GHS millions,estimated,"Estimate. FY2026E carries the 30 Sep 2026 loans, deposits, borrowings, other assets and property forward; equity adds Q4 profit, and cash, due from banks and the securities plug are recomputed."
+absa-ghana,upside,FY2026E,balance_sheet,total_assets,36271.115,GHS millions,estimated,"Estimate. FY2026E carries the 30 Sep 2026 loans, deposits, borrowings, other assets and property forward; equity adds Q4 profit, and cash, due from banks and the securities plug are recomputed."
+absa-ghana,upside,FY2026E,balance_sheet,customer_deposits,21185.474,GHS millions,estimated,"Estimate. FY2026E carries the 30 Sep 2026 loans, deposits, borrowings, other assets and property forward; equity adds Q4 profit, and cash, due from banks and the securities plug are recomputed."
+absa-ghana,upside,FY2026E,balance_sheet,due_to_banks,631.714,GHS millions,estimated,"Estimate. FY2026E carries the 30 Sep 2026 loans, deposits, borrowings, other assets and property forward; equity adds Q4 profit, and cash, due from banks and the securities plug are recomputed."
+absa-ghana,upside,FY2026E,balance_sheet,borrowings,5754.475,GHS millions,estimated,"Estimate. FY2026E carries the 30 Sep 2026 loans, deposits, borrowings, other assets and property forward; equity adds Q4 profit, and cash, due from banks and the securities plug are recomputed."
+absa-ghana,upside,FY2026E,balance_sheet,other_liabilities,2498.884,GHS millions,estimated,"Estimate. FY2026E carries the 30 Sep 2026 loans, deposits, borrowings, other assets and property forward; equity adds Q4 profit, and cash, due from banks and the securities plug are recomputed."
+absa-ghana,upside,FY2026E,balance_sheet,total_liabilities,30070.547,GHS millions,estimated,"Estimate. FY2026E carries the 30 Sep 2026 loans, deposits, borrowings, other assets and property forward; equity adds Q4 profit, and cash, due from banks and the securities plug are recomputed."
+absa-ghana,upside,FY2026E,balance_sheet,retained_earnings,4181.571,GHS millions,estimated,"Estimate. FY2026E carries the 30 Sep 2026 loans, deposits, borrowings, other assets and property forward; equity adds Q4 profit, and cash, due from banks and the securities plug are recomputed."
+absa-ghana,upside,FY2026E,balance_sheet,reserves_other,1618.997,GHS millions,estimated,"Estimate. FY2026E carries the 30 Sep 2026 loans, deposits, borrowings, other assets and property forward; equity adds Q4 profit, and cash, due from banks and the securities plug are recomputed."
+absa-ghana,upside,FY2026E,balance_sheet,total_equity,6200.568,GHS millions,estimated,"Estimate. FY2026E carries the 30 Sep 2026 loans, deposits, borrowings, other assets and property forward; equity adds Q4 profit, and cash, due from banks and the securities plug are recomputed."
 absa-ghana,upside,FY2026E,balance_sheet,stated_capital,400.000,GHS millions,estimated,Held at 400m; no issue assumed. Matches the shared minimum paid-up capital.
 absa-ghana,upside,FY2026E,ratios,x_car_proxy_pct,19.935,percent,estimated,"PROXY, not the regulatory ratio: the reported 19.06% CAR at 30 Sep 2026 scaled by the change in equity / total assets since then (no regulatory-capital history was available)."
 absa-ghana,upside,FY2026E,ratios,roe_pct,21.533,percent,estimated,Estimate. Profit after tax / average of opening and closing equity.
 absa-ghana,upside,FY2026E,ratios,roa_pct,3.866,percent,estimated,Estimate. Profit after tax / average of opening and closing total assets.
 absa-ghana,upside,FY2026E,ratios,cost_to_income_pct,43.157,percent,estimated,Estimate. (Staff + depreciation + other expenses) / operating income before impairment.
-absa-ghana,upside,FY2026E,ratios,ldr_pct,54.416,percent,estimated,Estimate. NET loans / customer deposits (gross loans are not forecast).
+absa-ghana,upside,FY2026E,ratios,x_net_ldr_pct,54.416,percent,estimated,Estimate. NET loans / customer deposits. The canonical ldr_pct is unavailable because gross loans are not in the source pack.
+absa-ghana,upside,FY2026E,balance_sheet,x_statutory_reserve,1306.804,GHS millions,estimated,Statutory reserve balance after the Act 930 s34 transfer (FY2026E: 9M-2026 balance plus the Q4 top-up).
+absa-ghana,upside,FY2026E,balance_sheet,x_credit_risk_reserve,317.614,GHS millions,estimated,Held at the 30 Sep 2026 balance.
+absa-ghana,upside,FY2026E,income_statement,x_statutory_transfer_full_year,163.835,GHS millions,estimated,Full-year Act 930 s34 requirement on full-year profit after tax. 123.167m of it was already transferred in 9M-2026.
+absa-ghana,upside,FY2026E,income_statement,x_q4_statutory_transfer,40.668,GHS millions,estimated,Full-year requirement less the 123.167m actually transferred in 9M-2026 (never negative).
+absa-ghana,upside,FY2026E,balance_sheet,x_reserve_requirement_calibrated,3264.904,GHS millions,estimated,"ILLUSTRATIVE PROXY, not the regulatory calculation: macro CRR x 77.06% x customer deposits, where 77.06% = 3,264.9m mandatory reserves / (20% x 21,185.5m deposits) at 30 Sep 2026 (inferred)."
+absa-ghana,upside,FY2026E,balance_sheet,x_eligible_reserve_cash,3264.904,GHS millions,estimated,"Mandatory-reserve share of cash (35.51%, observed at 30 Sep 2026) x modelled cash and bank balances. Proxy."
+absa-ghana,upside,FY2026E,balance_sheet,x_reserve_gap_calibrated,0.000,GHS millions,estimated,"max(0, calibrated requirement - eligible reserve cash). Proxy; the issuer reports no liquidity breach."
+absa-ghana,upside,FY2026E,balance_sheet,x_reserve_gap_full_deposit_stress,972.191,GHS millions,estimated,"STRESS: max(0, CRR x all customer deposits - eligible reserve cash). Not a regulatory result."
+absa-ghana,upside,FY2026E,balance_sheet,x_reserve_gap_eligibility_stress,652.981,GHS millions,estimated,STRESS: calibrated requirement against eligible reserve cash 20% lower than observed. Not a regulatory result.
+absa-ghana,upside,FY2026E,ratios,x_car_stress_pct,16.310,percent,estimated,HYPOTHETICAL stress: capital proxy with the numerator 10% lower and risk-weighted assets 10% higher. Not a regulatory result.
+absa-ghana,upside,FY2026E,ratios,x_car_stress_shortfall_vs_min_pct,0.000,percent,estimated,"max(0, shared minimum CAR - stressed proxy), percentage points. Zero means no shortfall in this stress."
+absa-ghana,upside,FY2026E,ratios,x_car_stress_shortfall_vs_target_pct,0.000,percent,estimated,"max(0, 15% dividend target - stressed proxy), percentage points."
 absa-ghana,upside,FY2026E,balance_sheet,loans_and_advances_gross,,GHS millions,unavailable,Gross loans are not in the source pack (annual note not extracted) and are not forecast.
 absa-ghana,upside,FY2026E,balance_sheet,loan_loss_allowance,,GHS millions,unavailable,Allowance is not in the source pack and is not forecast; impairment is driven by a cost of risk on net loans.
 absa-ghana,upside,FY2026E,ratios,npl_pct,,percent,unavailable,No NPL path is forecast. Reported NPL was 14.09% (Sep 2025) and 11.32% (Sep 2026); cost of risk is an independent assumption.
+absa-ghana,upside,FY2026E,ratios,ldr_pct,,percent,unavailable,Gross loans are not in the source pack; the net ratio is stored as x_net_ldr_pct.
 absa-ghana,upside,FY2026E,ratios,car_pct,,percent,unavailable,Regulatory CAR is not forecast; see x_car_proxy_pct (accounting proxy).
 absa-ghana,upside,FY2026E,ratios,tier1_pct,,percent,unavailable,Tier 1 is not forecast.
 absa-ghana,upside,FY2027E,income_statement,interest_income,3283.150,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
@@ -507,18 +642,30 @@ absa-ghana,upside,FY2027E,balance_sheet,due_to_banks,741.380,GHS millions,estima
 absa-ghana,upside,FY2027E,balance_sheet,borrowings,5754.475,GHS millions,estimated,Estimate.
 absa-ghana,upside,FY2027E,balance_sheet,other_liabilities,2648.817,GHS millions,estimated,Estimate.
 absa-ghana,upside,FY2027E,balance_sheet,total_liabilities,34007.944,GHS millions,estimated,Estimate.
-absa-ghana,upside,FY2027E,balance_sheet,retained_earnings,4632.436,GHS millions,estimated,Estimate.
-absa-ghana,upside,FY2027E,balance_sheet,reserves_other,1805.114,GHS millions,estimated,Estimate.
+absa-ghana,upside,FY2027E,balance_sheet,retained_earnings,4632.437,GHS millions,estimated,Estimate.
+absa-ghana,upside,FY2027E,balance_sheet,reserves_other,1805.113,GHS millions,estimated,Estimate.
 absa-ghana,upside,FY2027E,balance_sheet,total_equity,6837.550,GHS millions,estimated,Estimate.
 absa-ghana,upside,FY2027E,balance_sheet,stated_capital,400.000,GHS millions,estimated,Held at 400m; no issue assumed. Matches the shared minimum paid-up capital.
 absa-ghana,upside,FY2027E,ratios,x_car_proxy_pct,19.521,percent,estimated,"PROXY, not the regulatory ratio: the reported 19.06% CAR at 30 Sep 2026 scaled by the change in equity / total assets since then (no regulatory-capital history was available)."
 absa-ghana,upside,FY2027E,ratios,roe_pct,22.840,percent,estimated,Estimate. Profit after tax / average of opening and closing equity.
 absa-ghana,upside,FY2027E,ratios,roa_pct,3.861,percent,estimated,Estimate. Profit after tax / average of opening and closing total assets.
 absa-ghana,upside,FY2027E,ratios,cost_to_income_pct,42.871,percent,estimated,Estimate. (Staff + depreciation + other expenses) / operating income before impairment.
-absa-ghana,upside,FY2027E,ratios,ldr_pct,55.640,percent,estimated,Estimate. NET loans / customer deposits (gross loans are not forecast).
+absa-ghana,upside,FY2027E,ratios,x_net_ldr_pct,55.640,percent,estimated,Estimate. NET loans / customer deposits. The canonical ldr_pct is unavailable because gross loans are not in the source pack.
+absa-ghana,upside,FY2027E,balance_sheet,x_statutory_reserve,1492.920,GHS millions,estimated,Statutory reserve balance after the Act 930 s34 transfer (FY2026E: 9M-2026 balance plus the Q4 top-up).
+absa-ghana,upside,FY2027E,balance_sheet,x_credit_risk_reserve,317.614,GHS millions,estimated,Held at the 30 Sep 2026 balance.
+absa-ghana,upside,FY2027E,income_statement,x_statutory_transfer_full_year,186.116,GHS millions,estimated,Full-year Act 930 s34 requirement on full-year profit after tax.
+absa-ghana,upside,FY2027E,balance_sheet,x_reserve_requirement_calibrated,3831.691,GHS millions,estimated,"ILLUSTRATIVE PROXY, not the regulatory calculation: macro CRR x 77.06% x customer deposits, where 77.06% = 3,264.9m mandatory reserves / (20% x 21,185.5m deposits) at 30 Sep 2026 (inferred)."
+absa-ghana,upside,FY2027E,balance_sheet,x_eligible_reserve_cash,3831.691,GHS millions,estimated,"Mandatory-reserve share of cash (35.51%, observed at 30 Sep 2026) x modelled cash and bank balances. Proxy."
+absa-ghana,upside,FY2027E,balance_sheet,x_reserve_gap_calibrated,0.000,GHS millions,estimated,"max(0, calibrated requirement - eligible reserve cash). Proxy; the issuer reports no liquidity breach."
+absa-ghana,upside,FY2027E,balance_sheet,x_reserve_gap_full_deposit_stress,1140.963,GHS millions,estimated,"STRESS: max(0, CRR x all customer deposits - eligible reserve cash). Not a regulatory result."
+absa-ghana,upside,FY2027E,balance_sheet,x_reserve_gap_eligibility_stress,766.338,GHS millions,estimated,STRESS: calibrated requirement against eligible reserve cash 20% lower than observed. Not a regulatory result.
+absa-ghana,upside,FY2027E,ratios,x_car_stress_pct,15.972,percent,estimated,HYPOTHETICAL stress: capital proxy with the numerator 10% lower and risk-weighted assets 10% higher. Not a regulatory result.
+absa-ghana,upside,FY2027E,ratios,x_car_stress_shortfall_vs_min_pct,0.000,percent,estimated,"max(0, shared minimum CAR - stressed proxy), percentage points. Zero means no shortfall in this stress."
+absa-ghana,upside,FY2027E,ratios,x_car_stress_shortfall_vs_target_pct,0.000,percent,estimated,"max(0, 15% dividend target - stressed proxy), percentage points."
 absa-ghana,upside,FY2027E,balance_sheet,loans_and_advances_gross,,GHS millions,unavailable,Gross loans are not in the source pack (annual note not extracted) and are not forecast.
 absa-ghana,upside,FY2027E,balance_sheet,loan_loss_allowance,,GHS millions,unavailable,Allowance is not in the source pack and is not forecast; impairment is driven by a cost of risk on net loans.
 absa-ghana,upside,FY2027E,ratios,npl_pct,,percent,unavailable,No NPL path is forecast. Reported NPL was 14.09% (Sep 2025) and 11.32% (Sep 2026); cost of risk is an independent assumption.
+absa-ghana,upside,FY2027E,ratios,ldr_pct,,percent,unavailable,Gross loans are not in the source pack; the net ratio is stored as x_net_ldr_pct.
 absa-ghana,upside,FY2027E,ratios,car_pct,,percent,unavailable,Regulatory CAR is not forecast; see x_car_proxy_pct (accounting proxy).
 absa-ghana,upside,FY2027E,ratios,tier1_pct,,percent,unavailable,Tier 1 is not forecast.
 absa-ghana,upside,FY2028E,income_statement,interest_income,3530.168,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
@@ -558,10 +705,22 @@ absa-ghana,upside,FY2028E,ratios,x_car_proxy_pct,18.708,percent,estimated,"PROXY
 absa-ghana,upside,FY2028E,ratios,roe_pct,21.806,percent,estimated,Estimate. Profit after tax / average of opening and closing equity.
 absa-ghana,upside,FY2028E,ratios,roa_pct,3.570,percent,estimated,Estimate. Profit after tax / average of opening and closing total assets.
 absa-ghana,upside,FY2028E,ratios,cost_to_income_pct,43.471,percent,estimated,Estimate. (Staff + depreciation + other expenses) / operating income before impairment.
-absa-ghana,upside,FY2028E,ratios,ldr_pct,55.073,percent,estimated,Estimate. NET loans / customer deposits (gross loans are not forecast).
+absa-ghana,upside,FY2028E,ratios,x_net_ldr_pct,55.073,percent,estimated,Estimate. NET loans / customer deposits. The canonical ldr_pct is unavailable because gross loans are not in the source pack.
+absa-ghana,upside,FY2028E,balance_sheet,x_statutory_reserve,1687.296,GHS millions,estimated,Statutory reserve balance after the Act 930 s34 transfer (FY2026E: 9M-2026 balance plus the Q4 top-up).
+absa-ghana,upside,FY2028E,balance_sheet,x_credit_risk_reserve,317.614,GHS millions,estimated,Held at the 30 Sep 2026 balance.
+absa-ghana,upside,FY2028E,income_statement,x_statutory_transfer_full_year,194.375,GHS millions,estimated,Full-year Act 930 s34 requirement on full-year profit after tax.
+absa-ghana,upside,FY2028E,balance_sheet,x_reserve_requirement_calibrated,4529.289,GHS millions,estimated,"ILLUSTRATIVE PROXY, not the regulatory calculation: macro CRR x 77.06% x customer deposits, where 77.06% = 3,264.9m mandatory reserves / (20% x 21,185.5m deposits) at 30 Sep 2026 (inferred)."
+absa-ghana,upside,FY2028E,balance_sheet,x_eligible_reserve_cash,4529.289,GHS millions,estimated,"Mandatory-reserve share of cash (35.51%, observed at 30 Sep 2026) x modelled cash and bank balances. Proxy."
+absa-ghana,upside,FY2028E,balance_sheet,x_reserve_gap_calibrated,0.000,GHS millions,estimated,"max(0, calibrated requirement - eligible reserve cash). Proxy; the issuer reports no liquidity breach."
+absa-ghana,upside,FY2028E,balance_sheet,x_reserve_gap_full_deposit_stress,1348.687,GHS millions,estimated,"STRESS: max(0, CRR x all customer deposits - eligible reserve cash). Not a regulatory result."
+absa-ghana,upside,FY2028E,balance_sheet,x_reserve_gap_eligibility_stress,905.858,GHS millions,estimated,STRESS: calibrated requirement against eligible reserve cash 20% lower than observed. Not a regulatory result.
+absa-ghana,upside,FY2028E,ratios,x_car_stress_pct,15.307,percent,estimated,HYPOTHETICAL stress: capital proxy with the numerator 10% lower and risk-weighted assets 10% higher. Not a regulatory result.
+absa-ghana,upside,FY2028E,ratios,x_car_stress_shortfall_vs_min_pct,0.000,percent,estimated,"max(0, shared minimum CAR - stressed proxy), percentage points. Zero means no shortfall in this stress."
+absa-ghana,upside,FY2028E,ratios,x_car_stress_shortfall_vs_target_pct,0.000,percent,estimated,"max(0, 15% dividend target - stressed proxy), percentage points."
 absa-ghana,upside,FY2028E,balance_sheet,loans_and_advances_gross,,GHS millions,unavailable,Gross loans are not in the source pack (annual note not extracted) and are not forecast.
 absa-ghana,upside,FY2028E,balance_sheet,loan_loss_allowance,,GHS millions,unavailable,Allowance is not in the source pack and is not forecast; impairment is driven by a cost of risk on net loans.
 absa-ghana,upside,FY2028E,ratios,npl_pct,,percent,unavailable,No NPL path is forecast. Reported NPL was 14.09% (Sep 2025) and 11.32% (Sep 2026); cost of risk is an independent assumption.
+absa-ghana,upside,FY2028E,ratios,ldr_pct,,percent,unavailable,Gross loans are not in the source pack; the net ratio is stored as x_net_ldr_pct.
 absa-ghana,upside,FY2028E,ratios,car_pct,,percent,unavailable,Regulatory CAR is not forecast; see x_car_proxy_pct (accounting proxy).
 absa-ghana,upside,FY2028E,ratios,tier1_pct,,percent,unavailable,Tier 1 is not forecast.
 absa-ghana,upside,FY2029E,income_statement,interest_income,3941.266,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
@@ -601,10 +760,22 @@ absa-ghana,upside,FY2029E,ratios,x_car_proxy_pct,17.901,percent,estimated,"PROXY
 absa-ghana,upside,FY2029E,ratios,roe_pct,21.669,percent,estimated,Estimate. Profit after tax / average of opening and closing equity.
 absa-ghana,upside,FY2029E,ratios,roa_pct,3.397,percent,estimated,Estimate. Profit after tax / average of opening and closing total assets.
 absa-ghana,upside,FY2029E,ratios,cost_to_income_pct,43.440,percent,estimated,Estimate. (Staff + depreciation + other expenses) / operating income before impairment.
-absa-ghana,upside,FY2029E,ratios,ldr_pct,53.020,percent,estimated,Estimate. NET loans / customer deposits (gross loans are not forecast).
+absa-ghana,upside,FY2029E,ratios,x_net_ldr_pct,53.020,percent,estimated,Estimate. NET loans / customer deposits. The canonical ldr_pct is unavailable because gross loans are not in the source pack.
+absa-ghana,upside,FY2029E,balance_sheet,x_statutory_reserve,1897.489,GHS millions,estimated,Statutory reserve balance after the Act 930 s34 transfer (FY2026E: 9M-2026 balance plus the Q4 top-up).
+absa-ghana,upside,FY2029E,balance_sheet,x_credit_risk_reserve,317.614,GHS millions,estimated,Held at the 30 Sep 2026 balance.
+absa-ghana,upside,FY2029E,income_statement,x_statutory_transfer_full_year,210.193,GHS millions,estimated,Full-year Act 930 s34 requirement on full-year profit after tax.
+absa-ghana,upside,FY2029E,balance_sheet,x_reserve_requirement_calibrated,5363.244,GHS millions,estimated,"ILLUSTRATIVE PROXY, not the regulatory calculation: macro CRR x 77.06% x customer deposits, where 77.06% = 3,264.9m mandatory reserves / (20% x 21,185.5m deposits) at 30 Sep 2026 (inferred)."
+absa-ghana,upside,FY2029E,balance_sheet,x_eligible_reserve_cash,5363.244,GHS millions,estimated,"Mandatory-reserve share of cash (35.51%, observed at 30 Sep 2026) x modelled cash and bank balances. Proxy."
+absa-ghana,upside,FY2029E,balance_sheet,x_reserve_gap_calibrated,0.000,GHS millions,estimated,"max(0, calibrated requirement - eligible reserve cash). Proxy; the issuer reports no liquidity breach."
+absa-ghana,upside,FY2029E,balance_sheet,x_reserve_gap_full_deposit_stress,1597.014,GHS millions,estimated,"STRESS: max(0, CRR x all customer deposits - eligible reserve cash). Not a regulatory result."
+absa-ghana,upside,FY2029E,balance_sheet,x_reserve_gap_eligibility_stress,1072.649,GHS millions,estimated,STRESS: calibrated requirement against eligible reserve cash 20% lower than observed. Not a regulatory result.
+absa-ghana,upside,FY2029E,ratios,x_car_stress_pct,14.647,percent,estimated,HYPOTHETICAL stress: capital proxy with the numerator 10% lower and risk-weighted assets 10% higher. Not a regulatory result.
+absa-ghana,upside,FY2029E,ratios,x_car_stress_shortfall_vs_min_pct,0.000,percent,estimated,"max(0, shared minimum CAR - stressed proxy), percentage points. Zero means no shortfall in this stress."
+absa-ghana,upside,FY2029E,ratios,x_car_stress_shortfall_vs_target_pct,0.353,percent,estimated,"max(0, 15% dividend target - stressed proxy), percentage points."
 absa-ghana,upside,FY2029E,balance_sheet,loans_and_advances_gross,,GHS millions,unavailable,Gross loans are not in the source pack (annual note not extracted) and are not forecast.
 absa-ghana,upside,FY2029E,balance_sheet,loan_loss_allowance,,GHS millions,unavailable,Allowance is not in the source pack and is not forecast; impairment is driven by a cost of risk on net loans.
 absa-ghana,upside,FY2029E,ratios,npl_pct,,percent,unavailable,No NPL path is forecast. Reported NPL was 14.09% (Sep 2025) and 11.32% (Sep 2026); cost of risk is an independent assumption.
+absa-ghana,upside,FY2029E,ratios,ldr_pct,,percent,unavailable,Gross loans are not in the source pack; the net ratio is stored as x_net_ldr_pct.
 absa-ghana,upside,FY2029E,ratios,car_pct,,percent,unavailable,Regulatory CAR is not forecast; see x_car_proxy_pct (accounting proxy).
 absa-ghana,upside,FY2029E,ratios,tier1_pct,,percent,unavailable,Tier 1 is not forecast.
 absa-ghana,upside,FY2030E,income_statement,interest_income,4401.506,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
@@ -636,7 +807,7 @@ absa-ghana,upside,FY2030E,balance_sheet,due_to_banks,1234.257,GHS millions,estim
 absa-ghana,upside,FY2030E,balance_sheet,borrowings,5754.475,GHS millions,estimated,Estimate.
 absa-ghana,upside,FY2030E,balance_sheet,other_liabilities,3290.546,GHS millions,estimated,Estimate.
 absa-ghana,upside,FY2030E,balance_sheet,total_liabilities,51671.934,GHS millions,estimated,Estimate.
-absa-ghana,upside,FY2030E,balance_sheet,retained_earnings,5977.181,GHS millions,estimated,Estimate.
+absa-ghana,upside,FY2030E,balance_sheet,retained_earnings,5977.182,GHS millions,estimated,Estimate.
 absa-ghana,upside,FY2030E,balance_sheet,reserves_other,2436.014,GHS millions,estimated,Estimate.
 absa-ghana,upside,FY2030E,balance_sheet,total_equity,8813.195,GHS millions,estimated,Estimate.
 absa-ghana,upside,FY2030E,balance_sheet,stated_capital,400.000,GHS millions,estimated,Held at 400m; no issue assumed. Matches the shared minimum paid-up capital.
@@ -644,10 +815,22 @@ absa-ghana,upside,FY2030E,ratios,x_car_proxy_pct,16.991,percent,estimated,"PROXY
 absa-ghana,upside,FY2030E,ratios,roe_pct,21.417,percent,estimated,Estimate. Profit after tax / average of opening and closing equity.
 absa-ghana,upside,FY2030E,ratios,roa_pct,3.198,percent,estimated,Estimate. Profit after tax / average of opening and closing total assets.
 absa-ghana,upside,FY2030E,ratios,cost_to_income_pct,43.661,percent,estimated,Estimate. (Staff + depreciation + other expenses) / operating income before impairment.
-absa-ghana,upside,FY2030E,ratios,ldr_pct,49.927,percent,estimated,Estimate. NET loans / customer deposits (gross loans are not forecast).
+absa-ghana,upside,FY2030E,ratios,x_net_ldr_pct,49.927,percent,estimated,Estimate. NET loans / customer deposits. The canonical ldr_pct is unavailable because gross loans are not in the source pack.
+absa-ghana,upside,FY2030E,balance_sheet,x_statutory_reserve,2123.821,GHS millions,estimated,Statutory reserve balance after the Act 930 s34 transfer (FY2026E: 9M-2026 balance plus the Q4 top-up).
+absa-ghana,upside,FY2030E,balance_sheet,x_credit_risk_reserve,317.614,GHS millions,estimated,Held at the 30 Sep 2026 balance.
+absa-ghana,upside,FY2030E,income_statement,x_statutory_transfer_full_year,226.332,GHS millions,estimated,Full-year Act 930 s34 requirement on full-year profit after tax.
+absa-ghana,upside,FY2030E,balance_sheet,x_reserve_requirement_calibrated,6379.043,GHS millions,estimated,"ILLUSTRATIVE PROXY, not the regulatory calculation: macro CRR x 77.06% x customer deposits, where 77.06% = 3,264.9m mandatory reserves / (20% x 21,185.5m deposits) at 30 Sep 2026 (inferred)."
+absa-ghana,upside,FY2030E,balance_sheet,x_eligible_reserve_cash,6379.043,GHS millions,estimated,"Mandatory-reserve share of cash (35.51%, observed at 30 Sep 2026) x modelled cash and bank balances. Proxy."
+absa-ghana,upside,FY2030E,balance_sheet,x_reserve_gap_calibrated,0.000,GHS millions,estimated,"max(0, calibrated requirement - eligible reserve cash). Proxy; the issuer reports no liquidity breach."
+absa-ghana,upside,FY2030E,balance_sheet,x_reserve_gap_full_deposit_stress,1899.488,GHS millions,estimated,"STRESS: max(0, CRR x all customer deposits - eligible reserve cash). Not a regulatory result."
+absa-ghana,upside,FY2030E,balance_sheet,x_reserve_gap_eligibility_stress,1275.809,GHS millions,estimated,STRESS: calibrated requirement against eligible reserve cash 20% lower than observed. Not a regulatory result.
+absa-ghana,upside,FY2030E,ratios,x_car_stress_pct,13.902,percent,estimated,HYPOTHETICAL stress: capital proxy with the numerator 10% lower and risk-weighted assets 10% higher. Not a regulatory result.
+absa-ghana,upside,FY2030E,ratios,x_car_stress_shortfall_vs_min_pct,0.000,percent,estimated,"max(0, shared minimum CAR - stressed proxy), percentage points. Zero means no shortfall in this stress."
+absa-ghana,upside,FY2030E,ratios,x_car_stress_shortfall_vs_target_pct,1.098,percent,estimated,"max(0, 15% dividend target - stressed proxy), percentage points."
 absa-ghana,upside,FY2030E,balance_sheet,loans_and_advances_gross,,GHS millions,unavailable,Gross loans are not in the source pack (annual note not extracted) and are not forecast.
 absa-ghana,upside,FY2030E,balance_sheet,loan_loss_allowance,,GHS millions,unavailable,Allowance is not in the source pack and is not forecast; impairment is driven by a cost of risk on net loans.
 absa-ghana,upside,FY2030E,ratios,npl_pct,,percent,unavailable,No NPL path is forecast. Reported NPL was 14.09% (Sep 2025) and 11.32% (Sep 2026); cost of risk is an independent assumption.
+absa-ghana,upside,FY2030E,ratios,ldr_pct,,percent,unavailable,Gross loans are not in the source pack; the net ratio is stored as x_net_ldr_pct.
 absa-ghana,upside,FY2030E,ratios,car_pct,,percent,unavailable,Regulatory CAR is not forecast; see x_car_proxy_pct (accounting proxy).
 absa-ghana,upside,FY2030E,ratios,tier1_pct,,percent,unavailable,Tier 1 is not forecast.
 absa-ghana,upside,FY2026E,income_statement,x_q4_implied_profit_before_tax,504.422,GHS millions,estimated,FY2026E profit before tax less 9M-2026 actual.

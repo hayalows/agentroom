@@ -42,7 +42,11 @@ FEE_EXP = H(P9, "fee_commission_expense") / H(P9, "fee_commission_income")      
 STATED = H("FY2025", "stated_capital")
 TRADING = H(P9, "x_nonpledged_trading_assets") + H(P9, "x_pledged_trading_assets")   # held flat inside other_assets
 DFB_SHARE = H(P9, "due_from_banks") / H(P9, "customer_deposits")
-STAT_RES = H(P9, "x_statutory_reserve")        # unchanged from FY2025 (transfer is booked at year end)
+RES_BASE_SHARE = H(P9, "x_mandatory_cash_reserves") / (M("base", "FY2026E", "crr_pct") / 100 * H(P9, "customer_deposits"))   # 0.7706: share of deposits that carries the reserve requirement (inferred, not observed)
+ELIG_SHARE = H(P9, "x_mandatory_cash_reserves") / H(P9, "cash_and_bog_balances")   # 0.3551: share of cash held as mandatory reserves (observed at 30 Sep 2026)
+ELIG_HAIRCUT = 0.20   # stress: eligible reserve cash 20% lower than observed share
+STRESS_NUM_HAIRCUT, STRESS_RWA_UP = 0.10, 0.10   # capital stress: numerator -10%, risk-weighted assets +10% (hypothetical)
+Q4 = 0.25   # one quarter of the annualised FY2026E anchor
 RES_OTHER_FIXED = H(P9, "x_credit_risk_reserve") + H(P9, "x_other_reserves")   # held
 CAR0 = H(P9, "car_pct")
 EQA0 = H(P9, "total_equity") / H(P9, "total_assets")   # proxy = reported CAR x (equity/assets) / (equity/assets at 30 Sep 2026)
@@ -86,7 +90,7 @@ def stat_transfer(prior_reserve, pat):
     return (0.50 if ratio < 0.5 else 0.25 if ratio < 1.0 else 0.125) * pat
 
 
-def run(sc, haircut=None, cof_mult=1.0, bill_weight=None, tax=None, loan_growth_scale=1.0):
+def run(sc, haircut=None, cof_mult=1.0, bill_weight=None, tax=None, loan_growth_scale=1.0, q4_yield_pts=0.0, q4_cor=None, q4_cof_mult=1.0, penalty=0.0, stress_gate=False):
     hc = HAIRCUT if haircut is None else haircut
     cof = COF * cof_mult
     tx = TAX if tax is None else tax
@@ -102,10 +106,10 @@ def run(sc, haircut=None, cof_mult=1.0, bill_weight=None, tax=None, loan_growth_
         if i == 0:
             r.update(loans=H(P9, "loans_and_advances_net"), dep_c=H(P9, "customer_deposits"), dep_b=H(P9, "due_to_banks"), bor=H(P9, "borrowings"),
                      oth_l=H(P9, "other_liabilities"), oth_a=H(P9, "other_assets") - TRADING, ppe=H(P9, "property_equipment_intangibles"), dfb=H(P9, "due_from_banks"))
-            ii = _ii_anchor * (1 if hc == HAIRCUT else 1)
-            if hc != HAIRCUT:   # sensitivity: re-price the securities part of the anchor
-                ii = _loan_part26 + _sec_open * sec_yield(sc, y, hc, bill_weight)
-            ie = H(P9, "interest_expense") * _f * (cof / COF)
+            # Nine months are reported and frozen. Sensitivities change the implied Q4 only (one quarter of the annualised anchor).
+            F = lambda h: _loan_part26 + _sec_open * sec_yield(sc, y, h, bill_weight)
+            ii = _ii_anchor + Q4 * (F(hc) - F(HAIRCUT)) + Q4 * _sec_open * q4_yield_pts / 100
+            ie = H(P9, "interest_expense") * _f * (1 + Q4 * ((cof / COF - 1) + (q4_cof_mult - 1)))
             fee_i = H(P9, "fee_commission_income") * _f
             fee_e = H(P9, "fee_commission_expense") * _f
             nti = H(P9, "net_trading_income") * _f
@@ -113,7 +117,7 @@ def run(sc, haircut=None, cof_mult=1.0, bill_weight=None, tax=None, loan_growth_
             staff = H(P9, "staff_costs") * _f
             dep = H(P9, "depreciation_amortisation") * _f
             othx = H(P9, "other_operating_expenses") * _f
-            q4_imp = C["cost_of_risk_on_average_net_loans"]["base"] * H(P9, "loans_and_advances_net") / 4
+            q4_imp = (C["cost_of_risk_on_average_net_loans"]["base"] if q4_cor is None else q4_cor) * H(P9, "loans_and_advances_net") / 4
             imp = H(P9, "impairment_charge") + q4_imp
             equity_open = H("FY2025", "total_equity")
             prior_res = H("FY2025", "x_statutory_reserve")
@@ -141,19 +145,26 @@ def run(sc, haircut=None, cof_mult=1.0, bill_weight=None, tax=None, loan_growth_
             dep = p["dep"] * (1 + infl)
             othx = p["othx"] * (1 + infl + G["other_opex_growth_over_inflation"]["value"])
             imp = C["cost_of_risk_on_average_net_loans"][sc] * avg_loans
-            div_target = K["dividend_payout_of_prior_year_profit"][sc] * p["pat"]
+            div_target = max(0.0, K["dividend_payout_of_prior_year_profit"][sc] * p["pat"])
             equity_open = p["te"]
             prior_res = p["stat_res"]
         nii = ii - ie
         opinc = nii + fee_i - fee_e + nti + oth
         pbt = opinc - imp - (staff + dep + othx)
-        if i == 0:   # nine months of tax are already booked at the observed rate; Q4 profit is taxed at the statutory blend
-            tax_amt = H(P9, "income_tax") + tx * max(0.0, pbt - H(P9, "profit_before_tax")) + min(0.0, (pbt - H(P9, "profit_before_tax")) * tx)
+        if i == 0:   # nine months of tax are already booked at the observed rate; Q4 profit is taxed at the tax rate; no tax credit is taken on a Q4 loss
+            tax_amt = H(P9, "income_tax") + tx * max(0.0, pbt - H(P9, "profit_before_tax"))
+            pbt -= penalty   # post-balance-sheet penalty stress: charged with no tax benefit (tax computed before it)
         else:
             tax_amt = tx * pbt if pbt > 0 else 0.0
         pat = pbt - tax_amt
-        transfer = stat_transfer(prior_res, pat)
-        stat_res = (H(P9, "x_statutory_reserve") + stat_transfer(prior_res, pat - H(P9, "profit_after_tax"))) if i == 0 else prior_res + transfer
+        transfer = stat_transfer(prior_res, pat)   # full-year requirement on full-year profit
+        q4_transfer = max(0.0, transfer - H(P9, "x_ytd_statutory_transfer")) if i == 0 else 0.0   # full-year requirement less the 123.2m actually transferred in 9M-2026
+        stat_res = (H(P9, "x_statutory_reserve") + q4_transfer) if i == 0 else prior_res + transfer
+        req_cal = crr * RES_BASE_SHARE * r["dep_c"]
+        elig = ELIG_SHARE * (crr + OPCASH) * r["dep_c"]
+        gap_cal = max(0.0, round(req_cal - elig, 6))
+        gap_full = max(0.0, crr * r["dep_c"] - elig)
+        gap_hair = max(0.0, req_cal - (1 - ELIG_HAIRCUT) * elig)
         tl = r["dep_c"] + r["dep_b"] + r["bor"] + r["oth_l"]
         div_flag = ""
         if i == 0:
@@ -165,7 +176,9 @@ def run(sc, haircut=None, cof_mult=1.0, bill_weight=None, tax=None, loan_growth_
             if div < div_target:
                 div_flag = "capped by distributable retained earnings"
             te_after = equity_open + pat - div
-            if CAR0 * (te_after / (tl + te_after)) / EQA0 < TARGET_CAR and div > 0:
+            if (gap_hair if stress_gate else gap_cal) > 0 and div > 0:
+                div, div_flag = 0.0, "withheld: reserve-cash gap" + (" under the 20% eligibility stress" if stress_gate else "")
+            elif CAR0 * (te_after / (tl + te_after)) / EQA0 < TARGET_CAR and div > 0:
                 div, div_flag = 0.0, "withheld: CAR proxy would fall below the dividend buffer"
             te = equity_open + pat - div
         res_other = stat_res + RES_OTHER_FIXED
@@ -176,9 +189,10 @@ def run(sc, haircut=None, cof_mult=1.0, bill_weight=None, tax=None, loan_growth_
         r["oth_a_total"] = r["oth_a"] + TRADING
         r.update(dict(ii=ii, ie=ie, nii=nii, fee_i=fee_i, fee_e=fee_e, nti=nti, oth=oth, opinc=opinc, staff=staff, dep=dep, othx=othx, imp=imp, pbt=pbt,
                       tax=tax_amt, pat=pat, div=div, te=te, stat_res=stat_res, res_other=res_other, retained=retained, tl=tl, ta=ta, cash=cash,
+                      req_cal=req_cal, elig=elig, gap_cal=gap_cal, gap_full=gap_full, gap_hair=gap_hair, q4_transfer=q4_transfer,
                       liquid=liquid, secs=liquid, div_flag=div_flag, div_target=0.0 if i == 0 else div_target, transfer=transfer))
         r["car_proxy"] = CAR0 * (te / ta) / EQA0
-        r["car_proxy_fy25_density"] = r["car_proxy"]
+        r["car_stress"] = r["car_proxy"] * (1 - STRESS_NUM_HAIRCUT) / (1 + STRESS_RWA_UP)
         r["min_car"] = minc
         r["ldr"] = r["loans"] / r["dep_c"] * 100
         r["cti"] = (staff + dep + othx) / opinc * 100
@@ -209,7 +223,7 @@ def write_rows(sc, res):
             emit(sc, y, IS, item, r[key], n)
         emit(sc, y, IS, "x_dividends_paid", H(P9, "x_dividends_paid") if first else r["div"], "FY2026E: 1,115m actually paid in 9M-2026 (in the equity base); none is added for Q4." if first else "Payout x prior-year profit after tax (assumptions.json), capped as flagged.")
         emit(sc, y, IS, "x_statutory_reserve_transfer", r["transfer"], "Act 930 s34 tiers on profit after tax (see model.py stat_transfer).")
-        note_bs = "Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit." if first else "Estimate."
+        note_bs = "Estimate. FY2026E carries the 30 Sep 2026 loans, deposits, borrowings, other assets and property forward; equity adds Q4 profit, and cash, due from banks and the securities plug are recomputed." if first else "Estimate."
         for item, key in [("cash_and_bog_balances", "cash"), ("investment_securities", "secs"), ("loans_and_advances_net", "loans"),
                           ("property_equipment_intangibles", "ppe"), ("due_from_banks", "dfb"), ("other_assets", "oth_a_total"), ("total_assets", "ta"), ("customer_deposits", "dep_c"),
                           ("due_to_banks", "dep_b"), ("borrowings", "bor"), ("other_liabilities", "oth_l"), ("total_liabilities", "tl"),
@@ -220,10 +234,24 @@ def write_rows(sc, res):
         emit(sc, y, RT, "roe_pct", r["roe"], "Estimate. Profit after tax / average of opening and closing equity.")
         emit(sc, y, RT, "roa_pct", r["roa"], "Estimate. Profit after tax / average of opening and closing total assets.")
         emit(sc, y, RT, "cost_to_income_pct", r["cti"], "Estimate. (Staff + depreciation + other expenses) / operating income before impairment.")
-        emit(sc, y, RT, "ldr_pct", r["ldr"], "Estimate. NET loans / customer deposits (gross loans are not forecast).")
+        emit(sc, y, RT, "x_net_ldr_pct", r["ldr"], "Estimate. NET loans / customer deposits. The canonical ldr_pct is unavailable because gross loans are not in the source pack.")
+        emit(sc, y, BS, "x_statutory_reserve", r["stat_res"], "Statutory reserve balance after the Act 930 s34 transfer (FY2026E: 9M-2026 balance plus the Q4 top-up).")
+        emit(sc, y, BS, "x_credit_risk_reserve", H(P9, "x_credit_risk_reserve"), "Held at the 30 Sep 2026 balance.")
+        emit(sc, y, IS, "x_statutory_transfer_full_year", r["transfer"], "Full-year Act 930 s34 requirement on full-year profit after tax." + (" 123.167m of it was already transferred in 9M-2026." if first else ""))
+        if first:
+            emit(sc, y, IS, "x_q4_statutory_transfer", r["q4_transfer"], "Full-year requirement less the 123.167m actually transferred in 9M-2026 (never negative).")
+        emit(sc, y, BS, "x_reserve_requirement_calibrated", r["req_cal"], "ILLUSTRATIVE PROXY, not the regulatory calculation: macro CRR x 77.06% x customer deposits, where 77.06% = 3,264.9m mandatory reserves / (20% x 21,185.5m deposits) at 30 Sep 2026 (inferred).")
+        emit(sc, y, BS, "x_eligible_reserve_cash", r["elig"], "Mandatory-reserve share of cash (35.51%, observed at 30 Sep 2026) x modelled cash and bank balances. Proxy.")
+        emit(sc, y, BS, "x_reserve_gap_calibrated", r["gap_cal"], "max(0, calibrated requirement - eligible reserve cash). Proxy; the issuer reports no liquidity breach.")
+        emit(sc, y, BS, "x_reserve_gap_full_deposit_stress", r["gap_full"], "STRESS: max(0, CRR x all customer deposits - eligible reserve cash). Not a regulatory result.")
+        emit(sc, y, BS, "x_reserve_gap_eligibility_stress", r["gap_hair"], "STRESS: calibrated requirement against eligible reserve cash 20% lower than observed. Not a regulatory result.")
+        emit(sc, y, RT, "x_car_stress_pct", r["car_stress"], "HYPOTHETICAL stress: capital proxy with the numerator 10% lower and risk-weighted assets 10% higher. Not a regulatory result.")
+        emit(sc, y, RT, "x_car_stress_shortfall_vs_min_pct", max(0.0, r["min_car"] - r["car_stress"]), "max(0, shared minimum CAR - stressed proxy), percentage points. Zero means no shortfall in this stress.")
+        emit(sc, y, RT, "x_car_stress_shortfall_vs_target_pct", max(0.0, TARGET_CAR - r["car_stress"]), "max(0, 15% dividend target - stressed proxy), percentage points.")
         for stmt_, item_, why in [("balance_sheet", "loans_and_advances_gross", "Gross loans are not in the source pack (annual note not extracted) and are not forecast."),
                                   ("balance_sheet", "loan_loss_allowance", "Allowance is not in the source pack and is not forecast; impairment is driven by a cost of risk on net loans."),
                                   ("ratios", "npl_pct", "No NPL path is forecast. Reported NPL was 14.09% (Sep 2025) and 11.32% (Sep 2026); cost of risk is an independent assumption."),
+                                  ("ratios", "ldr_pct", "Gross loans are not in the source pack; the net ratio is stored as x_net_ldr_pct."),
                                   ("ratios", "car_pct", "Regulatory CAR is not forecast; see x_car_proxy_pct (accounting proxy)."),
                                   ("ratios", "tier1_pct", "Tier 1 is not forecast.")]:
             out.append([BANK, sc, y, stmt_, item_, "", "percent" if stmt_ == "ratios" else "GHS millions", "unavailable", why])
@@ -245,7 +273,7 @@ with open(os.path.join(HERE, "forecast.csv"), "w", newline="", encoding="utf-8")
     w.writerows(out)
 
 # ------------------------------------------------------------------ checks.md
-L = ["# Forecast checks (uba-ghana)", "",
+L = ["# Forecast checks (absa-ghana)", "",
      "Generated by `model.py` from `financials.csv`, `assumptions.json` and the shared macro file. GHS millions; ratios in percent. Every forecast value is an estimate.", "",
      "## 1. Forecast identities (all scenarios, all years)", "",
      "| Scenario | Year | Balance (A = L + E) | Asset lines = total | NII = II - IE | PAT = PBT - tax | Equity roll | CAR proxy | Min CAR |",
@@ -296,10 +324,29 @@ q = f26
 L += ["## 2c. Q4-2026 implied by the FY2026E anchor (same in all scenarios)", "",
       "| Item | 9M-2026 actual | FY2026E | Implied Q4 |", "| --- | --- | --- | --- |",
       f"| Profit before tax | {H(P9, 'profit_before_tax'):,.1f} | {q['pbt']:,.1f} | {q['pbt'] - H(P9, 'profit_before_tax'):,.1f} |",
-      f"| Income tax | {H(P9, 'income_tax'):,.1f} | {q['tax']:,.1f} | {q['tax'] - H(P9, 'income_tax'):,.1f} ({(q['tax'] - H(P9, 'income_tax')) / (q['pbt'] - H(P9, 'profit_before_tax')) * 100:.0f}% of Q4 PBT) |",
+      f"| Income tax | {H(P9, 'income_tax'):,.1f} | {q['tax']:,.1f} | {q['tax'] - H(P9, 'income_tax'):,.1f} ({(q['tax'] - H(P9, 'income_tax')) / (q['pbt'] - H(P9, 'profit_before_tax')) * 100:.1f}% of Q4 PBT, the 35.5% tax rate) |",
       f"| Impairment | {H(P9, 'impairment_charge'):,.1f} | {q['imp']:,.1f} | {q['imp'] - H(P9, 'impairment_charge'):,.1f} |",
       f"| Profit after tax | {H(P9, 'profit_after_tax'):,.1f} | {q['pat']:,.1f} | {q['pat'] - H(P9, 'profit_after_tax'):,.1f} |", "",
       f"Q4 profit before tax is the 9M run rate for every line except impairment (9M impairment was 198.4m; Q4 gets a charge at the base cost of risk). The 9M-2026 tax rate was 35.6% against 35.7% in FY2025, so the full-year rate comes out at {q['tax'] / q['pbt'] * 100:.1f}%.", ""]
+
+# Q4-only sensitivities (nine months frozen)
+b0 = run("base")["FY2026E"]
+q4v = [("As modelled", b0), ("Q4 securities yield -2 pts", run("base", q4_yield_pts=-2.0)["FY2026E"]), ("Q4 securities yield +2 pts", run("base", q4_yield_pts=2.0)["FY2026E"]),
+       ("Q4 cost of risk 5% (annualised, on net loans)", run("base", q4_cor=0.05)["FY2026E"]), ("Q4 funding cost +25%", run("base", q4_cof_mult=1.25)["FY2026E"]),
+       ("Q4 funding cost -25%", run("base", q4_cof_mult=0.75)["FY2026E"]), ("Confirmed 16.1m post-balance-sheet penalty, no tax benefit", run("base", penalty=16.1)["FY2026E"])]
+L += ["## 2d. Q4-only sensitivities of FY2026E (nine months frozen at the reported figures)", "", "| Variant | FY2026E PBT | FY2026E tax | FY2026E PAT | Change in PAT |", "| --- | --- | --- | --- | --- |"]
+for lab, r_ in q4v:
+    L.append(f"| {lab} | {r_['pbt']:,.1f} | {r_['tax']:,.1f} | {r_['pat']:,.1f} | {r_['pat'] - b0['pat']:+,.1f} |")
+L += ["", "The 16.1m penalty is the Q3 2026 statement's post-balance-sheet note (via the source pack); whether and when it is recognised is unknown, so it is a stress and not in the base. The 0.36m sanction is immaterial and not modelled.", ""]
+alt = {sc: run(sc, stress_gate=True) for sc in SCEN}
+L += ["## 2e. Reserve-cash and capital stresses (illustrative proxies, not regulatory calculations)", "",
+      f"Reserve proxy calibration: at 30 Sep 2026 mandatory reserves were 3,264.9m; that is {ELIG_SHARE*100:.2f}% of cash and bank balances (observed) and implies the requirement applies to {RES_BASE_SHARE*100:.2f}% of customer deposits at a 20% rate (inferred). The issuer reports no liquidity breach. The cash line itself is modelled as (CRR + a solved share) of deposits, so the calibrated gap is zero by construction; the two stress columns show how much reserve cash the bank would need if the requirement applied to all deposits or if eligible cash were 20% lower.", "",
+      "| Scenario | Year | Calibrated gap | Full-deposit stress gap | Eligibility stress gap (20% lower) | Dividend in model | Dividend if eligibility stress withholds | CAR proxy | CAR stress (num -10%, RWA +10%) | Shortfall vs 13% minimum |", "| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |"]
+for sc in SCEN:
+    for y in YEARS:
+        r_, a_ = all_res[sc][y], alt[sc][y]
+        L.append(f"| {sc} | {y} | {r_['gap_cal']:,.0f} | {r_['gap_full']:,.0f} | {r_['gap_hair']:,.0f} | {r_['div']:,.0f} | {a_['div']:,.0f} | {r_['car_proxy']:.1f}% | {r_['car_stress']:.1f}% | {max(0.0, r_['min_car'] - r_['car_stress']):.1f} pts |")
+L += ["", "Reading: under the eligibility stress the model would withhold the dividends shown in the 'if withheld' column. The base dividend uses the calibrated screen, which cannot bind by construction. The stressed capital proxy stays above the minimum in every scenario-year unless a shortfall is shown. None of this is a statement of actual compliance.", ""]
 
 # scenario ordering
 L += ["## 3. Scenario ordering of profit after tax", "", "| Year | Downside | Base | Upside | Ordered downside < base < upside? |", "| --- | --- | --- | --- | --- |"]
@@ -331,4 +378,4 @@ print(f"forecast rows: {len(out)} | forecast failures: {fails} | haircut {HAIRCU
 for sc in ("base", "downside", "upside"):
     for y in ("FY2026E", "FY2030E"):
         r = all_res[sc][y]
-        print(sc, y, f"PAT {r['pat']:.0f} equity {r['te']:.0f} CAR {r['car_proxy']:.1f}/{r['car_proxy_fy25_density']:.1f} ROE {r['roe']:.1f} LDR {r['ldr']:.0f} secs {r['secs']:.0f} II {r['ii']:.0f} IE {r['ie']:.0f} div {r['div']:.0f}")
+        print(sc, y, f"PAT {r['pat']:.0f} equity {r['te']:.0f} CAR {r['car_proxy']:.1f} ROE {r['roe']:.1f} LDR {r['ldr']:.0f} secs {r['secs']:.0f} II {r['ii']:.0f} IE {r['ie']:.0f} div {r['div']:.0f}")

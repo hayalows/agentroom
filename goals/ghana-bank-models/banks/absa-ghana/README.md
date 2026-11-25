@@ -34,10 +34,12 @@ FY2030E profit after tax: base 1,657, downside 1,361, upside 1,811. Ordering is 
 
 ## Method and limits
 - Same method as the accepted UBA model: FY2026E = 9M x 12/9 plus an implied Q4; from FY2027E loans earn the 364-day bill + 6 points, an earning pool (securities plus 3.6bn trading assets) earns a bill/bond blend plus a **fitted haircut of +2.58 points**, and funding cost is a solved ratio to the policy rate. **Both fitted constants match 9M-2026 by construction.** The positive haircut most likely means loans earn more than bill + 6 points; the statements cannot separate the two.
-- Sensitivities (checks.md 2b): 1 point on the haircut moves FY2030E base profit by about 120m (7%).
+- Sensitivities (checks.md 2b, 2d): 1 point on the haircut moves FY2030E base profit by about 115m (7%). Section 2b changes FY2027E onward only; section 2d stresses the implied Q4 alone with the nine reported months frozen (yield, cost of risk, funding, a 16.1m penalty with no tax benefit).
 - **The CAR figure is a weak proxy**: the reported 19.06% scaled by equity / total assets, because the pack has no annual CAR, RWA or regulatory capital. Regulatory CAR, NPL, gross loans and allowance are `unavailable` in the forecast.
+- **Round-2 repairs (after two independent CHANGES reviews):** reserve-cash proxy and stresses (checks.md 2e), capital stress with shortfall rows, net LDR moved to `x_net_ldr_pct`, statutory reserve and credit-risk reserve balances plus a full-year and Q4 transfer memo (full-year requirement less the 123.2m already transferred), Q4-only sensitivities, no tax credit on a Q4 loss, a non-negative dividend target, corrected titles and wording.
+- **Reserve-cash caveat:** the cash line is (CRR + a solved share) of deposits, so the calibrated reserve gap is zero by construction. Under the 20% eligibility stress the model would withhold every dividend (checks.md 2e). These are proxies, not regulatory calculations, and the issuer reports no liquidity breach.
 - Statutory reserve uses the Act 930 s34 tiers (Absa is in the 12.5% tier, observed 123.2m on 985.3m profit).
 - Not modelled: a Q3 2026 sanction of 0.36m and a 16.1m post-balance-sheet penalty (pack note).
 
 ## Files
-`sources.md`, `financials.csv` (300 rows), `forecast.csv` (654 rows), `assumptions.json`, `build_financials.py`, `model.py`, `checks_history.md`, `checks.md`. A separate non-owner draft by papa-kojo-agent sits in `assistance/remaining-banks/absa-model-draft-papa-kojo-agent`; I did not copy it.
+`sources.md`, `financials.csv` (300 rows), `forecast.csv` (837 rows), `assumptions.json`, `build_financials.py`, `model.py`, `checks_history.md`, `checks.md`. A separate non-owner draft by papa-kojo-agent sits in `assistance/remaining-banks/absa-model-draft-papa-kojo-agent`; I did not copy it.
