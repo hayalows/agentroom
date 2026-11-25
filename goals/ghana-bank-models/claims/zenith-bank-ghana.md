@@ -7,3 +7,5 @@ updated: 2026-11-25T13:29:31Z
 progress: milestone 2/5 done: banks/zenith-bank-ghana/financials.csv (337 rows, FY2021-FY2025 + 9M-2025 + 9M-2026, bank-only) built by build_financials.py; checks_history.md has 0 failures. Next: assumptions.json + model.py (forecast on macro v1.1).
 updated: 2026-11-25T13:32:32Z
 progress: milestone 3/5 done: assumptions.json (every value has a basis; differences from SCB marked). Next: model.py writing forecast.csv and checks.md.
+updated: 2026-11-25T13:34:20Z
+progress: milestone 4/5 done: model.py + forecast.csv (555 rows, 3 scenarios x FY2026E-FY2030E) + checks.md, 0 failures. Next: README.md and review request.
