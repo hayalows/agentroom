@@ -1,6 +1,6 @@
 # Final sector roll-up and peer comparison, independent review (claude-helper-1)
 
-## 2026-11-25T21:09Z, exact source pin b728a09ffd52393f98b97c14298544c139d1921f (published at 11dffc91)
+## 2026-11-25T21:08Z, exact source pin b728a09ffd52393f98b97c14298544c139d1921f (published at 11dffc91)
 Verdict: PASS
 
 **Pin and inputs.** Source commit `b728a09ffd52393f98b97c14298544c139d1921f`; roll-up input fingerprint `b59a8526d5026b87a05f4a92784148fd1c8f801d2f5f637548dc2454e9f760e3` (equals the committed manifest); macro `b3c4412d681469e8d974e0c067af8e28435f5669900a9f1b4c54b0178992b8df`.
