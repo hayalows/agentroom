@@ -4,7 +4,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {spawn,spawnSync} from 'node:child_process';
-import {readState,read,slugOK} from './room-state.mjs';
+import {readState,read,slugOK,hash} from './room-state.mjs';
 import {validAgent} from './participants.mjs';
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const args=process.argv.slice(2),arg=k=>{const i=args.indexOf(k);return i<0?null:args[i+1]};
@@ -38,7 +38,7 @@ const run=(w,p,ms)=>new Promise(resolve=>{
   const finish=(code,error)=>{if(settled)return;settled=true;clearTimeout(timer);children.delete(c);record('turn-finished',{id:w.id,code,error,timedOut,elapsedMs:Date.now()-started});resolve({id:w.id,ok:code===0&&!timedOut&&!error});};
   c.on('error',e=>finish(null,e.code||'spawn-error'));c.on('close',code=>finish(code,null));
 });
-const seen=new Map(),failures=new Map();let turns=0;
+const seen=new Map(),failures=new Map(),dispatches=new Map();let turns=0,idle=0;
 const deadline=Date.now()+maxMinutes*60000;
 try{
   if(git('status','--porcelain'))throw Error('Use a clean dedicated supervisor checkout');
@@ -48,10 +48,12 @@ try{
     git('pull','--ff-only','origin','main');
     const s=readState(root,goal);
     if(s.goalClaimComplete){record('goal-claims-complete',{note:'stop for independent evidence and lead confirmation'});break;}
-    const runnable=workers.filter(w=>s.actionable[w.id]&&s.actionable[w.id].next!=='wait-or-report-blocker'&&(failures.get(w.id)||0)<2&&seen.get(w.id)!==s.agents.find(a=>a.id===w.id)?.last);
-    if(!runnable.length){record('idle',{note:'No fresh eligible checkpoint; do not relaunch unchanged or blocked sessions'});break;}
+    const signature=w=>hash(JSON.stringify({last:s.agents.find(a=>a.id===w.id)?.last,queue:s.actionable[w.id],messages:s.pending.filter(m=>m.to===w.id)}));
+    const runnable=workers.filter(w=>s.actionable[w.id]&&s.actionable[w.id].next!=='wait-or-report-blocker'&&(failures.get(w.id)||0)<2&&seen.get(w.id)!==signature(w)).sort((a,b)=>(dispatches.get(a.id)||0)-(dispatches.get(b.id)||0));
+    if(!runnable.length){idle++;record('idle',{note:'No fresh eligible checkpoint; do not relaunch unchanged or blocked sessions',idle});if(idle>=3)break;await new Promise(r=>setTimeout(r,Math.min(poll*1000,Math.max(0,deadline-Date.now()))));continue;}
+    idle=0;
     const batch=runnable.slice(0,Math.min(parallel,maxTurns-turns));
-    for(const w of batch){seen.set(w.id,s.agents.find(a=>a.id===w.id)?.last);turns++;record('turn-started',{id:w.id,turn:turns});}
+    for(const w of batch){seen.set(w.id,signature(w));dispatches.set(w.id,(dispatches.get(w.id)||0)+1);turns++;record('turn-started',{id:w.id,turn:turns});}
     const results=await Promise.all(batch.map(w=>run(w,prompt(w.id,s),Math.min(timeout*60000,Math.max(1000,deadline-Date.now())))));
     for(const r of results)failures.set(r.id,r.ok?0:(failures.get(r.id)||0)+1);
     if(!stopping&&Date.now()<deadline&&turns<maxTurns)await new Promise(r=>setTimeout(r,Math.min(poll*1000,Math.max(0,deadline-Date.now()))));
