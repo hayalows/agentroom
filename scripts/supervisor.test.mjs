@@ -49,6 +49,9 @@ try{
   const fail=await gateBank(root,goal,task);assert.equal(fail.status,'failed');assert.equal(fail.checks.arithmetic.score,0);assert.notEqual(pass.fingerprint,fail.fingerprint);
   put('banks/bank-a/forecast.csv',forecast);put('sector/macro-assumptions/macro.csv','changed fixture');
   assert.notEqual((await gateBank(root,goal,task)).macroFingerprint,pass.macroFingerprint);
+  assert.equal(reviewVerdict('**Verdict:** **PASS**, with 4 minor notes (none changes a number).'),'PASS');
+  assert.equal(reviewVerdict('Verdict: history PASS. Forecast BLOCK.'),'BLOCK');
+  assert.equal(reviewVerdict('Verdict: PASS (no blocked paths).'),'PASS');
   // Mixed verdicts must block and previous round hashes must not bind a new round.
   assert.equal(reviewVerdict('**Verdict:** history **PASS** (fine). Forecast **CHANGES REQUIRED** (fix).'),'CHANGES');
   put('sector/macro-assumptions/macro.csv','fixture');
