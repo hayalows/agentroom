@@ -1,0 +1,296 @@
+bank,period,statement,line_item,value,unit,source_id,page,status,notes
+fidelity-bank-ghana,FY2021,income_statement,interest_income,1567.42,GHS millions,FBL-AR22,48,derived,"EIR interest income (1,481.778m) + other interest from FVTPL (85.642m) per Note 2.20."
+fidelity-bank-ghana,FY2021,income_statement,interest_expense,721.944,GHS millions,FBL-AR22,48,reported,Bank-only; expenses positive.
+fidelity-bank-ghana,FY2021,income_statement,net_interest_income,845.476,GHS millions,FBL-AR22,48,reported,Bank-only.
+fidelity-bank-ghana,FY2021,income_statement,fee_commission_income,199.012,GHS millions,FBL-AR22,48,reported,Bank-only.
+fidelity-bank-ghana,FY2021,income_statement,fee_commission_expense,54.927,GHS millions,FBL-AR22,48,reported,Bank-only.
+fidelity-bank-ghana,FY2021,income_statement,net_trading_income,116.551,GHS millions,FBL-AR22,116,derived,Note 12 Bank net FX gains (116.551m) + net securities trading income (0).
+fidelity-bank-ghana,FY2021,income_statement,other_operating_income,1.513,GHS millions,FBL-AR22,116,reported,Note 12 Bank sundry income.
+fidelity-bank-ghana,FY2021,income_statement,total_operating_income,1107.625,GHS millions,FBL-AR22,48,reported,Bank-only.
+fidelity-bank-ghana,FY2021,income_statement,staff_costs,254.821,GHS millions,FBL-AR22,48,reported,Bank-only personnel expenses.
+fidelity-bank-ghana,FY2021,income_statement,depreciation_amortisation,52.678,GHS millions,FBL-AR22,48,reported,Bank-only.
+fidelity-bank-ghana,FY2021,income_statement,other_operating_expenses,238.642,GHS millions,FBL-AR22,48,reported,Bank-only other expenses.
+fidelity-bank-ghana,FY2021,income_statement,impairment_charge,56.94,GHS millions,FBL-AR22,48,derived,Net impairment on investment securities (1.001m) + loans & advances (55.939m).
+fidelity-bank-ghana,FY2021,income_statement,profit_before_tax,504.544,GHS millions,FBL-AR22,48,reported,Bank-only.
+fidelity-bank-ghana,FY2021,income_statement,income_tax,163.024,GHS millions,FBL-AR22,48,derived,Income tax (117.796m) + NFSL (25.227m) + FSRL (20.001m).
+fidelity-bank-ghana,FY2021,income_statement,profit_after_tax,341.52,GHS millions,FBL-AR22,48,reported,Bank-only.
+fidelity-bank-ghana,FY2021,balance_sheet,cash_and_bog_balances,2767.433,GHS millions,FBL-AR22,49,reported,Cash and cash equivalents.
+fidelity-bank-ghana,FY2021,balance_sheet,due_from_banks,,GHS millions,,,unavailable,Not split from cash and cash equivalents on balance sheet face.
+fidelity-bank-ghana,FY2021,balance_sheet,investment_securities,7692.223,GHS millions,FBL-AR22,49,reported,Bank-only investment securities.
+fidelity-bank-ghana,FY2021,balance_sheet,loans_and_advances_gross,2394.907,GHS millions,FBL-AR22,126,reported,Note 20 Bank gross loans and advances.
+fidelity-bank-ghana,FY2021,balance_sheet,loan_loss_allowance,116.316,GHS millions,FBL-AR22,126,reported,Note 20 Bank impairment allowance.
+fidelity-bank-ghana,FY2021,balance_sheet,loans_and_advances_net,2278.591,GHS millions,FBL-AR22,49,reported,Bank-only net loans and advances.
+fidelity-bank-ghana,FY2021,balance_sheet,property_equipment_intangibles,218.517,GHS millions,FBL-AR22,49,derived,PPE and ROU assets (175.615m) + intangible assets (42.902m).
+fidelity-bank-ghana,FY2021,balance_sheet,other_assets,393.076,GHS millions,FBL-AR22,49,derived,Investments in subs (12.471m) + deferred tax (17.656m) + other assets (315.061m) + assets held for sale (47.888m).
+fidelity-bank-ghana,FY2021,balance_sheet,total_assets,13349.84,GHS millions,FBL-AR22,49,reported,Bank-only.
+fidelity-bank-ghana,FY2021,balance_sheet,customer_deposits,7907.797,GHS millions,FBL-AR22,49,reported,Bank-only deposits from customers.
+fidelity-bank-ghana,FY2021,balance_sheet,due_to_banks,356.632,GHS millions,FBL-AR22,49,reported,Deposits from banks and other financial institutions.
+fidelity-bank-ghana,FY2021,balance_sheet,borrowings,3548.609,GHS millions,FBL-AR22,49,reported,Bank-only borrowings.
+fidelity-bank-ghana,FY2021,balance_sheet,other_liabilities,294.862,GHS millions,FBL-AR22,49,derived,Derivatives (52.171m) + current tax (7.016m) + other liabilities (235.675m).
+fidelity-bank-ghana,FY2021,balance_sheet,total_liabilities,12107.9,GHS millions,FBL-AR22,49,reported,Bank-only.
+fidelity-bank-ghana,FY2021,balance_sheet,stated_capital,422.84,GHS millions,FBL-AR22,49,reported,Ordinary (285.551m) + preference shares (137.289m).
+fidelity-bank-ghana,FY2021,balance_sheet,retained_earnings,346.362,GHS millions,FBL-AR22,49,reported,Bank-only.
+fidelity-bank-ghana,FY2021,balance_sheet,reserves_other,472.738,GHS millions,FBL-AR22,49,derived,Statutory (440.756m) + other (28.199m) + credit risk reserve (3.783m).
+fidelity-bank-ghana,FY2021,balance_sheet,total_equity,1241.94,GHS millions,FBL-AR22,49,reported,Bank-only.
+fidelity-bank-ghana,FY2021,ratios,car_pct,26.47,%,FBL-AR21,93,reported,Bank-only regulatory CAR (CRD).
+fidelity-bank-ghana,FY2021,ratios,tier1_pct,24.81,%,FBL-AR21,93,reported,Bank-only Tier 1 ratio.
+fidelity-bank-ghana,FY2021,ratios,npl_pct,8.25,%,FBL-AR22,142,reported,Bank-only NPL ratio (substandard to loss).
+fidelity-bank-ghana,FY2021,ratios,ldr_pct,30.2854,%,FBL-AR22,49,derived,loans_and_advances_gross / customer_deposits * 100.
+fidelity-bank-ghana,FY2021,ratios,cost_to_income_pct,49.3074,%,FBL-AR22,48,derived,Total operating expenses / total_operating_income * 100.
+fidelity-bank-ghana,FY2021,ratios,roaa_pct,,%,,,unavailable,Prior-period year-end average assets not computed for FY2021 / 9M interims.
+fidelity-bank-ghana,FY2021,ratios,roae_pct,,%,,,unavailable,Prior-period year-end average equity not computed for FY2021 / 9M interims.
+fidelity-bank-ghana,FY2021,balance_sheet,x_deposits_demand_call,5461.123,GHS millions,FBL-AR22,132,derived,Note 24/25 Bank current + call accounts.
+fidelity-bank-ghana,FY2021,balance_sheet,x_deposits_savings,2034.988,GHS millions,FBL-AR22,132,reported,Note 24/25 Bank savings accounts.
+fidelity-bank-ghana,FY2021,balance_sheet,x_deposits_time_term,411.686,GHS millions,FBL-AR22,132,reported,Note 24/25 Bank time deposits.
+fidelity-bank-ghana,FY2022,income_statement,interest_income,1875.487,GHS millions,FBL-AR23,76,derived,"EIR interest income (1,647.183m) + other interest (228.304m)."
+fidelity-bank-ghana,FY2022,income_statement,interest_expense,979.421,GHS millions,FBL-AR23,76,reported,Bank-only; expenses positive.
+fidelity-bank-ghana,FY2022,income_statement,net_interest_income,896.066,GHS millions,FBL-AR23,76,reported,Bank-only.
+fidelity-bank-ghana,FY2022,income_statement,fee_commission_income,244.106,GHS millions,FBL-AR23,76,reported,Bank-only.
+fidelity-bank-ghana,FY2022,income_statement,fee_commission_expense,108.017,GHS millions,FBL-AR23,76,reported,Bank-only.
+fidelity-bank-ghana,FY2022,income_statement,net_trading_income,392.251,GHS millions,FBL-AR23,136,derived,Note 12 Bank net FX gains (372.712m) + net securities trading income (19.539m).
+fidelity-bank-ghana,FY2022,income_statement,other_operating_income,8.637,GHS millions,FBL-AR23,136,reported,Note 12 Bank sundry income.
+fidelity-bank-ghana,FY2022,income_statement,total_operating_income,1433.043,GHS millions,FBL-AR23,76,reported,Bank-only.
+fidelity-bank-ghana,FY2022,income_statement,staff_costs,288.185,GHS millions,FBL-AR23,76,reported,Bank-only personnel expenses.
+fidelity-bank-ghana,FY2022,income_statement,depreciation_amortisation,56.747,GHS millions,FBL-AR23,76,reported,Bank-only.
+fidelity-bank-ghana,FY2022,income_statement,other_operating_expenses,314.56,GHS millions,FBL-AR23,76,reported,Bank-only other expenses.
+fidelity-bank-ghana,FY2022,income_statement,impairment_charge,1292.174,GHS millions,FBL-AR23,76,derived,"DDEP impairment on investment securities (1,026.322m) + loans & others (265.852m)."
+fidelity-bank-ghana,FY2022,income_statement,profit_before_tax,-518.623,GHS millions,FBL-AR23,76,reported,Bank-only loss before tax.
+fidelity-bank-ghana,FY2022,income_statement,income_tax,-130.038,GHS millions,FBL-AR23,76,reported,Deferred tax credit (-130.038m); tax benefits negative per MODEL-SPEC.
+fidelity-bank-ghana,FY2022,income_statement,profit_after_tax,-388.585,GHS millions,FBL-AR23,76,reported,Bank-only loss for the year.
+fidelity-bank-ghana,FY2022,balance_sheet,cash_and_bog_balances,3421.897,GHS millions,FBL-AR23,77,reported,Cash and cash equivalents.
+fidelity-bank-ghana,FY2022,balance_sheet,due_from_banks,,GHS millions,,,unavailable,Not split from cash and cash equivalents on balance sheet face.
+fidelity-bank-ghana,FY2022,balance_sheet,investment_securities,5945.309,GHS millions,FBL-AR23,77,reported,Bank-only investment securities.
+fidelity-bank-ghana,FY2022,balance_sheet,loans_and_advances_gross,3012.893,GHS millions,FBL-AR22,126,reported,Note 20 Bank gross loans and advances.
+fidelity-bank-ghana,FY2022,balance_sheet,loan_loss_allowance,197.145,GHS millions,FBL-AR22,126,reported,Note 20 Bank impairment allowance.
+fidelity-bank-ghana,FY2022,balance_sheet,loans_and_advances_net,2815.748,GHS millions,FBL-AR23,77,reported,Bank-only net loans and advances.
+fidelity-bank-ghana,FY2022,balance_sheet,property_equipment_intangibles,243.046,GHS millions,FBL-AR23,77,derived,PPE and ROU assets (185.058m) + intangible assets (57.988m).
+fidelity-bank-ghana,FY2022,balance_sheet,other_assets,1359.897,GHS millions,FBL-AR23,77,derived,Derivatives (368.886m) + subs (12.471m) + current tax (35.181m) + DTA (302.178m) + other assets (609.243m) + HFS (31.938m).
+fidelity-bank-ghana,FY2022,balance_sheet,total_assets,13785.897,GHS millions,FBL-AR23,77,reported,Bank-only.
+fidelity-bank-ghana,FY2022,balance_sheet,customer_deposits,9393.36,GHS millions,FBL-AR23,77,reported,Bank-only deposits from customers.
+fidelity-bank-ghana,FY2022,balance_sheet,due_to_banks,481.449,GHS millions,FBL-AR23,77,reported,Deposits from banks and other financial institutions.
+fidelity-bank-ghana,FY2022,balance_sheet,borrowings,2858.582,GHS millions,FBL-AR23,77,reported,Bank-only borrowings.
+fidelity-bank-ghana,FY2022,balance_sheet,other_liabilities,396.129,GHS millions,FBL-AR23,77,reported,Other liabilities.
+fidelity-bank-ghana,FY2022,balance_sheet,total_liabilities,13129.52,GHS millions,FBL-AR23,77,reported,Bank-only.
+fidelity-bank-ghana,FY2022,balance_sheet,stated_capital,422.84,GHS millions,FBL-AR23,77,reported,Ordinary (285.551m) + preference shares (137.289m).
+fidelity-bank-ghana,FY2022,balance_sheet,retained_earnings,-209.826,GHS millions,FBL-AR23,77,reported,Bank-only accumulated deficit.
+fidelity-bank-ghana,FY2022,balance_sheet,reserves_other,443.363,GHS millions,FBL-AR23,77,derived,Statutory (440.756m) + other reserves (2.607m).
+fidelity-bank-ghana,FY2022,balance_sheet,total_equity,656.377,GHS millions,FBL-AR23,77,reported,Bank-only.
+fidelity-bank-ghana,FY2022,ratios,car_pct,16.79,%,FBL-AR22,110,reported,Bank-only post-DDEP CAR with BoG regulatory forbearance (pre-DDEP 20.80%).
+fidelity-bank-ghana,FY2022,ratios,tier1_pct,15.6,%,FBL-AR22,110,reported,Bank-only post-DDEP Tier 1 ratio with forbearance.
+fidelity-bank-ghana,FY2022,ratios,npl_pct,7.83,%,FBL-AR23,164,reported,Bank-only NPL ratio (substandard to loss).
+fidelity-bank-ghana,FY2022,ratios,ldr_pct,32.0747,%,FBL-AR23,77,derived,loans_and_advances_gross / customer_deposits * 100.
+fidelity-bank-ghana,FY2022,ratios,cost_to_income_pct,46.0204,%,FBL-AR23,76,derived,Total operating expenses / total_operating_income * 100.
+fidelity-bank-ghana,FY2022,ratios,roaa_pct,-2.864,%,FBL-AR23,76,derived,PAT / average total assets * 100.
+fidelity-bank-ghana,FY2022,ratios,roae_pct,-40.9399,%,FBL-AR23,76,derived,PAT / average total equity * 100.
+fidelity-bank-ghana,FY2022,balance_sheet,x_deposits_demand_call,6326.629,GHS millions,FBL-AR23,154,derived,Note 24/25 Bank current + call accounts.
+fidelity-bank-ghana,FY2022,balance_sheet,x_deposits_savings,2406.711,GHS millions,FBL-AR23,154,reported,Note 24/25 Bank savings accounts.
+fidelity-bank-ghana,FY2022,balance_sheet,x_deposits_time_term,660.02,GHS millions,FBL-AR23,154,reported,Note 24/25 Bank time deposits.
+fidelity-bank-ghana,FY2023,income_statement,interest_income,2474.378,GHS millions,FBL-AR24,79,derived,"EIR interest income (2,037.729m) + other interest (436.649m)."
+fidelity-bank-ghana,FY2023,income_statement,interest_expense,951.555,GHS millions,FBL-AR24,79,reported,Bank-only; expenses positive.
+fidelity-bank-ghana,FY2023,income_statement,net_interest_income,1522.823,GHS millions,FBL-AR24,79,reported,Bank-only.
+fidelity-bank-ghana,FY2023,income_statement,fee_commission_income,353.926,GHS millions,FBL-AR24,79,reported,Bank-only.
+fidelity-bank-ghana,FY2023,income_statement,fee_commission_expense,115.452,GHS millions,FBL-AR24,79,reported,Bank-only.
+fidelity-bank-ghana,FY2023,income_statement,net_trading_income,264.398,GHS millions,FBL-AR24,134,derived,Note 12 Bank net FX gains (266.061m) + net securities trading loss (-1.663m).
+fidelity-bank-ghana,FY2023,income_statement,other_operating_income,5.025,GHS millions,FBL-AR24,134,reported,Note 12 Bank sundry income.
+fidelity-bank-ghana,FY2023,income_statement,total_operating_income,2030.72,GHS millions,FBL-AR24,79,reported,Bank-only.
+fidelity-bank-ghana,FY2023,income_statement,staff_costs,393.833,GHS millions,FBL-AR24,79,reported,Bank-only personnel expenses.
+fidelity-bank-ghana,FY2023,income_statement,depreciation_amortisation,70.115,GHS millions,FBL-AR24,79,reported,Bank-only.
+fidelity-bank-ghana,FY2023,income_statement,other_operating_expenses,428.928,GHS millions,FBL-AR24,79,reported,Bank-only other expenses.
+fidelity-bank-ghana,FY2023,income_statement,impairment_charge,-27.536,GHS millions,FBL-AR24,79,derived,DDEP derecognition loss (819.648m) - net impairment reversal on securities (850.432m) + loans impairment (3.248m) = -27.536m net reversal.
+fidelity-bank-ghana,FY2023,income_statement,profit_before_tax,1165.38,GHS millions,FBL-AR24,79,reported,Bank-only.
+fidelity-bank-ghana,FY2023,income_statement,income_tax,414.555,GHS millions,FBL-AR24,79,reported,Note 15: Income tax (298.017m) + GSL (58.269m) + FSRL (58.269m).
+fidelity-bank-ghana,FY2023,income_statement,profit_after_tax,750.825,GHS millions,FBL-AR24,79,reported,Bank-only.
+fidelity-bank-ghana,FY2023,balance_sheet,cash_and_bog_balances,5208.765,GHS millions,FBL-AR24,80,reported,Cash and cash equivalents.
+fidelity-bank-ghana,FY2023,balance_sheet,due_from_banks,,GHS millions,,,unavailable,Not split from cash and cash equivalents on balance sheet face.
+fidelity-bank-ghana,FY2023,balance_sheet,investment_securities,7695.598,GHS millions,FBL-AR24,80,reported,Bank-only investment securities.
+fidelity-bank-ghana,FY2023,balance_sheet,loans_and_advances_gross,3386.773,GHS millions,FBL-AR24,145,reported,Note 20 Bank gross loans and advances.
+fidelity-bank-ghana,FY2023,balance_sheet,loan_loss_allowance,172.913,GHS millions,FBL-AR24,145,reported,Note 20 Bank impairment allowance.
+fidelity-bank-ghana,FY2023,balance_sheet,loans_and_advances_net,3213.86,GHS millions,FBL-AR24,80,reported,Bank-only net loans and advances.
+fidelity-bank-ghana,FY2023,balance_sheet,property_equipment_intangibles,380.604,GHS millions,FBL-AR24,80,derived,PPE and ROU assets (314.217m) + intangible assets (66.387m).
+fidelity-bank-ghana,FY2023,balance_sheet,other_assets,721.182,GHS millions,FBL-AR24,80,derived,Derivatives (16.833m) + subs (12.471m) + DTA (254.781m) + other assets (405.959m) + HFS (31.138m).
+fidelity-bank-ghana,FY2023,balance_sheet,total_assets,17220.009,GHS millions,FBL-AR24,80,reported,Bank-only.
+fidelity-bank-ghana,FY2023,balance_sheet,customer_deposits,12423.422,GHS millions,FBL-AR24,80,reported,Bank-only deposits from customers.
+fidelity-bank-ghana,FY2023,balance_sheet,due_to_banks,229.784,GHS millions,FBL-AR24,80,reported,Deposits from banks and other financial institutions.
+fidelity-bank-ghana,FY2023,balance_sheet,borrowings,2731.436,GHS millions,FBL-AR24,80,reported,Bank-only borrowings.
+fidelity-bank-ghana,FY2023,balance_sheet,other_liabilities,394.908,GHS millions,FBL-AR24,80,derived,Current tax liability (38.451m) + other liabilities (356.457m).
+fidelity-bank-ghana,FY2023,balance_sheet,total_liabilities,15779.55,GHS millions,FBL-AR24,80,reported,Bank-only.
+fidelity-bank-ghana,FY2023,balance_sheet,stated_capital,422.84,GHS millions,FBL-AR24,80,reported,Ordinary (285.551m) + preference shares (137.289m).
+fidelity-bank-ghana,FY2023,balance_sheet,retained_earnings,302.984,GHS millions,FBL-AR24,80,reported,Bank-only.
+fidelity-bank-ghana,FY2023,balance_sheet,reserves_other,714.635,GHS millions,FBL-AR24,80,derived,Statutory (628.462m) + other reserves (86.173m).
+fidelity-bank-ghana,FY2023,balance_sheet,total_equity,1440.459,GHS millions,FBL-AR24,80,reported,Bank-only.
+fidelity-bank-ghana,FY2023,ratios,car_pct,14.38,%,FBL-AR23,130,reported,Bank-only CAR without forbearance (20.88% with DDEP forbearance).
+fidelity-bank-ghana,FY2023,ratios,tier1_pct,13.25,%,FBL-AR23,130,reported,Bank-only Tier 1 ratio without forbearance (19.62% with forbearance).
+fidelity-bank-ghana,FY2023,ratios,npl_pct,8.88,%,FBL-AR23,164,reported,Bank-only NPL ratio (substandard to loss).
+fidelity-bank-ghana,FY2023,ratios,ldr_pct,27.2612,%,FBL-AR24,80,derived,loans_and_advances_gross / customer_deposits * 100.
+fidelity-bank-ghana,FY2023,ratios,cost_to_income_pct,43.9684,%,FBL-AR24,79,derived,Total operating expenses / total_operating_income * 100.
+fidelity-bank-ghana,FY2023,ratios,roaa_pct,4.8431,%,FBL-AR24,79,derived,PAT / average total assets * 100.
+fidelity-bank-ghana,FY2023,ratios,roae_pct,71.615,%,FBL-AR24,79,derived,PAT / average total equity * 100.
+fidelity-bank-ghana,FY2023,balance_sheet,x_deposits_demand_call,8307.036,GHS millions,FBL-AR24,153,derived,Note 24/25 Bank current + call accounts.
+fidelity-bank-ghana,FY2023,balance_sheet,x_deposits_savings,3048.619,GHS millions,FBL-AR24,153,reported,Note 24/25 Bank savings accounts.
+fidelity-bank-ghana,FY2023,balance_sheet,x_deposits_time_term,1067.767,GHS millions,FBL-AR24,153,reported,Note 24/25 Bank time deposits.
+fidelity-bank-ghana,FY2024,income_statement,interest_income,2524.975,GHS millions,FBL-AR25,80,derived,"EIR interest income (2,388.447m) + other interest (136.528m)."
+fidelity-bank-ghana,FY2024,income_statement,interest_expense,694.384,GHS millions,FBL-AR25,80,reported,Bank-only; expenses positive.
+fidelity-bank-ghana,FY2024,income_statement,net_interest_income,1830.591,GHS millions,FBL-AR25,80,reported,Bank-only.
+fidelity-bank-ghana,FY2024,income_statement,fee_commission_income,393.409,GHS millions,FBL-AR25,80,reported,Bank-only.
+fidelity-bank-ghana,FY2024,income_statement,fee_commission_expense,141.587,GHS millions,FBL-AR25,80,reported,Bank-only.
+fidelity-bank-ghana,FY2024,income_statement,net_trading_income,241.827,GHS millions,FBL-AR25,135,derived,Note 12 Bank net FX gains (231.178m) + net securities trading income (10.649m).
+fidelity-bank-ghana,FY2024,income_statement,other_operating_income,19.88,GHS millions,FBL-AR25,135,reported,Note 12 Bank sundry income.
+fidelity-bank-ghana,FY2024,income_statement,total_operating_income,2344.12,GHS millions,FBL-AR25,80,reported,Bank-only.
+fidelity-bank-ghana,FY2024,income_statement,staff_costs,436.207,GHS millions,FBL-AR25,80,reported,Bank-only personnel expenses.
+fidelity-bank-ghana,FY2024,income_statement,depreciation_amortisation,87.704,GHS millions,FBL-AR25,80,reported,Bank-only.
+fidelity-bank-ghana,FY2024,income_statement,other_operating_expenses,519.263,GHS millions,FBL-AR25,80,reported,Bank-only other expenses.
+fidelity-bank-ghana,FY2024,income_statement,impairment_charge,89.812,GHS millions,FBL-AR25,80,derived,Eurobond modification loss (23.707m) + securities impairment (33.817m) + loans & others (32.288m).
+fidelity-bank-ghana,FY2024,income_statement,profit_before_tax,1211.134,GHS millions,FBL-AR25,80,reported,Bank-only.
+fidelity-bank-ghana,FY2024,income_statement,income_tax,438.975,GHS millions,FBL-AR25,80,reported,Note 15: Income tax (317.861m) + GSL (60.557m) + FSRL (60.557m).
+fidelity-bank-ghana,FY2024,income_statement,profit_after_tax,772.159,GHS millions,FBL-AR25,80,reported,Bank-only.
+fidelity-bank-ghana,FY2024,balance_sheet,cash_and_bog_balances,9849.312,GHS millions,FBL-AR25,81,reported,Cash and cash equivalents.
+fidelity-bank-ghana,FY2024,balance_sheet,due_from_banks,,GHS millions,,,unavailable,Not split from cash and cash equivalents on balance sheet face.
+fidelity-bank-ghana,FY2024,balance_sheet,investment_securities,7917.817,GHS millions,FBL-AR25,81,reported,Bank-only investment securities.
+fidelity-bank-ghana,FY2024,balance_sheet,loans_and_advances_gross,3371.662,GHS millions,FBL-AR25,146,reported,Note 20 Bank gross loans and advances.
+fidelity-bank-ghana,FY2024,balance_sheet,loan_loss_allowance,228.815,GHS millions,FBL-AR25,146,reported,Note 20 Bank impairment allowance.
+fidelity-bank-ghana,FY2024,balance_sheet,loans_and_advances_net,3142.847,GHS millions,FBL-AR25,81,reported,Bank-only net loans and advances.
+fidelity-bank-ghana,FY2024,balance_sheet,property_equipment_intangibles,438.803,GHS millions,FBL-AR25,81,derived,PPE and ROU assets (367.966m) + intangible assets (70.837m).
+fidelity-bank-ghana,FY2024,balance_sheet,other_assets,765.293,GHS millions,FBL-AR25,81,derived,Derivatives (58.243m) + subs (47.471m) + DTA (227.301m) + other assets (432.278m).
+fidelity-bank-ghana,FY2024,balance_sheet,total_assets,22114.072,GHS millions,FBL-AR25,81,reported,Bank-only.
+fidelity-bank-ghana,FY2024,balance_sheet,customer_deposits,17393.06,GHS millions,FBL-AR25,81,reported,Bank-only deposits from customers.
+fidelity-bank-ghana,FY2024,balance_sheet,due_to_banks,258.121,GHS millions,FBL-AR25,81,reported,Deposits from banks and other financial institutions.
+fidelity-bank-ghana,FY2024,balance_sheet,borrowings,1611.065,GHS millions,FBL-AR25,81,reported,Bank-only borrowings.
+fidelity-bank-ghana,FY2024,balance_sheet,other_liabilities,780.852,GHS millions,FBL-AR25,81,derived,Current tax liability (7.436m) + other liabilities (773.416m).
+fidelity-bank-ghana,FY2024,balance_sheet,total_liabilities,20043.098,GHS millions,FBL-AR25,81,reported,Bank-only.
+fidelity-bank-ghana,FY2024,balance_sheet,stated_capital,422.84,GHS millions,FBL-AR25,81,reported,Ordinary (285.551m) + preference shares (137.289m).
+fidelity-bank-ghana,FY2024,balance_sheet,retained_earnings,834.52,GHS millions,FBL-AR25,81,reported,Bank-only.
+fidelity-bank-ghana,FY2024,balance_sheet,reserves_other,813.614,GHS millions,FBL-AR25,81,derived,Statutory (724.982m) + other reserves (88.632m).
+fidelity-bank-ghana,FY2024,balance_sheet,total_equity,2070.974,GHS millions,FBL-AR25,81,reported,Bank-only.
+fidelity-bank-ghana,FY2024,ratios,car_pct,19.55,%,FBL-AR25,127,reported,Bank-only CAR without forbearance (AR24 p.126 also disclosed 22.25% with forbearance).
+fidelity-bank-ghana,FY2024,ratios,tier1_pct,18.94,%,FBL-AR25,127,reported,Bank-only Tier 1 ratio without forbearance.
+fidelity-bank-ghana,FY2024,ratios,npl_pct,11.27,%,FBL-AR25,163,reported,Bank-only NPL ratio (substandard to loss).
+fidelity-bank-ghana,FY2024,ratios,ldr_pct,19.3851,%,FBL-AR25,81,derived,loans_and_advances_gross / customer_deposits * 100.
+fidelity-bank-ghana,FY2024,ratios,cost_to_income_pct,44.5017,%,FBL-AR25,80,derived,Total operating expenses / total_operating_income * 100.
+fidelity-bank-ghana,FY2024,ratios,roaa_pct,3.9262,%,FBL-AR25,80,derived,PAT / average total assets * 100.
+fidelity-bank-ghana,FY2024,ratios,roae_pct,43.9797,%,FBL-AR25,80,derived,PAT / average total equity * 100.
+fidelity-bank-ghana,FY2024,balance_sheet,x_deposits_demand_call,12194.296,GHS millions,FBL-AR25,154,derived,Note 24/25 Bank current + call accounts.
+fidelity-bank-ghana,FY2024,balance_sheet,x_deposits_savings,4671.56,GHS millions,FBL-AR25,154,reported,Note 24/25 Bank savings accounts.
+fidelity-bank-ghana,FY2024,balance_sheet,x_deposits_time_term,527.204,GHS millions,FBL-AR25,154,reported,Note 24/25 Bank time deposits.
+fidelity-bank-ghana,FY2025,income_statement,interest_income,3162.811,GHS millions,FBL-AR25,80,derived,"EIR interest income (3,001.131m) + other interest (161.680m)."
+fidelity-bank-ghana,FY2025,income_statement,interest_expense,1067.409,GHS millions,FBL-AR25,80,reported,Bank-only; expenses positive.
+fidelity-bank-ghana,FY2025,income_statement,net_interest_income,2095.402,GHS millions,FBL-AR25,80,reported,Bank-only.
+fidelity-bank-ghana,FY2025,income_statement,fee_commission_income,424.008,GHS millions,FBL-AR25,80,reported,Bank-only.
+fidelity-bank-ghana,FY2025,income_statement,fee_commission_expense,165.304,GHS millions,FBL-AR25,80,reported,Bank-only.
+fidelity-bank-ghana,FY2025,income_statement,net_trading_income,309.658,GHS millions,FBL-AR25,135,derived,Note 12 Bank net FX gains (289.446m) + net securities trading income (20.212m).
+fidelity-bank-ghana,FY2025,income_statement,other_operating_income,17.839,GHS millions,FBL-AR25,135,reported,Note 12 Bank sundry income.
+fidelity-bank-ghana,FY2025,income_statement,total_operating_income,2681.603,GHS millions,FBL-AR25,80,reported,Bank-only.
+fidelity-bank-ghana,FY2025,income_statement,staff_costs,534.58,GHS millions,FBL-AR25,80,reported,Bank-only personnel expenses.
+fidelity-bank-ghana,FY2025,income_statement,depreciation_amortisation,100.05,GHS millions,FBL-AR25,80,reported,Bank-only.
+fidelity-bank-ghana,FY2025,income_statement,other_operating_expenses,553.121,GHS millions,FBL-AR25,80,reported,Bank-only other expenses.
+fidelity-bank-ghana,FY2025,income_statement,impairment_charge,33.01,GHS millions,FBL-AR25,80,reported,"Bank-only net impairment loss on loans and advances, and others."
+fidelity-bank-ghana,FY2025,income_statement,profit_before_tax,1460.842,GHS millions,FBL-AR25,80,reported,Bank-only.
+fidelity-bank-ghana,FY2025,income_statement,income_tax,544.02,GHS millions,FBL-AR25,80,reported,Note 15: Income tax (397.936m) + GSL (73.042m) + FSRL (73.042m).
+fidelity-bank-ghana,FY2025,income_statement,profit_after_tax,916.822,GHS millions,FBL-AR25,80,reported,Bank-only.
+fidelity-bank-ghana,FY2025,balance_sheet,cash_and_bog_balances,8380.689,GHS millions,FBL-AR25,81,reported,Cash and cash equivalents.
+fidelity-bank-ghana,FY2025,balance_sheet,due_from_banks,,GHS millions,,,unavailable,Not split from cash and cash equivalents on balance sheet face.
+fidelity-bank-ghana,FY2025,balance_sheet,investment_securities,11500.588,GHS millions,FBL-AR25,81,reported,Bank-only investment securities.
+fidelity-bank-ghana,FY2025,balance_sheet,loans_and_advances_gross,4953.849,GHS millions,FBL-AR25,146,reported,Note 20 Bank gross loans and advances.
+fidelity-bank-ghana,FY2025,balance_sheet,loan_loss_allowance,210.834,GHS millions,FBL-AR25,146,reported,Note 20 Bank impairment allowance.
+fidelity-bank-ghana,FY2025,balance_sheet,loans_and_advances_net,4743.015,GHS millions,FBL-AR25,81,reported,Bank-only net loans and advances.
+fidelity-bank-ghana,FY2025,balance_sheet,property_equipment_intangibles,557.628,GHS millions,FBL-AR25,81,derived,PPE and ROU assets (385.285m) + intangible assets (172.343m).
+fidelity-bank-ghana,FY2025,balance_sheet,other_assets,800.109,GHS millions,FBL-AR25,81,derived,Derivatives (0.553m) + subs (47.471m) + current tax (17.984m) + DTA (163.365m) + other assets (570.736m).
+fidelity-bank-ghana,FY2025,balance_sheet,total_assets,25982.029,GHS millions,FBL-AR25,81,reported,Bank-only.
+fidelity-bank-ghana,FY2025,balance_sheet,customer_deposits,17212.89,GHS millions,FBL-AR25,81,reported,Bank-only deposits from customers.
+fidelity-bank-ghana,FY2025,balance_sheet,due_to_banks,498.189,GHS millions,FBL-AR25,81,reported,Deposits from banks and other financial institutions.
+fidelity-bank-ghana,FY2025,balance_sheet,borrowings,3965.009,GHS millions,FBL-AR25,81,reported,Bank-only borrowings.
+fidelity-bank-ghana,FY2025,balance_sheet,other_liabilities,1536.188,GHS millions,FBL-AR25,81,reported,Other liabilities.
+fidelity-bank-ghana,FY2025,balance_sheet,total_liabilities,23212.276,GHS millions,FBL-AR25,81,reported,Bank-only.
+fidelity-bank-ghana,FY2025,balance_sheet,stated_capital,422.84,GHS millions,FBL-AR25,81,reported,Ordinary (285.551m) + preference shares (137.289m).
+fidelity-bank-ghana,FY2025,balance_sheet,retained_earnings,1273.07,GHS millions,FBL-AR25,81,reported,Bank-only.
+fidelity-bank-ghana,FY2025,balance_sheet,reserves_other,1073.843,GHS millions,FBL-AR25,81,derived,Statutory (839.585m) + other (122.954m) + credit risk reserve (111.304m).
+fidelity-bank-ghana,FY2025,balance_sheet,total_equity,2769.753,GHS millions,FBL-AR25,81,reported,Bank-only.
+fidelity-bank-ghana,FY2025,ratios,car_pct,22.86,%,FBL-AR25,127,reported,Bank-only regulatory CAR (CRD).
+fidelity-bank-ghana,FY2025,ratios,tier1_pct,22.11,%,FBL-AR25,127,reported,Bank-only Tier 1 ratio.
+fidelity-bank-ghana,FY2025,ratios,npl_pct,7.09,%,FBL-AR25,163,reported,Bank-only NPL ratio (substandard to loss).
+fidelity-bank-ghana,FY2025,ratios,ldr_pct,28.7799,%,FBL-AR25,81,derived,loans_and_advances_gross / customer_deposits * 100.
+fidelity-bank-ghana,FY2025,ratios,cost_to_income_pct,44.2926,%,FBL-AR25,80,derived,Total operating expenses / total_operating_income * 100.
+fidelity-bank-ghana,FY2025,ratios,roaa_pct,3.8125,%,FBL-AR25,80,derived,PAT / average total assets * 100.
+fidelity-bank-ghana,FY2025,ratios,roae_pct,37.8795,%,FBL-AR25,80,derived,PAT / average total equity * 100.
+fidelity-bank-ghana,FY2025,balance_sheet,x_deposits_demand_call,11119.428,GHS millions,FBL-AR25,154,derived,Note 24/25 Bank current + call accounts.
+fidelity-bank-ghana,FY2025,balance_sheet,x_deposits_savings,5530.937,GHS millions,FBL-AR25,154,reported,Note 24/25 Bank savings accounts.
+fidelity-bank-ghana,FY2025,balance_sheet,x_deposits_time_term,562.525,GHS millions,FBL-AR25,154,reported,Note 24/25 Bank time deposits.
+fidelity-bank-ghana,9M-2025,income_statement,interest_income,2078.45,GHS millions,FBL-26Q3,1,reported,"Bank-only 9M-2025 comparative (reclassified from 2,187.483m in FBL-25Q3)."
+fidelity-bank-ghana,9M-2025,income_statement,interest_expense,585.099,GHS millions,FBL-26Q3,1,reported,Bank-only; expenses positive.
+fidelity-bank-ghana,9M-2025,income_statement,net_interest_income,1493.351,GHS millions,FBL-26Q3,1,reported,Bank-only.
+fidelity-bank-ghana,9M-2025,income_statement,fee_commission_income,326.821,GHS millions,FBL-26Q3,1,reported,Bank-only.
+fidelity-bank-ghana,9M-2025,income_statement,fee_commission_expense,123.011,GHS millions,FBL-26Q3,1,reported,Bank-only.
+fidelity-bank-ghana,9M-2025,income_statement,net_trading_income,358.649,GHS millions,FBL-26Q3,1,reported,Bank-only net trading income.
+fidelity-bank-ghana,9M-2025,income_statement,other_operating_income,2.578,GHS millions,FBL-26Q3,1,reported,Bank-only other operating income.
+fidelity-bank-ghana,9M-2025,income_statement,total_operating_income,2058.388,GHS millions,FBL-26Q3,1,reported,Bank-only.
+fidelity-bank-ghana,9M-2025,income_statement,staff_costs,410.198,GHS millions,FBL-26Q3,1,reported,Bank-only personnel expenses.
+fidelity-bank-ghana,9M-2025,income_statement,depreciation_amortisation,71.052,GHS millions,FBL-26Q3,1,reported,Bank-only.
+fidelity-bank-ghana,9M-2025,income_statement,other_operating_expenses,419.56,GHS millions,FBL-26Q3,1,reported,Bank-only other expenses.
+fidelity-bank-ghana,9M-2025,income_statement,impairment_charge,55.008,GHS millions,FBL-26Q3,1,reported,Bank-only net impairment loss on financial assets.
+fidelity-bank-ghana,9M-2025,income_statement,profit_before_tax,1102.57,GHS millions,FBL-26Q3,1,reported,Bank-only.
+fidelity-bank-ghana,9M-2025,income_statement,income_tax,406.445,GHS millions,FBL-26Q3,1,reported,Bank-only income taxes and levies.
+fidelity-bank-ghana,9M-2025,income_statement,profit_after_tax,696.125,GHS millions,FBL-26Q3,1,reported,Bank-only.
+fidelity-bank-ghana,9M-2025,balance_sheet,cash_and_bog_balances,7234.552,GHS millions,FBL-26Q3,1,reported,Cash and cash equivalents at 30 Sep 2025.
+fidelity-bank-ghana,9M-2025,balance_sheet,due_from_banks,,GHS millions,,,unavailable,Not split from cash and cash equivalents on balance sheet face.
+fidelity-bank-ghana,9M-2025,balance_sheet,investment_securities,13865.398,GHS millions,FBL-26Q3,1,reported,Bank-only investment securities.
+fidelity-bank-ghana,9M-2025,balance_sheet,loans_and_advances_gross,,GHS millions,,,unavailable,Gross loans not disclosed in summary quarterly statement.
+fidelity-bank-ghana,9M-2025,balance_sheet,loan_loss_allowance,,GHS millions,,,unavailable,Loan loss allowance not disclosed in summary quarterly statement.
+fidelity-bank-ghana,9M-2025,balance_sheet,loans_and_advances_net,4136.245,GHS millions,FBL-26Q3,1,reported,Bank-only net loans and advances.
+fidelity-bank-ghana,9M-2025,balance_sheet,property_equipment_intangibles,516.454,GHS millions,FBL-26Q3,1,derived,PPE and ROU assets (380.649m) + intangible assets (135.805m).
+fidelity-bank-ghana,9M-2025,balance_sheet,other_assets,635.836,GHS millions,FBL-26Q3,1,derived,Derivatives (2.788m) + subs (47.471m) + DTA (83.867m) + other assets (501.710m).
+fidelity-bank-ghana,9M-2025,balance_sheet,total_assets,26388.485,GHS millions,FBL-26Q3,1,reported,Bank-only.
+fidelity-bank-ghana,9M-2025,balance_sheet,customer_deposits,19838.077,GHS millions,FBL-26Q3,1,reported,Bank-only deposits from customers.
+fidelity-bank-ghana,9M-2025,balance_sheet,due_to_banks,229.784,GHS millions,FBL-26Q3,1,reported,Deposits from banks and other financial institutions.
+fidelity-bank-ghana,9M-2025,balance_sheet,borrowings,2936.817,GHS millions,FBL-26Q3,1,reported,Bank-only borrowings.
+fidelity-bank-ghana,9M-2025,balance_sheet,other_liabilities,823.803,GHS millions,FBL-26Q3,1,derived,Current tax liability (6.394m) + other liabilities (817.409m).
+fidelity-bank-ghana,9M-2025,balance_sheet,total_liabilities,23828.481,GHS millions,FBL-26Q3,1,reported,Bank-only.
+fidelity-bank-ghana,9M-2025,balance_sheet,stated_capital,422.84,GHS millions,FBL-26Q3,1,reported,Ordinary + preference shares.
+fidelity-bank-ghana,9M-2025,balance_sheet,retained_earnings,1191.264,GHS millions,FBL-26Q3,1,reported,Bank-only.
+fidelity-bank-ghana,9M-2025,balance_sheet,reserves_other,945.9,GHS millions,FBL-26Q3,1,derived,Statutory (811.998m) + other reserves (133.902m).
+fidelity-bank-ghana,9M-2025,balance_sheet,total_equity,2560.004,GHS millions,FBL-26Q3,1,reported,Bank-only.
+fidelity-bank-ghana,9M-2025,ratios,car_pct,16.97,%,FBL-26Q3,2,reported,Bank-only regulatory CAR at 30 Sep 2025.
+fidelity-bank-ghana,9M-2025,ratios,tier1_pct,,%,,,unavailable,Only CET1/RWA (13.47%) disclosed; AT1/Tier 1 not separately stated in Q3 summary.
+fidelity-bank-ghana,9M-2025,ratios,npl_pct,7.6,%,FBL-26Q3,2,reported,Bank-only NPL ratio at 30 Sep 2025.
+fidelity-bank-ghana,9M-2025,ratios,ldr_pct,20.85,%,FBL-26Q3,1,derived,loans_and_advances_net / customer_deposits * 100 (gross loans unavailable in interim).
+fidelity-bank-ghana,9M-2025,ratios,cost_to_income_pct,43.7629,%,FBL-26Q3,1,derived,Total operating expenses / total_operating_income * 100.
+fidelity-bank-ghana,9M-2025,ratios,roaa_pct,,%,,,unavailable,Prior-period year-end average assets not computed for FY2021 / 9M interims.
+fidelity-bank-ghana,9M-2025,ratios,roae_pct,,%,,,unavailable,Prior-period year-end average equity not computed for FY2021 / 9M interims.
+fidelity-bank-ghana,9M-2026,income_statement,interest_income,1782.624,GHS millions,FBL-26Q3,1,reported,Bank-only 9M-2026.
+fidelity-bank-ghana,9M-2026,income_statement,interest_expense,513.074,GHS millions,FBL-26Q3,1,reported,Bank-only; expenses positive.
+fidelity-bank-ghana,9M-2026,income_statement,net_interest_income,1269.55,GHS millions,FBL-26Q3,1,reported,Bank-only.
+fidelity-bank-ghana,9M-2026,income_statement,fee_commission_income,367.005,GHS millions,FBL-26Q3,1,reported,Bank-only.
+fidelity-bank-ghana,9M-2026,income_statement,fee_commission_expense,108.225,GHS millions,FBL-26Q3,1,reported,Bank-only.
+fidelity-bank-ghana,9M-2026,income_statement,net_trading_income,426.753,GHS millions,FBL-26Q3,1,reported,Bank-only net trading income.
+fidelity-bank-ghana,9M-2026,income_statement,other_operating_income,4.005,GHS millions,FBL-26Q3,1,reported,Bank-only other operating income.
+fidelity-bank-ghana,9M-2026,income_statement,total_operating_income,1959.088,GHS millions,FBL-26Q3,1,reported,Bank-only.
+fidelity-bank-ghana,9M-2026,income_statement,staff_costs,489.168,GHS millions,FBL-26Q3,1,reported,Bank-only personnel expenses.
+fidelity-bank-ghana,9M-2026,income_statement,depreciation_amortisation,85.343,GHS millions,FBL-26Q3,1,reported,Bank-only.
+fidelity-bank-ghana,9M-2026,income_statement,other_operating_expenses,484.692,GHS millions,FBL-26Q3,1,reported,Bank-only other expenses.
+fidelity-bank-ghana,9M-2026,income_statement,impairment_charge,69.713,GHS millions,FBL-26Q3,1,reported,Bank-only net impairment loss on financial assets.
+fidelity-bank-ghana,9M-2026,income_statement,profit_before_tax,830.172,GHS millions,FBL-26Q3,1,reported,Bank-only.
+fidelity-bank-ghana,9M-2026,income_statement,income_tax,305.318,GHS millions,FBL-26Q3,1,reported,Bank-only income taxes and levies.
+fidelity-bank-ghana,9M-2026,income_statement,profit_after_tax,524.854,GHS millions,FBL-26Q3,1,reported,Bank-only.
+fidelity-bank-ghana,9M-2026,balance_sheet,cash_and_bog_balances,8917.035,GHS millions,FBL-26Q3,1,reported,Cash and cash equivalents at 30 Sep 2026.
+fidelity-bank-ghana,9M-2026,balance_sheet,due_from_banks,,GHS millions,,,unavailable,Not split from cash and cash equivalents on balance sheet face.
+fidelity-bank-ghana,9M-2026,balance_sheet,investment_securities,13546.926,GHS millions,FBL-26Q3,1,reported,Bank-only investment securities.
+fidelity-bank-ghana,9M-2026,balance_sheet,loans_and_advances_gross,,GHS millions,,,unavailable,Gross loans not disclosed in summary quarterly statement.
+fidelity-bank-ghana,9M-2026,balance_sheet,loan_loss_allowance,,GHS millions,,,unavailable,Loan loss allowance not disclosed in summary quarterly statement.
+fidelity-bank-ghana,9M-2026,balance_sheet,loans_and_advances_net,6334.617,GHS millions,FBL-26Q3,1,reported,Bank-only net loans and advances.
+fidelity-bank-ghana,9M-2026,balance_sheet,property_equipment_intangibles,583.001,GHS millions,FBL-26Q3,1,derived,PPE and ROU assets (396.791m) + intangible assets (186.210m).
+fidelity-bank-ghana,9M-2026,balance_sheet,other_assets,969.76,GHS millions,FBL-26Q3,1,derived,Subs (47.471m) + current tax (10.841m) + DTA (123.550m) + other assets (787.898m).
+fidelity-bank-ghana,9M-2026,balance_sheet,total_assets,30351.339,GHS millions,FBL-26Q3,1,reported,Bank-only.
+fidelity-bank-ghana,9M-2026,balance_sheet,customer_deposits,20221.785,GHS millions,FBL-26Q3,1,reported,Bank-only deposits from customers.
+fidelity-bank-ghana,9M-2026,balance_sheet,due_to_banks,574.18,GHS millions,FBL-26Q3,1,reported,Deposits from banks and other financial institutions.
+fidelity-bank-ghana,9M-2026,balance_sheet,borrowings,4422.331,GHS millions,FBL-26Q3,1,reported,Bank-only borrowings.
+fidelity-bank-ghana,9M-2026,balance_sheet,other_liabilities,2167.612,GHS millions,FBL-26Q3,1,reported,Other liabilities.
+fidelity-bank-ghana,9M-2026,balance_sheet,total_liabilities,27385.908,GHS millions,FBL-26Q3,1,reported,Bank-only.
+fidelity-bank-ghana,9M-2026,balance_sheet,stated_capital,422.84,GHS millions,FBL-26Q3,1,reported,Ordinary + preference shares.
+fidelity-bank-ghana,9M-2026,balance_sheet,retained_earnings,1432.884,GHS millions,FBL-26Q3,1,reported,Bank-only.
+fidelity-bank-ghana,9M-2026,balance_sheet,reserves_other,1109.707,GHS millions,FBL-26Q3,1,derived,Statutory (905.192m) + other (111.216m) + credit risk reserve (93.299m).
+fidelity-bank-ghana,9M-2026,balance_sheet,total_equity,2965.431,GHS millions,FBL-26Q3,1,reported,Bank-only.
+fidelity-bank-ghana,9M-2026,ratios,car_pct,18.53,%,FBL-26Q3,2,reported,Bank-only regulatory CAR at 30 Sep 2026.
+fidelity-bank-ghana,9M-2026,ratios,tier1_pct,,%,,,unavailable,Only CET1/RWA (15.33%) disclosed; AT1/Tier 1 not separately stated in Q3 summary.
+fidelity-bank-ghana,9M-2026,ratios,npl_pct,6.84,%,FBL-26Q3,2,reported,Bank-only NPL ratio at 30 Sep 2026.
+fidelity-bank-ghana,9M-2026,ratios,ldr_pct,31.3257,%,FBL-26Q3,1,derived,loans_and_advances_net / customer_deposits * 100 (gross loans unavailable in interim).
+fidelity-bank-ghana,9M-2026,ratios,cost_to_income_pct,54.0661,%,FBL-26Q3,1,derived,Total operating expenses / total_operating_income * 100.
+fidelity-bank-ghana,9M-2026,ratios,roaa_pct,,%,,,unavailable,Prior-period year-end average assets not computed for FY2021 / 9M interims.
+fidelity-bank-ghana,9M-2026,ratios,roae_pct,,%,,,unavailable,Prior-period year-end average equity not computed for FY2021 / 9M interims.
