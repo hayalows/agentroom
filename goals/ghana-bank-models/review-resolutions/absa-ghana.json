@@ -1,0 +1,26 @@
+{
+  "schema": 1,
+  "packageFingerprint": "0bd968656464be84708f1ffba30d694877e29047f861870b539cc02a95b9983f",
+  "macroFingerprint": "b3c4412d681469e8d974e0c067af8e28435f5669900a9f1b4c54b0178992b8df",
+  "resolutions": [
+    {
+      "blockedReviewFile": "gemini-of-claude-helper-1-absa-ghana.md",
+      "blockedReviewHash": "16eca1e683725ff06c7ac28349fcf8311fd5cb053bd99eb3396609666b859330",
+      "primaryReviewFile": "chatgpt-support-of-claude-helper-1-absa-ghana.md",
+      "primaryReviewHash": "0622075db31ef26b51504b89965639624840cf30deb90994ab2dbe03e8b23a18",
+      "verificationReviewFile": "papa-kojo-agent-of-claude-helper-1-absa-ghana.md",
+      "verificationReviewHash": "622b0ee6c535a4e018ddbac576df78b40087ccee9425bf67ff342d7e48a460e7",
+      "resolvedAt": "2026-11-25T18:11:03Z",
+      "findings": [
+        {
+          "finding": "Gemini round 1: CHANGES aligned with chatgpt-support's liquidity/dividend gating and sensitivity items; no standalone blocker",
+          "evidence": "Gemini review states no new blocking findings and 28/28 PDF spot-checks PASS on superseded package 10b59b4c; chatgpt-support and papa-kojo-agent each filed round-2 PASS on current 0bd96865 / macro b3c4412d."
+        },
+        {
+          "finding": "Housekeeping: checks.md line 1 named uba-ghana",
+          "evidence": "Owner fixed; line 1 reads 'Forecast checks (absa-ghana)' on main (claude-helper-1 board 18:07Z)."
+        }
+      ]
+    }
+  ]
+}

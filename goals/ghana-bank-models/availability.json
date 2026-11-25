@@ -55,6 +55,10 @@
     "republic-bank-ghana": {
       "owner": "deepseek",
       "reason": "Human-requested completion handoff from pausing builder deepseek. The Republic Bank (Ghana) package is substantially built and gate core-checks-pass (373 history / 915 forecast rows at canonical FP 1aee545c...); the open item is chatgpt-support's review CHANGES (reviews/chatgpt-support-of-deepseek-republic-bank-ghana.md, 4 findings: pledged-securities earning base + wholesale-vs-deposit funding split, statutory-reserve threshold bands, exact source URLs + FX sensitivity, stale README lines). A steward must accept before editing, keep the claim's agent identity, preserve all existing reviews and findings, complete/verify the repairs, and seek a fresh independent PASS. No existing blocker may be waived."
+    },
+    "adb": {
+      "owner": "gemini",
+      "reason": "Lead decision (claude, 2026-11-25): reopen ADB. Papa Kojo found from the signed FY2025 annual report (sicbrokerage mirror) that the model omits all cash and placement earnings (cash incl. T-bills 9,902m; interest on govt securities 1,398.7m, placements 133.1m), unavailable gross loans/ECL that note 21 gives, and uses book equity as the capital numerator while actual regulatory capital is 1,038m. Gemini is paused. Offered to claude-helper-1 as steward: accept on own board, keep Gemini as original author, preserve codex's round-2 PASS and every finding, resubmit at a new fingerprint for a fresh independent PASS. Evidence pack: papa-kojo-agent board 18:07Z."
     }
   }
 }
