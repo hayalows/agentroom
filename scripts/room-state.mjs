@@ -8,6 +8,15 @@ export const names=d=>fs.existsSync(d)?fs.readdirSync(d,{withFileTypes:true}).fi
 export const hash=s=>crypto.createHash('sha256').update(s).digest('hex');
 const time=s=>Number.isFinite(Date.parse(s))?Date.parse(s):null;
 export function fields(s){return Object.fromEntries(s.replace(/^\uFEFF/,'').split(/\r?\n/).map(l=>/^([a-z_]+):\s*(.*)$/.exec(l.trim())).filter(Boolean).map(m=>[m[1],m[2]]))}
+export function reviewVerdict(text){
+  const matches=[...text.matchAll(/\bverdict\s*(?:\*\*)?\s*:\s*(?:\*\*)?\s*(PASS|CHANGES(?: REQUIRED)?|BLOCK)\b/gi)];
+  const value=matches.at(-1)?.[1]?.toUpperCase()||'unparsed';
+  return value.startsWith('CHANGES')?'CHANGES':value;
+}
+export function peerReviewsFor(reviews,task){
+  const suffix='-of-'+task.owner+'-'+task.slug+'.md';
+  return reviews.filter(r=>task.owner&&r.file.endsWith(suffix)).map(r=>({...r,reviewer:r.file.slice(0,-suffix.length)})).filter(r=>validAgent(r.reviewer)&&r.reviewer!==task.owner).map(r=>({...r,verdict:reviewVerdict(r.text)}));
+}
 export function readState(root,goal,now=Date.now()){
   if(!slugOK(goal))throw Error('Invalid goal');
   const dir=path.join(root,'goals',goal);
@@ -43,10 +52,16 @@ export function readState(root,goal,now=Date.now()){
     return {slug,name:slug,owner:c?.agent||null,status:cs.filter(x=>x.status!=='released').length>1?'ownership-conflict':c?.status||'unclaimed',claim:c||null};
   });
   const all=[...tasks,...shared];
-  const pending=messages.filter(m=>m.kind==='TO'&&!messages.some(a=>a.from===m.to&&a.to===m.from&&time(a.at)>time(m.at)&&a.kind==='ACK'));
+  const messageId=m=>/^\[([a-zA-Z0-9_-]{1,80})\]/.exec(m.text)?.[1]||null;
+  const pending=messages.filter(m=>m.kind==='TO'&&!messages.some(a=>a.from===m.to&&a.to===m.from&&time(a.at)>time(m.at)&&a.kind==='ACK'&&(messageId(m)?messageId(a)===messageId(m):!messageId(a))));
+  for(const t of all){
+    const peer=peerReviewsFor(reviews,t);
+    t.reviewSummary=peer.map(r=>({file:r.file,reviewer:r.reviewer,verdict:r.verdict}));
+    t.repairRequested=peer.some(r=>['CHANGES','BLOCK'].includes(r.verdict));
+  }
   const actionable=Object.fromEntries(agents.map(a=>{
-    const own=all.filter(t=>t.owner===a.id), repairs=own.filter(t=>t.status==='changes-requested'||t.status==='blocked');
-    const reviewable=all.filter(t=>t.owner&&t.owner!==a.id&&t.status==='needs-review');
+    const own=all.filter(t=>t.owner===a.id), repairs=own.filter(t=>t.status==='changes-requested'||t.status==='blocked'||t.repairRequested);
+    const reviewable=all.filter(t=>t.owner&&t.owner!==a.id&&t.status==='needs-review'&&!t.repairRequested&&!t.reviewSummary.some(r=>r.reviewer===a.id&&r.verdict==='PASS'));
     const ongoing=own.filter(t=>t.status==='in-progress');
     const unclaimed=all.filter(t=>t.status==='unclaimed'&&(!['sector-rollup','peer-comparison','qa-sweep'].includes(t.slug)||tasks.every(b=>b.status==='done')));
     return [a.id,{messages:pending.filter(m=>m.to===a.id).length,repair:repairs.map(t=>t.slug),continue:ongoing.map(t=>t.slug),review:reviewable.map(t=>t.slug),claim:a.open<3?unclaimed.map(t=>t.slug):[],next:repairs.length?'repair':ongoing.length?'continue':reviewable.length?'review':a.open<3&&unclaimed.length?'claim':'wait-or-report-blocker'}];
