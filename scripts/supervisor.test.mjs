@@ -83,6 +83,32 @@ try{
   v=await evaluateRoom(root,goal,now);assert.equal(v.tasks[0].owner,'deepseek');assert.equal(v.tasks[0].worker,'codex');assert.equal(v.actionable.codex.handoff.length,0);assert(!v.tasks[0].peerReviews.some(r=>r.reviewer==='codex'));
   fs.appendFileSync(path.join(dir,'board/deepseek.md'),'- 2026-11-25T12:19:00Z RESUME\n');
   v=await evaluateRoom(root,goal,now);assert(!v.agents.find(a=>a.id==='deepseek').paused);assert.equal(v.tasks[0].worker,'codex');
+  // Explicit pause replacement and released queue; old steward cannot review new work.
+  put('board/helper.md','- 2026-11-25T12:11:00Z JOINED\n');
+  put('board/other.md','- 2026-11-25T12:12:00Z JOINED\n');
+  put('availability.json',JSON.stringify({schema:1,paused:{codex:{since:'2026-11-25T12:10:00Z',reason:'pause'}},handoffs:{'bank-a':{owner:'deepseek',replaceSteward:'codex',previousStewards:['codex']}}}));
+  v=await evaluateRoom(root,goal,now);assert(v.tasks[0].handoffAvailable);assert(v.actionable.helper.handoff.includes('bank-a'));
+  put('claims/bank-b.md','agent: codex\nstatus: released\n');
+  v=await evaluateRoom(root,goal,now);assert(v.actionable.helper.claim.includes('bank-b'));
+  put('claims/bank-a.md','agent: deepseek\nstatus: needs-review\nreview_revision: '+pass.fingerprint+'\nreview_macro: '+pass.macroFingerprint+'\n');
+  put('availability.json',JSON.stringify({schema:1,paused:{codex:{since:'2026-11-25T12:10:00Z',reason:'pause'}},handoffs:{}}));
+  put('reviews/codex-of-deepseek-bank-a.md','Verdict: CHANGES REQUIRED\nOriginal finding');
+  v=await evaluateRoom(root,goal,now);assert(v.actionable.helper.review.includes('bank-a'));assert(v.tasks[0].reviewStage==='re-review-required');
+  const blocker=v.tasks[0].peerReviews.find(r=>r.reviewer==='codex');
+  const ack='Resolved review SHA-256: '+blocker.reviewHash+'\n';
+  put('reviews/helper-of-deepseek-bank-a.md','Verdict: PASS\n'+evidence+ack);
+  v=await evaluateRoom(root,goal,now);assert.equal(v.tasks[0].reviewStage,'re-review-required'); // one PASS cannot override
+  put('reviews/other-of-deepseek-bank-a.md','Verdict: PASS\n'+evidence+ack);
+  v=await evaluateRoom(root,goal,now);assert.equal(v.tasks[0].reviewStage,'re-review-required'); // no resolution record
+  const primary=v.tasks[0].peerReviews.find(r=>r.reviewer==='helper'),verify=v.tasks[0].peerReviews.find(r=>r.reviewer==='other');
+  const rec={schema:1,packageFingerprint:pass.fingerprint,macroFingerprint:pass.macroFingerprint,resolutions:[{blockedReviewFile:blocker.file,blockedReviewHash:blocker.reviewHash,primaryReviewFile:primary.file,primaryReviewHash:primary.reviewHash,verificationReviewFile:verify.file,verificationReviewHash:verify.reviewHash,resolvedAt:'2026-11-25T12:19:00Z',findings:[{finding:'Original finding',evidence:'Both reviewers independently verified repair'}]}]};
+  put('review-resolutions/bank-a.json',JSON.stringify(rec));
+  v=await evaluateRoom(root,goal,now);assert.equal(v.tasks[0].reviewStage,'owner-close-required');
+  put('reviews/codex-of-deepseek-bank-a.md','Verdict: CHANGES REQUIRED\nNew finding');
+  v=await evaluateRoom(root,goal,now);assert.equal(v.tasks[0].reviewStage,'re-review-required'); // changed review hash invalidates
+  put('reviews/codex-of-deepseek-bank-a.md','Verdict: CHANGES REQUIRED\nOriginal finding');
+  rec.resolutions[0].verificationReviewFile=primary.file;rec.resolutions[0].verificationReviewHash=primary.reviewHash;
+  put('review-resolutions/bank-a.json',JSON.stringify(rec));v=await evaluateRoom(root,goal,now);assert.equal(v.tasks[0].reviewStage,'re-review-required'); // same reviewer twice
   fs.unlinkSync(path.join(dir,'banks/bank-a/forecast.csv'));assert.equal((await gateBank(root,goal,task)).status,'incomplete');
   console.log('PASS: discovery, BOM, chronology, advisory queue, conflict detection, CSV, evidence gate pass/fail, fingerprints, incomplete model');
 }finally{fs.rmSync(root,{recursive:true,force:true});}
