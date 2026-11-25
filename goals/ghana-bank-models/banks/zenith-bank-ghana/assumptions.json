@@ -5,49 +5,149 @@
   "about": "Every value below is an ESTIMATE by the owner, not a reported number. 'basis' says what it is anchored on. Shared macro drivers (rates, inflation, GDP, CRR, minimum CAR) are read from sector/macro-assumptions/macro.csv by scenario name, not copied here. Structure follows banks/standard-chartered-ghana/assumptions.json so the models are comparable; differences are marked 'differs from SCB'.",
   "macro_file": "../../sector/macro-assumptions/macro.csv",
   "anchor": {
-    "fy2026e_method": "FY2026E income and expense lines = 9M-2026 actual x 12/9 (interest, fees, trading, other income, staff, depreciation, other opex). Impairment = 9M-2026 actual (a 32.418m reversal) PLUS a Q4 charge at the base cost of risk on 30 Sep 2026 net loans / 4 (differs from SCB, which assumes nothing for Q4: Zenith's stage 3 loans are only 13.5% covered at FY2025 and the 9M reversal is not repeatable). Tax = tax_rate x full-year profit before tax, NOT 9M tax x 12/9 (see tax_rate basis). Balance sheet lines = 30 Sep 2026 actual carried to 31 Dec 2026, except equity (9M-2026 equity + Q4 profit) and the liquid-asset plug. Dividends paid in FY2026E = 0 (none paid in 9M-2026; the equity roll-forward in checks_history.md is exact).",
+    "fy2026e_method": "FY2026E income and expense lines = 9M-2026 actual x 12/9 (interest, fees, trading, other income, staff, depreciation, other opex). Impairment = 9M-2026 actual (a 32.418m reversal) PLUS a Q4 charge at the base cost of risk on 30 Sep 2026 net loans / 4 (differs from SCB, which assumes nothing for Q4: Zenith's stage 3 loans are only 13.5% covered at FY2025 and the 9M reversal is not repeatable). Tax = tax_rate x full-year profit before tax, NOT 9M tax x 12/9 (see tax_rate basis). Balance sheet lines = 30 Sep 2026 actual carried to 31 Dec 2026, except equity (9M-2026 equity + Q4 profit) and the liquid-asset plug. Dividends paid in FY2026E = 0 (none paid in 9M-2026; the equity roll-forward in checks_history.md is exact). Q4 implied PBT, tax and impairment are reported as x_q4_implied_* rows in forecast.csv.",
     "same_for_all_scenarios": "FY2026E is identical in all three scenarios because three quarters are already reported."
   },
   "rates": {
-    "loan_yield_spread_over_tbill_364d_pct": {"value": 6.0, "basis": "Same as SCB so the banks are comparable: sector average lending rate was 15.8% in Oct 2026 against a 364-day bill near 11% (as cited in SCB's basis; not re-verified by me). At this spread loans produce about 1,417m of the 2,226m annualised interest income (64%), with the rest from liquid assets."},
-    "liquid_yield_spread_over_tbill_91d_pct": {"value": 2.7, "basis": "FITTED, not observed. With a 6.0 point loan spread, 9M-2026 interest income annualised (2,225.8m) minus the loan yield on average net loans (8,332.8m x 17.01% = 1,417m) leaves 809m on opening liquid assets of 9,485m, or 8.5% = 5.81% 91-day bill + 2.7 points. The high spread reflects bonds with maturities longer than 91 days and foreign-currency placements. checks.md shows the resulting fit."},
-    "cost_of_funds_to_policy_rate": {"value": 0.204, "basis": "9M-2026 interest expense annualised (738.4m) over average interest-bearing funding (customer deposits + bank deposits + borrowings, average of FY2025 and 30 Sep 2026 = 25,273.6m) is 2.92%. The policy rate averaged about 14.3% over Jan-Sep 2026 (figure taken from SCB's basis, which uses BoG data; not re-verified by me), so the ratio is 0.204. Differs from SCB (0.067): Zenith pays much more on funding because it holds interest-bearing deposits and borrowings; the cost of funds also includes borrowings."},
-    "tax_rate": {"value": 0.34, "basis": "FY2025 effective rate 34.58% (25% income tax + 5% Growth and Sustainability Levy + 5% Financial Sector Recovery Levy, Note 15(b), ZEN-FY25). A web search on 2026-11-25 found the Financial Sector Recovery Levy Act 2021 (Act 1067, 5% of PBT) described as current law, but I did not establish whether the Minister reviewed it after 2024 or what applies in 2026, so treat 34% as an assumption. 9M-2026 tax/PBT was only 17.8% (9M-2025: 24.3%) because year-end items were not yet booked: in Q4-2025 tax was 251.5m on PBT of 392.4m (64%), which brought FY2025 to 34.6%. FY2026E therefore applies 34% to the full-year PBT, which implies a heavy Q4 tax charge. The 34% does not repeat FY2024's 57.4% (one-off 229m prior-year estimate change after an audit)."}
+    "loan_yield_spread_over_tbill_364d_pct": {
+      "value": 6.0,
+      "basis": "Same as SCB so the banks are comparable: sector average lending rate was 15.8% in Oct 2026 against a 364-day bill near 11% (as cited in SCB's basis; not re-verified by me). At this spread loans produce about 1,417m of the 2,226m annualised interest income (64%), with the rest from liquid assets."
+    },
+    "fast_bucket_spread_over_tbill_91d_pct": {
+      "value": 0.5,
+      "basis": "ASSUMED. The 58.35% of investment securities that reprice within 3 months (FY2025 interest repricing schedule, ZEN-FY25 p.81, read by independent reviewer chatgpt-support: 5,336.806m of 9,146.925m) are assumed to earn the 91-day bill plus 0.5 point (short placements and foreign-currency bills sit slightly above the 91-day bill). The share is applied to the opening liquid-asset pool (securities plus placements), which is a simplification."
+    },
+    "slow_bucket_yield_fy2026e_pct": {
+      "value": 11.6,
+      "basis": "FITTED, not observed. The remaining 41.65% (1-5 years 2,243.5m, over 5 years 1,533.6m, 6-12 months 33.0m) is held at a constant yield, solved so that the FY2026E interest formula equals the 9M-2026 annualised interest income of 2,225.8m with a 6.0 point loan spread: liquid yield needed 8.52%; fast share 0.5835 x (5.81% + 0.5) = 3.68%; slow yield = (8.52 - 3.68) / 0.4165 = 11.6%. checks.md shows the fit. It replaces the earlier single 2.7 point spread on the whole pool, which treated every security as repricing in 91 days."
+    },
+    "slow_bucket_pass_through_of_bond_yield_change": {
+      "value": 0.25,
+      "basis": "ASSUMED. Each year the slow bucket's yield moves by 25% of the change in the macro govt_bond_yield_pct of the same scenario (about a quarter of the bucket rolls over each year). Judgement; not observed."
+    },
+    "cost_of_funds_to_policy_rate": {
+      "value": 0.204,
+      "basis": "9M-2026 interest expense annualised (738.4m) over average interest-bearing funding (customer deposits + bank deposits + borrowings, average of FY2025 and 30 Sep 2026 = 25,273.6m) is 2.92%. The policy rate averaged about 14.3% over Jan-Sep 2026 (figure taken from SCB's basis, which uses BoG data; not re-verified by me), so the ratio is 0.204. Differs from SCB (0.067): Zenith pays much more on funding because it holds interest-bearing deposits and borrowings; the cost of funds also includes borrowings."
+    },
+    "tax_rate": {
+      "value": 0.34,
+      "basis": "FY2025 effective rate 34.58% (25% income tax + 5% Growth and Sustainability Levy + 5% Financial Sector Recovery Levy, Note 15(b), ZEN-FY25). A web search on 2026-11-25 found the Financial Sector Recovery Levy Act 2021 (Act 1067, 5% of PBT) described as current law, but I did not establish whether the Minister reviewed it after 2024 or what applies in 2026, so treat 34% as an assumption. 9M-2026 tax/PBT was only 17.8% (9M-2025: 24.3%) because year-end items were not yet booked: in Q4-2025 tax was 251.5m on PBT of 392.4m (64%), which brought FY2025 to 34.6%. FY2026E therefore applies 34% to the full-year PBT, which implies a heavy Q4 tax charge. The 34% does not repeat FY2024's 57.4% (one-off 229m prior-year estimate change after an audit)."
+    }
   },
   "growth": {
     "customer_deposit_growth_formula": "(1+real GDP growth)*(1+CPI inflation)-1+adjustment, using the macro row of the same scenario and year",
-    "customer_deposit_adjustment": {"base": 0.06, "downside": -0.02, "upside": 0.12, "basis": "Differs from SCB (0.0). Zenith deposits grew 31.6% (FY2022), 39.2% (FY2023), 33.6% (FY2024), 33.2% (FY2025) and 24.6% in 9M-2026 alone, against nominal GDP growth of about 13% in the base case. Base assumes the share gains continue at a reduced pace (about 19% in FY2027E); downside assumes growth slightly below nominal GDP; upside assumes growth near 25%. Judgement, not a statistical fit."},
+    "customer_deposit_adjustment": {
+      "base": 0.06,
+      "downside": -0.02,
+      "upside": 0.12,
+      "basis": "Differs from SCB (0.0). Zenith deposits grew 31.6% (FY2022), 39.2% (FY2023), 33.6% (FY2024), 33.2% (FY2025) and 24.6% in 9M-2026 alone, against nominal GDP growth of about 13% in the base case. Base assumes the share gains continue at a reduced pace (about 19% in FY2027E); downside assumes growth slightly below nominal GDP; upside assumes growth near 25%. Judgement, not a statistical fit."
+    },
     "net_loan_growth": {
-      "base": {"FY2027E": 0.25, "FY2028E": 0.22, "FY2029E": 0.18, "FY2030E": 0.15},
-      "downside": {"FY2027E": 0.08, "FY2028E": 0.06, "FY2029E": 0.08, "FY2030E": 0.08},
-      "upside": {"FY2027E": 0.32, "FY2028E": 0.28, "FY2029E": 0.22, "FY2030E": 0.18},
+      "base": {
+        "FY2027E": 0.25,
+        "FY2028E": 0.22,
+        "FY2029E": 0.18,
+        "FY2030E": 0.15
+      },
+      "downside": {
+        "FY2027E": 0.08,
+        "FY2028E": 0.06,
+        "FY2029E": 0.08,
+        "FY2030E": 0.08
+      },
+      "upside": {
+        "FY2027E": 0.32,
+        "FY2028E": 0.28,
+        "FY2029E": 0.22,
+        "FY2030E": 0.18
+      },
       "basis": "Net loans grew 52% (FY2024), 111% (FY2025) and 31% in 9M-2026 (7,210m to 9,455m), and the loan-to-deposit ratio rose from 19.2% (FY2023) to 36.4% at 30 Sep 2026. Base growth fades from 25% but stays near or above deposit growth (about 19% then 13-14%) so the ratio holds around 36-38% rather than falling, which an earlier draft of these numbers did. Downside assumes banks retrench. Judgement, not a fit. The capital cost is visible in the CAR proxy rows of checks.md."
     },
-    "net_trading_income_growth": {"base": -0.05, "downside": -0.20, "upside": 0.0, "basis": "Net trading income was 157m (FY2022), 333m (FY2023), 378m (FY2024), 309m (FY2025) and 296m annualised in 2026 (9M-2026 222.2m vs 214.6m in 9M-2025). It depends on foreign-exchange conditions and is volatile. Base assumes gradual mean reversion."},
-    "fee_income_growth_over_inflation": {"value": 0.06, "basis": "Differs from SCB (0.02). Fee and commission income grew 39% in FY2025 and 21.7% in 9M-2026 (414.8m vs 340.8m). Base fades to inflation plus 6 points (about 13.5% in FY2027E). Judgement."},
-    "fee_expense_to_fee_income": {"value": 0.12, "basis": "9M-2026 11.6%, FY2025 14.0%, FY2024 17.0%."},
-    "staff_cost_growth_over_inflation": {"value": 0.03, "basis": "Staff costs grew 24.6% in FY2025 but only 2.0% in 9M-2026 vs 9M-2025."},
-    "other_opex_growth_over_inflation": {"value": 0.03, "basis": "Other expenses grew 24.4% in FY2025 and 5.0% in 9M-2026 vs 9M-2025."},
-    "depreciation_growth": {"value": "inflation", "basis": "Depreciation and amortisation grew 8.3% in 9M-2026."},
-    "other_operating_income": {"value": "held at FY2026E level", "basis": "Net fair-value income plus other income was 113.0m in FY2025 and 113.3m in 9M-2026 (151.1m annualised). Noisy, so held flat after FY2026E."}
+    "net_trading_income_growth": {
+      "base": -0.05,
+      "downside": -0.2,
+      "upside": 0.0,
+      "basis": "Net trading income was 157m (FY2022), 333m (FY2023), 378m (FY2024), 309m (FY2025) and 296m annualised in 2026 (9M-2026 222.2m vs 214.6m in 9M-2025). It depends on foreign-exchange conditions and is volatile. Base assumes gradual mean reversion."
+    },
+    "fee_income_growth_over_inflation": {
+      "value": 0.06,
+      "basis": "Differs from SCB (0.02). Fee and commission income grew 39% in FY2025 and 21.7% in 9M-2026 (414.8m vs 340.8m). Base fades to inflation plus 6 points (about 13.5% in FY2027E). Judgement."
+    },
+    "fee_expense_to_fee_income": {
+      "value": 0.12,
+      "basis": "9M-2026 11.6%, FY2025 14.0%, FY2024 17.0%."
+    },
+    "staff_cost_growth_over_inflation": {
+      "value": 0.03,
+      "basis": "Staff costs grew 24.6% in FY2025 but only 2.0% in 9M-2026 vs 9M-2025."
+    },
+    "other_opex_growth_over_inflation": {
+      "value": 0.03,
+      "basis": "Other expenses grew 24.4% in FY2025 and 5.0% in 9M-2026 vs 9M-2025."
+    },
+    "depreciation_growth": {
+      "value": "inflation",
+      "basis": "Depreciation and amortisation grew 8.3% in 9M-2026."
+    },
+    "other_operating_income": {
+      "value": "held at FY2026E level",
+      "basis": "Net fair-value income plus other income was 113.0m in FY2025 and 113.3m in 9M-2026 (151.1m annualised). Noisy, so held flat after FY2026E."
+    }
   },
   "credit": {
-    "cost_of_risk_on_average_net_loans": {"base": 0.02, "downside": 0.04, "upside": 0.01, "basis": "FY2025 loan impairment 144.6m = 2.7% of average net loans (5,312m). Gross NPL ratio rose to 8.49% at FY2025 and 8.91% at Sep 2026, but the stage 3 allowance is only 84.9m on 629.8m of stage 3 loans (13.5%) at FY2025, so catch-up provisions are a real risk. The 9M-2026 net reversal of 32.4m is not assumed to repeat. Downside doubles the base charge."},
-    "fy2026e_q4_charge": {"value": "base cost of risk x 30 Sep 2026 net loans / 4, applied in all scenarios", "basis": "Three quarters are reported, so FY2026E is the same in every scenario."},
+    "cost_of_risk_on_average_net_loans": {
+      "base": 0.02,
+      "downside": 0.04,
+      "upside": 0.01,
+      "basis": "FY2025 loan impairment 144.6m = 2.7% of average net loans (5,312m). Gross NPL ratio rose to 8.49% at FY2025 and 8.91% at Sep 2026, but the stage 3 allowance is only 84.9m on 629.8m of stage 3 loans (13.5%) at FY2025, so catch-up provisions are a real risk. The 9M-2026 net reversal of 32.4m is not assumed to repeat. Downside doubles the base charge."
+    },
+    "fy2026e_q4_charge": {
+      "value": "base cost of risk x 30 Sep 2026 net loans / 4, applied in all scenarios",
+      "basis": "Three quarters are reported, so FY2026E is the same in every scenario."
+    },
     "note": "No securities impairment is forecast after FY2026E. In FY2022 the domestic debt exchange cost the bank 1,157.5m on securities and drove a 419.8m loss; FY2025 securities impairment was 11 thousand."
   },
   "capital_and_liquidity": {
-    "dividend_payout_of_prior_year_profit": {"base": 0.20, "downside": 0.0, "upside": 0.35, "basis": "Differs from SCB (0.70). No dividend has been paid since 2022 (152m, 69% of FY2021 profit) in spite of profits of 676m (FY2023), 452m (FY2024) and 998m (FY2025); the directors did not recommend one for FY2025. Base assumes payments restart in FY2027E at 20% of FY2026E profit; downside assumes none while the CAR is under pressure; upside 35%. Judgement: parent Zenith Bank PLC holds 99.42% and the policy is not disclosed."},
-    "statutory_reserve_transfer_of_profit": {"value": "25% of profit while the statutory reserve is below stated capital, 12.5% once it reaches stated capital", "basis": "Observed: FY2023 transfer 84.5m = 12.5% of 676.1m; FY2024 113.0m = 25.0% of 452.0m; FY2025 249.4m = 25.0% of 997.7m. The reserve is 891.8m against stated capital of 1,000m, so the band changes in FY2026E-FY2027E. The transfer is booked at year end (the 30 Sep 2026 reserve equals the FY2025 figure)."},
-    "credit_risk_reserve": {"value": "held at the 30 Sep 2026 balance (177.65m)", "basis": "A regulatory reserve moved out of retained earnings: 76.1m at FY2025 to 177.65m at Sep 2026. No further transfers are forecast."},
-    "operating_cash_to_customer_deposits": {"value": 0.167, "basis": "30 Sep 2026 cash and bank balances of 9,519m = 36.7% of customer deposits (FY2025 37.6%); less the 20% reserve requirement (macro crr_pct) leaves 16.7%. The reserve is applied to all customer deposits, a simplification as in SCB. Differs from SCB (0.086): Zenith's cash line includes balances with other banks."},
-    "due_from_banks_share_of_liquid_assets": {"value": 0.013, "basis": "30 Sep 2026: investments other than securities 117.4m / (117.4m + investment securities and trading assets 9,009.4m). It was 3.5% at FY2025 and 16.4% at FY2024, so the split is unstable; only the total liquid assets matter for earnings."},
-    "risk_weight_density_of_total_assets": {"value": 0.722, "basis": "Implied at 30 Sep 2026: book equity 4,107.7m / reported CAR 17.79% / total assets 31,991.6m. At FY2025 the reported risk-weighted assets (14,062m) were 52.7% of total assets. If the interim CAR excludes unaudited profit (inferred, not verified) then 0.722 is conservative and the CAR proxy understates; checks.md shows both densities."}
+    "dividend_payout_of_prior_year_profit": {
+      "base": 0.2,
+      "downside": 0.0,
+      "upside": 0.35,
+      "basis": "Differs from SCB (0.70). No dividend has been paid since 2022 (152m, 69% of FY2021 profit) in spite of profits of 676m (FY2023), 452m (FY2024) and 998m (FY2025); the directors did not recommend one for FY2025. Base assumes payments restart in FY2027E at 20% of FY2026E profit; downside assumes none while the CAR is under pressure; upside 35%. Judgement: parent Zenith Bank PLC holds 99.42% and the policy is not disclosed. Dividends are also capped by distributable retained earnings after the statutory transfer and withheld if the CAR proxy after payment is below the target buffer; both caps are flagged in forecast.csv."
+    },
+    "statutory_reserve_transfer_of_profit": {
+      "value": "50% of profit if the statutory reserve is below 50% of stated capital, 25% from 50% to below 100%, 12.5% at or above 100%",
+      "basis": "Banks and Specialised Deposit-Taking Institutions Act 2016 (Act 930) s.34, official Bank of Ghana PDF printed p.30, as read by independent reviewer chatgpt-support. Observed in the bank: FY2023 12.5% (the reserve then exceeded the 400m stated capital), FY2024 and FY2025 25.0% (stated capital raised to 1,000m). With the reserve at 891.8m (89% of 1,000m) the 25% band applies until it reaches 1,000m. The transfer is booked at year end (the 30 Sep 2026 reserve equals the FY2025 figure)."
+    },
+    "credit_risk_reserve": {
+      "value": "held at the 30 Sep 2026 balance (177.65m)",
+      "basis": "A regulatory reserve moved out of retained earnings: 76.1m at FY2025 to 177.65m at Sep 2026. No further transfers are forecast."
+    },
+    "operating_cash_to_customer_deposits": {
+      "value": 0.167,
+      "basis": "30 Sep 2026 cash and bank balances of 9,519m = 36.7% of customer deposits (FY2025 37.6%); less the 20% reserve requirement (macro crr_pct) leaves 16.7%. The reserve is applied to all customer deposits, a simplification as in SCB. Differs from SCB (0.086): Zenith's cash line includes balances with other banks."
+    },
+    "due_from_banks_share_of_liquid_assets": {
+      "value": 0.013,
+      "basis": "30 Sep 2026: investments other than securities 117.4m / (117.4m + investment securities and trading assets 9,009.4m). It was 3.5% at FY2025 and 16.4% at FY2024, so the split is unstable; only the total liquid assets matter for earnings."
+    },
+    "risk_weight_density_of_total_assets": {
+      "value": "computed in model.py (about 0.690)",
+      "basis": "See regulatory_capital_proxy. The FY2025 audited density is 0.527 (14,062.231m / 26,702.820m); the forecast also reports a proxy on that density as a high case."
+    },
+    "regulatory_capital_proxy": {
+      "value": "(total equity - 181.041m) / (risk-weight density x total assets)",
+      "basis": "FY2025 note 4 pp.86-87 (reviewer): regulatory capital 2,868.945m against book equity 3,049.986m, an adjustment of 181.041m, held constant. The density is not an input but is solved from the reported 9M-2026 CAR of 17.79%: (4,107.719 - 181.041) / 0.1779 / 31,991.597 = 0.690. Whether the interim reported CAR includes the unaudited 9M profit is unknown. This is an accounting proxy, not a prudential calculation, and the model does not publish it as car_pct."
+    },
+    "target_car_pct_for_dividends": {
+      "value": 15.0,
+      "basis": "13% minimum (macro min_car_pct) plus a 2 point buffer, a judgement. A dividend is withheld if the CAR proxy after payment would fall below this."
+    }
   },
   "other_balance_sheet": {
     "other_assets_and_liabilities_growth": "inflation",
     "property_equipment_growth": "inflation",
     "borrowings": "held at the 30 Sep 2026 balance (1,345.4m). Differs from SCB (zero). Borrowings were 2,132m at FY2025 and 1,345m at Sep 2026; counterparties and terms were not read, so no repayment path is assumed.",
-    "other_assets_note": "Other assets (including derivatives, tax and deferred tax) rose from 1,768m at FY2025 to 3,455m at 30 Sep 2026; the reason was not investigated. Grown at inflation from there."
+    "other_assets_note": "Other assets (including derivatives, tax and deferred tax) rose from 1,768m at FY2025 to 3,455m at 30 Sep 2026; the reason was not investigated. Grown at inflation from there.",
+    "cash_floor_note": "Cash and bank balances are modelled as (20% reserve requirement + 16.7%) of customer deposits. The 20% is a constructed floor from macro crr_pct, not a tested statutory eligibility (the reserve applies to cedi deposits and the cash line includes balances with other banks)."
   }
 }

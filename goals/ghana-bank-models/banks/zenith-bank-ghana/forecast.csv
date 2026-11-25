@@ -31,159 +31,192 @@ zenith-bank-ghana,base,FY2026E,balance_sheet,retained_earnings,1801.308,GHS mill
 zenith-bank-ghana,base,FY2026E,balance_sheet,reserves_other,1343.086,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
 zenith-bank-ghana,base,FY2026E,balance_sheet,total_equity,4144.393,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
 zenith-bank-ghana,base,FY2026E,balance_sheet,stated_capital,1000.000,GHS millions,estimated,"Held at 1,000m; no issue or bonus issue assumed."
-zenith-bank-ghana,base,FY2026E,ratios,x_car_proxy_pct,17.922,percent,estimated,"PROXY, not the regulatory ratio: book equity / (risk-weight density 0.722 x total assets). Density is the 30 Sep 2026 implied value."
-zenith-bank-ghana,base,FY2026E,ratios,x_car_proxy_fy25_density_pct,24.571,percent,estimated,PROXY with the FY2025 audited density (reported RWA / total assets = 0.527). Gives a more generous number than x_car_proxy_pct; the truth lies between if loan growth raises density.
-zenith-bank-ghana,base,FY2026E,ratios,x_roe_pct,30.424,percent,estimated,Profit after tax / average of opening and closing equity.
-zenith-bank-ghana,base,FY2026E,ratios,x_cost_to_income_pct,30.965,percent,estimated,Operating expenses / operating income before impairment.
-zenith-bank-ghana,base,FY2026E,ratios,x_ldr_pct,36.433,percent,estimated,Net loans / customer deposits.
-zenith-bank-ghana,base,FY2027E,income_statement,interest_income,2399.742,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+zenith-bank-ghana,base,FY2026E,ratios,x_car_proxy_pct,17.936,percent,estimated,"PROXY, not the regulatory ratio: (book equity - 181.041m FY2025 regulatory adjustment) / (risk-weight density x total assets). Density calibrated so the proxy equals the reported 17.79% at 30 Sep 2026. Not a prudential calculation."
+zenith-bank-ghana,base,FY2026E,ratios,x_car_proxy_fy25_density_pct,23.498,percent,estimated,"PROXY with the FY2025 audited density (reported RWA / total assets = 0.527); a high case. Interim reported CAR is lower than this implies, so treat as an upper bound of the proxy, not of actual CAR."
+zenith-bank-ghana,base,FY2026E,ratios,roe_pct,30.424,percent,estimated,Estimate. Profit after tax / average of opening and closing equity.
+zenith-bank-ghana,base,FY2026E,ratios,roa_pct,3.727,percent,estimated,Estimate. Profit after tax / average of opening and closing total assets.
+zenith-bank-ghana,base,FY2026E,ratios,cost_to_income_pct,30.965,percent,estimated,Estimate. (Staff + depreciation + other expenses) / operating income before impairment.
+zenith-bank-ghana,base,FY2026E,ratios,ldr_pct,36.433,percent,estimated,Estimate. NET loans / customer deposits (gross loans are not forecast).
+zenith-bank-ghana,base,FY2026E,balance_sheet,loans_and_advances_gross,,GHS millions,unavailable,Gross loans not forecast; interim statements do not print them.
+zenith-bank-ghana,base,FY2026E,balance_sheet,loan_loss_allowance,,GHS millions,unavailable,"Allowance not forecast. Impairment is driven by a cost of risk on net loans, not a stage 3 path."
+zenith-bank-ghana,base,FY2026E,ratios,npl_pct,,percent,unavailable,No NPL path is forecast. Reported NPL was 8.49% (FY2025) and 8.91% (Sep 2026); the cost of risk is an independent assumption.
+zenith-bank-ghana,base,FY2026E,ratios,car_pct,,percent,unavailable,Regulatory CAR is not forecast; see x_car_proxy_pct (accounting proxy).
+zenith-bank-ghana,base,FY2026E,ratios,tier1_pct,,percent,unavailable,Tier 1 is not forecast.
+zenith-bank-ghana,base,FY2027E,income_statement,interest_income,2411.414,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 zenith-bank-ghana,base,FY2027E,income_statement,interest_expense,640.574,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-zenith-bank-ghana,base,FY2027E,income_statement,net_interest_income,1759.168,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+zenith-bank-ghana,base,FY2027E,income_statement,net_interest_income,1770.841,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 zenith-bank-ghana,base,FY2027E,income_statement,fee_commission_income,627.778,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 zenith-bank-ghana,base,FY2027E,income_statement,fee_commission_expense,75.333,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 zenith-bank-ghana,base,FY2027E,income_statement,net_trading_income,281.484,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 zenith-bank-ghana,base,FY2027E,income_statement,other_operating_income,151.085,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-zenith-bank-ghana,base,FY2027E,income_statement,total_operating_income,2744.182,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+zenith-bank-ghana,base,FY2027E,income_statement,total_operating_income,2755.854,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 zenith-bank-ghana,base,FY2027E,income_statement,staff_costs,360.357,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 zenith-bank-ghana,base,FY2027E,income_statement,depreciation_amortisation,77.687,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 zenith-bank-ghana,base,FY2027E,income_statement,other_operating_expenses,389.029,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 zenith-bank-ghana,base,FY2027E,income_statement,impairment_charge,212.746,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-zenith-bank-ghana,base,FY2027E,income_statement,profit_before_tax,1704.363,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-zenith-bank-ghana,base,FY2027E,income_statement,income_tax,579.483,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-zenith-bank-ghana,base,FY2027E,income_statement,profit_after_tax,1124.880,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+zenith-bank-ghana,base,FY2027E,income_statement,profit_before_tax,1716.035,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+zenith-bank-ghana,base,FY2027E,income_statement,income_tax,583.452,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+zenith-bank-ghana,base,FY2027E,income_statement,profit_after_tax,1132.583,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 zenith-bank-ghana,base,FY2027E,income_statement,x_dividends_paid,218.881,GHS millions,estimated,Payout x prior-year profit after tax (assumptions.json).
 zenith-bank-ghana,base,FY2027E,balance_sheet,cash_and_bog_balances,11322.375,GHS millions,estimated,Estimate.
-zenith-bank-ghana,base,FY2027E,balance_sheet,due_from_banks,137.405,GHS millions,estimated,Estimate. Due from banks and securities are the plug (liquid assets) split at the 30 Sep 2026 mix.
-zenith-bank-ghana,base,FY2027E,balance_sheet,investment_securities,10432.195,GHS millions,estimated,Estimate. Due from banks and securities are the plug (liquid assets) split at the 30 Sep 2026 mix.
+zenith-bank-ghana,base,FY2027E,balance_sheet,due_from_banks,137.505,GHS millions,estimated,Estimate. Due from banks and securities are the plug (liquid assets) split at the 30 Sep 2026 mix.
+zenith-bank-ghana,base,FY2027E,balance_sheet,investment_securities,10439.798,GHS millions,estimated,Estimate. Due from banks and securities are the plug (liquid assets) split at the 30 Sep 2026 mix.
 zenith-bank-ghana,base,FY2027E,balance_sheet,loans_and_advances_net,11819.221,GHS millions,estimated,Estimate.
 zenith-bank-ghana,base,FY2027E,balance_sheet,property_equipment_intangibles,467.335,GHS millions,estimated,Estimate.
 zenith-bank-ghana,base,FY2027E,balance_sheet,other_assets,3714.662,GHS millions,estimated,Estimate.
-zenith-bank-ghana,base,FY2027E,balance_sheet,total_assets,37893.192,GHS millions,estimated,Estimate.
+zenith-bank-ghana,base,FY2027E,balance_sheet,total_assets,37900.896,GHS millions,estimated,Estimate.
 zenith-bank-ghana,base,FY2027E,balance_sheet,customer_deposits,30851.157,GHS millions,estimated,Estimate.
 zenith-bank-ghana,base,FY2027E,balance_sheet,due_to_banks,171.720,GHS millions,estimated,Estimate.
 zenith-bank-ghana,base,FY2027E,balance_sheet,borrowings,1345.443,GHS millions,estimated,Estimate.
 zenith-bank-ghana,base,FY2027E,balance_sheet,other_liabilities,474.481,GHS millions,estimated,Estimate.
 zenith-bank-ghana,base,FY2027E,balance_sheet,total_liabilities,32842.801,GHS millions,estimated,Estimate.
-zenith-bank-ghana,base,FY2027E,balance_sheet,retained_earnings,2566.696,GHS millions,estimated,Estimate.
-zenith-bank-ghana,base,FY2027E,balance_sheet,reserves_other,1483.696,GHS millions,estimated,Estimate.
-zenith-bank-ghana,base,FY2027E,balance_sheet,total_equity,5050.392,GHS millions,estimated,Estimate.
+zenith-bank-ghana,base,FY2027E,balance_sheet,retained_earnings,2573.436,GHS millions,estimated,Estimate.
+zenith-bank-ghana,base,FY2027E,balance_sheet,reserves_other,1484.659,GHS millions,estimated,Estimate.
+zenith-bank-ghana,base,FY2027E,balance_sheet,total_equity,5058.095,GHS millions,estimated,Estimate.
 zenith-bank-ghana,base,FY2027E,balance_sheet,stated_capital,1000.000,GHS millions,estimated,"Held at 1,000m; no issue or bonus issue assumed."
-zenith-bank-ghana,base,FY2027E,ratios,x_car_proxy_pct,18.460,percent,estimated,"PROXY, not the regulatory ratio: book equity / (risk-weight density 0.722 x total assets). Density is the 30 Sep 2026 implied value."
-zenith-bank-ghana,base,FY2027E,ratios,x_car_proxy_fy25_density_pct,25.309,percent,estimated,PROXY with the FY2025 audited density (reported RWA / total assets = 0.527). Gives a more generous number than x_car_proxy_pct; the truth lies between if loan growth raises density.
-zenith-bank-ghana,base,FY2027E,ratios,x_roe_pct,24.468,percent,estimated,Profit after tax / average of opening and closing equity.
-zenith-bank-ghana,base,FY2027E,ratios,x_cost_to_income_pct,30.139,percent,estimated,Operating expenses / operating income before impairment.
-zenith-bank-ghana,base,FY2027E,ratios,x_ldr_pct,38.310,percent,estimated,Net loans / customer deposits.
-zenith-bank-ghana,base,FY2028E,income_statement,interest_income,3005.900,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+zenith-bank-ghana,base,FY2027E,ratios,x_car_proxy_pct,18.651,percent,estimated,"PROXY, not the regulatory ratio: (book equity - 181.041m FY2025 regulatory adjustment) / (risk-weight density x total assets). Density calibrated so the proxy equals the reported 17.79% at 30 Sep 2026. Not a prudential calculation."
+zenith-bank-ghana,base,FY2027E,ratios,x_car_proxy_fy25_density_pct,24.435,percent,estimated,"PROXY with the FY2025 audited density (reported RWA / total assets = 0.527); a high case. Interim reported CAR is lower than this implies, so treat as an upper bound of the proxy, not of actual CAR."
+zenith-bank-ghana,base,FY2027E,ratios,roe_pct,24.615,percent,estimated,Estimate. Profit after tax / average of opening and closing equity.
+zenith-bank-ghana,base,FY2027E,ratios,roa_pct,3.239,percent,estimated,Estimate. Profit after tax / average of opening and closing total assets.
+zenith-bank-ghana,base,FY2027E,ratios,cost_to_income_pct,30.011,percent,estimated,Estimate. (Staff + depreciation + other expenses) / operating income before impairment.
+zenith-bank-ghana,base,FY2027E,ratios,ldr_pct,38.310,percent,estimated,Estimate. NET loans / customer deposits (gross loans are not forecast).
+zenith-bank-ghana,base,FY2027E,balance_sheet,loans_and_advances_gross,,GHS millions,unavailable,Gross loans not forecast; interim statements do not print them.
+zenith-bank-ghana,base,FY2027E,balance_sheet,loan_loss_allowance,,GHS millions,unavailable,"Allowance not forecast. Impairment is driven by a cost of risk on net loans, not a stage 3 path."
+zenith-bank-ghana,base,FY2027E,ratios,npl_pct,,percent,unavailable,No NPL path is forecast. Reported NPL was 8.49% (FY2025) and 8.91% (Sep 2026); the cost of risk is an independent assumption.
+zenith-bank-ghana,base,FY2027E,ratios,car_pct,,percent,unavailable,Regulatory CAR is not forecast; see x_car_proxy_pct (accounting proxy).
+zenith-bank-ghana,base,FY2027E,ratios,tier1_pct,,percent,unavailable,Tier 1 is not forecast.
+zenith-bank-ghana,base,FY2028E,income_statement,interest_income,2965.016,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 zenith-bank-ghana,base,FY2028E,income_statement,interest_expense,703.659,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-zenith-bank-ghana,base,FY2028E,income_statement,net_interest_income,2302.241,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+zenith-bank-ghana,base,FY2028E,income_statement,net_interest_income,2261.357,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 zenith-bank-ghana,base,FY2028E,income_statement,fee_commission_income,715.666,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 zenith-bank-ghana,base,FY2028E,income_statement,fee_commission_expense,85.880,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 zenith-bank-ghana,base,FY2028E,income_statement,net_trading_income,267.410,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 zenith-bank-ghana,base,FY2028E,income_statement,other_operating_income,151.085,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-zenith-bank-ghana,base,FY2028E,income_statement,total_operating_income,3350.522,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+zenith-bank-ghana,base,FY2028E,income_statement,total_operating_income,3309.638,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 zenith-bank-ghana,base,FY2028E,income_statement,staff_costs,399.996,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 zenith-bank-ghana,base,FY2028E,income_statement,depreciation_amortisation,83.902,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 zenith-bank-ghana,base,FY2028E,income_statement,other_operating_expenses,431.822,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 zenith-bank-ghana,base,FY2028E,income_statement,impairment_charge,262.387,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-zenith-bank-ghana,base,FY2028E,income_statement,profit_before_tax,2172.416,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-zenith-bank-ghana,base,FY2028E,income_statement,income_tax,738.621,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-zenith-bank-ghana,base,FY2028E,income_statement,profit_after_tax,1433.794,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-zenith-bank-ghana,base,FY2028E,income_statement,x_dividends_paid,224.976,GHS millions,estimated,Payout x prior-year profit after tax (assumptions.json).
+zenith-bank-ghana,base,FY2028E,income_statement,profit_before_tax,2131.531,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+zenith-bank-ghana,base,FY2028E,income_statement,income_tax,724.721,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+zenith-bank-ghana,base,FY2028E,income_statement,profit_after_tax,1406.811,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+zenith-bank-ghana,base,FY2028E,income_statement,x_dividends_paid,226.517,GHS millions,estimated,Payout x prior-year profit after tax (assumptions.json).
 zenith-bank-ghana,base,FY2028E,balance_sheet,cash_and_bog_balances,13518.915,GHS millions,estimated,Estimate.
-zenith-bank-ghana,base,FY2028E,balance_sheet,due_from_banks,165.145,GHS millions,estimated,Estimate. Due from banks and securities are the plug (liquid assets) split at the 30 Sep 2026 mix.
-zenith-bank-ghana,base,FY2028E,balance_sheet,investment_securities,12538.340,GHS millions,estimated,Estimate. Due from banks and securities are the plug (liquid assets) split at the 30 Sep 2026 mix.
+zenith-bank-ghana,base,FY2028E,balance_sheet,due_from_banks,164.875,GHS millions,estimated,Estimate. Due from banks and securities are the plug (liquid assets) split at the 30 Sep 2026 mix.
+zenith-bank-ghana,base,FY2028E,balance_sheet,investment_securities,12517.790,GHS millions,estimated,Estimate. Due from banks and securities are the plug (liquid assets) split at the 30 Sep 2026 mix.
 zenith-bank-ghana,base,FY2028E,balance_sheet,loans_and_advances_net,14419.450,GHS millions,estimated,Estimate.
 zenith-bank-ghana,base,FY2028E,balance_sheet,property_equipment_intangibles,504.722,GHS millions,estimated,Estimate.
 zenith-bank-ghana,base,FY2028E,balance_sheet,other_assets,4011.836,GHS millions,estimated,Estimate.
-zenith-bank-ghana,base,FY2028E,balance_sheet,total_assets,45158.407,GHS millions,estimated,Estimate.
+zenith-bank-ghana,base,FY2028E,balance_sheet,total_assets,45137.587,GHS millions,estimated,Estimate.
 zenith-bank-ghana,base,FY2028E,balance_sheet,customer_deposits,36836.281,GHS millions,estimated,Estimate.
 zenith-bank-ghana,base,FY2028E,balance_sheet,due_to_banks,205.033,GHS millions,estimated,Estimate.
 zenith-bank-ghana,base,FY2028E,balance_sheet,borrowings,1345.443,GHS millions,estimated,Estimate.
 zenith-bank-ghana,base,FY2028E,balance_sheet,other_liabilities,512.440,GHS millions,estimated,Estimate.
 zenith-bank-ghana,base,FY2028E,balance_sheet,total_liabilities,38899.197,GHS millions,estimated,Estimate.
-zenith-bank-ghana,base,FY2028E,balance_sheet,retained_earnings,3596.290,GHS millions,estimated,Estimate.
-zenith-bank-ghana,base,FY2028E,balance_sheet,reserves_other,1662.920,GHS millions,estimated,Estimate.
-zenith-bank-ghana,base,FY2028E,balance_sheet,total_equity,6259.210,GHS millions,estimated,Estimate.
+zenith-bank-ghana,base,FY2028E,balance_sheet,retained_earnings,3577.879,GHS millions,estimated,Estimate.
+zenith-bank-ghana,base,FY2028E,balance_sheet,reserves_other,1660.510,GHS millions,estimated,Estimate.
+zenith-bank-ghana,base,FY2028E,balance_sheet,total_equity,6238.389,GHS millions,estimated,Estimate.
 zenith-bank-ghana,base,FY2028E,balance_sheet,stated_capital,1000.000,GHS millions,estimated,"Held at 1,000m; no issue or bonus issue assumed."
-zenith-bank-ghana,base,FY2028E,ratios,x_car_proxy_pct,19.197,percent,estimated,"PROXY, not the regulatory ratio: book equity / (risk-weight density 0.722 x total assets). Density is the 30 Sep 2026 implied value."
-zenith-bank-ghana,base,FY2028E,ratios,x_car_proxy_fy25_density_pct,26.320,percent,estimated,PROXY with the FY2025 audited density (reported RWA / total assets = 0.527). Gives a more generous number than x_car_proxy_pct; the truth lies between if loan growth raises density.
-zenith-bank-ghana,base,FY2028E,ratios,x_roe_pct,25.355,percent,estimated,Profit after tax / average of opening and closing equity.
-zenith-bank-ghana,base,FY2028E,ratios,x_cost_to_income_pct,27.331,percent,estimated,Operating expenses / operating income before impairment.
-zenith-bank-ghana,base,FY2028E,ratios,x_ldr_pct,39.145,percent,estimated,Net loans / customer deposits.
-zenith-bank-ghana,base,FY2029E,income_statement,interest_income,3653.336,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+zenith-bank-ghana,base,FY2028E,ratios,x_car_proxy_pct,19.451,percent,estimated,"PROXY, not the regulatory ratio: (book equity - 181.041m FY2025 regulatory adjustment) / (risk-weight density x total assets). Density calibrated so the proxy equals the reported 17.79% at 30 Sep 2026. Not a prudential calculation."
+zenith-bank-ghana,base,FY2028E,ratios,x_car_proxy_fy25_density_pct,25.483,percent,estimated,"PROXY with the FY2025 audited density (reported RWA / total assets = 0.527); a high case. Interim reported CAR is lower than this implies, so treat as an upper bound of the proxy, not of actual CAR."
+zenith-bank-ghana,base,FY2028E,ratios,roe_pct,24.907,percent,estimated,Estimate. Profit after tax / average of opening and closing equity.
+zenith-bank-ghana,base,FY2028E,ratios,roa_pct,3.388,percent,estimated,Estimate. Profit after tax / average of opening and closing total assets.
+zenith-bank-ghana,base,FY2028E,ratios,cost_to_income_pct,27.668,percent,estimated,Estimate. (Staff + depreciation + other expenses) / operating income before impairment.
+zenith-bank-ghana,base,FY2028E,ratios,ldr_pct,39.145,percent,estimated,Estimate. NET loans / customer deposits (gross loans are not forecast).
+zenith-bank-ghana,base,FY2028E,balance_sheet,loans_and_advances_gross,,GHS millions,unavailable,Gross loans not forecast; interim statements do not print them.
+zenith-bank-ghana,base,FY2028E,balance_sheet,loan_loss_allowance,,GHS millions,unavailable,"Allowance not forecast. Impairment is driven by a cost of risk on net loans, not a stage 3 path."
+zenith-bank-ghana,base,FY2028E,ratios,npl_pct,,percent,unavailable,No NPL path is forecast. Reported NPL was 8.49% (FY2025) and 8.91% (Sep 2026); the cost of risk is an independent assumption.
+zenith-bank-ghana,base,FY2028E,ratios,car_pct,,percent,unavailable,Regulatory CAR is not forecast; see x_car_proxy_pct (accounting proxy).
+zenith-bank-ghana,base,FY2028E,ratios,tier1_pct,,percent,unavailable,Tier 1 is not forecast.
+zenith-bank-ghana,base,FY2029E,income_statement,interest_income,3541.907,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 zenith-bank-ghana,base,FY2029E,income_statement,interest_expense,791.403,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-zenith-bank-ghana,base,FY2029E,income_statement,net_interest_income,2861.932,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+zenith-bank-ghana,base,FY2029E,income_statement,net_interest_income,2750.504,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 zenith-bank-ghana,base,FY2029E,income_statement,fee_commission_income,815.860,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 zenith-bank-ghana,base,FY2029E,income_statement,fee_commission_expense,97.903,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 zenith-bank-ghana,base,FY2029E,income_statement,net_trading_income,254.039,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 zenith-bank-ghana,base,FY2029E,income_statement,other_operating_income,151.085,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-zenith-bank-ghana,base,FY2029E,income_statement,total_operating_income,3985.013,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+zenith-bank-ghana,base,FY2029E,income_statement,total_operating_income,3873.585,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 zenith-bank-ghana,base,FY2029E,income_statement,staff_costs,443.995,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 zenith-bank-ghana,base,FY2029E,income_statement,depreciation_amortisation,90.614,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 zenith-bank-ghana,base,FY2029E,income_statement,other_operating_expenses,479.323,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 zenith-bank-ghana,base,FY2029E,income_statement,impairment_charge,314.344,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-zenith-bank-ghana,base,FY2029E,income_statement,profit_before_tax,2656.737,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-zenith-bank-ghana,base,FY2029E,income_statement,income_tax,903.291,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-zenith-bank-ghana,base,FY2029E,income_statement,profit_after_tax,1753.446,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-zenith-bank-ghana,base,FY2029E,income_statement,x_dividends_paid,286.759,GHS millions,estimated,Payout x prior-year profit after tax (assumptions.json).
+zenith-bank-ghana,base,FY2029E,income_statement,profit_before_tax,2545.309,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+zenith-bank-ghana,base,FY2029E,income_statement,income_tax,865.405,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+zenith-bank-ghana,base,FY2029E,income_statement,profit_after_tax,1679.904,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+zenith-bank-ghana,base,FY2029E,income_statement,x_dividends_paid,281.362,GHS millions,estimated,Payout x prior-year profit after tax (assumptions.json).
 zenith-bank-ghana,base,FY2029E,balance_sheet,cash_and_bog_balances,16112.384,GHS millions,estimated,Estimate.
-zenith-bank-ghana,base,FY2029E,balance_sheet,due_from_banks,204.969,GHS millions,estimated,Estimate. Due from banks and securities are the plug (liquid assets) split at the 30 Sep 2026 mix.
-zenith-bank-ghana,base,FY2029E,balance_sheet,investment_securities,15561.910,GHS millions,estimated,Estimate. Due from banks and securities are the plug (liquid assets) split at the 30 Sep 2026 mix.
+zenith-bank-ghana,base,FY2029E,balance_sheet,due_from_banks,203.813,GHS millions,estimated,Estimate. Due from banks and securities are the plug (liquid assets) split at the 30 Sep 2026 mix.
+zenith-bank-ghana,base,FY2029E,balance_sheet,investment_securities,15474.100,GHS millions,estimated,Estimate. Due from banks and securities are the plug (liquid assets) split at the 30 Sep 2026 mix.
 zenith-bank-ghana,base,FY2029E,balance_sheet,loans_and_advances_net,17014.951,GHS millions,estimated,Estimate.
 zenith-bank-ghana,base,FY2029E,balance_sheet,property_equipment_intangibles,545.099,GHS millions,estimated,Estimate.
 zenith-bank-ghana,base,FY2029E,balance_sheet,other_assets,4332.782,GHS millions,estimated,Estimate.
-zenith-bank-ghana,base,FY2029E,balance_sheet,total_assets,53772.096,GHS millions,estimated,Estimate.
+zenith-bank-ghana,base,FY2029E,balance_sheet,total_assets,53683.129,GHS millions,estimated,Estimate.
 zenith-bank-ghana,base,FY2029E,balance_sheet,customer_deposits,43902.953,GHS millions,estimated,Estimate.
 zenith-bank-ghana,base,FY2029E,balance_sheet,due_to_banks,244.367,GHS millions,estimated,Estimate.
 zenith-bank-ghana,base,FY2029E,balance_sheet,borrowings,1345.443,GHS millions,estimated,Estimate.
 zenith-bank-ghana,base,FY2029E,balance_sheet,other_liabilities,553.435,GHS millions,estimated,Estimate.
 zenith-bank-ghana,base,FY2029E,balance_sheet,total_liabilities,46046.198,GHS millions,estimated,Estimate.
-zenith-bank-ghana,base,FY2029E,balance_sheet,retained_earnings,4843.797,GHS millions,estimated,Estimate.
-zenith-bank-ghana,base,FY2029E,balance_sheet,reserves_other,1882.101,GHS millions,estimated,Estimate.
-zenith-bank-ghana,base,FY2029E,balance_sheet,total_equity,7725.898,GHS millions,estimated,Estimate.
+zenith-bank-ghana,base,FY2029E,balance_sheet,retained_earnings,4766.433,GHS millions,estimated,Estimate.
+zenith-bank-ghana,base,FY2029E,balance_sheet,reserves_other,1870.498,GHS millions,estimated,Estimate.
+zenith-bank-ghana,base,FY2029E,balance_sheet,total_equity,7636.931,GHS millions,estimated,Estimate.
 zenith-bank-ghana,base,FY2029E,balance_sheet,stated_capital,1000.000,GHS millions,estimated,"Held at 1,000m; no issue or bonus issue assumed."
-zenith-bank-ghana,base,FY2029E,ratios,x_car_proxy_pct,19.900,percent,estimated,"PROXY, not the regulatory ratio: book equity / (risk-weight density 0.722 x total assets). Density is the 30 Sep 2026 implied value."
-zenith-bank-ghana,base,FY2029E,ratios,x_car_proxy_fy25_density_pct,27.283,percent,estimated,PROXY with the FY2025 audited density (reported RWA / total assets = 0.527). Gives a more generous number than x_car_proxy_pct; the truth lies between if loan growth raises density.
-zenith-bank-ghana,base,FY2029E,ratios,x_roe_pct,25.076,percent,estimated,Profit after tax / average of opening and closing equity.
-zenith-bank-ghana,base,FY2029E,ratios,x_cost_to_income_pct,25.444,percent,estimated,Operating expenses / operating income before impairment.
-zenith-bank-ghana,base,FY2029E,ratios,x_ldr_pct,38.756,percent,estimated,Net loans / customer deposits.
-zenith-bank-ghana,base,FY2030E,income_statement,interest_income,4430.717,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+zenith-bank-ghana,base,FY2029E,ratios,x_car_proxy_pct,20.130,percent,estimated,"PROXY, not the regulatory ratio: (book equity - 181.041m FY2025 regulatory adjustment) / (risk-weight density x total assets). Density calibrated so the proxy equals the reported 17.79% at 30 Sep 2026. Not a prudential calculation."
+zenith-bank-ghana,base,FY2029E,ratios,x_car_proxy_fy25_density_pct,26.373,percent,estimated,"PROXY with the FY2025 audited density (reported RWA / total assets = 0.527); a high case. Interim reported CAR is lower than this implies, so treat as an upper bound of the proxy, not of actual CAR."
+zenith-bank-ghana,base,FY2029E,ratios,roe_pct,24.214,percent,estimated,Estimate. Profit after tax / average of opening and closing equity.
+zenith-bank-ghana,base,FY2029E,ratios,roa_pct,3.400,percent,estimated,Estimate. Profit after tax / average of opening and closing total assets.
+zenith-bank-ghana,base,FY2029E,ratios,cost_to_income_pct,26.176,percent,estimated,Estimate. (Staff + depreciation + other expenses) / operating income before impairment.
+zenith-bank-ghana,base,FY2029E,ratios,ldr_pct,38.756,percent,estimated,Estimate. NET loans / customer deposits (gross loans are not forecast).
+zenith-bank-ghana,base,FY2029E,balance_sheet,loans_and_advances_gross,,GHS millions,unavailable,Gross loans not forecast; interim statements do not print them.
+zenith-bank-ghana,base,FY2029E,balance_sheet,loan_loss_allowance,,GHS millions,unavailable,"Allowance not forecast. Impairment is driven by a cost of risk on net loans, not a stage 3 path."
+zenith-bank-ghana,base,FY2029E,ratios,npl_pct,,percent,unavailable,No NPL path is forecast. Reported NPL was 8.49% (FY2025) and 8.91% (Sep 2026); the cost of risk is an independent assumption.
+zenith-bank-ghana,base,FY2029E,ratios,car_pct,,percent,unavailable,Regulatory CAR is not forecast; see x_car_proxy_pct (accounting proxy).
+zenith-bank-ghana,base,FY2029E,ratios,tier1_pct,,percent,unavailable,Tier 1 is not forecast.
+zenith-bank-ghana,base,FY2030E,income_statement,interest_income,4245.262,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 zenith-bank-ghana,base,FY2030E,income_statement,interest_expense,912.995,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-zenith-bank-ghana,base,FY2030E,income_statement,net_interest_income,3517.722,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+zenith-bank-ghana,base,FY2030E,income_statement,net_interest_income,3332.268,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 zenith-bank-ghana,base,FY2030E,income_statement,fee_commission_income,930.080,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 zenith-bank-ghana,base,FY2030E,income_statement,fee_commission_expense,111.610,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 zenith-bank-ghana,base,FY2030E,income_statement,net_trading_income,241.337,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 zenith-bank-ghana,base,FY2030E,income_statement,other_operating_income,151.085,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-zenith-bank-ghana,base,FY2030E,income_statement,total_operating_income,4728.615,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+zenith-bank-ghana,base,FY2030E,income_statement,total_operating_income,4543.160,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 zenith-bank-ghana,base,FY2030E,income_statement,staff_costs,492.835,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 zenith-bank-ghana,base,FY2030E,income_statement,depreciation_amortisation,97.863,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 zenith-bank-ghana,base,FY2030E,income_statement,other_operating_expenses,532.048,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 zenith-bank-ghana,base,FY2030E,income_statement,impairment_charge,365.821,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-zenith-bank-ghana,base,FY2030E,income_statement,profit_before_tax,3240.048,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-zenith-bank-ghana,base,FY2030E,income_statement,income_tax,1101.616,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-zenith-bank-ghana,base,FY2030E,income_statement,profit_after_tax,2138.431,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-zenith-bank-ghana,base,FY2030E,income_statement,x_dividends_paid,350.689,GHS millions,estimated,Payout x prior-year profit after tax (assumptions.json).
+zenith-bank-ghana,base,FY2030E,income_statement,profit_before_tax,3054.593,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+zenith-bank-ghana,base,FY2030E,income_statement,income_tax,1038.562,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+zenith-bank-ghana,base,FY2030E,income_statement,profit_after_tax,2016.031,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+zenith-bank-ghana,base,FY2030E,income_statement,x_dividends_paid,335.981,GHS millions,estimated,Payout x prior-year profit after tax (assumptions.json).
 zenith-bank-ghana,base,FY2030E,balance_sheet,cash_and_bog_balances,19203.384,GHS millions,estimated,Estimate.
-zenith-bank-ghana,base,FY2030E,balance_sheet,due_from_banks,260.450,GHS millions,estimated,Estimate. Due from banks and securities are the plug (liquid assets) split at the 30 Sep 2026 mix.
-zenith-bank-ghana,base,FY2030E,balance_sheet,investment_securities,19774.195,GHS millions,estimated,Estimate. Due from banks and securities are the plug (liquid assets) split at the 30 Sep 2026 mix.
+zenith-bank-ghana,base,FY2030E,balance_sheet,due_from_banks,257.894,GHS millions,estimated,Estimate. Due from banks and securities are the plug (liquid assets) split at the 30 Sep 2026 mix.
+zenith-bank-ghana,base,FY2030E,balance_sheet,investment_securities,19580.093,GHS millions,estimated,Estimate. Due from banks and securities are the plug (liquid assets) split at the 30 Sep 2026 mix.
 zenith-bank-ghana,base,FY2030E,balance_sheet,loans_and_advances_net,19567.194,GHS millions,estimated,Estimate.
 zenith-bank-ghana,base,FY2030E,balance_sheet,property_equipment_intangibles,588.707,GHS millions,estimated,Estimate.
 zenith-bank-ghana,base,FY2030E,balance_sheet,other_assets,4679.405,GHS millions,estimated,Estimate.
-zenith-bank-ghana,base,FY2030E,balance_sheet,total_assets,64073.335,GHS millions,estimated,Estimate.
+zenith-bank-ghana,base,FY2030E,balance_sheet,total_assets,63876.676,GHS millions,estimated,Estimate.
 zenith-bank-ghana,base,FY2030E,balance_sheet,customer_deposits,52325.296,GHS millions,estimated,Estimate.
 zenith-bank-ghana,base,FY2030E,balance_sheet,due_to_banks,291.246,GHS millions,estimated,Estimate.
 zenith-bank-ghana,base,FY2030E,balance_sheet,borrowings,1345.443,GHS millions,estimated,Estimate.
 zenith-bank-ghana,base,FY2030E,balance_sheet,other_liabilities,597.710,GHS millions,estimated,Estimate.
 zenith-bank-ghana,base,FY2030E,balance_sheet,total_liabilities,54559.695,GHS millions,estimated,Estimate.
-zenith-bank-ghana,base,FY2030E,balance_sheet,retained_earnings,6364.235,GHS millions,estimated,Estimate.
-zenith-bank-ghana,base,FY2030E,balance_sheet,reserves_other,2149.405,GHS millions,estimated,Estimate.
-zenith-bank-ghana,base,FY2030E,balance_sheet,total_equity,9513.640,GHS millions,estimated,Estimate.
+zenith-bank-ghana,base,FY2030E,balance_sheet,retained_earnings,6194.479,GHS millions,estimated,Estimate.
+zenith-bank-ghana,base,FY2030E,balance_sheet,reserves_other,2122.502,GHS millions,estimated,Estimate.
+zenith-bank-ghana,base,FY2030E,balance_sheet,total_equity,9316.981,GHS millions,estimated,Estimate.
 zenith-bank-ghana,base,FY2030E,balance_sheet,stated_capital,1000.000,GHS millions,estimated,"Held at 1,000m; no issue or bonus issue assumed."
-zenith-bank-ghana,base,FY2030E,ratios,x_car_proxy_pct,20.565,percent,estimated,"PROXY, not the regulatory ratio: book equity / (risk-weight density 0.722 x total assets). Density is the 30 Sep 2026 implied value."
-zenith-bank-ghana,base,FY2030E,ratios,x_car_proxy_fy25_density_pct,28.195,percent,estimated,PROXY with the FY2025 audited density (reported RWA / total assets = 0.527). Gives a more generous number than x_car_proxy_pct; the truth lies between if loan growth raises density.
-zenith-bank-ghana,base,FY2030E,ratios,x_roe_pct,24.808,percent,estimated,Profit after tax / average of opening and closing equity.
-zenith-bank-ghana,base,FY2030E,ratios,x_cost_to_income_pct,23.744,percent,estimated,Operating expenses / operating income before impairment.
-zenith-bank-ghana,base,FY2030E,ratios,x_ldr_pct,37.395,percent,estimated,Net loans / customer deposits.
+zenith-bank-ghana,base,FY2030E,ratios,x_car_proxy_pct,20.730,percent,estimated,"PROXY, not the regulatory ratio: (book equity - 181.041m FY2025 regulatory adjustment) / (risk-weight density x total assets). Density calibrated so the proxy equals the reported 17.79% at 30 Sep 2026. Not a prudential calculation."
+zenith-bank-ghana,base,FY2030E,ratios,x_car_proxy_fy25_density_pct,27.159,percent,estimated,"PROXY with the FY2025 audited density (reported RWA / total assets = 0.527); a high case. Interim reported CAR is lower than this implies, so treat as an upper bound of the proxy, not of actual CAR."
+zenith-bank-ghana,base,FY2030E,ratios,roe_pct,23.782,percent,estimated,Estimate. Profit after tax / average of opening and closing equity.
+zenith-bank-ghana,base,FY2030E,ratios,roa_pct,3.430,percent,estimated,Estimate. Profit after tax / average of opening and closing total assets.
+zenith-bank-ghana,base,FY2030E,ratios,cost_to_income_pct,24.713,percent,estimated,Estimate. (Staff + depreciation + other expenses) / operating income before impairment.
+zenith-bank-ghana,base,FY2030E,ratios,ldr_pct,37.395,percent,estimated,Estimate. NET loans / customer deposits (gross loans are not forecast).
+zenith-bank-ghana,base,FY2030E,balance_sheet,loans_and_advances_gross,,GHS millions,unavailable,Gross loans not forecast; interim statements do not print them.
+zenith-bank-ghana,base,FY2030E,balance_sheet,loan_loss_allowance,,GHS millions,unavailable,"Allowance not forecast. Impairment is driven by a cost of risk on net loans, not a stage 3 path."
+zenith-bank-ghana,base,FY2030E,ratios,npl_pct,,percent,unavailable,No NPL path is forecast. Reported NPL was 8.49% (FY2025) and 8.91% (Sep 2026); the cost of risk is an independent assumption.
+zenith-bank-ghana,base,FY2030E,ratios,car_pct,,percent,unavailable,Regulatory CAR is not forecast; see x_car_proxy_pct (accounting proxy).
+zenith-bank-ghana,base,FY2030E,ratios,tier1_pct,,percent,unavailable,Tier 1 is not forecast.
+zenith-bank-ghana,base,FY2026E,income_statement,x_q4_implied_profit_before_tax,370.986,GHS millions,estimated,FY2026E profit before tax less 9M-2026 actual.
+zenith-bank-ghana,base,FY2026E,income_statement,x_q4_implied_income_tax,334.312,GHS millions,estimated,FY2026E tax (34% of full-year PBT) less 9M-2026 actual tax; implies a very high Q4 tax rate (see checks.md).
+zenith-bank-ghana,base,FY2026E,income_statement,x_q4_implied_impairment,47.277,GHS millions,estimated,Q4 charge at the base cost of risk on 30 Sep 2026 net loans / 4.
 zenith-bank-ghana,downside,FY2026E,income_statement,interest_income,2225.787,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
 zenith-bank-ghana,downside,FY2026E,income_statement,interest_expense,738.363,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
 zenith-bank-ghana,downside,FY2026E,income_statement,net_interest_income,1487.424,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
@@ -216,159 +249,192 @@ zenith-bank-ghana,downside,FY2026E,balance_sheet,retained_earnings,1801.308,GHS 
 zenith-bank-ghana,downside,FY2026E,balance_sheet,reserves_other,1343.086,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
 zenith-bank-ghana,downside,FY2026E,balance_sheet,total_equity,4144.393,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
 zenith-bank-ghana,downside,FY2026E,balance_sheet,stated_capital,1000.000,GHS millions,estimated,"Held at 1,000m; no issue or bonus issue assumed."
-zenith-bank-ghana,downside,FY2026E,ratios,x_car_proxy_pct,17.922,percent,estimated,"PROXY, not the regulatory ratio: book equity / (risk-weight density 0.722 x total assets). Density is the 30 Sep 2026 implied value."
-zenith-bank-ghana,downside,FY2026E,ratios,x_car_proxy_fy25_density_pct,24.571,percent,estimated,PROXY with the FY2025 audited density (reported RWA / total assets = 0.527). Gives a more generous number than x_car_proxy_pct; the truth lies between if loan growth raises density.
-zenith-bank-ghana,downside,FY2026E,ratios,x_roe_pct,30.424,percent,estimated,Profit after tax / average of opening and closing equity.
-zenith-bank-ghana,downside,FY2026E,ratios,x_cost_to_income_pct,30.965,percent,estimated,Operating expenses / operating income before impairment.
-zenith-bank-ghana,downside,FY2026E,ratios,x_ldr_pct,36.433,percent,estimated,Net loans / customer deposits.
-zenith-bank-ghana,downside,FY2027E,income_statement,interest_income,2939.875,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+zenith-bank-ghana,downside,FY2026E,ratios,x_car_proxy_pct,17.936,percent,estimated,"PROXY, not the regulatory ratio: (book equity - 181.041m FY2025 regulatory adjustment) / (risk-weight density x total assets). Density calibrated so the proxy equals the reported 17.79% at 30 Sep 2026. Not a prudential calculation."
+zenith-bank-ghana,downside,FY2026E,ratios,x_car_proxy_fy25_density_pct,23.498,percent,estimated,"PROXY with the FY2025 audited density (reported RWA / total assets = 0.527); a high case. Interim reported CAR is lower than this implies, so treat as an upper bound of the proxy, not of actual CAR."
+zenith-bank-ghana,downside,FY2026E,ratios,roe_pct,30.424,percent,estimated,Estimate. Profit after tax / average of opening and closing equity.
+zenith-bank-ghana,downside,FY2026E,ratios,roa_pct,3.727,percent,estimated,Estimate. Profit after tax / average of opening and closing total assets.
+zenith-bank-ghana,downside,FY2026E,ratios,cost_to_income_pct,30.965,percent,estimated,Estimate. (Staff + depreciation + other expenses) / operating income before impairment.
+zenith-bank-ghana,downside,FY2026E,ratios,ldr_pct,36.433,percent,estimated,Estimate. NET loans / customer deposits (gross loans are not forecast).
+zenith-bank-ghana,downside,FY2026E,balance_sheet,loans_and_advances_gross,,GHS millions,unavailable,Gross loans not forecast; interim statements do not print them.
+zenith-bank-ghana,downside,FY2026E,balance_sheet,loan_loss_allowance,,GHS millions,unavailable,"Allowance not forecast. Impairment is driven by a cost of risk on net loans, not a stage 3 path."
+zenith-bank-ghana,downside,FY2026E,ratios,npl_pct,,percent,unavailable,No NPL path is forecast. Reported NPL was 8.49% (FY2025) and 8.91% (Sep 2026); the cost of risk is an independent assumption.
+zenith-bank-ghana,downside,FY2026E,ratios,car_pct,,percent,unavailable,Regulatory CAR is not forecast; see x_car_proxy_pct (accounting proxy).
+zenith-bank-ghana,downside,FY2026E,ratios,tier1_pct,,percent,unavailable,Tier 1 is not forecast.
+zenith-bank-ghana,downside,FY2027E,income_statement,interest_income,2846.642,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 zenith-bank-ghana,downside,FY2027E,income_statement,interest_expense,740.810,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-zenith-bank-ghana,downside,FY2027E,income_statement,net_interest_income,2199.065,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+zenith-bank-ghana,downside,FY2027E,income_statement,net_interest_income,2105.832,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 zenith-bank-ghana,downside,FY2027E,income_statement,fee_commission_income,647.136,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 zenith-bank-ghana,downside,FY2027E,income_statement,fee_commission_expense,77.656,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 zenith-bank-ghana,downside,FY2027E,income_statement,net_trading_income,237.039,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 zenith-bank-ghana,downside,FY2027E,income_statement,other_operating_income,151.085,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-zenith-bank-ghana,downside,FY2027E,income_statement,total_operating_income,3156.669,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+zenith-bank-ghana,downside,FY2027E,income_statement,total_operating_income,3063.436,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 zenith-bank-ghana,downside,FY2027E,income_statement,staff_costs,371.771,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 zenith-bank-ghana,downside,FY2027E,income_statement,depreciation_amortisation,80.216,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 zenith-bank-ghana,downside,FY2027E,income_statement,other_operating_expenses,401.351,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 zenith-bank-ghana,downside,FY2027E,income_statement,impairment_charge,393.344,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-zenith-bank-ghana,downside,FY2027E,income_statement,profit_before_tax,1909.988,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-zenith-bank-ghana,downside,FY2027E,income_statement,income_tax,649.396,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-zenith-bank-ghana,downside,FY2027E,income_statement,profit_after_tax,1260.592,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+zenith-bank-ghana,downside,FY2027E,income_statement,profit_before_tax,1816.754,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+zenith-bank-ghana,downside,FY2027E,income_statement,income_tax,617.696,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+zenith-bank-ghana,downside,FY2027E,income_statement,profit_after_tax,1199.058,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 zenith-bank-ghana,downside,FY2027E,income_statement,x_dividends_paid,0.000,GHS millions,estimated,Payout x prior-year profit after tax (assumptions.json).
 zenith-bank-ghana,downside,FY2027E,balance_sheet,cash_and_bog_balances,10698.989,GHS millions,estimated,Estimate.
-zenith-bank-ghana,downside,FY2027E,balance_sheet,due_from_banks,147.241,GHS millions,estimated,Estimate. Due from banks and securities are the plug (liquid assets) split at the 30 Sep 2026 mix.
-zenith-bank-ghana,downside,FY2027E,balance_sheet,investment_securities,11178.989,GHS millions,estimated,Estimate. Due from banks and securities are the plug (liquid assets) split at the 30 Sep 2026 mix.
+zenith-bank-ghana,downside,FY2027E,balance_sheet,due_from_banks,146.441,GHS millions,estimated,Estimate. Due from banks and securities are the plug (liquid assets) split at the 30 Sep 2026 mix.
+zenith-bank-ghana,downside,FY2027E,balance_sheet,investment_securities,11118.255,GHS millions,estimated,Estimate. Due from banks and securities are the plug (liquid assets) split at the 30 Sep 2026 mix.
 zenith-bank-ghana,downside,FY2027E,balance_sheet,loans_and_advances_net,10211.807,GHS millions,estimated,Estimate.
 zenith-bank-ghana,downside,FY2027E,balance_sheet,property_equipment_intangibles,482.550,GHS millions,estimated,Estimate.
 zenith-bank-ghana,downside,FY2027E,balance_sheet,other_assets,3835.605,GHS millions,estimated,Estimate.
-zenith-bank-ghana,downside,FY2027E,balance_sheet,total_assets,36555.182,GHS millions,estimated,Estimate.
+zenith-bank-ghana,downside,FY2027E,balance_sheet,total_assets,36493.648,GHS millions,estimated,Estimate.
 zenith-bank-ghana,downside,FY2027E,balance_sheet,customer_deposits,29152.559,GHS millions,estimated,Estimate.
 zenith-bank-ghana,downside,FY2027E,balance_sheet,due_to_banks,162.265,GHS millions,estimated,Estimate.
 zenith-bank-ghana,downside,FY2027E,balance_sheet,borrowings,1345.443,GHS millions,estimated,Estimate.
 zenith-bank-ghana,downside,FY2027E,balance_sheet,other_liabilities,489.930,GHS millions,estimated,Estimate.
 zenith-bank-ghana,downside,FY2027E,balance_sheet,total_liabilities,31150.197,GHS millions,estimated,Estimate.
-zenith-bank-ghana,downside,FY2027E,balance_sheet,retained_earnings,2904.325,GHS millions,estimated,Estimate.
-zenith-bank-ghana,downside,FY2027E,balance_sheet,reserves_other,1500.660,GHS millions,estimated,Estimate.
-zenith-bank-ghana,downside,FY2027E,balance_sheet,total_equity,5404.985,GHS millions,estimated,Estimate.
+zenith-bank-ghana,downside,FY2027E,balance_sheet,retained_earnings,2850.483,GHS millions,estimated,Estimate.
+zenith-bank-ghana,downside,FY2027E,balance_sheet,reserves_other,1492.968,GHS millions,estimated,Estimate.
+zenith-bank-ghana,downside,FY2027E,balance_sheet,total_equity,5343.451,GHS millions,estimated,Estimate.
 zenith-bank-ghana,downside,FY2027E,balance_sheet,stated_capital,1000.000,GHS millions,estimated,"Held at 1,000m; no issue or bonus issue assumed."
-zenith-bank-ghana,downside,FY2027E,ratios,x_car_proxy_pct,20.479,percent,estimated,"PROXY, not the regulatory ratio: book equity / (risk-weight density 0.722 x total assets). Density is the 30 Sep 2026 implied value."
-zenith-bank-ghana,downside,FY2027E,ratios,x_car_proxy_fy25_density_pct,28.077,percent,estimated,PROXY with the FY2025 audited density (reported RWA / total assets = 0.527). Gives a more generous number than x_car_proxy_pct; the truth lies between if loan growth raises density.
-zenith-bank-ghana,downside,FY2027E,ratios,x_roe_pct,26.402,percent,estimated,Profit after tax / average of opening and closing equity.
-zenith-bank-ghana,downside,FY2027E,ratios,x_cost_to_income_pct,27.033,percent,estimated,Operating expenses / operating income before impairment.
-zenith-bank-ghana,downside,FY2027E,ratios,x_ldr_pct,35.029,percent,estimated,Net loans / customer deposits.
-zenith-bank-ghana,downside,FY2028E,income_statement,interest_income,3655.326,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+zenith-bank-ghana,downside,FY2027E,ratios,x_car_proxy_pct,20.503,percent,estimated,"PROXY, not the regulatory ratio: (book equity - 181.041m FY2025 regulatory adjustment) / (risk-weight density x total assets). Density calibrated so the proxy equals the reported 17.79% at 30 Sep 2026. Not a prudential calculation."
+zenith-bank-ghana,downside,FY2027E,ratios,x_car_proxy_fy25_density_pct,26.862,percent,estimated,"PROXY with the FY2025 audited density (reported RWA / total assets = 0.527); a high case. Interim reported CAR is lower than this implies, so treat as an upper bound of the proxy, not of actual CAR."
+zenith-bank-ghana,downside,FY2027E,ratios,roe_pct,25.276,percent,estimated,Estimate. Profit after tax / average of opening and closing equity.
+zenith-bank-ghana,downside,FY2027E,ratios,roa_pct,3.500,percent,estimated,Estimate. Profit after tax / average of opening and closing total assets.
+zenith-bank-ghana,downside,FY2027E,ratios,cost_to_income_pct,27.856,percent,estimated,Estimate. (Staff + depreciation + other expenses) / operating income before impairment.
+zenith-bank-ghana,downside,FY2027E,ratios,ldr_pct,35.029,percent,estimated,Estimate. NET loans / customer deposits (gross loans are not forecast).
+zenith-bank-ghana,downside,FY2027E,balance_sheet,loans_and_advances_gross,,GHS millions,unavailable,Gross loans not forecast; interim statements do not print them.
+zenith-bank-ghana,downside,FY2027E,balance_sheet,loan_loss_allowance,,GHS millions,unavailable,"Allowance not forecast. Impairment is driven by a cost of risk on net loans, not a stage 3 path."
+zenith-bank-ghana,downside,FY2027E,ratios,npl_pct,,percent,unavailable,No NPL path is forecast. Reported NPL was 8.49% (FY2025) and 8.91% (Sep 2026); the cost of risk is an independent assumption.
+zenith-bank-ghana,downside,FY2027E,ratios,car_pct,,percent,unavailable,Regulatory CAR is not forecast; see x_car_proxy_pct (accounting proxy).
+zenith-bank-ghana,downside,FY2027E,ratios,tier1_pct,,percent,unavailable,Tier 1 is not forecast.
+zenith-bank-ghana,downside,FY2028E,income_statement,interest_income,3438.370,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 zenith-bank-ghana,downside,FY2028E,income_statement,interest_expense,927.430,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-zenith-bank-ghana,downside,FY2028E,income_statement,net_interest_income,2727.896,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+zenith-bank-ghana,downside,FY2028E,income_statement,net_interest_income,2510.941,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 zenith-bank-ghana,downside,FY2028E,income_statement,fee_commission_income,753.914,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 zenith-bank-ghana,downside,FY2028E,income_statement,fee_commission_expense,90.470,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 zenith-bank-ghana,downside,FY2028E,income_statement,net_trading_income,189.631,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 zenith-bank-ghana,downside,FY2028E,income_statement,other_operating_income,151.085,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-zenith-bank-ghana,downside,FY2028E,income_statement,total_operating_income,3732.057,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+zenith-bank-ghana,downside,FY2028E,income_statement,total_operating_income,3515.101,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 zenith-bank-ghana,downside,FY2028E,income_statement,staff_costs,421.960,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 zenith-bank-ghana,downside,FY2028E,income_statement,depreciation_amortisation,88.639,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 zenith-bank-ghana,downside,FY2028E,income_statement,other_operating_expenses,455.534,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 zenith-bank-ghana,downside,FY2028E,income_statement,impairment_charge,420.726,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-zenith-bank-ghana,downside,FY2028E,income_statement,profit_before_tax,2345.198,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-zenith-bank-ghana,downside,FY2028E,income_statement,income_tax,797.367,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-zenith-bank-ghana,downside,FY2028E,income_statement,profit_after_tax,1547.831,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+zenith-bank-ghana,downside,FY2028E,income_statement,profit_before_tax,2128.242,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+zenith-bank-ghana,downside,FY2028E,income_statement,income_tax,723.602,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+zenith-bank-ghana,downside,FY2028E,income_statement,profit_after_tax,1404.640,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 zenith-bank-ghana,downside,FY2028E,income_statement,x_dividends_paid,0.000,GHS millions,estimated,Payout x prior-year profit after tax (assumptions.json).
 zenith-bank-ghana,downside,FY2028E,balance_sheet,cash_and_bog_balances,12022.187,GHS millions,estimated,Estimate.
-zenith-bank-ghana,downside,FY2028E,balance_sheet,due_from_banks,184.102,GHS millions,estimated,Estimate. Due from banks and securities are the plug (liquid assets) split at the 30 Sep 2026 mix.
-zenith-bank-ghana,downside,FY2028E,balance_sheet,investment_securities,13977.600,GHS millions,estimated,Estimate. Due from banks and securities are the plug (liquid assets) split at the 30 Sep 2026 mix.
+zenith-bank-ghana,downside,FY2028E,balance_sheet,due_from_banks,181.441,GHS millions,estimated,Estimate. Due from banks and securities are the plug (liquid assets) split at the 30 Sep 2026 mix.
+zenith-bank-ghana,downside,FY2028E,balance_sheet,investment_securities,13775.537,GHS millions,estimated,Estimate. Due from banks and securities are the plug (liquid assets) split at the 30 Sep 2026 mix.
 zenith-bank-ghana,downside,FY2028E,balance_sheet,loans_and_advances_net,10824.516,GHS millions,estimated,Estimate.
 zenith-bank-ghana,downside,FY2028E,balance_sheet,property_equipment_intangibles,533.218,GHS millions,estimated,Estimate.
 zenith-bank-ghana,downside,FY2028E,balance_sheet,other_assets,4238.344,GHS millions,estimated,Estimate.
-zenith-bank-ghana,downside,FY2028E,balance_sheet,total_assets,41779.966,GHS millions,estimated,Estimate.
+zenith-bank-ghana,downside,FY2028E,balance_sheet,total_assets,41575.241,GHS millions,estimated,Estimate.
 zenith-bank-ghana,downside,FY2028E,balance_sheet,customer_deposits,32758.002,GHS millions,estimated,Estimate.
 zenith-bank-ghana,downside,FY2028E,balance_sheet,due_to_banks,182.333,GHS millions,estimated,Estimate.
 zenith-bank-ghana,downside,FY2028E,balance_sheet,borrowings,1345.443,GHS millions,estimated,Estimate.
 zenith-bank-ghana,downside,FY2028E,balance_sheet,other_liabilities,541.372,GHS millions,estimated,Estimate.
 zenith-bank-ghana,downside,FY2028E,balance_sheet,total_liabilities,34827.150,GHS millions,estimated,Estimate.
-zenith-bank-ghana,downside,FY2028E,balance_sheet,retained_earnings,4258.677,GHS millions,estimated,Estimate.
-zenith-bank-ghana,downside,FY2028E,balance_sheet,reserves_other,1694.139,GHS millions,estimated,Estimate.
-zenith-bank-ghana,downside,FY2028E,balance_sheet,total_equity,6952.816,GHS millions,estimated,Estimate.
+zenith-bank-ghana,downside,FY2028E,balance_sheet,retained_earnings,4079.543,GHS millions,estimated,Estimate.
+zenith-bank-ghana,downside,FY2028E,balance_sheet,reserves_other,1668.548,GHS millions,estimated,Estimate.
+zenith-bank-ghana,downside,FY2028E,balance_sheet,total_equity,6748.091,GHS millions,estimated,Estimate.
 zenith-bank-ghana,downside,FY2028E,balance_sheet,stated_capital,1000.000,GHS millions,estimated,"Held at 1,000m; no issue or bonus issue assumed."
-zenith-bank-ghana,downside,FY2028E,ratios,x_car_proxy_pct,23.049,percent,estimated,"PROXY, not the regulatory ratio: book equity / (risk-weight density 0.722 x total assets). Density is the 30 Sep 2026 implied value."
-zenith-bank-ghana,downside,FY2028E,ratios,x_car_proxy_fy25_density_pct,31.601,percent,estimated,PROXY with the FY2025 audited density (reported RWA / total assets = 0.527). Gives a more generous number than x_car_proxy_pct; the truth lies between if loan growth raises density.
-zenith-bank-ghana,downside,FY2028E,ratios,x_roe_pct,25.050,percent,estimated,Profit after tax / average of opening and closing equity.
-zenith-bank-ghana,downside,FY2028E,ratios,x_cost_to_income_pct,25.887,percent,estimated,Operating expenses / operating income before impairment.
-zenith-bank-ghana,downside,FY2028E,ratios,x_ldr_pct,33.044,percent,estimated,Net loans / customer deposits.
-zenith-bank-ghana,downside,FY2029E,income_statement,interest_income,3824.886,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+zenith-bank-ghana,downside,FY2028E,ratios,x_car_proxy_pct,22.894,percent,estimated,"PROXY, not the regulatory ratio: (book equity - 181.041m FY2025 regulatory adjustment) / (risk-weight density x total assets). Density calibrated so the proxy equals the reported 17.79% at 30 Sep 2026. Not a prudential calculation."
+zenith-bank-ghana,downside,FY2028E,ratios,x_car_proxy_fy25_density_pct,29.994,percent,estimated,"PROXY with the FY2025 audited density (reported RWA / total assets = 0.527); a high case. Interim reported CAR is lower than this implies, so treat as an upper bound of the proxy, not of actual CAR."
+zenith-bank-ghana,downside,FY2028E,ratios,roe_pct,23.233,percent,estimated,Estimate. Profit after tax / average of opening and closing equity.
+zenith-bank-ghana,downside,FY2028E,ratios,roa_pct,3.598,percent,estimated,Estimate. Profit after tax / average of opening and closing total assets.
+zenith-bank-ghana,downside,FY2028E,ratios,cost_to_income_pct,27.485,percent,estimated,Estimate. (Staff + depreciation + other expenses) / operating income before impairment.
+zenith-bank-ghana,downside,FY2028E,ratios,ldr_pct,33.044,percent,estimated,Estimate. NET loans / customer deposits (gross loans are not forecast).
+zenith-bank-ghana,downside,FY2028E,balance_sheet,loans_and_advances_gross,,GHS millions,unavailable,Gross loans not forecast; interim statements do not print them.
+zenith-bank-ghana,downside,FY2028E,balance_sheet,loan_loss_allowance,,GHS millions,unavailable,"Allowance not forecast. Impairment is driven by a cost of risk on net loans, not a stage 3 path."
+zenith-bank-ghana,downside,FY2028E,ratios,npl_pct,,percent,unavailable,No NPL path is forecast. Reported NPL was 8.49% (FY2025) and 8.91% (Sep 2026); the cost of risk is an independent assumption.
+zenith-bank-ghana,downside,FY2028E,ratios,car_pct,,percent,unavailable,Regulatory CAR is not forecast; see x_car_proxy_pct (accounting proxy).
+zenith-bank-ghana,downside,FY2028E,ratios,tier1_pct,,percent,unavailable,Tier 1 is not forecast.
+zenith-bank-ghana,downside,FY2029E,income_statement,interest_income,3576.858,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 zenith-bank-ghana,downside,FY2029E,income_statement,interest_expense,963.421,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-zenith-bank-ghana,downside,FY2029E,income_statement,net_interest_income,2861.465,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+zenith-bank-ghana,downside,FY2029E,income_statement,net_interest_income,2613.437,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 zenith-bank-ghana,downside,FY2029E,income_statement,fee_commission_income,874.540,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 zenith-bank-ghana,downside,FY2029E,income_statement,fee_commission_expense,104.945,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 zenith-bank-ghana,downside,FY2029E,income_statement,net_trading_income,151.705,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 zenith-bank-ghana,downside,FY2029E,income_statement,other_operating_income,151.085,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-zenith-bank-ghana,downside,FY2029E,income_statement,total_operating_income,3933.850,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+zenith-bank-ghana,downside,FY2029E,income_statement,total_operating_income,3685.823,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 zenith-bank-ghana,downside,FY2029E,income_statement,staff_costs,476.815,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 zenith-bank-ghana,downside,FY2029E,income_statement,depreciation_amortisation,97.503,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 zenith-bank-ghana,downside,FY2029E,income_statement,other_operating_expenses,514.753,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 zenith-bank-ghana,downside,FY2029E,income_statement,impairment_charge,450.300,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-zenith-bank-ghana,downside,FY2029E,income_statement,profit_before_tax,2394.480,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-zenith-bank-ghana,downside,FY2029E,income_statement,income_tax,814.123,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-zenith-bank-ghana,downside,FY2029E,income_statement,profit_after_tax,1580.357,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+zenith-bank-ghana,downside,FY2029E,income_statement,profit_before_tax,2146.452,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+zenith-bank-ghana,downside,FY2029E,income_statement,income_tax,729.794,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+zenith-bank-ghana,downside,FY2029E,income_statement,profit_after_tax,1416.659,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 zenith-bank-ghana,downside,FY2029E,income_statement,x_dividends_paid,0.000,GHS millions,estimated,Payout x prior-year profit after tax (assumptions.json).
 zenith-bank-ghana,downside,FY2029E,balance_sheet,cash_and_bog_balances,13512.938,GHS millions,estimated,Estimate.
-zenith-bank-ghana,downside,FY2029E,balance_sheet,due_from_banks,221.610,GHS millions,estimated,Estimate. Due from banks and securities are the plug (liquid assets) split at the 30 Sep 2026 mix.
-zenith-bank-ghana,downside,FY2029E,balance_sheet,investment_securities,16825.319,GHS millions,estimated,Estimate. Due from banks and securities are the plug (liquid assets) split at the 30 Sep 2026 mix.
+zenith-bank-ghana,downside,FY2029E,balance_sheet,due_from_banks,216.821,GHS millions,estimated,Estimate. Due from banks and securities are the plug (liquid assets) split at the 30 Sep 2026 mix.
+zenith-bank-ghana,downside,FY2029E,balance_sheet,investment_securities,16461.686,GHS millions,estimated,Estimate. Due from banks and securities are the plug (liquid assets) split at the 30 Sep 2026 mix.
 zenith-bank-ghana,downside,FY2029E,balance_sheet,loans_and_advances_net,11690.477,GHS millions,estimated,Estimate.
 zenith-bank-ghana,downside,FY2029E,balance_sheet,property_equipment_intangibles,586.540,GHS millions,estimated,Estimate.
 zenith-bank-ghana,downside,FY2029E,balance_sheet,other_assets,4662.178,GHS millions,estimated,Estimate.
-zenith-bank-ghana,downside,FY2029E,balance_sheet,total_assets,47499.062,GHS millions,estimated,Estimate.
+zenith-bank-ghana,downside,FY2029E,balance_sheet,total_assets,47130.639,GHS millions,estimated,Estimate.
 zenith-bank-ghana,downside,FY2029E,balance_sheet,customer_deposits,36819.994,GHS millions,estimated,Estimate.
 zenith-bank-ghana,downside,FY2029E,balance_sheet,due_to_banks,204.943,GHS millions,estimated,Estimate.
 zenith-bank-ghana,downside,FY2029E,balance_sheet,borrowings,1345.443,GHS millions,estimated,Estimate.
 zenith-bank-ghana,downside,FY2029E,balance_sheet,other_liabilities,595.509,GHS millions,estimated,Estimate.
 zenith-bank-ghana,downside,FY2029E,balance_sheet,total_liabilities,38965.889,GHS millions,estimated,Estimate.
-zenith-bank-ghana,downside,FY2029E,balance_sheet,retained_earnings,5641.490,GHS millions,estimated,Estimate.
-zenith-bank-ghana,downside,FY2029E,balance_sheet,reserves_other,1891.683,GHS millions,estimated,Estimate.
-zenith-bank-ghana,downside,FY2029E,balance_sheet,total_equity,8533.173,GHS millions,estimated,Estimate.
+zenith-bank-ghana,downside,FY2029E,balance_sheet,retained_earnings,5319.119,GHS millions,estimated,Estimate.
+zenith-bank-ghana,downside,FY2029E,balance_sheet,reserves_other,1845.630,GHS millions,estimated,Estimate.
+zenith-bank-ghana,downside,FY2029E,balance_sheet,total_equity,8164.750,GHS millions,estimated,Estimate.
 zenith-bank-ghana,downside,FY2029E,balance_sheet,stated_capital,1000.000,GHS millions,estimated,"Held at 1,000m; no issue or bonus issue assumed."
-zenith-bank-ghana,downside,FY2029E,ratios,x_car_proxy_pct,24.882,percent,estimated,"PROXY, not the regulatory ratio: book equity / (risk-weight density 0.722 x total assets). Density is the 30 Sep 2026 implied value."
-zenith-bank-ghana,downside,FY2029E,ratios,x_car_proxy_fy25_density_pct,34.114,percent,estimated,PROXY with the FY2025 audited density (reported RWA / total assets = 0.527). Gives a more generous number than x_car_proxy_pct; the truth lies between if loan growth raises density.
-zenith-bank-ghana,downside,FY2029E,ratios,x_roe_pct,20.410,percent,estimated,Profit after tax / average of opening and closing equity.
-zenith-bank-ghana,downside,FY2029E,ratios,x_cost_to_income_pct,27.685,percent,estimated,Operating expenses / operating income before impairment.
-zenith-bank-ghana,downside,FY2029E,ratios,x_ldr_pct,31.750,percent,estimated,Net loans / customer deposits.
-zenith-bank-ghana,downside,FY2030E,income_statement,interest_income,4146.602,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+zenith-bank-ghana,downside,FY2029E,ratios,x_car_proxy_pct,24.552,percent,estimated,"PROXY, not the regulatory ratio: (book equity - 181.041m FY2025 regulatory adjustment) / (risk-weight density x total assets). Density calibrated so the proxy equals the reported 17.79% at 30 Sep 2026. Not a prudential calculation."
+zenith-bank-ghana,downside,FY2029E,ratios,x_car_proxy_fy25_density_pct,32.167,percent,estimated,"PROXY with the FY2025 audited density (reported RWA / total assets = 0.527); a high case. Interim reported CAR is lower than this implies, so treat as an upper bound of the proxy, not of actual CAR."
+zenith-bank-ghana,downside,FY2029E,ratios,roe_pct,18.999,percent,estimated,Estimate. Profit after tax / average of opening and closing equity.
+zenith-bank-ghana,downside,FY2029E,ratios,roa_pct,3.194,percent,estimated,Estimate. Profit after tax / average of opening and closing total assets.
+zenith-bank-ghana,downside,FY2029E,ratios,cost_to_income_pct,29.548,percent,estimated,Estimate. (Staff + depreciation + other expenses) / operating income before impairment.
+zenith-bank-ghana,downside,FY2029E,ratios,ldr_pct,31.750,percent,estimated,Estimate. NET loans / customer deposits (gross loans are not forecast).
+zenith-bank-ghana,downside,FY2029E,balance_sheet,loans_and_advances_gross,,GHS millions,unavailable,Gross loans not forecast; interim statements do not print them.
+zenith-bank-ghana,downside,FY2029E,balance_sheet,loan_loss_allowance,,GHS millions,unavailable,"Allowance not forecast. Impairment is driven by a cost of risk on net loans, not a stage 3 path."
+zenith-bank-ghana,downside,FY2029E,ratios,npl_pct,,percent,unavailable,No NPL path is forecast. Reported NPL was 8.49% (FY2025) and 8.91% (Sep 2026); the cost of risk is an independent assumption.
+zenith-bank-ghana,downside,FY2029E,ratios,car_pct,,percent,unavailable,Regulatory CAR is not forecast; see x_car_proxy_pct (accounting proxy).
+zenith-bank-ghana,downside,FY2029E,ratios,tier1_pct,,percent,unavailable,Tier 1 is not forecast.
+zenith-bank-ghana,downside,FY2030E,income_statement,interest_income,3853.701,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 zenith-bank-ghana,downside,FY2030E,income_statement,interest_expense,951.764,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-zenith-bank-ghana,downside,FY2030E,income_statement,net_interest_income,3194.837,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+zenith-bank-ghana,downside,FY2030E,income_statement,net_interest_income,2901.936,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 zenith-bank-ghana,downside,FY2030E,income_statement,fee_commission_income,1010.094,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 zenith-bank-ghana,downside,FY2030E,income_statement,fee_commission_expense,121.211,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 zenith-bank-ghana,downside,FY2030E,income_statement,net_trading_income,121.364,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 zenith-bank-ghana,downside,FY2030E,income_statement,other_operating_income,151.085,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-zenith-bank-ghana,downside,FY2030E,income_statement,total_operating_income,4356.169,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+zenith-bank-ghana,downside,FY2030E,income_statement,total_operating_income,4063.268,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 zenith-bank-ghana,downside,FY2030E,income_statement,staff_costs,536.416,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 zenith-bank-ghana,downside,FY2030E,income_statement,depreciation_amortisation,106.765,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 zenith-bank-ghana,downside,FY2030E,income_statement,other_operating_expenses,579.097,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 zenith-bank-ghana,downside,FY2030E,income_statement,impairment_charge,486.324,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-zenith-bank-ghana,downside,FY2030E,income_statement,profit_before_tax,2647.566,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-zenith-bank-ghana,downside,FY2030E,income_statement,income_tax,900.173,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-zenith-bank-ghana,downside,FY2030E,income_statement,profit_after_tax,1747.394,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+zenith-bank-ghana,downside,FY2030E,income_statement,profit_before_tax,2354.665,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+zenith-bank-ghana,downside,FY2030E,income_statement,income_tax,800.586,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+zenith-bank-ghana,downside,FY2030E,income_statement,profit_after_tax,1554.079,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 zenith-bank-ghana,downside,FY2030E,income_statement,x_dividends_paid,0.000,GHS millions,estimated,Payout x prior-year profit after tax (assumptions.json).
 zenith-bank-ghana,downside,FY2030E,balance_sheet,cash_and_bog_balances,15118.275,GHS millions,estimated,Estimate.
-zenith-bank-ghana,downside,FY2030E,balance_sheet,due_from_banks,262.733,GHS millions,estimated,Estimate. Due from banks and securities are the plug (liquid assets) split at the 30 Sep 2026 mix.
-zenith-bank-ghana,downside,FY2030E,balance_sheet,investment_securities,19947.523,GHS millions,estimated,Estimate. Due from banks and securities are the plug (liquid assets) split at the 30 Sep 2026 mix.
+zenith-bank-ghana,downside,FY2030E,balance_sheet,due_from_banks,255.431,GHS millions,estimated,Estimate. Due from banks and securities are the plug (liquid assets) split at the 30 Sep 2026 mix.
+zenith-bank-ghana,downside,FY2030E,balance_sheet,investment_securities,19393.087,GHS millions,estimated,Estimate. Due from banks and securities are the plug (liquid assets) split at the 30 Sep 2026 mix.
 zenith-bank-ghana,downside,FY2030E,balance_sheet,loans_and_advances_net,12625.715,GHS millions,estimated,Estimate.
 zenith-bank-ghana,downside,FY2030E,balance_sheet,property_equipment_intangibles,642.261,GHS millions,estimated,Estimate.
 zenith-bank-ghana,downside,FY2030E,balance_sheet,other_assets,5105.085,GHS millions,estimated,Estimate.
-zenith-bank-ghana,downside,FY2030E,balance_sheet,total_assets,53701.592,GHS millions,estimated,Estimate.
+zenith-bank-ghana,downside,FY2030E,balance_sheet,total_assets,53139.854,GHS millions,estimated,Estimate.
 zenith-bank-ghana,downside,FY2030E,balance_sheet,customer_deposits,41194.209,GHS millions,estimated,Estimate.
 zenith-bank-ghana,downside,FY2030E,balance_sheet,due_to_banks,229.290,GHS millions,estimated,Estimate.
 zenith-bank-ghana,downside,FY2030E,balance_sheet,borrowings,1345.443,GHS millions,estimated,Estimate.
 zenith-bank-ghana,downside,FY2030E,balance_sheet,other_liabilities,652.083,GHS millions,estimated,Estimate.
 zenith-bank-ghana,downside,FY2030E,balance_sheet,total_liabilities,43421.025,GHS millions,estimated,Estimate.
-zenith-bank-ghana,downside,FY2030E,balance_sheet,retained_earnings,7170.459,GHS millions,estimated,Estimate.
-zenith-bank-ghana,downside,FY2030E,balance_sheet,reserves_other,2110.108,GHS millions,estimated,Estimate.
-zenith-bank-ghana,downside,FY2030E,balance_sheet,total_equity,10280.567,GHS millions,estimated,Estimate.
+zenith-bank-ghana,downside,FY2030E,balance_sheet,retained_earnings,6678.939,GHS millions,estimated,Estimate.
+zenith-bank-ghana,downside,FY2030E,balance_sheet,reserves_other,2039.890,GHS millions,estimated,Estimate.
+zenith-bank-ghana,downside,FY2030E,balance_sheet,total_equity,9718.829,GHS millions,estimated,Estimate.
 zenith-bank-ghana,downside,FY2030E,balance_sheet,stated_capital,1000.000,GHS millions,estimated,"Held at 1,000m; no issue or bonus issue assumed."
-zenith-bank-ghana,downside,FY2030E,ratios,x_car_proxy_pct,26.515,percent,estimated,"PROXY, not the regulatory ratio: book equity / (risk-weight density 0.722 x total assets). Density is the 30 Sep 2026 implied value."
-zenith-bank-ghana,downside,FY2030E,ratios,x_car_proxy_fy25_density_pct,36.352,percent,estimated,PROXY with the FY2025 audited density (reported RWA / total assets = 0.527). Gives a more generous number than x_car_proxy_pct; the truth lies between if loan growth raises density.
-zenith-bank-ghana,downside,FY2030E,ratios,x_roe_pct,18.576,percent,estimated,Profit after tax / average of opening and closing equity.
-zenith-bank-ghana,downside,FY2030E,ratios,x_cost_to_income_pct,28.059,percent,estimated,Operating expenses / operating income before impairment.
-zenith-bank-ghana,downside,FY2030E,ratios,x_ldr_pct,30.649,percent,estimated,Net loans / customer deposits.
+zenith-bank-ghana,downside,FY2030E,ratios,x_car_proxy_pct,26.014,percent,estimated,"PROXY, not the regulatory ratio: (book equity - 181.041m FY2025 regulatory adjustment) / (risk-weight density x total assets). Density calibrated so the proxy equals the reported 17.79% at 30 Sep 2026. Not a prudential calculation."
+zenith-bank-ghana,downside,FY2030E,ratios,x_car_proxy_fy25_density_pct,34.082,percent,estimated,"PROXY with the FY2025 audited density (reported RWA / total assets = 0.527); a high case. Interim reported CAR is lower than this implies, so treat as an upper bound of the proxy, not of actual CAR."
+zenith-bank-ghana,downside,FY2030E,ratios,roe_pct,17.380,percent,estimated,Estimate. Profit after tax / average of opening and closing equity.
+zenith-bank-ghana,downside,FY2030E,ratios,roa_pct,3.100,percent,estimated,Estimate. Profit after tax / average of opening and closing total assets.
+zenith-bank-ghana,downside,FY2030E,ratios,cost_to_income_pct,30.081,percent,estimated,Estimate. (Staff + depreciation + other expenses) / operating income before impairment.
+zenith-bank-ghana,downside,FY2030E,ratios,ldr_pct,30.649,percent,estimated,Estimate. NET loans / customer deposits (gross loans are not forecast).
+zenith-bank-ghana,downside,FY2030E,balance_sheet,loans_and_advances_gross,,GHS millions,unavailable,Gross loans not forecast; interim statements do not print them.
+zenith-bank-ghana,downside,FY2030E,balance_sheet,loan_loss_allowance,,GHS millions,unavailable,"Allowance not forecast. Impairment is driven by a cost of risk on net loans, not a stage 3 path."
+zenith-bank-ghana,downside,FY2030E,ratios,npl_pct,,percent,unavailable,No NPL path is forecast. Reported NPL was 8.49% (FY2025) and 8.91% (Sep 2026); the cost of risk is an independent assumption.
+zenith-bank-ghana,downside,FY2030E,ratios,car_pct,,percent,unavailable,Regulatory CAR is not forecast; see x_car_proxy_pct (accounting proxy).
+zenith-bank-ghana,downside,FY2030E,ratios,tier1_pct,,percent,unavailable,Tier 1 is not forecast.
+zenith-bank-ghana,downside,FY2026E,income_statement,x_q4_implied_profit_before_tax,370.986,GHS millions,estimated,FY2026E profit before tax less 9M-2026 actual.
+zenith-bank-ghana,downside,FY2026E,income_statement,x_q4_implied_income_tax,334.312,GHS millions,estimated,FY2026E tax (34% of full-year PBT) less 9M-2026 actual tax; implies a very high Q4 tax rate (see checks.md).
+zenith-bank-ghana,downside,FY2026E,income_statement,x_q4_implied_impairment,47.277,GHS millions,estimated,Q4 charge at the base cost of risk on 30 Sep 2026 net loans / 4.
 zenith-bank-ghana,upside,FY2026E,income_statement,interest_income,2225.787,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
 zenith-bank-ghana,upside,FY2026E,income_statement,interest_expense,738.363,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
 zenith-bank-ghana,upside,FY2026E,income_statement,net_interest_income,1487.424,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
@@ -401,156 +467,189 @@ zenith-bank-ghana,upside,FY2026E,balance_sheet,retained_earnings,1801.308,GHS mi
 zenith-bank-ghana,upside,FY2026E,balance_sheet,reserves_other,1343.086,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
 zenith-bank-ghana,upside,FY2026E,balance_sheet,total_equity,4144.393,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
 zenith-bank-ghana,upside,FY2026E,balance_sheet,stated_capital,1000.000,GHS millions,estimated,"Held at 1,000m; no issue or bonus issue assumed."
-zenith-bank-ghana,upside,FY2026E,ratios,x_car_proxy_pct,17.922,percent,estimated,"PROXY, not the regulatory ratio: book equity / (risk-weight density 0.722 x total assets). Density is the 30 Sep 2026 implied value."
-zenith-bank-ghana,upside,FY2026E,ratios,x_car_proxy_fy25_density_pct,24.571,percent,estimated,PROXY with the FY2025 audited density (reported RWA / total assets = 0.527). Gives a more generous number than x_car_proxy_pct; the truth lies between if loan growth raises density.
-zenith-bank-ghana,upside,FY2026E,ratios,x_roe_pct,30.424,percent,estimated,Profit after tax / average of opening and closing equity.
-zenith-bank-ghana,upside,FY2026E,ratios,x_cost_to_income_pct,30.965,percent,estimated,Operating expenses / operating income before impairment.
-zenith-bank-ghana,upside,FY2026E,ratios,x_ldr_pct,36.433,percent,estimated,Net loans / customer deposits.
-zenith-bank-ghana,upside,FY2027E,income_statement,interest_income,2249.775,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+zenith-bank-ghana,upside,FY2026E,ratios,x_car_proxy_pct,17.936,percent,estimated,"PROXY, not the regulatory ratio: (book equity - 181.041m FY2025 regulatory adjustment) / (risk-weight density x total assets). Density calibrated so the proxy equals the reported 17.79% at 30 Sep 2026. Not a prudential calculation."
+zenith-bank-ghana,upside,FY2026E,ratios,x_car_proxy_fy25_density_pct,23.498,percent,estimated,"PROXY with the FY2025 audited density (reported RWA / total assets = 0.527); a high case. Interim reported CAR is lower than this implies, so treat as an upper bound of the proxy, not of actual CAR."
+zenith-bank-ghana,upside,FY2026E,ratios,roe_pct,30.424,percent,estimated,Estimate. Profit after tax / average of opening and closing equity.
+zenith-bank-ghana,upside,FY2026E,ratios,roa_pct,3.727,percent,estimated,Estimate. Profit after tax / average of opening and closing total assets.
+zenith-bank-ghana,upside,FY2026E,ratios,cost_to_income_pct,30.965,percent,estimated,Estimate. (Staff + depreciation + other expenses) / operating income before impairment.
+zenith-bank-ghana,upside,FY2026E,ratios,ldr_pct,36.433,percent,estimated,Estimate. NET loans / customer deposits (gross loans are not forecast).
+zenith-bank-ghana,upside,FY2026E,balance_sheet,loans_and_advances_gross,,GHS millions,unavailable,Gross loans not forecast; interim statements do not print them.
+zenith-bank-ghana,upside,FY2026E,balance_sheet,loan_loss_allowance,,GHS millions,unavailable,"Allowance not forecast. Impairment is driven by a cost of risk on net loans, not a stage 3 path."
+zenith-bank-ghana,upside,FY2026E,ratios,npl_pct,,percent,unavailable,No NPL path is forecast. Reported NPL was 8.49% (FY2025) and 8.91% (Sep 2026); the cost of risk is an independent assumption.
+zenith-bank-ghana,upside,FY2026E,ratios,car_pct,,percent,unavailable,Regulatory CAR is not forecast; see x_car_proxy_pct (accounting proxy).
+zenith-bank-ghana,upside,FY2026E,ratios,tier1_pct,,percent,unavailable,Tier 1 is not forecast.
+zenith-bank-ghana,upside,FY2027E,income_statement,interest_income,2285.289,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 zenith-bank-ghana,upside,FY2027E,income_statement,interest_expense,624.671,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-zenith-bank-ghana,upside,FY2027E,income_statement,net_interest_income,1625.104,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+zenith-bank-ghana,upside,FY2027E,income_statement,net_interest_income,1660.618,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 zenith-bank-ghana,upside,FY2027E,income_statement,fee_commission_income,619.481,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 zenith-bank-ghana,upside,FY2027E,income_statement,fee_commission_expense,74.338,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 zenith-bank-ghana,upside,FY2027E,income_statement,net_trading_income,296.299,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 zenith-bank-ghana,upside,FY2027E,income_statement,other_operating_income,151.085,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-zenith-bank-ghana,upside,FY2027E,income_statement,total_operating_income,2617.631,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+zenith-bank-ghana,upside,FY2027E,income_statement,total_operating_income,2653.146,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 zenith-bank-ghana,upside,FY2027E,income_statement,staff_costs,355.465,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 zenith-bank-ghana,upside,FY2027E,income_statement,depreciation_amortisation,76.603,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 zenith-bank-ghana,upside,FY2027E,income_statement,other_operating_expenses,383.748,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 zenith-bank-ghana,upside,FY2027E,income_statement,impairment_charge,109.682,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-zenith-bank-ghana,upside,FY2027E,income_statement,profit_before_tax,1692.133,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-zenith-bank-ghana,upside,FY2027E,income_statement,income_tax,575.325,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-zenith-bank-ghana,upside,FY2027E,income_statement,profit_after_tax,1116.808,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+zenith-bank-ghana,upside,FY2027E,income_statement,profit_before_tax,1727.647,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+zenith-bank-ghana,upside,FY2027E,income_statement,income_tax,587.400,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+zenith-bank-ghana,upside,FY2027E,income_statement,profit_after_tax,1140.247,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 zenith-bank-ghana,upside,FY2027E,income_statement,x_dividends_paid,383.043,GHS millions,estimated,Payout x prior-year profit after tax (assumptions.json).
 zenith-bank-ghana,upside,FY2027E,balance_sheet,cash_and_bog_balances,11844.799,GHS millions,estimated,Estimate.
-zenith-bank-ghana,upside,FY2027E,balance_sheet,due_from_banks,139.051,GHS millions,estimated,Estimate. Due from banks and securities are the plug (liquid assets) split at the 30 Sep 2026 mix.
-zenith-bank-ghana,upside,FY2027E,balance_sheet,investment_securities,10557.171,GHS millions,estimated,Estimate. Due from banks and securities are the plug (liquid assets) split at the 30 Sep 2026 mix.
+zenith-bank-ghana,upside,FY2027E,balance_sheet,due_from_banks,139.356,GHS millions,estimated,Estimate. Due from banks and securities are the plug (liquid assets) split at the 30 Sep 2026 mix.
+zenith-bank-ghana,upside,FY2027E,balance_sheet,investment_securities,10580.306,GHS millions,estimated,Estimate. Due from banks and securities are the plug (liquid assets) split at the 30 Sep 2026 mix.
 zenith-bank-ghana,upside,FY2027E,balance_sheet,loans_and_advances_net,12481.098,GHS millions,estimated,Estimate.
 zenith-bank-ghana,upside,FY2027E,balance_sheet,property_equipment_intangibles,460.814,GHS millions,estimated,Estimate.
 zenith-bank-ghana,upside,FY2027E,balance_sheet,other_assets,3662.830,GHS millions,estimated,Estimate.
-zenith-bank-ghana,upside,FY2027E,balance_sheet,total_assets,39145.762,GHS millions,estimated,Estimate.
+zenith-bank-ghana,upside,FY2027E,balance_sheet,total_assets,39169.202,GHS millions,estimated,Estimate.
 zenith-bank-ghana,upside,FY2027E,balance_sheet,customer_deposits,32274.657,GHS millions,estimated,Estimate.
 zenith-bank-ghana,upside,FY2027E,balance_sheet,due_to_banks,179.643,GHS millions,estimated,Estimate.
 zenith-bank-ghana,upside,FY2027E,balance_sheet,borrowings,1345.443,GHS millions,estimated,Estimate.
 zenith-bank-ghana,upside,FY2027E,balance_sheet,other_liabilities,467.861,GHS millions,estimated,Estimate.
 zenith-bank-ghana,upside,FY2027E,balance_sheet,total_liabilities,34267.604,GHS millions,estimated,Estimate.
-zenith-bank-ghana,upside,FY2027E,balance_sheet,retained_earnings,2395.472,GHS millions,estimated,Estimate.
-zenith-bank-ghana,upside,FY2027E,balance_sheet,reserves_other,1482.687,GHS millions,estimated,Estimate.
-zenith-bank-ghana,upside,FY2027E,balance_sheet,total_equity,4878.158,GHS millions,estimated,Estimate.
+zenith-bank-ghana,upside,FY2027E,balance_sheet,retained_earnings,2415.981,GHS millions,estimated,Estimate.
+zenith-bank-ghana,upside,FY2027E,balance_sheet,reserves_other,1485.617,GHS millions,estimated,Estimate.
+zenith-bank-ghana,upside,FY2027E,balance_sheet,total_equity,4901.598,GHS millions,estimated,Estimate.
 zenith-bank-ghana,upside,FY2027E,balance_sheet,stated_capital,1000.000,GHS millions,estimated,"Held at 1,000m; no issue or bonus issue assumed."
-zenith-bank-ghana,upside,FY2027E,ratios,x_car_proxy_pct,17.260,percent,estimated,"PROXY, not the regulatory ratio: book equity / (risk-weight density 0.722 x total assets). Density is the 30 Sep 2026 implied value."
-zenith-bank-ghana,upside,FY2027E,ratios,x_car_proxy_fy25_density_pct,23.663,percent,estimated,PROXY with the FY2025 audited density (reported RWA / total assets = 0.527). Gives a more generous number than x_car_proxy_pct; the truth lies between if loan growth raises density.
-zenith-bank-ghana,upside,FY2027E,ratios,x_roe_pct,24.756,percent,estimated,Profit after tax / average of opening and closing equity.
-zenith-bank-ghana,upside,FY2027E,ratios,x_cost_to_income_pct,31.166,percent,estimated,Operating expenses / operating income before impairment.
-zenith-bank-ghana,upside,FY2027E,ratios,x_ldr_pct,38.672,percent,estimated,Net loans / customer deposits.
-zenith-bank-ghana,upside,FY2028E,income_statement,interest_income,2815.592,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+zenith-bank-ghana,upside,FY2027E,ratios,x_car_proxy_pct,17.468,percent,estimated,"PROXY, not the regulatory ratio: (book equity - 181.041m FY2025 regulatory adjustment) / (risk-weight density x total assets). Density calibrated so the proxy equals the reported 17.79% at 30 Sep 2026. Not a prudential calculation."
+zenith-bank-ghana,upside,FY2027E,ratios,x_car_proxy_fy25_density_pct,22.885,percent,estimated,"PROXY with the FY2025 audited density (reported RWA / total assets = 0.527); a high case. Interim reported CAR is lower than this implies, so treat as an upper bound of the proxy, not of actual CAR."
+zenith-bank-ghana,upside,FY2027E,ratios,roe_pct,25.210,percent,estimated,Estimate. Profit after tax / average of opening and closing equity.
+zenith-bank-ghana,upside,FY2027E,ratios,roa_pct,3.203,percent,estimated,Estimate. Profit after tax / average of opening and closing total assets.
+zenith-bank-ghana,upside,FY2027E,ratios,cost_to_income_pct,30.749,percent,estimated,Estimate. (Staff + depreciation + other expenses) / operating income before impairment.
+zenith-bank-ghana,upside,FY2027E,ratios,ldr_pct,38.672,percent,estimated,Estimate. NET loans / customer deposits (gross loans are not forecast).
+zenith-bank-ghana,upside,FY2027E,balance_sheet,loans_and_advances_gross,,GHS millions,unavailable,Gross loans not forecast; interim statements do not print them.
+zenith-bank-ghana,upside,FY2027E,balance_sheet,loan_loss_allowance,,GHS millions,unavailable,"Allowance not forecast. Impairment is driven by a cost of risk on net loans, not a stage 3 path."
+zenith-bank-ghana,upside,FY2027E,ratios,npl_pct,,percent,unavailable,No NPL path is forecast. Reported NPL was 8.49% (FY2025) and 8.91% (Sep 2026); the cost of risk is an independent assumption.
+zenith-bank-ghana,upside,FY2027E,ratios,car_pct,,percent,unavailable,Regulatory CAR is not forecast; see x_car_proxy_pct (accounting proxy).
+zenith-bank-ghana,upside,FY2027E,ratios,tier1_pct,,percent,unavailable,Tier 1 is not forecast.
+zenith-bank-ghana,upside,FY2028E,income_statement,interest_income,2825.478,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 zenith-bank-ghana,upside,FY2028E,income_statement,interest_expense,676.336,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-zenith-bank-ghana,upside,FY2028E,income_statement,net_interest_income,2139.256,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+zenith-bank-ghana,upside,FY2028E,income_statement,net_interest_income,2149.142,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 zenith-bank-ghana,upside,FY2028E,income_statement,fee_commission_income,700.013,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 zenith-bank-ghana,upside,FY2028E,income_statement,fee_commission_expense,84.002,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 zenith-bank-ghana,upside,FY2028E,income_statement,net_trading_income,296.299,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 zenith-bank-ghana,upside,FY2028E,income_statement,other_operating_income,151.085,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-zenith-bank-ghana,upside,FY2028E,income_statement,total_operating_income,3202.652,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+zenith-bank-ghana,upside,FY2028E,income_statement,total_operating_income,3212.538,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 zenith-bank-ghana,upside,FY2028E,income_statement,staff_costs,391.011,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 zenith-bank-ghana,upside,FY2028E,income_statement,depreciation_amortisation,81.965,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 zenith-bank-ghana,upside,FY2028E,income_statement,other_operating_expenses,422.123,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 zenith-bank-ghana,upside,FY2028E,income_statement,impairment_charge,142.285,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-zenith-bank-ghana,upside,FY2028E,income_statement,profit_before_tax,2165.268,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-zenith-bank-ghana,upside,FY2028E,income_statement,income_tax,736.191,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-zenith-bank-ghana,upside,FY2028E,income_statement,profit_after_tax,1429.077,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-zenith-bank-ghana,upside,FY2028E,income_statement,x_dividends_paid,390.883,GHS millions,estimated,Payout x prior-year profit after tax (assumptions.json).
+zenith-bank-ghana,upside,FY2028E,income_statement,profit_before_tax,2175.154,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+zenith-bank-ghana,upside,FY2028E,income_statement,income_tax,739.552,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+zenith-bank-ghana,upside,FY2028E,income_statement,profit_after_tax,1435.602,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+zenith-bank-ghana,upside,FY2028E,income_statement,x_dividends_paid,399.086,GHS millions,estimated,Payout x prior-year profit after tax (assumptions.json).
 zenith-bank-ghana,upside,FY2028E,balance_sheet,cash_and_bog_balances,14830.399,GHS millions,estimated,Estimate.
-zenith-bank-ghana,upside,FY2028E,balance_sheet,due_from_banks,171.322,GHS millions,estimated,Estimate. Due from banks and securities are the plug (liquid assets) split at the 30 Sep 2026 mix.
-zenith-bank-ghana,upside,FY2028E,balance_sheet,investment_securities,13007.312,GHS millions,estimated,Estimate. Due from banks and securities are the plug (liquid assets) split at the 30 Sep 2026 mix.
+zenith-bank-ghana,upside,FY2028E,balance_sheet,due_from_banks,171.605,GHS millions,estimated,Estimate. Due from banks and securities are the plug (liquid assets) split at the 30 Sep 2026 mix.
+zenith-bank-ghana,upside,FY2028E,balance_sheet,investment_securities,13028.790,GHS millions,estimated,Estimate. Due from banks and securities are the plug (liquid assets) split at the 30 Sep 2026 mix.
 zenith-bank-ghana,upside,FY2028E,balance_sheet,loans_and_advances_net,15975.805,GHS millions,estimated,Estimate.
 zenith-bank-ghana,upside,FY2028E,balance_sheet,property_equipment_intangibles,493.071,GHS millions,estimated,Estimate.
 zenith-bank-ghana,upside,FY2028E,balance_sheet,other_assets,3919.228,GHS millions,estimated,Estimate.
-zenith-bank-ghana,upside,FY2028E,balance_sheet,total_assets,48397.138,GHS millions,estimated,Estimate.
+zenith-bank-ghana,upside,FY2028E,balance_sheet,total_assets,48418.898,GHS millions,estimated,Estimate.
 zenith-bank-ghana,upside,FY2028E,balance_sheet,customer_deposits,40409.807,GHS millions,estimated,Estimate.
 zenith-bank-ghana,upside,FY2028E,balance_sheet,due_to_banks,224.924,GHS millions,estimated,Estimate.
 zenith-bank-ghana,upside,FY2028E,balance_sheet,borrowings,1345.443,GHS millions,estimated,Estimate.
 zenith-bank-ghana,upside,FY2028E,balance_sheet,other_liabilities,500.611,GHS millions,estimated,Estimate.
 zenith-bank-ghana,upside,FY2028E,balance_sheet,total_liabilities,42480.785,GHS millions,estimated,Estimate.
-zenith-bank-ghana,upside,FY2028E,balance_sheet,retained_earnings,3255.031,GHS millions,estimated,Estimate.
-zenith-bank-ghana,upside,FY2028E,balance_sheet,reserves_other,1661.321,GHS millions,estimated,Estimate.
-zenith-bank-ghana,upside,FY2028E,balance_sheet,total_equity,5916.353,GHS millions,estimated,Estimate.
+zenith-bank-ghana,upside,FY2028E,balance_sheet,retained_earnings,3273.046,GHS millions,estimated,Estimate.
+zenith-bank-ghana,upside,FY2028E,balance_sheet,reserves_other,1665.067,GHS millions,estimated,Estimate.
+zenith-bank-ghana,upside,FY2028E,balance_sheet,total_equity,5938.113,GHS millions,estimated,Estimate.
 zenith-bank-ghana,upside,FY2028E,balance_sheet,stated_capital,1000.000,GHS millions,estimated,"Held at 1,000m; no issue or bonus issue assumed."
-zenith-bank-ghana,upside,FY2028E,ratios,x_car_proxy_pct,16.932,percent,estimated,"PROXY, not the regulatory ratio: book equity / (risk-weight density 0.722 x total assets). Density is the 30 Sep 2026 implied value."
-zenith-bank-ghana,upside,FY2028E,ratios,x_car_proxy_fy25_density_pct,23.213,percent,estimated,PROXY with the FY2025 audited density (reported RWA / total assets = 0.527). Gives a more generous number than x_car_proxy_pct; the truth lies between if loan growth raises density.
-zenith-bank-ghana,upside,FY2028E,ratios,x_roe_pct,26.478,percent,estimated,Profit after tax / average of opening and closing equity.
-zenith-bank-ghana,upside,FY2028E,ratios,x_cost_to_income_pct,27.949,percent,estimated,Operating expenses / operating income before impairment.
-zenith-bank-ghana,upside,FY2028E,ratios,x_ldr_pct,39.534,percent,estimated,Net loans / customer deposits.
-zenith-bank-ghana,upside,FY2029E,income_statement,interest_income,3629.181,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+zenith-bank-ghana,upside,FY2028E,ratios,x_car_proxy_pct,17.233,percent,estimated,"PROXY, not the regulatory ratio: (book equity - 181.041m FY2025 regulatory adjustment) / (risk-weight density x total assets). Density calibrated so the proxy equals the reported 17.79% at 30 Sep 2026. Not a prudential calculation."
+zenith-bank-ghana,upside,FY2028E,ratios,x_car_proxy_fy25_density_pct,22.578,percent,estimated,"PROXY with the FY2025 audited density (reported RWA / total assets = 0.527); a high case. Interim reported CAR is lower than this implies, so treat as an upper bound of the proxy, not of actual CAR."
+zenith-bank-ghana,upside,FY2028E,ratios,roe_pct,26.488,percent,estimated,Estimate. Profit after tax / average of opening and closing equity.
+zenith-bank-ghana,upside,FY2028E,ratios,roa_pct,3.278,percent,estimated,Estimate. Profit after tax / average of opening and closing total assets.
+zenith-bank-ghana,upside,FY2028E,ratios,cost_to_income_pct,27.863,percent,estimated,Estimate. (Staff + depreciation + other expenses) / operating income before impairment.
+zenith-bank-ghana,upside,FY2028E,ratios,ldr_pct,39.534,percent,estimated,Estimate. NET loans / customer deposits (gross loans are not forecast).
+zenith-bank-ghana,upside,FY2028E,balance_sheet,loans_and_advances_gross,,GHS millions,unavailable,Gross loans not forecast; interim statements do not print them.
+zenith-bank-ghana,upside,FY2028E,balance_sheet,loan_loss_allowance,,GHS millions,unavailable,"Allowance not forecast. Impairment is driven by a cost of risk on net loans, not a stage 3 path."
+zenith-bank-ghana,upside,FY2028E,ratios,npl_pct,,percent,unavailable,No NPL path is forecast. Reported NPL was 8.49% (FY2025) and 8.91% (Sep 2026); the cost of risk is an independent assumption.
+zenith-bank-ghana,upside,FY2028E,ratios,car_pct,,percent,unavailable,Regulatory CAR is not forecast; see x_car_proxy_pct (accounting proxy).
+zenith-bank-ghana,upside,FY2028E,ratios,tier1_pct,,percent,unavailable,Tier 1 is not forecast.
+zenith-bank-ghana,upside,FY2029E,income_statement,interest_income,3579.167,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 zenith-bank-ghana,upside,FY2029E,income_statement,interest_expense,817.465,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-zenith-bank-ghana,upside,FY2029E,income_statement,net_interest_income,2811.716,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+zenith-bank-ghana,upside,FY2029E,income_statement,net_interest_income,2761.701,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 zenith-bank-ghana,upside,FY2029E,income_statement,fee_commission_income,794.515,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 zenith-bank-ghana,upside,FY2029E,income_statement,fee_commission_expense,95.342,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 zenith-bank-ghana,upside,FY2029E,income_statement,net_trading_income,296.299,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 zenith-bank-ghana,upside,FY2029E,income_statement,other_operating_income,151.085,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-zenith-bank-ghana,upside,FY2029E,income_statement,total_operating_income,3958.274,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+zenith-bank-ghana,upside,FY2029E,income_statement,total_operating_income,3908.259,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 zenith-bank-ghana,upside,FY2029E,income_statement,staff_costs,432.068,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 zenith-bank-ghana,upside,FY2029E,income_statement,depreciation_amortisation,88.112,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 zenith-bank-ghana,upside,FY2029E,income_statement,other_operating_expenses,466.446,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 zenith-bank-ghana,upside,FY2029E,income_statement,impairment_charge,177.331,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-zenith-bank-ghana,upside,FY2029E,income_statement,profit_before_tax,2794.316,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-zenith-bank-ghana,upside,FY2029E,income_statement,income_tax,950.067,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-zenith-bank-ghana,upside,FY2029E,income_statement,profit_after_tax,1844.249,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-zenith-bank-ghana,upside,FY2029E,income_statement,x_dividends_paid,500.177,GHS millions,estimated,Payout x prior-year profit after tax (assumptions.json).
+zenith-bank-ghana,upside,FY2029E,income_statement,profit_before_tax,2744.301,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+zenith-bank-ghana,upside,FY2029E,income_statement,income_tax,933.062,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+zenith-bank-ghana,upside,FY2029E,income_statement,profit_after_tax,1811.239,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+zenith-bank-ghana,upside,FY2029E,income_statement,x_dividends_paid,502.461,GHS millions,estimated,Payout x prior-year profit after tax (assumptions.json).
 zenith-bank-ghana,upside,FY2029E,balance_sheet,cash_and_bog_balances,18599.174,GHS millions,estimated,Estimate.
-zenith-bank-ghana,upside,FY2029E,balance_sheet,due_from_banks,224.538,GHS millions,estimated,Estimate. Due from banks and securities are the plug (liquid assets) split at the 30 Sep 2026 mix.
-zenith-bank-ghana,upside,FY2029E,balance_sheet,investment_securities,17047.640,GHS millions,estimated,Estimate. Due from banks and securities are the plug (liquid assets) split at the 30 Sep 2026 mix.
+zenith-bank-ghana,upside,FY2029E,balance_sheet,due_from_banks,224.362,GHS millions,estimated,Estimate. Due from banks and securities are the plug (liquid assets) split at the 30 Sep 2026 mix.
+zenith-bank-ghana,upside,FY2029E,balance_sheet,investment_securities,17034.283,GHS millions,estimated,Estimate. Due from banks and securities are the plug (liquid assets) split at the 30 Sep 2026 mix.
 zenith-bank-ghana,upside,FY2029E,balance_sheet,loans_and_advances_net,19490.482,GHS millions,estimated,Estimate.
 zenith-bank-ghana,upside,FY2029E,balance_sheet,property_equipment_intangibles,530.051,GHS millions,estimated,Estimate.
 zenith-bank-ghana,upside,FY2029E,balance_sheet,other_assets,4213.170,GHS millions,estimated,Estimate.
-zenith-bank-ghana,upside,FY2029E,balance_sheet,total_assets,60105.056,GHS millions,estimated,Estimate.
+zenith-bank-ghana,upside,FY2029E,balance_sheet,total_assets,60091.523,GHS millions,estimated,Estimate.
 zenith-bank-ghana,upside,FY2029E,balance_sheet,customer_deposits,50678.949,GHS millions,estimated,Estimate.
 zenith-bank-ghana,upside,FY2029E,balance_sheet,due_to_banks,282.083,GHS millions,estimated,Estimate.
 zenith-bank-ghana,upside,FY2029E,balance_sheet,borrowings,1345.443,GHS millions,estimated,Estimate.
 zenith-bank-ghana,upside,FY2029E,balance_sheet,other_liabilities,538.157,GHS millions,estimated,Estimate.
 zenith-bank-ghana,upside,FY2029E,balance_sheet,total_liabilities,52844.632,GHS millions,estimated,Estimate.
-zenith-bank-ghana,upside,FY2029E,balance_sheet,retained_earnings,4368.572,GHS millions,estimated,Estimate.
-zenith-bank-ghana,upside,FY2029E,balance_sheet,reserves_other,1891.853,GHS millions,estimated,Estimate.
-zenith-bank-ghana,upside,FY2029E,balance_sheet,total_equity,7260.425,GHS millions,estimated,Estimate.
+zenith-bank-ghana,upside,FY2029E,balance_sheet,retained_earnings,4355.420,GHS millions,estimated,Estimate.
+zenith-bank-ghana,upside,FY2029E,balance_sheet,reserves_other,1891.472,GHS millions,estimated,Estimate.
+zenith-bank-ghana,upside,FY2029E,balance_sheet,total_equity,7246.892,GHS millions,estimated,Estimate.
 zenith-bank-ghana,upside,FY2029E,balance_sheet,stated_capital,1000.000,GHS millions,estimated,"Held at 1,000m; no issue or bonus issue assumed."
-zenith-bank-ghana,upside,FY2029E,ratios,x_car_proxy_pct,16.731,percent,estimated,"PROXY, not the regulatory ratio: book equity / (risk-weight density 0.722 x total assets). Density is the 30 Sep 2026 implied value."
-zenith-bank-ghana,upside,FY2029E,ratios,x_car_proxy_fy25_density_pct,22.938,percent,estimated,PROXY with the FY2025 audited density (reported RWA / total assets = 0.527). Gives a more generous number than x_car_proxy_pct; the truth lies between if loan growth raises density.
-zenith-bank-ghana,upside,FY2029E,ratios,x_roe_pct,27.992,percent,estimated,Profit after tax / average of opening and closing equity.
-zenith-bank-ghana,upside,FY2029E,ratios,x_cost_to_income_pct,24.926,percent,estimated,Operating expenses / operating income before impairment.
-zenith-bank-ghana,upside,FY2029E,ratios,x_ldr_pct,38.459,percent,estimated,Net loans / customer deposits.
-zenith-bank-ghana,upside,FY2030E,income_statement,interest_income,4563.288,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+zenith-bank-ghana,upside,FY2029E,ratios,x_car_proxy_pct,17.043,percent,estimated,"PROXY, not the regulatory ratio: (book equity - 181.041m FY2025 regulatory adjustment) / (risk-weight density x total assets). Density calibrated so the proxy equals the reported 17.79% at 30 Sep 2026. Not a prudential calculation."
+zenith-bank-ghana,upside,FY2029E,ratios,x_car_proxy_fy25_density_pct,22.328,percent,estimated,"PROXY with the FY2025 audited density (reported RWA / total assets = 0.527); a high case. Interim reported CAR is lower than this implies, so treat as an upper bound of the proxy, not of actual CAR."
+zenith-bank-ghana,upside,FY2029E,ratios,roe_pct,27.474,percent,estimated,Estimate. Profit after tax / average of opening and closing equity.
+zenith-bank-ghana,upside,FY2029E,ratios,roa_pct,3.338,percent,estimated,Estimate. Profit after tax / average of opening and closing total assets.
+zenith-bank-ghana,upside,FY2029E,ratios,cost_to_income_pct,25.245,percent,estimated,Estimate. (Staff + depreciation + other expenses) / operating income before impairment.
+zenith-bank-ghana,upside,FY2029E,ratios,ldr_pct,38.459,percent,estimated,Estimate. NET loans / customer deposits (gross loans are not forecast).
+zenith-bank-ghana,upside,FY2029E,balance_sheet,loans_and_advances_gross,,GHS millions,unavailable,Gross loans not forecast; interim statements do not print them.
+zenith-bank-ghana,upside,FY2029E,balance_sheet,loan_loss_allowance,,GHS millions,unavailable,"Allowance not forecast. Impairment is driven by a cost of risk on net loans, not a stage 3 path."
+zenith-bank-ghana,upside,FY2029E,ratios,npl_pct,,percent,unavailable,No NPL path is forecast. Reported NPL was 8.49% (FY2025) and 8.91% (Sep 2026); the cost of risk is an independent assumption.
+zenith-bank-ghana,upside,FY2029E,ratios,car_pct,,percent,unavailable,Regulatory CAR is not forecast; see x_car_proxy_pct (accounting proxy).
+zenith-bank-ghana,upside,FY2029E,ratios,tier1_pct,,percent,unavailable,Tier 1 is not forecast.
+zenith-bank-ghana,upside,FY2030E,income_statement,interest_income,4449.245,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 zenith-bank-ghana,upside,FY2030E,income_statement,interest_expense,1021.606,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-zenith-bank-ghana,upside,FY2030E,income_statement,net_interest_income,3541.682,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+zenith-bank-ghana,upside,FY2030E,income_statement,net_interest_income,3427.640,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 zenith-bank-ghana,upside,FY2030E,income_statement,fee_commission_income,905.747,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 zenith-bank-ghana,upside,FY2030E,income_statement,fee_commission_expense,108.690,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 zenith-bank-ghana,upside,FY2030E,income_statement,net_trading_income,296.299,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 zenith-bank-ghana,upside,FY2030E,income_statement,other_operating_income,151.085,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-zenith-bank-ghana,upside,FY2030E,income_statement,total_operating_income,4786.124,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+zenith-bank-ghana,upside,FY2030E,income_statement,total_operating_income,4672.082,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 zenith-bank-ghana,upside,FY2030E,income_statement,staff_costs,479.595,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 zenith-bank-ghana,upside,FY2030E,income_statement,depreciation_amortisation,95.161,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 zenith-bank-ghana,upside,FY2030E,income_statement,other_operating_expenses,517.755,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 zenith-bank-ghana,upside,FY2030E,income_statement,impairment_charge,212.446,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-zenith-bank-ghana,upside,FY2030E,income_statement,profit_before_tax,3481.166,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-zenith-bank-ghana,upside,FY2030E,income_statement,income_tax,1183.597,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-zenith-bank-ghana,upside,FY2030E,income_statement,profit_after_tax,2297.570,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-zenith-bank-ghana,upside,FY2030E,income_statement,x_dividends_paid,645.487,GHS millions,estimated,Payout x prior-year profit after tax (assumptions.json).
+zenith-bank-ghana,upside,FY2030E,income_statement,profit_before_tax,3367.124,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+zenith-bank-ghana,upside,FY2030E,income_statement,income_tax,1144.822,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+zenith-bank-ghana,upside,FY2030E,income_statement,profit_after_tax,2222.302,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+zenith-bank-ghana,upside,FY2030E,income_statement,x_dividends_paid,633.934,GHS millions,estimated,Payout x prior-year profit after tax (assumptions.json).
 zenith-bank-ghana,upside,FY2030E,balance_sheet,cash_and_bog_balances,23423.800,GHS millions,estimated,Estimate.
-zenith-bank-ghana,upside,FY2030E,balance_sheet,due_from_banks,305.165,GHS millions,estimated,Estimate. Due from banks and securities are the plug (liquid assets) split at the 30 Sep 2026 mix.
-zenith-bank-ghana,upside,FY2030E,balance_sheet,investment_securities,23169.070,GHS millions,estimated,Estimate. Due from banks and securities are the plug (liquid assets) split at the 30 Sep 2026 mix.
+zenith-bank-ghana,upside,FY2030E,balance_sheet,due_from_banks,304.161,GHS millions,estimated,Estimate. Due from banks and securities are the plug (liquid assets) split at the 30 Sep 2026 mix.
+zenith-bank-ghana,upside,FY2030E,balance_sheet,investment_securities,23092.827,GHS millions,estimated,Estimate. Due from banks and securities are the plug (liquid assets) split at the 30 Sep 2026 mix.
 zenith-bank-ghana,upside,FY2030E,balance_sheet,loans_and_advances_net,22998.769,GHS millions,estimated,Estimate.
 zenith-bank-ghana,upside,FY2030E,balance_sheet,property_equipment_intangibles,572.455,GHS millions,estimated,Estimate.
 zenith-bank-ghana,upside,FY2030E,balance_sheet,other_assets,4550.224,GHS millions,estimated,Estimate.
-zenith-bank-ghana,upside,FY2030E,balance_sheet,total_assets,75019.483,GHS millions,estimated,Estimate.
+zenith-bank-ghana,upside,FY2030E,balance_sheet,total_assets,74942.236,GHS millions,estimated,Estimate.
 zenith-bank-ghana,upside,FY2030E,balance_sheet,customer_deposits,63825.069,GHS millions,estimated,Estimate.
 zenith-bank-ghana,upside,FY2030E,balance_sheet,due_to_banks,355.255,GHS millions,estimated,Estimate.
 zenith-bank-ghana,upside,FY2030E,balance_sheet,borrowings,1345.443,GHS millions,estimated,Estimate.
 zenith-bank-ghana,upside,FY2030E,balance_sheet,other_liabilities,581.209,GHS millions,estimated,Estimate.
 zenith-bank-ghana,upside,FY2030E,balance_sheet,total_liabilities,66106.976,GHS millions,estimated,Estimate.
-zenith-bank-ghana,upside,FY2030E,balance_sheet,retained_earnings,5733.459,GHS millions,estimated,Estimate.
-zenith-bank-ghana,upside,FY2030E,balance_sheet,reserves_other,2179.049,GHS millions,estimated,Estimate.
-zenith-bank-ghana,upside,FY2030E,balance_sheet,total_equity,8912.507,GHS millions,estimated,Estimate.
+zenith-bank-ghana,upside,FY2030E,balance_sheet,retained_earnings,5666.000,GHS millions,estimated,Estimate.
+zenith-bank-ghana,upside,FY2030E,balance_sheet,reserves_other,2169.260,GHS millions,estimated,Estimate.
+zenith-bank-ghana,upside,FY2030E,balance_sheet,total_equity,8835.260,GHS millions,estimated,Estimate.
 zenith-bank-ghana,upside,FY2030E,balance_sheet,stated_capital,1000.000,GHS millions,estimated,"Held at 1,000m; no issue or bonus issue assumed."
-zenith-bank-ghana,upside,FY2030E,ratios,x_car_proxy_pct,16.455,percent,estimated,"PROXY, not the regulatory ratio: book equity / (risk-weight density 0.722 x total assets). Density is the 30 Sep 2026 implied value."
-zenith-bank-ghana,upside,FY2030E,ratios,x_car_proxy_fy25_density_pct,22.559,percent,estimated,PROXY with the FY2025 audited density (reported RWA / total assets = 0.527). Gives a more generous number than x_car_proxy_pct; the truth lies between if loan growth raises density.
-zenith-bank-ghana,upside,FY2030E,ratios,x_roe_pct,28.413,percent,estimated,Profit after tax / average of opening and closing equity.
-zenith-bank-ghana,upside,FY2030E,ratios,x_cost_to_income_pct,22.827,percent,estimated,Operating expenses / operating income before impairment.
-zenith-bank-ghana,upside,FY2030E,ratios,x_ldr_pct,36.034,percent,estimated,Net loans / customer deposits.
+zenith-bank-ghana,upside,FY2030E,ratios,x_car_proxy_pct,16.737,percent,estimated,"PROXY, not the regulatory ratio: (book equity - 181.041m FY2025 regulatory adjustment) / (risk-weight density x total assets). Density calibrated so the proxy equals the reported 17.79% at 30 Sep 2026. Not a prudential calculation."
+zenith-bank-ghana,upside,FY2030E,ratios,x_car_proxy_fy25_density_pct,21.928,percent,estimated,"PROXY with the FY2025 audited density (reported RWA / total assets = 0.527); a high case. Interim reported CAR is lower than this implies, so treat as an upper bound of the proxy, not of actual CAR."
+zenith-bank-ghana,upside,FY2030E,ratios,roe_pct,27.637,percent,estimated,Estimate. Profit after tax / average of opening and closing equity.
+zenith-bank-ghana,upside,FY2030E,ratios,roa_pct,3.291,percent,estimated,Estimate. Profit after tax / average of opening and closing total assets.
+zenith-bank-ghana,upside,FY2030E,ratios,cost_to_income_pct,23.384,percent,estimated,Estimate. (Staff + depreciation + other expenses) / operating income before impairment.
+zenith-bank-ghana,upside,FY2030E,ratios,ldr_pct,36.034,percent,estimated,Estimate. NET loans / customer deposits (gross loans are not forecast).
+zenith-bank-ghana,upside,FY2030E,balance_sheet,loans_and_advances_gross,,GHS millions,unavailable,Gross loans not forecast; interim statements do not print them.
+zenith-bank-ghana,upside,FY2030E,balance_sheet,loan_loss_allowance,,GHS millions,unavailable,"Allowance not forecast. Impairment is driven by a cost of risk on net loans, not a stage 3 path."
+zenith-bank-ghana,upside,FY2030E,ratios,npl_pct,,percent,unavailable,No NPL path is forecast. Reported NPL was 8.49% (FY2025) and 8.91% (Sep 2026); the cost of risk is an independent assumption.
+zenith-bank-ghana,upside,FY2030E,ratios,car_pct,,percent,unavailable,Regulatory CAR is not forecast; see x_car_proxy_pct (accounting proxy).
+zenith-bank-ghana,upside,FY2030E,ratios,tier1_pct,,percent,unavailable,Tier 1 is not forecast.
+zenith-bank-ghana,upside,FY2026E,income_statement,x_q4_implied_profit_before_tax,370.986,GHS millions,estimated,FY2026E profit before tax less 9M-2026 actual.
+zenith-bank-ghana,upside,FY2026E,income_statement,x_q4_implied_income_tax,334.312,GHS millions,estimated,FY2026E tax (34% of full-year PBT) less 9M-2026 actual tax; implies a very high Q4 tax rate (see checks.md).
+zenith-bank-ghana,upside,FY2026E,income_statement,x_q4_implied_impairment,47.277,GHS millions,estimated,Q4 charge at the base cost of risk on 30 Sep 2026 net loans / 4.

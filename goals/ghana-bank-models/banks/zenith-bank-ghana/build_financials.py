@@ -94,7 +94,7 @@ CASH_NOTE = {  # Bank of Ghana balances, balances with banks (as printed in the 
 }
 CAP = {  # CAR %, RWA, page
     "FY2021": (45.09, 3339214, "67-68"), "FY2022": (36.0, 4188858, "69-71"), "FY2023": (29.0, 6492583, "77"),
-    "FY2024": (24.14, 9017179, "86-87"), "FY2025": (20.40, 14062231, "88"),
+    "FY2024": (24.14, 9017179, "86-87"), "FY2025": (20.40, 14062231, "87"),
 }
 NPL_REPORTED = {"FY2021": (4.40, "54"), "FY2022": (3.80, "59"), "FY2023": (1.0, "65"), "FY2024": (1.0, "74"), "FY2025": (8.49, "74")}
 INTERIM_RATIOS = {  # CAR, CET1, NPL, loan loss provision, liquid ratio
@@ -158,7 +158,7 @@ for p in PERIODS:
     add(p, "balance_sheet", "cash_and_bog_balances", b["cash"], bsrc, bpg, "reported",
         "Printed line 'Cash and bank balances': includes cash on hand, Bank of Ghana balances (incl. mandatory reserve), balances with other banks and items in course of collection. Not split here so every period uses one definition; see x_ rows. " + bs_note)
     add(p, "balance_sheet", "due_from_banks", b["oth_inv"], bsrc, bpg, "reported",
-        "Printed line 'Investments (other than securities)'. INFERRED to be interbank/money-market placements because Note 11 reports 'Interbank placements' impairment on this balance; Note 20 text not read. Balances with banks sit inside cash_and_bog_balances.")
+        "Printed line 'Investments (other than securities)'. Classified as short-term lending to banks (interbank placements): FY2025 Note 20 pp.99-100 as read by independent reviewer chatgpt-support (visual check); FY2024 includes a Bank of Ghana placement of 1,082.858m (same note, same reviewer). Balances with banks sit inside cash_and_bog_balances. " + bs_note)
     add(p, "balance_sheet", "investment_securities", b["sec"] + b["trd"], bsrc, bpg, "derived",
         f"Investment securities (net) {M(b['sec'])} + non-pledged and pledged trading assets {M(b['trd'])}.")
     if p in ANNUAL:
@@ -227,6 +227,18 @@ for pp, v in NOT_RECOGNISED.items():
 for pp in ("FY2023", "FY2024", "FY2025"):
     add(pp, "balance_sheet", "x_interest_in_suspense", None, LOANS_SRC[pp], "", "unavailable", "No interest-in-suspense figure found in the notes read.")
 
+# ---- repairs after independent review (chatgpt-support, 2026-11-25): values below were read by the reviewer from the audited PDF and are
+# ---- transcribed here from the review; the author did not see the page. Marked in notes.
+REPRICING = [("x_securities_repricing_under_3m", 5336806, "Investment securities repricing within 3 months"),
+             ("x_securities_repricing_6_12m", 32984, "Investment securities repricing in 6-12 months"),
+             ("x_securities_repricing_1_5y", 2243497, "Investment securities repricing in 1-5 years"),
+             ("x_securities_repricing_over_5y", 1533638, "Investment securities repricing after 5 years")]
+for k, v, lab in REPRICING:
+    add("FY2025", "balance_sheet", k, v, "ZEN-FY25", "81", "reported", lab + " (interest rate repricing schedule). Transcribed from chatgpt-support's visual review; buckets sum to net investment securities 9,146.925m (see checks_history.md).")
+add("FY2025", "balance_sheet", "x_repricing_gap_under_3m", -3973412, "ZEN-FY25", "81", "reported", "Reported net repricing gap, less than 3 months (negative = liabilities reprice first). Transcribed from chatgpt-support's visual review.")
+add("FY2025", "ratios", "x_regulatory_capital", 2868945, "ZEN-FY25", "86-87", "reported", "Regulatory capital (note 4). Book equity 3,049.986m less 181.041m of regulatory adjustments. Transcribed from chatgpt-support's visual review; RWA and CAR 20.40% were read by the author.")
+add("FY2025", "ratios", "x_regulatory_capital_adjustment", BS["FY2025"]["te"] - 2868945, "ZEN-FY25", "86-87", "derived", "Book equity minus regulatory capital.")
+
 # ---- equity roll-forward (derived): other movements and dividends
 EQ = {}
 order = ANNUAL
@@ -250,11 +262,12 @@ for p in PERIODS:
 
 for p, r in INTERIM_RATIOS.items():
     sc = SRC[p][1][0]
-    pct(p, "car_pct", r["car"], sc, "1", "reported", "Regulatory disclosures table. Column orientation proven in checks_history.md.")
-    pct(p, "tier1_pct", r["cet1"], sc, "1", "reported", "Printed as 'Common Equity Tier 1 Ratio'.")
-    pct(p, "npl_pct", r["npl"], sc, "1", "reported", "Printed 'Non-performing loans to gross loans'.")
-    pct(p, "x_loan_loss_provision_pct", r["llp"], sc, "1", "reported", "Printed 'Loan loss provision' ratio.")
-    pct(p, "x_liquid_ratio_pct", r["liq"], sc, "1", "reported", "Printed 'Liquid Ratio'.")
+    pct(p, "car_pct", r["car"], sc, "2", "reported", "Regulatory disclosures table (physical page 2). Column orientation proven in checks_history.md.")
+    pct(p, "x_cet1_pct", r["cet1"], sc, "2", "reported", "Printed as 'Common Equity Tier 1 Ratio' (interim regulatory table, physical page 2). CET1 is not necessarily Tier 1, so it is not stored as tier1_pct.")
+    rows.append([BANK, p, "ratios", "tier1_pct", "", "percent", sc, "", "unavailable", "Interim table prints CET1 only; Tier 1 not separately established."])
+    pct(p, "npl_pct", r["npl"], sc, "2", "reported", "Printed 'Non-performing loans to gross loans'.")
+    pct(p, "x_loan_loss_provision_pct", r["llp"], sc, "2", "reported", "Printed 'Loan loss provision' ratio.")
+    pct(p, "x_liquid_ratio_pct", r["liq"], sc, "2", "reported", "Printed 'Liquid Ratio'.")
     pct(p, "ldr_pct", BS[p]["loans"] / BS[p]["dep_c"] * 100, sc, "1", "derived", "loans_and_advances_net / customer_deposits.")
 
 # ---------------------------------------------------------------- write financials.csv
@@ -296,6 +309,10 @@ for p in ANNUAL:
 for p in ANNUAL:
     g, ia, _ = SEC[p]
     out.append(chk(f"{p} securities gross - impairment = net on the balance sheet", g - ia, BS[p]["sec"], 0))
+sbk = sum(v for k, v, _ in REPRICING)
+out += ["", "## 3b. Securities repricing buckets (FY2025, transcribed from the independent review)", "", "| Check | Computed | Printed | Diff | Result |", "| --- | --- | --- | --- | --- |"]
+out.append(chk("FY2025 four repricing buckets = net investment securities", sbk, BS["FY2025"]["sec"], 0))
+out.append(chk("FY2025 book equity - regulatory capital 2,868,945 = adjustment 181,041", BS["FY2025"]["te"] - 2868945, 181041, 0))
 out += ["", "## 4. Note 11 impairment components sum to the income-statement charge", "", "| Check | Computed | Printed | Diff | Result |", "| --- | --- | --- | --- | --- |"]
 for p, d in NOTE11.items():
     out.append(chk(f"{p} sum of note 11 components = impairment_charge", d["loans"] + d["obs"] + d["sec"] + d["plc"] + d["wo"] + d["euro"], IS[p]["imp"], 0))

@@ -24,3 +24,9 @@ Entity: Zenith Bank (Ghana) Ltd, a private limited company, 99.42% owned by Zeni
 ## Not used
 - Annual Reports (the glossy "Report" PDFs): not needed, the signed financial statements carry the audited numbers.
 - Group figures of Zenith Bank PLC (Nigeria): different entity, naira, not comparable.
+
+## Dated events cited in the forecast narrative (review finding F6)
+- Domestic debt exchange (DDEP) dates and terms: ZEN-FY25 note 19, p.99 (as read by the independent reviewer); the FY2022 impairment of 1,157.5m is in ZEN-FY23 comparatives / Note 11.
+- End of the regulatory relief on the debt-exchange impairment: ZEN-FY25 note 4, p.87 (as read by the independent reviewer). The author did not open these pages.
+- Statutory reserve tiers: Banks and Specialised Deposit-Taking Institutions Act 2016 (Act 930) s.34, official Bank of Ghana PDF printed p.30 (as read by the independent reviewer).
+- FY2025 repricing schedule p.81 and regulatory capital pp.86-87 of ZEN-FY25: transcribed from the reviewer's visual check, not read by the author.

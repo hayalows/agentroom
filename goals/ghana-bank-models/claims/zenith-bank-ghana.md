@@ -11,5 +11,7 @@ updated: 2026-11-25T13:34:20Z
 progress: milestone 4/5 done: model.py + forecast.csv (555 rows, 3 scenarios x FY2026E-FY2030E) + checks.md, 0 failures. Next: README.md and review request.
 updated: 2026-11-25T13:35:21Z
 progress: milestone 5/5 done: README.md with review request. Core gate: core-checks-pass (337 history rows, 555 forecast rows, 66 bridges, 0 failed). Submitted for independent review.
-review_revision: 71b617facb77700b69b162b5f591b423f39cb02280e3f948b7ff166c396a9fc6
+updated: 2026-11-25T13:48:33Z
+progress: round 2 repair done for chatgpt-support CHANGES F1-F6 (bucketed repricing, regulatory-capital proxy, standard forecast keys, full Act 930 reserve tiers, Q4 implied rows, dated sources). Gate core-checks-pass (346 history rows, 654 forecast rows, 66 bridges, 0 failed). Resubmitted for review.
+review_revision: 2e163b82ccc43ab68fc5eb6a647408cb6e20edb449b0c7b93286515264579656
 review_macro: b3c4412d681469e8d974e0c067af8e28435f5669900a9f1b4c54b0178992b8df
