@@ -95,12 +95,8 @@
       "statutory_reserve_tiers": {
         "value": [
           [
-            25,
-            50.0
-          ],
-          [
             50,
-            37.5
+            50.0
           ],
           [
             100,
@@ -111,7 +107,7 @@
             12.5
           ]
         ],
-        "note": "Transfer % of positive PAT by opening statutory fund / stated capital (%): below 25 -> 50%, 25-50 -> 37.5%, 50-100 -> 25%, 100+ -> 12.5%. Taken from codex's source pack (assistance/claude-helper-1/adb-v3-source-check-codex.md); consistent with the observed 50% in FY2025 and 9M-2026. Steward did not read the Act, and the Absa and Republic models use a three-tier reading (50/25/12.5). Memo only: no effect on total equity."
+        "note": "Act 930 s34 as re-read by codex (corrected pack, assistance/claude-helper-1/adb-v3-source-check-codex.md): transfer of positive PAT is 50% while the statutory fund is below 50% of stated capital, 25% from 50% to below 100%, 12.5% at or above 100%. Consistent with the observed 50% in FY2025 and 9M-2026 and with the Absa and Republic models. Steward did not read the Act. Memo only: no effect on total equity."
       }
     },
     "downside": {
@@ -193,12 +189,8 @@
       "statutory_reserve_tiers": {
         "value": [
           [
-            25,
-            50.0
-          ],
-          [
             50,
-            37.5
+            50.0
           ],
           [
             100,
@@ -209,7 +201,7 @@
             12.5
           ]
         ],
-        "note": "Transfer % of positive PAT by opening statutory fund / stated capital (%): below 25 -> 50%, 25-50 -> 37.5%, 50-100 -> 25%, 100+ -> 12.5%. Taken from codex's source pack (assistance/claude-helper-1/adb-v3-source-check-codex.md); consistent with the observed 50% in FY2025 and 9M-2026. Steward did not read the Act, and the Absa and Republic models use a three-tier reading (50/25/12.5). Memo only: no effect on total equity."
+        "note": "Act 930 s34 as re-read by codex (corrected pack, assistance/claude-helper-1/adb-v3-source-check-codex.md): transfer of positive PAT is 50% while the statutory fund is below 50% of stated capital, 25% from 50% to below 100%, 12.5% at or above 100%. Consistent with the observed 50% in FY2025 and 9M-2026 and with the Absa and Republic models. Steward did not read the Act. Memo only: no effect on total equity."
       }
     },
     "upside": {
@@ -291,12 +283,8 @@
       "statutory_reserve_tiers": {
         "value": [
           [
-            25,
-            50.0
-          ],
-          [
             50,
-            37.5
+            50.0
           ],
           [
             100,
@@ -307,7 +295,7 @@
             12.5
           ]
         ],
-        "note": "Transfer % of positive PAT by opening statutory fund / stated capital (%): below 25 -> 50%, 25-50 -> 37.5%, 50-100 -> 25%, 100+ -> 12.5%. Taken from codex's source pack (assistance/claude-helper-1/adb-v3-source-check-codex.md); consistent with the observed 50% in FY2025 and 9M-2026. Steward did not read the Act, and the Absa and Republic models use a three-tier reading (50/25/12.5). Memo only: no effect on total equity."
+        "note": "Act 930 s34 as re-read by codex (corrected pack, assistance/claude-helper-1/adb-v3-source-check-codex.md): transfer of positive PAT is 50% while the statutory fund is below 50% of stated capital, 25% from 50% to below 100%, 12.5% at or above 100%. Consistent with the observed 50% in FY2025 and 9M-2026 and with the Absa and Republic models. Steward did not read the Act. Memo only: no effect on total equity."
       }
     }
   }

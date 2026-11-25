@@ -98,7 +98,7 @@ Capital stress (static, FY2030E; absolute gap = capital needed to reach the mini
 
 A negative CAR that becomes less negative at a higher density is not an improvement in capital: compare the absolute gaps.
 
-Statutory reserve memo (forecast rows `x_statutory_reserve`, `x_statutory_transfer`): the 9M-2026 fund (534.049m) and year-to-date transfer (150.857m, 50.0% of PAT) are reported; the tiers are in `assumptions.json` and are not verified against the Act. Transfers move amounts between reserves and retained earnings, so total equity and CAR are unaffected. Year-by-year amounts are in `forecast.csv`; the table shows the transfer tier amounts for positive-profit years.
+Statutory reserve memo (forecast rows `x_statutory_reserve`, `x_statutory_transfer`): the 9M-2026 fund (534.049m) and year-to-date transfer (150.857m, 50.0% of PAT) are reported; the three Act 930 s34 bands (50% / 25% / 12.5%, as re-read by Codex) are in `assumptions.json` and the steward did not read the Act. Transfers move amounts between reserves and retained earnings, so total equity and CAR are unaffected. Year-by-year amounts are in `forecast.csv`; the table shows the transfer tier amounts for positive-profit years.
 | Scenario | Year | PAT | 12.5% | 25% | 50% |
 | --- | --- | --- | --- | --- | --- |
 | base | FY2026E | 346.6 | 43.3 | 86.7 | 173.3 |
