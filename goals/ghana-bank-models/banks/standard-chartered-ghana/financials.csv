@@ -1,0 +1,271 @@
+bank,period,statement,line_item,value,unit,source_id,page,status,notes
+standard-chartered-ghana,FY2021,income_statement,interest_income,819.932,GHS millions,SCB-FY21,1,reported,Bank-only (bank only (the bank had no consolidated statements in this report)). As originally reported; not restated in later documents I read.
+standard-chartered-ghana,FY2021,income_statement,interest_expense,173.575,GHS millions,SCB-FY21,1,reported,Printed in brackets (an expense); stored positive.
+standard-chartered-ghana,FY2021,income_statement,net_interest_income,646.357,GHS millions,SCB-FY21,1,reported,
+standard-chartered-ghana,FY2021,income_statement,fee_commission_income,170.024,GHS millions,SCB-FY21,1,reported,
+standard-chartered-ghana,FY2021,income_statement,fee_commission_expense,14.179,GHS millions,SCB-FY21,1,reported,Stored positive.
+standard-chartered-ghana,FY2021,income_statement,net_trading_income,268.504,GHS millions,SCB-FY21,1,reported,
+standard-chartered-ghana,FY2021,income_statement,other_operating_income,-0.378,GHS millions,SCB-FY21,1,derived,Sum of: -378 (FVTPL) + 0 (other income) + 0 (lease modification gain/loss) in GH¢'000
+standard-chartered-ghana,FY2021,income_statement,total_operating_income,1070.328,GHS millions,SCB-FY21,1,reported,Printed as 'Operating income' (before impairment).
+standard-chartered-ghana,FY2021,income_statement,staff_costs,245.459,GHS millions,SCB-FY21,1,reported,Stored positive.
+standard-chartered-ghana,FY2021,income_statement,depreciation_amortisation,34.608,GHS millions,SCB-FY21,1,reported,Stored positive.
+standard-chartered-ghana,FY2021,income_statement,other_operating_expenses,101.656,GHS millions,SCB-FY21,1,reported,Stored positive.
+standard-chartered-ghana,FY2021,income_statement,impairment_charge,-5.892,GHS millions,SCB-FY21,1,derived,"Total impairment, sign flipped to the room convention (cost positive, reversal negative). "
+standard-chartered-ghana,FY2021,income_statement,profit_before_tax,694.497,GHS millions,SCB-FY21,1,reported,
+standard-chartered-ghana,FY2021,income_statement,income_tax,257.563,GHS millions,SCB-FY21,1,reported,Total tax and levies as printed. Negative = tax credit.
+standard-chartered-ghana,FY2021,income_statement,x_national_fiscal_stabilisation_levy,34.725,GHS millions,SCB-FY21,1,reported,"Levy included inside income_tax above; shown separately for information, do not add again."
+standard-chartered-ghana,FY2021,income_statement,x_financial_sector_cleanup_levy,26.472,GHS millions,SCB-FY21,1,reported,"Levy included inside income_tax above; shown separately for information, do not add again."
+standard-chartered-ghana,FY2021,income_statement,profit_after_tax,436.934,GHS millions,SCB-FY21,1,reported,Printed as 'Profit/(loss) for the year/period'.
+standard-chartered-ghana,FY2021,balance_sheet,cash_and_bog_balances,3203.097,GHS millions,SCB-FY21,1,reported,Printed as 'Cash and cash equivalents'; includes mandatory reserve deposits at the Bank of Ghana (SCB-FY25 cash-flow note: reserves excluded from cash flow cash). Bank-only.
+standard-chartered-ghana,FY2021,balance_sheet,due_from_banks,241.254,GHS millions,SCB-FY21,1,reported,Printed as 'Due from other banks' (FY2021: 'Loans to other banks'). 0 where no line is printed.
+standard-chartered-ghana,FY2021,balance_sheet,investment_securities,3761.388,GHS millions,SCB-FY21,1,reported,
+standard-chartered-ghana,FY2021,balance_sheet,loans_and_advances_net,1886.799,GHS millions,SCB-FY21,1,reported,Printed 'Loans and advances to customers' (net of impairment).
+standard-chartered-ghana,FY2021,balance_sheet,property_equipment_intangibles,242.067,GHS millions,SCB-FY21,1,derived,Property and equipment 242067 + right-of-use asset 0 (GH¢'000). FY2021 prints one combined line.
+standard-chartered-ghana,FY2021,balance_sheet,other_assets,785.971,GHS millions,SCB-FY21,1,derived,Sum of (GH¢'000): derivative assets 10143; non-pledged trading assets 361964; current tax assets 31649; deferred tax asset 0; equity investments 1001; investment in subsidiaries 0; other assets 381214
+standard-chartered-ghana,FY2021,balance_sheet,total_assets,10120.576,GHS millions,SCB-FY21,1,reported,
+standard-chartered-ghana,FY2021,balance_sheet,customer_deposits,7554.457,GHS millions,SCB-FY21,1,reported,
+standard-chartered-ghana,FY2021,balance_sheet,due_to_banks,79.690,GHS millions,SCB-FY21,1,reported,Printed as 'Deposits from banks'.
+standard-chartered-ghana,FY2021,balance_sheet,borrowings,240.244,GHS millions,SCB-FY21,1,reported,Short-term borrowings / borrowings. 0 where no line is printed in the statement of financial position.
+standard-chartered-ghana,FY2021,balance_sheet,other_liabilities,602.903,GHS millions,SCB-FY21,1,derived,Sum of (GH¢'000): derivative liabilities 9249; provisions 86228; deferred tax liabilities 11623; other liabilities 495803; lease liabilities 0
+standard-chartered-ghana,FY2021,balance_sheet,total_liabilities,8477.294,GHS millions,SCB-FY21,1,reported,
+standard-chartered-ghana,FY2021,balance_sheet,stated_capital,400.000,GHS millions,SCB-FY21,1,reported,
+standard-chartered-ghana,FY2021,balance_sheet,retained_earnings,553.412,GHS millions,SCB-FY21,1,reported,Printed as 'Retained earnings' or 'Income surplus'.
+standard-chartered-ghana,FY2021,balance_sheet,reserves_other,689.870,GHS millions,SCB-FY21,1,derived,Reserve fund 568228 + credit risk reserve 144087 + other reserves -22445 (GH¢'000).
+standard-chartered-ghana,FY2021,balance_sheet,total_equity,1643.282,GHS millions,SCB-FY21,1,reported,Printed as 'Total shareholders' funds'.
+standard-chartered-ghana,FY2021,ratios,car_pct,33.42,percent,SCB-FY21,1,reported,CAR on CRD basis as printed.
+standard-chartered-ghana,FY2021,ratios,x_cet1_pct,33.21,percent,SCB-FY21,1,reported,CAR on CRD basis as printed.
+standard-chartered-ghana,FY2021,ratios,x_leverage_ratio_pct,11.58,percent,SCB-FY21,1,reported,CAR on CRD basis as printed.
+standard-chartered-ghana,FY2021,ratios,npl_pct,23.59,percent,SCB-FY21,1,reported,CAR on CRD basis as printed.
+standard-chartered-ghana,FY2021,ratios,x_npl_ex_loss_pct,2.56,percent,SCB-FY21,1,reported,CAR on CRD basis as printed.
+standard-chartered-ghana,FY2021,ratios,x_liquid_ratio_pct,71.05,percent,SCB-FY21,1,reported,CAR on CRD basis as printed.
+standard-chartered-ghana,FY2022,income_statement,interest_income,1008.901,GHS millions,SCB-FY23,1,reported,"Bank-only (bank column). Income statement as originally reported in SCB-FY23 comparatives. Balance sheet is the RESTATED 1 January 2023 position from SCB-FY24 (equity cut by GHS 40.3m, loans and tax assets changed after the bank corrected booking of written-off loans)."
+standard-chartered-ghana,FY2022,income_statement,interest_expense,201.115,GHS millions,SCB-FY23,1,reported,Printed in brackets (an expense); stored positive.
+standard-chartered-ghana,FY2022,income_statement,net_interest_income,807.786,GHS millions,SCB-FY23,1,reported,
+standard-chartered-ghana,FY2022,income_statement,fee_commission_income,191.440,GHS millions,SCB-FY23,1,reported,
+standard-chartered-ghana,FY2022,income_statement,fee_commission_expense,22.220,GHS millions,SCB-FY23,1,reported,Stored positive.
+standard-chartered-ghana,FY2022,income_statement,net_trading_income,239.390,GHS millions,SCB-FY23,1,reported,
+standard-chartered-ghana,FY2022,income_statement,other_operating_income,-6.271,GHS millions,SCB-FY23,1,derived,Sum of: -1189 (FVTPL) + 3499 (other income) + -8581 (lease modification gain/loss) in GH¢'000
+standard-chartered-ghana,FY2022,income_statement,total_operating_income,1210.125,GHS millions,SCB-FY23,1,reported,Printed as 'Operating income' (before impairment).
+standard-chartered-ghana,FY2022,income_statement,staff_costs,298.472,GHS millions,SCB-FY23,1,reported,Stored positive.
+standard-chartered-ghana,FY2022,income_statement,depreciation_amortisation,32.983,GHS millions,SCB-FY23,1,reported,Stored positive.
+standard-chartered-ghana,FY2022,income_statement,other_operating_expenses,103.439,GHS millions,SCB-FY23,1,reported,Stored positive.
+standard-chartered-ghana,FY2022,income_statement,impairment_charge,1158.773,GHS millions,SCB-FY23,1,derived,"Total impairment, sign flipped to the room convention (cost positive, reversal negative). Components in x_ rows: securities 602086, loans 506438, lease 50249 (GH¢'000, cost positive)."
+standard-chartered-ghana,FY2022,income_statement,x_impairment_investment_securities,602.086,GHS millions,SCB-FY23,1,derived,Cost positive. 2022 contains the domestic debt exchange (DDEP) hit on securities; see README.
+standard-chartered-ghana,FY2022,income_statement,x_impairment_loans_and_advances,506.438,GHS millions,SCB-FY23,1,derived,Cost positive. Includes 'and others' in SCB-FY23 wording.
+standard-chartered-ghana,FY2022,income_statement,x_impairment_lease,50.249,GHS millions,SCB-FY23,1,derived,Cost positive.
+standard-chartered-ghana,FY2022,income_statement,profit_before_tax,-383.542,GHS millions,SCB-FY23,1,reported,
+standard-chartered-ghana,FY2022,income_statement,income_tax,-83.908,GHS millions,SCB-FY23,1,reported,Total tax and levies as printed. Negative = tax credit.
+standard-chartered-ghana,FY2022,income_statement,profit_after_tax,-299.634,GHS millions,SCB-FY23,1,reported,Printed as 'Profit/(loss) for the year/period'.
+standard-chartered-ghana,FY2022,balance_sheet,cash_and_bog_balances,3978.479,GHS millions,SCB-FY24,1,reported,Printed as 'Cash and cash equivalents'; includes mandatory reserve deposits at the Bank of Ghana (SCB-FY25 cash-flow note: reserves excluded from cash flow cash). Bank-only. Restated 1 Jan 2023 position; see README.
+standard-chartered-ghana,FY2022,balance_sheet,due_from_banks,0.000,GHS millions,SCB-FY24,1,reported,Printed as 'Due from other banks' (FY2021: 'Loans to other banks'). 0 where no line is printed.
+standard-chartered-ghana,FY2022,balance_sheet,investment_securities,3473.154,GHS millions,SCB-FY24,1,reported,
+standard-chartered-ghana,FY2022,balance_sheet,loans_and_advances_net,1988.310,GHS millions,SCB-FY24,1,reported,Printed 'Loans and advances to customers' (net of impairment).
+standard-chartered-ghana,FY2022,balance_sheet,property_equipment_intangibles,230.625,GHS millions,SCB-FY24,1,derived,Property and equipment 37958 + right-of-use asset 192667 (GH¢'000). FY2021 prints one combined line.
+standard-chartered-ghana,FY2022,balance_sheet,other_assets,656.136,GHS millions,SCB-FY24,1,derived,Sum of (GH¢'000): derivative assets 69691; non-pledged trading assets 4560; current tax assets 96637; deferred tax asset 188524; equity investments 1001; investment in subsidiaries 0; other assets 295723
+standard-chartered-ghana,FY2022,balance_sheet,total_assets,10326.704,GHS millions,SCB-FY24,1,reported,
+standard-chartered-ghana,FY2022,balance_sheet,customer_deposits,8183.887,GHS millions,SCB-FY24,1,reported,
+standard-chartered-ghana,FY2022,balance_sheet,due_to_banks,114.439,GHS millions,SCB-FY24,1,reported,Printed as 'Deposits from banks'.
+standard-chartered-ghana,FY2022,balance_sheet,borrowings,0.000,GHS millions,SCB-FY24,1,derived,Short-term borrowings / borrowings. 0 where no line is printed in the statement of financial position.
+standard-chartered-ghana,FY2022,balance_sheet,other_liabilities,741.320,GHS millions,SCB-FY24,1,derived,Sum of (GH¢'000): derivative liabilities 70338; provisions 98015; deferred tax liabilities 0; other liabilities 288470; lease liabilities 284497
+standard-chartered-ghana,FY2022,balance_sheet,total_liabilities,9039.646,GHS millions,SCB-FY24,1,reported,
+standard-chartered-ghana,FY2022,balance_sheet,stated_capital,400.000,GHS millions,SCB-FY24,1,reported,
+standard-chartered-ghana,FY2022,balance_sheet,retained_earnings,108.080,GHS millions,SCB-FY24,1,reported,Printed as 'Retained earnings' or 'Income surplus'.
+standard-chartered-ghana,FY2022,balance_sheet,reserves_other,778.978,GHS millions,SCB-FY24,1,derived,Reserve fund 568228 + credit risk reserve 0 + other reserves 210750 (GH¢'000).
+standard-chartered-ghana,FY2022,balance_sheet,total_equity,1287.058,GHS millions,SCB-FY24,1,reported,Printed as 'Total shareholders' funds'.
+standard-chartered-ghana,FY2022,ratios,car_pct,22.90,percent,SCB-FY23,1,reported,Capital ratio printed as 'Capital requirement directive (CRD)' in SCB-FY23.
+standard-chartered-ghana,FY2022,ratios,x_cet1_pct,22.75,percent,SCB-FY23,1,reported,Capital ratio printed as 'Capital requirement directive (CRD)' in SCB-FY23.
+standard-chartered-ghana,FY2022,ratios,x_leverage_ratio_pct,11.52,percent,SCB-FY23,1,reported,Capital ratio printed as 'Capital requirement directive (CRD)' in SCB-FY23.
+standard-chartered-ghana,FY2022,ratios,npl_pct,12.04,percent,SCB-FY23,1,reported,Capital ratio printed as 'Capital requirement directive (CRD)' in SCB-FY23.
+standard-chartered-ghana,FY2022,ratios,x_npl_ex_loss_pct,1.68,percent,SCB-FY23,1,reported,Capital ratio printed as 'Capital requirement directive (CRD)' in SCB-FY23.
+standard-chartered-ghana,FY2022,ratios,x_liquid_ratio_pct,62.91,percent,SCB-FY23,1,reported,Capital ratio printed as 'Capital requirement directive (CRD)' in SCB-FY23.
+standard-chartered-ghana,FY2023,income_statement,interest_income,1421.644,GHS millions,SCB-FY24,1,reported,"Bank-only (bank column, RESTATED). RESTATED in SCB-FY24 (booking errors on written-off non-performing loans corrected under IAS 8). Original SCB-FY23 figures differ: net trading income 217.465m (restated 141.090m), profit before tax 1,351.319m (restated 1,274.944m), profit after tax 864.391m (restated 814.747m), total assets 13,920.755m (restated 13,830.811m), equity 1,924.793m (restated 1,834.849m)."
+standard-chartered-ghana,FY2023,income_statement,interest_expense,155.201,GHS millions,SCB-FY24,1,reported,Printed in brackets (an expense); stored positive.
+standard-chartered-ghana,FY2023,income_statement,net_interest_income,1266.443,GHS millions,SCB-FY24,1,reported,
+standard-chartered-ghana,FY2023,income_statement,fee_commission_income,205.166,GHS millions,SCB-FY24,1,reported,
+standard-chartered-ghana,FY2023,income_statement,fee_commission_expense,27.391,GHS millions,SCB-FY24,1,reported,Stored positive.
+standard-chartered-ghana,FY2023,income_statement,net_trading_income,141.090,GHS millions,SCB-FY24,1,reported,
+standard-chartered-ghana,FY2023,income_statement,other_operating_income,47.277,GHS millions,SCB-FY24,1,derived,Sum of: 2222 (FVTPL) + 42499 (other income) + 2556 (lease modification gain/loss) in GH¢'000
+standard-chartered-ghana,FY2023,income_statement,total_operating_income,1632.585,GHS millions,SCB-FY24,1,reported,Printed as 'Operating income' (before impairment).
+standard-chartered-ghana,FY2023,income_statement,staff_costs,392.348,GHS millions,SCB-FY24,1,reported,Stored positive.
+standard-chartered-ghana,FY2023,income_statement,depreciation_amortisation,42.879,GHS millions,SCB-FY24,1,reported,Stored positive.
+standard-chartered-ghana,FY2023,income_statement,other_operating_expenses,142.726,GHS millions,SCB-FY24,1,reported,Stored positive.
+standard-chartered-ghana,FY2023,income_statement,impairment_charge,-220.312,GHS millions,SCB-FY24,1,derived,"Total impairment, sign flipped to the room convention (cost positive, reversal negative). Components in x_ rows: securities 47964, loans -253876, lease -14400 (GH¢'000, cost positive)."
+standard-chartered-ghana,FY2023,income_statement,x_impairment_investment_securities,47.964,GHS millions,SCB-FY24,1,derived,Cost positive. 2022 contains the domestic debt exchange (DDEP) hit on securities; see README.
+standard-chartered-ghana,FY2023,income_statement,x_impairment_loans_and_advances,-253.876,GHS millions,SCB-FY24,1,derived,Cost positive. Includes 'and others' in SCB-FY23 wording.
+standard-chartered-ghana,FY2023,income_statement,x_impairment_lease,-14.400,GHS millions,SCB-FY24,1,derived,Cost positive.
+standard-chartered-ghana,FY2023,income_statement,profit_before_tax,1274.944,GHS millions,SCB-FY24,1,reported,
+standard-chartered-ghana,FY2023,income_statement,income_tax,460.197,GHS millions,SCB-FY24,1,reported,Total tax and levies as printed. Negative = tax credit.
+standard-chartered-ghana,FY2023,income_statement,profit_after_tax,814.747,GHS millions,SCB-FY24,1,reported,Printed as 'Profit/(loss) for the year/period'.
+standard-chartered-ghana,FY2023,balance_sheet,cash_and_bog_balances,4309.599,GHS millions,SCB-FY24,1,reported,Printed as 'Cash and cash equivalents'; includes mandatory reserve deposits at the Bank of Ghana (SCB-FY25 cash-flow note: reserves excluded from cash flow cash). Bank-only.
+standard-chartered-ghana,FY2023,balance_sheet,due_from_banks,0.000,GHS millions,SCB-FY24,1,reported,Printed as 'Due from other banks' (FY2021: 'Loans to other banks'). 0 where no line is printed.
+standard-chartered-ghana,FY2023,balance_sheet,investment_securities,6694.890,GHS millions,SCB-FY24,1,reported,
+standard-chartered-ghana,FY2023,balance_sheet,loans_and_advances_net,1965.894,GHS millions,SCB-FY24,1,reported,Printed 'Loans and advances to customers' (net of impairment).
+standard-chartered-ghana,FY2023,balance_sheet,property_equipment_intangibles,201.859,GHS millions,SCB-FY24,1,derived,Property and equipment 28357 + right-of-use asset 173502 (GH¢'000). FY2021 prints one combined line.
+standard-chartered-ghana,FY2023,balance_sheet,other_assets,658.569,GHS millions,SCB-FY24,1,derived,Sum of (GH¢'000): derivative assets 8920; non-pledged trading assets 17911; current tax assets 239679; deferred tax asset 83264; equity investments 1001; investment in subsidiaries 0; other assets 307794
+standard-chartered-ghana,FY2023,balance_sheet,total_assets,13830.811,GHS millions,SCB-FY24,1,reported,
+standard-chartered-ghana,FY2023,balance_sheet,customer_deposits,10818.779,GHS millions,SCB-FY24,1,reported,
+standard-chartered-ghana,FY2023,balance_sheet,due_to_banks,202.946,GHS millions,SCB-FY24,1,reported,Printed as 'Deposits from banks'.
+standard-chartered-ghana,FY2023,balance_sheet,borrowings,232.860,GHS millions,SCB-FY24,1,reported,Short-term borrowings / borrowings. 0 where no line is printed in the statement of financial position.
+standard-chartered-ghana,FY2023,balance_sheet,other_liabilities,741.377,GHS millions,SCB-FY24,1,derived,Sum of (GH¢'000): derivative liabilities 15045; provisions 134802; deferred tax liabilities 0; other liabilities 225454; lease liabilities 366076
+standard-chartered-ghana,FY2023,balance_sheet,total_liabilities,11995.962,GHS millions,SCB-FY24,1,reported,
+standard-chartered-ghana,FY2023,balance_sheet,stated_capital,400.000,GHS millions,SCB-FY24,1,reported,
+standard-chartered-ghana,FY2023,balance_sheet,retained_earnings,814.778,GHS millions,SCB-FY24,1,reported,Printed as 'Retained earnings' or 'Income surplus'.
+standard-chartered-ghana,FY2023,balance_sheet,reserves_other,620.071,GHS millions,SCB-FY24,1,derived,Reserve fund 676277 + credit risk reserve 0 + other reserves -56206 (GH¢'000).
+standard-chartered-ghana,FY2023,balance_sheet,total_equity,1834.849,GHS millions,SCB-FY24,1,reported,Printed as 'Total shareholders' funds'.
+standard-chartered-ghana,FY2023,ratios,car_pct,27.48,percent,SCB-FY24,2,reported,"Restated ratios from SCB-FY24 (originally 27.74 CAR, 27.61 CET1, 12.82 leverage in SCB-FY23)."
+standard-chartered-ghana,FY2023,ratios,x_cet1_pct,27.35,percent,SCB-FY24,2,reported,"Restated ratios from SCB-FY24 (originally 27.74 CAR, 27.61 CET1, 12.82 leverage in SCB-FY23)."
+standard-chartered-ghana,FY2023,ratios,x_leverage_ratio_pct,12.79,percent,SCB-FY24,2,reported,"Restated ratios from SCB-FY24 (originally 27.74 CAR, 27.61 CET1, 12.82 leverage in SCB-FY23)."
+standard-chartered-ghana,FY2023,ratios,npl_pct,9.29,percent,SCB-FY24,2,reported,"Restated ratios from SCB-FY24 (originally 27.74 CAR, 27.61 CET1, 12.82 leverage in SCB-FY23)."
+standard-chartered-ghana,FY2023,ratios,x_npl_ex_loss_pct,0.43,percent,SCB-FY24,2,reported,"Restated ratios from SCB-FY24 (originally 27.74 CAR, 27.61 CET1, 12.82 leverage in SCB-FY23)."
+standard-chartered-ghana,FY2023,ratios,x_liquid_ratio_pct,92.84,percent,SCB-FY24,2,reported,"Restated ratios from SCB-FY24 (originally 27.74 CAR, 27.61 CET1, 12.82 leverage in SCB-FY23)."
+standard-chartered-ghana,FY2024,income_statement,interest_income,1601.737,GHS millions,SCB-FY25,1,reported,"Bank-only (bank column). Taken from the comparative column of SCB-FY25; equal to SCB-FY24 on every line I compared (total assets, equity, profit before tax)."
+standard-chartered-ghana,FY2024,income_statement,interest_expense,198.415,GHS millions,SCB-FY25,1,reported,Printed in brackets (an expense); stored positive.
+standard-chartered-ghana,FY2024,income_statement,net_interest_income,1403.322,GHS millions,SCB-FY25,1,reported,
+standard-chartered-ghana,FY2024,income_statement,fee_commission_income,273.562,GHS millions,SCB-FY25,1,reported,
+standard-chartered-ghana,FY2024,income_statement,fee_commission_expense,43.205,GHS millions,SCB-FY25,1,reported,Stored positive.
+standard-chartered-ghana,FY2024,income_statement,net_trading_income,149.417,GHS millions,SCB-FY25,1,reported,
+standard-chartered-ghana,FY2024,income_statement,other_operating_income,5.452,GHS millions,SCB-FY25,1,derived,Sum of: -8569 (FVTPL) + 14021 (other income) + 0 (lease modification gain/loss) in GH¢'000
+standard-chartered-ghana,FY2024,income_statement,total_operating_income,1788.548,GHS millions,SCB-FY25,1,reported,Printed as 'Operating income' (before impairment).
+standard-chartered-ghana,FY2024,income_statement,staff_costs,489.940,GHS millions,SCB-FY25,1,reported,Stored positive.
+standard-chartered-ghana,FY2024,income_statement,depreciation_amortisation,48.816,GHS millions,SCB-FY25,1,reported,Stored positive.
+standard-chartered-ghana,FY2024,income_statement,other_operating_expenses,159.948,GHS millions,SCB-FY25,1,reported,Stored positive.
+standard-chartered-ghana,FY2024,income_statement,impairment_charge,80.918,GHS millions,SCB-FY25,1,derived,"Total impairment, sign flipped to the room convention (cost positive, reversal negative). Components in x_ rows: securities -62686, loans 138880, lease 4724 (GH¢'000, cost positive)."
+standard-chartered-ghana,FY2024,income_statement,x_impairment_investment_securities,-62.686,GHS millions,SCB-FY25,1,derived,Cost positive. 2022 contains the domestic debt exchange (DDEP) hit on securities; see README.
+standard-chartered-ghana,FY2024,income_statement,x_impairment_loans_and_advances,138.880,GHS millions,SCB-FY25,1,derived,Cost positive. Includes 'and others' in SCB-FY23 wording.
+standard-chartered-ghana,FY2024,income_statement,x_impairment_lease,4.724,GHS millions,SCB-FY25,1,derived,Cost positive.
+standard-chartered-ghana,FY2024,income_statement,profit_before_tax,1008.926,GHS millions,SCB-FY25,1,reported,
+standard-chartered-ghana,FY2024,income_statement,income_tax,300.541,GHS millions,SCB-FY25,1,reported,Income tax expense; stored positive.
+standard-chartered-ghana,FY2024,income_statement,profit_after_tax,708.385,GHS millions,SCB-FY25,1,reported,Printed as 'Profit/(loss) for the year/period'.
+standard-chartered-ghana,FY2024,balance_sheet,cash_and_bog_balances,4593.873,GHS millions,SCB-FY25,1,reported,Printed as 'Cash and cash equivalents'; includes mandatory reserve deposits at the Bank of Ghana (SCB-FY25 cash-flow note: reserves excluded from cash flow cash). Bank-only.
+standard-chartered-ghana,FY2024,balance_sheet,due_from_banks,2532.470,GHS millions,SCB-FY25,1,reported,Printed as 'Due from other banks' (FY2021: 'Loans to other banks'). 0 where no line is printed.
+standard-chartered-ghana,FY2024,balance_sheet,investment_securities,3680.729,GHS millions,SCB-FY25,1,reported,
+standard-chartered-ghana,FY2024,balance_sheet,loans_and_advances_net,2305.886,GHS millions,SCB-FY25,1,reported,Printed 'Loans and advances to customers' (net of impairment).
+standard-chartered-ghana,FY2024,balance_sheet,property_equipment_intangibles,156.655,GHS millions,SCB-FY25,1,derived,Property and equipment 24400 + right-of-use asset 132255 (GH¢'000). FY2021 prints one combined line.
+standard-chartered-ghana,FY2024,balance_sheet,other_assets,1030.688,GHS millions,SCB-FY25,1,derived,Sum of (GH¢'000): derivative assets 12551; non-pledged trading assets 111486; current tax assets 373524; deferred tax asset 32873; equity investments 899; investment in subsidiaries 1001; other assets 498354
+standard-chartered-ghana,FY2024,balance_sheet,total_assets,14300.301,GHS millions,SCB-FY25,1,reported,
+standard-chartered-ghana,FY2024,balance_sheet,customer_deposits,11319.902,GHS millions,SCB-FY25,1,reported,
+standard-chartered-ghana,FY2024,balance_sheet,due_to_banks,124.582,GHS millions,SCB-FY25,1,reported,Printed as 'Deposits from banks'.
+standard-chartered-ghana,FY2024,balance_sheet,borrowings,0.000,GHS millions,SCB-FY25,1,derived,Short-term borrowings / borrowings. 0 where no line is printed in the statement of financial position.
+standard-chartered-ghana,FY2024,balance_sheet,other_liabilities,817.666,GHS millions,SCB-FY25,1,derived,Sum of (GH¢'000): derivative liabilities 14571; provisions 115652; deferred tax liabilities 0; other liabilities 263832; lease liabilities 423611
+standard-chartered-ghana,FY2024,balance_sheet,total_liabilities,12262.150,GHS millions,SCB-FY25,1,reported,
+standard-chartered-ghana,FY2024,balance_sheet,stated_capital,400.000,GHS millions,SCB-FY25,1,reported,
+standard-chartered-ghana,FY2024,balance_sheet,retained_earnings,1016.367,GHS millions,SCB-FY25,1,reported,Printed as 'Retained earnings' or 'Income surplus'.
+standard-chartered-ghana,FY2024,balance_sheet,reserves_other,621.784,GHS millions,SCB-FY25,1,derived,Reserve fund 764825 + credit risk reserve 18376 + other reserves -161417 (GH¢'000).
+standard-chartered-ghana,FY2024,balance_sheet,total_equity,2038.151,GHS millions,SCB-FY25,1,reported,Printed as 'Total shareholders' funds'.
+standard-chartered-ghana,FY2024,ratios,car_pct,24.01,percent,SCB-FY25,2,reported,Leverage ratio is 12.73 in SCB-FY25 comparatives but 12.79 in SCB-FY24; liquid ratio 90 (SCB-FY25) vs 90.06 (SCB-FY24). SCB-FY25 values used.
+standard-chartered-ghana,FY2024,ratios,x_cet1_pct,23.91,percent,SCB-FY25,2,reported,Leverage ratio is 12.73 in SCB-FY25 comparatives but 12.79 in SCB-FY24; liquid ratio 90 (SCB-FY25) vs 90.06 (SCB-FY24). SCB-FY25 values used.
+standard-chartered-ghana,FY2024,ratios,x_leverage_ratio_pct,12.73,percent,SCB-FY25,2,reported,Leverage ratio is 12.73 in SCB-FY25 comparatives but 12.79 in SCB-FY24; liquid ratio 90 (SCB-FY25) vs 90.06 (SCB-FY24). SCB-FY25 values used.
+standard-chartered-ghana,FY2024,ratios,npl_pct,24.77,percent,SCB-FY25,2,reported,Leverage ratio is 12.73 in SCB-FY25 comparatives but 12.79 in SCB-FY24; liquid ratio 90 (SCB-FY25) vs 90.06 (SCB-FY24). SCB-FY25 values used.
+standard-chartered-ghana,FY2024,ratios,x_npl_ex_loss_pct,1.75,percent,SCB-FY25,2,reported,Leverage ratio is 12.73 in SCB-FY25 comparatives but 12.79 in SCB-FY24; liquid ratio 90 (SCB-FY25) vs 90.06 (SCB-FY24). SCB-FY25 values used.
+standard-chartered-ghana,FY2024,ratios,x_liquid_ratio_pct,90.00,percent,SCB-FY25,2,reported,Leverage ratio is 12.73 in SCB-FY25 comparatives but 12.79 in SCB-FY24; liquid ratio 90 (SCB-FY25) vs 90.06 (SCB-FY24). SCB-FY25 values used.
+standard-chartered-ghana,FY2025,income_statement,interest_income,1130.790,GHS millions,SCB-FY25,1,reported,Bank-only (bank column).
+standard-chartered-ghana,FY2025,income_statement,interest_expense,127.846,GHS millions,SCB-FY25,1,reported,Printed in brackets (an expense); stored positive.
+standard-chartered-ghana,FY2025,income_statement,net_interest_income,1002.944,GHS millions,SCB-FY25,1,reported,
+standard-chartered-ghana,FY2025,income_statement,fee_commission_income,294.559,GHS millions,SCB-FY25,1,reported,
+standard-chartered-ghana,FY2025,income_statement,fee_commission_expense,58.695,GHS millions,SCB-FY25,1,reported,Stored positive.
+standard-chartered-ghana,FY2025,income_statement,net_trading_income,555.110,GHS millions,SCB-FY25,1,reported,
+standard-chartered-ghana,FY2025,income_statement,other_operating_income,27.519,GHS millions,SCB-FY25,1,derived,Sum of: 4403 (FVTPL) + 23084 (other income) + 32 (lease modification gain/loss) in GH¢'000
+standard-chartered-ghana,FY2025,income_statement,total_operating_income,1821.437,GHS millions,SCB-FY25,1,reported,Printed as 'Operating income' (before impairment).
+standard-chartered-ghana,FY2025,income_statement,staff_costs,561.416,GHS millions,SCB-FY25,1,reported,Stored positive.
+standard-chartered-ghana,FY2025,income_statement,depreciation_amortisation,39.155,GHS millions,SCB-FY25,1,reported,Stored positive.
+standard-chartered-ghana,FY2025,income_statement,other_operating_expenses,237.161,GHS millions,SCB-FY25,1,reported,Stored positive.
+standard-chartered-ghana,FY2025,income_statement,impairment_charge,-37.482,GHS millions,SCB-FY25,1,derived,"Total impairment, sign flipped to the room convention (cost positive, reversal negative). Components in x_ rows: securities 28840, loans -66109, lease -213 (GH¢'000, cost positive)."
+standard-chartered-ghana,FY2025,income_statement,x_impairment_investment_securities,28.840,GHS millions,SCB-FY25,1,derived,Cost positive. 2022 contains the domestic debt exchange (DDEP) hit on securities; see README.
+standard-chartered-ghana,FY2025,income_statement,x_impairment_loans_and_advances,-66.109,GHS millions,SCB-FY25,1,derived,Cost positive. Includes 'and others' in SCB-FY23 wording.
+standard-chartered-ghana,FY2025,income_statement,x_impairment_lease,-0.213,GHS millions,SCB-FY25,1,derived,Cost positive.
+standard-chartered-ghana,FY2025,income_statement,profit_before_tax,1021.187,GHS millions,SCB-FY25,1,reported,
+standard-chartered-ghana,FY2025,income_statement,income_tax,222.506,GHS millions,SCB-FY25,1,reported,Income tax expense; stored positive.
+standard-chartered-ghana,FY2025,income_statement,profit_after_tax,798.681,GHS millions,SCB-FY25,1,reported,Printed as 'Profit/(loss) for the year/period'.
+standard-chartered-ghana,FY2025,balance_sheet,cash_and_bog_balances,6106.101,GHS millions,SCB-FY25,1,reported,Printed as 'Cash and cash equivalents'; includes mandatory reserve deposits at the Bank of Ghana (SCB-FY25 cash-flow note: reserves excluded from cash flow cash). Bank-only.
+standard-chartered-ghana,FY2025,balance_sheet,due_from_banks,2833.636,GHS millions,SCB-FY25,1,reported,Printed as 'Due from other banks' (FY2021: 'Loans to other banks'). 0 where no line is printed.
+standard-chartered-ghana,FY2025,balance_sheet,investment_securities,4049.948,GHS millions,SCB-FY25,1,reported,
+standard-chartered-ghana,FY2025,balance_sheet,loans_and_advances_net,1887.422,GHS millions,SCB-FY25,1,reported,Printed 'Loans and advances to customers' (net of impairment).
+standard-chartered-ghana,FY2025,balance_sheet,property_equipment_intangibles,165.718,GHS millions,SCB-FY25,1,derived,Property and equipment 21837 + right-of-use asset 143881 (GH¢'000). FY2021 prints one combined line.
+standard-chartered-ghana,FY2025,balance_sheet,other_assets,1459.814,GHS millions,SCB-FY25,1,derived,Sum of (GH¢'000): derivative assets 22490; non-pledged trading assets 400168; current tax assets 423022; deferred tax asset 201844; equity investments 804; investment in subsidiaries 1001; other assets 410485
+standard-chartered-ghana,FY2025,balance_sheet,total_assets,16502.639,GHS millions,SCB-FY25,1,reported,
+standard-chartered-ghana,FY2025,balance_sheet,customer_deposits,12385.298,GHS millions,SCB-FY25,1,reported,
+standard-chartered-ghana,FY2025,balance_sheet,due_to_banks,284.215,GHS millions,SCB-FY25,1,reported,Printed as 'Deposits from banks'.
+standard-chartered-ghana,FY2025,balance_sheet,borrowings,0.000,GHS millions,SCB-FY25,1,derived,Short-term borrowings / borrowings. 0 where no line is printed in the statement of financial position.
+standard-chartered-ghana,FY2025,balance_sheet,other_liabilities,1023.305,GHS millions,SCB-FY25,1,derived,Sum of (GH¢'000): derivative liabilities 2052; provisions 135183; deferred tax liabilities 0; other liabilities 563672; lease liabilities 322398
+standard-chartered-ghana,FY2025,balance_sheet,total_liabilities,13692.818,GHS millions,SCB-FY25,1,reported,
+standard-chartered-ghana,FY2025,balance_sheet,stated_capital,400.000,GHS millions,SCB-FY25,1,reported,
+standard-chartered-ghana,FY2025,balance_sheet,retained_earnings,1481.336,GHS millions,SCB-FY25,1,reported,Printed as 'Retained earnings' or 'Income surplus'.
+standard-chartered-ghana,FY2025,balance_sheet,reserves_other,928.485,GHS millions,SCB-FY25,1,derived,Reserve fund 864660 + credit risk reserve 24899 + other reserves 38926 (GH¢'000).
+standard-chartered-ghana,FY2025,balance_sheet,total_equity,2809.821,GHS millions,SCB-FY25,1,reported,Printed as 'Total shareholders' funds'.
+standard-chartered-ghana,FY2025,ratios,car_pct,27.45,percent,SCB-FY25,2,reported,
+standard-chartered-ghana,FY2025,ratios,x_cet1_pct,27.11,percent,SCB-FY25,2,reported,
+standard-chartered-ghana,FY2025,ratios,x_leverage_ratio_pct,13.22,percent,SCB-FY25,2,reported,
+standard-chartered-ghana,FY2025,ratios,npl_pct,25.82,percent,SCB-FY25,2,reported,
+standard-chartered-ghana,FY2025,ratios,x_npl_ex_loss_pct,0.81,percent,SCB-FY25,2,reported,
+standard-chartered-ghana,FY2025,ratios,x_liquid_ratio_pct,104.00,percent,SCB-FY25,2,reported,
+standard-chartered-ghana,9M-2025,income_statement,interest_income,901.514,GHS millions,SCB-Q3-26,1,reported,"Bank-only (bank column, unaudited comparative, income statement only). Unaudited comparative period shown in SCB-Q3-26."
+standard-chartered-ghana,9M-2025,income_statement,interest_expense,127.242,GHS millions,SCB-Q3-26,1,reported,Printed in brackets (an expense); stored positive.
+standard-chartered-ghana,9M-2025,income_statement,net_interest_income,774.272,GHS millions,SCB-Q3-26,1,reported,
+standard-chartered-ghana,9M-2025,income_statement,fee_commission_income,243.706,GHS millions,SCB-Q3-26,1,reported,
+standard-chartered-ghana,9M-2025,income_statement,fee_commission_expense,42.419,GHS millions,SCB-Q3-26,1,reported,Stored positive.
+standard-chartered-ghana,9M-2025,income_statement,net_trading_income,360.235,GHS millions,SCB-Q3-26,1,reported,
+standard-chartered-ghana,9M-2025,income_statement,other_operating_income,25.632,GHS millions,SCB-Q3-26,1,derived,Sum of: 1378 (FVTPL) + 24254 (other income) + 0 (lease modification gain/loss) in GH¢'000
+standard-chartered-ghana,9M-2025,income_statement,total_operating_income,1361.426,GHS millions,SCB-Q3-26,1,reported,Printed as 'Operating income' (before impairment).
+standard-chartered-ghana,9M-2025,income_statement,staff_costs,429.089,GHS millions,SCB-Q3-26,1,reported,Stored positive.
+standard-chartered-ghana,9M-2025,income_statement,depreciation_amortisation,28.496,GHS millions,SCB-Q3-26,1,reported,Stored positive.
+standard-chartered-ghana,9M-2025,income_statement,other_operating_expenses,169.181,GHS millions,SCB-Q3-26,1,reported,Stored positive.
+standard-chartered-ghana,9M-2025,income_statement,impairment_charge,-36.227,GHS millions,SCB-Q3-26,1,derived,"Total impairment, sign flipped to the room convention (cost positive, reversal negative). "
+standard-chartered-ghana,9M-2025,income_statement,profit_before_tax,770.887,GHS millions,SCB-Q3-26,1,reported,
+standard-chartered-ghana,9M-2025,income_statement,income_tax,277.845,GHS millions,SCB-Q3-26,1,reported,Income tax expense; stored positive.
+standard-chartered-ghana,9M-2025,income_statement,profit_after_tax,493.042,GHS millions,SCB-Q3-26,1,reported,Printed as 'Profit/(loss) for the year/period'.
+standard-chartered-ghana,9M-2026,income_statement,interest_income,623.186,GHS millions,SCB-Q3-26,1,reported,"Bank-only (bank column, UNAUDITED). Unaudited interim to 30 September 2026. Includes a GHS 673.5m dividend paid in 2026."
+standard-chartered-ghana,9M-2026,income_statement,interest_expense,81.948,GHS millions,SCB-Q3-26,1,reported,Printed in brackets (an expense); stored positive.
+standard-chartered-ghana,9M-2026,income_statement,net_interest_income,541.238,GHS millions,SCB-Q3-26,1,reported,
+standard-chartered-ghana,9M-2026,income_statement,fee_commission_income,208.679,GHS millions,SCB-Q3-26,1,reported,
+standard-chartered-ghana,9M-2026,income_statement,fee_commission_expense,50.599,GHS millions,SCB-Q3-26,1,reported,Stored positive.
+standard-chartered-ghana,9M-2026,income_statement,net_trading_income,426.206,GHS millions,SCB-Q3-26,1,reported,
+standard-chartered-ghana,9M-2026,income_statement,other_operating_income,16.254,GHS millions,SCB-Q3-26,1,derived,Sum of: -8388 (FVTPL) + 24642 (other income) + 0 (lease modification gain/loss) in GH¢'000
+standard-chartered-ghana,9M-2026,income_statement,total_operating_income,1141.778,GHS millions,SCB-Q3-26,1,reported,Printed as 'Operating income' (before impairment).
+standard-chartered-ghana,9M-2026,income_statement,staff_costs,454.784,GHS millions,SCB-Q3-26,1,reported,Stored positive.
+standard-chartered-ghana,9M-2026,income_statement,depreciation_amortisation,29.493,GHS millions,SCB-Q3-26,1,reported,Stored positive.
+standard-chartered-ghana,9M-2026,income_statement,other_operating_expenses,176.727,GHS millions,SCB-Q3-26,1,reported,Stored positive.
+standard-chartered-ghana,9M-2026,income_statement,impairment_charge,-73.963,GHS millions,SCB-Q3-26,1,derived,"Total impairment, sign flipped to the room convention (cost positive, reversal negative). "
+standard-chartered-ghana,9M-2026,income_statement,profit_before_tax,554.737,GHS millions,SCB-Q3-26,1,reported,
+standard-chartered-ghana,9M-2026,income_statement,income_tax,198.219,GHS millions,SCB-Q3-26,1,reported,Income tax expense; stored positive.
+standard-chartered-ghana,9M-2026,income_statement,profit_after_tax,356.518,GHS millions,SCB-Q3-26,1,reported,Printed as 'Profit/(loss) for the year/period'.
+standard-chartered-ghana,9M-2026,balance_sheet,cash_and_bog_balances,2999.277,GHS millions,SCB-Q3-26,1,reported,Printed as 'Cash and cash equivalents'; includes mandatory reserve deposits at the Bank of Ghana (SCB-FY25 cash-flow note: reserves excluded from cash flow cash). Bank-only.
+standard-chartered-ghana,9M-2026,balance_sheet,due_from_banks,4623.733,GHS millions,SCB-Q3-26,1,reported,Printed as 'Due from other banks' (FY2021: 'Loans to other banks'). 0 where no line is printed.
+standard-chartered-ghana,9M-2026,balance_sheet,investment_securities,2800.050,GHS millions,SCB-Q3-26,1,reported,
+standard-chartered-ghana,9M-2026,balance_sheet,loans_and_advances_net,2538.490,GHS millions,SCB-Q3-26,1,reported,Printed 'Loans and advances to customers' (net of impairment).
+standard-chartered-ghana,9M-2026,balance_sheet,property_equipment_intangibles,178.973,GHS millions,SCB-Q3-26,1,derived,Property and equipment 33864 + right-of-use asset 145109 (GH¢'000). FY2021 prints one combined line.
+standard-chartered-ghana,9M-2026,balance_sheet,other_assets,1483.949,GHS millions,SCB-Q3-26,1,derived,Sum of (GH¢'000): derivative assets 161845; non-pledged trading assets 367739; current tax assets 411743; deferred tax asset 239919; equity investments 870; investment in subsidiaries 1001; other assets 300832
+standard-chartered-ghana,9M-2026,balance_sheet,total_assets,14624.472,GHS millions,SCB-Q3-26,1,reported,
+standard-chartered-ghana,9M-2026,balance_sheet,customer_deposits,10477.131,GHS millions,SCB-Q3-26,1,reported,
+standard-chartered-ghana,9M-2026,balance_sheet,due_to_banks,305.643,GHS millions,SCB-Q3-26,1,reported,Printed as 'Deposits from banks'.
+standard-chartered-ghana,9M-2026,balance_sheet,borrowings,0.000,GHS millions,SCB-Q3-26,1,derived,Short-term borrowings / borrowings. 0 where no line is printed in the statement of financial position.
+standard-chartered-ghana,9M-2026,balance_sheet,other_liabilities,1364.674,GHS millions,SCB-Q3-26,1,derived,Sum of (GH¢'000): derivative liabilities 7572; provisions 153521; deferred tax liabilities 0; other liabilities 829725; lease liabilities 373856
+standard-chartered-ghana,9M-2026,balance_sheet,total_liabilities,12147.448,GHS millions,SCB-Q3-26,1,reported,
+standard-chartered-ghana,9M-2026,balance_sheet,stated_capital,400.000,GHS millions,SCB-Q3-26,1,reported,
+standard-chartered-ghana,9M-2026,balance_sheet,retained_earnings,1164.372,GHS millions,SCB-Q3-26,1,reported,Printed as 'Retained earnings' or 'Income surplus'.
+standard-chartered-ghana,9M-2026,balance_sheet,reserves_other,912.652,GHS millions,SCB-Q3-26,1,derived,Reserve fund 864660 + credit risk reserve 24899 + other reserves 23093 (GH¢'000).
+standard-chartered-ghana,9M-2026,balance_sheet,total_equity,2477.024,GHS millions,SCB-Q3-26,1,reported,Printed as 'Total shareholders' funds'.
+standard-chartered-ghana,9M-2026,ratios,car_pct,23.12,percent,SCB-Q3-26,1,reported,"Unaudited, as published 29 Oct 2026."
+standard-chartered-ghana,9M-2026,ratios,x_cet1_pct,21.02,percent,SCB-Q3-26,1,reported,"Unaudited, as published 29 Oct 2026."
+standard-chartered-ghana,9M-2026,ratios,tier1_pct,21.12,percent,SCB-Q3-26,1,reported,"Unaudited, as published 29 Oct 2026."
+standard-chartered-ghana,9M-2026,ratios,x_leverage_ratio_pct,10.34,percent,SCB-Q3-26,1,reported,"Unaudited, as published 29 Oct 2026."
+standard-chartered-ghana,9M-2026,ratios,npl_pct,23.25,percent,SCB-Q3-26,1,reported,"Unaudited, as published 29 Oct 2026."
+standard-chartered-ghana,9M-2026,ratios,x_npl_ex_loss_pct,0.76,percent,SCB-Q3-26,1,reported,"Unaudited, as published 29 Oct 2026."
+standard-chartered-ghana,9M-2026,ratios,x_liquid_ratio_pct,99.21,percent,SCB-Q3-26,1,reported,"Unaudited, as published 29 Oct 2026."
+standard-chartered-ghana,FY2021,balance_sheet,loans_and_advances_gross,,GHS millions,,,unavailable,"The published summary statements show loans only net of impairment. Gross loans and the allowance are in the notes to the full audited accounts, which I have not read."
+standard-chartered-ghana,FY2021,balance_sheet,loan_loss_allowance,,GHS millions,,,unavailable,"The published summary statements show loans only net of impairment. Gross loans and the allowance are in the notes to the full audited accounts, which I have not read."
+standard-chartered-ghana,FY2021,ratios,roe_pct,,percent,,,unavailable,Not printed in the summary statements. Recomputed in checks.
+standard-chartered-ghana,FY2022,balance_sheet,loans_and_advances_gross,,GHS millions,,,unavailable,"The published summary statements show loans only net of impairment. Gross loans and the allowance are in the notes to the full audited accounts, which I have not read."
+standard-chartered-ghana,FY2022,balance_sheet,loan_loss_allowance,,GHS millions,,,unavailable,"The published summary statements show loans only net of impairment. Gross loans and the allowance are in the notes to the full audited accounts, which I have not read."
+standard-chartered-ghana,FY2022,ratios,roe_pct,,percent,,,unavailable,Not printed in the summary statements. Recomputed in checks.
+standard-chartered-ghana,FY2023,balance_sheet,loans_and_advances_gross,,GHS millions,,,unavailable,"The published summary statements show loans only net of impairment. Gross loans and the allowance are in the notes to the full audited accounts, which I have not read."
+standard-chartered-ghana,FY2023,balance_sheet,loan_loss_allowance,,GHS millions,,,unavailable,"The published summary statements show loans only net of impairment. Gross loans and the allowance are in the notes to the full audited accounts, which I have not read."
+standard-chartered-ghana,FY2023,ratios,roe_pct,,percent,,,unavailable,Not printed in the summary statements. Recomputed in checks.
+standard-chartered-ghana,FY2024,balance_sheet,loans_and_advances_gross,,GHS millions,,,unavailable,"The published summary statements show loans only net of impairment. Gross loans and the allowance are in the notes to the full audited accounts, which I have not read."
+standard-chartered-ghana,FY2024,balance_sheet,loan_loss_allowance,,GHS millions,,,unavailable,"The published summary statements show loans only net of impairment. Gross loans and the allowance are in the notes to the full audited accounts, which I have not read."
+standard-chartered-ghana,FY2024,ratios,roe_pct,,percent,,,unavailable,Not printed in the summary statements. Recomputed in checks.
+standard-chartered-ghana,FY2025,balance_sheet,loans_and_advances_gross,,GHS millions,,,unavailable,"The published summary statements show loans only net of impairment. Gross loans and the allowance are in the notes to the full audited accounts, which I have not read."
+standard-chartered-ghana,FY2025,balance_sheet,loan_loss_allowance,,GHS millions,,,unavailable,"The published summary statements show loans only net of impairment. Gross loans and the allowance are in the notes to the full audited accounts, which I have not read."
+standard-chartered-ghana,FY2025,ratios,roe_pct,,percent,,,unavailable,Not printed in the summary statements. Recomputed in checks.
+standard-chartered-ghana,9M-2026,balance_sheet,loans_and_advances_gross,,GHS millions,,,unavailable,"The published summary statements show loans only net of impairment. Gross loans and the allowance are in the notes to the full audited accounts, which I have not read."
+standard-chartered-ghana,9M-2026,balance_sheet,loan_loss_allowance,,GHS millions,,,unavailable,"The published summary statements show loans only net of impairment. Gross loans and the allowance are in the notes to the full audited accounts, which I have not read."
+standard-chartered-ghana,9M-2026,ratios,roe_pct,,percent,,,unavailable,Not printed in the summary statements. Recomputed in checks.
