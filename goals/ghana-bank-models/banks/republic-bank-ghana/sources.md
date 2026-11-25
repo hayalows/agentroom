@@ -5,12 +5,12 @@ Scope: **standalone Bank** (separate financial statements), 31 December fiscal y
 | source_id | title | publisher | URL | period covered | retrieved |
 | --- | --- | --- | --- | --- | --- |
 | RB21FS | 2021 Audited Financial Statements (RBGH 2021 v7 FINAL FS) | Republic Bank (Ghana) PLC | https://www.republicghana.com/wp-content/uploads/2022/04/RBGH-2021-v7-FINAL-FS-04-04-22.pdf | FY2021 (with FY2020 comparatives) | 2026-11-25 |
-| RB23AR | 2022/2023 Annual Report (bank + group statements) | Republic Bank (Ghana) PLC | https://www.republicghana.com/investor-relations/annual-report/ | FY2023 (with FY2022 comparatives) | 2026-11-25 |
-| RB24AR | 2024 Annual Report and Financial Statements | Republic Bank (Ghana) PLC | https://www.republicghana.com/investor-relations/annual-report/ | FY2024 (with FY2023 comparatives) | 2026-11-25 |
-| RB24SUM | 2024 audited summary financial statements | Republic Bank (Ghana) PLC | https://www.republicghana.com/investor-relations/annual-report/ | FY2024/FY2023 summary | 2026-11-25 |
+| RB23AR | 2023 Annual Report and Financial Statements (bank + group statements) | Republic Bank (Ghana) PLC | https://www.republicghana.com/wp-content/uploads/2024/08/Republic-Bank-Ghana-PLC-Annual-Report-2023_compressed.pdf | FY2023 (with FY2022 comparatives) | 2026-11-25 |
+| RB24AR | 2024 Annual Report and Financial Statements (published June 2025; the file is named "AR-2025") | Republic Bank (Ghana) PLC | https://www.republicghana.com/wp-content/uploads/2025/06/REPUBLIC-BANK-AR-2025.pdf | FY2024 (with FY2023 comparatives) | 2026-11-25 |
+| RB24SUM | 2024 audited summary financial statements (full pages) | Republic Bank (Ghana) PLC | https://www.republicghana.com/wp-content/uploads/2025/02/RBGH-Summary-Financial-Statement_31-DEC-2024_24.02.2025Full-pages.pdf | FY2024/FY2023 summary | 2026-11-25 |
 | RB25AR | 2025 Annual Report and Financial Statements (the Ghana Bank's OWN annual report, bank + group statements) | Republic Bank (Ghana) PLC | https://www.republicghana.com/wp-content/uploads/2026/04/REPUBLIC-BANK-GHANA-ANNUAL-REPORT-2025.pdf | FY2025 (with FY2024 comparatives) | 2026-11-25 |
-| RB26Q3 | Q3 2026 Unaudited Financial Statements (GSE PR-419, dated 27 Oct 2026) | Republic Bank (Ghana) PLC | https://gse.com.gh/financial-statements/ | 9M-2026 (with 9M-2025 comparatives) | 2026-11-25 |
-| RB26Q2 | Q2 2026 Unaudited Financial Statements | Republic Bank (Ghana) PLC | https://gse.com.gh/financial-statements/ | H1-2026 (cross-check) | 2026-11-25 |
+| RB26Q3 | Q3 2026 Unaudited Financial Statements (GSE PR-419, dated 27 Oct 2026) | Republic Bank (Ghana) PLC | https://www.republicghana.com/wp-content/uploads/2026/10/RBL_UNAUDITED-FINANCIAL-STATEMENT-SEPTEMBER-2026_22.10.06.pdf | 9M-2026 (with 9M-2025 comparatives) | 2026-11-25 |
+| RB26Q2 | Q2 2026 Unaudited Financial Statements | Republic Bank (Ghana) PLC | https://www.republicghana.com/wp-content/uploads/2026/07/RBL_UNAUDITED-FINANCIAL-STATEMENT-JUNE-2026.pdf | H1-2026 (cross-check) | 2026-11-25 |
 | BOGREG | Register of licensed banks | Bank of Ghana | https://www.bog.gov.gh/supervision-regulation/registered-institutions/banks/ | current register | 2026-11-25 |
 | GSELIST | Republic Bank (Ghana) PLC issuer profile | Ghana Stock Exchange | https://gse.com.gh/ | listing status | 2026-11-25 |
 
@@ -45,6 +45,6 @@ The shared macro file and its regulatory drivers live in `../../sector/macro-ass
 ## Known gaps / follow-ups
 
 - 9M-2026 and 9M-2025 gross loans and ECL allowance are unavailable.
-- The FY2022 (RB22AR) and FY2023 (RB23AR) source URLs are the publisher's landing area; the FY2023 income/SoFP and FY2022 comparatives were read from RB23AR. A reviewer should confirm the canonical RB22AR/RB23AR URLs.
+- The FY2022 (RB22AR) source URL is the publisher's landing area; FY2022 comparatives were read from RB23AR, whose exact primary filing URL is given above. A reviewer should confirm the canonical RB22AR URL.
 - The historic Bank of Ghana reserve-notice timeline is owned by the shared macro work; not re-derived here.
 - No separate CET1 ratio is disclosed (only Tier 1), so canonical `car_pct`/`tier1_pct` are the reported figures.
