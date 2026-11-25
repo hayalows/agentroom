@@ -49,7 +49,7 @@ state = {}
 
 
 def emit(sc, per, stmt, item, val, note=""):
-    out.append([BANK, sc, per, stmt, item, f"{val:.3f}", "GHS millions" if not item.endswith("_pct") else "percent", "estimated", note])
+    out.append([BANK, sc, per, stmt, item, "" if val is None else f"{val:.3f}", "GHS millions" if not item.endswith("_pct") else "percent", "unavailable" if val is None else "estimated", note])
 
 
 def run(sc):
@@ -116,27 +116,40 @@ def run(sc):
         nii = ii - ie
         opinc = nii + fee_i - fee_e + nti + oth
         pbt = opinc - imp - (staff + dep + othx)
-        tax = TAX * pbt if pbt > 0 else 0.0
+        tax = H(P9,"income_tax") + TAX*max(0,pbt-H(P9,"profit_before_tax")) if i==0 else TAX*max(0,pbt)
         pat = pbt - tax
-        te = equity_open + pat - div
-        res_other = (H("FY2025", "reserves_other") if i == 0 else prev["res_other"]) + RES_T * (pat if i > 0 else (pat))
-        if i == 0:
-            # reserves_other at 30 Sep 2026 is unchanged from FY2025 except fair-value loss; carry the 9M value and add the transfer on Q4 profit only
-            q4_pat = pat - H(P9, "profit_after_tax")
-            res_other = H(P9, "reserves_other") + RES_T * q4_pat
-            te = H(P9, "total_equity") + q4_pat
-        stated = 400.0
-        retained = te - stated - res_other
-        dep_total = r["dep_c"] + r["dep_b"]
+        stated = H(P9,"stated_capital")
+        # Opening reserve 864.660 exceeds stated capital 400; actual YTD transfer zero.
+        transfer = RES_T * max(0,pat)
+        incpat = pat-H(P9,"profit_after_tax") if i==0 else pat
+        res_other = (H(P9,"reserves_other") if i==0 else prev["res_other"]) + transfer
         tl = r["dep_c"] + r["dep_b"] + r["oth_l"]
-        ta = tl + te
         cash = (crr + OPCASH) * r["dep_c"]
-        liquid = ta - cash - r["loans"] - r["oth_a"] - r["ppe"]
+        if i==0:
+            te = H(P9,"total_equity") + incpat
+            incdiv = 0.0
+        else:
+            incdiv = max(0,min(div,prev["retained"]+pat-transfer))
+            te = equity_open+pat-incdiv
+            # Hypothetical buffer and eligible cash screen, not a regulatory return.
+            if te/(RWD*(tl+te))*100 < minc+2 or .7*cash < crr*r["dep_c"] or tl+te-cash-r["loans"]-r["oth_a"]-r["ppe"]<0:
+                incdiv=0.0
+                te=equity_open+pat
+            div=incdiv
+        retained=te-stated-res_other
+        ta=tl+te
+        liquid=ta-cash-r["loans"]-r["oth_a"]-r["ppe"]
+        assert abs(minc-13)<1e-9
         r.update(dict(ii=ii, ie=ie, nii=nii, fee_i=fee_i, fee_e=fee_e, nti=nti, oth=oth, opinc=opinc, staff=staff, dep=dep, othx=othx,
                       imp=imp, pbt=pbt, tax=tax, pat=pat, div=div, te=te, stated=stated, res_other=res_other, retained=retained,
                       tl=tl, ta=ta, cash=cash, liquid=liquid, due=liquid * DFB, secs=liquid * (1 - DFB)))
         r["car_proxy"] = te / (RWD * ta) * 100
         r["min_car"] = minc
+        r["transfer"] = transfer
+        r["incdiv"] = incdiv
+        r["reserve"] = (864.660 if i==0 else prev["reserve"])+transfer
+        r["cash_gap_stress"] = max(0,crr*r["dep_c"]-.6*cash)
+        r["roa"] = pat/((H("FY2025","total_assets") if i==0 else prev["ta"])+ta)*200
         r["ldr"] = r["loans"] / r["dep_c"] * 100
         r["cti"] = (staff + dep + othx) / opinc * 100
         prior_te = H("FY2025", "total_equity") if i == 0 else prev["te"]
@@ -149,14 +162,14 @@ def run(sc):
 def write_rows(sc, res):
     for y, r in res.items():
         IS, BS, RT = "income_statement", "balance_sheet", "ratios"
-        note_is = "Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json)." if y == "FY2026E" else "Estimate from assumptions.json and the macro rows of this scenario."
+        note_is = "Estimate. FY2026E = actual 9M plus estimated Q4; actual 9M impairment/tax retained." if y == "FY2026E" else "Estimate from assumptions.json and the macro rows of this scenario."
         for item, key in [("interest_income", "ii"), ("interest_expense", "ie"), ("net_interest_income", "nii"), ("fee_commission_income", "fee_i"),
                           ("fee_commission_expense", "fee_e"), ("net_trading_income", "nti"), ("other_operating_income", "oth"),
                           ("total_operating_income", "opinc"), ("staff_costs", "staff"), ("depreciation_amortisation", "dep"),
                           ("other_operating_expenses", "othx"), ("impairment_charge", "imp"), ("profit_before_tax", "pbt"),
                           ("income_tax", "tax"), ("profit_after_tax", "pat")]:
             emit(sc, y, IS, item, r[key], note_is)
-        emit(sc, y, IS, "x_dividends_paid", r["div"], "Dividends paid in the year. FY2026E is the 673.482m actually paid in 9M-2026.")
+        emit(sc, y, IS, "x_dividends_paid", r["div"], "Actual YTD 673.482m, no further Q4 payout." if y=="FY2026E" else "Estimated payout after reserve transfer and retained earnings/capital/cash screens.")
         note_bs = "Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit." if y == "FY2026E" else "Estimate."
         for item, key in [("cash_and_bog_balances", "cash"), ("due_from_banks", "due"), ("investment_securities", "secs"), ("loans_and_advances_net", "loans"),
                           ("property_equipment_intangibles", "ppe"), ("other_assets", "oth_a"), ("total_assets", "ta"), ("customer_deposits", "dep_c"),
@@ -168,6 +181,17 @@ def write_rows(sc, res):
         emit(sc, y, RT, "x_roe_pct", r["roe"], "Profit after tax / average of opening and closing equity.")
         emit(sc, y, RT, "x_cost_to_income_pct", r["cti"], "Operating expenses / operating income before impairment.")
         emit(sc, y, RT, "x_ldr_pct", r["ldr"], "Net loans / customer deposits.")
+        for k in ("loans_and_advances_gross","loan_loss_allowance"):
+            emit(sc,y,BS,k,None,"Separate gross/allowance unavailable; no fabricated forecast.")
+        for k in ("car_pct","tier1_pct","npl_pct","ldr_pct"):
+            emit(sc,y,RT,k,None,"Regulatory or gross basis unavailable; separate proxy or net LDR where available.")
+        for k,v in (("roe_pct",r["roe"]),("roa_pct",r["roa"]),("cost_to_income_pct",r["cti"])):
+            emit(sc,y,RT,k,v,"Estimated, average balance ROE/ROA or pre-impairment cost/income.")
+        for k,v in (("x_statutory_reserve",r["reserve"]),("x_statutory_reserve_transfer",r["transfer"]),("x_cash_reserve_gap_60pct",r["cash_gap_stress"])):
+            emit(sc,y,BS,k,v,"Nonadditive memo; statutory transfer internal, cash gap hypothetical.")
+        emit(sc,y,IS,"x_incremental_dividend",r["incdiv"],"Q4 incremental payout zero; subsequent annual forecast.")
+        emit(sc,y,BS,"x_capital_target_gap",max(0,(r["min_car"]+2)/100*RWD*r["ta"]-r["te"]),"15% management proxy target, not regulation.")
+
 
 
 all_res = {sc: run(sc) for sc in SCEN}
@@ -191,10 +215,16 @@ for sc in SCEN:
         nii = abs(r["nii"] - (r["ii"] - r["ie"])) < 0.001
         pat = abs(r["pat"] - (r["pbt"] - r["tax"])) < 0.001
         car = r["car_proxy"] >= r["min_car"]
-        ok = bal and sumA and liq and nii and pat
+        extra = max(abs(r["te"]-r["stated"]-r["retained"]-r["res_other"]),abs(r["tl"]-r["dep_c"]-r["dep_b"]-r["oth_l"]),abs(r["opinc"]-r["nii"]-r["fee_i"]+r["fee_e"]-r["nti"]-r["oth"]),abs(r["pbt"]-r["opinc"]+r["staff"]+r["dep"]+r["othx"]+r["imp"]))
+        ok = bal and sumA and liq and nii and pat and extra<.001 and r["transfer"]>=0 and (r["incdiv"]==0 or (r["retained"]>=0 and r["car_proxy"]>=15))
+        assert ok,(sc,y,extra)
         fails += 0 if ok else 1
         lines.append(f"| {sc} | {y} | {'PASS' if bal and sumA else 'FAIL'} | {'PASS' if liq else 'FAIL'} | {'PASS' if nii else 'FAIL'} | {'PASS' if pat else 'FAIL'} | {r['car_proxy']:.1f}% vs {r['min_car']:.0f}% {'ok' if car else 'BELOW MINIMUM'} |")
-lines += ["", f"Forecast failures: {fails}", ""]
+lines += ["", f"Forecast failures: {fails}", "", "Additional equity/liability/TOI/PBT bridges and payout gates asserted for all 15 scenario-years.", "", "FY2026 retains actual 9M tax198.219m and taxes positive Q4 PBT at 34%; no Q4 payout. Annual 12.5% statutory reserve transfer, actual 9M transfer zero; internal equity only. Future payout tested against retained earnings, 15% proxy CAR and hypothetical 70%-eligible cash; no regulatory permission inferred.", "", "| Scenario | Year | Reserve transfer | Annual payout | 60%-eligible cash gap |", "|---|---|---:|---:|---:|"]
+for sc in SCEN:
+    for y,r in all_res[sc].items():
+        lines.append(f"| {sc} | {y} | {r['transfer']:.3f} | {r['div']:.3f} | {r['cash_gap_stress']:.3f} |")
+lines += [""]
 
 # calibration line: does the yield formula reproduce 9M-2026 annualised interest income?
 avg_loans = (H("FY2025", "loans_and_advances_net") + H(P9, "loans_and_advances_net")) / 2

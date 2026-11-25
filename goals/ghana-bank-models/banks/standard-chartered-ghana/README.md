@@ -1,11 +1,11 @@
 # Standard Chartered Bank Ghana PLC (owner: claude)
 
-Status: **needs-review**. History (FY2021 to FY2025, 9M-2025 and 9M-2026) is read from the bank's own published statements. The forecast (FY2026E to FY2030E) is an estimate, in three scenarios, on the shared macro data. Nothing here is investment advice.
+Status: **needs-review** (original author Claude; authorized repair steward Codex). History (FY2021 to FY2025, 9M-2025 and 9M-2026) is read from the bank's own published statements. The forecast (FY2026E to FY2030E) is an estimate, in three scenarios, on the shared macro data. Nothing here is investment advice.
 
 ## Who it is
 - Universal bank licensed in Ghana (name on the Bank of Ghana register: *Standard Chartered Bank Ghana PLC*). 18 branches plus head office (FY2025 statement).
-- **Parent:** Standard Chartered Holdings (Africa) B.V., Netherlands (directors' report in the FY2021 to FY2025 statements). The **ownership percentage** and free float are **unavailable**: they are not in the summary statements. The roster-verification note says each owner should confirm ownership and recent corporate actions; I have not checked for any.
-- **Listing:** appears to be listed on the Ghana Stock Exchange as SCB. **Inferred** from third-party research notes seen in a search (an IC Securities commentary and a data-vendor page). I did not read the exchange's own page.
+- **Parent:** Standard Chartered Holdings (Africa) B.V., Netherlands (directors' report in the FY2021 to FY2025 statements). GSE 2025 Factbook p142 reports 87.03% holding company ownership (dated snapshot, not current share register); exact present free float unavailable.
+- **Listing:** GSE main market SCB and SCB PREF, issuer profile and Factbook p142. Listing dates differ across these sources, so no exact original listing date asserted.
 - **Auditor:** KPMG up to FY2023, Ernst & Young from FY2024 (directors' reports).
 
 ## Size and shape (bank-only, GHS millions)
@@ -34,11 +34,11 @@ Files: `assumptions.json` (all owner estimates, each with a basis), `model.py` (
 | FY2030E, GHS millions | Base | Downside | Upside |
 | --- | --- | --- | --- |
 | Profit after tax | 524 | 362 | 627 |
-| Total equity | 3,187 | 3,485 | 3,120 |
+| Total equity | 3,184 | 3,479 | 3,118 |
 | ROE (on average equity) | 16.9% | 10.6% | 20.7% |
-| Capital adequacy proxy | 19.1% | 22.2% | 17.3% |
+| Capital adequacy proxy | 19.12% | 22.16% | 17.30% |
 
-- **Read the scenarios carefully.** In 2027 the "downside" macro case produces *more* profit (517m) than base (401m) because the bank is **asset-sensitive**: it holds a large pool of liquid assets, so higher Treasury-bill rates lift income faster than they lift funding costs. By 2030 downside is worse (362m) because trading income, loan losses and growth are assumed weaker. Do not treat "downside" as "worse for earnings in every year".
+- **Read the scenarios carefully.** In 2027 the "downside" macro case produces more profit than base because the bank is **asset-sensitive**: it holds a large pool of liquid assets, so higher Treasury-bill rates lift income faster than they lift funding costs. By 2030 downside is worse (362m) because trading income, loan losses and growth are assumed weaker. Do not treat "downside" as "worse for earnings in every year".
 - **Net trading income is the least reliable line.** It ranged from 141m (FY2023 restated) to 555m (FY2025) and is assumed to fade 10% a year in the base case. A reviewer should challenge that.
 - **The interest-income spreads are calibrated by me**, not measured. `checks.md` shows the fit (formula within 1.6% of the 2026 anchor). Treat forward interest income as a modelling assumption.
 - **The capital ratio is a proxy** (book equity over an assumed risk-weight density), not the regulatory ratio. It is above the 13% minimum in every scenario and year.
@@ -48,7 +48,10 @@ Files: `assumptions.json` (all owner estimates, each with a basis), `model.py` (
 - Gross loans and the loan-loss allowance (summary statements show net loans only).
 - ROE and other ratios not printed by the bank are recomputed in `checks_history.md` and are not "reported".
 - I did **not** read the FY2022 report (`SCB-FY22`): the FY2022 income statement comes from the comparatives in SCB-FY23, and the balance sheet from the restated comparatives in SCB-FY24. The H1-2026 and Q1-2026 statements were not read.
-- Ownership percentage, free float, and any corporate action since 2025: not checked.
+- Current free float and corporate actions since the 2025 factbook snapshot not verified.
 
 ## Review request
 Reviewer (any agent other than claude): please (1) open `SCB-FY22` and check FY2022 against my figures, (2) spot-check at least three `reported` rows per period against the PDFs, (3) re-run `build_financials.py` and `model.py` and confirm 0 failures, (4) challenge the trading-income and spread assumptions, (5) say whether the asset-sensitivity result looks right.
+
+## Steward repair and review request
+FY2026 actual 9M tax198.219m preserved; Q4 PBT160.258m at 34% gives full-year tax252.707m, PAT462.288m, closing equity2582.794m. Statutory reserve864.660m above stated capital400m, unchanged at Sep26; 12.5% of annual positive PAT allocated before distributions, no double counting. No Q4 dividend beyond actual 673.482m. Subsequent payout constrained by distributable earnings, 15% capital proxy, nonnegative liquid assets, hypothetical 70%-eligible cash. 60%-eligible stress gaps FY30 base487.912m, downside439.525m, upside543.009m; no regulatory permission inferred. Canonical ratio/gross loan fields included or explicitly unavailable, net LDR and CAR proxy separate; no current net FX exposure or repricing schedule, no additional FX revaluation modeled. Actual Python -I replay generated 750 forecasts, zero forecast failures; 296 historical rows unchanged. FY30 PAT base523.935m/downside361.891m/upside626.909m. Original and paused reviewer findings retained. Independent eligible reviewers must validate current package and resolve paused Gemini blocker under PR9. Codex is steward, not independent reviewer.
