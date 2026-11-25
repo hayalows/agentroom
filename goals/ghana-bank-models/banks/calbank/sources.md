@@ -30,18 +30,18 @@ The model uses `cost_of_funds_pct = max(1.5, 0.7 + 0.18 × tbill_91d_pct)`, with
 Both funding-cost figures are derived ratios, not bank-reported pricing. FY2026E is nine-month actuals plus a Q4 estimate, so Q4 uses an implied 91-day bill mean of 4.55% from the full-year 5.81% estimate and Jan-Sep actual mean of 6.23%, with Nov-Dec at 4.52% as stated in `macro.csv`. Q4 loan yield uses the day-weighted policy rate of 12.57% (14% through 17 Nov and 11% from 18 Nov). Q4 investment-yield proxies use the 9.447% latest 364-day auction and 15.01% 10-year yield held for Nov-Dec in `macro.csv`; these are applied for the Q4 calculation, not asserted as observed quarter-average yields. This keeps full-year average rates separate from Q4-only flows.
 
 ### Right-of-use asset mapping
-The current source statement mapping had ROU values inside the `other_assets` aggregate. The model follows `MODEL-SPEC` by adding the Bank ROU value to `property_equipment_intangibles` and subtracting it from `other_assets`. These are presentation-only recasts; total assets do not change.
+The original historical aggregate already included ROU. The additional reclassification counted the same ROU twice and deducted it twice from other assets. Corrected Bank-only amounts, GHS millions; source text verified, page images not independently verified.
 
-| Period | ROU value (GHS m) | Source / Bank basis |
-| --- | ---: | --- |
-| FY2021 | 89.070 | CAL22 Note 34(a), printed p153 (FY2021 comparative) |
-| FY2022 | 85.047 | CAL22 Note 34(a), printed p153 |
-| FY2023 | 75.161 | CAL24 Note 33(a), printed p153 |
-| FY2024 | 60.700 | CAL25 p65, Bank column, Note 35(a) |
-| FY2025 | 53.960 | CAL25 p65, Bank column, Note 35(a) |
-| 9M-2026 | 49.379 | CAL26Q3 physical PDF p2, Bank column; no printed page numbers |
+| Period | PPE | Intangibles | ROU | Correct PPE aggregate | Correct other assets | Source |
+|---|---:|---:|---:|---:|---:|---|
+| FY2021 | 412.938 | 74.062 | 89.070 | 576.070 | 942.114 | CAL21 p51 |
+| FY2022 | 622.319 | 81.731 | 85.047 | 789.097 | 555.395 | CAL22 p60 |
+| FY2023 | 637.653 | 80.340 | 75.161 | 793.154 | 1017.855 | CAL24 p66 FY23 comparative |
+| FY2024 | 570.143 | 81.062 | 60.700 | 711.905 | 1159.930 | CAL25 p65 FY24 comparative |
+| FY2025 | 710.955 | 72.830 | 53.960 | 837.745 | 1205.646 | CAL25 p65 |
+| 9M-2026 | 692.377 | 66.933 | 49.379 | 808.689 | 1601.782 | CAL26Q3 physical PDF p2 |
 
-The source page values are in GHS thousands; the model converts them to GHS millions. The row notes in `financials.csv` show each reclassification formula and the original report reference.
+Python replay confirmed only 30 classification rows changed and all other forecast rows unchanged. No new data or assumptions invented.
 
 ### Retained earnings and regulatory capital
 For FY2024, `financials.csv` keeps the SoFP Bank retained earnings of GHS (1,209.108)m from CAL25 p65. The Directors' table on p22 reports GHS (946.562)m excluding transfers to regulatory reserves. The SoCE on p67 reconciles the difference: opening (1,202.955) + PAT 256.393 - statutory-reserve transfer 64.098 - credit-risk-reserve transfer 198.448 = closing (1,209.108).

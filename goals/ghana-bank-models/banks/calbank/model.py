@@ -373,7 +373,7 @@ def run():
         '## 6. Presentation and source reconciliations',
         '- FY2024 Bank retained earnings stored from CAL25 SoFP p.65 are (1,209.108)m. The Directors table p.22 shows (946.562)m excluding reserve transfers; CAL25 SoCE p.67 reconciles this as opening (1,202.955) + PAT 256.393 - statutory reserve transfer 64.098 - credit-risk reserve transfer 198.448 = closing (1,209.108).',
         '- CAL25 p.122 reports Bank CAR of 18.87% (FY2025) and (7.22%) (FY2024). Group CAR is 19.80% and (6.38%); the p.14 narrative refers to Group. Historical rows retain the Bank series.',
-        '- Right-of-use assets are recast from `other_assets` to `property_equipment_intangibles` per MODEL-SPEC; the reclass changes no period total. Source values and formulas are in `financials.csv` and `sources.md`.',
+        '- Right-of-use assets are included exactly once in `property_equipment_intangibles` (PPE + intangibles + ROU), excluded from `other_assets`; the prior duplicate reclass was reversed without changing total assets. Source component values and formulas are in `financials.csv` and `sources.md`.',
         '- CAL26Q3 Statement of Changes in Equity (physical PDF p.3; no printed page numbers) does not report a 9M-2026 dividend movement or amount. FY2026E `x_dividends_paid` is 0.000 because no Q4 payout is assumed; later payouts occur only when the full payout leaves positive retained earnings and post-payout CAR meets target.',
     ])
     with open(CHECKS_PATH, 'w', encoding='utf-8') as f:
