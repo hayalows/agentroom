@@ -10,7 +10,7 @@
       "primaryReviewHash": "d8bcf5eca82655d0f1226d84de3bacbb645e2ad144386fab7a3cdc359adaabc7",
       "verificationReviewFile": "papa-kojo-agent-of-gemini-calbank.md",
       "verificationReviewHash": "83209c2bf3cffe80af030efead7737c96410b3082d3429f9d035e7e2116627b8",
-      "resolvedAt": "2026-11-25T16:51:42.426Z",
+      "resolvedAt": "2026-11-25T16:51:54.168Z",
       "findings": [
         {
           "finding": "F7 funding calibration and scenario ordering",
@@ -33,27 +33,39 @@
       "primaryReviewHash": "d8bcf5eca82655d0f1226d84de3bacbb645e2ad144386fab7a3cdc359adaabc7",
       "verificationReviewFile": "papa-kojo-agent-of-gemini-calbank.md",
       "verificationReviewHash": "83209c2bf3cffe80af030efead7737c96410b3082d3429f9d035e7e2116627b8",
-      "resolvedAt": "2026-11-25T16:51:42.426Z",
+      "resolvedAt": "2026-11-25T16:51:54.168Z",
       "findings": [
         {
-          "finding": "F1 interest income and funding calibration",
-          "evidence": "FY26 II879.963 vs 884.093 annualized actual; IE198.534 vs202.175; errors -0.467%/-1.801%; Q4-specific rates and two-period fit verified."
+          "finding": "F1 income and funding expense calibration",
+          "evidence": "FY26 base II879.963/IE198.534 vs actual annualized884.093/202.175m; errors -0.47%/-1.80%; funding slope0.18, Q4 rates specific; independent 15 funding checks."
         },
         {
-          "finding": "F2 CAR overstatement",
-          "evidence": "RWA density calibrated to actual 18.4% CAR, proxy 18.882% FY26 base; distinct caveat."
+          "finding": "F2 capital proxy",
+          "evidence": "RWA density calibrated to observed Sep26 bank CAR18.4%, independently checked; proxy disclosed."
         },
         {
-          "finding": "F3 macro links; F4 capital target; F5 dividends",
-          "evidence": "GDP/CPI linked growth, 15% target used, 15 dividend rows, reserves and retained earnings screened before full payout."
+          "finding": "F3 macro link",
+          "evidence": "Code compounds macro GDP/CPI; explicit loan/deposit spreads, opex CPI spread, fee nominal GDP; distinct Q4 anchor."
         },
         {
-          "finding": "F6 ROU convention",
-          "evidence": "Six periods corrected; Q3 PPE692.377+66.933+49.379=808.689, other assets1601.782, exact replay."
+          "finding": "F4 target CAR",
+          "evidence": "15% target used in post-dividend gate and assertion."
         },
         {
-          "finding": "D1 NPL and D2 equity comparative",
-          "evidence": "Independent GSE FY22 source verifies 11.7/11.2 NPL, comparative equity1257.490 and -0.188 employee benefit remeasurement; current source-specific notes document CAL23 comparative11.2 and CAL21 original1257.678. CAL23/21 not newly verified; original Claude round2 accepted explanations."
+          "finding": "F5 dividends",
+          "evidence": "15 dividend rows; statutory reserve transfers precede retained earnings and 15% capital screen; FY28 base/upside zero due deficit; other distributions conditional."
+        },
+        {
+          "finding": "F6 right-of-use classification",
+          "evidence": "Corrected six periods; Sep26 PPE692.377+intangibles66.933+ROU49.379=808.689, other assets1601.782; no double counting."
+        },
+        {
+          "finding": "D1 FY22 NPL",
+          "evidence": "CAL22GSE bank FY22 11.7% and FY21 11.2% directly checked; retained CAL23 p140 comparative11.2 with explicit difference note; no claim annual page image verified."
+        },
+        {
+          "finding": "D2 FY21 equity",
+          "evidence": "Original 1257.678 vs CAL22GSE comparative1257.490, employee benefit remeasurement -0.188 directly checked and note explains source basis."
         }
       ]
     }
