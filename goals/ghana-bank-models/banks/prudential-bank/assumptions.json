@@ -1,7 +1,7 @@
 {
   "bank": "prudential-bank",
   "macro_file": "../../sector/macro-assumptions/macro.csv",
-  "status": "provisional; FY2025 audited base only, 9M2026 unavailable",
+  "status": "Conditional FY2025 audited anchor; September 2026 inaccessible; ready for provisional review, not accepted",
   "capital_event": {
     "amount_m": 1130,
     "date": "2026-10-09",
@@ -10,14 +10,28 @@
   "anchor": {
     "year": "FY2025",
     "net_loan_cost_basis": true,
-    "rwa_density_proxy": 0.45,
+    "rwa_density_proxy": 0.44323559461480144,
     "starting_car_pct": -20.19,
     "reg_capital_pass_through": {
-      "base": 0.9,
+      "base": 1,
       "downside": 0.8,
       "upside": 1
     },
-    "statutory_reserve_m": 131.423
+    "statutory_reserve_m": 131.423,
+    "rwa_proxy_reason": "FY25 auditor capital shortfall GHSm1012 and reported CAR -20.19%; infer RWA=1012/(13%+20.19%) only if the same 13% shortfall basis and denominator apply. FY24 auditor shortfall1135 reconciles to 13% ×3177.863−(−722.179)=1135.301 on without-relief basis, supporting but not proving FY25 method. No reported FY25 RWA.",
+    "cash_eligibility_proxy": 0.4,
+    "rwa_risk_pool": "FY25 inferred RWA grows with total assets excluding combined cash/bank balances; incremental cash from October capital receives no automatic RWA. Risk mix unverified; 45% and 55% of total assets stress comparisons retained.",
+    "rwa_stress_density": [
+      0.45,
+      0.55
+    ],
+    "capital_shortfall_m": 1012,
+    "policy_annual_avg_pct": {
+      "2024": 28.55191256830601,
+      "2025": 25.12876712328767,
+      "2026": 14.135616438356164
+    },
+    "policy_avg_reason": "Day-weighted approximate effective-date MPR paths (BoG policy rate trends; 2025 Nov26 date from decision, 2026 Nov18 decision); 2026 rest of year held at11%. Years 2027+ average is midpoint of opening and closing scenario end rates. Compare FY24/25 full-year observed funding cost with same-basis policy average, use fitted slope and floor 1%; no product repricing schedule."
   },
   "drivers": {
     "base": {
@@ -82,8 +96,9 @@
     }
   },
   "notes": [
-    "GDP plus CPI nominal growth proxy, not guidance. Investment rate 50% 364-day bill plus 50% 10-year bond × scenario factor. FY25 benchmark uses 364-day annual average17.48%; no annual bond yield. Funding rate = FY25 observed blended cost divided by FY25 end-policy18%, times current scenario end-policy; no repricing detail.",
     "Net-loan credit charge proxy (gross/ECL unavailable FY25); not regulatory NPL forecast. No dividends because accumulated losses and statutory reserve restrictions. No FX P&L due to missing net monetary position. RWA proxy sensitivity only, not compliance.",
-    "Statutory reserve allocation uses Act 930 s34 tier proxy (50%,25%,12.5% based on opening reserve relative to modeled paid-up capital); positive annual PAT only, no distribution. Actual bank treatment or regulatory waiver unverified."
+    "Statutory reserve allocation uses Act 930 s34 tier proxy (50%,25%,12.5% based on opening reserve relative to modeled paid-up capital); positive annual PAT only, no distribution. Actual bank treatment or regulatory waiver unverified.",
+    "Nominal GDP compounded from real GDP and CPI as approximate proxy, not guidance. Investment yield 50/50 full-year 364-day bill and 10-year bond × scenario factor; loan yield annual average policy + scenario spread; cash yield on opening combined cash with no FY26 return assumed on October event. Funding cost fit from FY24/25 actual interest expense/average liabilities; two observations cannot establish causality. No post-event regulatory return; issuer announcement says above minimum at October event, but no actual CAR number. Conditional year-end proxy may differ and must not be represented as current compliance.",
+    "Separate estimated net LDR, CAR proxy and NPL path from unavailable reported regulatory/gross metrics. Cash reserve screen applies hypothetical 40% eligible fraction and 80% of that as stress, never treats all cash as eligible."
   ]
 }
