@@ -71,5 +71,27 @@ try{
   test(read('comparison.csv')===currentOrdinary&&read('conditional-comparison.csv')===currentConditional,'output overwritten on collision');
  }
  test(ordinaryBefore.split('\n').length===currentOrdinary.split('\n').length,'ordinary roster changed');
+ // Invalid conditional forecast rows must be rejected without losing ordinary coverage.
+ const umbForecast=path.join(goal,'banks','umb','forecast.csv'),originalForecast=fs.readFileSync(umbForecast,'utf8');
+ const needle='umb,base,FY2030E,profit_after_tax,300,estimated';
+ test(originalForecast.includes(needle),'metadata fault fixture target absent');
+ for(const [label,replacement] of [
+  ['reported status','umb,base,FY2030E,profit_after_tax,999,reported'],
+  ['foreign bank','foreign-bank,base,FY2030E,profit_after_tax,999,estimated'],
+  ['invalid scenario','umb,invalid,FY2030E,profit_after_tax,999,estimated'],
+  ['invalid year','umb,base,FY2031E,profit_after_tax,999,estimated'],
+  ['nonfinite','umb,base,FY2030E,profit_after_tax,Infinity,estimated'],
+  ['blank estimate','umb,base,FY2030E,profit_after_tax,,estimated']
+ ]){
+  write(umbForecast,originalForecast.replace(needle,replacement));commit();
+  success(roll,ra);const peerResult=JSON.parse(success(peer,pa).stdout);
+  const manifest=JSON.parse(read('manifest.json'));
+  test(manifest.totals.total_assets.value===30&&peerResult.totals.assets_2025_m.total===30,label+' changed ordinary coverage');
+  test(manifest.diagnosticErrors.some(e=>e.bank==='umb'&&e.table==='forecast')&&peerResult.conditionalErrors.some(e=>e.bank==='umb'&&e.file==='forecast.csv'),label+' no diagnostic');
+  const record=read('provisional.csv').split('\n').find(l=>l.startsWith('"umb"')&&l.includes('"base|FY2030E","profit_after_tax"'));
+  test(record?.includes('"base|FY2030E","profit_after_tax","","GHS millions"'),label+' rollup not blank');
+  const peerRecord=read('conditional-comparison.csv').split('\n').find(l=>l.startsWith('"umb"'));
+  test(peerRecord?.split(',')[7]==='""',label+' peer not blank');
+ }
  console.log('PASS: '+n+' conditional/manifest integration checks');
 }finally{fs.rmSync(tmp,{recursive:true,force:true})}
