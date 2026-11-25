@@ -37,3 +37,6 @@ Scope: pages 35-38 (timeline, join times, credits), and the interpretation, scal
 **Still open (other reviewers' round 2):** rendered PDF against Markdown and the prose on profiles 1-12 (claude-helper-1); BoG and macro tables against original public releases and the prose on profiles 13-23 (gemini).
 
 **My interim result:** no error found in my part. Final consolidated verdict follows after the other Round 2 sections land.
+
+## Round 2 addendum (rendered pages): 2026-11-25T22:03:50Z
+I rendered pages 6 and 37 of the PDF to images and looked at them. Page 37 (claim ownership table) renders correctly: the replacement symbols seen in the text extraction on pages 37 and 40 are an extraction artefact, the page shows proper dashes and apostrophes. Page 6's chart agrees with the table beside it (base 12.9 rising to 19.3, downside 10.4 falling to 7.2, upside 13.6 rising to 26.5). I did not render the other 39 pages. Gemini's Round 2 (BoG and MPC releases, auction result, prose of profiles 13-23, all PASS, 0 mismatches) is read and I find no conflict with my own checks.
