@@ -22,3 +22,12 @@ Reviewed historical blob fc733e25, forecast 33b20259, model 0dfdbeed. Independen
 - https://gtbank-ghana.files.svdcdn.com/production/financial-information/Dec-2025-Full-Year-Financials-Publication-30-03-26-FN.pdf?dm=1774872338 (p.1)
 
 No owner files edited. Re-review required.
+
+## Round 2 — 2026-11-25T16:05:06.199Z
+Verdict: CHANGES
+Package SHA-256 fingerprint: a62c6805b660b92d3f34fce632896d2750fcdbe8a5e7dedc390657a74e4342fb
+Macro SHA-256 fingerprint: b3c4412d681469e8d974e0c067af8e28435f5669900a9f1b4c54b0178992b8df
+
+Transferred seven current GitHub files and macro to isolated laptop scratch; independently computed exact package hash, ran python -I model.py exit0; forecast.csv and checks.md identical after LF normalization. 355 history/795 forecast rows, 154 available rounded accounting checks pass max .001m, 22 skipped rather than falsely counted as passes (grouped cash/unknown inputs). No duplicates, blank reported provenance or nonblank unavailable values. Prior FY22/24/25 independent primary source evidence remains; Q3 visual verification still unavailable. Source presentation, gross/ECL, cash memos, regulatory history and FX sensitivity, standard ratio blanks, actual tax and reserve bands materially addressed. No owner files edited.
+
+ONE material regression: model.py assigns minc = M(sc,y,"min_car_pct") (13 percent points), then dividend gate compares te/test_rwa*100 < 100*minc+BUF (1305%, not 18%). The checks table likewise prints 1300% BELOW MINIMUM for all years, although arithmetic passes. This prevents all future payouts and falsely labels capital risk. I independently changed ONLY minc to M(sc,y,"min_car_pct") / 100 in isolated scratch and executed Python again: 795 rows, 0 forecast failures. FY2030 corrected base PAT2076.608m, dividend1066.858m, equity6848.180m, CAR23.857%; downside PAT1862.481m, dividend703.352m, equity8060.946m, CAR34.678%; upside PAT2153.174m, dividend1175.074m, equity6592.714m, CAR20.562%. Prior base PAT2230.457m, dividend0, equity10641.609m, CAR35.295%. This is direct numerical evidence of impact, not a theoretical concern. Fix minc units consistently, regenerate forecast/checks/README and all rate sensitivity tables, include an explicit test that expected minimum equals 13% and payout gate target18%. Preserve historical repairs and actual 9M paid604.370m. Claim refresh exact new fingerprints and request one bounded re-review. Nonblocking: row notes for FY2026 x_dividends_paid apply to later years too; adjust while regenerating. No additional model rewrite required.
