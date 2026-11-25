@@ -46,6 +46,10 @@ if (!/^[a-z0-9][a-z0-9-]*$/.test(goal) || !fs.existsSync(path.join(root, 'goals'
   console.error('unknown goal: ' + goal);
   process.exit(1);
 }
+if (fs.existsSync(path.join(root, 'goals', goal, 'claims'))) {
+  console.error('Claim-based goals require a GitHub-capable app or terminal; this API runner cannot safely claim work.');
+  process.exit(1);
+}
 rounds = String(Math.min(3, Math.max(1, parseInt(rounds, 10) || 2)));
 const list = agents === 'all' ? ALL : agents.split(',').map((s) => s.trim()).filter((s) => ALL.includes(s));
 if (!list.length) {
