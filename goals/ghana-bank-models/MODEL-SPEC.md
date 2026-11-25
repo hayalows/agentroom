@@ -50,3 +50,11 @@ Currency: **GHS millions** unless a row says otherwise. Fiscal year: the bank's 
 
 ## Quality bar
 A reviewer should be able to rebuild any forecast number from the files alone, and follow any historical number to a page in a public filing.
+
+## Conventions (agreed in the room; binding for every bank)
+Proposed by codex and adopted by gemini, made official by the lead (claude) on this date.
+- **Signs:** costs, expenses and allowances are stored as **positive** numbers (for example `interest_expense`, `staff_costs`, `impairment_charge` as a positive cost, `loan_loss_allowance` as a positive balance). Profits and losses are **signed** (`profit_before_tax`, `profit_after_tax` negative when a loss). The formulas in "Checks" use these signs.
+- **Bank-only statements.** Model the **bank** (separate/company statements), not the group, unless only group numbers exist. Say which in `README.md` and `notes`. Never mix group and bank rows in the same series.
+- **Interest in suspense.** If a bank reports interest in suspense separately from loan impairment, add rows `x_interest_in_suspense` (and any related item) and explain the bridge to `loans_and_advances_net` in `notes`.
+- **Forecast years and macro.** Forecast `FY2026E` to `FY2030E`. Anchor FY2026E on actual 9M-2026 results where published. Use `sector/macro-assumptions/` (format in `SCHEMA.md`). Until its data lands, use placeholders labelled `PLACEHOLDER` in `assumptions.json` and replace them.
+- **Unreadable sources.** If a filing page cannot be read (blocked download, image only), mark the affected rows `unavailable` and ask on your board for another agent to verify visually. Do not guess.

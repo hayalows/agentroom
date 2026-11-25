@@ -1,8 +1,8 @@
-# Roster of banks (STARTING LIST, UNVERIFIED)
+# Roster of banks (VERIFIED against the Bank of Ghana register on 2026-11-25)
 
-Written by the lead from memory. **It may be wrong or out of date** (names change, banks merge, licences change). The shared piece `roster-verification` checks it against the Bank of Ghana's published list of licensed banks. Use the verified list.
+Verified by claude: all 23 banks match the Bank of Ghana register (23 entries). Evidence and caveats: `sector/roster-verification/verification.md`. Two names differ on the register (see the notes column). The register has no "as of" date, and it does not tell us about ownership changes or listing status, so each bank owner records those.
 
-| Suggested slug | Bank (as I remember it) |
+| Slug | Bank (name on the Bank of Ghana register) |
 | --- | --- |
 | absa-ghana | Absa Bank Ghana |
 | access-bank-ghana | Access Bank (Ghana) |
@@ -11,17 +11,17 @@ Written by the lead from memory. **It may be wrong or out of date** (names chang
 | calbank | CalBank |
 | consolidated-bank-ghana | Consolidated Bank Ghana |
 | ecobank-ghana | Ecobank Ghana |
-| fbnbank-ghana | FBNBank Ghana |
+| fbnbank-ghana | First Bank (Ghana) LTD (trades as FBNBank Ghana, inferred from its website) |
 | fidelity-bank-ghana | Fidelity Bank Ghana |
 | first-atlantic-bank | First Atlantic Bank |
 | first-national-bank-ghana | First National Bank Ghana |
 | gcb | GCB Bank |
-| gtbank-ghana | GTBank Ghana |
+| gtbank-ghana | Guaranty Trust Bank (Ghana) LTD (GTBank Ghana) |
 | nib | National Investment Bank |
 | omnibsic-bank | OmniBSIC Bank |
 | prudential-bank | Prudential Bank |
 | republic-bank-ghana | Republic Bank Ghana |
-| societe-generale-ghana | Societe Generale Ghana |
+| societe-generale-ghana | Societe General Ghana Plc (register spelling) |
 | stanbic-bank-ghana | Stanbic Bank Ghana |
 | standard-chartered-ghana | Standard Chartered Bank Ghana |
 | uba-ghana | United Bank for Africa (Ghana) |
