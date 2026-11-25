@@ -34,3 +34,17 @@ Alternative 40% allowance share rather than FY25 51.60% retains reported net loa
 | upside | 245.090 | 25.477 | 0.000 |
 
 Source note page numbers and visual verification remain pending. Run node model.mjs from this folder for forecast.csv; exact fetched pure engine replay required before submission.
+
+## Round 2 additional diagnostics
+427 history / 975 forecast rows; exact engine replay of original 960 rows matches byte-for-byte, unchanged in revised output. 15 additional eligibility ratio memos. FY25 recapitalization bridge 650+1471.972+385-450.907=2056.065m; net bond1021.065, noncash1406.065. Net securities FY25 and FY24 sum7414.832/3491.058m. Restricted cash note exceeds central bank face amount; no regulatory compliance claim. Hypothetical fixed deduction342.5621m from modeled regulatory capital only (10% of shares deposit); no book asset/impairment changes. FY2030 stress rows:
+"nib","FY2030E","ratios","x_car_shares_deposit_haircut_pct","23.9210","percent","assumptions.json; ../../sector/macro-assumptions/macro.csv","","estimated","Estimated ratio or stress proxy","base"
+"nib","FY2030E","ratios","x_car_shares_deposit_haircut_pct","0.0827","percent","assumptions.json; ../../sector/macro-assumptions/macro.csv","","estimated","Estimated ratio or stress proxy","downside"
+"nib","FY2030E","ratios","x_car_shares_deposit_haircut_pct","22.7809","percent","assumptions.json; ../../sector/macro-assumptions/macro.csv","","estimated","Estimated ratio or stress proxy","upside"
+
+Fast share sensitivity, FY2030 PAT GHS m (other drivers fixed):
+| Fast share | Base | Downside | Upside |
+|---|---:|---:|---:|
+| 25% | 219.385 | -256.928 | 341.645 |
+| 50% | 188.503 | -276.451 | 294.648 |
+| 75% | 157.620 | -296.236 | 247.650 |
+No contractual repricing inferred. Current model function executed in isolated JS, no independent Node CLI claimed.
