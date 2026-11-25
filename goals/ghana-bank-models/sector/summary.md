@@ -3,10 +3,10 @@
 Written by the lead (claude) on 2026-11-25 after returning from a usage pause. **This is an interim summary, not the final sign-off.** The goal is complete only when all 23 banks are accepted, the shared pieces are independently reviewed, and this file is refreshed. Nothing here is investment advice, a price target, or legal advice.
 
 ## 1. Where the goal stands (observed from a clean LF supervisor run)
-- **17 of 23 bank models are accepted** (core gate passes, a distinct reviewer's current-version PASS, no unresolved blocking review, owner marked done): access-bank-ghana, adb, bank-of-africa-ghana, calbank, consolidated-bank-ghana, ecobank-ghana, fbnbank-ghana, fidelity-bank-ghana, first-atlantic-bank, first-national-bank-ghana, gcb, gtbank-ghana, nib, societe-generale-ghana, standard-chartered-ghana, uba-ghana, zenith-bank-ghana.
-- **6 are open:** absa-ghana, omnibsic-bank and umb (still being built), prudential-bank (re-review), republic-bank-ghana (repairs), stanbic-bank-ghana (lead decision made, one bounded review round authorised: `review-resolutions/stanbic-bank-ghana.md`).
-- Shared pieces: roster verification **done**; macro assumptions **done** (v1.1, reviewed); QA sweep, sector roll-up and peer comparison are built and are in review or repair by the stewards named in their claim files.
-- **Caveat on the roll-up snapshot:** the committed accepted-only roll-up (`sector/sector-rollup/rollup.md`, source commit 3f65697) counts **16** accepted banks. One more (calbank) has been accepted since. The numbers below are that snapshot and need a refresh by the roll-up steward before they are final.
+- **18 of 23 bank models are accepted** (core gate passes, a distinct reviewer's current-version PASS, no unresolved blocking review, owner marked done): access-bank-ghana, adb, bank-of-africa-ghana, calbank, consolidated-bank-ghana, ecobank-ghana, fbnbank-ghana, fidelity-bank-ghana, first-atlantic-bank, first-national-bank-ghana, gcb, gtbank-ghana, nib, societe-generale-ghana, stanbic-bank-ghana, standard-chartered-ghana, uba-ghana, zenith-bank-ghana. (Stanbic closed after my lead decision authorised one bounded review round; see `review-resolutions/stanbic-bank-ghana.md`.)
+- **5 are open:** absa-ghana and republic-bank-ghana (re-review of repairs), prudential-bank (re-review; the QA sweep also flags unexplained gross-loan bridge gaps there), omnibsic-bank and umb (still being built).
+- Shared pieces: roster verification **done**; macro assumptions **done** (v1.1, reviewed); QA sweep, sector roll-up and peer comparison are built. The roll-up and peer comparison each have a Codex PASS on a pinned snapshot; my independent review of the peer comparison asks for two labelling fixes (ROE is not meaningful for NIB, whose equity was negative at FY2024; and its README is stale). The QA sweep is stewarded by chatgpt-support, with a tested patch from me in `assistance/claude/`.
+- **Caveat on the roll-up snapshot:** the committed accepted-only roll-up (`sector/sector-rollup/rollup.md`, source commit 3f65697) counts **16** accepted banks. Two more (calbank, stanbic) have been accepted since. The numbers below are that snapshot and need a refresh by the roll-up steward before they are final.
 
 ## 2. What the accepted models show (snapshot of 16 banks; bank-only statements, GHS)
 | Measure | FY2025 | Share of Bank of Ghana sector total |
@@ -38,8 +38,8 @@ Written by the lead (claude) on 2026-11-25 after returning from a usage pause. *
 - **Calibration:** most interest spreads were chosen so the forecast matches nine-month 2026 actuals. That is a fit, not a validation, and every owner was asked to disclose it.
 
 ## 5. What remains
-1. Finish and accept the six open banks (absa, omnibsic, umb, prudential, republic, stanbic).
-2. Independent review and refresh of the accepted-only sector roll-up (it must include calbank) and of the peer comparison; review of the QA sweep.
+1. Finish and accept the five open banks (absa, omnibsic, umb, prudential, republic).
+2. Independent review and refresh of the accepted-only sector roll-up (it must include calbank and stanbic) and of the peer comparison; review of the QA sweep.
 3. Re-run the roll-up and peer comparison from a clean LF checkout once all 23 banks are accepted, and refresh this summary from those outputs.
 4. Human sign-off. The room's agents verify arithmetic and sources; they are not lawyers, auditors or licensed advisers.
 
