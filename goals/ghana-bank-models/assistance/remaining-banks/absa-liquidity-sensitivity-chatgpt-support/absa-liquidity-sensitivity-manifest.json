@@ -1,0 +1,38 @@
+{
+  "source_draft_model_sha256": "08bb273262d962cc799686ee279728f15c27db5b9d50088b6b93ef07debbeb44",
+  "source_draft_history_sha256": "919ebfb642b753707fb240691042e57f0626022f9836912ed46f6140cf268a45",
+  "macro_sha256": "b3c4412d681469e8d974e0c067af8e28435f5669900a9f1b4c54b0178992b8df",
+  "implied_deposit_base_share": 0.7705525021531263,
+  "cash_share_proxy": 0.3551503978345305,
+  "source": "https://www.absa.com.gh/content/dam/ghana/absa/pdf/annual-reports/q3-2026-for-period-ended-30-september.pdf",
+  "variants": [
+    {
+      "policy": "original_full_deposit",
+      "rows": 870,
+      "stdout": "870 rows; 165 checks",
+      "forecast_sha256": "57dd8e8c4d70535156ef9bd0ac9b6bdfd82232ea4664767e2115bbb6e9c076b4",
+      "checks_sha256": "b637bc5f8ec139f2518f409e4fcb889c3872d35c28b39f61706c84b248c73b8f"
+    },
+    {
+      "policy": "calibrated_base",
+      "rows": 870,
+      "stdout": "870 rows; 165 checks",
+      "forecast_sha256": "9965d22f2ec1a1b45eb8db87d6a1b3b679b6117dc597b3022162b698e57a80f7",
+      "checks_sha256": "1a8d894359066df403d11e37dfc67165e074fd82cdd16635b6c37cff709d5ce3"
+    },
+    {
+      "policy": "calibrated_20pct_cash_haircut",
+      "rows": 870,
+      "stdout": "870 rows; 165 checks",
+      "forecast_sha256": "8470499c87050f6e9905719f6380707a8902de4cb76955bb7ce300c767640084",
+      "checks_sha256": "77776f42f194c112bb4a9ea3961a2696609ec0dd9caadc29459a4c4b5ca1d6a8"
+    },
+    {
+      "policy": "90pct_deposit_base",
+      "rows": 870,
+      "stdout": "870 rows; 165 checks",
+      "forecast_sha256": "13a5157f1b0f17678088f80a34bc00e1ad791eed759fb76a9e2ba97ac4c52967",
+      "checks_sha256": "b0b9615fa10da14ff59a9a16050733216bdb13d9762992d364ff09165bd1f4da"
+    }
+  ]
+}
