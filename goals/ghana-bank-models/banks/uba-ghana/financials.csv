@@ -1,0 +1,342 @@
+bank,period,statement,line_item,value,unit,source_id,page,status,notes
+uba-ghana,FY2021,income_statement,interest_income,506.885,GHS millions,UBA22FS,SoCI,reported,
+uba-ghana,FY2021,income_statement,interest_expense,169.548,GHS millions,UBA22FS,SoCI,reported,
+uba-ghana,FY2021,income_statement,net_interest_income,337.337,GHS millions,UBA22FS,SoCI,reported,
+uba-ghana,FY2021,income_statement,fee_commission_income,72.937,GHS millions,UBA22FS,SoCI,reported,
+uba-ghana,FY2021,income_statement,fee_commission_expense,18.737,GHS millions,UBA22FS,SoCI,reported,
+uba-ghana,FY2021,income_statement,net_trading_income,56.982,GHS millions,UBA22FS,SoCI,reported,Net trading and revaluation income.
+uba-ghana,FY2021,income_statement,other_operating_income,0.931,GHS millions,UBA22FS,SoCI,reported,
+uba-ghana,FY2021,income_statement,total_operating_income,449.451,GHS millions,UBA22FS,SoCI,reported,Net operating income before impairment (net interest income + net fees + net trading and other income).
+uba-ghana,FY2021,income_statement,staff_costs,65.857,GHS millions,UBA22FS,SoCI,reported,
+uba-ghana,FY2021,income_statement,depreciation_amortisation,11.784,GHS millions,UBA22FS,SoCI,reported,
+uba-ghana,FY2021,income_statement,other_operating_expenses,57.730,GHS millions,UBA22FS,SoCI,reported,
+uba-ghana,FY2021,income_statement,impairment_charge,95.266,GHS millions,UBA22FS,SoCI,reported,"Allowance for credit losses on financial assets (all financial assets, not loans only). Positive = charge, negative = reversal."
+uba-ghana,FY2021,income_statement,profit_before_tax,218.814,GHS millions,UBA22FS,SoCI,reported,
+uba-ghana,FY2021,income_statement,income_tax,77.049,GHS millions,UBA22FS,SoCI,reported,
+uba-ghana,FY2021,income_statement,profit_after_tax,141.765,GHS millions,UBA22FS,SoCI,reported,
+uba-ghana,FY2021,balance_sheet,cash_and_bog_balances,1040.251,GHS millions,UBA22FS,SoFP,reported,"'Cash and bank balances'. Includes balances with other banks (due from other banks was 1,052.6m of the FY2024 figure per the cash note), so due_from_banks is not separable. "
+uba-ghana,FY2021,balance_sheet,investment_securities,2782.040,GHS millions,UBA22FS,SoFP,derived,"At amortised cost 2,717.849 + at FVOCI 64.191. Net of allowance. "
+uba-ghana,FY2021,balance_sheet,due_from_banks,,GHS millions,,,unavailable,Not a separate line; balances with other banks sit inside cash and bank balances.
+uba-ghana,FY2021,balance_sheet,loans_and_advances_net,1032.519,GHS millions,UBA22FS,SoFP,reported,Loans and advances to customers (net). 
+uba-ghana,FY2021,balance_sheet,property_equipment_intangibles,65.044,GHS millions,UBA22FS,SoFP,derived,Property and equipment 63.388 + intangible assets 1.656. Right-of-use assets are not shown separately. 
+uba-ghana,FY2021,balance_sheet,other_assets,453.345,GHS millions,UBA22FS,SoFP,derived,Other assets 431.299 + income tax asset 8.594 + deferred tax asset 13.452. 
+uba-ghana,FY2021,balance_sheet,total_assets,5373.200,GHS millions,UBA22FS,SoFP,reported,
+uba-ghana,FY2021,balance_sheet,customer_deposits,4075.498,GHS millions,UBA22FS,SoFP,reported,
+uba-ghana,FY2021,balance_sheet,due_to_banks,59.050,GHS millions,UBA22FS,SoFP,reported,Deposits from banks. 
+uba-ghana,FY2021,balance_sheet,borrowings,0.000,GHS millions,UBA22FS,SoFP,reported,None on the face of the balance sheet in this period. 
+uba-ghana,FY2021,balance_sheet,other_liabilities,105.971,GHS millions,UBA22FS,SoFP,reported,
+uba-ghana,FY2021,balance_sheet,total_liabilities,4240.519,GHS millions,UBA22FS,SoFP,reported,
+uba-ghana,FY2021,balance_sheet,total_equity,1132.681,GHS millions,UBA22FS,SoFP,reported,
+uba-ghana,FY2021,balance_sheet,x_stated_capital,400.000,GHS millions,UBA22FS,SoFP,reported,
+uba-ghana,FY2021,balance_sheet,x_retained_earnings,395.670,GHS millions,UBA22FS,SoFP,reported,
+uba-ghana,FY2021,balance_sheet,x_statutory_reserve,336.998,GHS millions,UBA22FS,SoFP,reported,
+uba-ghana,FY2021,balance_sheet,x_credit_risk_reserve,0.000,GHS millions,UBA22FS,SoFP,reported,Credit risk reserve (regulatory); nil outside FY2023. 
+uba-ghana,FY2021,balance_sheet,x_fair_value_reserve,0.014,GHS millions,UBA22FS,SoFP,reported,
+uba-ghana,FY2021,balance_sheet,x_investment_securities_fvoci,64.191,GHS millions,UBA22FS,SoFP,reported,Included in investment_securities. 
+uba-ghana,FY2022,income_statement,interest_income,798.611,GHS millions,UBA22FS,SoCI,reported,
+uba-ghana,FY2022,income_statement,interest_expense,261.788,GHS millions,UBA22FS,SoCI,reported,
+uba-ghana,FY2022,income_statement,net_interest_income,536.823,GHS millions,UBA22FS,SoCI,reported,
+uba-ghana,FY2022,income_statement,fee_commission_income,75.372,GHS millions,UBA22FS,SoCI,reported,
+uba-ghana,FY2022,income_statement,fee_commission_expense,27.551,GHS millions,UBA22FS,SoCI,reported,
+uba-ghana,FY2022,income_statement,net_trading_income,97.279,GHS millions,UBA22FS,SoCI,reported,Net trading and revaluation income.
+uba-ghana,FY2022,income_statement,other_operating_income,0.128,GHS millions,UBA22FS,SoCI,reported,
+uba-ghana,FY2022,income_statement,total_operating_income,682.050,GHS millions,UBA22FS,SoCI,reported,Net operating income before impairment (net interest income + net fees + net trading and other income).
+uba-ghana,FY2022,income_statement,staff_costs,80.754,GHS millions,UBA22FS,SoCI,reported,
+uba-ghana,FY2022,income_statement,depreciation_amortisation,12.590,GHS millions,UBA22FS,SoCI,reported,
+uba-ghana,FY2022,income_statement,other_operating_expenses,90.863,GHS millions,UBA22FS,SoCI,reported,
+uba-ghana,FY2022,income_statement,impairment_charge,406.631,GHS millions,UBA22FS,SoCI,reported,"Allowance for credit losses on financial assets (all financial assets, not loans only). Positive = charge, negative = reversal."
+uba-ghana,FY2022,income_statement,profit_before_tax,91.212,GHS millions,UBA22FS,SoCI,reported,
+uba-ghana,FY2022,income_statement,income_tax,31.618,GHS millions,UBA22FS,SoCI,reported,
+uba-ghana,FY2022,income_statement,profit_after_tax,59.594,GHS millions,UBA22FS,SoCI,reported,
+uba-ghana,FY2022,balance_sheet,cash_and_bog_balances,1855.756,GHS millions,UBA22FS,SoFP,reported,"'Cash and bank balances'. Includes balances with other banks (due from other banks was 1,052.6m of the FY2024 figure per the cash note), so due_from_banks is not separable. "
+uba-ghana,FY2022,balance_sheet,investment_securities,2438.909,GHS millions,UBA22FS,SoFP,reported,Investment securities (amortised cost; none at FVOCI). Net of allowance. 
+uba-ghana,FY2022,balance_sheet,due_from_banks,,GHS millions,,,unavailable,Not a separate line; balances with other banks sit inside cash and bank balances.
+uba-ghana,FY2022,balance_sheet,loans_and_advances_net,1544.689,GHS millions,UBA22FS,SoFP,reported,Loans and advances to customers (net). 
+uba-ghana,FY2022,balance_sheet,property_equipment_intangibles,74.390,GHS millions,UBA22FS,SoFP,derived,Property and equipment 72.339 + intangible assets 2.051. Right-of-use assets are not shown separately. 
+uba-ghana,FY2022,balance_sheet,other_assets,296.317,GHS millions,UBA22FS,SoFP,derived,Other assets 176.096 + income tax asset 30.416 + deferred tax asset 89.805. 
+uba-ghana,FY2022,balance_sheet,total_assets,6210.062,GHS millions,UBA22FS,SoFP,reported,
+uba-ghana,FY2022,balance_sheet,customer_deposits,4736.252,GHS millions,UBA22FS,SoFP,reported,
+uba-ghana,FY2022,balance_sheet,due_to_banks,72.940,GHS millions,UBA22FS,SoFP,reported,Deposits from banks. 
+uba-ghana,FY2022,balance_sheet,borrowings,0.000,GHS millions,UBA22FS,SoFP,reported,None on the face of the balance sheet in this period. 
+uba-ghana,FY2022,balance_sheet,other_liabilities,209.604,GHS millions,UBA22FS,SoFP,reported,
+uba-ghana,FY2022,balance_sheet,total_liabilities,5018.796,GHS millions,UBA22FS,SoFP,reported,
+uba-ghana,FY2022,balance_sheet,total_equity,1191.266,GHS millions,UBA22FS,SoFP,reported,
+uba-ghana,FY2022,balance_sheet,x_stated_capital,400.000,GHS millions,UBA22FS,SoFP,reported,
+uba-ghana,FY2022,balance_sheet,x_retained_earnings,439.370,GHS millions,UBA22FS,SoFP,reported,
+uba-ghana,FY2022,balance_sheet,x_statutory_reserve,351.896,GHS millions,UBA22FS,SoFP,reported,
+uba-ghana,FY2022,balance_sheet,x_credit_risk_reserve,0.000,GHS millions,UBA22FS,SoFP,reported,Credit risk reserve (regulatory); nil outside FY2023. 
+uba-ghana,FY2022,balance_sheet,x_fair_value_reserve,0.000,GHS millions,UBA22FS,SoFP,reported,
+uba-ghana,FY2022,balance_sheet,x_investment_securities_fvoci,0.000,GHS millions,UBA22FS,SoFP,reported,Included in investment_securities. 
+uba-ghana,FY2023,income_statement,interest_income,1085.374,GHS millions,UBA23FS,SoCI,reported,
+uba-ghana,FY2023,income_statement,interest_expense,310.695,GHS millions,UBA23FS,SoCI,reported,
+uba-ghana,FY2023,income_statement,net_interest_income,774.680,GHS millions,UBA23FS,SoCI,reported,
+uba-ghana,FY2023,income_statement,fee_commission_income,93.223,GHS millions,UBA23FS,SoCI,reported,
+uba-ghana,FY2023,income_statement,fee_commission_expense,48.134,GHS millions,UBA23FS,SoCI,reported,
+uba-ghana,FY2023,income_statement,net_trading_income,84.994,GHS millions,UBA23FS,SoCI,reported,Net trading and revaluation income.
+uba-ghana,FY2023,income_statement,other_operating_income,0.060,GHS millions,UBA23FS,SoCI,reported,
+uba-ghana,FY2023,income_statement,total_operating_income,904.822,GHS millions,UBA23FS,SoCI,reported,Net operating income before impairment (net interest income + net fees + net trading and other income).
+uba-ghana,FY2023,income_statement,staff_costs,98.839,GHS millions,UBA23FS,SoCI,reported,
+uba-ghana,FY2023,income_statement,depreciation_amortisation,15.449,GHS millions,UBA23FS,SoCI,reported,
+uba-ghana,FY2023,income_statement,other_operating_expenses,130.488,GHS millions,UBA23FS,SoCI,reported,
+uba-ghana,FY2023,income_statement,impairment_charge,384.076,GHS millions,UBA23FS,SoCI,reported,"Allowance for credit losses on financial assets (all financial assets, not loans only). Positive = charge, negative = reversal."
+uba-ghana,FY2023,income_statement,profit_before_tax,275.970,GHS millions,UBA23FS,SoCI,reported,
+uba-ghana,FY2023,income_statement,income_tax,100.128,GHS millions,UBA23FS,SoCI,reported,
+uba-ghana,FY2023,income_statement,profit_after_tax,175.843,GHS millions,UBA23FS,SoCI,reported,
+uba-ghana,FY2023,balance_sheet,cash_and_bog_balances,2615.911,GHS millions,UBA23FS,SoFP,reported,"'Cash and bank balances'. Includes balances with other banks (due from other banks was 1,052.6m of the FY2024 figure per the cash note), so due_from_banks is not separable. "
+uba-ghana,FY2023,balance_sheet,investment_securities,3710.843,GHS millions,UBA23FS,SoFP,reported,Investment securities (amortised cost; none at FVOCI). Net of allowance. 
+uba-ghana,FY2023,balance_sheet,due_from_banks,,GHS millions,,,unavailable,Not a separate line; balances with other banks sit inside cash and bank balances.
+uba-ghana,FY2023,balance_sheet,loans_and_advances_net,1142.143,GHS millions,UBA23FS,SoFP,reported,Loans and advances to customers (net). 
+uba-ghana,FY2023,balance_sheet,property_equipment_intangibles,75.444,GHS millions,UBA23FS,SoFP,derived,Property and equipment 73.581 + intangible assets 1.864. Right-of-use assets are not shown separately. 
+uba-ghana,FY2023,balance_sheet,other_assets,377.084,GHS millions,UBA23FS,SoFP,derived,Other assets 162.012 + income tax asset 34.867 + deferred tax asset 180.205. 
+uba-ghana,FY2023,balance_sheet,total_assets,7921.426,GHS millions,UBA23FS,SoFP,reported,
+uba-ghana,FY2023,balance_sheet,customer_deposits,6338.451,GHS millions,UBA23FS,SoFP,reported,
+uba-ghana,FY2023,balance_sheet,due_to_banks,0.000,GHS millions,UBA23FS,SoFP,reported,Deposits from banks. 
+uba-ghana,FY2023,balance_sheet,borrowings,0.000,GHS millions,UBA23FS,SoFP,reported,None on the face of the balance sheet in this period. 
+uba-ghana,FY2023,balance_sheet,other_liabilities,215.866,GHS millions,UBA23FS,SoFP,reported,
+uba-ghana,FY2023,balance_sheet,total_liabilities,6554.317,GHS millions,UBA23FS,SoFP,reported,
+uba-ghana,FY2023,balance_sheet,total_equity,1367.109,GHS millions,UBA23FS,SoFP,reported,
+uba-ghana,FY2023,balance_sheet,x_stated_capital,400.000,GHS millions,UBA23FS,SoFP,reported,
+uba-ghana,FY2023,balance_sheet,x_retained_earnings,486.388,GHS millions,UBA23FS,SoFP,reported,
+uba-ghana,FY2023,balance_sheet,x_statutory_reserve,395.857,GHS millions,UBA23FS,SoFP,reported,
+uba-ghana,FY2023,balance_sheet,x_credit_risk_reserve,84.864,GHS millions,UBA23FS,SoFP,reported,Credit risk reserve (regulatory); nil outside FY2023. 
+uba-ghana,FY2023,balance_sheet,x_fair_value_reserve,0.000,GHS millions,UBA23FS,SoFP,reported,
+uba-ghana,FY2023,balance_sheet,x_investment_securities_fvoci,0.000,GHS millions,UBA23FS,SoFP,reported,Included in investment_securities. 
+uba-ghana,FY2024,income_statement,interest_income,1036.454,GHS millions,UBA24FS,SoCI,reported,
+uba-ghana,FY2024,income_statement,interest_expense,438.960,GHS millions,UBA24FS,SoCI,reported,
+uba-ghana,FY2024,income_statement,net_interest_income,597.494,GHS millions,UBA24FS,SoCI,reported,
+uba-ghana,FY2024,income_statement,fee_commission_income,168.594,GHS millions,UBA24FS,SoCI,reported,
+uba-ghana,FY2024,income_statement,fee_commission_expense,143.422,GHS millions,UBA24FS,SoCI,reported,
+uba-ghana,FY2024,income_statement,net_trading_income,68.521,GHS millions,UBA24FS,SoCI,reported,Net trading and revaluation income.
+uba-ghana,FY2024,income_statement,other_operating_income,1.222,GHS millions,UBA24FS,SoCI,reported,
+uba-ghana,FY2024,income_statement,total_operating_income,692.409,GHS millions,UBA24FS,SoCI,reported,Net operating income before impairment (net interest income + net fees + net trading and other income).
+uba-ghana,FY2024,income_statement,staff_costs,114.615,GHS millions,UBA24FS,SoCI,reported,
+uba-ghana,FY2024,income_statement,depreciation_amortisation,16.083,GHS millions,UBA24FS,SoCI,reported,
+uba-ghana,FY2024,income_statement,other_operating_expenses,128.017,GHS millions,UBA24FS,SoCI,reported,
+uba-ghana,FY2024,income_statement,impairment_charge,180.110,GHS millions,UBA24FS,SoCI,reported,"Allowance for credit losses on financial assets (all financial assets, not loans only). Positive = charge, negative = reversal."
+uba-ghana,FY2024,income_statement,profit_before_tax,253.583,GHS millions,UBA24FS,SoCI,reported,
+uba-ghana,FY2024,income_statement,income_tax,89.271,GHS millions,UBA24FS,SoCI,reported,
+uba-ghana,FY2024,income_statement,profit_after_tax,164.312,GHS millions,UBA24FS,SoCI,reported,
+uba-ghana,FY2024,balance_sheet,cash_and_bog_balances,3752.967,GHS millions,UBA24FS,SoFP,reported,"'Cash and bank balances'. Includes balances with other banks (due from other banks was 1,052.6m of the FY2024 figure per the cash note), so due_from_banks is not separable. "
+uba-ghana,FY2024,balance_sheet,investment_securities,4314.251,GHS millions,UBA24FS,SoFP,reported,Investment securities (amortised cost; none at FVOCI). Net of allowance. 
+uba-ghana,FY2024,balance_sheet,due_from_banks,,GHS millions,,,unavailable,Not a separate line; balances with other banks sit inside cash and bank balances.
+uba-ghana,FY2024,balance_sheet,loans_and_advances_net,1114.366,GHS millions,UBA24FS,SoFP,reported,Loans and advances to customers (net). 
+uba-ghana,FY2024,balance_sheet,property_equipment_intangibles,117.575,GHS millions,UBA24FS,SoFP,derived,Property and equipment 115.873 + intangible assets 1.702. Right-of-use assets are not shown separately. 
+uba-ghana,FY2024,balance_sheet,other_assets,548.678,GHS millions,UBA24FS,SoFP,derived,Other assets 256.165 + income tax asset 46.142 + deferred tax asset 246.371. 
+uba-ghana,FY2024,balance_sheet,total_assets,9847.836,GHS millions,UBA24FS,SoFP,reported,
+uba-ghana,FY2024,balance_sheet,customer_deposits,7285.043,GHS millions,UBA24FS,SoFP,reported,
+uba-ghana,FY2024,balance_sheet,due_to_banks,22.873,GHS millions,UBA24FS,SoFP,reported,Deposits from banks. 
+uba-ghana,FY2024,balance_sheet,borrowings,785.298,GHS millions,UBA24FS,SoFP,reported,
+uba-ghana,FY2024,balance_sheet,other_liabilities,263.201,GHS millions,UBA24FS,SoFP,reported,
+uba-ghana,FY2024,balance_sheet,total_liabilities,8356.415,GHS millions,UBA24FS,SoFP,reported,
+uba-ghana,FY2024,balance_sheet,total_equity,1491.421,GHS millions,UBA24FS,SoFP,reported,
+uba-ghana,FY2024,balance_sheet,x_stated_capital,400.000,GHS millions,UBA24FS,SoFP,reported,
+uba-ghana,FY2024,balance_sheet,x_retained_earnings,654.486,GHS millions,UBA24FS,SoFP,reported,
+uba-ghana,FY2024,balance_sheet,x_statutory_reserve,436.935,GHS millions,UBA24FS,SoFP,reported,
+uba-ghana,FY2024,balance_sheet,x_credit_risk_reserve,0.000,GHS millions,UBA24FS,SoFP,reported,Credit risk reserve (regulatory); nil outside FY2023. 
+uba-ghana,FY2024,balance_sheet,x_fair_value_reserve,0.000,GHS millions,UBA24FS,SoFP,reported,
+uba-ghana,FY2024,balance_sheet,x_investment_securities_fvoci,0.000,GHS millions,UBA24FS,SoFP,reported,Included in investment_securities. 
+uba-ghana,FY2025,income_statement,interest_income,1125.252,GHS millions,UBA25FS,SoCI,reported,
+uba-ghana,FY2025,income_statement,interest_expense,454.949,GHS millions,UBA25FS,SoCI,reported,
+uba-ghana,FY2025,income_statement,net_interest_income,670.304,GHS millions,UBA25FS,SoCI,reported,
+uba-ghana,FY2025,income_statement,fee_commission_income,231.804,GHS millions,UBA25FS,SoCI,reported,
+uba-ghana,FY2025,income_statement,fee_commission_expense,153.414,GHS millions,UBA25FS,SoCI,reported,
+uba-ghana,FY2025,income_statement,net_trading_income,98.759,GHS millions,UBA25FS,SoCI,reported,Net trading and revaluation income.
+uba-ghana,FY2025,income_statement,other_operating_income,0.482,GHS millions,UBA25FS,SoCI,reported,
+uba-ghana,FY2025,income_statement,total_operating_income,847.935,GHS millions,UBA25FS,SoCI,reported,Net operating income before impairment (net interest income + net fees + net trading and other income).
+uba-ghana,FY2025,income_statement,staff_costs,175.503,GHS millions,UBA25FS,SoCI,reported,
+uba-ghana,FY2025,income_statement,depreciation_amortisation,34.745,GHS millions,UBA25FS,SoCI,reported,
+uba-ghana,FY2025,income_statement,other_operating_expenses,126.741,GHS millions,UBA25FS,SoCI,reported,
+uba-ghana,FY2025,income_statement,impairment_charge,-118.985,GHS millions,UBA25FS,SoCI,reported,"Allowance for credit losses on financial assets (all financial assets, not loans only). Positive = charge, negative = reversal."
+uba-ghana,FY2025,income_statement,profit_before_tax,629.931,GHS millions,UBA25FS,SoCI,reported,
+uba-ghana,FY2025,income_statement,income_tax,222.828,GHS millions,UBA25FS,SoCI,reported,
+uba-ghana,FY2025,income_statement,profit_after_tax,407.104,GHS millions,UBA25FS,SoCI,reported,
+uba-ghana,FY2025,balance_sheet,cash_and_bog_balances,2907.806,GHS millions,UBA25FS,SoFP,reported,"'Cash and bank balances'. Includes balances with other banks (due from other banks was 1,052.6m of the FY2024 figure per the cash note), so due_from_banks is not separable. "
+uba-ghana,FY2025,balance_sheet,investment_securities,6376.738,GHS millions,UBA25FS,SoFP,derived,"At amortised cost 6,097.113 + at FVOCI 279.625. Net of allowance. "
+uba-ghana,FY2025,balance_sheet,due_from_banks,,GHS millions,,,unavailable,Not a separate line; balances with other banks sit inside cash and bank balances.
+uba-ghana,FY2025,balance_sheet,loans_and_advances_net,1277.050,GHS millions,UBA25FS,SoFP,reported,Loans and advances to customers (net). 
+uba-ghana,FY2025,balance_sheet,property_equipment_intangibles,120.387,GHS millions,UBA25FS,SoFP,derived,Property and equipment 118.530 + intangible assets 1.857. Right-of-use assets are not shown separately. 
+uba-ghana,FY2025,balance_sheet,other_assets,859.587,GHS millions,UBA25FS,SoFP,derived,Other assets 594.437 + income tax asset 56.837 + deferred tax asset 208.313. 
+uba-ghana,FY2025,balance_sheet,total_assets,11541.568,GHS millions,UBA25FS,SoFP,reported,
+uba-ghana,FY2025,balance_sheet,customer_deposits,8590.385,GHS millions,UBA25FS,SoFP,reported,
+uba-ghana,FY2025,balance_sheet,due_to_banks,0.000,GHS millions,UBA25FS,SoFP,reported,Deposits from banks. 
+uba-ghana,FY2025,balance_sheet,borrowings,807.762,GHS millions,UBA25FS,SoFP,reported,
+uba-ghana,FY2025,balance_sheet,other_liabilities,247.677,GHS millions,UBA25FS,SoFP,reported,
+uba-ghana,FY2025,balance_sheet,total_liabilities,9645.824,GHS millions,UBA25FS,SoFP,reported,
+uba-ghana,FY2025,balance_sheet,total_equity,1895.745,GHS millions,UBA25FS,SoFP,reported,
+uba-ghana,FY2025,balance_sheet,x_stated_capital,400.000,GHS millions,UBA25FS,SoFP,reported,
+uba-ghana,FY2025,balance_sheet,x_retained_earnings,994.972,GHS millions,UBA25FS,SoFP,reported,
+uba-ghana,FY2025,balance_sheet,x_statutory_reserve,487.823,GHS millions,UBA25FS,SoFP,reported,
+uba-ghana,FY2025,balance_sheet,x_credit_risk_reserve,0.000,GHS millions,UBA25FS,SoFP,reported,Credit risk reserve (regulatory); nil outside FY2023. 
+uba-ghana,FY2025,balance_sheet,x_fair_value_reserve,12.950,GHS millions,UBA25FS,SoFP,reported,
+uba-ghana,FY2025,balance_sheet,x_investment_securities_fvoci,279.625,GHS millions,UBA25FS,SoFP,reported,Included in investment_securities. 
+uba-ghana,9M-2025,income_statement,interest_income,818.197,GHS millions,UBA26Q3,SoCI,reported,Interim: thousands of cedis converted to millions.
+uba-ghana,9M-2025,income_statement,interest_expense,331.750,GHS millions,UBA26Q3,SoCI,reported,Interim: thousands of cedis converted to millions.
+uba-ghana,9M-2025,income_statement,net_interest_income,486.447,GHS millions,UBA26Q3,SoCI,reported,Interim: thousands of cedis converted to millions.
+uba-ghana,9M-2025,income_statement,fee_commission_income,179.081,GHS millions,UBA26Q3,SoCI,reported,Interim: thousands of cedis converted to millions.
+uba-ghana,9M-2025,income_statement,fee_commission_expense,117.085,GHS millions,UBA26Q3,SoCI,reported,Interim: thousands of cedis converted to millions.
+uba-ghana,9M-2025,income_statement,net_trading_income,88.103,GHS millions,UBA26Q3,SoCI,reported,Net trading and revaluation income. Interim: thousands of cedis converted to millions.
+uba-ghana,9M-2025,income_statement,other_operating_income,0.009,GHS millions,UBA26Q3,SoCI,reported,Interim: thousands of cedis converted to millions.
+uba-ghana,9M-2025,income_statement,total_operating_income,636.555,GHS millions,UBA26Q3,SoCI,reported,Net operating income before impairment (net interest income + net fees + net trading and other income). Interim: thousands of cedis converted to millions.
+uba-ghana,9M-2025,income_statement,staff_costs,118.415,GHS millions,UBA26Q3,SoCI,reported,Interim: thousands of cedis converted to millions.
+uba-ghana,9M-2025,income_statement,depreciation_amortisation,22.262,GHS millions,UBA26Q3,SoCI,reported,Interim: thousands of cedis converted to millions.
+uba-ghana,9M-2025,income_statement,other_operating_expenses,120.050,GHS millions,UBA26Q3,SoCI,reported,Interim: thousands of cedis converted to millions.
+uba-ghana,9M-2025,income_statement,impairment_charge,-54.899,GHS millions,UBA26Q3,SoCI,reported,"Allowance for credit losses on financial assets (all financial assets, not loans only). Positive = charge, negative = reversal. Interim: thousands of cedis converted to millions."
+uba-ghana,9M-2025,income_statement,profit_before_tax,430.727,GHS millions,UBA26Q3,SoCI,reported,Interim: thousands of cedis converted to millions.
+uba-ghana,9M-2025,income_statement,income_tax,149.489,GHS millions,UBA26Q3,SoCI,reported,Interim: thousands of cedis converted to millions.
+uba-ghana,9M-2025,income_statement,profit_after_tax,281.238,GHS millions,UBA26Q3,SoCI,reported,Interim: thousands of cedis converted to millions.
+uba-ghana,9M-2025,balance_sheet,cash_and_bog_balances,3343.804,GHS millions,UBA26Q3,SoFP,reported,"'Cash and bank balances'. Includes balances with other banks (due from other banks was 1,052.6m of the FY2024 figure per the cash note), so due_from_banks is not separable. Interim: thousands of cedis converted to millions."
+uba-ghana,9M-2025,balance_sheet,investment_securities,6047.141,GHS millions,UBA26Q3,SoFP,reported,Investment securities (amortised cost; none at FVOCI). Net of allowance. Interim: thousands of cedis converted to millions.
+uba-ghana,9M-2025,balance_sheet,due_from_banks,,GHS millions,,,unavailable,Not a separate line; balances with other banks sit inside cash and bank balances.
+uba-ghana,9M-2025,balance_sheet,loans_and_advances_net,844.994,GHS millions,UBA26Q3,SoFP,reported,Loans and advances to customers (net). Interim: thousands of cedis converted to millions.
+uba-ghana,9M-2025,balance_sheet,property_equipment_intangibles,106.598,GHS millions,UBA26Q3,SoFP,derived,Property and equipment 104.940 + intangible assets 1.658. Right-of-use assets are not shown separately. Interim: thousands of cedis converted to millions.
+uba-ghana,9M-2025,balance_sheet,other_assets,971.517,GHS millions,UBA26Q3,SoFP,derived,Other assets 696.700 + income tax asset 28.446 + deferred tax asset 246.371. Interim: thousands of cedis converted to millions.
+uba-ghana,9M-2025,balance_sheet,total_assets,11314.054,GHS millions,UBA26Q3,SoFP,reported,Interim: thousands of cedis converted to millions.
+uba-ghana,9M-2025,balance_sheet,customer_deposits,8194.116,GHS millions,UBA26Q3,SoFP,reported,Interim: thousands of cedis converted to millions.
+uba-ghana,9M-2025,balance_sheet,due_to_banks,65.739,GHS millions,UBA26Q3,SoFP,reported,Deposits from banks. Interim: thousands of cedis converted to millions.
+uba-ghana,9M-2025,balance_sheet,borrowings,780.449,GHS millions,UBA26Q3,SoFP,reported,Interim: thousands of cedis converted to millions.
+uba-ghana,9M-2025,balance_sheet,other_liabilities,516.821,GHS millions,UBA26Q3,SoFP,reported,Interim: thousands of cedis converted to millions.
+uba-ghana,9M-2025,balance_sheet,total_liabilities,9557.125,GHS millions,UBA26Q3,SoFP,reported,Interim: thousands of cedis converted to millions.
+uba-ghana,9M-2025,balance_sheet,total_equity,1756.929,GHS millions,UBA26Q3,SoFP,reported,Interim: thousands of cedis converted to millions.
+uba-ghana,9M-2025,balance_sheet,x_stated_capital,400.000,GHS millions,UBA26Q3,SoFP,reported,Interim: thousands of cedis converted to millions.
+uba-ghana,9M-2025,balance_sheet,x_retained_earnings,919.994,GHS millions,UBA26Q3,SoFP,reported,Interim: thousands of cedis converted to millions.
+uba-ghana,9M-2025,balance_sheet,x_statutory_reserve,436.935,GHS millions,UBA26Q3,SoFP,reported,Interim: thousands of cedis converted to millions.
+uba-ghana,9M-2025,balance_sheet,x_credit_risk_reserve,0.000,GHS millions,UBA26Q3,SoFP,reported,Credit risk reserve (regulatory); nil outside FY2023. Interim: thousands of cedis converted to millions.
+uba-ghana,9M-2025,balance_sheet,x_fair_value_reserve,0.000,GHS millions,UBA26Q3,SoFP,reported,Interim: thousands of cedis converted to millions.
+uba-ghana,9M-2025,balance_sheet,x_investment_securities_fvoci,0.000,GHS millions,UBA26Q3,SoFP,reported,Included in investment_securities. Interim: thousands of cedis converted to millions.
+uba-ghana,9M-2026,income_statement,interest_income,658.248,GHS millions,UBA26Q3,SoCI,reported,Interim: thousands of cedis converted to millions.
+uba-ghana,9M-2026,income_statement,interest_expense,253.623,GHS millions,UBA26Q3,SoCI,reported,Interim: thousands of cedis converted to millions.
+uba-ghana,9M-2026,income_statement,net_interest_income,404.625,GHS millions,UBA26Q3,SoCI,reported,Interim: thousands of cedis converted to millions.
+uba-ghana,9M-2026,income_statement,fee_commission_income,169.451,GHS millions,UBA26Q3,SoCI,reported,Interim: thousands of cedis converted to millions.
+uba-ghana,9M-2026,income_statement,fee_commission_expense,88.513,GHS millions,UBA26Q3,SoCI,reported,Interim: thousands of cedis converted to millions.
+uba-ghana,9M-2026,income_statement,net_trading_income,90.114,GHS millions,UBA26Q3,SoCI,reported,Net trading and revaluation income. Interim: thousands of cedis converted to millions.
+uba-ghana,9M-2026,income_statement,other_operating_income,0.089,GHS millions,UBA26Q3,SoCI,reported,Interim: thousands of cedis converted to millions.
+uba-ghana,9M-2026,income_statement,total_operating_income,575.766,GHS millions,UBA26Q3,SoCI,reported,Net operating income before impairment (net interest income + net fees + net trading and other income). Interim: thousands of cedis converted to millions.
+uba-ghana,9M-2026,income_statement,staff_costs,177.038,GHS millions,UBA26Q3,SoCI,reported,Interim: thousands of cedis converted to millions.
+uba-ghana,9M-2026,income_statement,depreciation_amortisation,11.080,GHS millions,UBA26Q3,SoCI,reported,Interim: thousands of cedis converted to millions.
+uba-ghana,9M-2026,income_statement,other_operating_expenses,98.001,GHS millions,UBA26Q3,SoCI,reported,Interim: thousands of cedis converted to millions.
+uba-ghana,9M-2026,income_statement,impairment_charge,-47.146,GHS millions,UBA26Q3,SoCI,reported,"Allowance for credit losses on financial assets (all financial assets, not loans only). Positive = charge, negative = reversal. Interim: thousands of cedis converted to millions."
+uba-ghana,9M-2026,income_statement,profit_before_tax,336.793,GHS millions,UBA26Q3,SoCI,reported,Interim: thousands of cedis converted to millions.
+uba-ghana,9M-2026,income_statement,income_tax,138.950,GHS millions,UBA26Q3,SoCI,reported,Interim: thousands of cedis converted to millions.
+uba-ghana,9M-2026,income_statement,profit_after_tax,197.843,GHS millions,UBA26Q3,SoCI,reported,Interim: thousands of cedis converted to millions.
+uba-ghana,9M-2026,balance_sheet,cash_and_bog_balances,2776.062,GHS millions,UBA26Q3,SoFP,reported,"'Cash and bank balances'. Includes balances with other banks (due from other banks was 1,052.6m of the FY2024 figure per the cash note), so due_from_banks is not separable. Interim: thousands of cedis converted to millions."
+uba-ghana,9M-2026,balance_sheet,investment_securities,7156.405,GHS millions,UBA26Q3,SoFP,derived,"At amortised cost 7,049.417 + at FVOCI 106.988. Net of allowance. Interim: thousands of cedis converted to millions."
+uba-ghana,9M-2026,balance_sheet,due_from_banks,,GHS millions,,,unavailable,Not a separate line; balances with other banks sit inside cash and bank balances.
+uba-ghana,9M-2026,balance_sheet,loans_and_advances_net,1692.697,GHS millions,UBA26Q3,SoFP,reported,Loans and advances to customers (net). Interim: thousands of cedis converted to millions.
+uba-ghana,9M-2026,balance_sheet,property_equipment_intangibles,321.936,GHS millions,UBA26Q3,SoFP,derived,Property and equipment 320.257 + intangible assets 1.679. Right-of-use assets are not shown separately. Interim: thousands of cedis converted to millions.
+uba-ghana,9M-2026,balance_sheet,other_assets,611.981,GHS millions,UBA26Q3,SoFP,derived,Other assets 350.300 + income tax asset 54.130 + deferred tax asset 207.551. Interim: thousands of cedis converted to millions.
+uba-ghana,9M-2026,balance_sheet,total_assets,12559.081,GHS millions,UBA26Q3,SoFP,reported,Interim: thousands of cedis converted to millions.
+uba-ghana,9M-2026,balance_sheet,customer_deposits,8684.740,GHS millions,UBA26Q3,SoFP,reported,Interim: thousands of cedis converted to millions.
+uba-ghana,9M-2026,balance_sheet,due_to_banks,19.925,GHS millions,UBA26Q3,SoFP,reported,Deposits from banks. Interim: thousands of cedis converted to millions.
+uba-ghana,9M-2026,balance_sheet,borrowings,1690.643,GHS millions,UBA26Q3,SoFP,reported,Interim: thousands of cedis converted to millions.
+uba-ghana,9M-2026,balance_sheet,other_liabilities,372.759,GHS millions,UBA26Q3,SoFP,reported,Interim: thousands of cedis converted to millions.
+uba-ghana,9M-2026,balance_sheet,total_liabilities,10768.067,GHS millions,UBA26Q3,SoFP,reported,Interim: thousands of cedis converted to millions.
+uba-ghana,9M-2026,balance_sheet,total_equity,1791.014,GHS millions,UBA26Q3,SoFP,reported,Interim: thousands of cedis converted to millions.
+uba-ghana,9M-2026,balance_sheet,x_stated_capital,400.000,GHS millions,UBA26Q3,SoFP,reported,Interim: thousands of cedis converted to millions.
+uba-ghana,9M-2026,balance_sheet,x_retained_earnings,887.955,GHS millions,UBA26Q3,SoFP,reported,Interim: thousands of cedis converted to millions.
+uba-ghana,9M-2026,balance_sheet,x_statutory_reserve,487.823,GHS millions,UBA26Q3,SoFP,reported,Interim: thousands of cedis converted to millions.
+uba-ghana,9M-2026,balance_sheet,x_credit_risk_reserve,0.000,GHS millions,UBA26Q3,SoFP,reported,Credit risk reserve (regulatory); nil outside FY2023. Interim: thousands of cedis converted to millions.
+uba-ghana,9M-2026,balance_sheet,x_fair_value_reserve,15.236,GHS millions,UBA26Q3,SoFP,reported,Interim: thousands of cedis converted to millions.
+uba-ghana,9M-2026,balance_sheet,x_investment_securities_fvoci,106.988,GHS millions,UBA26Q3,SoFP,reported,Included in investment_securities. Interim: thousands of cedis converted to millions.
+uba-ghana,FY2021,balance_sheet,loans_and_advances_gross,1135.144,GHS millions,UBA22AR,96,reported,Gross carrying amount of loans and advances to customers (IFRS 9 note).
+uba-ghana,FY2021,balance_sheet,loan_loss_allowance,102.625,GHS millions,UBA22AR,96,reported,Allowance for credit losses on loans and advances (positive). Gross - allowance = net loans.
+uba-ghana,FY2021,balance_sheet,x_loans_stage_1_gross,801.806,GHS millions,UBA22AR,96,reported,Gross loans in IFRS 9 stage 1.
+uba-ghana,FY2021,balance_sheet,x_loans_stage_2_gross,0.000,GHS millions,UBA22AR,96,reported,Gross loans in IFRS 9 stage 2.
+uba-ghana,FY2021,balance_sheet,x_loans_stage_3_gross,333.338,GHS millions,UBA22AR,96,reported,Gross loans in IFRS 9 stage 3.
+uba-ghana,FY2021,ratios,x_stage3_share_of_gross_pct,29.370,percent,UBA22AR,96,derived,Stage 3 gross / total gross loans x 100.
+uba-ghana,FY2022,balance_sheet,loans_and_advances_gross,1716.210,GHS millions,UBA22AR,96,reported,Gross carrying amount of loans and advances to customers (IFRS 9 note).
+uba-ghana,FY2022,balance_sheet,loan_loss_allowance,171.522,GHS millions,UBA22AR,96,reported,Allowance for credit losses on loans and advances (positive). Gross - allowance = net loans.
+uba-ghana,FY2022,balance_sheet,x_loans_stage_1_gross,1445.830,GHS millions,UBA22AR,96,reported,Gross loans in IFRS 9 stage 1.
+uba-ghana,FY2022,balance_sheet,x_loans_stage_2_gross,104.682,GHS millions,UBA22AR,96,reported,Gross loans in IFRS 9 stage 2.
+uba-ghana,FY2022,balance_sheet,x_loans_stage_3_gross,165.698,GHS millions,UBA22AR,96,reported,Gross loans in IFRS 9 stage 3.
+uba-ghana,FY2022,ratios,x_stage3_share_of_gross_pct,9.650,percent,UBA22AR,96,derived,Stage 3 gross / total gross loans x 100.
+uba-ghana,FY2023,balance_sheet,loans_and_advances_gross,1360.047,GHS millions,UBA24AR,135,reported,Gross carrying amount of loans and advances to customers (IFRS 9 note).
+uba-ghana,FY2023,balance_sheet,loan_loss_allowance,217.904,GHS millions,UBA24AR,135,reported,Allowance for credit losses on loans and advances (positive). Gross - allowance = net loans.
+uba-ghana,FY2023,balance_sheet,x_loans_stage_1_gross,875.273,GHS millions,UBA24AR,135,reported,Gross loans in IFRS 9 stage 1.
+uba-ghana,FY2023,balance_sheet,x_loans_stage_2_gross,149.397,GHS millions,UBA24AR,135,reported,Gross loans in IFRS 9 stage 2.
+uba-ghana,FY2023,balance_sheet,x_loans_stage_3_gross,335.377,GHS millions,UBA24AR,135,reported,Gross loans in IFRS 9 stage 3.
+uba-ghana,FY2023,ratios,x_stage3_share_of_gross_pct,24.660,percent,UBA24AR,135,derived,Stage 3 gross / total gross loans x 100.
+uba-ghana,FY2024,balance_sheet,loans_and_advances_gross,1316.921,GHS millions,UBA25AR,137,reported,Gross carrying amount of loans and advances to customers (IFRS 9 note).
+uba-ghana,FY2024,balance_sheet,loan_loss_allowance,202.556,GHS millions,UBA25AR,137,reported,Allowance for credit losses on loans and advances (positive). Gross - allowance = net loans.
+uba-ghana,FY2024,balance_sheet,x_loans_stage_1_gross,1005.512,GHS millions,UBA25AR,137,reported,Gross loans in IFRS 9 stage 1.
+uba-ghana,FY2024,balance_sheet,x_loans_stage_2_gross,146.417,GHS millions,UBA25AR,137,reported,Gross loans in IFRS 9 stage 2.
+uba-ghana,FY2024,balance_sheet,x_loans_stage_3_gross,164.993,GHS millions,UBA25AR,137,reported,Gross loans in IFRS 9 stage 3.
+uba-ghana,FY2024,ratios,x_stage3_share_of_gross_pct,12.530,percent,UBA25AR,137,derived,Stage 3 gross / total gross loans x 100.
+uba-ghana,FY2025,balance_sheet,loans_and_advances_gross,1339.841,GHS millions,UBA25AR,136,reported,Gross carrying amount of loans and advances to customers (IFRS 9 note).
+uba-ghana,FY2025,balance_sheet,loan_loss_allowance,62.791,GHS millions,UBA25AR,136,reported,Allowance for credit losses on loans and advances (positive). Gross - allowance = net loans.
+uba-ghana,FY2025,balance_sheet,x_loans_stage_1_gross,1248.371,GHS millions,UBA25AR,136,reported,Gross loans in IFRS 9 stage 1.
+uba-ghana,FY2025,balance_sheet,x_loans_stage_2_gross,63.177,GHS millions,UBA25AR,136,reported,Gross loans in IFRS 9 stage 2.
+uba-ghana,FY2025,balance_sheet,x_loans_stage_3_gross,28.293,GHS millions,UBA25AR,136,reported,Gross loans in IFRS 9 stage 3.
+uba-ghana,FY2025,ratios,x_stage3_share_of_gross_pct,2.110,percent,UBA25AR,136,derived,Stage 3 gross / total gross loans x 100.
+uba-ghana,9M-2025,balance_sheet,loans_and_advances_gross,,GHS millions,,,unavailable,The interim statement prints net loans only.
+uba-ghana,9M-2025,balance_sheet,loan_loss_allowance,,GHS millions,,,unavailable,The interim statement prints net loans only.
+uba-ghana,9M-2026,balance_sheet,loans_and_advances_gross,,GHS millions,,,unavailable,The interim statement prints net loans only.
+uba-ghana,9M-2026,balance_sheet,loan_loss_allowance,,GHS millions,,,unavailable,The interim statement prints net loans only.
+uba-ghana,FY2021,ratios,car_pct,22.800,percent,UBA22FS,Note 4,reported,Capital adequacy ratio as printed (interim: CRD basis).
+uba-ghana,FY2021,ratios,npl_pct,29.400,percent,UBA22FS,Note 4,reported,Gross non-performing loan ratio as printed.
+uba-ghana,FY2021,ratios,x_cet1_pct,22.800,percent,UBA22FS,Note 4,reported,Common equity tier 1 ratio as printed. Not published as tier1_pct.
+uba-ghana,FY2021,ratios,tier1_pct,,percent,,,unavailable,A Tier 1 ratio is not printed; the CET1 ratio is stored as x_cet1_pct.
+uba-ghana,FY2022,ratios,car_pct,20.200,percent,UBA23FS,Note 4,reported,Capital adequacy ratio as printed (interim: CRD basis).
+uba-ghana,FY2022,ratios,npl_pct,15.800,percent,UBA23FS,Note 4,reported,Gross non-performing loan ratio as printed.
+uba-ghana,FY2022,ratios,x_cet1_pct,20.200,percent,UBA23FS,Note 4,reported,Common equity tier 1 ratio as printed. Not published as tier1_pct.
+uba-ghana,FY2022,ratios,tier1_pct,,percent,,,unavailable,A Tier 1 ratio is not printed; the CET1 ratio is stored as x_cet1_pct.
+uba-ghana,FY2023,ratios,car_pct,15.000,percent,UBA24FS,Note 4,reported,Capital adequacy ratio as printed (interim: CRD basis).
+uba-ghana,FY2023,ratios,npl_pct,24.700,percent,UBA24FS,Note 4,reported,Gross non-performing loan ratio as printed.
+uba-ghana,FY2023,ratios,x_cet1_pct,15.000,percent,UBA24FS,Note 4,reported,Common equity tier 1 ratio as printed. Not published as tier1_pct.
+uba-ghana,FY2023,ratios,tier1_pct,,percent,,,unavailable,A Tier 1 ratio is not printed; the CET1 ratio is stored as x_cet1_pct.
+uba-ghana,FY2024,ratios,car_pct,17.250,percent,UBA24FS,Note 4,reported,Capital adequacy ratio as printed (interim: CRD basis).
+uba-ghana,FY2024,ratios,npl_pct,12.500,percent,UBA24FS,Note 4,reported,Gross non-performing loan ratio as printed.
+uba-ghana,FY2024,ratios,x_cet1_pct,17.250,percent,UBA24FS,Note 4,reported,Common equity tier 1 ratio as printed. Not published as tier1_pct.
+uba-ghana,FY2024,ratios,tier1_pct,,percent,,,unavailable,A Tier 1 ratio is not printed; the CET1 ratio is stored as x_cet1_pct.
+uba-ghana,FY2025,ratios,car_pct,26.110,percent,UBA25FS,Note 4,reported,Capital adequacy ratio as printed (interim: CRD basis).
+uba-ghana,FY2025,ratios,npl_pct,2.110,percent,UBA25FS,Note 4,reported,Gross non-performing loan ratio as printed.
+uba-ghana,FY2025,ratios,x_cet1_pct,26.100,percent,UBA25FS,Note 4,reported,Common equity tier 1 ratio as printed. Not published as tier1_pct.
+uba-ghana,FY2025,ratios,tier1_pct,,percent,,,unavailable,A Tier 1 ratio is not printed; the CET1 ratio is stored as x_cet1_pct.
+uba-ghana,9M-2025,ratios,car_pct,20.400,percent,UBA26Q3,Regulatory ratios,reported,Capital adequacy ratio as printed (interim: CRD basis).
+uba-ghana,9M-2025,ratios,npl_pct,15.720,percent,UBA26Q3,Regulatory ratios,reported,Gross non-performing loan ratio as printed.
+uba-ghana,9M-2025,ratios,tier1_pct,,percent,,,unavailable,A Tier 1 ratio is not printed; the CET1 ratio is stored as x_cet1_pct.
+uba-ghana,9M-2026,ratios,car_pct,16.700,percent,UBA26Q3,Regulatory ratios,reported,Capital adequacy ratio as printed (interim: CRD basis).
+uba-ghana,9M-2026,ratios,npl_pct,1.570,percent,UBA26Q3,Regulatory ratios,reported,Gross non-performing loan ratio as printed.
+uba-ghana,9M-2026,ratios,tier1_pct,,percent,,,unavailable,A Tier 1 ratio is not printed; the CET1 ratio is stored as x_cet1_pct.
+uba-ghana,FY2023,balance_sheet,x_regulatory_capital,709.218,GHS millions,UBA24AR,122,reported,Total regulatory capital (Note 5.1).
+uba-ghana,FY2023,balance_sheet,x_tier1_capital,709.218,GHS millions,UBA24AR,122,reported,Tier 1 capital (CET1 after deductions) per Note 5.1.
+uba-ghana,FY2023,balance_sheet,x_risk_weighted_assets,4722.209,GHS millions,UBA24AR,122,reported,Total risk-weighted assets (credit + operational + market risk).
+uba-ghana,FY2023,ratios,x_rwa_to_total_assets,0.596,ratio,UBA24AR,122,derived,Risk-weighted assets / total assets (density).
+uba-ghana,FY2024,balance_sheet,x_regulatory_capital,891.228,GHS millions,UBA24AR,122,reported,Total regulatory capital (Note 5.1).
+uba-ghana,FY2024,balance_sheet,x_tier1_capital,891.228,GHS millions,UBA24AR,122,reported,Tier 1 capital (CET1 after deductions) per Note 5.1.
+uba-ghana,FY2024,balance_sheet,x_risk_weighted_assets,5167.705,GHS millions,UBA24AR,122,reported,Total risk-weighted assets (credit + operational + market risk).
+uba-ghana,FY2024,ratios,x_rwa_to_total_assets,0.525,ratio,UBA24AR,122,derived,Risk-weighted assets / total assets (density).
+uba-ghana,FY2025,balance_sheet,x_regulatory_capital,1555.840,GHS millions,UBA25AR,122,reported,Total regulatory capital (Note 5.1).
+uba-ghana,FY2025,balance_sheet,x_tier1_capital,1555.228,GHS millions,UBA25AR,122,reported,Tier 1 capital (CET1 after deductions) per Note 5.1.
+uba-ghana,FY2025,balance_sheet,x_risk_weighted_assets,5958.881,GHS millions,UBA25AR,122,reported,Total risk-weighted assets (credit + operational + market risk).
+uba-ghana,FY2025,ratios,x_rwa_to_total_assets,0.516,ratio,UBA25AR,122,derived,Risk-weighted assets / total assets (density).
+uba-ghana,FY2022,income_statement,x_statutory_reserve_transfer,14.899,GHS millions,UBA22FS,SoCE,reported,Transfer from retained earnings to the statutory reserve (statement of changes in equity).
+uba-ghana,FY2022,ratios,x_statutory_transfer_share_of_pat_pct,25.000,percent,UBA22FS,SoCE,derived,Transfer / profit after tax x 100 (Act 930 s34 tiers: 50 / 25 / 12.5%).
+uba-ghana,FY2023,income_statement,x_statutory_reserve_transfer,43.961,GHS millions,UBA23FS,SoCE,reported,Transfer from retained earnings to the statutory reserve (statement of changes in equity).
+uba-ghana,FY2023,ratios,x_statutory_transfer_share_of_pat_pct,25.000,percent,UBA23FS,SoCE,derived,Transfer / profit after tax x 100 (Act 930 s34 tiers: 50 / 25 / 12.5%).
+uba-ghana,FY2024,income_statement,x_statutory_reserve_transfer,41.078,GHS millions,UBA24FS,SoCE,reported,Transfer from retained earnings to the statutory reserve (statement of changes in equity).
+uba-ghana,FY2024,ratios,x_statutory_transfer_share_of_pat_pct,25.000,percent,UBA24FS,SoCE,derived,Transfer / profit after tax x 100 (Act 930 s34 tiers: 50 / 25 / 12.5%).
+uba-ghana,FY2025,income_statement,x_statutory_reserve_transfer,50.888,GHS millions,UBA25FS,SoCE,reported,Transfer from retained earnings to the statutory reserve (statement of changes in equity).
+uba-ghana,FY2025,ratios,x_statutory_transfer_share_of_pat_pct,12.500,percent,UBA25FS,SoCE,derived,Transfer / profit after tax x 100 (Act 930 s34 tiers: 50 / 25 / 12.5%).
+uba-ghana,FY2024,income_statement,x_dividends_paid,40.000,GHS millions,UBA24FS,SoCE,reported,Dividends paid to owners in the period (statement of changes in equity).
+uba-ghana,FY2025,income_statement,x_dividends_paid,15.730,GHS millions,UBA25FS,SoCE,reported,Dividends paid to owners in the period (statement of changes in equity).
+uba-ghana,9M-2026,income_statement,x_dividends_paid,304.860,GHS millions,UBA26Q3,SoCE,reported,Dividends paid to owners in the period (statement of changes in equity). The 9M-2025 comparative is 15.730m in the same statement.
+uba-ghana,FY2025,income_statement,x_dividend_recommended,146.452,GHS millions,UBA25FS,Note 6,reported,"Dividend recommended for 2025: GHS 146,452,341 (0.020 per share), subject to Bank of Ghana approval."
+uba-ghana,FY2023,income_statement,x_levies_in_income_tax,27.597,GHS millions,UBA24AR,129,reported,"Growth and Sustainability levy + Financial Sector Recovery levy, both inside the income tax charge (5% of profit before tax each)."
+uba-ghana,FY2024,income_statement,x_levies_in_income_tax,25.364,GHS millions,UBA24AR,129,reported,"Growth and Sustainability levy + Financial Sector Recovery levy, both inside the income tax charge (5% of profit before tax each)."
+uba-ghana,FY2025,income_statement,x_levies_in_income_tax,62.993,GHS millions,UBA25AR,128,reported,"Growth and Sustainability levy + Financial Sector Recovery levy, both inside the income tax charge (5% of profit before tax each)."
+uba-ghana,FY2025,income_statement,x_other_comprehensive_income,12.950,GHS millions,UBA25FS,SoCI,reported,Net change in fair value of FVOCI financial assets (net of tax).
+uba-ghana,9M-2026,income_statement,x_other_comprehensive_income,2.286,GHS millions,UBA26Q3,SoCI,reported,Net change in fair value of FVOCI financial assets (net of tax).
+uba-ghana,FY2021,ratios,ldr_pct,25.330,percent,,,derived,Net loans / customer deposits x 100.
+uba-ghana,FY2021,ratios,cost_to_income_pct,30.120,percent,,,derived,(Staff + depreciation + other operating expenses) / net operating income x 100.
+uba-ghana,FY2022,ratios,ldr_pct,32.610,percent,,,derived,Net loans / customer deposits x 100.
+uba-ghana,FY2022,ratios,cost_to_income_pct,27.010,percent,,,derived,(Staff + depreciation + other operating expenses) / net operating income x 100.
+uba-ghana,FY2023,ratios,ldr_pct,18.020,percent,,,derived,Net loans / customer deposits x 100.
+uba-ghana,FY2023,ratios,cost_to_income_pct,27.050,percent,,,derived,(Staff + depreciation + other operating expenses) / net operating income x 100.
+uba-ghana,FY2024,ratios,ldr_pct,15.300,percent,,,derived,Net loans / customer deposits x 100.
+uba-ghana,FY2024,ratios,cost_to_income_pct,37.360,percent,,,derived,(Staff + depreciation + other operating expenses) / net operating income x 100.
+uba-ghana,FY2025,ratios,ldr_pct,14.870,percent,,,derived,Net loans / customer deposits x 100.
+uba-ghana,FY2025,ratios,cost_to_income_pct,39.740,percent,,,derived,(Staff + depreciation + other operating expenses) / net operating income x 100.
+uba-ghana,9M-2025,ratios,ldr_pct,10.310,percent,,,derived,Net loans / customer deposits x 100.
+uba-ghana,9M-2025,ratios,cost_to_income_pct,40.960,percent,,,derived,(Staff + depreciation + other operating expenses) / net operating income x 100.
+uba-ghana,9M-2026,ratios,ldr_pct,19.490,percent,,,derived,Net loans / customer deposits x 100.
+uba-ghana,9M-2026,ratios,cost_to_income_pct,49.690,percent,,,derived,(Staff + depreciation + other operating expenses) / net operating income x 100.
