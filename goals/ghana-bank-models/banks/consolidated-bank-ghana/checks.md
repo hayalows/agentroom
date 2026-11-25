@@ -21,20 +21,31 @@ H1 assumed loan yield 18.00%, placements 6.50%, fitted securities yield 13.20%, 
 | Scenario | Year | Accounting residual | CAR % | Minimum % | Capital gap | Buffer gap | Cash | Reserve gap | Allowance reductions |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | base | FY2026E | 0.000 | 15.288 | 13.000 | 0.000 | 38.594 | 1647.583 | 1708.369 | 17.846 |
-| base | FY2027E | 0.000 | 14.281 | 13.000 | 0.000 | 102.484 | 2505.047 | 1282.984 | 73.988 |
-| base | FY2028E | 0.000 | 12.535 | 13.000 | 30.655 | 228.322 | 3466.379 | 829.248 | 73.253 |
-| base | FY2029E | 0.000 | 10.131 | 13.000 | 209.358 | 428.258 | 4493.136 | 368.826 | 41.444 |
-| base | FY2030E | 0.000 | 7.441 | 13.000 | 449.308 | 691.788 | 5630.437 | 0.000 | 41.202 |
+| base | FY2027E | 0.000 | 15.207 | 13.000 | 0.000 | 47.379 | 2561.834 | 1226.196 | 73.988 |
+| base | FY2028E | 0.000 | 14.849 | 13.000 | 0.000 | 76.195 | 3623.152 | 672.475 | 73.253 |
+| base | FY2029E | 0.000 | 14.334 | 13.000 | 0.000 | 122.499 | 4808.233 | 53.729 | 41.444 |
+| base | FY2030E | 0.000 | 13.507 | 13.000 | 0.000 | 203.789 | 6133.338 | 0.000 | 41.202 |
 | downside | FY2026E | 0.000 | 13.122 | 13.000 | 0.000 | 148.639 | 1066.994 | 2063.076 | 0.000 |
-| downside | FY2027E | 0.000 | 11.228 | 13.000 | 97.278 | 261.981 | 1201.126 | 2127.078 | 28.085 |
-| downside | FY2028E | 0.000 | 7.774 | 13.000 | 301.133 | 473.988 | 1244.083 | 2296.044 | 74.706 |
-| downside | FY2029E | 0.000 | -2.068 | 13.000 | 890.942 | 1068.329 | 903.983 | 2862.713 | 155.398 |
-| downside | FY2030E | 0.000 | -17.285 | 13.000 | 1812.736 | 1992.303 | 209.116 | 3779.061 | 137.793 |
+| downside | FY2027E | 0.000 | 6.682 | 13.000 | 343.924 | 507.224 | 948.394 | 2379.810 | 28.085 |
+| downside | FY2028E | 0.000 | -1.255 | 13.000 | 807.625 | 977.597 | 725.095 | 2815.033 | 74.706 |
+| downside | FY2029E | 0.000 | -11.818 | 13.000 | 1441.539 | 1615.792 | 339.801 | 3426.895 | 155.398 |
+| downside | FY2030E | 0.000 | -25.952 | 13.000 | 2295.766 | 2472.583 | -285.831 | 4274.008 | 137.793 |
 | upside | FY2026E | 0.000 | 15.499 | 13.000 | 0.000 | 27.850 | 1913.234 | 1539.524 | 33.029 |
-| upside | FY2027E | 0.000 | 14.046 | 13.000 | 0.000 | 123.907 | 3156.787 | 860.842 | 38.078 |
-| upside | FY2028E | 0.000 | 12.400 | 13.000 | 43.765 | 262.600 | 4655.082 | 53.820 | 43.680 |
-| upside | FY2029E | 0.000 | 11.192 | 13.000 | 152.262 | 404.930 | 6459.048 | 0.000 | 55.059 |
-| upside | FY2030E | 0.000 | 10.299 | 13.000 | 265.145 | 559.696 | 8672.978 | 0.000 | 26.758 |
+| upside | FY2027E | 0.000 | 16.209 | 13.000 | 0.000 | 0.000 | 3298.199 | 719.431 | 38.078 |
+| upside | FY2028E | 0.000 | 16.779 | 13.000 | 0.000 | 0.000 | 4984.764 | 0.000 | 43.680 |
+| upside | FY2029E | 0.000 | 17.257 | 13.000 | 0.000 | 0.000 | 6986.728 | 0.000 | 55.059 |
+| upside | FY2030E | 0.000 | 17.591 | 13.000 | 0.000 | 0.000 | 9412.952 | 0.000 | 26.758 |
 
-15/15 scenario-years reconcile before rounding. Below shared CAR minimum: 10/15; below 3pp buffer: 15/15; cash reserve proxy gaps: 12/15; negative cash: 0/15; negative securities: 0/15. Positive gaps are unmet requirements in this illustrative model, NOT regulatory breaches. Bank-specific reserve dispensation and exact eligible balances remain unknown. No recapitalisation or new funding plugged.
+15/15 scenario-years reconcile before rounding. Below shared CAR minimum: 4/15; below 3pp buffer: 11/15; cash reserve proxy gaps: 11/15; negative cash: 1/15; negative securities: 0/15. Positive gaps are unmet requirements in this illustrative model, NOT regulatory breaches. Bank-specific reserve dispensation and exact eligible balances remain unknown. No recapitalisation or new funding plugged.
 Tax uses reported H1 plus 35% of positive H2 PBT; subsequent positive PBT taxed at 35%; no forecast loss tax benefit. No dividends, accumulated losses. FX net position modeled as P&L sensitivity only. NPL targets and provision stocks not loan-level migration; model checks allowance movement. ROE blank if mean equity nonpositive. Independent review required.
+
+## Repricing and capital sensitivity
+FY2025 source: CBG25AR pp84–85, fast share 34.66%, slow share 65.34%. Static reported +100bp NII effect -12.442m; simple first-year fast-bucket diagnostic -12.572m, original full-pass diagnostic 89.854m. This is a rounded funding-beta fit, not validation or replication of contractual gap methodology. H2 fitted starting yields unchanged; subsequent long bucket resets 20% per year by assumption.
+
+| Scenario | 2030 PAT staged | CAR staged % | Gap staged | PAT full repricing (same beta) | CAR full % | Gap full | PAT legacy full / 30% beta | CAR legacy % | Gap legacy | CAR 80% eligibility % | Gap 80% |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| base | 50.030 | 13.507 | 0.000 | -62.666 | 9.819 | 258.266 | -137.774 | 7.441 | 449.308 | 12.719 | 23.008 |
+| downside | -843.118 | -25.952 | 2295.766 | -912.353 | -20.255 | 1979.940 | -912.353 | -17.285 | 1812.736 | -25.952 | 2295.766 |
+| upside | 280.903 | 17.591 | 0.000 | 139.553 | 12.466 | 52.603 | 68.609 | 10.299 | 265.145 | 15.643 | 0.000 |
+
+Reserve tiers computed on statutory reserve only, fair value held constant; all scenarios start from actual H1 balance. Positive income eligibility is a sensitivity, not a reported future regulatory deduction.
