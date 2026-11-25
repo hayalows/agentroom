@@ -1,6 +1,6 @@
 {
   "bank": "gcb",
-  "status": "PLACEHOLDER macro scenarios until shared macro.csv is published; bank-specific parameters are estimated, not reported guidance.",
+  "status": "Bank-specific scenario estimates using shared macro v1; regulatory threshold 13% corroborated by September 2026 BoG Monetary Policy Report; not investment advice.",
   "forecast_periods": [
     "FY2026E",
     "FY2027E",
@@ -10,208 +10,6 @@
   ],
   "macro_file": "../../sector/macro-assumptions/macro.csv",
   "macro_schema": "../../sector/macro-assumptions/SCHEMA.md",
-  "macro_placeholder": {
-    "status": "PLACEHOLDER",
-    "note": "Illustrative technical paths for provisional calculation only; do not use for final sector comparison. Replace automatically when complete shared macro.csv exists. Years 2026–2030. November 2026 BoG MPC release states MPR aligned from 14 to 11%; other values are deliberately hypothetical, not reported or authoritative.",
-    "source": "https://www.bog.gov.gh/wp-content/uploads/2026/11/MPC-Press-Release-November-2026.pdf",
-    "paths": {
-      "base": {
-        "policy_rate_pct": [
-          11,
-          12,
-          12,
-          11,
-          11
-        ],
-        "tbill_364d_pct": [
-          12,
-          13,
-          13,
-          12,
-          12
-        ],
-        "govt_bond_yield_pct": [
-          15,
-          15,
-          14,
-          14,
-          13
-        ],
-        "inflation_cpi_pct": [
-          7,
-          8,
-          8,
-          7,
-          7
-        ],
-        "gdp_growth_pct": [
-          5,
-          5,
-          5,
-          5,
-          5
-        ],
-        "ghs_per_usd_end": [
-          12,
-          12.6,
-          13.23,
-          13.89,
-          14.58
-        ],
-        "crr_pct": [
-          20,
-          20,
-          20,
-          20,
-          20
-        ],
-        "min_car_pct": [
-          13,
-          13,
-          13,
-          13,
-          13
-        ],
-        "min_capital_ghs_m": [
-          400,
-          400,
-          400,
-          400,
-          400
-        ]
-      },
-      "downside": {
-        "policy_rate_pct": [
-          11,
-          16,
-          18,
-          17,
-          16
-        ],
-        "tbill_364d_pct": [
-          12,
-          18,
-          20,
-          19,
-          18
-        ],
-        "govt_bond_yield_pct": [
-          15,
-          20,
-          22,
-          21,
-          20
-        ],
-        "inflation_cpi_pct": [
-          7,
-          13,
-          15,
-          13,
-          11
-        ],
-        "gdp_growth_pct": [
-          5,
-          2,
-          1,
-          2,
-          3
-        ],
-        "ghs_per_usd_end": [
-          12.5,
-          15,
-          18,
-          20.7,
-          23.8
-        ],
-        "crr_pct": [
-          20,
-          20,
-          20,
-          20,
-          20
-        ],
-        "min_car_pct": [
-          13,
-          13,
-          13,
-          13,
-          13
-        ],
-        "min_capital_ghs_m": [
-          400,
-          400,
-          400,
-          400,
-          400
-        ]
-      },
-      "upside": {
-        "policy_rate_pct": [
-          11,
-          10,
-          9,
-          9,
-          9
-        ],
-        "tbill_364d_pct": [
-          12,
-          10,
-          10,
-          10,
-          10
-        ],
-        "govt_bond_yield_pct": [
-          15,
-          13,
-          12,
-          12,
-          12
-        ],
-        "inflation_cpi_pct": [
-          7,
-          5,
-          5,
-          5,
-          5
-        ],
-        "gdp_growth_pct": [
-          5,
-          7,
-          7,
-          6,
-          6
-        ],
-        "ghs_per_usd_end": [
-          11.5,
-          11.6,
-          11.8,
-          12,
-          12.2
-        ],
-        "crr_pct": [
-          20,
-          20,
-          20,
-          20,
-          20
-        ],
-        "min_car_pct": [
-          13,
-          13,
-          13,
-          13,
-          13
-        ],
-        "min_capital_ghs_m": [
-          400,
-          400,
-          400,
-          400,
-          400
-        ]
-      }
-    }
-  },
   "anchor": {
     "period": "9M-2026",
     "source": "GCB26Q3",
@@ -365,7 +163,7 @@
     },
     "model_structure": {
       "status": "estimated",
-      "method": "Hold noncore balance sheet lines proportional to deposit growth, except property/other assets grow with opex, stated capital and other reserves constant; securities follow deposit growth; cash balances plug the accounting identity, flag negative balances/reserve shortfall without automatically borrowing. RWA = gross loans + FY2025 calibrated residual risk intensity x non-gross-loan assets. Q3 regulatory capital anchored on reported CAR x estimated RWA; Tier1 capital anchored using FY2025 Tier1/total regulatory capital relationship. Retained profit increments regulatory capital; constrain dividends to pre-dividend cash and CAR buffer. Report proxy, not regulatory returns.",
+      "method": "Hold noncore balance sheet lines proportional to deposit growth, except property/other assets grow with opex, stated capital and other reserves constant; securities follow deposit growth; cash balances plug the accounting identity, flag negative balances/reserve shortfall without automatically borrowing. RWA = gross loans + FY2025 calibrated residual risk intensity x (total assets minus gross loans). Q3 regulatory capital anchored on reported CAR x estimated RWA; Tier1 capital anchored using FY2025 Tier1/total regulatory capital relationship. Retained profit increments regulatory capital; constrain dividends to pre-dividend cash and CAR buffer. Report proxy, not regulatory returns.",
       "q4_cost_multiplier": {
         "base": 1,
         "downside": 1.1,
@@ -387,14 +185,21 @@
         "downside": -8,
         "upside": 3
       },
-      "interbank_yield_policy_factor": 0.75
+      "interbank_yield_policy_factor": 0.75,
+      "q4_opex_balance_growth": "Annual opex growth divided by four for Q4 property and other assets; fee expense run-rate uses separate funding multiplier only for interest expense and scenario fee expense ratio multiplier for fee expense.",
+      "allowance_bridge": "Allowance stock target is separate from impairment flow; implied write-offs/other movements = opening allowance + loan impairment charge - closing allowance. Negative is unmodelled additional allowance build, not an observed recovery. 2026 opening allowance proxy only; report separately.",
+      "cash_residual": "Do not hide negative cash; show reserve and funding gap. Cash includes reported cash+BoG aggregate so regulatory compliance not established."
     }
   },
   "notes": [
     "All numeric driver assumptions are analyst estimates, not reported bank results or management guidance.",
-    "Scenario values are provisional judgments; revisit on receipt of shared macro.csv and after FY2025/interim note review.",
     "2026 income statement must retain reported 9M results plus separately estimated Q4; model checks must flag any liquidity or capital shortfall.",
-    "No forecast output generated until formula implementation and shared macro validation.",
-    "Placeholder minimum CAR 13% is deliberately conservative model screening, not assertion of statutory ratio; shared regulatory series must replace it."
-  ]
+    "Shared macro v1 numeric paths now used. Regulatory minimum 13% corroborated in Bank of Ghana September 2026 Monetary Policy Report, https://www.bog.gov.gh/wp-content/uploads/2026/10/Monetary-Policy-Report-September-2026.pdf; current GCB summary does not state the minimum. Minimum paid-up capital 400m carried from shared source with verification caveat."
+  ],
+  "macro_snapshot": {
+    "path": "../../sector/macro-assumptions/macro.csv",
+    "blob_sha": "40aedc5273adef1888e2ca592cca10c0b4015571",
+    "status": "shared",
+    "note": "Use all three shared scenarios; rerun after macro revisions. Missing required driver is a hard error."
+  }
 }
