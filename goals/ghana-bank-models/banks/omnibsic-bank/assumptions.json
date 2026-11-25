@@ -1,6 +1,6 @@
 {
   "bank": "omnibsic-bank",
-  "status": "DRAFT: FY2021 and FY2025 full notes missing; no acceptance",
+  "status": "CONDITIONAL: FY2021 complete annual statement and FY2025 full notes missing; not accepted",
   "macro_file": "../../sector/macro-assumptions/macro.csv",
   "anchor": "Actual 9M2026 plus Q4 estimate; no FY2021 imputation",
   "assumptions": {
@@ -11,7 +11,7 @@
     "asset_rate_beta": 0.55,
     "funding_rate_beta": 0.35,
     "rwa_density": 0.38,
-    "capital_reason": "Analyst proxy near original FY2024 audited 3564.267m RWA / ~9.3bn assets; no Q3 numerator/RWA. Anchor to observed 19.55% CAR at assumed RWA; additions from retained profit, no fresh capital, 0.48 density stress",
+    "capital_reason": "Analyst proxy near original FY2024 audited 3564.267m RWA / ~9.3bn assets; no Q3 numerator/RWA. Anchor to observed 19.55% CAR at assumed RWA; additions from retained profit, no fresh capital, 0.48 density stress Opening proxy numerator exceeds actual book equity; illustrative alternative caps opening numerator at book equity, not a regulatory rule, combined with 48% density stress.",
     "rwa_stress": 0.48,
     "tax": 0.35,
     "tax_reason": "25% corporation plus historical levies (FY24 36.5% effective, 9M26 35%); no credit on losses",
@@ -73,5 +73,5 @@
       "buffer": 6
     }
   },
-  "driver_note": "All scenario driver values are analyst estimates, not guidance; loan/fee/deposit/wholesale growth use nominal GDP proxy; investment securities grow by fractional deposit growth; Q4 runrate uses actual 9M/3 times stated factors; future blended interest uses average earning pool, shared 364d rates and calibrated rates with partial beta; impairment on average NET loans, gross and allowance unavailable, no NPL estimate invented; operating cost growth CPI+spread; property and other assets, nonbank liabilities grow with deposit growth."
+  "driver_note": "All scenario driver values are analyst estimates, not guidance; loan/fee/deposit/wholesale growth use nominal GDP proxy; investment securities grow by fractional deposit growth; Q4 runrate uses actual 9M/3 times stated factors; future blended interest uses average earning pool, shared 364d rates and calibrated rates with partial beta; impairment on average NET loans, gross and allowance unavailable, no NPL estimate invented; operating cost growth CPI+spread; property and other assets, nonbank liabilities grow with deposit growth. Nominal GDP growth is compounded (1+real GDP)*(1+CPI)-1."
 }

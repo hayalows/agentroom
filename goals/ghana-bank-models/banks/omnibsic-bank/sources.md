@@ -1,6 +1,6 @@
 # OmniBSIC Bank Ghana LTD — primary source register
 
-Status: PARTIAL HISTORY, no forecast or review submission yet. Bank-only statements in GHS thousands converted to GHS millions. Retrieved 25 November 2026 using issuer archive and secondary Firecrawl; physical PDF pages, not printed page numbers. FY2021 audited full year not yet obtained. No secondary/news numbers used as actuals.
+Status: CONDITIONAL model built and independently reviewed; ordinary acceptance blocked by missing FY21 and unresolved FY24 comparative. Bank-only statements in GHS thousands converted to GHS millions. Retrieved 25 November 2026 using issuer archive and secondary Firecrawl; physical PDF pages, not printed page numbers. FY2021 audited full year not yet obtained. No secondary/news numbers used as actuals.
 
 | ID | Official filing | Periods | Access |
 |---|---|---|---|
@@ -8,7 +8,7 @@ Status: PARTIAL HISTORY, no forecast or review submission yet. Bank-only stateme
 | OM25 | https://www.omnibsic.com.gh/assets/images/reports/december-2025.pdf | FY2025 and FY2024 comparative | Firecrawl + web PDF text; p1 visually checked |
 | OM26Q3 | https://www.omnibsic.com.gh/assets/images/reports/omnibsic-unaudited-financials-Q3.pdf | 9M2026 and 9M2025 comparative | Firecrawl text; web rendering unavailable; ratio table parsed on p2 |
 | OM23AR | https://omnibsic.com.gh/files/OmniBSIC202329.Mar.2024.pdf | FY2023 full audited, FY2022 comparative | Located; notes extraction pending |
-| OM24AR | https://www.omnibsic.com.gh/assets/images/reports/aanual-report-2024.pdf | FY2024 full audited | Located; notes extraction pending |
+| OM24AR | https://www.omnibsic.com.gh/assets/images/reports/aanual-report-2024.pdf | FY2024 full audited | Selected notes visually verified; see below |
 | OM25AR | https://www.omnibsic.com.gh/assets/images/reports/2025-annual.pdf | FY2025 full annual report | Located; notes extraction pending |
 
 Issuer index: https://www.omnibsic.com.gh/investor-relation.php . It contains Q1/H1 2021 but no full FY2021 filing found. A third-party database lists 2021 and 2022 reports; no unauthenticated primary document retrieved. Need public FY2022 audited financial statements with 2021 comparative (or FY2021 standalone) before marking historical coverage complete.
@@ -21,3 +21,6 @@ OM24AR printed p81 and p87 (physical PDF pages 83 and 89) visually checked. FY24
 Material gap: original OM24AR net loans 1026.703m vs OM25 comparative 980.073m, difference46.630m. Do NOT combine original gross/allowance with later net; original figures remain non-additive memos and comparative gross/allowance unavailable pending OM25AR explanation. No assertion of restatement cause. FY2025 full PDF exceeds web fetch size; secondary Firecrawl PDF scrape failed. Need accessible official full report and note 16.
 
 OM23AR printed p90 (indexed PDF text; live screenshot redirected to 404) gives FY22 gross777.826m, ECL101.553m, net676.273m; FY23 gross687.218m/ECL107.273m/net579.945m, visually corroborated by OM24AR. FY22 opening allowance103.088m (FY21 closing). Printed p39 FY22 opening equity370.926m, stated capital694.948m, contribution100m, statutory3.893m, credit risk93.067m, deficit -520.982m. This is partial FY21 closing evidence, not full FY21 IS/BS; no FY21 annual row created. Printed p91 DDEP exchanged 432.1m GHS government bonds, 413.4m COCOBOD bonds, 22.9m GHS-equivalent USD bonds; 10.5m modification loss and 136.571m allowance derecognised. FY23 note16 p90 top 50 exposures87% (FY22 90%); OM24AR note16 p88 FY24 85%. Concentration is material. OM24AR printed p86 visual: FY24 corporate tax83.304m, GSL15.698m and financial sector levy15.698m =114.700m. Deferred tax assets53m unrecognised, FY23 45m; do not automatically assume loss tax credits.
+
+## Conditional review response
+Q3 official filing independently corroborated by Papa Kojo Agent; 9M26 actual capital ratio19.55% and book equity1346.713m. Actual regulatory numerator and RWA unavailable; 38% assumed density implies 1541.480m numerator. Book-equity cap and 48% density combined sensitivity explicitly estimated. Prior 2025 PDF download incomplete, no new source claims. Nominal growth compounded; canonical CAR forecast unavailable; separate estimated proxy. FY21 missing, FY24 original/comparative difference remains explicit.
