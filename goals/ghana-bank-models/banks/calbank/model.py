@@ -52,6 +52,7 @@ def run():
         assump = json.load(f)
 
     years = assump['forecast_years']
+    cof_calibration = assump['cost_of_funds_calibration']
     fy25 = hist['FY2025']
     q3 = hist['9M-2026']
     # Calibrate CAR proxy directly to 9M-2026 reported 18.4% CAR
@@ -75,6 +76,7 @@ def run():
         target_car = drv['target_car_pct']['value']
 
         for yr in years:
+            div = 0.0
             pol = macro[(scen, yr, 'policy_rate_pct')]
             tb91 = macro[(scen, yr, 'tbill_91d_pct')]
             tb364 = macro[(scen, yr, 'tbill_364d_pct')]
@@ -85,9 +87,14 @@ def run():
             min_car = macro[(scen, yr, 'min_car_pct')]
 
             nom_gdp = ((1.0 + gdp / 100.0) * (1.0 + cpi / 100.0) - 1.0) * 100.0
-            y_inv = (0.5 * tb364 + 0.5 * bond + drv['yield_on_investments_spread_over_blend_pct']['value']) / 100.0
-            y_loan = (pol + drv['yield_on_loans_spread_over_policy_pct']['value']) / 100.0
-            cof = max(0.015, (tb91 + drv['cost_of_funds_spread_over_tbill91_pct']['value']) / 100.0)
+            yield_tb364 = float(cof_calibration['q4_2026_tbill_364d_pct']) if yr == 'FY2026E' else tb364
+            yield_bond = float(cof_calibration['q4_2026_govt_bond_yield_pct']) if yr == 'FY2026E' else bond
+            y_inv = (0.5 * yield_tb364 + 0.5 * yield_bond + drv['yield_on_investments_spread_over_blend_pct']['value']) / 100.0
+            loan_policy = float(cof_calibration['q4_2026_policy_rate_pct']) if yr == 'FY2026E' else pol
+            y_loan = (loan_policy + drv['yield_on_loans_spread_over_policy_pct']['value']) / 100.0
+            cof_bill = float(cof_calibration['q4_2026_tbill_91d_pct']) if yr == 'FY2026E' else tb91
+            cof_pct = max(drv['cost_of_funds_floor_pct']['value'], drv['cost_of_funds_intercept_pct']['value'] + drv['cost_of_funds_tbill_beta']['value'] * cof_bill)
+            cof = cof_pct / 100.0
             cor = drv['cost_of_risk_pct'][yr] / 100.0
 
             if yr == 'FY2026E':
@@ -182,6 +189,7 @@ def run():
                     total_assets = total_liab + total_eq
                     car_test = (total_eq / (total_assets * rwa_density_q3)) * 100.0
                     if car_test < target_car and div > 0:
+                        div = 0.0
                         ret_earn = prev['retained_earnings'] + pat
                         total_eq = stated_cap + ret_earn + res_other
                         total_assets = total_liab + total_eq
@@ -198,9 +206,13 @@ def run():
             roe_pct = None if avg_eq <= 0 else (pat / avg_eq) * 100.0
             roa_pct = (pat / avg_as) * 100.0
 
+            interest_income_note = ('FY2026E = 9M actual + iterative Q4; Q4 uses the day-weighted policy rate and Q4 investment yields in assumptions.json.' if yr == 'FY2026E' else 'Average loans x policy-linked loan yield + average investments x 50/50 364-day bill and 10-year bond yield (macro.csv).')
+            cof_note = ('FY2026E adds Q4 interest expense using the implied Q4 bill mean in assumptions.json; 9M actual is retained.' if yr == 'FY2026E' else 'Cost of funds = max(1.5%, 0.7% + 0.18 x annual 91-day bill rate); calibrated to FY2025 and 9M-2026 in checks.md.')
+            dividends_note = ('FY2026E assumes no Q4 dividend; CAL26Q3 reports no dividend movement in its 9M-2026 equity rollforward.' if yr == 'FY2026E' else 'Modeled payout under positive retained earnings and CAR gate; deducted once from retained earnings.')
+            retained_earnings_note = ('9M-2026 closing retained earnings + projected Q4 PAT - assumed Q4 dividends (0); 9M reserve transfers are already reflected.' if yr == 'FY2026E' else 'Prior retained_earnings + PAT - dividends (payout gated on positive retained earnings & CAR >= target).')
             items = [
-                ('income_statement', 'interest_income', int_inc, 'GHS millions', 'FY26E = 9M-26 + iterative Q4; FY27E+ = avg loans*y_loan + avg inv*y_inv (macro.csv).'),
-                ('income_statement', 'interest_expense', int_exp, 'GHS millions', 'Linked to macro.csv tbill_91d_pct (calibrated to 9M-2026 ~2.0% CoF).'),
+                ('income_statement', 'interest_income', int_inc, 'GHS millions', interest_income_note),
+                ('income_statement', 'interest_expense', int_exp, 'GHS millions', cof_note),
                 ('income_statement', 'net_interest_income', nii, 'GHS millions', 'interest_income - interest_expense.'),
                 ('income_statement', 'fee_commission_income', fee_inc, 'GHS millions', 'Linked to nominal GDP (macro.csv).'),
                 ('income_statement', 'fee_commission_expense', fee_exp, 'GHS millions', '0.7x fee growth.'),
@@ -215,6 +227,7 @@ def run():
                 ('income_statement', 'profit_before_tax', pbt, 'GHS millions', 'total_operating_income - opex - x_lease_finance_cost - impairment.'),
                 ('income_statement', 'income_tax', tax, 'GHS millions', 'profit_before_tax * tax_rate.'),
                 ('income_statement', 'profit_after_tax', pat, 'GHS millions', 'profit_before_tax - income_tax.'),
+                ('income_statement', 'x_dividends_paid', div, 'GHS millions', dividends_note),
                 ('balance_sheet', 'cash_and_bog_balances', cash_bog, 'GHS millions', 'Proxy screen >= crr_pct (20%) on customer_deposits; includes due_from_banks aggregate.'),
                 ('balance_sheet', 'due_from_banks', None, 'GHS millions', 'Not split from cash_and_bog_balances.'),
                 ('balance_sheet', 'investment_securities', inv_sec, 'GHS millions', 'Balancing liquid asset = total_assets - loans - ppe - other - cash; solved iteratively.'),
@@ -230,7 +243,7 @@ def run():
                 ('balance_sheet', 'other_liabilities', other_liab, 'GHS millions', 'Tracks CPI inflation.'),
                 ('balance_sheet', 'total_liabilities', total_liab, 'GHS millions', 'Sum of liability items.'),
                 ('balance_sheet', 'stated_capital', stated_cap, 'GHS millions', 'Held flat.'),
-                ('balance_sheet', 'retained_earnings', ret_earn, 'GHS millions', 'Prior retained_earnings + PAT - dividends (payout gated on positive retained earnings & CAR >= target).'),
+                ('balance_sheet', 'retained_earnings', ret_earn, 'GHS millions', retained_earnings_note),
                 ('balance_sheet', 'reserves_other', res_other, 'GHS millions', 'Held flat.'),
                 ('balance_sheet', 'total_equity', total_eq, 'GHS millions', 'stated_capital + retained_earnings + reserves_other.'),
                 ('ratios', 'car_pct', car_pct, '%', 'Proxy calibrated to 9M-2026 reported 18.4% CAR (total_equity / (total_assets * 9M-26_RWA_density)).'),
@@ -257,7 +270,7 @@ def run():
             max_fc_res = max(abs(x) for x in [bs_diff, as_diff, ls_diff, eq_diff, nii_diff, toi_diff, pbt_diff, pat_diff])
             inv_ok = inv_sec >= 0.0
             car_ok = car_pct >= min_car
-            fc_checks.append((scen, yr, max_fc_res, iter_diff, inv_ok, car_pct, min_car, car_ok, pat, roe_pct or 0.0))
+            fc_checks.append((scen, yr, max_fc_res, iter_diff, inv_ok, car_pct, min_car, car_ok, float(f'{pat:.3f}'), float(f'{(roe_pct or 0.0):.3f}')))
 
             prev = {
                 'loans_and_advances_net': loans_net, 'customer_deposits': cust_dep,
@@ -307,6 +320,59 @@ def run():
         '- `CAL26Q3` p. 1–2 (Bank Sep-26): `profit_after_tax` = `321,670` GHS \'000 (`321.67` GHS m); `customer_deposits` = `10,633,698` GHS \'000 (`10633.698` GHS m).',
         '- **CRR proxy caveat:** `cash_and_bog_balances` includes `due_from_banks` in summary statements; `cash_bog >= 20% * customer_deposits` is a liquidity proxy screen, not regulatory BoG cedi CRR compliance.',
         '- **CAR caveat:** Forecast `car_pct` is a proxy calibrated to `9M-2026` reported `18.4%` CAR (`total_equity / (total_assets * RWA_density)`), not a prudential Tier 1+Tier 2 calculation.',
+        '',
+        '## 4. Cost-of-funds calibration',
+        'Formula across scenarios: `max(1.5%, 0.7% + 0.18 x tbill_91d_pct)`, where the slope is 0.18 percentage points per one percentage-point bill-rate move. Funding is customer deposits + due to banks + borrowings; 9M cost is annualized by 4/3. These are derived bank-wide rates, not reported product pricing.',
+        '| Period | 91-day bill (%) | Annualized interest expense (GHS m) | Average funding (GHS m) | Observed cost (%) | Model fit (%) | Fit error (pp) |',
+        '| --- | ---: | ---: | ---: | ---: | ---: | ---: |',
+    ])
+    calibration = cof_calibration
+    beta = assump['drivers']['base']['cost_of_funds_tbill_beta']['value']
+    intercept = assump['drivers']['base']['cost_of_funds_intercept_pct']['value']
+    floor_pct = assump['drivers']['base']['cost_of_funds_floor_pct']['value']
+    def funding(d):
+        return d['customer_deposits'] + d['due_to_banks'] + d['borrowings']
+    fy24, fy25 = hist['FY2024'], hist['FY2025']
+    avg_funding_25 = (funding(fy24) + funding(fy25)) / 2.0
+    observed_25 = fy25['interest_expense'] / avg_funding_25 * 100.0
+    bill_25 = macro[('actual', '2025', 'tbill_91d_pct')]
+    fit_25 = max(floor_pct, intercept + beta * bill_25)
+    q3 = hist['9M-2026']
+    avg_funding_26 = (funding(fy25) + funding(q3)) / 2.0
+    annual_interest_26 = q3['interest_expense'] * 4.0 / 3.0
+    observed_26 = annual_interest_26 / avg_funding_26 * 100.0
+    bill_26 = float(calibration['jan_sep_2026_tbill_91d_pct'])
+    fit_26 = max(floor_pct, intercept + beta * bill_26)
+    q4_bill = float(calibration['q4_2026_tbill_91d_pct'])
+    q4_policy = float(calibration['q4_2026_policy_rate_pct'])
+    q4_bill_364 = float(calibration['q4_2026_tbill_364d_pct'])
+    q4_bond = float(calibration['q4_2026_govt_bond_yield_pct'])
+    base_26_income = next(float(r[5]) for r in fc_rows if r[1] == 'base' and r[2] == 'FY2026E' and r[4] == 'interest_income')
+    annualized_9m_income = q3['interest_income'] * 4.0 / 3.0
+    lines.append(f'| FY2025 | {bill_25:.2f} | {fy25["interest_expense"]:.3f} | {avg_funding_25:.3f} | {observed_25:.3f} | {fit_25:.3f} | {fit_25-observed_25:+.3f} |')
+    lines.append(f'| 9M-2026 annualized | {bill_26:.2f} | {annual_interest_26:.3f} | {avg_funding_26:.3f} | {observed_26:.3f} | {fit_26:.3f} | {fit_26-observed_26:+.3f} |')
+    lines.extend([
+        f'- FY2025 bill rate is the 12-month mean in `macro.csv`. The 9M-2026 bill rate is the Jan-Sep monthly mean (6.23%) from Bank of Ghana November 2026 Summary, p.3.',
+        f'- FY2026E adds Q4 only. Q4 uses an implied 91-day bill mean of {q4_bill:.2f}%, a day-weighted policy rate of {q4_policy:.2f}%, and Q4 investment references of {q4_bill_364:.3f}% (364-day bill) and {q4_bond:.2f}% (10-year bond). The 5.81% 91-day, 11.01% 364-day and 14.05% bond inputs in `macro.csv` are full-year estimates, so they are not applied directly to Q4.',
+        f'- Related interest-income fit: base FY2026E is {base_26_income:.3f}m versus the 9M-2026 annualized run rate of {annualized_9m_income:.3f}m ({(base_26_income/annualized_9m_income-1)*100:+.1f}%). The base loan-yield rule is Q4 policy rate + 1.0 percentage point; this aggregate fit is a calibration guide, not an observed loan yield.',
+        '',
+        '## 5. Scenario PAT ordering',
+        '| Year | Downside PAT | Base PAT | Upside PAT | Highest to lowest |',
+        '| --- | ---: | ---: | ---: | --- |',
+    ])
+    pat_lookup = {(r[1], r[2]): float(r[5]) for r in fc_rows if r[4] == 'profit_after_tax'}
+    for year in years:
+        vals = {scen: pat_lookup[(scen, year)] for scen in ['downside', 'base', 'upside']}
+        order = ' > '.join(sorted(vals, key=vals.get, reverse=True))
+        lines.append(f'| {year} | {vals["downside"]:.1f} | {vals["base"]:.1f} | {vals["upside"]:.1f} | {order} |')
+    lines.extend([
+        '- From FY2027E, the downside macro path produces the highest modeled PAT because higher policy, T-bill and bond rates lift modeled loan and securities income faster than higher impairment and operating costs reduce profit. The downside loan spread is +1.5 percentage points versus +1.0 base and +0.5 upside; investment yields use a 50/50 blend of 364-day bills and 10-year bonds, with no maturity or repricing schedule. This ordering is sensitive to those assumptions and does not mean downside conditions are generally better for CalBank.',
+        '',
+        '## 6. Presentation and source reconciliations',
+        '- FY2024 Bank retained earnings stored from CAL25 SoFP p.65 are (1,209.108)m. The Directors table p.22 shows (946.562)m excluding reserve transfers; CAL25 SoCE p.67 reconciles this as opening (1,202.955) + PAT 256.393 - statutory reserve transfer 64.098 - credit-risk reserve transfer 198.448 = closing (1,209.108).',
+        '- CAL25 p.122 reports Bank CAR of 18.87% (FY2025) and (7.22%) (FY2024). Group CAR is 19.80% and (6.38%); the p.14 narrative refers to Group. Historical rows retain the Bank series.',
+        '- Right-of-use assets are recast from `other_assets` to `property_equipment_intangibles` per MODEL-SPEC; the reclass changes no period total. Source values and formulas are in `financials.csv` and `sources.md`.',
+        '- CAL26Q3 Statement of Changes in Equity (physical PDF p.3; no printed page numbers) reports no 9M-2026 dividend movement or amount. FY2026E `x_dividends_paid` is 0.000 because no Q4 payout is assumed; subsequent modeled payments are shown and deducted from retained earnings.',
     ])
     with open(CHECKS_PATH, 'w', encoding='utf-8') as f:
         f.write('\n'.join(lines) + '\n')
