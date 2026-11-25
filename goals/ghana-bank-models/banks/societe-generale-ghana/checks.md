@@ -36,15 +36,15 @@ Reported CAR is the audited capital-adequacy note; the bank's narrative quotes a
 
 All forecast rows are estimated. Currency GHS millions; ratios in percent. Accounting arithmetic is checked before rounding. Cash-reserve and CAR checks are screening proxies, not regulatory returns. A negative cash residual or a positive gap is a flagged financing requirement, not an assumed funding source.
 
-Rows: 855; scenario-years: 15; FY2025 residual RWA density: 0.668481; estimated 9M-2026 RWA: 9172.706; initial proxy regulatory capital: 1698.785 (anchored to the observed 18.52% CAR).
+Rows: 870; scenario-years: 15; FY2025 residual RWA density: 0.668481; estimated 9M-2026 RWA: 9172.706; initial proxy regulatory capital: 1698.785 (anchored to the observed 18.52% CAR).
 
 | Scenario | Year | Max bridge residual | CAR % | Min CAR % | Capital gap | Cash | CRR proxy | Reserve gap | Dividends |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| base | FY2026E | 0.000 | 18.188 | 13.000 | 0.000 | 4055.919 | 1488.473 | 0.000 | 17.181 |
-| base | FY2027E | 0.000 | 18.088 | 13.000 | 0.000 | 4388.618 | 1689.417 | 0.000 | 78.685 |
-| base | FY2028E | 0.000 | 18.062 | 13.000 | 0.000 | 4780.335 | 1925.935 | 0.000 | 62.548 |
-| base | FY2029E | 0.000 | 18.057 | 13.000 | 0.000 | 5205.823 | 2191.714 | 0.000 | 65.082 |
-| base | FY2030E | 0.000 | 18.068 | 13.000 | 0.000 | 5676.911 | 2494.170 | 0.000 | 89.181 |
+| base | FY2026E | 0.000 | 18.347 | 13.000 | 0.000 | 4073.100 | 1488.473 | 0.000 | 0.000 |
+| base | FY2027E | 0.000 | 18.106 | 13.000 | 0.000 | 4390.725 | 1689.417 | 0.000 | 94.094 |
+| base | FY2028E | 0.000 | 18.064 | 13.000 | 0.000 | 4780.593 | 1925.935 | 0.000 | 64.436 |
+| base | FY2029E | 0.000 | 18.057 | 13.000 | 0.000 | 5205.855 | 2191.714 | 0.000 | 65.314 |
+| base | FY2030E | 0.000 | 18.068 | 13.000 | 0.000 | 5676.915 | 2494.170 | 0.000 | 89.209 |
 | downside | FY2026E | 0.000 | 17.538 | 13.000 | 0.000 | 3829.089 | 1416.912 | 0.000 | 0.000 |
 | downside | FY2027E | 0.000 | 17.282 | 13.000 | 0.000 | 4025.566 | 1558.603 | 0.000 | 0.000 |
 | downside | FY2028E | 0.000 | 16.523 | 13.000 | 0.000 | 4170.034 | 1714.463 | 0.000 | 0.000 |
@@ -57,5 +57,50 @@ Rows: 855; scenario-years: 15; FY2025 residual RWA density: 0.668481; estimated 
 | upside | FY2030E | 0.000 | 19.126 | 13.000 | 0.000 | 8220.700 | 3186.423 | 0.000 | 195.584 |
 
 Accounting bridges: PASS (15/15). Capital below the shared minimum: 1/15 flagged. Cash-reserve proxy shortfalls: 0/15 flagged. Negative cash: 0/15 flagged.
+
+### Effective cost of risk vs the scenario input
+
+`cost_of_risk` in `assumptions.json` is the input; the allowance-build floor (max of the risk-based charge and the increase in the allowance stock) can lift the effective rate in fast-growth scenarios. Both are shown.
+
+| Scenario | Year | Input cost of risk % | Effective charge / avg gross loans % | Impairment charge |
+|---|---:|---:|---:|---:|
+| base | FY2026E | 1.50 | 0.88 | 47.518 |
+| base | FY2027E | 1.50 | 1.73 | 102.763 |
+| base | FY2028E | 1.50 | 1.78 | 122.520 |
+| base | FY2029E | 1.50 | 1.76 | 140.347 |
+| base | FY2030E | 1.50 | 1.76 | 162.522 |
+| downside | FY2026E | 3.50 | 2.79 | 148.971 |
+| downside | FY2027E | 3.50 | 3.50 | 195.983 |
+| downside | FY2028E | 3.50 | 3.50 | 213.622 |
+| downside | FY2029E | 3.50 | 3.50 | 232.848 |
+| downside | FY2030E | 3.50 | 3.50 | 253.197 |
+| upside | FY2026E | 0.80 | 0.70 | 38.136 |
+| upside | FY2027E | 0.80 | 1.91 | 118.466 |
+| upside | FY2028E | 0.80 | 1.98 | 147.846 |
+| upside | FY2029E | 0.80 | 2.00 | 180.315 |
+| upside | FY2030E | 0.80 | 2.04 | 223.376 |
+
+### Downside decomposition (cost pass-through vs credit)
+
+The downside presents a combined stress. To separate the two drivers, the table below shows, for FY2030E, the base and downside operating costs and impairment. Opex growth is CPI plus 8 points in the downside (higher than base), so part of the downside loss is cost pass-through driven mechanically by the shared macro downside inflation path, not by credit losses. A reader should treat the downside CAR path as a combined cost-and-credit stress, not a credit-only stress.
+
+| Scenario | Year | Total operating income | Operating costs | Impairment | Profit before tax | Tax | PAT |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| base | FY2030E | 1947.430 | 1123.271 | 162.522 | 661.638 | 231.573 | 430.064 |
+| downside | FY2030E | 1347.597 | 1437.026 | 253.197 | -342.626 | 0.000 | -342.626 |
+| upside | FY2030E | 2514.929 | 1016.746 | 223.376 | 1274.807 | 446.182 | 828.624 |
+
+**Counterfactual: downside with base cost growth (isolates the credit and rate effect).** The table above keeps the downside's CPI-plus-8pt opex rule. Below, the downside FY2030E is recomputed with the **base** opex growth spread, holding the downside operating income and impairment charge fixed. The gap is the part of the downside loss that is mechanical cost pass-through from the shared higher-inflation downside path.
+
+| FY2030E variant | Operating costs | Profit before tax | Tax | PAT |
+|---|---:|---:|---:|---:|
+| Downside as modelled (CPI+8) | 1437.026 | -342.626 | 0.000 | -342.626 |
+| Downside with base cost growth (CPI+4) | 1369.761 | -275.361 | 0.000 | -275.361 |
+
+The FY2030E gap between the two rows is the cost-pass-through component: with base cost growth the downside FY2030E loss shrinks to -275.361 from -342.626, so about 20% of the modelled downside loss magnitude comes from the mechanical opex rule (higher shared downside inflation plus the cost spread), not from credit or rates. The remaining loss is the credit and rate effect.
+
+### Tax treatment in the anchor year
+
+FY2026E retains the actual 9M-2026 tax charge and adds tax on any positive estimated Q4 profit before tax. No deferred-tax credit is recognised for a Q4 loss, so if the downside Q4 is a loss the annual effective rate exceeds the 35% input; this is the model's stated treatment, not an error. Dividends: the observed 9M-2026 equity already reflects the FY2025 final dividend of GHS173.669m paid in 2026 (SG26Q3), so no additional Q4-2026 dividend is assumed.
 
 FY2026 estimated earnings retain actual 9M income and estimate Q4 only. The Bank does not disclose a net FX position in the summary statements used, so no incremental FX translation P&L is modelled. Full prudential risk weights, OCI, capital deductions and liquidity eligibility are not available, so this is a simplified scenario analysis. Independent review required.

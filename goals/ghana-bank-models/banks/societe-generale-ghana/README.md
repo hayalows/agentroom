@@ -8,11 +8,15 @@ FY2025 bank-only total assets were GHS9,676.100m, customer deposits 5,843.183m, 
 
 | Estimated scenario | 2026E PAT | 2030E PAT | 2030E assets | 2030E CAR proxy |
 |---|---:|---:|---:|---:|
-| Base | 192.956 | 430.064 | 18,524.669 | 18.07% |
+| Base | 192.956 | 430.064 | 18,524.673 | 18.07% |
 | Downside | 38.552 | -342.626 | 14,439.914 | 10.67% |
 | Upside | 232.442 | 828.624 | 23,581.178 | 19.13% |
 
-Forecast assumptions are sensitivities, not management guidance. FY2026 is built from the actual 9M-2026 income statement plus an estimated Q4, and starts from the September 2026 balance sheet. Loan and deposit growth reflect the shared nominal GDP proxy plus a bank-specific spread; loan, securities and cash yields and the funding cost respond to shared rates. The downside path pushes the CAR proxy below the 13% shared minimum in FY2030E (a flagged shortfall of about GHS284m, not an assumed capital raise), while the base path holds a comfortable buffer. The wide long-run range shows the model's sensitivity to credit risk, growth and funding.
+Forecast assumptions are sensitivities, not management guidance. FY2026 is built from the actual 9M-2026 income statement plus an estimated Q4, and starts from the September 2026 balance sheet. Loan and deposit growth reflect the shared nominal GDP proxy plus a bank-specific spread; loan, securities and cash yields and the funding cost respond to shared rates. The downside path pushes the CAR proxy below the 13% shared minimum in FY2030E (a flagged shortfall of about GHS284m, not an assumed capital raise), while the base path holds a comfortable buffer.
+
+Two disclosure points a reader should note. First, the downside is a **combined** cost-and-credit stress: the shared macro downside has higher inflation, and opex growth is CPI-plus-8pts, so a large part of the downside FY2030E loss is mechanical cost pass-through rather than credit losses. `checks.md` splits the two and, to isolate the credit and rate effect, recomputes downside FY2030E with **base** cost growth: the loss shrinks from GHS342.6m to about GHS275.4m, so roughly a fifth of the downside loss magnitude is the opex rule alone. Second, the scenario `cost_of_risk` is an input; the allowance-build floor lifts the **effective** charge above it in high-growth scenarios, so the upside's 0.80% input becomes a 2.04% effective rate in FY2030E. `checks.md` reports the effective rate next to the input for every scenario-year, and `forecast.csv` carries it as `x_effective_cost_of_risk_pct`. NPL is a scenario input held flat across all years (12% base, 16% downside, 8% upside), independent of the modelled cost of risk.
+
+The model's anchor-year tax treatment: FY2026E retains the actual 9M-2026 tax charge and adds tax only on positive estimated Q4 profit; no deferred-tax credit is recognised for a Q4 loss, so a loss-making downside Q4 shows an effective rate above the 35% input. The observed 9M-2026 equity already reflects the FY2025 final dividend of GHS173.669m paid in 2026 (SG26Q3) — the unexplained 9M equity fall against 9M profit is that dividend — so no further Q4-2026 dividend is assumed, and `x_model_dividends` is zero in FY2026E for every scenario.
 
 ## The 2022-2023 Domestic Debt Exchange
 

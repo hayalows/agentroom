@@ -168,6 +168,7 @@ NOTE_B = {
 }
 
 rows, checks_log, summary = [], [], []
+states = {}
 HEADER = ["bank", "period", "statement", "line_item", "value", "unit",
           "source_id", "page", "status", "notes", "scenario"]
 SRC = "assumptions.json; ../../sector/macro-assumptions/macro.csv"
@@ -276,9 +277,15 @@ for s in SCEN:
         preRwa = rwa(preAssets, b["loans_and_advances_gross"])
         preCap = prevCap + incPAT
         reserve = b["customer_deposits"] * pct(crr)
-        div = max(0.0, min(max(incPAT, 0.0) * pct(D["dividend_payout_pct"][s]),
-                           preCap - preRwa * pct(carTarget),
-                           preCash - reserve))
+        if first:
+            # The observed 9M-2026 equity already reflects the FY2025 final dividend paid in
+            # 2026 (GHS173.669m, SG26Q3 cash-flow/equity statement), so Q4 carries no further
+            # dividend unless separately declared; none is assumed.
+            div = 0.0
+        else:
+            div = max(0.0, min(max(incPAT, 0.0) * pct(D["dividend_payout_pct"][s]),
+                               preCap - preRwa * pct(carTarget),
+                               preCash - reserve))
         b["stated_capital"] = prevB["stated_capital"]
         b["reserves_other"] = prevB["reserves_other"]
         b["retained_earnings"] = prevB["retained_earnings"] + incPAT - div
@@ -313,12 +320,20 @@ for s in SCEN:
         for k in KEYS_R:
             note = {"car_pct": "Proxy regulatory capital divided by proxy RWA; not a BoG regulatory return.",
                     "tier1_pct": "Estimated Common Equity Tier 1 / RWA; Q3 starting CET1 inferred from the FY2025 audited capital structure.",
-                    "npl_pct": "Estimated scenario NPL target; not a loan-level migration model.",
+                    "npl_pct": "Estimated scenario NPL target; not a loan-level migration model; held flat within a scenario across years.",
                     "ldr_pct": "Gross loans / customer deposits.",
                     "cost_to_income_pct": "Operating expenses excluding impairments / total operating income.",
                     "roe_pct": "PAT / mean opening and closing annual equity.",
                     "roa_pct": "PAT / mean opening and closing annual assets."}[k]
             emit(s, t, "ratios", k, ratios[k], "%", note)
+        # Effective cost of risk: total impairment charge over average gross loans. The
+        # allowance-build floor can lift the effective rate above the input cost_of_risk in
+        # fast-growth scenarios; report it explicitly so the input is not read as the outcome.
+        effCor = 100 * i["impairment_charge"] / avg(prevB["loans_and_advances_gross"], b["loans_and_advances_gross"])
+        emit(s, t, "ratios", "x_effective_cost_of_risk_pct", effCor, "%",
+             "Total impairment charge / average gross loans. The allowance-build floor (max of the risk-based charge and "
+             "the increase in the allowance stock) can exceed the input cost_of_risk in high-growth scenarios, so the "
+             "effective rate may differ from the scenario input; both are shown.")
 
         short = max(0.0, rw * pct(minCAR) - cap)
         cashGap = max(0.0, reserve - b["cash_and_bog_balances"])
@@ -363,7 +378,19 @@ for s in SCEN:
             raise AssertionError("accounting check failed %s %s: %r" % (s, t, mx))
         checks_log.append(dict(s=s, t=t, mx=mx, car=car, minCAR=minCAR, short=short,
                                cash=b["cash_and_bog_balances"], reserve=reserve, cashGap=cashGap,
-                               pat=i["profit_after_tax"], assets=b["total_assets"], div=div))
+                               pat=i["profit_after_tax"], assets=b["total_assets"], div=div,
+                               toi=i["total_operating_income"], opex_cost=costs(i),
+                               imp=i["impairment_charge"], tax=i["income_tax"],
+                               avg_gross=avg(prevB["loans_and_advances_gross"], b["loans_and_advances_gross"])))
+        # Capture the cost starting point for the base-opex counterfactual (item 4 of the
+        # claude-helper-1 review): what would the downside be with base opex growth?
+        states[(s, t)] = {
+            "opex_open": {k: (Q3I[k] if first else prevI[k])
+                          for k in ["staff_costs", "depreciation_amortisation", "other_operating_expenses"]},
+            "first": first,
+            "toi": i["total_operating_income"], "imp": i["impairment_charge"],
+            "pbt": i["profit_before_tax"],
+        }
         summary.append((s, t, b["total_assets"], i["profit_after_tax"], car))
         prevB, prevI, prevCap, prevTier = b, i, cap, tier
 
@@ -489,6 +516,72 @@ L.append("Accounting bridges: PASS (%d/%d). Capital below the shared minimum: %d
             sum(1 for x in checks_log if x["short"] > 1e-6), len(checks_log),
             sum(1 for x in checks_log if x["cashGap"] > 1e-6), len(checks_log),
             sum(1 for x in checks_log if x["cash"] < 0), len(checks_log)))
+L.append("")
+L.append("### Effective cost of risk vs the scenario input")
+L.append("")
+L.append("`cost_of_risk` in `assumptions.json` is the input; the allowance-build floor (max of the risk-based charge and "
+         "the increase in the allowance stock) can lift the effective rate in fast-growth scenarios. Both are shown.")
+L.append("")
+L.append("| Scenario | Year | Input cost of risk % | Effective charge / avg gross loans % | Impairment charge |")
+L.append("|---|---:|---:|---:|---:|")
+for x in checks_log:
+    inp = D["cost_of_risk"][x["s"]]
+    L.append("| %s | %s | %.2f | %.2f | %.3f |" % (x["s"], x["t"], inp,
+            100 * x["imp"] / max(1e-9, x["avg_gross"]), x["imp"]))
+L.append("")
+L.append("### Downside decomposition (cost pass-through vs credit)")
+L.append("")
+L.append("The downside presents a combined stress. To separate the two drivers, the table below shows, for FY2030E, "
+         "the base and downside operating costs and impairment. Opex growth is CPI plus 8 points in the downside (higher "
+         "than base), so part of the downside loss is cost pass-through driven mechanically by the shared macro downside "
+         "inflation path, not by credit losses. A reader should treat the downside CAR path as a combined cost-and-credit "
+         "stress, not a credit-only stress.")
+L.append("")
+L.append("| Scenario | Year | Total operating income | Operating costs | Impairment | Profit before tax | Tax | PAT |")
+L.append("|---|---:|---:|---:|---:|---:|---:|---:|")
+for x in checks_log:
+    if x["t"] == "FY2030E":
+        pbt = x["toi"] - x["opex_cost"] - x["imp"]
+        L.append("| %s | %s | %.3f | %.3f | %.3f | %.3f | %.3f | %.3f |"
+                 % (x["s"], x["t"], x["toi"], x["opex_cost"], x["imp"], pbt, x["tax"], x["pat"]))
+L.append("")
+L.append("**Counterfactual: downside with base cost growth (isolates the credit and rate effect).** The table above "
+         "keeps the downside's CPI-plus-8pt opex rule. Below, the downside FY2030E is recomputed with the **base** "
+         "opex growth spread, holding the downside operating income and impairment charge fixed. The gap is the part "
+         "of the downside loss that is mechanical cost pass-through from the shared higher-inflation downside path.")
+L.append("")
+L.append("| FY2030E variant | Operating costs | Profit before tax | Tax | PAT |")
+L.append("|---|---:|---:|---:|---:|")
+_ds = states[("downside", "FY2030E")]
+_ds_open = _ds["opex_open"]
+_taxr = pct(D["tax_rate_pct"]["downside"])
+_og_base = macro("base", "FY2030E", "inflation_cpi_pct") + D["opex_growth"]["base"]
+_base_og_cost = 0.0
+for k in ["staff_costs", "depreciation_amortisation", "other_operating_expenses"]:
+    _base_og_cost += _ds_open[k] * (1 + pct(_og_base))
+_ds_pbt_alt = _ds["toi"] - _base_og_cost - _ds["imp"]
+_ds_tax_alt = max(0.0, _ds_pbt_alt) * _taxr
+_ds_opex_modelled = _ds["toi"] - _ds["imp"] - _ds["pbt"]
+L.append("| Downside as modelled (CPI+%d) | %.3f | %.3f | %.3f | %.3f |"
+         % (D["opex_growth"]["downside"], _ds_opex_modelled, _ds["pbt"],
+            max(0.0, _ds["pbt"]) * _taxr, _ds["pbt"] - max(0.0, _ds["pbt"]) * _taxr))
+L.append("| Downside with base cost growth (CPI+%d) | %.3f | %.3f | %.3f | %.3f |"
+         % (D["opex_growth"]["base"], _base_og_cost, _ds_pbt_alt, _ds_tax_alt, _ds_pbt_alt - _ds_tax_alt))
+L.append("")
+L.append("The FY2030E gap between the two rows is the cost-pass-through component: with base cost growth the "
+         "downside FY2030E loss shrinks to %.3f from %.3f, so about %.0f%% of the modelled downside loss magnitude "
+         "comes from the mechanical opex rule (higher shared downside inflation plus the cost spread), not from "
+         "credit or rates. The remaining loss is the credit and rate effect."
+         % (_ds_pbt_alt, _ds["pbt"],
+            100 * abs(_ds_pbt_alt - _ds["pbt"]) / abs(_ds["pbt"]) if _ds["pbt"] else 0.0))
+L.append("")
+L.append("### Tax treatment in the anchor year")
+L.append("")
+L.append("FY2026E retains the actual 9M-2026 tax charge and adds tax on any positive estimated Q4 profit before tax. "
+         "No deferred-tax credit is recognised for a Q4 loss, so if the downside Q4 is a loss the annual effective rate "
+         "exceeds the 35% input; this is the model's stated treatment, not an error. Dividends: the observed 9M-2026 equity "
+         "already reflects the FY2025 final dividend of GHS173.669m paid in 2026 (SG26Q3), so no additional Q4-2026 dividend "
+         "is assumed.")
 L.append("")
 L.append("FY2026 estimated earnings retain actual 9M income and estimate Q4 only. The Bank does not disclose a net FX position in the "
          "summary statements used, so no incremental FX translation P&L is modelled. Full prudential risk weights, OCI, capital deductions "
