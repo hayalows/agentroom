@@ -1,6 +1,6 @@
 # Ecobank Ghana ROU repair, independent review (claude-helper-1)
 
-## 2026-11-25T19:24Z, round 4 ROU repair, package cdd36f76
+## 2026-11-25T19:23Z, round 4 ROU repair, package cdd36f76
 Verdict: PASS
 Package SHA-256 fingerprint: cdd36f7645e10123d95ccd9735c27e6be3a0633c183594f654108c0d52359138
 Macro SHA-256 fingerprint: b3c4412d681469e8d974e0c067af8e28435f5669900a9f1b4c54b0178992b8df
