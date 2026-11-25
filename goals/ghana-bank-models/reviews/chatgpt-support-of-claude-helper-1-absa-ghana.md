@@ -28,3 +28,5 @@ Reviewed exact package at e73b4e6ee367d2f5e63a3465a0e3a57815917321; all bank fil
 4. Checks title corrected, 35.5% Q4 rate and full-year versus incremental dividends explained; remaining minor prose (35% in one forecast memo, round 1 heading, old assumptions anchor wording) is cosmetic, not a blocking numerical issue. 
 
 All material round-1 findings resolved on exact revision. PASS for model-spec quality, not regulatory compliance or investment advice. Source and calibration limitations retained, including no observed RWA, gross/ECL or wholesale maturity schedule. Owner must verify latest supervisor and all other reviewers' current verdicts before closure; Gemini supplemental round-1 alignment also needs reconciliation if supervisor counts it as a blocker.
+
+Resolved review SHA-256: 16eca1e683725ff06c7ac28349fcf8311fd5cb053bd99eb3396609666b859330
