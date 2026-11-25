@@ -4,13 +4,14 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { agentsFor, boardEvents } from './participants.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const NL = String.fromCharCode(10);
 const read = (p) => (fs.existsSync(p) ? fs.readFileSync(p, 'utf8') : '');
-const goal = (process.argv[2] || read(path.join(root, 'ACTIVE_GOAL'))).trim();
+const goal = (process.argv.slice(2).find(a => a !== '--stdout') || read(path.join(root, 'ACTIVE_GOAL'))).trim();
 const gdir = path.join(root, 'goals', goal);
-if (!fs.existsSync(gdir)) {
+if (!/^[a-z0-9][a-z0-9-]*$/.test(goal) || !fs.existsSync(gdir)) {
   console.error('no such goal: ' + goal);
   process.exit(1);
 }
@@ -47,31 +48,30 @@ md += NL + '## Unclaimed banks (' + open.length + ' of ' + roster.length + ')' +
 const openShared = shared.filter((s) => !taken.has(s));
 md += NL + '## Unclaimed shared pieces' + NL + NL + (openShared.map((s) => '- ' + s).join(NL) || '(none)') + NL;
 
-const perAgent = {};
+const participants = agentsFor(gdir, claims.map(c => c.agent));
+const perAgent = Object.create(null);
 for (const c of claims) {
   perAgent[c.agent] = perAgent[c.agent] || { open: 0, done: 0 };
-  if (['done', 'released'].includes(c.status)) perAgent[c.agent].done++;
-  else perAgent[c.agent].open++;
+  if (c.status === 'done') perAgent[c.agent].done++;
+  else if (c.status !== 'released') perAgent[c.agent].open++;
 }
 md += NL + '## Load per agent (limit: 3 open claims each)' + NL + NL;
-for (const a of ['claude', 'codex', 'gemini']) {
+for (const a of participants) {
   const p = perAgent[a] || { open: 0, done: 0 };
   md += '- ' + a + ': ' + p.open + ' open' + (p.open > 3 ? ' **(over the limit)**' : '') + ', ' + p.done + ' done' + NL;
 }
 
 md += NL + '## Last check-ins' + NL;
-for (const a of ['claude', 'codex', 'gemini']) {
+for (const a of participants) {
   const lines = read(path.join(gdir, 'board', a + '.md')).split(NL).filter((l) => /^- \d{4}-/.test(l));
   md += NL + '**' + a + '** (' + lines.length + ' check-ins)' + NL;
   md += (lines.slice(-3).map((l) => '- ' + l.slice(2).slice(0, 260)).join(NL) || '- (none)') + NL;
 }
-const toLines = [];
-for (const a of ['claude', 'codex', 'gemini']) {
-  for (const l of read(path.join(gdir, 'board', a + '.md')).split(NL)) {
-    const m = /\bTO (claude|codex|gemini):(.*)/.exec(l);
-    if (m) toLines.push(a + ' -> ' + m[1] + ':' + m[2].slice(0, 200));
-  }
-}
+const toLines = boardEvents(gdir, participants).map(e => (e.time || 'undated') + ' ' + e.agent + ' -> ' + e.to + ': ' + e.text.slice(0,200));
 md += NL + '## Messages between agents (TO lines)' + NL + NL + (toLines.slice(-12).map((l) => '- ' + l).join(NL) || '- (none yet)') + NL;
+if (process.argv.includes('--stdout')) process.stdout.write(md);
+else {
 fs.writeFileSync(path.join(gdir, 'STATUS-BANKS.md'), md);
 console.log('wrote goals/' + goal + '/STATUS-BANKS.md  (' + claims.length + ' claims, ' + open.length + ' banks unclaimed)');
+
+}

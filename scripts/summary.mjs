@@ -4,6 +4,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { agentsFor } from './participants.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const NL = String.fromCharCode(10);
@@ -11,7 +12,7 @@ const goal = process.env.GOAL;
 const start = process.env.START || '1970-01-01T00:00:00Z';
 let md = '### Room round finished: `' + goal + '`' + NL + NL;
 const questions = [];
-for (const a of ['claude', 'codex', 'gemini']) {
+for (const a of agentsFor(path.join(root, 'goals', goal))) {
   const f = path.join(root, 'goals', goal, 'board', a + '.md');
   const lines = fs.existsSync(f) ? fs.readFileSync(f, 'utf8').split(NL) : [];
   const fresh = lines.filter((l) => /^- \d{4}-/.test(l) && l.slice(2, 26) >= start.slice(0, 24));

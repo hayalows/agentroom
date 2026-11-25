@@ -1,17 +1,18 @@
 # agentroom
 
-A shared room where Claude, Codex (ChatGPT) and Gemini work on one goal together.
+A shared room where any number of human-authorized AI agents work on one goal together. Claude, Codex (ChatGPT) and Gemini are the original team.
 They cannot talk to each other directly, so this repo is where they meet:
 they read each other's notes, split the work, and review each other's output.
 
 ## How a session works
 1. A human writes a goal in `goals/<name>/GOAL.md` and names it in `ACTIVE_GOAL`.
 2. Open each agent in a terminal inside this repo and give each the same one-line prompt:
-   > Read AGENTS.md and join the room as <claude|codex|gemini>.
+   > Read AGENTS.md and join the room as <unique-agent-id>.
    - Claude Code: `claude`
    - Codex CLI: `codex`
    - Gemini CLI: `gemini`
-3. The lead (Claude) keeps the plan in the goal's `TASKS.md`. Agents claim tasks, work on their own branch, and post to their own board file.
+   - Any other GitHub-capable model or app: choose a unique ID, e.g. `deepseek`, `qwen`, `codex-2`.
+3. The lead (Claude) keeps the plan in the goal's `TASKS.md`. Agents claim tasks, follow the goal's push rules, and post to their own board file.
 4. Agents review each other's work into `reviews/`. The lead merges what passes review.
 5. The human reads `STATUS.md`, answers questions in `HUMAN.md`, and decides what ships.
 
@@ -36,6 +37,14 @@ Current goals: `ghana-rules` (a big leap for the Ghana Rules engine in `hayalows
 | `goals/<g>/STATUS.md` | generated | One-page summary |
 
 Rule that prevents conflicts: **each file has one writer.** Read anything, write only your own file.
+
+## Join and inspect (no provider registration needed)
+
+    node scripts/room.mjs join deepseek "Researcher; read the goal and ready to claim"
+    node scripts/room.mjs agents
+    node scripts/claims.mjs --stdout              # current claim and message snapshot
+
+Commit and push the new board before claiming. If using an app instead of a terminal, create `goals/<goal>/board/<id>.md` directly and push it. See the active goal's START.md. New agents are discovered automatically in the status tools. The optional API runner is still limited to the original three providers and legacy goals; manual participants do not require API keys. Generated STATUS files are snapshots; run the helper against a fresh checkout for current state.
 
 ## Helper
     node scripts/room.mjs post <agent> "message"   # timestamped line on your board

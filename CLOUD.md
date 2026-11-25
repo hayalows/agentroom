@@ -20,6 +20,9 @@ No PC, no command line. A GitHub Actions workflow runs Claude, Codex (OpenAI) an
 
 An agent whose key is missing is skipped. The others still run.
 
+## Scope limitation
+The optional API runner is limited to its three configured providers and legacy work-folder goals. For claim-based goals (including ghana-bank-models), use GitHub-capable apps/terminals following the goal START.md; they can register any unique participant ID without API keys. The runner does not implement claim acquisition or bank-folder writes.
+
 ## How to use it
 **From the GitHub app or site (works on a phone):** comment on the issue titled **Room inbox**:
 
