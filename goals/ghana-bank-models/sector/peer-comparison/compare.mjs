@@ -17,7 +17,7 @@ const {evaluateRoom}=await import(pathToFileURL(path.join(root,'scripts/completi
 const {csv}=await import(pathToFileURL(path.join(root,'scripts/bank-gate.mjs')).href);
 const state=await evaluateRoom(root,goal);
 const num=r=>r&&r.value.trim()!==''&&r.status!=='unavailable'&&Number.isFinite(+r.value)?+r.value:null;
-function values(rows,p,s){const result={};for(const r of rows.filter(r=>r.period===p&&(!s||r.scenario===s))){if(Object.hasOwn(result,r.line_item))throw Error('duplicate period/line: '+p+'/'+r.line_item);result[r.line_item]=num(r)}return result;}
+function values(rows,p,s){const result={};for(const r of rows.filter(r=>r.period===p&&(!s||r.scenario===s))){if(Object.hasOwn(result,r.line_item))throw Error('duplicate period/line: '+p+'/'+r.line_item);result[r.line_item]=!s&&!['reported','derived'].includes(r.status)?null:num(r)}return result;}
 const ratio=(a,b)=>a!=null&&b!=null&&b>0?100*a/b:null,avg=(a,b)=>a!=null&&b!=null?(a+b)/2:null,car=x=>x.car_pct??x.x_car_proxy_pct??null;
 const rows=[];
 for(const t of state.tasks.filter(t=>t.acceptance==='accepted')){
