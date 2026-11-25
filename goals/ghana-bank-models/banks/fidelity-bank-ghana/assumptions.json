@@ -1,0 +1,119 @@
+{
+  "bank": "fidelity-bank-ghana",
+  "macro_file": "../../sector/macro-assumptions/macro.csv",
+  "units": "GHS millions; rates percent",
+  "calibration": {
+    "loan_yield_pct": 17,
+    "earning_cash_yield_pct": 6,
+    "loan_fast_ghs_m": 2181.16,
+    "securities_slow_annual_reset_fraction": 0.25,
+    "securities_weight_tbill": 0.5,
+    "static_nii_100bp_ghs_m": 25.713,
+    "notes": "FY25 p108-109: 12m repricing share; 25% annual slow reset estimated, not contractual. Loan and cash yields are assumed, securities/funding yields fitted to annualized Q3 2026 actual interest. Funding beta fitted to disclosed FY25 +100bp NII sensitivity, approximate and not independent validation. Q4 uses opening earning cash, average loans/securities/funding."
+  },
+  "scenario": {
+    "base": {
+      "q4_deposit": 3,
+      "q4_loan": 4,
+      "deposit_spread": 1,
+      "loan_spread": 4,
+      "securities_deposit_share": 0.5,
+      "allowance_pct": [
+        5,
+        5.5,
+        5.5,
+        5,
+        5
+      ],
+      "npl_pct": [
+        7,
+        7,
+        6.8,
+        6.5,
+        6.5
+      ],
+      "risk_pct": [
+        1.4,
+        1.4,
+        1.4,
+        1.3,
+        1.3
+      ],
+      "q4_fee_trade_multiplier": 1,
+      "opex_spread": 3,
+      "dividend_pct": 35,
+      "car_buffer_pp": 3
+    },
+    "downside": {
+      "q4_deposit": -2,
+      "q4_loan": -2,
+      "deposit_spread": -5,
+      "loan_spread": -8,
+      "securities_deposit_share": 0.55,
+      "allowance_pct": [
+        8,
+        10,
+        11,
+        11,
+        10
+      ],
+      "npl_pct": [
+        10,
+        14,
+        16,
+        16,
+        15
+      ],
+      "risk_pct": [
+        3.5,
+        4,
+        4,
+        3.5,
+        3
+      ],
+      "q4_fee_trade_multiplier": 0.85,
+      "opex_spread": 6,
+      "dividend_pct": 0,
+      "car_buffer_pp": 5
+    },
+    "upside": {
+      "q4_deposit": 6,
+      "q4_loan": 7,
+      "deposit_spread": 3,
+      "loan_spread": 8,
+      "securities_deposit_share": 0.45,
+      "allowance_pct": [
+        4.2,
+        4,
+        3.8,
+        3.6,
+        3.5
+      ],
+      "npl_pct": [
+        6,
+        5.8,
+        5.5,
+        5,
+        5
+      ],
+      "risk_pct": [
+        1,
+        1,
+        0.9,
+        0.8,
+        0.8
+      ],
+      "q4_fee_trade_multiplier": 1.1,
+      "opex_spread": 1,
+      "dividend_pct": 45,
+      "car_buffer_pp": 3
+    }
+  },
+  "other": {
+    "tax_pct": 37,
+    "annual_growth_floor_pct": -10,
+    "annual_growth_cap_pct": 30,
+    "capital_eligibility_stress_pct": 80,
+    "notes": "Q3 actuals preserved; Q4 estimated only. Gross/allowance opening inferred from FY25 coverage; Q3 RWA proxy uses 100% gross loans plus calibrated residual asset weight. Regulatory capital and CET1 anchored to reported Q3 ratios, not actual absolute capital. No Tier1 forecast because Q3 AT1 unknown. No capital injection. Dividends limited by positive incremental PAT, distributable retained earnings, target CAR and conservative reserve proxy. Actual 9M dividend already included in opening equity. Reserve transfer per Act 930 section 34: 50% below half stated capital, 25% below stated capital, 12.5% thereafter; Q3 statutory reserve already exceeds even total stated capital. Hold other reserve components flat. Cash residual includes interbank; due-from-banks blank, no double-count. Earning cash share uses FY25 repricing table. Reserve screen on non-interest-bearing cash proxy, not regulatory reserve proof. FX sensitivity from FY25 p106 hedged bank -9.185m per 15% depreciation, held fixed in GHS; no incremental Q4 FX shock given unknown Q3 exposure. NPL paths estimated separately; impairment floor covers allowance growth, excess expense treated as modeled charge-offs. No separate future DDEP haircut. GDP/inflation growth and policy/market yields use shared macro."
+  }
+}
