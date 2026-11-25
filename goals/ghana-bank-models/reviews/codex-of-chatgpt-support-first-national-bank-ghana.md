@@ -11,3 +11,14 @@ Verdict: CHANGES
 4. Preserve explicit 50% statutory transfers despite deficit, as verified audited equity statement. Forecast zero dividends is prudent; keep canonical full-year memo x_dividends_paid consistent with x_model_dividends and note no source assertion if blank history. Base accumulated losses still -17.341m FY30, upside turns positive121.155m; do not imply automatic payout. Source register still says no forecast; refresh stale headers. Exact fingerprint should be recorded on resubmission.
 
 No owner files modified. All accounting and deterministic reproduction pass; changes required to strengthen risk and earning-asset assumptions and historical ratio coverage, not a complete rebuild. Q3 images inaccessible, no full annual notes beyond published summary.
+
+## Round 2 — 2026-11-25T15:34:36.151Z
+Verdict: PASS
+Package SHA-256 fingerprint: c687b8541b2b001cb03c32a39bb629f416e903442f22ee9988f86269f3668a61
+Macro SHA-256 fingerprint: b3c4412d681469e8d974e0c067af8e28435f5669900a9f1b4c54b0178992b8df
+
+Recomputed exact package hash from GitHub UTF-8 files in bank-gate order; matches current claim. Independently executed exact committed JS calculation functions with current history, macro and assumptions: both forecast.csv and checks.md byte-identical. Not a Node CLI process. 317 historical / 1050 forecast rows; 251 independent rounded checks (176 accounting identities plus 75 density, joint stress, eligibility cash gap, payout cap and dividend memo checks), all within .005m; max .002m, no duplicate or missing reported provenance/nonblank unavailable rows. Historical aggregated cash/other liabilities include unavailable separate items; arithmetic uses canonical aggregate only, not a historical assertion that missing items are zero. 
+
+FY25 and interim trading/derivative/deferred tax memos mapped as non-additive; 50% trading earning sensitivity base FY2030 PAT192.998m vs204.201m, no pledged cash assumption. FY2030 base 20% higher density CAR19.666%, joint18.187%, 40% eligible-cash gap257.632m. 50% reserve transfers preserved, zero dividend and no new equity assumption; historical ratios and full-year payout memo added.
+
+All four bounded prior findings resolved. Round-1 independent primary-source checks remain the basis for source verification; new memo values match those source observations. Q3 image retrieval and full risk-note gaps remain explicit. Alternative dividend cap is conservative static sensitivity, not a fully re-solved cash trajectory or legal payout permission. No actual eligible reserve or RWA inferred. Exact-version PASS only; steward/owner must close unchanged package. No owner files edited.
