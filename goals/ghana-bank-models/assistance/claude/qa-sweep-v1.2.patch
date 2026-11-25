@@ -1,0 +1,88 @@
+diff --git a/goals/ghana-bank-models/sector/qa-sweep/validate.py b/goals/ghana-bank-models/sector/qa-sweep/validate.py
+index 44dd196..3acb9c8 100644
+--- a/goals/ghana-bank-models/sector/qa-sweep/validate.py
++++ b/goals/ghana-bank-models/sector/qa-sweep/validate.py
+@@ -46,19 +46,27 @@ def read_csv(path):
+         rows = list(rd)
+         return rows, list(rd.fieldnames or [])
+ 
+-def claim_status(slug):
+-    p = os.path.join(CLAIMS, slug + ".md")
+-    if not os.path.exists(p):
+-        return "", ""
++def _read_claim(path):
+     owner = status = ""
+-    for line in open(p, encoding="utf-8-sig"):
+-        m = re.match(r"^(agent|status):\s*(.*)$", line.strip())
++    for line in open(path, encoding="utf-8-sig"):
++        m = re.match(r"^(agent|status|steward):\s*(.*)$", line.strip())
+         if m and m.group(1) == "agent" and not owner:
+             owner = m.group(2)
+         if m and m.group(1) == "status":
+             status = m.group(2)
+     return owner, status
+ 
++def claim_status(slug):
++    p = os.path.join(CLAIMS, slug + ".md")
++    owner, status = _read_claim(p) if os.path.exists(p) else ("", "")
++    if status in ("", "released", "unclaimed"):
++        t = os.path.join(CLAIMS, slug + "-takeover.md")
++        if os.path.exists(t):
++            o2, s2 = _read_claim(t)
++            if s2:
++                return o2 or owner, s2
++    return owner, status
++
+ def check_bank(slug):
+     d = os.path.join(BANKS, slug)
+     res = {"slug": slug, "fail": [], "warn": [], "info": {}}
+@@ -84,6 +92,7 @@ def check_bank(slug):
+         F.append(f"financials.csv columns are {header}, expected {COLS}")
+     I["history_rows"] = len(rows)
+     seen = set()
++    blank_h_units = 0
+     V, S = {}, {}
+     for r in rows:
+         k = (r["period"], r["line_item"])
+@@ -112,8 +121,12 @@ def check_bank(slug):
+         if r["status"] == "derived" and len(r["notes"].strip()) < 10:
+             F.append(f"derived row without a formula in notes {k}")
+         S[k] = r["status"]
+-        if not li.startswith("x_") and r["unit"] not in ("GHS millions", "percent", "%", ""):
++        if not li.startswith("x_") and not r["unit"].strip():
++            blank_h_units += 1
++        elif not li.startswith("x_") and r["unit"] not in ("GHS millions", "percent", "%"):
+             W.append(f"unit '{r['unit']}' on {k}")
++    if blank_h_units:
++        W.append(f"{blank_h_units} history rows have a blank unit")
+     periods = sorted({r["period"] for r in rows})
+     fy = [p for p in periods if re.fullmatch(r"FY\d{4}", p)]
+     I["periods"] = periods
+@@ -184,6 +197,7 @@ def check_bank(slug):
+                 F.append(f"forecast.csv lacks column {need}")
+         if not F or all("forecast.csv" not in x for x in F):
+             fv, keys = {}, set()
++            badli, blank_f_units, bad_f_units = set(), 0, set()
+             for r in frows:
+                 k = (r.get("scenario"), r.get("period"), r.get("line_item"))
+                 if k in keys:
+@@ -197,8 +211,17 @@ def check_bank(slug):
+                     badstat = locals().get("badstat", 0) + 1
+                 li = r.get("line_item", "")
+                 if li and li not in ALLOWED and not li.startswith("x_"):
+-                    F.append(f"forecast line_item '{li}' is not in the spec and not an x_ item")
+-                    break
++                    badli.add(li)
++                if not li.startswith("x_") and not (r.get("unit") or "").strip():
++                    blank_f_units += 1
++                elif not li.startswith("x_") and (r.get("unit") or "").strip() not in ("GHS millions", "percent", "%"):
++                    bad_f_units.add((r.get("unit") or "").strip())
++            if badli:
++                F.append(f"forecast line_item(s) not in the spec and not x_ items: {sorted(badli)[:5]}")
++            if bad_f_units:
++                W.append(f"forecast unit value(s) not GHS millions/percent: {sorted(bad_f_units)[:4]}")
++            if blank_f_units:
++                W.append(f"{blank_f_units} forecast rows have a blank unit")
+             if locals().get("badstat"):
+                 W.append(f"{badstat} forecast rows have a status other than estimated/unavailable (spec: estimated)")
+             have = {(k[0], k[1]) for k in fv}
