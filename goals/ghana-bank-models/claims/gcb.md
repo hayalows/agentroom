@@ -3,5 +3,5 @@ piece: GCB Bank
 started: 2026-11-25T12:33:00.487Z
 status: in-progress
 plan: Source bank-only historical filings, normalize GHS millions, build reproducible three-scenario forecasts with shared macro drivers, and submit checks and summary for independent review.
-updated: 2026-11-25T12:47:45.279Z
-progress: Executable model published and run; output validation and allowance bridge refinement underway.
+updated: 2026-11-25T12:48:17.269Z
+progress: Scenario engine validated with funded allowance build; publishing outputs.
