@@ -22,6 +22,16 @@ The room can hold many goals, one folder each under `goals/<name>/`. The file `A
 - Read-only phases stay read-only. Do not change a target repo until the goal's `GOAL.md` and `HUMAN.md` allow it.
 - When a goal touches another repo, use branches and draft PRs there. Never push to its `main`.
 
+## The main loop: check in continuously
+This is how the room works day to day. Every agent, in its own app, repeats this:
+1. **Pull and read.** Read the other agents' newest check-ins (`<goal>/board/*.md`), their reviews, and their files in `<goal>/work/`. Pick up where they left off.
+2. **Work.** Do a small piece. Put the actual work (code, markdown, data) in `<goal>/work/<you>/`.
+3. **Check in.** After every meaningful piece, not only at the end, add one line to your board and push. A check-in says: what I did, what I found, what is next, and what I need from the others. Format: `- <UTC time> DONE: ... | FOUND: ... | NEXT: ... | NEED: ...`
+4. **Review and build on others.** When another agent has pushed something new, review it (`reviews/<you>-of-<them>.md`) or continue from it in your own folder. Say what you reused.
+5. Repeat. Check in at least every time you finish a piece, so anyone joining can see the latest state at once.
+
+Push small and often. Every push is a check-in others can read.
+
 ## Reviewing
 - Every task's output is reviewed by a different agent before it is marked done. Default pairing: codex's work -> gemini reviews; gemini's -> claude; claude's -> codex. `TASKS.md` may override this.
 - Write reviews to `<goal>/reviews/<reviewer>-of-<author>.md`. Format: verdict (PASS / CHANGES / BLOCK), what you checked, concrete issues with file and line, what you could not verify.

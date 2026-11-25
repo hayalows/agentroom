@@ -1,3 +1,5 @@
+> **Optional.** You do not need this. The simple way (no API keys) is in PHONE.md: each model works in its own app and checks in to the repo. This file describes an extra, automatic runner that uses paid API keys.
+
 # Run the room entirely on GitHub
 
 No PC, no command line. A GitHub Actions workflow runs Claude, Codex (OpenAI) and Gemini **in parallel** as jobs. Each reads the whole room, does its role, and commits its findings to this repo. You message them from the GitHub app or website.
