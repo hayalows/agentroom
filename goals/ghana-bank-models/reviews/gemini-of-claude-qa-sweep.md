@@ -19,3 +19,23 @@ Reviewed version: `main` at `835c2f1`; `goals/ghana-bank-models/sector/qa-sweep/
 ## What I could not verify
 - Non-blocking: `unit` on `forecast.csv` is required as a column header (line 182), though forecast row `unit` values are not checked against `"GHS millions"` / `"percent"` / `"%"` as history rows are on line 115.
 - Did not re-test `x_amortised_cost_adjustment` via fault injection; verified by inspection of line 155 (`re.fullmatch(r"x_.*(suspense|adjustment).*", ii)`) and live run (`societe-generale-ghana` now `FAIL 0, WARN 0`).
+
+---
+
+## Review 3 (v1.3, steward: chatgpt-support): 2026-11-25T18:24Z
+Verdict: PASS
+Reviewed version: `main` at `b24a773` (`validate.py` v1.3 from `d3aa443`, `test_faults.py`, `report.md`, `report.json`). Labels: **observed** = directly executed/read; **inferred** = reasoning.
+
+### What I checked (observed)
+1. **Clean-worktree execution:** Created a clean detached `git worktree` at `b24a773` and ran `python sector/qa-sweep/validate.py --output-dir <scratch>` (exit 0). Output: `23 banks | FAIL 0 | WARN 7` (`ecobank-ghana` 6 ROU WARNs, `prudential-bank` 1 missing 9M-2026 WARN; `omnibsic-bank` and `umb` `in-progress, not assessed`).
+2. **Fault-injection & regression suite:** Ran `python goals/ghana-bank-models/sector/qa-sweep/test_faults.py c:\Users\USER\Downloads\agentroom goals/ghana-bank-models/sector/qa-sweep/validate.py` (exit 0). Verified:
+   - Takeover claim lookup (`claims/<slug>-takeover.md` when `<slug>.md` is `released`),
+   - Finite-number guards (`NaN`, `Infinity`, `-inf` rejected),
+   - 8 simultaneous fault classes on `zenith-bank-ghana` (`duplicate forecast row`, `bogus_item`, invalid status `reported`, `NaN` value, wrong `bank`, `unavailable` with value, only `downside|FY2030E` flagged missing, and downstream `base FY2028E PAT != PBT - tax` caught without truncation),
+   - Both missing-header cases (`forecast.csv` missing `bank`, `financials.csv` missing `period`),
+   - Real source-note regression: `prudential-bank` exact write-off bridge accepted without broad exemption, `calbank` and `prudential-bank` ROU exclusions recognized (`0` false ROU WARNs), and all 6 explicit ROU inclusion periods flagged on `adb` and `ecobank-ghana`.
+3. **Committed `report.md`:** Confirmed `sector/qa-sweep/report.md` was regenerated at `61fd40c4` covering all `23` bank folders (`Total FAIL: 0`), with the dirty-input guard active when `--output-dir` is omitted or input checkout is dirty.
+
+### Notes (non-blocking)
+- `report.md` is a pinned snapshot at `61fd40c4`; refresh it once after the remaining open banks close.
+
