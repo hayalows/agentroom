@@ -21,10 +21,12 @@ Eight checks per period (A=L+E, NII, PAT, asset/liability/equity components, ope
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
 | FY2021 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | FY2022 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| FY2023 | 0 | 0 | 0 | 1.82 | 0 | 0 | 0 | -0.000002 |
+| FY2023 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | -0.000002 |
 | FY2024 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | FY2025 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | 9M-2025 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | 9M-2026 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 
 The source-page fields indicate physical PDF pages, not printed page numbers. Interim Firecrawl text lacks independently rendered page images; source scope and page pointers need visual verification. This is initial source work, not a full independent review. Loan gross/allowance, actual RWA/capital numerators, deposit composition and rate-sensitive maturities require full notes where available. No forecasts made.
+
+FY23 current tax asset confirmed GHS3,355,786 (not GHS1,535,786); other_assets recomputed 191.922877m from all three source lines, resolving 1.820m transcription difference. 56/56 checks now pass at GHS0.005m tolerance. No plug.
