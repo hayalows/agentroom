@@ -9,3 +9,6 @@ progress: Seven provisional package files committed. 210 FY2021–25 historical 
 
 updated: 2026-11-25T16:26:39.854Z
 progress: Statutory reserve-tier refinement implemented (50/25/12.5%, positive annual PAT, FY25 statutory reserve131.423m); 720 forecast rows, 120/120 bridges. Engine now generates checks.md too. Source anchor and independent review blockers remain; no acceptance.
+
+updated: 2026-11-25T16:33:52.927Z
+progress: Historical capital source recovery: 228 rows (36 additions/replacements); FY21–24 reported Bank CAR/Tier1/CET1/RWA/regulatory capital and FY21/22 NPL recovered; FY23/24 with/without relief preserved. Bank-only FY23/24 NPL not established (Group-only note excluded), Sep26 remains inaccessible. 44 historical bridges and 120 forecast bridges unchanged. No acceptance.
