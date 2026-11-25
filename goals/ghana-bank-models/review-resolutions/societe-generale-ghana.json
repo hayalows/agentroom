@@ -1,0 +1,34 @@
+{
+  "schema": 1,
+  "packageFingerprint": "642679171d75227267e843371150fdbfe21f9dcd2c36a3b5612965d8f2c62feb",
+  "macroFingerprint": "b3c4412d681469e8d974e0c067af8e28435f5669900a9f1b4c54b0178992b8df",
+  "resolutions": [
+    {
+      "blockedReviewFile": "claude-helper-1-of-deepseek-societe-generale-ghana.md",
+      "blockedReviewHash": "6bd3727e14679e2466e492c3b2e7ba42cf52e331c8649420952a889bd8b6a894",
+      "primaryReviewFile": "codex-of-deepseek-societe-generale-ghana.md",
+      "primaryReviewHash": "7c4954134522abab6b2c8a23547237177962464b5039c6497c10ca6dbdedf70a",
+      "verificationReviewFile": "chatgpt-support-of-deepseek-societe-generale-ghana.md",
+      "verificationReviewHash": "7e704df67a5142667e055c1f92b52b9787018024db81a7b2d2c7cefe5ccb67d4",
+      "resolvedAt": "2026-11-25T16:13:06.869Z",
+      "findings": [
+        {
+          "finding": "1. Allowance-build floor overrides cost of risk",
+          "evidence": "Both exact reviews recomputed FY30 rates base1.757182%, downside3.500002%, upside2.038374%; README/checks disclose input versus effective rate."
+        },
+        {
+          "finding": "2. Downside FY2026 Q4 tax",
+          "evidence": "Official p1 tax82.136m and PBT232.139m visually verified; Q4 loss111.451m; FY26 tax82.136m, PAT38.552m. No deferred-tax credit explicitly disclosed."
+        },
+        {
+          "finding": "3. 9M equity movement and Q4 dividend",
+          "evidence": "Official p1 cash flow and equity tables confirm 173.669m dividend; exact equity roll-forward. All FY26 scenarios have zero additional Q4 dividends and full-year 173.669m."
+        },
+        {
+          "finding": "4. Downside cost and credit attribution",
+          "evidence": "Combined stress explicitly disclosed. FY29 downside opex1223.001m times 1.12 yields1369.761m, alternate PAT -276.350m versus -343.615m. Marginal one-year test explicitly not full-path."
+        }
+      ]
+    }
+  ]
+}
