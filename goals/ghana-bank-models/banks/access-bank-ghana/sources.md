@@ -28,3 +28,9 @@ Visual check 2026-11-25: web PDF page 1 rendered and inspected. Confirmed 9M-202
 | ACCESS23AR | Annual report and financial statements 2023 | Access Bank Ghana | https://www.ghana.accessbankplc.com/getattachment/3b9abb6e-1994-49bd-a1af-ecd52ce6b1f2/ABG_Financial-Statement-2023.pdf.aspx?lang=en-US | FY2023 and FY2022 comparative | 2026-11-25 |
 
 ACCESS23AR p.42 parsed text supplies 2022 comparative and FY2023 expenses. Financial results in this source agree on selected 2023 headline income items with the FY2024 comparative. Page image and complete restatement review still pending.
+
+| source_id | title | publisher | URL | period | retrieved |
+|---|---|---|---|---|---|
+| ACCESS22AR | 2022 annual report and financial statements | Access Bank Ghana | https://www.ghana.accessbankplc.com/AccessBankGroup/media/Investors/Financial-Statements/2022-Annual-Report.pdf | FY2022 and FY2021 comparative | 2026-11-25 |
+
+ACCESS22AR printed p.93 income statement provides FY2021 comparative; note 8 provides the gross fee split but page location requires confirmation before transcription. Parsed PDF text, not visually checked.
