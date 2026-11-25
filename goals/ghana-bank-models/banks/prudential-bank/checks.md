@@ -2,7 +2,7 @@
 
 PROVISIONAL: FY2025 only; 2026 interim inaccessible. Not accepted or current bank results.
 
-Historical: 210 records and 44/44 exact bridges as recorded in sources.md. Forecast: 720 rows, 120 full precision arithmetic identities; max residual 0.0000000000m. Funding cost coefficient 0.322121 × end-policy rate. Cash and capital gaps are proxy flags, not regulatory findings.
+Historical: 228 records and 44/44 exact bridges as recorded in sources.md. Forecast: 720 rows, 120 full precision arithmetic identities; max residual 0.0000000000m. Funding cost coefficient 0.322121 × end-policy rate. Cash and capital gaps are proxy flags, not regulatory findings.
 
 | Scenario | Year | PAT | CAR proxy % | Capital gap m | Cash m | Reserve proxy gap m |
 |---|---|---:|---:|---:|---:|---:|
