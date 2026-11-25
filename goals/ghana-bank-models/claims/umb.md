@@ -7,3 +7,5 @@ updated: 2026-11-25T14:59:04.074Z
 progress: 103 audited FY21/22 rows; 16 accounting bridges pass within 0.005m. FY25 official download button not exposing PDF, old URL direct returns 404, indexed text available. FY23–25 and latest 2026 missing; source help requested. No forecast.
 updated: 2026-11-25T16:34:14.337Z
 progress: Integrated FY23/24 and Sep24/25 issuer statements independently re-extracted via Firecrawl, 177 new rows (280 total), 32/32 face bridges exact. FY23 SoCE 5m inconsistency flagged; Sep25 CAR conditional on approval; FY25 and 2026 primary statements still missing. No self approval.
+updated: 2026-11-25T16:43:16.808Z
+progress: Conditional UMB full five-year model built using actual Sep25 and separate FY25 year-end estimates. 825 forecast rows, 165 estimated anchors, 180/180 full precision checks; zero new capital assumed, conditional CAR recognition sensitivity, no reported 2026 invented. Source gaps FY25 annual and FY26 remain, independent review and conditional policy needed. Same JS engine run, standalone CLI pending.
