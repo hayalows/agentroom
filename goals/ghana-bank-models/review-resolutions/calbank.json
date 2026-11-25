@@ -9,8 +9,8 @@
       "primaryReviewFile": "codex-of-gemini-calbank.md",
       "primaryReviewHash": "d8bcf5eca82655d0f1226d84de3bacbb645e2ad144386fab7a3cdc359adaabc7",
       "verificationReviewFile": "papa-kojo-agent-of-gemini-calbank.md",
-      "verificationReviewHash": "04fe19b2d61881c43d396f4134e1ae2c6a135cf2fddf153fbf2aacf056be782c",
-      "resolvedAt": "2026-11-25T16:48:35.496Z",
+      "verificationReviewHash": "83209c2bf3cffe80af030efead7737c96410b3082d3429f9d035e7e2116627b8",
+      "resolvedAt": "2026-11-25T16:51:42.426Z",
       "findings": [
         {
           "finding": "F7 funding calibration and scenario ordering",
@@ -23,6 +23,37 @@
         {
           "finding": "S1 payout, S2 restatements and ROU",
           "evidence": "15 payout rows, source limits retained, Q3 PPE808.689 and other1601.782; reserve checks and exact replay passed."
+        }
+      ]
+    },
+    {
+      "blockedReviewFile": "claude-of-gemini-calbank.md",
+      "blockedReviewHash": "3c61b7e4414bf5b15f6f74b8d019448d820b74798ef17a31f8765979c8f60c31",
+      "primaryReviewFile": "codex-of-gemini-calbank.md",
+      "primaryReviewHash": "d8bcf5eca82655d0f1226d84de3bacbb645e2ad144386fab7a3cdc359adaabc7",
+      "verificationReviewFile": "papa-kojo-agent-of-gemini-calbank.md",
+      "verificationReviewHash": "83209c2bf3cffe80af030efead7737c96410b3082d3429f9d035e7e2116627b8",
+      "resolvedAt": "2026-11-25T16:51:42.426Z",
+      "findings": [
+        {
+          "finding": "F1 interest income and funding calibration",
+          "evidence": "FY26 II879.963 vs 884.093 annualized actual; IE198.534 vs202.175; errors -0.467%/-1.801%; Q4-specific rates and two-period fit verified."
+        },
+        {
+          "finding": "F2 CAR overstatement",
+          "evidence": "RWA density calibrated to actual 18.4% CAR, proxy 18.882% FY26 base; distinct caveat."
+        },
+        {
+          "finding": "F3 macro links; F4 capital target; F5 dividends",
+          "evidence": "GDP/CPI linked growth, 15% target used, 15 dividend rows, reserves and retained earnings screened before full payout."
+        },
+        {
+          "finding": "F6 ROU convention",
+          "evidence": "Six periods corrected; Q3 PPE692.377+66.933+49.379=808.689, other assets1601.782, exact replay."
+        },
+        {
+          "finding": "D1 NPL and D2 equity comparative",
+          "evidence": "Independent GSE FY22 source verifies 11.7/11.2 NPL, comparative equity1257.490 and -0.188 employee benefit remeasurement; current source-specific notes document CAL23 comparative11.2 and CAL21 original1257.678. CAL23/21 not newly verified; original Claude round2 accepted explanations."
         }
       ]
     }
