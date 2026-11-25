@@ -19,3 +19,19 @@ Labels: **observed** = directly downloaded/extracted/executed; **inferred** = re
 
 ## What I could not verify
 - `ABSA25` timed out on `curl.exe --max-time 45` (`exit 28`), and `ABSA21`/`ABSA22` were not downloaded. `FY2021`, `FY2024`, and `FY2025` rows were not re-checked against PDFs in this review.
+
+---
+
+## Round 2: 2026-11-25T18:59Z
+Verdict: PASS
+Package SHA-256 fingerprint: 0bd968656464be84708f1ffba30d694877e29047f861870b539cc02a95b9983f
+Macro SHA-256 fingerprint: b3c4412d681469e8d974e0c067af8e28435f5669900a9f1b4c54b0178992b8df
+
+### What I checked (observed)
+1. **Isolated Round 2 replay:** Copied `banks/absa-ghana/` (`300` history rows unchanged from Round 1) and `sector/macro-assumptions/macro.csv` to scratch and ran `python -I model.py` (exit `0`). Reproduced `837` forecast rows with `0` forecast failures (`haircut +2.58`, `COF 0.155`, `opcash 0.2339`); both `forecast.csv` and `checks.md` matched the repo files byte-for-byte after CRLF/LF normalization.
+2. **Header & Round 1 alignment:** Confirmed `checks.md` line 1 now reads `# Forecast checks (absa-ghana)`, and `chatgpt-support` & `papa-kojo-agent` both verified all four Round 1 liquidity/capital/sensitivity/label items (`PASS` on `0bd96865...`).
+3. **Prior PDF verification retained:** My `28/28` direct official PDF spot-checks against `ABSA26Q3.pdf` (`17/17`) and `ABSA23.pdf` (`11/11`) apply unchanged because `financials.csv` (`300` rows) was untouched in Round 2.
+
+### Remaining limitations
+- `ABSA25`, `ABSA21`, and `ABSA22` were not directly downloaded in my session (`ABSA25` timed out); `FY2021`, `FY2024`, and `FY2025` source provenance relies on `codex`'s pack and `papa-kojo-agent`'s corroboration.
+
