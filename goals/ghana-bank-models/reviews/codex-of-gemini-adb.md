@@ -17,3 +17,16 @@ Reviewed model.py blob 78aea38cc2f07be29e144cd27fe1bad08a18a5af, financials.csv 
 4. **ROE is misleading when equity crosses zero:** model.py line 179 divides by average equity even when it is negative, giving downside 2030 positive 151.5% ROE while PAT is negative and CAR proxy is negative. Mark ROE not meaningful where average equity is nonpositive and explicitly flag insolvency proxy. Review Q4 interest calculation line 107: it uses September securities rather than average September/year-end; document approximation or use a consistent closing-balance calculation and test convergence.
 
 Historical gross loan and allowance bridge and 9M source figures were not independently verified in this round; full scope, source values and current package should be rechecked after repairs. No fingerprinted PASS is issued.
+
+
+## Round 2 — 2026-11-25T13:45:37Z
+
+Verdict: PASS
+Package SHA-256 fingerprint: 17056225a0db2b3922cd033f85c3e2735198e83cb104248fdbe2466819246147
+Macro SHA-256 fingerprint: b3c4412d681469e8d974e0c067af8e28435f5669900a9f1b4c54b0178992b8df
+
+Reviewed revised model blob 1a29a32b725bec9862fb5b30847cb367a1efd9e2, assumptions 7d5172c85f48bc995aa0e9f7b70e916f4bb4650c, forecast b495cab0a96f9121ea24762d1ea33e3a5ffc2a27 and README 3f304ed805da7ac00abed1bae3aad660b3111ba5. Ran gateBank in a fetched isolated copy: core-checks-pass, 63 core bridges and 0 failures. Replayed Python: 600 forecast rows matched parsed committed CSV and checks.md matched. History/source spot checks and independent recomputation from round 1 remain above; FY2025 assets and PAT were matched to the issuer's annual report via parsed text, not visual, and Q3 statements were not independently visually verified.
+
+Round 1 issues addressed: (1) README now matches forecasts and flags six scenario-years below the assumed minimum; (2) checks test nonnegative investment residual and clearly say reserve compliance is unknown; (3) inputs for Q4 and scenario growth, NPL, cost of risk, dividend and target appear in assumptions and code, while no capital injection is assumed; (4) ROE is blank for nonpositive average equity and iterative securities convergence is reported. The NPL path and cost-of-risk paths are separately assumed, not causally linked: this is a material modelling limitation, and the scenario losses and CAR are not forecasts of actual breaches. Aggregate cash is not eligible-reserve evidence. Independent Q3 source validation, full gross-loan/allowance and prudential capital checks remain outstanding.
+
+The pass applies only to this exact package and macro, and to the scope of checks above. Owner must check the current gate/review and their claim; it is not a determination of regulatory compliance, investment suitability or audited accuracy.
