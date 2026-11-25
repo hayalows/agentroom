@@ -9,9 +9,9 @@ Retrieved 2026-11-25 UTC. Original GHS thousands converted to GHS millions. Issu
 | CBG22AR | Annual report and financial statements | CBG | FY2022 / FY2021 comparative | https://www.cbg.com.gh/documents/downloads/d44351ea04364a2a4ffd4e59d66e8d224dc2f5a75aac2c2a608e68a9adcee485 | Parsed text; screenshot cache miss |
 | CBG24AR | Annual report and financial statements | CBG | FY2024 | https://www.cbg.com.gh/documents/downloads/2024-audited-financial-statements | Located; comparative cross-check pending |
 | CBG21SUM | Financial summary | CBG | FY2021 | https://www.cbg.com.gh/documents/downloads/2021-financial-summary | Located; comparative cross-check pending |
-| CBG26H1 | Interim financial statements | CBG | H1-2026 | https://www.cbg.com.gh/documents/downloads/75d314b4b9316c468a45f521cffd98894c0a2461935070b5c5507c427e2972be | Archive lists; download cache miss; no numbers extracted |
+| CBG26H1 | Interim financial statements | CBG | H1-2026 | https://www.cbg.com.gh/documents/downloads/75d314b4b9316c468a45f521cffd98894c0a2461935070b5c5507c427e2972be | Retrieved 2-page issuer PDF via authorized secondary Firecrawl, HTTP 200 (2 reported credits); parsed text, not visual |
 
-Archive: https://www.cbg.com.gh/documents/annual-financial-reports . Latest interim not yet retrieved; Q3 availability unverified. No interim estimates presented as reported.
+Archive: https://www.cbg.com.gh/documents/annual-financial-reports . Latest archive-listed interim H1-2026 retrieved; no Q3 2026 filing located. No interim estimates presented as reported.
 
 ## Material source observations
 - FY2022 negative equity GHS712.883m; FY2023 stated capital rose by GHS2,500m while retained losses increased. Do not book recapitalisation as earnings. FY2025 shares deposit GHS198m separate from stated capital.
@@ -23,3 +23,5 @@ Archive: https://www.cbg.com.gh/documents/annual-financial-reports . Latest inte
 - No independent visual verification yet. 
 
 - FY2025 p97/98 regulatory capital GHS722.423m and RWA GHS5,050.277m, versus FY2024 GHS841.389m and GHS5,679.037m. DDEP CET1 relief falls from GHS1,538.499m to zero. Book equity must not be used as regulatory capital. FY2025 p86–87 net FX short position GHS110.904m; USD short GHS60.283m, USD 10% weakening sensitivity loss GHS6.028m. Use FX sensitivity and cap regulatory capital separately from accounting equity.
+
+- CBG26H1 p1 reports H1-2026 PBT 75.034m, PAT 59.552m, assets 19,196.087m, deposits 16,134.384m, net loans 1,472.515m. p2 reports CAR 14.91%, CET1 13.74%, NPL 33.30%; nil statutory liquidity defaults. 198m deposit for shares transferred into stated capital during H1, no new equity injection. H1 comparative equity statement has inconsistent parsed subtotal; balance-sheet and total comprehensive income agree, no adjustment made. Interim cash aggregate includes due-from-banks; split, gross loans and allowance unavailable. Q1 official PDF parsed but not added since H1 supersedes it; Q1 screenshot cache missed. H1 source has no separate Tier 1 ratio. No visual check claimed.
