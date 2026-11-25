@@ -45,3 +45,12 @@ Scope: the production generator at 4e68db4 run from a clean LF checkout into a t
 - Output: `comparison.csv` 18 ordinary banks (ordinary block) and a separate `conditional-comparison.csv` with exactly omnibsic-bank, prudential-bank and umb, each carrying scope text, claim status, review stage and the scope-marker hash. Conditional banks are not inside the ordinary rows or totals, as CONDITIONAL-POLICY.md requires.
 - Independent recomputation (my own script, reading each bank's `financials.csv` and `forecast.csv`): FY2025 total assets, customer deposits and profit after tax, and FY2030E profit after tax in base, downside and upside, for all 21 banks. **123 cells compared, 0 mismatches** (tolerance 0.0025m); UMB's blank FY2025 cells are blank in the source and were skipped.
 - Not checked: ROA/ROE columns in this run (I verified 18/18 in rounds 1 and 2 on the earlier snapshot), CAR/NPL source pages, the verifier files by chatgpt-support, and whether the final refresh happens after ADB, Absa and the conditional banks close. The output will need regenerating then.
+
+## Review 4 (final exact pin): 2026-11-25T21:11:56Z
+Verdict: PASS
+
+Reviewed: source pin b728a09ffd52393f98b97c14298544c139d1921f, published in commit 11dffc9 (comparison.csv with 20 ordinary banks, conditional-comparison.csv with 3 banks, README). Observed.
+
+- Independent recomputation from each bank's own financials.csv and forecast.csv: FY2025 total assets, customer deposits and profit after tax; FY2025 ROA on average assets; average-equity and closing-equity ROE; FY2030E profit after tax in base, downside and upside, for all 20 ordinary banks, plus FY2030E profit and FY2025 assets for the 3 conditional banks. 190 cells compared, 0 mismatches.
+- Labelling: NIB average-equity ROE is n/m with closing-equity 22.1976%; CalBank is flagged for the equity change of more than 2x; both as I asked in round 1. The README states 20 of 23 ordinary and names the three excluded conditional banks. Conditional scope text is in conditional-comparison.csv (omnibsic: FY2021 unavailable; prudential: 9M-2026 unavailable; umb: FY2025 annual and 2026 interim unavailable). No conditional bank is inside ordinary totals (assets 403,776.743m, deposits 293,234.915m, PAT 14,033.738m, 20 banks).
+- Not checked: CAR and NPL source pages, the generator internals beyond running it in round 3, and the QA and roll-up files (other reviewers).
