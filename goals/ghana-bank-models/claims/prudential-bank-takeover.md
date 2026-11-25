@@ -12,3 +12,6 @@ progress: Statutory reserve-tier refinement implemented (50/25/12.5%, positive a
 
 updated: 2026-11-25T16:33:52.927Z
 progress: Historical capital source recovery: 228 rows (36 additions/replacements); FY21–24 reported Bank CAR/Tier1/CET1/RWA/regulatory capital and FY21/22 NPL recovered; FY23/24 with/without relief preserved. Bank-only FY23/24 NPL not established (Group-only note excluded), Sep26 remains inaccessible. 44 historical bridges and 120 forecast bridges unchanged. No acceptance.
+
+updated: 2026-11-25T16:47:50.192Z
+progress: Conditional anchor and sensitivity refinement committed. 238 history rows, 915 forecasts, 120 exact forecast identities, 44 historical bridges previously verified. Explicit capital-recognition/RWA/CRR stress and historical funding calibration. FY26 actual inaccessible via authorized laptop and Firecrawl; no estimated actuals. Preparing independent provisional review after exact CLI replay; not accepted.
