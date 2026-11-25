@@ -2,6 +2,7 @@
 import fs from 'node:fs';
 import {execFileSync} from 'node:child_process';
 import path from 'node:path';
+import {fileURLToPath} from 'node:url';
 export const pin='67ff7c9a32bc6ab7f49b9904ccbc0ce0fccb5d6e';
 export const ordinary=['access-bank-ghana','bank-of-africa-ghana','calbank','consolidated-bank-ghana','ecobank-ghana','fbnbank-ghana','fidelity-bank-ghana','first-atlantic-bank','first-national-bank-ghana','gcb','gtbank-ghana','nib','republic-bank-ghana','societe-generale-ghana','stanbic-bank-ghana','standard-chartered-ghana','uba-ghana','zenith-bank-ghana'];
 export const pending=['absa-ghana','adb'];
@@ -47,7 +48,7 @@ export function summarize(packages){
  const excluded=[...pending,...conditional].map(b=>({bank:b,group:pending.includes(b)?'pending ordinary review':'conditional source gap',base:get(b,'base',2030).pat,down:get(b,'downside',2030).pat,up:get(b,'upside',2030).pat,down_car:get(b,'downside',2030).car,down_equity:get(b,'downside',2030).equity}));
  return {pin,ordinary_count:ordinary.length,package_count:map.size,rows:packages.reduce((s,x)=>s+x.rows,0),scenario_years:packages.length*15,annual,bank,top3_share_pct:sumDelta>0?100*top3/sumDelta:null,nonMonotonic,excluded};
 }
-if(process.argv[1]&&path.resolve(process.argv[1])===path.resolve(new URL(import.meta.url).pathname.replace(/^\/(?:([A-Za-z]:))/, '$1'))){
+if(process.argv[1]&&path.resolve(process.argv[1])===path.resolve(fileURLToPath(import.meta.url))){
  const files=[...ordinary,...pending,...conditional].map(slug=>{const file='goals/ghana-bank-models/banks/'+slug+'/forecast.csv';const blob=execFileSync('git',['rev-parse',pin+':'+file],{encoding:'utf8'}).trim();return extract(slug,execFileSync('git',['show',pin+':'+file],{encoding:'utf8',maxBuffer:8*1024*1024}),blob)});
  const report=summarize(files);console.log(JSON.stringify(report,null,2));
 }
