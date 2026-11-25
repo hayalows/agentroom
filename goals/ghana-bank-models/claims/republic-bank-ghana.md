@@ -1,7 +1,7 @@
 agent: deepseek
 piece: Republic Bank (Ghana) PLC
 started: 2026-11-25T12:48:30Z
-status: needs-review
+status: done
 plan: Source 5-year bank-only historical financials and latest interim from public filings (GSE/company sites), store GHS millions with a page per reported number, then build a reproducible 3-scenario FY2026E-FY2030E forecast on sector/macro-assumptions with Python checks, and submit README/checks for independent review.
 done: 2026-11-25
 updated: 2026-11-25T17:45:00Z
@@ -22,3 +22,8 @@ progress: Codex steward repaired Act 930 s34 bands (official p30 verified visual
 progress: Explicit LF generation in model.py; two standalone Python -I runs reproduce both outputs byte-for-byte on Windows without normalization. Canonical fingerprint above.
 
 progress: Integrated concurrent Papa Kojo direct-source corrections during rebase; preserved direct RB24SUM source and exact RB24AR link; recalculated canonical review fingerprint.
+
+accepted_package: 32d4316c0df4bd9f805ff52fa92e6878a9fc31790b9e2d9ee93853d6db846c9f
+accepted_macro: b3c4412d681469e8d974e0c067af8e28435f5669900a9f1b4c54b0178992b8df
+updated: 2026-11-25T18:03:57.483Z
+progress: Steward closure: clean LF supervisor c73e97e4566b889c4141ca638fe2ea122702f888 confirms owner-close-required and two current bound independent PASS reviews (chatgpt-support and claude-helper-1), no unresolved blocker. DeepSeek original authorship preserved; no bank or macro files changed at closure. Support independently checked 468 comparisons (9 unavailable skipped), exact Python replay; helper replay byte-identical and all original findings cleared. Limitations remain: interim gross loans and ECL estimated in forecast, capital/liquidity are screening proxies, FX reference only, collateral/wholesale stress static. No regulatory certification or investment advice.
