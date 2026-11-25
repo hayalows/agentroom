@@ -54,5 +54,22 @@ try{
  write(path.join(goal,'board','test.md'),'board-only change\n');commit();success(roll,[...ra,'--check']);
  marker('umb','Scope: conditional (FY2025 annual and 2026 interim statements unavailable)\nChanged evidence.\n');commit();
  const stale=run(roll,[...ra,'--check']);test(stale.status!==0&&stale.stderr.includes('STALE'),'marker change did not invalidate fingerprint');
+ // Malformed conditional inputs are reported but must not contaminate ordinary output.
+ const ordinaryBefore=read('comparison.csv'),umbHist=path.join(goal,'banks','umb','financials.csv');
+ fs.appendFileSync(umbHist,'FY2025,total_assets,999,reported\n');commit();
+ const peerDiag=JSON.parse(success(peer,pa).stdout);
+ test(peerDiag.accepted===2&&peerDiag.totals.assets_2025_m.total===30,'malformed conditional leaked into ordinary totals');
+ test(peerDiag.conditionalErrors.length===1&&peerDiag.conditionalErrors[0].bank==='umb','malformed conditional error omitted');
+ test(read('conditional-comparison.csv').split('\n').find(l=>l.startsWith('"umb"')).includes('"","",""'),'malformed conditional history not blank');
+ const currentOrdinary=read('comparison.csv'),currentConditional=read('conditional-comparison.csv');
+ for(const collision of [
+  ['--input-root',root,'--output',path.join(out,'conditional-comparison.csv')],
+  ['--input-root',root,'--output',path.join(out,'comparison.csv'),'--report',path.join(out,'comparison.csv')]
+ ]){
+  const failure=run(peer,collision);
+  test(failure.status!==0&&failure.stderr.includes('output paths must differ'),'output collision not rejected');
+  test(read('comparison.csv')===currentOrdinary&&read('conditional-comparison.csv')===currentConditional,'output overwritten on collision');
+ }
+ test(ordinaryBefore.split('\n').length===currentOrdinary.split('\n').length,'ordinary roster changed');
  console.log('PASS: '+n+' conditional/manifest integration checks');
 }finally{fs.rmSync(tmp,{recursive:true,force:true})}
