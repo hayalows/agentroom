@@ -93,7 +93,7 @@
     },
     "cost_of_risk": {
       "status": "estimated",
-      "method": "Loan impairment charge / mean gross loans; scenario percentage. No repeat of FY2022 DDEP event assumed; stress captured by higher costs, not an unverified sovereign haircut.",
+      "method": "Loan impairment charge / mean gross loans; scenario percentage. No repeat of FY2022 DDEP event assumed; stress captured by higher costs, not an unverified sovereign haircut. Floor modeled impairment at the increase in allowance stock to prevent an unfunded allowance build.",
       "reason": "FY2025 loan impairment 188.797m against mean gross loans approximately 14,881m (1.27%).",
       "base": 1.3,
       "downside": 3.5,
@@ -140,7 +140,7 @@
     },
     "q4_income_runrate_multiplier": {
       "status": "estimated",
-      "method": "Scale Q4 revenues by scenario multiplier; Q4 funding expenses multiplied by 1.25 downside/0.9 upside/1 base, OPEX 1.10 downside/1 upside/1 base, Q4 risk charge by estimated gross loans and scenario risk/4; keep actual 9M flows fixed.",
+      "method": "Scale Q4 revenues by scenario multiplier; Q4 funding expenses multiplied by 1.25 downside/0.9 upside/1 base, OPEX 1.10 downside/1 upside/1 base, Q4 risk charge by estimated gross loans and scenario risk/4; keep actual 9M flows fixed. Impairment subject to allowance-stock floor.",
       "base": 1,
       "downside": 0.85,
       "upside": 1.15
@@ -187,7 +187,7 @@
       },
       "interbank_yield_policy_factor": 0.75,
       "q4_opex_balance_growth": "Annual opex growth divided by four for Q4 property and other assets; fee expense run-rate uses separate funding multiplier only for interest expense and scenario fee expense ratio multiplier for fee expense.",
-      "allowance_bridge": "Allowance stock target is separate from impairment flow; implied write-offs/other movements = opening allowance + loan impairment charge - closing allowance. Negative is unmodelled additional allowance build, not an observed recovery. 2026 opening allowance proxy only; report separately.",
+      "allowance_bridge": "Implied write-offs/other reductions = opening allowance + modeled impairment - closing allowance; impairment floor is max(risk-based charge, allowance stock increase, zero). Movements are scenario estimates, not observed write-offs. FY2026 opening allowance is estimated; Q4 only.",
       "cash_residual": "Do not hide negative cash; show reserve and funding gap. Cash includes reported cash+BoG aggregate so regulatory compliance not established."
     }
   },
