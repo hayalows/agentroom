@@ -1,0 +1,122 @@
+{
+  "bank": "nib",
+  "macro_file": "../../sector/macro-assumptions/macro.csv",
+  "anchor": "Reported 9M2026 income and Sep balance sheet, Q4 estimated only. Opening gross loan proxy uses FY25 IFRS allowance ratio (51.60%); sensitivity uses 40%. 2025 recapitalization observed, no new equity in projections.",
+  "calibration": {
+    "loan_yield_pct": 16,
+    "earning_cash_yield_pct": 7,
+    "fast_securities_share": 0.5,
+    "slow_annual_reset": 0.25,
+    "securities_weight_tbill": 0.5,
+    "deposit_policy_beta": 0.45,
+    "loan_policy_beta": 0.6,
+    "notes": "Loan and placements yields, repricing share, slow reset and rate betas are explicit analyst assumptions. Starting securities and funding yields calibrated to annualized 9M2026 reported interest income/expense and FY25/Q3 mean stocks; earning cash fraction proxy FY25 net bank placements/aggregate cash. RWA proxy uses net loans at 100% + residual density calibrated to FY25 audited total RWA; actual Q3 numerator/RWA unavailable; separate gross loan anchor sensitivity does not alter opening net-loan RWA."
+  },
+  "scenario": {
+    "base": {
+      "q4_deposit_pct": 2,
+      "q4_gross_loan_pct": 3,
+      "deposit_nominal_spread_pp": 0,
+      "loan_nominal_spread_pp": 2,
+      "incremental_deposit_securities_share": 0.65,
+      "allowance_pct": [
+        50,
+        48,
+        45,
+        42,
+        40
+      ],
+      "npl_pct": [
+        50,
+        47,
+        43,
+        39,
+        35
+      ],
+      "risk_pct": [
+        2.5,
+        2.5,
+        2.5,
+        2.3,
+        2
+      ],
+      "fee_trade_multiplier": 1,
+      "fee_growth_spread_pp": 0,
+      "opex_spread_pp": 3,
+      "tax_pct": 15,
+      "associate_growth_pp": 0
+    },
+    "downside": {
+      "q4_deposit_pct": -5,
+      "q4_gross_loan_pct": -3,
+      "deposit_nominal_spread_pp": -7,
+      "loan_nominal_spread_pp": -10,
+      "incremental_deposit_securities_share": 0.75,
+      "allowance_pct": [
+        58,
+        62,
+        65,
+        65,
+        65
+      ],
+      "npl_pct": [
+        58,
+        65,
+        70,
+        70,
+        70
+      ],
+      "risk_pct": [
+        6,
+        7,
+        7,
+        6,
+        6
+      ],
+      "fee_trade_multiplier": 0.8,
+      "fee_growth_spread_pp": -6,
+      "opex_spread_pp": 7,
+      "tax_pct": 25,
+      "associate_growth_pp": -10
+    },
+    "upside": {
+      "q4_deposit_pct": 5,
+      "q4_gross_loan_pct": 7,
+      "deposit_nominal_spread_pp": 3,
+      "loan_nominal_spread_pp": 7,
+      "incremental_deposit_securities_share": 0.55,
+      "allowance_pct": [
+        47,
+        43,
+        39,
+        35,
+        32
+      ],
+      "npl_pct": [
+        47,
+        40,
+        34,
+        28,
+        24
+      ],
+      "risk_pct": [
+        1.5,
+        1.5,
+        1.5,
+        1.3,
+        1.3
+      ],
+      "fee_trade_multiplier": 1.1,
+      "fee_growth_spread_pp": 3,
+      "opex_spread_pp": 1,
+      "tax_pct": 12,
+      "associate_growth_pp": 3
+    }
+  },
+  "other": {
+    "growth_floor_pct": -10,
+    "growth_cap_pct": 30,
+    "capital_eligibility_pct": 80,
+    "notes": "Maintain stated capital70m, deposit for shares3425.621m and treasury shares-30m; no conversion/new injection assumed. Statutory reserve transfer 12.5% of positive FY26 cumulative PAT in Q4 (zero transfer YTD), then annual 12.5%, consistent with observed FY25; balance exceeds stated capital and no conversion assumed. No dividends in any case because accumulated deficit and recapitalization uncertainty; a distribution is not implied even if recovery clears deficit. Hold associate carrying value fixed; model separate associate income from Q3 run rate and GDP spread, not FY25 unusual 106.703m. Gross other operating expense before associates modeled separately. Tax effective 12–25% stress on positive incremental PBT; FY25 actual levies 10% and corporate tax zero, no future tax holiday asserted. Net loan RWA calibrated to audited FY25 total RWA; 80% profit eligibility and alternative RWA density +50% screens. Central bank share proxy 1332.726/3245.249, non-interest-bearing cash proxy 1-1509.928/3245.249. Neither is eligible reserve. 10% customer runoff at static other balance sheet, reduce reserve requirement on remaining deposits, no funding plug. Q3 cash includes bank balances; not unrestricted. FX no separate exposure extracted; no incremental FX P&L. Existing model assumes no future DDEP shock; loan NPL/allowance paths independent, no write-off claimed."
+  }
+}
