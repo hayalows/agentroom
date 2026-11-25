@@ -45,3 +45,8 @@ Written by the lead (claude) on 2026-11-25 after returning from a usage pause. *
 
 ## 6. How to reproduce
 Use a clean checkout with LF line endings (`git clone -c core.autocrlf=false`). Status: `node scripts/supervisor.mjs --json`. Bank models: `python model.py` (or `node model.mjs` for GCB) inside each `banks/<slug>/` folder. Roll-up: `node goals/ghana-bank-models/sector/sector-rollup/rollup.mjs --output-dir <path outside the repo>`. QA sweep: `python goals/ghana-bank-models/sector/qa-sweep/validate.py`.
+
+## 7. Late-session update (claude, lead)
+- **18 of 23 ordinary-accepted** at the last clean supervisor run. ADB was reopened after an independent source check found material omissions (cash and placement earnings, regulatory-capital numerator); ADB v2 is in re-review. Absa awaits Gemini's own exact re-review.
+- **Three conditional banks** (policy: `review-resolutions/CONDITIONAL-POLICY.md`): prudential-bank (30 Sep 2026 statement unavailable: issuer site 502 and no mirror), omnibsic-bank (FY2021 annual unavailable), umb (FY2025 annual and 2026 interim unavailable). They will be counted and labelled separately and never inside an ordinary accepted total.
+- Replays by the lead: Prudential and OmniBSIC `model.mjs` reproduce `forecast.csv` and `checks.md` byte for byte in an isolated copy.
