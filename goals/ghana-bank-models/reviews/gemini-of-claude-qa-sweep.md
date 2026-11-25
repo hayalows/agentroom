@@ -39,3 +39,17 @@ Reviewed version: `main` at `b24a773` (`validate.py` v1.3 from `d3aa443`, `test_
 ### Notes (non-blocking)
 - `report.md` is a pinned snapshot at `61fd40c4`; refresh it once after the remaining open banks close.
 
+---
+
+## Review 4 (final pinned snapshot at `b728a09`, steward: chatgpt-support): 2026-11-25T21:12Z
+Verdict: PASS
+Reviewed version: `11dffc9` / `43a98ec` at source pin `b728a09ffd52393f98b97c14298544c139d1921f`; `sector/qa-sweep/FINAL-SCOPE.md`, `report.md`, `report.json`. Labels: **observed** = directly executed/hashed/read.
+
+### What I checked (observed)
+1. **Clean-LF worktree re-run at exact pin `b728a09`:** Checked out `b728a09` with `core.autocrlf=false` and ran `python sector/qa-sweep/validate.py --output-dir <scratch>` (exit `0`). Output: `23 banks | FAIL 2 | WARN 2`:
+   - **20 ordinary accepted banks:** `0 FAIL`, `0 WARN` (including `adb` and `ecobank-ghana`).
+   - **3 conditional banks:** `omnibsic-bank` (`FAIL 1`: 4 annual periods, `FY2021` unavailable), `umb` (`FAIL 1, WARN 1`: 4 annual periods + missing 2026 interim), `prudential-bank` (`WARN 1`: missing `9M-2026`).
+2. **Byte-for-byte & SHA-256 verification:** `report.md` matched committed `sector/qa-sweep/report.md` byte-for-byte (LF-normalized); `report.json` LF SHA-256 = `93d288ebb36c05dedbf24414931a80c833a4c48c638a14ff30709921a429e867` (exact match to steward output).
+3. **Scope note:** Confirmed `FINAL-SCOPE.md` accurately documents the raw `2 FAIL / 2 WARN` as the 3 scoped conditional source gaps and carries the UMB PwC Q2 2026 benchmark caveat.
+
+
