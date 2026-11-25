@@ -107,6 +107,9 @@ def verify(root, roll, peer):
     require((len(accepted), len(excluded), len(roster)) == (manifest["accepted"], manifest["excluded"], manifest["roster"]), "manifest counts mismatch")
     markers = {b: m for b in roster if (m := scope_marker(goal/"review-resolutions"/(b+".md"))) is not None}
     require(markers == manifest["conditionalMarkers"] and len(markers) == manifest["conditional"] and not set(markers) & set(accepted), "scope mismatch or ordinary contamination")
+    require((peer/"comparison.csv").is_file() and (peer/"conditional-comparison.csv").is_file(), "missing peer output files")
+    for name, expected in manifest["outputHashes"].items():
+        require(Path(name).name == name and digest(roll/name) == expected, f"roll-up output digest mismatch: {name}")
     ordinary = index(read_csv(peer/"comparison.csv"), "bank")
     conditional = index(read_csv(peer/"conditional-comparison.csv"), "bank")
     require(set(ordinary) == set(accepted), "ordinary peer membership mismatch")
