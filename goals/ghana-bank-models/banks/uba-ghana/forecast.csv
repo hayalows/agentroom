@@ -1,0 +1,672 @@
+bank,scenario,period,statement,line_item,value,unit,status,notes
+uba-ghana,base,FY2026E,income_statement,interest_income,877.664,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
+uba-ghana,base,FY2026E,income_statement,interest_expense,338.164,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
+uba-ghana,base,FY2026E,income_statement,net_interest_income,539.500,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
+uba-ghana,base,FY2026E,income_statement,fee_commission_income,225.935,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
+uba-ghana,base,FY2026E,income_statement,fee_commission_expense,118.017,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
+uba-ghana,base,FY2026E,income_statement,net_trading_income,120.152,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
+uba-ghana,base,FY2026E,income_statement,other_operating_income,0.119,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
+uba-ghana,base,FY2026E,income_statement,total_operating_income,767.688,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
+uba-ghana,base,FY2026E,income_statement,staff_costs,236.051,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
+uba-ghana,base,FY2026E,income_statement,depreciation_amortisation,14.773,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
+uba-ghana,base,FY2026E,income_statement,other_operating_expenses,130.668,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
+uba-ghana,base,FY2026E,income_statement,impairment_charge,-40.798,GHS millions,estimated,Estimate. 9M-2026 actual (a reversal) plus a Q4 loan charge at the base cost of risk on 30 Sep 2026 net loans / 4.
+uba-ghana,base,FY2026E,income_statement,profit_before_tax,426.994,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
+uba-ghana,base,FY2026E,income_statement,income_tax,170.520,GHS millions,estimated,Estimate. 9M-2026 tax actually booked (41.3% of 9M profit before tax) plus 35% of implied Q4 profit before tax.
+uba-ghana,base,FY2026E,income_statement,profit_after_tax,256.474,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
+uba-ghana,base,FY2026E,income_statement,x_dividends_paid,0.000,GHS millions,estimated,Dividends paid in the year. FY2026E adds none in Q4 (304.9m was already paid in 9M-2026 and sits in the equity base).
+uba-ghana,base,FY2026E,income_statement,x_statutory_reserve_transfer,32.059,GHS millions,estimated,Act 930 s34 tiers on profit after tax (see model.py stat_transfer).
+uba-ghana,base,FY2026E,balance_sheet,cash_and_bog_balances,2776.062,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
+uba-ghana,base,FY2026E,balance_sheet,investment_securities,7215.036,GHS millions,estimated,"Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit. Securities are the plug (liquid assets) after cash, loans, other assets and property."
+uba-ghana,base,FY2026E,balance_sheet,loans_and_advances_net,1692.697,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
+uba-ghana,base,FY2026E,balance_sheet,property_equipment_intangibles,321.936,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
+uba-ghana,base,FY2026E,balance_sheet,other_assets,611.981,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
+uba-ghana,base,FY2026E,balance_sheet,total_assets,12617.712,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
+uba-ghana,base,FY2026E,balance_sheet,customer_deposits,8684.740,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
+uba-ghana,base,FY2026E,balance_sheet,due_to_banks,19.925,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
+uba-ghana,base,FY2026E,balance_sheet,borrowings,1690.643,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
+uba-ghana,base,FY2026E,balance_sheet,other_liabilities,372.759,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
+uba-ghana,base,FY2026E,balance_sheet,total_liabilities,10768.067,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
+uba-ghana,base,FY2026E,balance_sheet,x_retained_earnings,914.527,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
+uba-ghana,base,FY2026E,balance_sheet,x_reserves_other,535.118,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
+uba-ghana,base,FY2026E,balance_sheet,total_equity,1849.645,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
+uba-ghana,base,FY2026E,balance_sheet,x_stated_capital,400.000,GHS millions,estimated,Held at 400m; no issue assumed. Matches the shared minimum paid-up capital.
+uba-ghana,base,FY2026E,ratios,x_car_proxy_pct,17.294,percent,estimated,"PROXY, not the regulatory ratio: (book equity - deductions held at the FY2025 gap between book equity and regulatory capital) / (risk-weight density x total assets). Density calibrated so the proxy equals the reported 16.7% at 30 Sep 2026."
+uba-ghana,base,FY2026E,ratios,x_car_proxy_fy25_density_pct,23.175,percent,estimated,"PROXY with the FY2025 audited density (RWA / total assets = 0.516), a high case."
+uba-ghana,base,FY2026E,ratios,roe_pct,13.695,percent,estimated,Estimate. Profit after tax / average of opening and closing equity.
+uba-ghana,base,FY2026E,ratios,roa_pct,2.123,percent,estimated,Estimate. Profit after tax / average of opening and closing total assets.
+uba-ghana,base,FY2026E,ratios,cost_to_income_pct,49.694,percent,estimated,Estimate. (Staff + depreciation + other expenses) / operating income before impairment.
+uba-ghana,base,FY2026E,ratios,ldr_pct,19.490,percent,estimated,Estimate. NET loans / customer deposits (gross loans are not forecast).
+uba-ghana,base,FY2026E,balance_sheet,due_from_banks,,GHS millions,unavailable,Not a separate balance sheet line (inside cash and bank balances).
+uba-ghana,base,FY2026E,balance_sheet,loans_and_advances_gross,,GHS millions,unavailable,Gross loans not forecast; interim statements do not print them.
+uba-ghana,base,FY2026E,balance_sheet,loan_loss_allowance,,GHS millions,unavailable,Allowance not forecast; impairment is driven by a cost of risk on net loans.
+uba-ghana,base,FY2026E,ratios,npl_pct,,percent,unavailable,No NPL path is forecast. Reported NPL was 2.11% (FY2025) and 1.57% (Sep 2026); cost of risk is an independent assumption.
+uba-ghana,base,FY2026E,ratios,car_pct,,percent,unavailable,Regulatory CAR is not forecast; see x_car_proxy_pct (accounting proxy).
+uba-ghana,base,FY2026E,ratios,tier1_pct,,percent,unavailable,Tier 1 is not forecast.
+uba-ghana,base,FY2027E,income_statement,interest_income,958.611,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,base,FY2027E,income_statement,interest_expense,278.146,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,base,FY2027E,income_statement,net_interest_income,680.465,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,base,FY2027E,income_statement,fee_commission_income,242.880,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,base,FY2027E,income_statement,fee_commission_expense,126.869,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,base,FY2027E,income_statement,net_trading_income,114.144,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,base,FY2027E,income_statement,other_operating_income,0.119,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,base,FY2027E,income_statement,total_operating_income,910.739,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,base,FY2027E,income_statement,staff_costs,260.836,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,base,FY2027E,income_statement,depreciation_amortisation,15.881,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,base,FY2027E,income_statement,other_operating_expenses,143.081,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,base,FY2027E,income_statement,impairment_charge,27.676,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,base,FY2027E,income_statement,profit_before_tax,463.265,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,base,FY2027E,income_statement,income_tax,162.143,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,base,FY2027E,income_statement,profit_after_tax,301.122,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,base,FY2027E,income_statement,x_dividends_paid,102.590,GHS millions,estimated,"Payout x prior-year profit after tax (assumptions.json), capped as flagged."
+uba-ghana,base,FY2027E,income_statement,x_statutory_reserve_transfer,37.640,GHS millions,estimated,Act 930 s34 tiers on profit after tax (see model.py stat_transfer).
+uba-ghana,base,FY2027E,balance_sheet,cash_and_bog_balances,3216.762,GHS millions,estimated,Estimate.
+uba-ghana,base,FY2027E,balance_sheet,investment_securities,8007.962,GHS millions,estimated,"Estimate. Securities are the plug (liquid assets) after cash, loans, other assets and property."
+uba-ghana,base,FY2027E,balance_sheet,loans_and_advances_net,1997.382,GHS millions,estimated,Estimate.
+uba-ghana,base,FY2027E,balance_sheet,property_equipment_intangibles,346.081,GHS millions,estimated,Estimate.
+uba-ghana,base,FY2027E,balance_sheet,other_assets,657.880,GHS millions,estimated,Estimate.
+uba-ghana,base,FY2027E,balance_sheet,total_assets,14226.067,GHS millions,estimated,Estimate.
+uba-ghana,base,FY2027E,balance_sheet,customer_deposits,10063.442,GHS millions,estimated,Estimate.
+uba-ghana,base,FY2027E,balance_sheet,due_to_banks,23.088,GHS millions,estimated,Estimate.
+uba-ghana,base,FY2027E,balance_sheet,borrowings,1690.643,GHS millions,estimated,Estimate.
+uba-ghana,base,FY2027E,balance_sheet,other_liabilities,400.716,GHS millions,estimated,Estimate.
+uba-ghana,base,FY2027E,balance_sheet,total_liabilities,12177.889,GHS millions,estimated,Estimate.
+uba-ghana,base,FY2027E,balance_sheet,x_retained_earnings,1075.419,GHS millions,estimated,Estimate.
+uba-ghana,base,FY2027E,balance_sheet,x_reserves_other,572.758,GHS millions,estimated,Estimate.
+uba-ghana,base,FY2027E,balance_sheet,total_equity,2048.177,GHS millions,estimated,Estimate.
+uba-ghana,base,FY2027E,balance_sheet,x_stated_capital,400.000,GHS millions,estimated,Held at 400m; no issue assumed. Matches the shared minimum paid-up capital.
+uba-ghana,base,FY2027E,ratios,x_car_proxy_pct,17.356,percent,estimated,"PROXY, not the regulatory ratio: (book equity - deductions held at the FY2025 gap between book equity and regulatory capital) / (risk-weight density x total assets). Density calibrated so the proxy equals the reported 16.7% at 30 Sep 2026."
+uba-ghana,base,FY2027E,ratios,x_car_proxy_fy25_density_pct,23.258,percent,estimated,"PROXY with the FY2025 audited density (RWA / total assets = 0.516), a high case."
+uba-ghana,base,FY2027E,ratios,roe_pct,15.451,percent,estimated,Estimate. Profit after tax / average of opening and closing equity.
+uba-ghana,base,FY2027E,ratios,roa_pct,2.244,percent,estimated,Estimate. Profit after tax / average of opening and closing total assets.
+uba-ghana,base,FY2027E,ratios,cost_to_income_pct,46.094,percent,estimated,Estimate. (Staff + depreciation + other expenses) / operating income before impairment.
+uba-ghana,base,FY2027E,ratios,ldr_pct,19.848,percent,estimated,Estimate. NET loans / customer deposits (gross loans are not forecast).
+uba-ghana,base,FY2027E,balance_sheet,due_from_banks,,GHS millions,unavailable,Not a separate balance sheet line (inside cash and bank balances).
+uba-ghana,base,FY2027E,balance_sheet,loans_and_advances_gross,,GHS millions,unavailable,Gross loans not forecast; interim statements do not print them.
+uba-ghana,base,FY2027E,balance_sheet,loan_loss_allowance,,GHS millions,unavailable,Allowance not forecast; impairment is driven by a cost of risk on net loans.
+uba-ghana,base,FY2027E,ratios,npl_pct,,percent,unavailable,No NPL path is forecast. Reported NPL was 2.11% (FY2025) and 1.57% (Sep 2026); cost of risk is an independent assumption.
+uba-ghana,base,FY2027E,ratios,car_pct,,percent,unavailable,Regulatory CAR is not forecast; see x_car_proxy_pct (accounting proxy).
+uba-ghana,base,FY2027E,ratios,tier1_pct,,percent,unavailable,Tier 1 is not forecast.
+uba-ghana,base,FY2028E,income_statement,interest_income,1059.345,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,base,FY2028E,income_statement,interest_expense,293.645,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,base,FY2028E,income_statement,net_interest_income,765.701,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,base,FY2028E,income_statement,fee_commission_income,262.310,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,base,FY2028E,income_statement,fee_commission_expense,137.018,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,base,FY2028E,income_statement,net_trading_income,108.437,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,base,FY2028E,income_statement,other_operating_income,0.119,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,base,FY2028E,income_statement,total_operating_income,999.549,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,base,FY2028E,income_statement,staff_costs,289.528,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,base,FY2028E,income_statement,depreciation_amortisation,17.152,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,base,FY2028E,income_statement,other_operating_expenses,157.390,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,base,FY2028E,income_statement,impairment_charge,32.208,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,base,FY2028E,income_statement,profit_before_tax,503.271,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,base,FY2028E,income_statement,income_tax,176.145,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,base,FY2028E,income_statement,profit_after_tax,327.126,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,base,FY2028E,income_statement,x_dividends_paid,120.449,GHS millions,estimated,"Payout x prior-year profit after tax (assumptions.json), capped as flagged."
+uba-ghana,base,FY2028E,income_statement,x_statutory_reserve_transfer,40.891,GHS millions,estimated,Act 930 s34 tiers on profit after tax (see model.py stat_transfer).
+uba-ghana,base,FY2028E,balance_sheet,cash_and_bog_balances,3744.311,GHS millions,estimated,Estimate.
+uba-ghana,base,FY2028E,balance_sheet,investment_securities,8993.414,GHS millions,estimated,"Estimate. Securities are the plug (liquid assets) after cash, loans, other assets and property."
+uba-ghana,base,FY2028E,balance_sheet,loans_and_advances_net,2296.990,GHS millions,estimated,Estimate.
+uba-ghana,base,FY2028E,balance_sheet,property_equipment_intangibles,373.768,GHS millions,estimated,Estimate.
+uba-ghana,base,FY2028E,balance_sheet,other_assets,710.510,GHS millions,estimated,Estimate.
+uba-ghana,base,FY2028E,balance_sheet,total_assets,16118.993,GHS millions,estimated,Estimate.
+uba-ghana,base,FY2028E,balance_sheet,customer_deposits,11713.847,GHS millions,estimated,Estimate.
+uba-ghana,base,FY2028E,balance_sheet,due_to_banks,26.875,GHS millions,estimated,Estimate.
+uba-ghana,base,FY2028E,balance_sheet,borrowings,1690.643,GHS millions,estimated,Estimate.
+uba-ghana,base,FY2028E,balance_sheet,other_liabilities,432.773,GHS millions,estimated,Estimate.
+uba-ghana,base,FY2028E,balance_sheet,total_liabilities,13864.138,GHS millions,estimated,Estimate.
+uba-ghana,base,FY2028E,balance_sheet,x_retained_earnings,1241.206,GHS millions,estimated,Estimate.
+uba-ghana,base,FY2028E,balance_sheet,x_reserves_other,613.649,GHS millions,estimated,Estimate.
+uba-ghana,base,FY2028E,balance_sheet,total_equity,2254.855,GHS millions,estimated,Estimate.
+uba-ghana,base,FY2028E,balance_sheet,x_stated_capital,400.000,GHS millions,estimated,Held at 400m; no issue assumed. Matches the shared minimum paid-up capital.
+uba-ghana,base,FY2028E,ratios,x_car_proxy_pct,17.171,percent,estimated,"PROXY, not the regulatory ratio: (book equity - deductions held at the FY2025 gap between book equity and regulatory capital) / (risk-weight density x total assets). Density calibrated so the proxy equals the reported 16.7% at 30 Sep 2026."
+uba-ghana,base,FY2028E,ratios,x_car_proxy_fy25_density_pct,23.010,percent,estimated,"PROXY with the FY2025 audited density (RWA / total assets = 0.516), a high case."
+uba-ghana,base,FY2028E,ratios,roe_pct,15.204,percent,estimated,Estimate. Profit after tax / average of opening and closing equity.
+uba-ghana,base,FY2028E,ratios,roa_pct,2.156,percent,estimated,Estimate. Profit after tax / average of opening and closing total assets.
+uba-ghana,base,FY2028E,ratios,cost_to_income_pct,46.428,percent,estimated,Estimate. (Staff + depreciation + other expenses) / operating income before impairment.
+uba-ghana,base,FY2028E,ratios,ldr_pct,19.609,percent,estimated,Estimate. NET loans / customer deposits (gross loans are not forecast).
+uba-ghana,base,FY2028E,balance_sheet,due_from_banks,,GHS millions,unavailable,Not a separate balance sheet line (inside cash and bank balances).
+uba-ghana,base,FY2028E,balance_sheet,loans_and_advances_gross,,GHS millions,unavailable,Gross loans not forecast; interim statements do not print them.
+uba-ghana,base,FY2028E,balance_sheet,loan_loss_allowance,,GHS millions,unavailable,Allowance not forecast; impairment is driven by a cost of risk on net loans.
+uba-ghana,base,FY2028E,ratios,npl_pct,,percent,unavailable,No NPL path is forecast. Reported NPL was 2.11% (FY2025) and 1.57% (Sep 2026); cost of risk is an independent assumption.
+uba-ghana,base,FY2028E,ratios,car_pct,,percent,unavailable,Regulatory CAR is not forecast; see x_car_proxy_pct (accounting proxy).
+uba-ghana,base,FY2028E,ratios,tier1_pct,,percent,unavailable,Tier 1 is not forecast.
+uba-ghana,base,FY2029E,income_statement,interest_income,1169.917,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,base,FY2029E,income_statement,interest_expense,317.865,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,base,FY2029E,income_statement,net_interest_income,852.052,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,base,FY2029E,income_statement,fee_commission_income,283.295,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,base,FY2029E,income_statement,fee_commission_expense,147.980,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,base,FY2029E,income_statement,net_trading_income,103.015,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,base,FY2029E,income_statement,other_operating_income,0.119,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,base,FY2029E,income_statement,total_operating_income,1090.501,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,base,FY2029E,income_statement,staff_costs,321.376,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,base,FY2029E,income_statement,depreciation_amortisation,18.524,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,base,FY2029E,income_statement,other_operating_expenses,173.129,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,base,FY2029E,income_statement,impairment_charge,36.522,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,base,FY2029E,income_statement,profit_before_tax,540.951,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,base,FY2029E,income_statement,income_tax,189.333,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,base,FY2029E,income_statement,profit_after_tax,351.618,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,base,FY2029E,income_statement,x_dividends_paid,130.851,GHS millions,estimated,"Payout x prior-year profit after tax (assumptions.json), capped as flagged."
+uba-ghana,base,FY2029E,income_statement,x_statutory_reserve_transfer,43.952,GHS millions,estimated,Act 930 s34 tiers on profit after tax (see model.py stat_transfer).
+uba-ghana,base,FY2029E,balance_sheet,cash_and_bog_balances,4350.290,GHS millions,estimated,Estimate.
+uba-ghana,base,FY2029E,balance_sheet,investment_securities,10180.562,GHS millions,estimated,"Estimate. Securities are the plug (liquid assets) after cash, loans, other assets and property."
+uba-ghana,base,FY2029E,balance_sheet,loans_and_advances_net,2572.629,GHS millions,estimated,Estimate.
+uba-ghana,base,FY2029E,balance_sheet,property_equipment_intangibles,403.669,GHS millions,estimated,Estimate.
+uba-ghana,base,FY2029E,balance_sheet,other_assets,767.351,GHS millions,estimated,Estimate.
+uba-ghana,base,FY2029E,balance_sheet,total_assets,18274.500,GHS millions,estimated,Estimate.
+uba-ghana,base,FY2029E,balance_sheet,customer_deposits,13609.616,GHS millions,estimated,Estimate.
+uba-ghana,base,FY2029E,balance_sheet,due_to_banks,31.224,GHS millions,estimated,Estimate.
+uba-ghana,base,FY2029E,balance_sheet,borrowings,1690.643,GHS millions,estimated,Estimate.
+uba-ghana,base,FY2029E,balance_sheet,other_liabilities,467.395,GHS millions,estimated,Estimate.
+uba-ghana,base,FY2029E,balance_sheet,total_liabilities,15798.878,GHS millions,estimated,Estimate.
+uba-ghana,base,FY2029E,balance_sheet,x_retained_earnings,1418.021,GHS millions,estimated,Estimate.
+uba-ghana,base,FY2029E,balance_sheet,x_reserves_other,657.602,GHS millions,estimated,Estimate.
+uba-ghana,base,FY2029E,balance_sheet,total_equity,2475.622,GHS millions,estimated,Estimate.
+uba-ghana,base,FY2029E,balance_sheet,x_stated_capital,400.000,GHS millions,estimated,Held at 400m; no issue assumed. Matches the shared minimum paid-up capital.
+uba-ghana,base,FY2029E,ratios,x_car_proxy_pct,16.892,percent,estimated,"PROXY, not the regulatory ratio: (book equity - deductions held at the FY2025 gap between book equity and regulatory capital) / (risk-weight density x total assets). Density calibrated so the proxy equals the reported 16.7% at 30 Sep 2026."
+uba-ghana,base,FY2029E,ratios,x_car_proxy_fy25_density_pct,22.636,percent,estimated,"PROXY with the FY2025 audited density (RWA / total assets = 0.516), a high case."
+uba-ghana,base,FY2029E,ratios,roe_pct,14.866,percent,estimated,Estimate. Profit after tax / average of opening and closing equity.
+uba-ghana,base,FY2029E,ratios,roa_pct,2.045,percent,estimated,Estimate. Profit after tax / average of opening and closing total assets.
+uba-ghana,base,FY2029E,ratios,cost_to_income_pct,47.045,percent,estimated,Estimate. (Staff + depreciation + other expenses) / operating income before impairment.
+uba-ghana,base,FY2029E,ratios,ldr_pct,18.903,percent,estimated,Estimate. NET loans / customer deposits (gross loans are not forecast).
+uba-ghana,base,FY2029E,balance_sheet,due_from_banks,,GHS millions,unavailable,Not a separate balance sheet line (inside cash and bank balances).
+uba-ghana,base,FY2029E,balance_sheet,loans_and_advances_gross,,GHS millions,unavailable,Gross loans not forecast; interim statements do not print them.
+uba-ghana,base,FY2029E,balance_sheet,loan_loss_allowance,,GHS millions,unavailable,Allowance not forecast; impairment is driven by a cost of risk on net loans.
+uba-ghana,base,FY2029E,ratios,npl_pct,,percent,unavailable,No NPL path is forecast. Reported NPL was 2.11% (FY2025) and 1.57% (Sep 2026); cost of risk is an independent assumption.
+uba-ghana,base,FY2029E,ratios,car_pct,,percent,unavailable,Regulatory CAR is not forecast; see x_car_proxy_pct (accounting proxy).
+uba-ghana,base,FY2029E,ratios,tier1_pct,,percent,unavailable,Tier 1 is not forecast.
+uba-ghana,base,FY2030E,income_statement,interest_income,1303.381,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,base,FY2030E,income_statement,interest_expense,353.443,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,base,FY2030E,income_statement,net_interest_income,949.937,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,base,FY2030E,income_statement,fee_commission_income,305.959,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,base,FY2030E,income_statement,fee_commission_expense,159.818,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,base,FY2030E,income_statement,net_trading_income,97.865,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,base,FY2030E,income_statement,other_operating_income,0.119,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,base,FY2030E,income_statement,total_operating_income,1194.061,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,base,FY2030E,income_statement,staff_costs,356.727,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,base,FY2030E,income_statement,depreciation_amortisation,20.006,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,base,FY2030E,income_statement,other_operating_expenses,190.441,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,base,FY2030E,income_statement,impairment_charge,40.519,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,base,FY2030E,income_statement,profit_before_tax,586.368,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,base,FY2030E,income_statement,income_tax,205.229,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,base,FY2030E,income_statement,profit_after_tax,381.139,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,base,FY2030E,income_statement,x_dividends_paid,140.647,GHS millions,estimated,"Payout x prior-year profit after tax (assumptions.json), capped as flagged."
+uba-ghana,base,FY2030E,income_statement,x_statutory_reserve_transfer,47.642,GHS millions,estimated,Act 930 s34 tiers on profit after tax (see model.py stat_transfer).
+uba-ghana,base,FY2030E,balance_sheet,cash_and_bog_balances,5054.341,GHS millions,estimated,Estimate.
+uba-ghana,base,FY2030E,balance_sheet,investment_securities,11611.083,GHS millions,estimated,"Estimate. Securities are the plug (liquid assets) after cash, loans, other assets and property."
+uba-ghana,base,FY2030E,balance_sheet,loans_and_advances_net,2829.891,GHS millions,estimated,Estimate.
+uba-ghana,base,FY2030E,balance_sheet,property_equipment_intangibles,435.963,GHS millions,estimated,Estimate.
+uba-ghana,base,FY2030E,balance_sheet,other_assets,828.739,GHS millions,estimated,Estimate.
+uba-ghana,base,FY2030E,balance_sheet,total_assets,20760.017,GHS millions,estimated,Estimate.
+uba-ghana,base,FY2030E,balance_sheet,customer_deposits,15812.196,GHS millions,estimated,Estimate.
+uba-ghana,base,FY2030E,balance_sheet,due_to_banks,36.277,GHS millions,estimated,Estimate.
+uba-ghana,base,FY2030E,balance_sheet,borrowings,1690.643,GHS millions,estimated,Estimate.
+uba-ghana,base,FY2030E,balance_sheet,other_liabilities,504.787,GHS millions,estimated,Estimate.
+uba-ghana,base,FY2030E,balance_sheet,total_liabilities,18043.903,GHS millions,estimated,Estimate.
+uba-ghana,base,FY2030E,balance_sheet,x_retained_earnings,1610.870,GHS millions,estimated,Estimate.
+uba-ghana,base,FY2030E,balance_sheet,x_reserves_other,705.244,GHS millions,estimated,Estimate.
+uba-ghana,base,FY2030E,balance_sheet,total_equity,2716.114,GHS millions,estimated,Estimate.
+uba-ghana,base,FY2030E,balance_sheet,x_stated_capital,400.000,GHS millions,estimated,Held at 400m; no issue assumed. Matches the shared minimum paid-up capital.
+uba-ghana,base,FY2030E,ratios,x_car_proxy_pct,16.544,percent,estimated,"PROXY, not the regulatory ratio: (book equity - deductions held at the FY2025 gap between book equity and regulatory capital) / (risk-weight density x total assets). Density calibrated so the proxy equals the reported 16.7% at 30 Sep 2026."
+uba-ghana,base,FY2030E,ratios,x_car_proxy_fy25_density_pct,22.170,percent,estimated,"PROXY with the FY2025 audited density (RWA / total assets = 0.516), a high case."
+uba-ghana,base,FY2030E,ratios,roe_pct,14.683,percent,estimated,Estimate. Profit after tax / average of opening and closing equity.
+uba-ghana,base,FY2030E,ratios,roa_pct,1.953,percent,estimated,Estimate. Profit after tax / average of opening and closing total assets.
+uba-ghana,base,FY2030E,ratios,cost_to_income_pct,47.500,percent,estimated,Estimate. (Staff + depreciation + other expenses) / operating income before impairment.
+uba-ghana,base,FY2030E,ratios,ldr_pct,17.897,percent,estimated,Estimate. NET loans / customer deposits (gross loans are not forecast).
+uba-ghana,base,FY2030E,balance_sheet,due_from_banks,,GHS millions,unavailable,Not a separate balance sheet line (inside cash and bank balances).
+uba-ghana,base,FY2030E,balance_sheet,loans_and_advances_gross,,GHS millions,unavailable,Gross loans not forecast; interim statements do not print them.
+uba-ghana,base,FY2030E,balance_sheet,loan_loss_allowance,,GHS millions,unavailable,Allowance not forecast; impairment is driven by a cost of risk on net loans.
+uba-ghana,base,FY2030E,ratios,npl_pct,,percent,unavailable,No NPL path is forecast. Reported NPL was 2.11% (FY2025) and 1.57% (Sep 2026); cost of risk is an independent assumption.
+uba-ghana,base,FY2030E,ratios,car_pct,,percent,unavailable,Regulatory CAR is not forecast; see x_car_proxy_pct (accounting proxy).
+uba-ghana,base,FY2030E,ratios,tier1_pct,,percent,unavailable,Tier 1 is not forecast.
+uba-ghana,base,FY2026E,income_statement,x_q4_implied_profit_before_tax,90.201,GHS millions,estimated,FY2026E profit before tax less 9M-2026 actual.
+uba-ghana,base,FY2026E,income_statement,x_q4_implied_income_tax,31.570,GHS millions,estimated,FY2026E tax less 9M-2026 actual tax (35% of implied Q4 profit).
+uba-ghana,base,FY2026E,income_statement,x_q4_implied_impairment,6.348,GHS millions,estimated,Q4 charge at the base cost of risk on 30 Sep 2026 net loans / 4.
+uba-ghana,downside,FY2026E,income_statement,interest_income,877.664,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
+uba-ghana,downside,FY2026E,income_statement,interest_expense,338.164,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
+uba-ghana,downside,FY2026E,income_statement,net_interest_income,539.500,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
+uba-ghana,downside,FY2026E,income_statement,fee_commission_income,225.935,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
+uba-ghana,downside,FY2026E,income_statement,fee_commission_expense,118.017,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
+uba-ghana,downside,FY2026E,income_statement,net_trading_income,120.152,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
+uba-ghana,downside,FY2026E,income_statement,other_operating_income,0.119,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
+uba-ghana,downside,FY2026E,income_statement,total_operating_income,767.688,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
+uba-ghana,downside,FY2026E,income_statement,staff_costs,236.051,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
+uba-ghana,downside,FY2026E,income_statement,depreciation_amortisation,14.773,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
+uba-ghana,downside,FY2026E,income_statement,other_operating_expenses,130.668,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
+uba-ghana,downside,FY2026E,income_statement,impairment_charge,-40.798,GHS millions,estimated,Estimate. 9M-2026 actual (a reversal) plus a Q4 loan charge at the base cost of risk on 30 Sep 2026 net loans / 4.
+uba-ghana,downside,FY2026E,income_statement,profit_before_tax,426.994,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
+uba-ghana,downside,FY2026E,income_statement,income_tax,170.520,GHS millions,estimated,Estimate. 9M-2026 tax actually booked (41.3% of 9M profit before tax) plus 35% of implied Q4 profit before tax.
+uba-ghana,downside,FY2026E,income_statement,profit_after_tax,256.474,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
+uba-ghana,downside,FY2026E,income_statement,x_dividends_paid,0.000,GHS millions,estimated,Dividends paid in the year. FY2026E adds none in Q4 (304.9m was already paid in 9M-2026 and sits in the equity base).
+uba-ghana,downside,FY2026E,income_statement,x_statutory_reserve_transfer,32.059,GHS millions,estimated,Act 930 s34 tiers on profit after tax (see model.py stat_transfer).
+uba-ghana,downside,FY2026E,balance_sheet,cash_and_bog_balances,2776.062,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
+uba-ghana,downside,FY2026E,balance_sheet,investment_securities,7215.036,GHS millions,estimated,"Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit. Securities are the plug (liquid assets) after cash, loans, other assets and property."
+uba-ghana,downside,FY2026E,balance_sheet,loans_and_advances_net,1692.697,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
+uba-ghana,downside,FY2026E,balance_sheet,property_equipment_intangibles,321.936,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
+uba-ghana,downside,FY2026E,balance_sheet,other_assets,611.981,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
+uba-ghana,downside,FY2026E,balance_sheet,total_assets,12617.712,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
+uba-ghana,downside,FY2026E,balance_sheet,customer_deposits,8684.740,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
+uba-ghana,downside,FY2026E,balance_sheet,due_to_banks,19.925,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
+uba-ghana,downside,FY2026E,balance_sheet,borrowings,1690.643,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
+uba-ghana,downside,FY2026E,balance_sheet,other_liabilities,372.759,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
+uba-ghana,downside,FY2026E,balance_sheet,total_liabilities,10768.067,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
+uba-ghana,downside,FY2026E,balance_sheet,x_retained_earnings,914.527,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
+uba-ghana,downside,FY2026E,balance_sheet,x_reserves_other,535.118,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
+uba-ghana,downside,FY2026E,balance_sheet,total_equity,1849.645,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
+uba-ghana,downside,FY2026E,balance_sheet,x_stated_capital,400.000,GHS millions,estimated,Held at 400m; no issue assumed. Matches the shared minimum paid-up capital.
+uba-ghana,downside,FY2026E,ratios,x_car_proxy_pct,17.294,percent,estimated,"PROXY, not the regulatory ratio: (book equity - deductions held at the FY2025 gap between book equity and regulatory capital) / (risk-weight density x total assets). Density calibrated so the proxy equals the reported 16.7% at 30 Sep 2026."
+uba-ghana,downside,FY2026E,ratios,x_car_proxy_fy25_density_pct,23.175,percent,estimated,"PROXY with the FY2025 audited density (RWA / total assets = 0.516), a high case."
+uba-ghana,downside,FY2026E,ratios,roe_pct,13.695,percent,estimated,Estimate. Profit after tax / average of opening and closing equity.
+uba-ghana,downside,FY2026E,ratios,roa_pct,2.123,percent,estimated,Estimate. Profit after tax / average of opening and closing total assets.
+uba-ghana,downside,FY2026E,ratios,cost_to_income_pct,49.694,percent,estimated,Estimate. (Staff + depreciation + other expenses) / operating income before impairment.
+uba-ghana,downside,FY2026E,ratios,ldr_pct,19.490,percent,estimated,Estimate. NET loans / customer deposits (gross loans are not forecast).
+uba-ghana,downside,FY2026E,balance_sheet,due_from_banks,,GHS millions,unavailable,Not a separate balance sheet line (inside cash and bank balances).
+uba-ghana,downside,FY2026E,balance_sheet,loans_and_advances_gross,,GHS millions,unavailable,Gross loans not forecast; interim statements do not print them.
+uba-ghana,downside,FY2026E,balance_sheet,loan_loss_allowance,,GHS millions,unavailable,Allowance not forecast; impairment is driven by a cost of risk on net loans.
+uba-ghana,downside,FY2026E,ratios,npl_pct,,percent,unavailable,No NPL path is forecast. Reported NPL was 2.11% (FY2025) and 1.57% (Sep 2026); cost of risk is an independent assumption.
+uba-ghana,downside,FY2026E,ratios,car_pct,,percent,unavailable,Regulatory CAR is not forecast; see x_car_proxy_pct (accounting proxy).
+uba-ghana,downside,FY2026E,ratios,tier1_pct,,percent,unavailable,Tier 1 is not forecast.
+uba-ghana,downside,FY2027E,income_statement,interest_income,1236.771,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,downside,FY2027E,income_statement,interest_expense,325.218,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,downside,FY2027E,income_statement,net_interest_income,911.553,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,downside,FY2027E,income_statement,fee_commission_income,250.787,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,downside,FY2027E,income_statement,fee_commission_expense,130.999,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,downside,FY2027E,income_statement,net_trading_income,96.122,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,downside,FY2027E,income_statement,other_operating_income,0.119,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,downside,FY2027E,income_statement,total_operating_income,1127.582,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,downside,FY2027E,income_statement,staff_costs,269.098,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,downside,FY2027E,income_statement,depreciation_amortisation,16.398,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,downside,FY2027E,income_statement,other_operating_expenses,147.655,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,downside,FY2027E,income_statement,impairment_charge,69.401,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,downside,FY2027E,income_statement,profit_before_tax,625.030,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,downside,FY2027E,income_statement,income_tax,218.761,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,downside,FY2027E,income_statement,profit_after_tax,406.270,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,downside,FY2027E,income_statement,x_dividends_paid,51.295,GHS millions,estimated,"Payout x prior-year profit after tax (assumptions.json), capped as flagged."
+uba-ghana,downside,FY2027E,income_statement,x_statutory_reserve_transfer,50.784,GHS millions,estimated,Act 930 s34 tiers on profit after tax (see model.py stat_transfer).
+uba-ghana,downside,FY2027E,balance_sheet,cash_and_bog_balances,3090.590,GHS millions,estimated,Estimate.
+uba-ghana,downside,FY2027E,balance_sheet,investment_securities,8095.359,GHS millions,estimated,"Estimate. Securities are the plug (liquid assets) after cash, loans, other assets and property."
+uba-ghana,downside,FY2027E,balance_sheet,loans_and_advances_net,1777.332,GHS millions,estimated,Estimate.
+uba-ghana,downside,FY2027E,balance_sheet,property_equipment_intangibles,357.349,GHS millions,estimated,Estimate.
+uba-ghana,downside,FY2027E,balance_sheet,other_assets,679.299,GHS millions,estimated,Estimate.
+uba-ghana,downside,FY2027E,balance_sheet,total_assets,13999.929,GHS millions,estimated,Estimate.
+uba-ghana,downside,FY2027E,balance_sheet,customer_deposits,9668.721,GHS millions,estimated,Estimate.
+uba-ghana,downside,FY2027E,balance_sheet,due_to_banks,22.183,GHS millions,estimated,Estimate.
+uba-ghana,downside,FY2027E,balance_sheet,borrowings,1690.643,GHS millions,estimated,Estimate.
+uba-ghana,downside,FY2027E,balance_sheet,other_liabilities,413.762,GHS millions,estimated,Estimate.
+uba-ghana,downside,FY2027E,balance_sheet,total_liabilities,11795.309,GHS millions,estimated,Estimate.
+uba-ghana,downside,FY2027E,balance_sheet,x_retained_earnings,1218.718,GHS millions,estimated,Estimate.
+uba-ghana,downside,FY2027E,balance_sheet,x_reserves_other,585.902,GHS millions,estimated,Estimate.
+uba-ghana,downside,FY2027E,balance_sheet,total_equity,2204.620,GHS millions,estimated,Estimate.
+uba-ghana,downside,FY2027E,balance_sheet,x_stated_capital,400.000,GHS millions,estimated,Held at 400m; no issue assumed. Matches the shared minimum paid-up capital.
+uba-ghana,downside,FY2027E,ratios,x_car_proxy_pct,19.251,percent,estimated,"PROXY, not the regulatory ratio: (book equity - deductions held at the FY2025 gap between book equity and regulatory capital) / (risk-weight density x total assets). Density calibrated so the proxy equals the reported 16.7% at 30 Sep 2026."
+uba-ghana,downside,FY2027E,ratios,x_car_proxy_fy25_density_pct,25.798,percent,estimated,"PROXY with the FY2025 audited density (RWA / total assets = 0.516), a high case."
+uba-ghana,downside,FY2027E,ratios,roe_pct,20.042,percent,estimated,Estimate. Profit after tax / average of opening and closing equity.
+uba-ghana,downside,FY2027E,ratios,roa_pct,3.053,percent,estimated,Estimate. Profit after tax / average of opening and closing total assets.
+uba-ghana,downside,FY2027E,ratios,cost_to_income_pct,38.414,percent,estimated,Estimate. (Staff + depreciation + other expenses) / operating income before impairment.
+uba-ghana,downside,FY2027E,ratios,ldr_pct,18.382,percent,estimated,Estimate. NET loans / customer deposits (gross loans are not forecast).
+uba-ghana,downside,FY2027E,balance_sheet,due_from_banks,,GHS millions,unavailable,Not a separate balance sheet line (inside cash and bank balances).
+uba-ghana,downside,FY2027E,balance_sheet,loans_and_advances_gross,,GHS millions,unavailable,Gross loans not forecast; interim statements do not print them.
+uba-ghana,downside,FY2027E,balance_sheet,loan_loss_allowance,,GHS millions,unavailable,Allowance not forecast; impairment is driven by a cost of risk on net loans.
+uba-ghana,downside,FY2027E,ratios,npl_pct,,percent,unavailable,No NPL path is forecast. Reported NPL was 2.11% (FY2025) and 1.57% (Sep 2026); cost of risk is an independent assumption.
+uba-ghana,downside,FY2027E,ratios,car_pct,,percent,unavailable,Regulatory CAR is not forecast; see x_car_proxy_pct (accounting proxy).
+uba-ghana,downside,FY2027E,ratios,tier1_pct,,percent,unavailable,Tier 1 is not forecast.
+uba-ghana,downside,FY2028E,income_statement,interest_income,1441.089,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,downside,FY2028E,income_statement,interest_expense,399.166,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,downside,FY2028E,income_statement,net_interest_income,1041.923,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,downside,FY2028E,income_statement,fee_commission_income,277.120,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,downside,FY2028E,income_statement,fee_commission_expense,144.754,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,downside,FY2028E,income_statement,net_trading_income,76.897,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,downside,FY2028E,income_statement,other_operating_income,0.119,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,downside,FY2028E,income_statement,total_operating_income,1251.305,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,downside,FY2028E,income_statement,staff_costs,305.426,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,downside,FY2028E,income_statement,depreciation_amortisation,18.120,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,downside,FY2028E,income_statement,other_operating_expenses,166.112,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,downside,FY2028E,income_statement,impairment_charge,72.515,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,downside,FY2028E,income_statement,profit_before_tax,689.132,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,downside,FY2028E,income_statement,income_tax,241.196,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,downside,FY2028E,income_statement,profit_after_tax,447.936,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,downside,FY2028E,income_statement,x_dividends_paid,81.254,GHS millions,estimated,"Payout x prior-year profit after tax (assumptions.json), capped as flagged."
+uba-ghana,downside,FY2028E,income_statement,x_statutory_reserve_transfer,55.992,GHS millions,estimated,Act 930 s34 tiers on profit after tax (see model.py stat_transfer).
+uba-ghana,downside,FY2028E,balance_sheet,cash_and_bog_balances,3441.913,GHS millions,estimated,Estimate.
+uba-ghana,downside,FY2028E,balance_sheet,investment_securities,9075.835,GHS millions,estimated,"Estimate. Securities are the plug (liquid assets) after cash, loans, other assets and property."
+uba-ghana,downside,FY2028E,balance_sheet,loans_and_advances_net,1848.425,GHS millions,estimated,Estimate.
+uba-ghana,downside,FY2028E,balance_sheet,property_equipment_intangibles,394.871,GHS millions,estimated,Estimate.
+uba-ghana,downside,FY2028E,balance_sheet,other_assets,750.625,GHS millions,estimated,Estimate.
+uba-ghana,downside,FY2028E,balance_sheet,total_assets,15511.669,GHS millions,estimated,Estimate.
+uba-ghana,downside,FY2028E,balance_sheet,customer_deposits,10767.813,GHS millions,estimated,Estimate.
+uba-ghana,downside,FY2028E,balance_sheet,due_to_banks,24.704,GHS millions,estimated,Estimate.
+uba-ghana,downside,FY2028E,balance_sheet,borrowings,1690.643,GHS millions,estimated,Estimate.
+uba-ghana,downside,FY2028E,balance_sheet,other_liabilities,457.208,GHS millions,estimated,Estimate.
+uba-ghana,downside,FY2028E,balance_sheet,total_liabilities,12940.368,GHS millions,estimated,Estimate.
+uba-ghana,downside,FY2028E,balance_sheet,x_retained_earnings,1529.408,GHS millions,estimated,Estimate.
+uba-ghana,downside,FY2028E,balance_sheet,x_reserves_other,641.894,GHS millions,estimated,Estimate.
+uba-ghana,downside,FY2028E,balance_sheet,total_equity,2571.301,GHS millions,estimated,Estimate.
+uba-ghana,downside,FY2028E,balance_sheet,x_stated_capital,400.000,GHS millions,estimated,Held at 400m; no issue assumed. Matches the shared minimum paid-up capital.
+uba-ghana,downside,FY2028E,ratios,x_car_proxy_pct,20.792,percent,estimated,"PROXY, not the regulatory ratio: (book equity - deductions held at the FY2025 gap between book equity and regulatory capital) / (risk-weight density x total assets). Density calibrated so the proxy equals the reported 16.7% at 30 Sep 2026."
+uba-ghana,downside,FY2028E,ratios,x_car_proxy_fy25_density_pct,27.862,percent,estimated,"PROXY with the FY2025 audited density (RWA / total assets = 0.516), a high case."
+uba-ghana,downside,FY2028E,ratios,roe_pct,18.758,percent,estimated,Estimate. Profit after tax / average of opening and closing equity.
+uba-ghana,downside,FY2028E,ratios,roa_pct,3.036,percent,estimated,Estimate. Profit after tax / average of opening and closing total assets.
+uba-ghana,downside,FY2028E,ratios,cost_to_income_pct,39.132,percent,estimated,Estimate. (Staff + depreciation + other expenses) / operating income before impairment.
+uba-ghana,downside,FY2028E,ratios,ldr_pct,17.166,percent,estimated,Estimate. NET loans / customer deposits (gross loans are not forecast).
+uba-ghana,downside,FY2028E,balance_sheet,due_from_banks,,GHS millions,unavailable,Not a separate balance sheet line (inside cash and bank balances).
+uba-ghana,downside,FY2028E,balance_sheet,loans_and_advances_gross,,GHS millions,unavailable,Gross loans not forecast; interim statements do not print them.
+uba-ghana,downside,FY2028E,balance_sheet,loan_loss_allowance,,GHS millions,unavailable,Allowance not forecast; impairment is driven by a cost of risk on net loans.
+uba-ghana,downside,FY2028E,ratios,npl_pct,,percent,unavailable,No NPL path is forecast. Reported NPL was 2.11% (FY2025) and 1.57% (Sep 2026); cost of risk is an independent assumption.
+uba-ghana,downside,FY2028E,ratios,car_pct,,percent,unavailable,Regulatory CAR is not forecast; see x_car_proxy_pct (accounting proxy).
+uba-ghana,downside,FY2028E,ratios,tier1_pct,,percent,unavailable,Tier 1 is not forecast.
+uba-ghana,downside,FY2029E,income_statement,interest_income,1414.035,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,downside,FY2029E,income_statement,interest_expense,406.873,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,downside,FY2029E,income_statement,net_interest_income,1007.162,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,downside,FY2029E,income_statement,fee_commission_income,304.832,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,downside,FY2029E,income_statement,fee_commission_expense,159.230,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,downside,FY2029E,income_statement,net_trading_income,61.518,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,downside,FY2029E,income_statement,other_operating_income,0.119,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,downside,FY2029E,income_statement,total_operating_income,1214.401,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,downside,FY2029E,income_statement,staff_costs,345.131,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,downside,FY2029E,income_statement,depreciation_amortisation,19.932,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,downside,FY2029E,income_statement,other_operating_expenses,186.045,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,downside,FY2029E,income_statement,impairment_charge,75.785,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,downside,FY2029E,income_statement,profit_before_tax,587.507,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,downside,FY2029E,income_statement,income_tax,205.628,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,downside,FY2029E,income_statement,profit_after_tax,381.880,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,downside,FY2029E,income_statement,x_dividends_paid,89.587,GHS millions,estimated,"Payout x prior-year profit after tax (assumptions.json), capped as flagged."
+uba-ghana,downside,FY2029E,income_statement,x_statutory_reserve_transfer,47.735,GHS millions,estimated,Act 930 s34 tiers on profit after tax (see model.py stat_transfer).
+uba-ghana,downside,FY2029E,balance_sheet,cash_and_bog_balances,3834.291,GHS millions,estimated,Estimate.
+uba-ghana,downside,FY2029E,balance_sheet,investment_securities,10044.847,GHS millions,estimated,"Estimate. Securities are the plug (liquid assets) after cash, loans, other assets and property."
+uba-ghana,downside,FY2029E,balance_sheet,loans_and_advances_net,1940.846,GHS millions,estimated,Estimate.
+uba-ghana,downside,FY2029E,balance_sheet,property_equipment_intangibles,434.358,GHS millions,estimated,Estimate.
+uba-ghana,downside,FY2029E,balance_sheet,other_assets,825.688,GHS millions,estimated,Estimate.
+uba-ghana,downside,FY2029E,balance_sheet,total_assets,17080.029,GHS millions,estimated,Estimate.
+uba-ghana,downside,FY2029E,balance_sheet,customer_deposits,11995.344,GHS millions,estimated,Estimate.
+uba-ghana,downside,FY2029E,balance_sheet,due_to_banks,27.520,GHS millions,estimated,Estimate.
+uba-ghana,downside,FY2029E,balance_sheet,borrowings,1690.643,GHS millions,estimated,Estimate.
+uba-ghana,downside,FY2029E,balance_sheet,other_liabilities,502.928,GHS millions,estimated,Estimate.
+uba-ghana,downside,FY2029E,balance_sheet,total_liabilities,14216.435,GHS millions,estimated,Estimate.
+uba-ghana,downside,FY2029E,balance_sheet,x_retained_earnings,1773.965,GHS millions,estimated,Estimate.
+uba-ghana,downside,FY2029E,balance_sheet,x_reserves_other,689.629,GHS millions,estimated,Estimate.
+uba-ghana,downside,FY2029E,balance_sheet,total_equity,2863.594,GHS millions,estimated,Estimate.
+uba-ghana,downside,FY2029E,balance_sheet,x_stated_capital,400.000,GHS millions,estimated,Held at 400m; no issue assumed. Matches the shared minimum paid-up capital.
+uba-ghana,downside,FY2029E,ratios,x_car_proxy_pct,21.356,percent,estimated,"PROXY, not the regulatory ratio: (book equity - deductions held at the FY2025 gap between book equity and regulatory capital) / (risk-weight density x total assets). Density calibrated so the proxy equals the reported 16.7% at 30 Sep 2026."
+uba-ghana,downside,FY2029E,ratios,x_car_proxy_fy25_density_pct,28.619,percent,estimated,"PROXY with the FY2025 audited density (RWA / total assets = 0.516), a high case."
+uba-ghana,downside,FY2029E,ratios,roe_pct,14.053,percent,estimated,Estimate. Profit after tax / average of opening and closing equity.
+uba-ghana,downside,FY2029E,ratios,roa_pct,2.343,percent,estimated,Estimate. Profit after tax / average of opening and closing total assets.
+uba-ghana,downside,FY2029E,ratios,cost_to_income_pct,45.381,percent,estimated,Estimate. (Staff + depreciation + other expenses) / operating income before impairment.
+uba-ghana,downside,FY2029E,ratios,ldr_pct,16.180,percent,estimated,Estimate. NET loans / customer deposits (gross loans are not forecast).
+uba-ghana,downside,FY2029E,balance_sheet,due_from_banks,,GHS millions,unavailable,Not a separate balance sheet line (inside cash and bank balances).
+uba-ghana,downside,FY2029E,balance_sheet,loans_and_advances_gross,,GHS millions,unavailable,Gross loans not forecast; interim statements do not print them.
+uba-ghana,downside,FY2029E,balance_sheet,loan_loss_allowance,,GHS millions,unavailable,Allowance not forecast; impairment is driven by a cost of risk on net loans.
+uba-ghana,downside,FY2029E,ratios,npl_pct,,percent,unavailable,No NPL path is forecast. Reported NPL was 2.11% (FY2025) and 1.57% (Sep 2026); cost of risk is an independent assumption.
+uba-ghana,downside,FY2029E,ratios,car_pct,,percent,unavailable,Regulatory CAR is not forecast; see x_car_proxy_pct (accounting proxy).
+uba-ghana,downside,FY2029E,ratios,tier1_pct,,percent,unavailable,Tier 1 is not forecast.
+uba-ghana,downside,FY2030E,income_statement,interest_income,1437.864,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,downside,FY2030E,income_statement,interest_expense,394.803,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,downside,FY2030E,income_statement,net_interest_income,1043.061,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,downside,FY2030E,income_statement,fee_commission_income,333.791,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,downside,FY2030E,income_statement,fee_commission_expense,174.356,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,downside,FY2030E,income_statement,net_trading_income,49.214,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,downside,FY2030E,income_statement,other_operating_income,0.119,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,downside,FY2030E,income_statement,total_operating_income,1251.828,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,downside,FY2030E,income_statement,staff_costs,388.273,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,downside,FY2030E,income_statement,depreciation_amortisation,21.826,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,downside,FY2030E,income_statement,other_operating_expenses,207.440,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,downside,FY2030E,income_statement,impairment_charge,79.575,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,downside,FY2030E,income_statement,profit_before_tax,554.715,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,downside,FY2030E,income_statement,income_tax,194.150,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,downside,FY2030E,income_statement,profit_after_tax,360.565,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,downside,FY2030E,income_statement,x_dividends_paid,76.376,GHS millions,estimated,"Payout x prior-year profit after tax (assumptions.json), capped as flagged."
+uba-ghana,downside,FY2030E,income_statement,x_statutory_reserve_transfer,45.071,GHS millions,estimated,Act 930 s34 tiers on profit after tax (see model.py stat_transfer).
+uba-ghana,downside,FY2030E,balance_sheet,cash_and_bog_balances,4251.461,GHS millions,estimated,Estimate.
+uba-ghana,downside,FY2030E,balance_sheet,investment_securities,11050.984,GHS millions,estimated,"Estimate. Securities are the plug (liquid assets) after cash, loans, other assets and property."
+uba-ghana,downside,FY2030E,balance_sheet,loans_and_advances_net,2037.889,GHS millions,estimated,Estimate.
+uba-ghana,downside,FY2030E,balance_sheet,property_equipment_intangibles,475.622,GHS millions,estimated,Estimate.
+uba-ghana,downside,FY2030E,balance_sheet,other_assets,904.128,GHS millions,estimated,Estimate.
+uba-ghana,downside,FY2030E,balance_sheet,total_assets,18720.084,GHS millions,estimated,Estimate.
+uba-ghana,downside,FY2030E,balance_sheet,customer_deposits,13300.437,GHS millions,estimated,Estimate.
+uba-ghana,downside,FY2030E,balance_sheet,due_to_banks,30.515,GHS millions,estimated,Estimate.
+uba-ghana,downside,FY2030E,balance_sheet,borrowings,1690.643,GHS millions,estimated,Estimate.
+uba-ghana,downside,FY2030E,balance_sheet,other_liabilities,550.706,GHS millions,estimated,Estimate.
+uba-ghana,downside,FY2030E,balance_sheet,total_liabilities,15572.301,GHS millions,estimated,Estimate.
+uba-ghana,downside,FY2030E,balance_sheet,x_retained_earnings,2013.083,GHS millions,estimated,Estimate.
+uba-ghana,downside,FY2030E,balance_sheet,x_reserves_other,734.699,GHS millions,estimated,Estimate.
+uba-ghana,downside,FY2030E,balance_sheet,total_equity,3147.783,GHS millions,estimated,Estimate.
+uba-ghana,downside,FY2030E,balance_sheet,x_stated_capital,400.000,GHS millions,estimated,Held at 400m; no issue assumed. Matches the shared minimum paid-up capital.
+uba-ghana,downside,FY2030E,ratios,x_car_proxy_pct,21.679,percent,estimated,"PROXY, not the regulatory ratio: (book equity - deductions held at the FY2025 gap between book equity and regulatory capital) / (risk-weight density x total assets). Density calibrated so the proxy equals the reported 16.7% at 30 Sep 2026."
+uba-ghana,downside,FY2030E,ratios,x_car_proxy_fy25_density_pct,29.052,percent,estimated,"PROXY with the FY2025 audited density (RWA / total assets = 0.516), a high case."
+uba-ghana,downside,FY2030E,ratios,roe_pct,11.996,percent,estimated,Estimate. Profit after tax / average of opening and closing equity.
+uba-ghana,downside,FY2030E,ratios,roa_pct,2.014,percent,estimated,Estimate. Profit after tax / average of opening and closing total assets.
+uba-ghana,downside,FY2030E,ratios,cost_to_income_pct,49.331,percent,estimated,Estimate. (Staff + depreciation + other expenses) / operating income before impairment.
+uba-ghana,downside,FY2030E,ratios,ldr_pct,15.322,percent,estimated,Estimate. NET loans / customer deposits (gross loans are not forecast).
+uba-ghana,downside,FY2030E,balance_sheet,due_from_banks,,GHS millions,unavailable,Not a separate balance sheet line (inside cash and bank balances).
+uba-ghana,downside,FY2030E,balance_sheet,loans_and_advances_gross,,GHS millions,unavailable,Gross loans not forecast; interim statements do not print them.
+uba-ghana,downside,FY2030E,balance_sheet,loan_loss_allowance,,GHS millions,unavailable,Allowance not forecast; impairment is driven by a cost of risk on net loans.
+uba-ghana,downside,FY2030E,ratios,npl_pct,,percent,unavailable,No NPL path is forecast. Reported NPL was 2.11% (FY2025) and 1.57% (Sep 2026); cost of risk is an independent assumption.
+uba-ghana,downside,FY2030E,ratios,car_pct,,percent,unavailable,Regulatory CAR is not forecast; see x_car_proxy_pct (accounting proxy).
+uba-ghana,downside,FY2030E,ratios,tier1_pct,,percent,unavailable,Tier 1 is not forecast.
+uba-ghana,downside,FY2026E,income_statement,x_q4_implied_profit_before_tax,90.201,GHS millions,estimated,FY2026E profit before tax less 9M-2026 actual.
+uba-ghana,downside,FY2026E,income_statement,x_q4_implied_income_tax,31.570,GHS millions,estimated,FY2026E tax less 9M-2026 actual tax (35% of implied Q4 profit).
+uba-ghana,downside,FY2026E,income_statement,x_q4_implied_impairment,6.348,GHS millions,estimated,Q4 charge at the base cost of risk on 30 Sep 2026 net loans / 4.
+uba-ghana,upside,FY2026E,income_statement,interest_income,877.664,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
+uba-ghana,upside,FY2026E,income_statement,interest_expense,338.164,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
+uba-ghana,upside,FY2026E,income_statement,net_interest_income,539.500,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
+uba-ghana,upside,FY2026E,income_statement,fee_commission_income,225.935,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
+uba-ghana,upside,FY2026E,income_statement,fee_commission_expense,118.017,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
+uba-ghana,upside,FY2026E,income_statement,net_trading_income,120.152,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
+uba-ghana,upside,FY2026E,income_statement,other_operating_income,0.119,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
+uba-ghana,upside,FY2026E,income_statement,total_operating_income,767.688,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
+uba-ghana,upside,FY2026E,income_statement,staff_costs,236.051,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
+uba-ghana,upside,FY2026E,income_statement,depreciation_amortisation,14.773,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
+uba-ghana,upside,FY2026E,income_statement,other_operating_expenses,130.668,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
+uba-ghana,upside,FY2026E,income_statement,impairment_charge,-40.798,GHS millions,estimated,Estimate. 9M-2026 actual (a reversal) plus a Q4 loan charge at the base cost of risk on 30 Sep 2026 net loans / 4.
+uba-ghana,upside,FY2026E,income_statement,profit_before_tax,426.994,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
+uba-ghana,upside,FY2026E,income_statement,income_tax,170.520,GHS millions,estimated,Estimate. 9M-2026 tax actually booked (41.3% of 9M profit before tax) plus 35% of implied Q4 profit before tax.
+uba-ghana,upside,FY2026E,income_statement,profit_after_tax,256.474,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
+uba-ghana,upside,FY2026E,income_statement,x_dividends_paid,0.000,GHS millions,estimated,Dividends paid in the year. FY2026E adds none in Q4 (304.9m was already paid in 9M-2026 and sits in the equity base).
+uba-ghana,upside,FY2026E,income_statement,x_statutory_reserve_transfer,32.059,GHS millions,estimated,Act 930 s34 tiers on profit after tax (see model.py stat_transfer).
+uba-ghana,upside,FY2026E,balance_sheet,cash_and_bog_balances,2776.062,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
+uba-ghana,upside,FY2026E,balance_sheet,investment_securities,7215.036,GHS millions,estimated,"Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit. Securities are the plug (liquid assets) after cash, loans, other assets and property."
+uba-ghana,upside,FY2026E,balance_sheet,loans_and_advances_net,1692.697,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
+uba-ghana,upside,FY2026E,balance_sheet,property_equipment_intangibles,321.936,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
+uba-ghana,upside,FY2026E,balance_sheet,other_assets,611.981,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
+uba-ghana,upside,FY2026E,balance_sheet,total_assets,12617.712,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
+uba-ghana,upside,FY2026E,balance_sheet,customer_deposits,8684.740,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
+uba-ghana,upside,FY2026E,balance_sheet,due_to_banks,19.925,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
+uba-ghana,upside,FY2026E,balance_sheet,borrowings,1690.643,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
+uba-ghana,upside,FY2026E,balance_sheet,other_liabilities,372.759,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
+uba-ghana,upside,FY2026E,balance_sheet,total_liabilities,10768.067,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
+uba-ghana,upside,FY2026E,balance_sheet,x_retained_earnings,914.527,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
+uba-ghana,upside,FY2026E,balance_sheet,x_reserves_other,535.118,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
+uba-ghana,upside,FY2026E,balance_sheet,total_equity,1849.645,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
+uba-ghana,upside,FY2026E,balance_sheet,x_stated_capital,400.000,GHS millions,estimated,Held at 400m; no issue assumed. Matches the shared minimum paid-up capital.
+uba-ghana,upside,FY2026E,ratios,x_car_proxy_pct,17.294,percent,estimated,"PROXY, not the regulatory ratio: (book equity - deductions held at the FY2025 gap between book equity and regulatory capital) / (risk-weight density x total assets). Density calibrated so the proxy equals the reported 16.7% at 30 Sep 2026."
+uba-ghana,upside,FY2026E,ratios,x_car_proxy_fy25_density_pct,23.175,percent,estimated,"PROXY with the FY2025 audited density (RWA / total assets = 0.516), a high case."
+uba-ghana,upside,FY2026E,ratios,roe_pct,13.695,percent,estimated,Estimate. Profit after tax / average of opening and closing equity.
+uba-ghana,upside,FY2026E,ratios,roa_pct,2.123,percent,estimated,Estimate. Profit after tax / average of opening and closing total assets.
+uba-ghana,upside,FY2026E,ratios,cost_to_income_pct,49.694,percent,estimated,Estimate. (Staff + depreciation + other expenses) / operating income before impairment.
+uba-ghana,upside,FY2026E,ratios,ldr_pct,19.490,percent,estimated,Estimate. NET loans / customer deposits (gross loans are not forecast).
+uba-ghana,upside,FY2026E,balance_sheet,due_from_banks,,GHS millions,unavailable,Not a separate balance sheet line (inside cash and bank balances).
+uba-ghana,upside,FY2026E,balance_sheet,loans_and_advances_gross,,GHS millions,unavailable,Gross loans not forecast; interim statements do not print them.
+uba-ghana,upside,FY2026E,balance_sheet,loan_loss_allowance,,GHS millions,unavailable,Allowance not forecast; impairment is driven by a cost of risk on net loans.
+uba-ghana,upside,FY2026E,ratios,npl_pct,,percent,unavailable,No NPL path is forecast. Reported NPL was 2.11% (FY2025) and 1.57% (Sep 2026); cost of risk is an independent assumption.
+uba-ghana,upside,FY2026E,ratios,car_pct,,percent,unavailable,Regulatory CAR is not forecast; see x_car_proxy_pct (accounting proxy).
+uba-ghana,upside,FY2026E,ratios,tier1_pct,,percent,unavailable,Tier 1 is not forecast.
+uba-ghana,upside,FY2027E,income_statement,interest_income,858.563,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,upside,FY2027E,income_statement,interest_expense,267.486,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,upside,FY2027E,income_statement,net_interest_income,591.078,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,upside,FY2027E,income_statement,fee_commission_income,239.491,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,upside,FY2027E,income_statement,fee_commission_expense,125.098,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,upside,FY2027E,income_statement,net_trading_income,120.152,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,upside,FY2027E,income_statement,other_operating_income,0.119,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,upside,FY2027E,income_statement,total_operating_income,825.741,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,upside,FY2027E,income_statement,staff_costs,257.295,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,upside,FY2027E,income_statement,depreciation_amortisation,15.660,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,upside,FY2027E,income_statement,other_operating_expenses,141.121,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,upside,FY2027E,income_statement,impairment_charge,9.521,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,upside,FY2027E,income_statement,profit_before_tax,402.143,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,upside,FY2027E,income_statement,income_tax,140.750,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,upside,FY2027E,income_statement,profit_after_tax,261.393,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,upside,FY2027E,income_statement,x_dividends_paid,153.884,GHS millions,estimated,"Payout x prior-year profit after tax (assumptions.json), capped as flagged."
+uba-ghana,upside,FY2027E,income_statement,x_statutory_reserve_transfer,32.674,GHS millions,estimated,Act 930 s34 tiers on profit after tax (see model.py stat_transfer).
+uba-ghana,upside,FY2027E,balance_sheet,cash_and_bog_balances,3285.747,GHS millions,estimated,Estimate.
+uba-ghana,upside,FY2027E,balance_sheet,investment_securities,7954.192,GHS millions,estimated,"Estimate. Securities are the plug (liquid assets) after cash, loans, other assets and property."
+uba-ghana,upside,FY2027E,balance_sheet,loans_and_advances_net,2115.871,GHS millions,estimated,Estimate.
+uba-ghana,upside,FY2027E,balance_sheet,property_equipment_intangibles,341.252,GHS millions,estimated,Estimate.
+uba-ghana,upside,FY2027E,balance_sheet,other_assets,648.700,GHS millions,estimated,Estimate.
+uba-ghana,upside,FY2027E,balance_sheet,total_assets,14345.762,GHS millions,estimated,Estimate.
+uba-ghana,upside,FY2027E,balance_sheet,customer_deposits,10279.258,GHS millions,estimated,Estimate.
+uba-ghana,upside,FY2027E,balance_sheet,due_to_banks,23.583,GHS millions,estimated,Estimate.
+uba-ghana,upside,FY2027E,balance_sheet,borrowings,1690.643,GHS millions,estimated,Estimate.
+uba-ghana,upside,FY2027E,balance_sheet,other_liabilities,395.125,GHS millions,estimated,Estimate.
+uba-ghana,upside,FY2027E,balance_sheet,total_liabilities,12388.609,GHS millions,estimated,Estimate.
+uba-ghana,upside,FY2027E,balance_sheet,x_retained_earnings,989.361,GHS millions,estimated,Estimate.
+uba-ghana,upside,FY2027E,balance_sheet,x_reserves_other,567.792,GHS millions,estimated,Estimate.
+uba-ghana,upside,FY2027E,balance_sheet,total_equity,1957.153,GHS millions,estimated,Estimate.
+uba-ghana,upside,FY2027E,balance_sheet,x_stated_capital,400.000,GHS millions,estimated,Held at 400m; no issue assumed. Matches the shared minimum paid-up capital.
+uba-ghana,upside,FY2027E,ratios,x_car_proxy_pct,16.294,percent,estimated,"PROXY, not the regulatory ratio: (book equity - deductions held at the FY2025 gap between book equity and regulatory capital) / (risk-weight density x total assets). Density calibrated so the proxy equals the reported 16.7% at 30 Sep 2026."
+uba-ghana,upside,FY2027E,ratios,x_car_proxy_fy25_density_pct,21.835,percent,estimated,"PROXY with the FY2025 audited density (RWA / total assets = 0.516), a high case."
+uba-ghana,upside,FY2027E,ratios,roe_pct,13.733,percent,estimated,Estimate. Profit after tax / average of opening and closing equity.
+uba-ghana,upside,FY2027E,ratios,roa_pct,1.939,percent,estimated,Estimate. Profit after tax / average of opening and closing total assets.
+uba-ghana,upside,FY2027E,ratios,cost_to_income_pct,50.146,percent,estimated,Estimate. (Staff + depreciation + other expenses) / operating income before impairment.
+uba-ghana,upside,FY2027E,ratios,ldr_pct,20.584,percent,estimated,Estimate. NET loans / customer deposits (gross loans are not forecast).
+uba-ghana,upside,FY2027E,balance_sheet,due_from_banks,,GHS millions,unavailable,Not a separate balance sheet line (inside cash and bank balances).
+uba-ghana,upside,FY2027E,balance_sheet,loans_and_advances_gross,,GHS millions,unavailable,Gross loans not forecast; interim statements do not print them.
+uba-ghana,upside,FY2027E,balance_sheet,loan_loss_allowance,,GHS millions,unavailable,Allowance not forecast; impairment is driven by a cost of risk on net loans.
+uba-ghana,upside,FY2027E,ratios,npl_pct,,percent,unavailable,No NPL path is forecast. Reported NPL was 2.11% (FY2025) and 1.57% (Sep 2026); cost of risk is an independent assumption.
+uba-ghana,upside,FY2027E,ratios,car_pct,,percent,unavailable,Regulatory CAR is not forecast; see x_car_proxy_pct (accounting proxy).
+uba-ghana,upside,FY2027E,ratios,tier1_pct,,percent,unavailable,Tier 1 is not forecast.
+uba-ghana,upside,FY2028E,income_statement,interest_income,928.184,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,upside,FY2028E,income_statement,interest_expense,271.443,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,upside,FY2028E,income_statement,net_interest_income,656.742,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,upside,FY2028E,income_statement,fee_commission_income,256.255,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,upside,FY2028E,income_statement,fee_commission_expense,133.855,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,upside,FY2028E,income_statement,net_trading_income,120.152,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,upside,FY2028E,income_statement,other_operating_income,0.119,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,upside,FY2028E,income_statement,total_operating_income,899.412,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,upside,FY2028E,income_statement,staff_costs,283.025,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,upside,FY2028E,income_statement,depreciation_amortisation,16.756,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,upside,FY2028E,income_statement,other_operating_expenses,153.822,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,upside,FY2028E,income_statement,impairment_charge,11.637,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,upside,FY2028E,income_statement,profit_before_tax,434.172,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,upside,FY2028E,income_statement,income_tax,151.960,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,upside,FY2028E,income_statement,profit_after_tax,282.212,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,upside,FY2028E,income_statement,x_dividends_paid,156.836,GHS millions,estimated,"Payout x prior-year profit after tax (assumptions.json), capped as flagged."
+uba-ghana,upside,FY2028E,income_statement,x_statutory_reserve_transfer,35.276,GHS millions,estimated,Act 930 s34 tiers on profit after tax (see model.py stat_transfer).
+uba-ghana,upside,FY2028E,balance_sheet,cash_and_bog_balances,3916.808,GHS millions,estimated,Estimate.
+uba-ghana,upside,FY2028E,balance_sheet,investment_securities,8962.459,GHS millions,estimated,"Estimate. Securities are the plug (liquid assets) after cash, loans, other assets and property."
+uba-ghana,upside,FY2028E,balance_sheet,loans_and_advances_net,2539.045,GHS millions,estimated,Estimate.
+uba-ghana,upside,FY2028E,balance_sheet,property_equipment_intangibles,365.140,GHS millions,estimated,Estimate.
+uba-ghana,upside,FY2028E,balance_sheet,other_assets,694.109,GHS millions,estimated,Estimate.
+uba-ghana,upside,FY2028E,balance_sheet,total_assets,16477.561,GHS millions,estimated,Estimate.
+uba-ghana,upside,FY2028E,balance_sheet,customer_deposits,12253.493,GHS millions,estimated,Estimate.
+uba-ghana,upside,FY2028E,balance_sheet,due_to_banks,28.113,GHS millions,estimated,Estimate.
+uba-ghana,upside,FY2028E,balance_sheet,borrowings,1690.643,GHS millions,estimated,Estimate.
+uba-ghana,upside,FY2028E,balance_sheet,other_liabilities,422.783,GHS millions,estimated,Estimate.
+uba-ghana,upside,FY2028E,balance_sheet,total_liabilities,14395.031,GHS millions,estimated,Estimate.
+uba-ghana,upside,FY2028E,balance_sheet,x_retained_earnings,1079.461,GHS millions,estimated,Estimate.
+uba-ghana,upside,FY2028E,balance_sheet,x_reserves_other,603.069,GHS millions,estimated,Estimate.
+uba-ghana,upside,FY2028E,balance_sheet,total_equity,2082.529,GHS millions,estimated,Estimate.
+uba-ghana,upside,FY2028E,balance_sheet,x_stated_capital,400.000,GHS millions,estimated,Held at 400m; no issue assumed. Matches the shared minimum paid-up capital.
+uba-ghana,upside,FY2028E,ratios,x_car_proxy_pct,15.286,percent,estimated,"PROXY, not the regulatory ratio: (book equity - deductions held at the FY2025 gap between book equity and regulatory capital) / (risk-weight density x total assets). Density calibrated so the proxy equals the reported 16.7% at 30 Sep 2026."
+uba-ghana,upside,FY2028E,ratios,x_car_proxy_fy25_density_pct,20.484,percent,estimated,"PROXY with the FY2025 audited density (RWA / total assets = 0.516), a high case."
+uba-ghana,upside,FY2028E,ratios,roe_pct,13.972,percent,estimated,Estimate. Profit after tax / average of opening and closing equity.
+uba-ghana,upside,FY2028E,ratios,roa_pct,1.831,percent,estimated,Estimate. Profit after tax / average of opening and closing total assets.
+uba-ghana,upside,FY2028E,ratios,cost_to_income_pct,50.433,percent,estimated,Estimate. (Staff + depreciation + other expenses) / operating income before impairment.
+uba-ghana,upside,FY2028E,ratios,ldr_pct,20.721,percent,estimated,Estimate. NET loans / customer deposits (gross loans are not forecast).
+uba-ghana,upside,FY2028E,balance_sheet,due_from_banks,,GHS millions,unavailable,Not a separate balance sheet line (inside cash and bank balances).
+uba-ghana,upside,FY2028E,balance_sheet,loans_and_advances_gross,,GHS millions,unavailable,Gross loans not forecast; interim statements do not print them.
+uba-ghana,upside,FY2028E,balance_sheet,loan_loss_allowance,,GHS millions,unavailable,Allowance not forecast; impairment is driven by a cost of risk on net loans.
+uba-ghana,upside,FY2028E,ratios,npl_pct,,percent,unavailable,No NPL path is forecast. Reported NPL was 2.11% (FY2025) and 1.57% (Sep 2026); cost of risk is an independent assumption.
+uba-ghana,upside,FY2028E,ratios,car_pct,,percent,unavailable,Regulatory CAR is not forecast; see x_car_proxy_pct (accounting proxy).
+uba-ghana,upside,FY2028E,ratios,tier1_pct,,percent,unavailable,Tier 1 is not forecast.
+uba-ghana,upside,FY2029E,income_statement,interest_income,1062.596,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,upside,FY2029E,income_statement,interest_expense,307.994,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,upside,FY2029E,income_statement,net_interest_income,754.602,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,upside,FY2029E,income_statement,fee_commission_income,275.474,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,upside,FY2029E,income_statement,fee_commission_expense,143.894,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,upside,FY2029E,income_statement,net_trading_income,120.152,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,upside,FY2029E,income_statement,other_operating_income,0.119,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,upside,FY2029E,income_statement,total_operating_income,1006.453,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,upside,FY2029E,income_statement,staff_costs,312.742,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,upside,FY2029E,income_statement,depreciation_amortisation,18.013,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,upside,FY2029E,income_statement,other_operating_expenses,168.435,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,upside,FY2029E,income_statement,impairment_charge,13.711,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,upside,FY2029E,income_statement,profit_before_tax,493.552,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,upside,FY2029E,income_statement,income_tax,172.743,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,upside,FY2029E,income_statement,profit_after_tax,320.809,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,upside,FY2029E,income_statement,x_dividends_paid,0.000,GHS millions,estimated,"Payout x prior-year profit after tax (assumptions.json), capped as flagged."
+uba-ghana,upside,FY2029E,income_statement,x_statutory_reserve_transfer,40.101,GHS millions,estimated,Act 930 s34 tiers on profit after tax (see model.py stat_transfer).
+uba-ghana,upside,FY2029E,balance_sheet,cash_and_bog_balances,4677.158,GHS millions,estimated,Estimate.
+uba-ghana,upside,FY2029E,balance_sheet,investment_securities,10453.102,GHS millions,estimated,"Estimate. Securities are the plug (liquid assets) after cash, loans, other assets and property."
+uba-ghana,upside,FY2029E,balance_sheet,loans_and_advances_net,2945.293,GHS millions,estimated,Estimate.
+uba-ghana,upside,FY2029E,balance_sheet,property_equipment_intangibles,392.525,GHS millions,estimated,Estimate.
+uba-ghana,upside,FY2029E,balance_sheet,other_assets,746.167,GHS millions,estimated,Estimate.
+uba-ghana,upside,FY2029E,balance_sheet,total_assets,19214.245,GHS millions,estimated,Estimate.
+uba-ghana,upside,FY2029E,balance_sheet,customer_deposits,14632.202,GHS millions,estimated,Estimate.
+uba-ghana,upside,FY2029E,balance_sheet,due_to_banks,33.570,GHS millions,estimated,Estimate.
+uba-ghana,upside,FY2029E,balance_sheet,borrowings,1690.643,GHS millions,estimated,Estimate.
+uba-ghana,upside,FY2029E,balance_sheet,other_liabilities,454.492,GHS millions,estimated,Estimate.
+uba-ghana,upside,FY2029E,balance_sheet,total_liabilities,16810.907,GHS millions,estimated,Estimate.
+uba-ghana,upside,FY2029E,balance_sheet,x_retained_earnings,1360.168,GHS millions,estimated,Estimate.
+uba-ghana,upside,FY2029E,balance_sheet,x_reserves_other,643.170,GHS millions,estimated,Estimate.
+uba-ghana,upside,FY2029E,balance_sheet,total_equity,2403.338,GHS millions,estimated,Estimate.
+uba-ghana,upside,FY2029E,balance_sheet,x_stated_capital,400.000,GHS millions,estimated,Held at 400m; no issue assumed. Matches the shared minimum paid-up capital.
+uba-ghana,upside,FY2029E,ratios,x_car_proxy_pct,15.522,percent,estimated,"PROXY, not the regulatory ratio: (book equity - deductions held at the FY2025 gap between book equity and regulatory capital) / (risk-weight density x total assets). Density calibrated so the proxy equals the reported 16.7% at 30 Sep 2026."
+uba-ghana,upside,FY2029E,ratios,x_car_proxy_fy25_density_pct,20.800,percent,estimated,"PROXY with the FY2025 audited density (RWA / total assets = 0.516), a high case."
+uba-ghana,upside,FY2029E,ratios,roe_pct,14.303,percent,estimated,Estimate. Profit after tax / average of opening and closing equity.
+uba-ghana,upside,FY2029E,ratios,roa_pct,1.798,percent,estimated,Estimate. Profit after tax / average of opening and closing total assets.
+uba-ghana,upside,FY2029E,ratios,cost_to_income_pct,49.599,percent,estimated,Estimate. (Staff + depreciation + other expenses) / operating income before impairment.
+uba-ghana,upside,FY2029E,ratios,ldr_pct,20.129,percent,estimated,Estimate. NET loans / customer deposits (gross loans are not forecast).
+uba-ghana,upside,FY2029E,balance_sheet,due_from_banks,,GHS millions,unavailable,Not a separate balance sheet line (inside cash and bank balances).
+uba-ghana,upside,FY2029E,balance_sheet,loans_and_advances_gross,,GHS millions,unavailable,Gross loans not forecast; interim statements do not print them.
+uba-ghana,upside,FY2029E,balance_sheet,loan_loss_allowance,,GHS millions,unavailable,Allowance not forecast; impairment is driven by a cost of risk on net loans.
+uba-ghana,upside,FY2029E,ratios,npl_pct,,percent,unavailable,No NPL path is forecast. Reported NPL was 2.11% (FY2025) and 1.57% (Sep 2026); cost of risk is an independent assumption.
+uba-ghana,upside,FY2029E,ratios,car_pct,,percent,unavailable,Regulatory CAR is not forecast; see x_car_proxy_pct (accounting proxy).
+uba-ghana,upside,FY2029E,ratios,tier1_pct,,percent,unavailable,Tier 1 is not forecast.
+uba-ghana,upside,FY2029E,income_statement,x_dividend_target_before_cap,169.327,GHS millions,estimated,Payout x prior-year profit before the caps; actual dividend is lower: withheld: CAR proxy would fall below the dividend buffer.
+uba-ghana,upside,FY2030E,income_statement,interest_income,1217.650,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,upside,FY2030E,income_statement,interest_expense,361.903,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,upside,FY2030E,income_statement,net_interest_income,855.747,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,upside,FY2030E,income_statement,fee_commission_income,297.512,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,upside,FY2030E,income_statement,fee_commission_expense,155.406,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,upside,FY2030E,income_statement,net_trading_income,120.152,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,upside,FY2030E,income_statement,other_operating_income,0.119,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,upside,FY2030E,income_statement,total_operating_income,1118.124,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,upside,FY2030E,income_statement,staff_costs,347.144,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,upside,FY2030E,income_statement,depreciation_amortisation,19.454,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,upside,FY2030E,income_statement,other_operating_expenses,185.279,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,upside,FY2030E,income_statement,impairment_charge,15.684,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,upside,FY2030E,income_statement,profit_before_tax,550.563,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,upside,FY2030E,income_statement,income_tax,192.697,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,upside,FY2030E,income_statement,profit_after_tax,357.866,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+uba-ghana,upside,FY2030E,income_statement,x_dividends_paid,0.000,GHS millions,estimated,"Payout x prior-year profit after tax (assumptions.json), capped as flagged."
+uba-ghana,upside,FY2030E,income_statement,x_statutory_reserve_transfer,44.733,GHS millions,estimated,Act 930 s34 tiers on profit after tax (see model.py stat_transfer).
+uba-ghana,upside,FY2030E,balance_sheet,cash_and_bog_balances,5609.783,GHS millions,estimated,Estimate.
+uba-ghana,upside,FY2030E,balance_sheet,investment_securities,12365.074,GHS millions,estimated,"Estimate. Securities are the plug (liquid assets) after cash, loans, other assets and property."
+uba-ghana,upside,FY2030E,balance_sheet,loans_and_advances_net,3328.181,GHS millions,estimated,Estimate.
+uba-ghana,upside,FY2030E,balance_sheet,property_equipment_intangibles,423.927,GHS millions,estimated,Estimate.
+uba-ghana,upside,FY2030E,balance_sheet,other_assets,805.860,GHS millions,estimated,Estimate.
+uba-ghana,upside,FY2030E,balance_sheet,total_assets,22532.825,GHS millions,estimated,Estimate.
+uba-ghana,upside,FY2030E,balance_sheet,customer_deposits,17549.863,GHS millions,estimated,Estimate.
+uba-ghana,upside,FY2030E,balance_sheet,due_to_banks,40.264,GHS millions,estimated,Estimate.
+uba-ghana,upside,FY2030E,balance_sheet,borrowings,1690.643,GHS millions,estimated,Estimate.
+uba-ghana,upside,FY2030E,balance_sheet,other_liabilities,490.851,GHS millions,estimated,Estimate.
+uba-ghana,upside,FY2030E,balance_sheet,total_liabilities,19771.621,GHS millions,estimated,Estimate.
+uba-ghana,upside,FY2030E,balance_sheet,x_retained_earnings,1673.301,GHS millions,estimated,Estimate.
+uba-ghana,upside,FY2030E,balance_sheet,x_reserves_other,687.903,GHS millions,estimated,Estimate.
+uba-ghana,upside,FY2030E,balance_sheet,total_equity,2761.204,GHS millions,estimated,Estimate.
+uba-ghana,upside,FY2030E,balance_sheet,x_stated_capital,400.000,GHS millions,estimated,Held at 400m; no issue assumed. Matches the shared minimum paid-up capital.
+uba-ghana,upside,FY2030E,ratios,x_car_proxy_pct,15.531,percent,estimated,"PROXY, not the regulatory ratio: (book equity - deductions held at the FY2025 gap between book equity and regulatory capital) / (risk-weight density x total assets). Density calibrated so the proxy equals the reported 16.7% at 30 Sep 2026."
+uba-ghana,upside,FY2030E,ratios,x_car_proxy_fy25_density_pct,20.813,percent,estimated,"PROXY with the FY2025 audited density (RWA / total assets = 0.516), a high case."
+uba-ghana,upside,FY2030E,ratios,roe_pct,13.859,percent,estimated,Estimate. Profit after tax / average of opening and closing equity.
+uba-ghana,upside,FY2030E,ratios,roa_pct,1.714,percent,estimated,Estimate. Profit after tax / average of opening and closing total assets.
+uba-ghana,upside,FY2030E,ratios,cost_to_income_pct,49.357,percent,estimated,Estimate. (Staff + depreciation + other expenses) / operating income before impairment.
+uba-ghana,upside,FY2030E,ratios,ldr_pct,18.964,percent,estimated,Estimate. NET loans / customer deposits (gross loans are not forecast).
+uba-ghana,upside,FY2030E,balance_sheet,due_from_banks,,GHS millions,unavailable,Not a separate balance sheet line (inside cash and bank balances).
+uba-ghana,upside,FY2030E,balance_sheet,loans_and_advances_gross,,GHS millions,unavailable,Gross loans not forecast; interim statements do not print them.
+uba-ghana,upside,FY2030E,balance_sheet,loan_loss_allowance,,GHS millions,unavailable,Allowance not forecast; impairment is driven by a cost of risk on net loans.
+uba-ghana,upside,FY2030E,ratios,npl_pct,,percent,unavailable,No NPL path is forecast. Reported NPL was 2.11% (FY2025) and 1.57% (Sep 2026); cost of risk is an independent assumption.
+uba-ghana,upside,FY2030E,ratios,car_pct,,percent,unavailable,Regulatory CAR is not forecast; see x_car_proxy_pct (accounting proxy).
+uba-ghana,upside,FY2030E,ratios,tier1_pct,,percent,unavailable,Tier 1 is not forecast.
+uba-ghana,upside,FY2030E,income_statement,x_dividend_target_before_cap,192.485,GHS millions,estimated,Payout x prior-year profit before the caps; actual dividend is lower: withheld: CAR proxy would fall below the dividend buffer.
+uba-ghana,upside,FY2026E,income_statement,x_q4_implied_profit_before_tax,90.201,GHS millions,estimated,FY2026E profit before tax less 9M-2026 actual.
+uba-ghana,upside,FY2026E,income_statement,x_q4_implied_income_tax,31.570,GHS millions,estimated,FY2026E tax less 9M-2026 actual tax (35% of implied Q4 profit).
+uba-ghana,upside,FY2026E,income_statement,x_q4_implied_impairment,6.348,GHS millions,estimated,Q4 charge at the base cost of risk on 30 Sep 2026 net loans / 4.

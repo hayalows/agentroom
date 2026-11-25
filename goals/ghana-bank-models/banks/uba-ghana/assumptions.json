@@ -1,0 +1,133 @@
+{
+ "bank": "uba-ghana",
+ "owner": "claude-helper-1",
+ "status": "estimated",
+ "about": "Every value below is an ESTIMATE by the owner, not a reported number. 'basis' says what it is anchored on. Shared macro drivers (rates, inflation, GDP, CRR, minimum CAR) come from the shared macro file, never from this file.",
+ "macro_file": "../../sector/macro-assumptions/macro.csv",
+ "anchor": {
+  "fy2026e_method": "FY2026E income and expense lines = 9M-2026 actual x 12/9, except impairment (9M-2026 actual reversal of 47.1m plus a Q4 charge at the base cost of risk on 30 Sep 2026 net loans / 4) and tax (9M-2026 tax actually booked at 41.3% plus the tax_rate on implied Q4 profit before tax). Balance sheet lines = 30 Sep 2026 actual carried to 31 Dec 2026, except equity (9M-2026 equity + Q4 profit) and the securities plug. No dividend is paid in Q4 (304.9m was paid in 9M-2026 and is already in equity). FY2026E is identical in all three scenarios because three quarters are reported. The Q4 implied rows are in forecast.csv as x_q4_implied_*."
+ },
+ "rates": {
+  "loan_yield_spread_over_tbill_364d_pct": {
+   "value": 6.0,
+   "basis": "Same spread as SCB and Zenith so the banks are comparable (sector lending rate near 15.8% against a 364-day bill near 11%, as cited in SCB's basis; not re-verified by me). Judgement for UBA; its loan book is only 1.4bn so the effect on interest income is small."
+  },
+  "tbill_share_of_securities": {
+   "value": 0.5,
+   "basis": "ASSUMED, not observed. The share of investment securities that reprices with the average of the 91-day and 364-day bill rates; the rest follows the government bond yield. UBA does not give a usable repricing table in the text I read. The fitted haircut below absorbs the error for FY2026E; the sensitivity in checks.md section 2b shows the effect of moving the haircut."
+  },
+  "tax_rate": {
+   "value": 0.35,
+   "basis": "FY2024 and FY2025 effective rate about 35% (25% income tax + 5% Growth and Sustainability levy + 5% Financial Sector Recovery levy; levies are 12.7m + 12.7m in FY2024 and 31.5m + 31.5m in FY2025, UBA24AR p.129 and UBA25AR p.128). 9M-2026 was 41.3% and H1-2026 44.1% with no cause disclosed (unknown); a 41% case is shown in checks.md section 2b. Applied to Q4-2026 and later years."
+  },
+  "avg_policy_rate_2026_pct": {
+   "value": 14.3,
+   "basis": "Used only to scale the cost-of-funds ratio. Average policy rate for Jan-Sep 2026, taken from the SCB and Zenith bases (BoG data per SCB); not re-verified by me. The ratio is solved against it, so a different average changes the ratio and not the FY2026E result."
+  },
+  "cost_of_funds_ratio_to_policy_rate": {
+   "value": "solved in model.py",
+   "basis": "9M-2026 interest expense x 12/9 divided by (the average policy rate x average of customer deposits, bank deposits and borrowings at FY2025 and 30 Sep 2026). Printed in checks.md section 2."
+  },
+  "securities_yield_haircut_pts": {
+   "value": "solved in model.py",
+   "basis": "FITTED. The one number that makes the FY2026E interest formula equal 9M-2026 interest income x 12/9, with loans at the 364-day bill plus 6.0 points. A match by construction, not a validation."
+  }
+ },
+ "growth": {
+  "customer_deposit_growth_formula": "(1+real GDP growth)*(1+CPI inflation)+adjustment, using the macro row of the same scenario and year (the model applies the product, the adjustment is added to the growth factor).",
+  "customer_deposit_adjustment": {
+   "base": 0.03,
+   "downside": -0.03,
+   "upside": 0.06,
+   "basis": "Customer deposits grew 14.9% (FY2024) and 17.9% (FY2025) against base nominal GDP growth of about 12%; they were nearly flat in 9M-2026 (8,590m to 8,685m, +1.1%). Base assumes a modest share gain; downside shrinks relative to nominal growth. Judgement."
+  },
+  "net_loan_growth": {
+   "base": {
+    "FY2027E": 0.18,
+    "FY2028E": 0.15,
+    "FY2029E": 0.12,
+    "FY2030E": 0.1
+   },
+   "downside": {
+    "FY2027E": 0.05,
+    "FY2028E": 0.04,
+    "FY2029E": 0.05,
+    "FY2030E": 0.05
+   },
+   "upside": {
+    "FY2027E": 0.25,
+    "FY2028E": 0.2,
+    "FY2029E": 0.16,
+    "FY2030E": 0.13
+   },
+   "basis": "Net loans were 1,114m (FY2024), 1,277m (FY2025, +14.6%) and 1,693m at 30 Sep 2026 (+32.5% in nine months). The loan-to-deposit ratio was 19.5% at Sep 2026 against 15.3% at FY2024, so growth can continue, but the bank has never held more than 1.7bn of loans. Base fades from 18% to 10%. Judgement."
+  },
+  "net_trading_income_growth": {
+   "base": -0.05,
+   "downside": -0.2,
+   "upside": 0.0,
+   "basis": "Net trading income was 97.3m (FY2022), 85.0m (FY2023), 68.5m (FY2024), 98.8m (FY2025); 90.1m in 9M-2026 against 88.1m in 9M-2025. It depends on foreign-exchange conditions. Base assumes mild mean reversion."
+  },
+  "fee_income_growth_over_inflation": {
+   "value": 0.0,
+   "basis": "Fee income was 168.6m (FY2024), 231.8m (FY2025) and 169.5m in 9M-2026 against 179.1m in 9M-2025 (-5.4%), so growth has stalled. Base grows fees with inflation only."
+  },
+  "fee_expense_ratio": {
+   "value": "9M-2026 ratio held",
+   "basis": "Fee and commission expense was 52.2% of fee income in 9M-2026 (88.5m / 169.5m), 66.2% in FY2025 and 85.1% in FY2024. The latest ratio is held; the high level is unexplained in the text I read (unknown)."
+  },
+  "staff_cost_growth_over_inflation": {
+   "value": 0.03,
+   "basis": "Staff costs were 114.6m (FY2024), 175.5m (FY2025) and 177.0m in 9M-2026 (59% above 9M-2025). The jump is not explained (unknown). Base grows from the 9M-2026 run rate at inflation plus 3 points."
+  },
+  "other_opex_growth_over_inflation": {
+   "value": 0.02,
+   "basis": "Other operating expenses were 128.0m (FY2024), 126.7m (FY2025) and 98.0m in 9M-2026 (-18% against 9M-2025). Base grows from the lower 9M-2026 run rate at inflation plus 2 points. Judgement."
+  }
+ },
+ "credit": {
+  "cost_of_risk_on_average_net_loans": {
+   "base": 0.015,
+   "downside": 0.04,
+   "upside": 0.005,
+   "basis": "UBA reported credit-loss reversals of 119.0m (FY2025) and 47.1m (9M-2026), mostly on securities and recoveries, after charges of 406.6m (FY2022, domestic debt exchange), 384.1m (FY2023) and 180.1m (FY2024). Stage 3 loans fell from 165.0m to 28.3m in FY2025 (allowance 62.8m on 1,339.8m gross, 4.7%). Reversals are not repeated. Base 1.5% of average net loans, downside 4%, upside 0.5%. Judgement; NPL is not forecast."
+  },
+  "fy2026e_q4_charge": {
+   "value": "base cost of risk x 30 Sep 2026 net loans / 4, applied in all scenarios",
+   "basis": "Three quarters are reported, so FY2026E is the same in every scenario."
+  },
+  "note": "No securities impairment is forecast after FY2026E. The FY2022 debt exchange cost the bank about 266m (UBA22AR auditor's report)."
+ },
+ "capital_and_liquidity": {
+  "dividend_payout_of_prior_year_profit": {
+   "base": 0.4,
+   "downside": 0.2,
+   "upside": 0.6,
+   "basis": "Dividends: 40.0m paid in 2024, 15.7m in 2025, 304.9m in 9M-2026. The 2025 recommended dividend was 146.5m (36% of FY2025 profit); the 2024 recommendation was 157.3m (96% of FY2024 profit). Base 40% of prior-year profit. Judgement. Dividends are capped by distributable retained earnings and withheld if the CAR proxy would fall below the target."
+  },
+  "statutory_reserve_transfer_of_profit": {
+   "value": "50% of profit if the statutory reserve is below 50% of stated capital, 25% from 50% to below 100%, 12.5% at or above 100%",
+   "basis": "Banks and SDI Act 2016 (Act 930) s.34, official Bank of Ghana PDF printed p.30, as read by independent reviewer chatgpt-support in the Zenith review. Observed in this bank: 25.0% FY2022 to FY2024, 12.5% FY2025 (checks_history.md section 4). The tier is evaluated on the opening reserve each year."
+  },
+  "regulatory_capital_proxy": {
+   "value": "(book equity - deductions) / (risk-weight density x total assets)",
+   "basis": "Deductions held at the FY2025 gap between book equity (1,895.7m) and total regulatory capital (1,555.8m, UBA25AR p.122) = 339.9m. Density is solved so the proxy equals the reported 16.7% CAR at 30 Sep 2026; the FY2025 audited density (0.516 = 5,958.9m / 11,541.6m) is shown as a second proxy. PROXIES, not regulatory ratios. Whether the interim CAR includes the unaudited 9M profit is unknown."
+  },
+  "target_car_pct_for_dividends": {
+   "value": 15.0,
+   "basis": "Judgement: dividends are withheld if the CAR proxy after the payment would fall below 15%, which is 2 points above the 13% shared minimum. UBA's reported CAR was 15.0% at FY2023."
+  },
+  "operating_cash_to_customer_deposits": {
+   "value": "solved in model.py",
+   "basis": "Cash and bank balances at 30 Sep 2026 were 2,776m = 32.0% of customer deposits; the model holds the 20% macro CRR plus the solved extra share (about 12.0%). The 20% is a constructed floor, not a tested statutory eligibility."
+  }
+ },
+ "other_balance_sheet": {
+  "other_assets_and_liabilities_growth": "inflation",
+  "property_equipment_growth": "inflation",
+  "borrowings": "held at the 30 Sep 2026 balance (1,690.6m). Borrowings were 807.8m at FY2025; counterparties and terms were not read, so no repayment path is assumed.",
+  "property_note": "Property and equipment rose from about 122m (30 Jun 2026) to 320m (30 Sep 2026); the cause is not stated. The September level is carried and grown with inflation.",
+  "securities": "The securities line is the plug (total assets less cash, loans, other assets and property); it is 57% of assets at 30 Sep 2026.",
+  "stated_capital": "400m, unchanged; no issue assumed."
+ }
+}
