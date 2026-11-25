@@ -1,0 +1,29 @@
+# Republic Bank (Ghana) PLC: standalone bank model
+
+As of 25 November 2026. Fiscal year December 31; GHS millions unless noted. Republic Bank (Ghana) PLC (RBGH) is a universal bank listed on the Ghana Stock Exchange and regulated by the Bank of Ghana. It is a subsidiary of Republic Financial Holdings Limited (RFHL) of Trinidad & Tobago, which owns **66.54%** of the Bank (RB25AR printed p.35), with the remainder GSE-listed; it holds six subsidiaries (Republic Investments, Republic Securities, Republic Boafo, HFC Realty, HFC Venture Capital, Republic Trust). Sources: RB21FS, RB23AR, RB24AR, RB25AR, RB26Q2, RB26Q3, GSELIST, BOGREG in `sources.md`. This models the **Bank** (separate) statements only, **never** the Group.
+
+## Actual results and scenario outlook
+
+FY2025 bank-only total assets were GHS12,265.013m, customer deposits 8,368.068m, net loans 3,457.667m and profit after tax 254.590m (RB25AR pp.76-77). Reported CAR was 20.15% and gross NPL 14.15% (RB25AR p.189, p.121), both stated after the Bank of Ghana DDEP forbearance was withdrawn in December 2025. In 9M-2026, bank total assets were 11,631.887m, net loans 4,027.925m and PAT 118.772m, with CAR 17.83% and NPL 11.60% (RB26Q3 pp.1-2). Note the Bank's balance sheet has shifted toward wholesale funding: borrowings rose to 2,767.292m at Sep-2026 while customer deposits fell to 7,222.033m from 8,368.068m at FY2025.
+
+| Estimated scenario | 2026E PAT | 2030E PAT | 2030E assets | 2030E CAR proxy |
+|---|---:|---:|---:|---:|
+| Base | 131.104 | 296.501 | 20,716.929 | 17.01% |
+| Downside | -11.638 | -324.845 | 14,827.137 | 3.83% |
+| Upside | 189.101 | 700.370 | 27,297.495 | 18.09% |
+
+Forecast assumptions are sensitivities, not management guidance. FY2026 is built from the actual 9M-2026 income statement plus an estimated Q4, and starts from the September 2026 balance sheet. Loan and deposit growth reflect the shared nominal GDP proxy plus a bank-specific spread; loan, securities and cash yields and the funding cost respond to shared rates. The base path holds a CAR proxy comfortably above the 13% shared minimum; the downside pushes the CAR proxy below 13% from FY2028E (a flagged shortfall, not an assumed capital raise) and the FY2030E reserve proxy also falls short, while the base and upside hold a buffer.
+
+Two disclosure points a reader should note. First, the downside is a **combined** cost-and-credit stress: the shared macro downside has higher inflation and the downside effective cost of risk rises toward 5% (input 3.0% lifted by the allowance-build floor), so part of the downside loss is cost pass-through rather than credit losses; `checks.md` splits the two and recomputes downside FY2030E with base cost growth as a one-year marginal diagnostic. Second, the scenario `cost_of_risk` is an input; the allowance-build floor lifts the **effective** charge above it in fast-growth scenarios, so `checks.md` reports the effective rate next to the input for every scenario-year and `forecast.csv` carries it as `x_effective_cost_of_risk_pct`. NPL is a scenario input held flat across all years (12% base, 15% downside, 10.5% upside).
+
+The anchor-year treatment: FY2026E retains the actual 9M-2026 tax charge and adds tax only on positive estimated Q4 profit; no deferred-tax credit is recognised for a Q4 loss, so a loss-making downside Q4 shows an effective rate above the 35% input. The observed 9M-2026 equity already reflects the GHS42.598m dividend paid in 2026 (RB26Q3), so no further Q4-2026 dividend is assumed. The statutory reserve transfer is modelled explicitly at **25% of positive PAT** (source-confirmed FY2024 46.926m / FY2025 63.648m from the statement of changes in equity); it is an internal equity transfer, so total equity and regulatory capital are unaffected, but it caps distributable retained earnings for dividends. Reported capital is Tier 1 (the Bank does not disclose a separate CET1 ratio), so `tier1_pct` is the reported Tier 1/RWA ratio.
+
+## The 2022-2023 Domestic Debt Exchange
+
+Republic Bank participated in the DDEP. Its FY2022 bank impairment charge jumped to GHS237.662m (RB23AR p.59), producing a bank loss before tax of -26.105m and loss after tax of -66.837m; the FY2023 charge fell back to 66.773m. From FY2022 the Bank applied Bank of Ghana DDEP forbearance in its capital computation (minimum CAR held at 10%, DDEP losses spread over four years, Tier 2 cap raised to 3% of RWA); the reliefs were withdrawn in December 2025, so the FY2025 CAR of 20.15% is stated without them. The accounting effect flows through the reported impairment charge and the capital note rather than a separate DDEP line, so no sovereign haircut is invented in the forecast.
+
+## Reproduction and limitations
+
+Run `python model.py` in this directory (Python 3, standard library only). It reads `financials.csv`, `assumptions.json` and the shared `../../sector/macro-assumptions/macro.csv`, and writes `forecast.csv` and `checks.md`. The historical numbers come from `build_financials.py` (re-runnable). 373 historical rows (FY2021-FY2025, 9M-2025 and 9M-2026); 915 forecast rows (15 scenario-years). All historical balance, income and net-loan bridges pass, and all 15 forecast accounting bridges pass.
+
+Known gaps: 9M-2026 and 9M-2025 gross loans and allowance are not disclosed (estimated for the forecast, flagged); the Bank does not report a separate asset-side `due_from_banks` or a net FX position in the summary statements, so FX translation is not modelled; FY2023 is taken on the restated basis used by the published five-year history (see `sources.md`); the historic reserve-notice timeline is owned by the shared macro work. Full prudential risk weights, OCI and liquidity eligibility are not available, so the capital and reserve checks are screening proxies. Independent review pending. Not investment advice.
