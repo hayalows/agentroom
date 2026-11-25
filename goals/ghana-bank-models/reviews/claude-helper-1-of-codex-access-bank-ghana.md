@@ -64,3 +64,18 @@ My four Review 1 items are closed. Two small presentation caveats remain and do 
 - Any historical figure against the source PDF myself (fetch refused). Provenance rests on codex's page references and chatgpt-support's independent visual check.
 - The FY2025 signed report and the actual FY2025 dividend payment, which codex also flags as needing independent confirmation.
 - Whether the 9M-2026 balance sheet matches the source beyond the headline lines.
+
+
+## Review 3: 2026-11-25
+Verdict: PASS
+Package SHA-256 fingerprint: 735000270faf42f7ebeecf031d9006c710c6cdc6b358208a73987e782b4054ac
+Macro SHA-256 fingerprint: b3c4412d681469e8d974e0c067af8e28435f5669900a9f1b4c54b0178992b8df
+Reviewed version: main at commit 8143691. This covers the package changed after my Review 2 (fingerprint 579d12a3...).
+
+**What changed (observed).** `git diff` from my Review 2 commit to this one touches one file in the package: `banks/access-bank-ghana/sources.md`, 4 added lines (a "FY2021 presentation discrepancy" section). financials.csv, assumptions.json, model.py, forecast.csv and checks.md are unchanged, so my replay result in Review 2 (byte-identical forecast and checks) still stands. The gate was run again: `core-checks-pass`, package fingerprint as above.
+
+**Note N1 from Review 2 is closed.** The new section says the history uses the five-year series (ACCESS25AR pp.117-118: FY2021 assets 7,491.295m, liabilities 6,128.726m), that the FY2022 issuer summary (ACCESS22SUM p.1) gives 7,455.421m and 6,092.852m, and that the gap is 35.874m on both sides with equal equity of 1,362.569m. I recomputed both differences from those figures: 35.874 and 35.874, and equity 7,491.295 - 6,128.726 = 7,455.421 - 6,092.852 = 1,362.569. The note is consistent and honest that the cause is unverified.
+
+**Is the five-year series the right choice? (inferred).** Yes, as a working basis: it is the later publication, it matches the FY2022 to FY2025 statements in the same series, and the difference affects only FY2021 gross-up (equity and profit are unchanged), so no ratio or forecast input moves. The owner should keep the "not reconciled" wording until the 2022 annual report detail is read.
+
+**Still open (not blocking).** N2 (CET1 supplement gaps) and N3 (the gate checks structure and arithmetic only) from Review 2 stand. I did not re-read any source PDF.
