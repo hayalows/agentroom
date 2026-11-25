@@ -67,12 +67,17 @@ assert abs(H('FY2025','profit_after_tax')-Decimal('14033.738'))<Decimal('.001')
 assert F('FY2030E','profit_after_tax')==Decimal('19285.178')
 assert F('FY2030E','profit_after_tax','downside')==Decimal('7237.121')
 assert F('FY2030E','profit_after_tax','upside')==Decimal('26476.585')
-# Verify all 45 principal forecast cells and 36 historical cells from published data.
+# Verify all 45 principal forecast cells and available historical/coverage cells from published data.
 published=read(G/'sector/sector-rollup/rollup.csv')
 match=[]
 for r in published:
     if r['bank']!='ACCEPTED_ONLY' or not r['value']:continue
     k=r['item'];p=r['period_or_scenario'];v=dec(r['value'])
+    if r['unit']!='GHS millions':continue
+    if r['table']=='forecast_total':
+        scenario,period=p.split('|')
+        match.append(abs(F(period,k,scenario)-v))
+        continue
     if k not in keys:continue
     if p in years and r['unit']=='GHS millions':
         match.append(abs(H(p,k)-v))
@@ -178,13 +183,13 @@ table([['GHS bn','2025 actual','2026E base','2030E base','2030E down','2030E up'
 para('The base case shows a softer 2026 profit year, followed by growth from 2027. By 2030, the downside would be about 62% below base earnings and the upside about 37% above base. These are scenario outputs, not probability estimates. Some liquid-asset-heavy banks initially earn more in the downside rate path.')
 para('The weakest modeled capital outcomes are concentrated in ADB, CBG, NIB and Societe Generale. GCB is the largest earnings contributor in the 2030 base, so its assumptions deserve disproportionate review. Three excluded banks require a different level of confidence, especially UMB, whose current recapitalised position is not represented by its forecast.')
 h2('Reading guide')
-para('Pages 3–10 cover the sector history, macro drivers, forecasts, comparative metrics and capital risks. Pages 11–33 profile the 23 banks. The final pages explain how agents collected and reviewed data, what was committed, and how to reproduce or improve the work.')
+para('Pages 3–11 cover the sector history, macro drivers, forecasts, comparative metrics and capital risks. Pages 12–34 profile the 23 banks. The final pages explain how agents collected and reviewed data, what was committed, and how to reproduce or improve the work.')
 sectsrc()
 title('02 / History','From the debt-exchange shock to recovery','Matched 20 ordinary banks; financial year-end balances and cumulative income, GHS billions.')
 table([['GHS bn']+['2021','2022','2023','2024','2025','9M26']]+[[lab]+[bn(H(y,k)) for y in years] for lab,k in zip(labels,keys)],[115]+[(WIDTH-115)/6]*6)
 bars([float(H(y,'profit_after_tax')/1000) for y in years[:5]],['2021','2022','2023','2024','2025'])
 para('Assets increased by '+change(H('FY2025','total_assets'),H('FY2021','total_assets'))+' between FY2021 and FY2025; deposits grew '+change(H('FY2025','customer_deposits'),H('FY2021','customer_deposits'))+'. Equity fell from GHS 24.19bn to GHS 18.27bn in 2022, then rose to GHS 56.58bn by 2025. FY2025 profit grew '+change(H('FY2025','profit_after_tax'),H('FY2024','profit_after_tax'))+' year-on-year.')
-para('In FY2025, net interest income was GHS 28.26bn. The independent roll-up reports pre-impairment operating income of GHS 41.93bn and matched cost-to-income of 45.09%. Closing-equity return was 24.80%. Neither should be substituted for the regulator’s differently defined ratios.')
+para('In FY2025, net interest income was GHS 28.26bn. The independent roll-up reports pre-impairment operating income of GHS 41.93bn and matched cost-to-income of 45.09%. Closing-equity return was 24.80%. Closing-equity ROE divides full-year PAT by year-end equity. Average-equity ROE divides by the mean of opening and closing equity; a recapitalisation or negative opening equity can distort it. Neither should be substituted for the regulator’s differently defined ratios.')
 para('The September 2026 column contains only 19 ordinary banks because CBG published H1, not September, data. It is not a complete FY2026 comparison; the PAT and NII values are nine-month flows.','note')
 sectsrc()
 title('03 / Industry context','The whole licensed banking sector','Regulator figures copied from the room’s BoG source register; not a re-audit of the original PDF.')
@@ -245,7 +250,7 @@ title('10 / Risk analysis','Where the forecast can break','Concentration, credit
 gcbbase=f('gcb','FY2030E','profit_after_tax');delta=F('FY2030E','profit_after_tax')-F('FY2030E','profit_after_tax','downside')
 contrib=sorted(ordinary,key=lambda b:f(b,'FY2030E','profit_after_tax')-f(b,'FY2030E','profit_after_tax','downside'),reverse=True)
 table([['Largest contributions to 2030 base-down PAT gap','GHS m','Share of net gap']]+[[names[b],fmt(f(b,'FY2030E','profit_after_tax')-f(b,'FY2030E','profit_after_tax','downside')),pct(f(b,'FY2030E','profit_after_tax')-f(b,'FY2030E','profit_after_tax','downside'),delta)] for b in contrib[:6]],[WIDTH-190,100,90])
-para('GCB alone contributes '+pct(gcbbase,F('FY2030E','profit_after_tax'))+' of 2030 base PAT and '+pct(gcbbase-f('gcb','FY2025','profit_after_tax') if False else gcbbase-h('gcb','FY2025','profit_after_tax'),F('FY2030E','profit_after_tax')-H('FY2025','profit_after_tax'))+' of the net modeled 2025–2030 profit increase. Its forecast is the most consequential individual sensitivity. The sector base-down gap is GHS '+bn(delta)+'bn, with a significant portion coming from GCB and Stanbic.')
+para('GCB alone contributes '+pct(gcbbase,F('FY2030E','profit_after_tax'))+' of 2030 base PAT and '+pct(gcbbase-h('gcb','FY2025','profit_after_tax'),F('FY2030E','profit_after_tax')-H('FY2025','profit_after_tax'))+' of the net modeled 2025–2030 profit increase. Its forecast is the most consequential individual sensitivity. The sector base-down gap is GHS '+bn(delta)+'bn, with a significant portion coming from GCB and Stanbic.')
 para('Credit risk: ADB and NIB report very high FY2025 gross NPL ratios (70.53% and 69.70%). CBG reports 33.42%. A shrinking loan book can raise a ratio even while absolute nonperforming balances fall; very high historic allowances can also make simple linear impairment forecasts misleading.')
 para('Funding and liquidity: deposit growth is not equivalent to free cash. The shared 20% reserve requirement interacts with the amount of eligible cash, collateral restrictions, wholesale borrowing and deposit repricing. Several models identify reserve proxy gaps. These are stress screens, not evidence of actual noncompliance.')
 para('Forecasting limits: 2026 spreads often use fitted interim results. Trading income fades are judgmental, future FX shocks are incomplete, and balance-sheet and statutory reserve proxies differ by bank. A downside rate path may temporarily benefit asset-rich banks; CalBank ends with downside PAT above base. This does not mean the downside is preferable in wider economic terms.')
@@ -373,4 +378,4 @@ def footer(c,doc):
 doc=SimpleDocTemplate(str(out),pagesize=A4,leftMargin=45,rightMargin=45,topMargin=43,bottomMargin=50,title='Ghana Banking Sector Outlook 2026 to 2030',author='Iconka | Agentroom',subject='Signed-off bank research synthesis',pageCompression=1)
 doc.build(story,onFirstPage=footer,onLaterPages=footer)
 print('CREATED',out,'planned pages',pages,'bytes',out.stat().st_size,'SHA256',hashlib.sha256(out.read_bytes()).hexdigest())
-print('COUNTS',hist_count,fc_count,source_ids,'history cross-checks',len(match),'max',max(match) if match else 'n/a')
+print('COUNTS',hist_count,fc_count,source_ids,'aggregate cross-checks',len(match),'max',max(match) if match else 'n/a')
