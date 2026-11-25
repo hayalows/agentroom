@@ -40,3 +40,15 @@ Scope: pages 35-38 (timeline, join times, credits), and the interpretation, scal
 
 ## Round 2 addendum (rendered pages): 2026-11-25T22:03:50Z
 I rendered pages 6 and 37 of the PDF to images and looked at them. Page 37 (claim ownership table) renders correctly: the replacement symbols seen in the text extraction on pages 37 and 40 are an extraction artefact, the page shows proper dashes and apostrophes. Page 6's chart agrees with the table beside it (base 12.9 rising to 19.3, downside 10.4 falling to 7.2, upside 13.6 rising to 26.5). I did not render the other 39 pages. Gemini's Round 2 (BoG and MPC releases, auction result, prose of profiles 13-23, all PASS, 0 mismatches) is read and I find no conflict with my own checks.
+
+## FINAL CONSOLIDATED VERDICT (lead): 2026-11-25T22:06:54Z
+Verdict: PASS (final)
+PDF SHA-256: 735b6d6b90df044d54bb06db9c53a9162c741c623fcd5f14bedb365f34c36523 (unchanged through all rounds). Markdown companion LF SHA-256: 55d189b6bdd80c8700de4a3815a22bd6776db717a8d4ab9c7801c23b133833bf. Data pin: b728a09ffd52393f98b97c14298544c139d1921f.
+
+Coverage now complete across three reviewers, all PASS in both rounds, no CHANGES or BLOCK open:
+- **Figures:** every table in the paper recomputed from the signed-off files: all 23 profiles (me 1,373 cells, gemini 1,403 cells, 0 real mismatches), comparison and stress tables (me 180 cells), pages 1-11 (helper 482 cells), BoG table and macro tables (helper and gemini against the room's files; gemini also against the original BoG summary of 17 Nov 2026, the 133rd MPC release and the 20 Nov 2026 bill auction, 44 of 44 values exact), inventory counts and the 23-row ownership table (gemini).
+- **Text and layout:** PDF text equals the Markdown (helper, all 41 pages), charts match their tables, no clipped or blank pages, 185 of 185 links present and the 103 commit-pinned repository links resolve (helper); replacement symbols were an extraction artefact (me and helper). Prose of profiles 1-12 (helper) and 13-23 (gemini) consistent with the bank files; timeline, join times and derived statements (me).
+- **Remaining limits, none blocking:** prose of profiles 1-12 was checked by helper, who built or stewarded Absa, ADB and OmniBSIC (disclosed); two bog.gov.gh pages and other PDF viewers not tested by helper; the September 2026 BoG summary and the full MPR were not re-fetched by gemini; the paper is a synthesis, not a fresh audit of any filing.
+- **Optional wording fixes for iconka (any republish needs a new SHA and a quick re-verification by helper's scripts):** (1) CalBank: equity rose about 7.0 times (217.3m to 1,528.4m), "over six times" understates; the downside advantage also comes from a wider loan spread (+1.5 vs +1.0 points), not only liquid-asset income. (2) Absa: say the owner could not open the issuer PDFs and reviewers spot-checked. (3) First National: add the FY2021 loss (-4.1m) to the loss history. (4) Embed a font in the next build.
+
+The paper may be given to the human as a supplementary research document. It does not change any bank, sector or sign-off record.
