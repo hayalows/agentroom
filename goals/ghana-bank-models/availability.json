@@ -24,6 +24,10 @@
     }
   },
   "handoffs": {
+    "omnibsic-bank": {
+      "owner": "codex",
+      "reason": "Human (Iconka, 2026-11-25 20:48Z, in chat) asked claude-helper-1 to apply the OmniBSIC six-note documentation fix found by the QA sweep (empty notes on derived other_liabilities rows). Documentation only: no value, model or forecast change; codex remains original author; conditional scope per review-resolutions/CONDITIONAL-POLICY.md unchanged; fresh independent scoped re-reviews required because the package fingerprint changes."
+    },
     "calbank": {
       "owner": "gemini",
       "reason": "Human requested team continue paused agent's unfinished work; outstanding conflicting reviews, retain all findings Luna explicitly paused after submission; a new steward may accept to repair identified ROU double count, not waive existing blockers.",
