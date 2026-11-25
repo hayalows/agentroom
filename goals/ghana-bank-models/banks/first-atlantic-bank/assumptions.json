@@ -1,0 +1,125 @@
+{
+  "bank": "first-atlantic-bank",
+  "macro_file": "../../sector/macro-assumptions/macro.csv",
+  "anchor": "Actual 9M-2026 preserved; Q4 only projected. Bank-only; no Liberia consolidated balances. 9M gross and allowance inferred using FY25 gross allowance share; no separate new funding or equity.",
+  "calibration": {
+    "loan_yield_pct": 14,
+    "earning_cash_yield_pct": 4.5,
+    "placement_yield_pct": 4.5,
+    "slow_annual_reset": 0.2,
+    "securities_weight_tbill": 0.5,
+    "deposit_policy_beta": 0.4,
+    "loan_policy_beta": 0.474,
+    "notes": "FY25 pp87,95,100,111. Securities fast share 929.381/3178.870; cash earning share 2986.766/8098.376. Starting securities yield solved to annualized Q3 income using FY25/Q3 average net loans, securities and earning cash, separate FY25 placement. Funding cost fitted to annualized 9M interest expense over avg deposits and deposits from banks. Loan and cash starting yields are analyst estimates; rate beta 40% behavioral assumption, not contractual repricing. Compare frozen FY26 rate fit against FY25; report gap. Slow reset 20% per year estimate."
+  },
+  "scenario": {
+    "base": {
+      "q4_deposit_pct": 3,
+      "q4_gross_loan_pct": 4,
+      "deposit_nominal_spread_pp": 1,
+      "loan_nominal_spread_pp": 3,
+      "incremental_deposit_securities_share": 0.45,
+      "allowance_pct": [
+        6.5,
+        6.5,
+        6,
+        6,
+        5.5
+      ],
+      "npl_pct": [
+        11.2,
+        11,
+        10,
+        9.5,
+        9
+      ],
+      "risk_pct": [
+        1.8,
+        1.8,
+        1.7,
+        1.6,
+        1.5
+      ],
+      "fee_trade_multiplier": 1,
+      "fee_growth_spread_pp": 1,
+      "opex_spread_pp": 4,
+      "tax_pct": 33,
+      "dividend_pct": 30,
+      "capital_buffer_pp": 3
+    },
+    "downside": {
+      "q4_deposit_pct": -3,
+      "q4_gross_loan_pct": -3,
+      "deposit_nominal_spread_pp": -7,
+      "loan_nominal_spread_pp": -12,
+      "incremental_deposit_securities_share": 0.6,
+      "allowance_pct": [
+        9,
+        12,
+        14,
+        14,
+        13
+      ],
+      "npl_pct": [
+        16,
+        20,
+        22,
+        22,
+        20
+      ],
+      "risk_pct": [
+        5,
+        5,
+        5,
+        4.5,
+        4
+      ],
+      "fee_trade_multiplier": 0.85,
+      "fee_growth_spread_pp": -6,
+      "opex_spread_pp": 8,
+      "tax_pct": 35,
+      "dividend_pct": 0,
+      "capital_buffer_pp": 5
+    },
+    "upside": {
+      "q4_deposit_pct": 6,
+      "q4_gross_loan_pct": 7,
+      "deposit_nominal_spread_pp": 4,
+      "loan_nominal_spread_pp": 8,
+      "incremental_deposit_securities_share": 0.4,
+      "allowance_pct": [
+        5.5,
+        5,
+        4.5,
+        4,
+        4
+      ],
+      "npl_pct": [
+        9.5,
+        9,
+        8,
+        7,
+        6
+      ],
+      "risk_pct": [
+        1.2,
+        1.2,
+        1.1,
+        1,
+        1
+      ],
+      "fee_trade_multiplier": 1.12,
+      "fee_growth_spread_pp": 3,
+      "opex_spread_pp": 2,
+      "tax_pct": 32,
+      "dividend_pct": 40,
+      "capital_buffer_pp": 3
+    }
+  },
+  "other": {
+    "growth_floor_pct": -10,
+    "growth_cap_pct": 30,
+    "capital_eligibility_pct": 80,
+    "notes": "E-money share of other assets estimated at FY25 share; Q3 actual split unknown. Track estimated e-money and customer deposits together, non-e-money other assets with inflation; do not add e-money to cash. Reserve proxy compares non-interest-bearing combined cash with shared CRR times all deposits; additional separate 10% deposit-runoff stress plus 10% e-money cash settlement (potential overlap with deposits; conservative additive stress, not regulatory requirement). Separately reported placements modeled only from observed Q3 separate line (none; blank), cannot identify interbank portion embedded in cash. Zero separate borrowings modeled; leases included in other liabilities. CAR RWA residual density calibrated from FY25 and 100% gross loan assumption, Q3 total regulatory capital proxy using actual 14.54%; Tier1 unavailable, not inferred from book equity. Positive PAT eligibility 80% sensitivity; separate adverse FX screen using absolute disclosed narrative 5.307m per 1% move of foreign currencies (shared USD proxy) due opposite sign to source net asset position. Central FX incremental profit zero; stress deducted separately from capital; no actual currency split forecast. Statutory reserve tiers per Act930 s34 on actual opening statutory only; Q3 no transfer recorded so Q4 reserve transfer uses cumulative FY2026 PAT times tier, capped by full-year positive earnings, then later annual. Actual 9M dividend100m already reflected in opening equity; FY26 total includes it. Incremental dividends limited by positive PAT, retained earnings, conservative reserve and CAR buffer. No new capital injections. Other reserves constant. NPL path and allowance separate analyst scenarios. Credit impairment floor covers allowance build; no repeat DDEP modification loss. Q4 credit expense modeled on gross loans, retains 9M net impairment reversal."
+  }
+}
