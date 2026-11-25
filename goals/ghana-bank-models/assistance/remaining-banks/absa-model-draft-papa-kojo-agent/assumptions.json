@@ -1,0 +1,97 @@
+{
+  "bank": "absa-ghana",
+  "scope": "Assistance draft only; not a bank claim or submission. Actual 9M2026 plus modeled Q4, then annual scenarios.",
+  "historical_blob": "211096742d3687cb6c4a58d7aa9c8b6e57353e5e",
+  "macro_blob": "dd35613a54beeb94dfb313c475283f68d6e3237c",
+  "history_file": "../absa-primary-source-pack-codex.csv",
+  "macro_file": "../../../sector/macro-assumptions/macro.csv",
+  "capital": {
+    "rwa_density": 0.55,
+    "rwa_density_stress": 0.65,
+    "capital_recognition_haircut": 0.1,
+    "actual_car": 19.06,
+    "reason": "Assumed RWA density, not reported prudential denominator. Initial capital proxy = actual Sep26 CAR × assumed RWA. RWA scales with noncash asset pool. 65% total-asset RWA plus 10% starting numerator haircut sensitivity. Actual FY25/26 RWA pending source pack."
+  },
+  "liquidity": {
+    "eligible_cash_share": 0.355,
+    "eligible_share_stress": 0.284,
+    "cash_earning_share": 0.4,
+    "reason": "Sep26 mandatory reserves 3264.904 / combined cash 9193.018 = 35.516%; use rounded 35.5% as proxy, stress 20% lower. Mandatory reserve is not verified eligible reserve and combined cash is not all yield-bearing. Cash yield pool assumes 40% combined cash earning; not an actual product split."
+  },
+  "rate": {
+    "asset_beta": 0.55,
+    "funding_beta": 0.35,
+    "wholesale_to_deposit_cost": 1.7,
+    "reason": "Calibrate separate deposit/wholesale rates from observed 9M26 blended funding expense and average balances, assumed 1.7× wholesale rate, not observed contractual pricing. Annual rates drift from FY26 annual macro averages; Q4 uses observed 9M runrate with scenario multipliers to avoid timing mismatch. Asset pool includes net loans, securities, placements, trading/pledged securities and 40% cash; blended yield, no double count or claim observed note yield."
+  },
+  "tax": {
+    "positive_pbt": 0.356,
+    "reason": "9M26 effective tax 545.655/1530.986=35.64%; FY25 35.73%. No tax credit for losses. Historical actual includes levies, no assumed statutory bases."
+  },
+  "scenarios": {
+    "base": {
+      "q4_dep": 0.025,
+      "q4_loan": 0.03,
+      "q4_wholesale": 0.01,
+      "q4_ii": 1,
+      "q4_ie": 1,
+      "q4_fee": 1,
+      "q4_trade": 1,
+      "q4_cost": 1,
+      "dep_spread": 0,
+      "loan_spread": 2,
+      "wholesale_spread": -2,
+      "opex_spread": 2,
+      "fee_spread": 1,
+      "trade_growth": 0.03,
+      "credit_cost": 0.023,
+      "payout": 0.35,
+      "capital_buffer": 3
+    },
+    "downside": {
+      "q4_dep": -0.025,
+      "q4_loan": -0.025,
+      "q4_wholesale": -0.08,
+      "q4_ii": 0.88,
+      "q4_ie": 1.12,
+      "q4_fee": 0.9,
+      "q4_trade": 0.7,
+      "q4_cost": 1.05,
+      "dep_spread": -5,
+      "loan_spread": -6,
+      "wholesale_spread": -8,
+      "opex_spread": 5,
+      "fee_spread": -4,
+      "trade_growth": -0.12,
+      "credit_cost": 0.05,
+      "payout": 0,
+      "capital_buffer": 5
+    },
+    "upside": {
+      "q4_dep": 0.05,
+      "q4_loan": 0.055,
+      "q4_wholesale": 0.025,
+      "q4_ii": 1.07,
+      "q4_ie": 0.96,
+      "q4_fee": 1.06,
+      "q4_trade": 1.12,
+      "q4_cost": 1,
+      "dep_spread": 3,
+      "loan_spread": 6,
+      "wholesale_spread": 0,
+      "opex_spread": 0,
+      "fee_spread": 4,
+      "trade_growth": 0.08,
+      "credit_cost": 0.014,
+      "payout": 0.45,
+      "capital_buffer": 3
+    }
+  },
+  "notes": [
+    "Original bank-only source pack by Codex retained unchanged. No actual missing loan gross/ECL/Tier1, no forecast gross/NPL ratio, no claim of compliance.",
+    "Trading and pledged assets already inside other_assets, x_ memo only; modeled securities included in income pool separately but never double-counted in balance sheet. No explicit FX P&L without net currency position. Q3 FX effects on cash not projected as income.",
+    "Q4 statutory reserve allocation 12.5% of positive full-year PAT less actual YTD123.167m, later annual tiers using opening statutory reserve / paid-up capital. No Q4 dividend assumed; actual YTD1115m preserved. Future dividends conditional on positive PAT and retained earnings, CAR buffer and cash eligibility screen; not permission or actual guidance.",
+    "No new equity capital, no future OCI. Existing credit risk reserve held constant because gross credit migration unknown; sensitivity caveat. Regulatory minimum and reserve rate from macro; any gap flags not plugged by fresh funding.",
+    "Net lending credit cost proxy; FY22 DDEP impairment not extrapolated. Q3 other regulatory sanctions and post-balance-sheet penalty disclosed by source pack; no assumed timing."
+  ]
+}
