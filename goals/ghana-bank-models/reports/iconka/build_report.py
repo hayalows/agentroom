@@ -2,6 +2,7 @@ from pathlib import Path
 import csv, json, re, math, hashlib, sys, collections
 from decimal import Decimal
 from xml.sax.saxutils import escape
+from html import unescape
 from reportlab.lib import colors
 from reportlab.lib.pagesizes import A4
 from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
@@ -108,7 +109,19 @@ styles={
  'big':ParagraphStyle('big',fontName='Helvetica-Bold',fontSize=23,leading=27,textColor=T)
 }
 story=[]; pages=0
-def p(s,style='body'):story.append(Paragraph(s,styles[style]))
+markdown=[]
+def md_text(s):
+    s=re.sub(r'<link href="([^"]+)"[^>]*>(.*?)</link>',lambda m:'['+unescape(m.group(2))+']('+unescape(m.group(1))+')',str(s))
+    s=re.sub(r'<br\s*/?>',' ',s)
+    return unescape(s)
+def md_table(rows):
+    clean=lambda x:str(x).replace('|',r'\|').replace('\n',' ')
+    markdown.append('| '+' | '.join(map(clean,rows[0]))+' |\n| '+' | '.join(['---']*len(rows[0]))+' |\n'+'\n'.join('| '+' | '.join(map(clean,row))+' |' for row in rows[1:]))
+def p(s,style='body'):
+    story.append(Paragraph(s,styles[style]))
+    prefixes={'cover':'# ','h1':'## ','h2':'### ','eyebrow':'**','subtitle':''}
+    t=md_text(s)
+    markdown.append(prefixes.get(style,'')+t+('**' if style=='eyebrow' else ''))
 def para(s,style='body'):p(escape(str(s)),style)
 def title(k,t,sub=None):
     global pages
@@ -118,6 +131,7 @@ def title(k,t,sub=None):
     if sub:para(sub,'note')
 def h2(s):p(escape(s),'h2')
 def table(rows,widths=None,fs=8.5):
+    md_table(rows)
     if widths is None:widths=[WIDTH/len(rows[0])]*len(rows[0])
     data=[]
     for i,row in enumerate(rows):
@@ -133,9 +147,12 @@ def sources(items):
 def sectsrc():
     sources([('final roll-up',PUBF+'sector/sector-rollup/rollup.md'),('peer comparison',PUBF+'sector/peer-comparison/README.md'),('lead summary',ROOT+'sector/summary.md')])
 def callout(label,txt):
+    markdown.append('**'+label+'**: '+txt)
     t=Table([[Paragraph(escape(label),styles['eyebrow'])],[Paragraph(escape(txt),styles['body'])]],colWidths=[WIDTH])
     t.setStyle(TableStyle([('BACKGROUND',(0,0),(-1,-1),P),('BOX',(0,0),(-1,-1),0.5,L),('LEFTPADDING',(0,0),(-1,-1),12),('RIGHTPADDING',(0,0),(-1,-1),12),('TOPPADDING',(0,0),(-1,-1),8),('BOTTOMPADDING',(0,0),(-1,-1),6)]));story.append(t);story.append(Spacer(1,10))
 def chart(series,labels_,ymin,ymax,step,unit):
+    markdown.append('**Chart data: '+unit+'** (same series as the PDF line chart).')
+    md_table([['Scenario']+list(labels_)]+[[name]+[f'{v:.3f}' for v in vs] for name,vs in series])
     d=Drawing(WIDTH,195); x0=45; x1=WIDTH-12; y0=28; y1=158
     yy=lambda v:y0+(float(v)-ymin)/(ymax-ymin)*(y1-y0)
     xx=lambda i:x0+i*(x1-x0)/(len(labels_)-1)
@@ -153,6 +170,8 @@ def chart(series,labels_,ymin,ymax,step,unit):
     d.add(String(3,169,unit,fontSize=8,fillColor=M))
     story.append(d)
 def bars(vs,lab):
+    markdown.append('**Chart data: historical annual PAT, GHS bn** (same series as the PDF bar chart).')
+    md_table([['Year']+list(lab),['PAT']+[f'{v:.3f}' for v in vs]])
     d=Drawing(WIDTH,180);x0=46;x1=WIDTH-15;y0=30;y1=151
     lo=-8;hi=16
     yy=lambda v:y0+(float(v)-lo)/(hi-lo)*(y1-y0)
@@ -376,6 +395,11 @@ def footer(c,doc):
     c.drawRightString(W-45,26,f'{doc.page:02d}')
     c.restoreState()
 doc=SimpleDocTemplate(str(out),pagesize=A4,leftMargin=45,rightMargin=45,topMargin=43,bottomMargin=50,title='Ghana Banking Sector Outlook 2026 to 2030',author='Iconka | Agentroom',subject='Signed-off bank research synthesis',pageCompression=1)
-doc.build(story,onFirstPage=footer,onLaterPages=footer)
+md_out=D/'Ghana_Banking_Sector_Research_2026-2030.md'
+if '--markdown-only' in sys.argv or '--with-markdown' in sys.argv:
+    md_out.write_text('\n\n'.join(markdown)+'\n',encoding='utf-8',newline='\n')
+    print('MARKDOWN',md_out,md_out.stat().st_size,'SHA256',hashlib.sha256(md_out.read_bytes()).hexdigest(),'blocks',len(markdown))
+if '--markdown-only' not in sys.argv:
+    doc.build(story,onFirstPage=footer,onLaterPages=footer)
 print('CREATED',out,'planned pages',pages,'bytes',out.stat().st_size,'SHA256',hashlib.sha256(out.read_bytes()).hexdigest())
 print('COUNTS',hist_count,fc_count,source_ids,'aggregate cross-checks',len(match),'max',max(match) if match else 'n/a')
