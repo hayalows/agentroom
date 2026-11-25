@@ -1,0 +1,56 @@
+{
+  "bank": "first-national-bank-ghana",
+  "macro_file": "../../sector/macro-assumptions/macro.csv",
+  "loan_spread": 0.05,
+  "cash_yield_weight": 0.15,
+  "fast_share": 0.5,
+  "slow_reset": 0.2,
+  "loan_beta": 0.5,
+  "funding_beta": 0.35,
+  "borrow_elasticity": 0.5,
+  "fx_trading_sensitivity": 0.1,
+  "staff_real_growth": 0.02,
+  "opex_real_growth": 0.01,
+  "tax_rate": 0.35,
+  "eligibility_fraction": 0.8,
+  "capital_buffer_pp": 2,
+  "scenarios": {
+    "base": {
+      "loan_adjust": 0.02,
+      "deposit_adjust": 0,
+      "fee_adjust": 0,
+      "trade_adjust": 0,
+      "risk_multiple": 1,
+      "cash_buffer": 0,
+      "dividend_payout": 0
+    },
+    "downside": {
+      "loan_adjust": -0.08,
+      "deposit_adjust": -0.07,
+      "fee_adjust": -0.04,
+      "trade_adjust": -0.12,
+      "risk_multiple": 1.5,
+      "cash_buffer": 0.02,
+      "dividend_payout": 0
+    },
+    "upside": {
+      "loan_adjust": 0.06,
+      "deposit_adjust": 0.04,
+      "fee_adjust": 0.03,
+      "trade_adjust": 0.08,
+      "risk_multiple": 0.65,
+      "cash_buffer": 0,
+      "dividend_payout": 0
+    }
+  },
+  "rationale": {
+    "rates": "Loan and securities yields jointly fitted to 9M26 annualized interest using mean FY25 and Sep26 exposures. 5pp spread and 15% relative cash yield are analyst assumptions; no contractual rate buckets available. 50% fast reset and 20% yearly slow reset use shared bill and bond drivers, not sourced maturity fractions. Policy betas .5/.35 estimates; no issuer beta disclosure.",
+    "growth": "Nominal GDP (real GDP and CPI combined) plus explicit scenario adjustments; Q4 uses quarter compounding, not full-year growth. Funding borrow elasticity .5, bank deposits proportional to customer deposits, asset and expense growth linked to inflation.",
+    "credit": "Observed 9M26 impairment annualized divided by average net loans, not IFRS gross cost of risk; scenario multiplier .65/1/1.5. No forecast gross loan, ECL, NPL or Tier1 where basis unknown.",
+    "tax": "35% of positive incremental PBT, preserves 9M actual tax, all-in assumed Ghana sector levies and corporation tax; no assumed deferred tax credit on losses.",
+    "capital": "No new capital/OCI. Statutory reserve only, Act930 s34; payout capped at modeled retained earnings after reserve transfer and gated by CAR proxy buffer, cash upper-bound and nonnegative securities. FY26 no extra payout. Capital proxy anchored to 9M reported CAR using equity/assets; actual eligible capital/RWA unavailable. 80% positive-PAT eligibility stress. No regulatory compliance claim.",
+    "cash": "Keep Sep26 combined cash/customer deposit ratio with 2pp downside buffer; securities residual asset allocation, negative securities flagged as unfunded, never fabricate financing. Half-cash sensitivity not actual eligible reserves.",
+    "fx": "Small explicitly assumed trading growth sensitivity to annual exchange-rate change; no currency-specific asset/liability positions known; not a modeled FX revaluation.",
+    "bank": "Retained deficit remains GHS309.925m at September 2026; no dividend assumed in all scenarios, no further equity injection; preserve observed GHS358.572m FY2025 contribution only in history."
+  }
+}
