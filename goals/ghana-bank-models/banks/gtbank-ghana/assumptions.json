@@ -5,49 +5,150 @@
   "about": "Every value below is an ESTIMATE by the owner, not a reported number. 'basis' says what it is anchored on. Shared macro drivers (rates, inflation, GDP, CRR, minimum CAR) are read from sector/macro-assumptions/macro.csv by scenario name.",
   "macro_file": "../../sector/macro-assumptions/macro.csv",
   "anchor": {
-    "fy2026e_method": "FY2026E = 9M-2026 actual x 12/9 for every income and expense line, then tax at the assumed rate. Balance sheet = 30 Sep 2026 actual carried to 31 Dec 2026, except equity (adds Q4 profit) and the liquid-asset plug. Dividends = 604.370m actually paid in 9M-2026.",
+    "fy2026e_method": "Nine-month actual flows plus separately estimated Q4; Q4 operating flows at 9M run-rate, actual 9M tax preserved plus assumed tax on positive Q4 PBT. September balances flat for Q4 except equity and liquidity residual; no extra Q4 dividend.",
     "same_for_all_scenarios": "FY2026E is identical in all three scenarios because three quarters are reported."
   },
   "rates": {
-    "loan_yield_spread_over_tbill_364d_pct": {"value": 6.0, "basis": "Chosen so that, with the liquid spread below, the forward formula reproduces 9M-2026 annualised interest income within about 2 percent (see the calibration line in checks.md). Sector average lending rate was 15.8% in Oct 2026 vs a 2026 average 364-day bill of about 11%."},
-    "liquid_yield_spread_over_tbill_364d_pct": {"value": 0.2, "basis": "Earning liquid assets are cash and securities less the reserve held at the central bank. The bank's liquid book earned about 11.2% in 2026 on that base, close to the 364-day bill average of 11.0%."},
-    "cost_of_deposits_to_policy_rate": {"value": 0.195, "basis": "9M-2026 interest expense annualised (573.3m) over average customer deposits (20,273m) = 2.83%, which is 0.195 of the average policy rate of about 14.5% (18% at Dec 2025 and 11% after the Nov 2026 cut)."},
-    "tax_rate": {"value": 0.35, "basis": "9M-2026 total tax 484.6m / profit before tax 1,384.7m = 35.0%; FY2025 35.3%; FY2024 36.5%. Includes levies as printed."}
+    "loan_yield_spread_over_tbill_364d_pct": {
+      "value": 6.0,
+      "basis": "Chosen so that, with the liquid spread below, the forward formula reproduces 9M-2026 annualised interest income within about 2 percent (see the calibration line in checks.md). Sector average lending rate was 15.8% in Oct 2026 vs a 2026 average 364-day bill of about 11%."
+    },
+    "liquid_yield_spread_over_tbill_364d_pct": {
+      "value": 0.2,
+      "basis": "Earning liquid assets are cash and securities less the reserve held at the central bank. The bank's liquid book earned about 11.2% in 2026 on that base, close to the 364-day bill average of 11.0%."
+    },
+    "cost_of_deposits_to_policy_rate": {
+      "value": 0.195,
+      "basis": "9M-2026 interest expense annualised (573.3m) over average customer deposits (20,273m) = 2.83%, which is 0.195 of the average policy rate of about 14.5% (18% at Dec 2025 and 11% after the Nov 2026 cut)."
+    },
+    "tax_rate": {
+      "value": 0.35,
+      "basis": "9M-2026 total tax 484.6m / profit before tax 1,384.7m = 35.0%; FY2025 35.3%; FY2024 36.5%. Includes levies as printed."
+    },
+    "fx_note": "No central FX revaluation: actual currency exposures at Sep26 unknown. Separate adverse 5% FX shock uses FY24 audited profit sensitivity GHS1.606045m, static, pre-tax/eligibility caveat. 100bp actual FY24 PBT sensitivity11.984863m; model full liquid repricing simplified, separate 1pp liquid yield stress."
   },
   "growth": {
     "customer_deposit_growth": {
       "formula": "(1+real GDP growth)*(1+CPI inflation)-1+spread, with GDP and inflation read from the macro row of the same scenario and year",
-      "spread": {"base": {"FY2027E": 0.08, "FY2028E": 0.06, "FY2029E": 0.05, "FY2030E": 0.04}, "downside": {"FY2027E": 0.0, "FY2028E": 0.0, "FY2029E": 0.0, "FY2030E": 0.0}, "upside": {"FY2027E": 0.12, "FY2028E": 0.09, "FY2029E": 0.07, "FY2030E": 0.05}},
+      "spread": {
+        "base": {
+          "FY2027E": 0.08,
+          "FY2028E": 0.06,
+          "FY2029E": 0.05,
+          "FY2030E": 0.04
+        },
+        "downside": {
+          "FY2027E": 0.0,
+          "FY2028E": 0.0,
+          "FY2029E": 0.0,
+          "FY2030E": 0.0
+        },
+        "upside": {
+          "FY2027E": 0.12,
+          "FY2028E": 0.09,
+          "FY2029E": 0.07,
+          "FY2030E": 0.05
+        }
+      },
       "basis": "Deposits grew 41.7% in FY2025 and 24.6% in 9M-2026, well above nominal GDP, so a positive share-gain spread fades toward zero. The downside assumes growth only at nominal GDP."
     },
     "net_loan_growth": {
       "formula": "explicit rate by scenario, but capped so that loans/deposits does not exceed 60 percent",
-      "rate": {"base": {"FY2027E": 0.30, "FY2028E": 0.25, "FY2029E": 0.20, "FY2030E": 0.15}, "downside": {"FY2027E": 0.10, "FY2028E": 0.08, "FY2029E": 0.08, "FY2030E": 0.08}, "upside": {"FY2027E": 0.40, "FY2028E": 0.30, "FY2029E": 0.25, "FY2030E": 0.20}},
+      "rate": {
+        "base": {
+          "FY2027E": 0.3,
+          "FY2028E": 0.25,
+          "FY2029E": 0.2,
+          "FY2030E": 0.15
+        },
+        "downside": {
+          "FY2027E": 0.1,
+          "FY2028E": 0.08,
+          "FY2029E": 0.08,
+          "FY2030E": 0.08
+        },
+        "upside": {
+          "FY2027E": 0.4,
+          "FY2028E": 0.3,
+          "FY2029E": 0.25,
+          "FY2030E": 0.2
+        }
+      },
       "basis": "Net loans rose 87% in 9M-2026 (3,430m to 6,406m) from a very low base; loans/deposits was 19% at FY2025 and 28% at 9M-2026 (sector advances grew 36.7% y/y in Oct 2026). Growth fades as the ratio rebuilds. The cap is a judgement; the bank's loans/deposits was 44% in FY2021."
     },
-    "net_trading_income_growth": {"base": -0.05, "downside": -0.20, "upside": 0.0, "basis": "Net trading income was 134m (FY2021), 305m (FY2022), 297m (FY2023), 282m (FY2024), 426m (FY2025) and 257m in 9M-2026 vs 299m in 9M-2025 (down 14%), so a modest decline is assumed."},
-    "fee_income_growth_over_inflation": {"value": 0.05, "basis": "Fee income grew 28.8% in FY2025 and 17.7% in 9M-2026 vs 9M-2025."},
-    "fee_expense_to_fee_income": {"value": 0.305, "basis": "9M-2026 141.1m / 462.8m = 30.5%; FY2025 34.5%."},
-    "staff_cost_growth_over_inflation": {"value": 0.06, "basis": "Staff costs grew 30% in FY2025 and 12.6% in 9M-2026."},
-    "other_opex_growth_over_inflation": {"value": 0.04, "basis": "Other operating expenses grew 55% in FY2025 and 11% in 9M-2026."},
-    "depreciation_growth": {"value": "inflation", "basis": "Depreciation and amortisation jumped from 26m (9M-2025) to 63m (9M-2026); the new level is carried and then grown with inflation."},
-    "other_operating_income": {"value": "held at FY2026E level", "basis": "Small."}
+    "net_trading_income_growth": {
+      "base": -0.05,
+      "downside": -0.2,
+      "upside": 0.0,
+      "basis": "Net trading income was 134m (FY2021), 305m (FY2022), 297m (FY2023), 282m (FY2024), 426m (FY2025) and 257m in 9M-2026 vs 299m in 9M-2025 (down 14%), so a modest decline is assumed."
+    },
+    "fee_income_growth_over_inflation": {
+      "value": 0.05,
+      "basis": "Fee income grew 28.8% in FY2025 and 17.7% in 9M-2026 vs 9M-2025."
+    },
+    "fee_expense_to_fee_income": {
+      "value": 0.305,
+      "basis": "9M-2026 141.1m / 462.8m = 30.5%; FY2025 34.5%."
+    },
+    "staff_cost_growth_over_inflation": {
+      "value": 0.06,
+      "basis": "Staff costs grew 30% in FY2025 and 12.6% in 9M-2026."
+    },
+    "other_opex_growth_over_inflation": {
+      "value": 0.04,
+      "basis": "Other operating expenses grew 55% in FY2025 and 11% in 9M-2026."
+    },
+    "depreciation_growth": {
+      "value": "inflation",
+      "basis": "Depreciation and amortisation jumped from 26m (9M-2025) to 63m (9M-2026); the new level is carried and then grown with inflation."
+    },
+    "other_operating_income": {
+      "value": "held at FY2026E level",
+      "basis": "Small."
+    }
   },
   "credit": {
-    "cost_of_risk_on_average_net_loans": {"base": 0.008, "downside": 0.025, "upside": 0.004, "basis": "Impairment was only 15.7m in FY2025 and 6.5m in 9M-2026 on a book that has since doubled. Reported NPL ratio 3.67% (9M-2026) vs 7.13% at FY2025 (BoG basis). Base normalises to 0.8% of average loans as the new book ages."},
-    "note": "The 2022 to 2024 debt-exchange related losses (impairment 557m in FY2022; modification loss on investment securities 410m in FY2023 and 343m in FY2024) are not assumed to recur."
+    "cost_of_risk_on_average_net_loans": {
+      "base": 0.008,
+      "downside": 0.025,
+      "upside": 0.004,
+      "basis": "Impairment was only 15.7m in FY2025 and 6.5m in 9M-2026 on a book that has since doubled. Reported NPL ratio 3.67% (9M-2026) vs 7.13% at FY2025 (BoG basis). Base normalises to 0.8% of average loans as the new book ages."
+    },
+    "note": "The 2022 to 2024 debt-exchange related losses (impairment 557m in FY2022; modification loss on investment securities 410m in FY2023 and 343m in FY2024) are not assumed to recur.",
+    "forecast_gross_note": "FY21-24 actual gross and allowance now sourced. FY25 and Sep26 gross/allowance not observed; forecast standard gross loans, allowance, NPL, Tier1 and regulatory CAR blank rather than invent; net LDR proxy."
   },
   "capital_and_liquidity": {
-    "dividend_payout_of_prior_year_profit": {"base": 0.60, "downside": 0.40, "upside": 0.65, "basis": "2026 payment of 604.4m was 60% of FY2025 profit; FY2025 payment of 464.8m was 62% of FY2024; FY2024 payment of 312.8m was 43% of FY2023. Dividends are also limited so that the capital proxy stays above the minimum plus a 5-point buffer."},
-    "capital_buffer_over_minimum_pp": {"value": 5.0, "basis": "A management buffer above the shared minimum capital ratio; not an official target."},
-    "statutory_reserve_transfer_of_profit": {"value": 0.125, "basis": "FY2025 126.5m / profit 1,012.2m = 12.5%; 9M-2026 112.5m / 900.1m = 12.5%."},
-    "operating_cash_to_customer_deposits": {"value": 0.322, "basis": "9M-2026 cash and balances 11,747m = 52.2% of customer deposits; less the 20% reserve requirement leaves 32.2%. The reserve is applied to ALL customer deposits (a simplification)."},
-    "risk_weight_on_net_loans": {"value": 1.0, "basis": "Loans at 100%."},
-    "risk_weight_on_other_assets": {"value": 0.381, "basis": "Calibrated so the capital proxy equals the reported 24.08% at 30 Sep 2026: book equity 3,336.9 / 0.2408 = 13,858 of risk-weighted assets; less loans 6,406 leaves 7,451 over other assets of 19,566. Out-of-sample check: the same weights give 29.8% at FY2025 against 32.70% reported, so the proxy runs about 3 points LOW at that date."}
+    "dividend_payout_of_prior_year_profit": {
+      "base": 0.6,
+      "downside": 0.4,
+      "upside": 0.65,
+      "basis": "2026 payment of 604.4m was 60% of FY2025 profit; FY2025 payment of 464.8m was 62% of FY2024; FY2024 payment of 312.8m was 43% of FY2023. Dividends are also limited so that the capital proxy stays above the minimum plus a 5-point buffer. Model now gates future payout by positive prior PAT, current retained earnings after statutory transfer, proxy CAR buffer, nonnegative securities and 40%-eligible-cash stress. Q4 no additional dividend."
+    },
+    "capital_buffer_over_minimum_pp": {
+      "value": 5.0,
+      "basis": "A management buffer above the shared minimum capital ratio; not an official target."
+    },
+    "statutory_reserve_transfer_of_profit": {
+      "value": 0.125,
+      "basis": "FY2025 126.5m / profit 1,012.2m = 12.5%; 9M-2026 112.5m / 900.1m = 12.5%. Actual opening statutory reserve used; all Act 930 s34 tiers, FY26 full-year transfer less actual YTD transfer."
+    },
+    "operating_cash_to_customer_deposits": {
+      "value": 0.322,
+      "basis": "9M-2026 cash and balances 11,747m = 52.2% of customer deposits; less the 20% reserve requirement leaves 32.2%. The reserve is applied to ALL customer deposits (a simplification)."
+    },
+    "risk_weight_on_net_loans": {
+      "value": 1.0,
+      "basis": "Loans at 100%."
+    },
+    "risk_weight_on_other_assets": {
+      "value": 0.381,
+      "basis": "Calibrated so the capital proxy equals the reported 24.08% at 30 Sep 2026: book equity 3,336.9 / 0.2408 = 13,858 of risk-weighted assets; less loans 6,406 leaves 7,451 over other assets of 19,566. Out-of-sample check: the same weights give 29.8% at FY2025 against 32.70% reported, so the proxy runs about 3 points LOW at that date. FY24 audited RWA 6199.480m, capital2294.374m; FY23 4726.803/1977.589. Prior relief basis differs. Proxy not regulatory return; 20% higher denominator and 80% positive earnings eligibility diagnostics."
+    }
   },
   "other_balance_sheet": {
     "other_assets_and_liabilities_growth": "inflation",
     "property_equipment_flat": true,
     "due_to_banks_and_borrowings": 0
-  }
+  },
+  "steward": "chatgpt-support"
 }

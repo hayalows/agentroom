@@ -1,19 +1,19 @@
 bank,scenario,period,statement,line_item,value,unit,status,notes
-gtbank-ghana,base,FY2026E,income_statement,interest_income,2215.691,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
-gtbank-ghana,base,FY2026E,income_statement,interest_expense,573.271,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
-gtbank-ghana,base,FY2026E,income_statement,net_interest_income,1642.420,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
-gtbank-ghana,base,FY2026E,income_statement,fee_commission_income,617.049,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
-gtbank-ghana,base,FY2026E,income_statement,fee_commission_expense,188.124,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
-gtbank-ghana,base,FY2026E,income_statement,net_trading_income,342.929,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
-gtbank-ghana,base,FY2026E,income_statement,other_operating_income,7.841,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
-gtbank-ghana,base,FY2026E,income_statement,total_operating_income,2422.116,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
-gtbank-ghana,base,FY2026E,income_statement,staff_costs,169.133,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
-gtbank-ghana,base,FY2026E,income_statement,depreciation_amortisation,84.424,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
-gtbank-ghana,base,FY2026E,income_statement,other_operating_expenses,313.624,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
-gtbank-ghana,base,FY2026E,income_statement,impairment_charge,8.665,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
-gtbank-ghana,base,FY2026E,income_statement,profit_before_tax,1846.269,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
-gtbank-ghana,base,FY2026E,income_statement,income_tax,646.194,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
-gtbank-ghana,base,FY2026E,income_statement,profit_after_tax,1200.075,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
+gtbank-ghana,base,FY2026E,income_statement,interest_income,2215.691,GHS millions,estimated,Estimate. FY2026E = 9M-2026 plus modeled Q4; actual YTD tax preserved.
+gtbank-ghana,base,FY2026E,income_statement,interest_expense,573.271,GHS millions,estimated,Estimate. FY2026E = 9M-2026 plus modeled Q4; actual YTD tax preserved.
+gtbank-ghana,base,FY2026E,income_statement,net_interest_income,1642.420,GHS millions,estimated,Estimate. FY2026E = 9M-2026 plus modeled Q4; actual YTD tax preserved.
+gtbank-ghana,base,FY2026E,income_statement,fee_commission_income,617.049,GHS millions,estimated,Estimate. FY2026E = 9M-2026 plus modeled Q4; actual YTD tax preserved.
+gtbank-ghana,base,FY2026E,income_statement,fee_commission_expense,188.124,GHS millions,estimated,Estimate. FY2026E = 9M-2026 plus modeled Q4; actual YTD tax preserved.
+gtbank-ghana,base,FY2026E,income_statement,net_trading_income,342.929,GHS millions,estimated,Estimate. FY2026E = 9M-2026 plus modeled Q4; actual YTD tax preserved.
+gtbank-ghana,base,FY2026E,income_statement,other_operating_income,7.841,GHS millions,estimated,Estimate. FY2026E = 9M-2026 plus modeled Q4; actual YTD tax preserved.
+gtbank-ghana,base,FY2026E,income_statement,total_operating_income,2422.116,GHS millions,estimated,Estimate. FY2026E = 9M-2026 plus modeled Q4; actual YTD tax preserved.
+gtbank-ghana,base,FY2026E,income_statement,staff_costs,169.133,GHS millions,estimated,Estimate. FY2026E = 9M-2026 plus modeled Q4; actual YTD tax preserved.
+gtbank-ghana,base,FY2026E,income_statement,depreciation_amortisation,84.424,GHS millions,estimated,Estimate. FY2026E = 9M-2026 plus modeled Q4; actual YTD tax preserved.
+gtbank-ghana,base,FY2026E,income_statement,other_operating_expenses,313.624,GHS millions,estimated,Estimate. FY2026E = 9M-2026 plus modeled Q4; actual YTD tax preserved.
+gtbank-ghana,base,FY2026E,income_statement,impairment_charge,8.665,GHS millions,estimated,Estimate. FY2026E = 9M-2026 plus modeled Q4; actual YTD tax preserved.
+gtbank-ghana,base,FY2026E,income_statement,profit_before_tax,1846.269,GHS millions,estimated,Estimate. FY2026E = 9M-2026 plus modeled Q4; actual YTD tax preserved.
+gtbank-ghana,base,FY2026E,income_statement,income_tax,646.195,GHS millions,estimated,Estimate. FY2026E = 9M-2026 plus modeled Q4; actual YTD tax preserved.
+gtbank-ghana,base,FY2026E,income_statement,profit_after_tax,1200.075,GHS millions,estimated,Estimate. FY2026E = 9M-2026 plus modeled Q4; actual YTD tax preserved.
 gtbank-ghana,base,FY2026E,income_statement,x_dividends_paid,604.370,GHS millions,estimated,Dividends paid in the year. FY2026E is the 604.370m actually paid in 9M-2026.
 gtbank-ghana,base,FY2026E,balance_sheet,cash_and_bog_balances,11743.335,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
 gtbank-ghana,base,FY2026E,balance_sheet,investment_securities,5427.450,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit. Securities are the plug (liquid assets less cash and the central-bank reserve).
@@ -26,11 +26,28 @@ gtbank-ghana,base,FY2026E,balance_sheet,other_liabilities,138.705,GHS millions,e
 gtbank-ghana,base,FY2026E,balance_sheet,total_liabilities,22635.515,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
 gtbank-ghana,base,FY2026E,balance_sheet,stated_capital,404.895,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
 gtbank-ghana,base,FY2026E,balance_sheet,retained_earnings,2131.976,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
-gtbank-ghana,base,FY2026E,balance_sheet,reserves_other,1100.066,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
+gtbank-ghana,base,FY2026E,balance_sheet,reserves_other,1100.065,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
 gtbank-ghana,base,FY2026E,balance_sheet,total_equity,3636.937,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
-gtbank-ghana,base,FY2026E,balance_sheet,due_from_banks,0.000,GHS millions,estimated,None assumed; no such line is printed.
-gtbank-ghana,base,FY2026E,balance_sheet,due_to_banks,0.000,GHS millions,estimated,None assumed; no such line is printed.
-gtbank-ghana,base,FY2026E,balance_sheet,borrowings,0.000,GHS millions,estimated,None assumed; no such line is printed.
+gtbank-ghana,base,FY2026E,balance_sheet,due_from_banks,,GHS millions,unavailable,Separate actual anchor unavailable; no invented value.
+gtbank-ghana,base,FY2026E,balance_sheet,loans_and_advances_gross,,GHS millions,unavailable,Separate actual anchor unavailable; no invented value.
+gtbank-ghana,base,FY2026E,balance_sheet,loan_loss_allowance,,GHS millions,unavailable,Separate actual anchor unavailable; no invented value.
+gtbank-ghana,base,FY2026E,balance_sheet,due_to_banks,0.000,GHS millions,estimated,No separately disclosed funding assumed; included in aggregate if applicable.
+gtbank-ghana,base,FY2026E,balance_sheet,borrowings,0.000,GHS millions,estimated,No separately disclosed funding assumed; included in aggregate if applicable.
+gtbank-ghana,base,FY2026E,ratios,car_pct,,percent,unavailable,Actual regulatory or gross basis unavailable; proxy and net LDR separately disclosed.
+gtbank-ghana,base,FY2026E,ratios,tier1_pct,,percent,unavailable,Actual regulatory or gross basis unavailable; proxy and net LDR separately disclosed.
+gtbank-ghana,base,FY2026E,ratios,npl_pct,,percent,unavailable,Actual regulatory or gross basis unavailable; proxy and net LDR separately disclosed.
+gtbank-ghana,base,FY2026E,ratios,ldr_pct,,percent,unavailable,Actual regulatory or gross basis unavailable; proxy and net LDR separately disclosed.
+gtbank-ghana,base,FY2026E,ratios,roe_pct,35.940,percent,estimated,"Estimated; CAR screens are nonregulatory proxies, adverse FX uses historical static 5% loss."
+gtbank-ghana,base,FY2026E,ratios,roa_pct,5.056,percent,estimated,"Estimated; CAR screens are nonregulatory proxies, adverse FX uses historical static 5% loss."
+gtbank-ghana,base,FY2026E,ratios,cost_to_income_pct,23.417,percent,estimated,"Estimated; CAR screens are nonregulatory proxies, adverse FX uses historical static 5% loss."
+gtbank-ghana,base,FY2026E,ratios,x_net_ldr_pct,28.476,percent,estimated,"Estimated; CAR screens are nonregulatory proxies, adverse FX uses historical static 5% loss."
+gtbank-ghana,base,FY2026E,ratios,x_car_80pct_eligibility_pct,25.595,percent,estimated,"Estimated; CAR screens are nonregulatory proxies, adverse FX uses historical static 5% loss."
+gtbank-ghana,base,FY2026E,ratios,x_car_higher_density_pct,21.687,percent,estimated,"Estimated; CAR screens are nonregulatory proxies, adverse FX uses historical static 5% loss."
+gtbank-ghana,base,FY2026E,ratios,x_car_adverse_fx_pct,26.013,percent,estimated,"Estimated; CAR screens are nonregulatory proxies, adverse FX uses historical static 5% loss."
+gtbank-ghana,base,FY2026E,balance_sheet,x_statutory_reserve,983.592,GHS millions,estimated,Estimated; no actual regulatory compliance or payout permission.
+gtbank-ghana,base,FY2026E,balance_sheet,x_statutory_reserve_transfer,37.501,GHS millions,estimated,Estimated; no actual regulatory compliance or payout permission.
+gtbank-ghana,base,FY2026E,balance_sheet,x_cash_40pct_eligible_gap,0.000,GHS millions,estimated,Estimated; no actual regulatory compliance or payout permission.
+gtbank-ghana,base,FY2026E,income_statement,x_incremental_dividend,0.000,GHS millions,estimated,Estimated; no actual regulatory compliance or payout permission.
 gtbank-ghana,base,FY2026E,ratios,x_car_proxy_pct,26.024,percent,estimated,"PROXY, not the regulatory ratio: book equity / (100% x loans + 38.1% x other assets), calibrated to the reported 24.08% at 30 Sep 2026."
 gtbank-ghana,base,FY2026E,ratios,x_roe_pct,35.940,percent,estimated,Profit after tax / average of opening and closing equity.
 gtbank-ghana,base,FY2026E,ratios,x_cost_to_income_pct,23.417,percent,estimated,Operating expenses / operating income before impairment.
@@ -50,150 +67,218 @@ gtbank-ghana,base,FY2027E,income_statement,impairment_charge,58.937,GHS millions
 gtbank-ghana,base,FY2027E,income_statement,profit_before_tax,1987.061,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 gtbank-ghana,base,FY2027E,income_statement,income_tax,695.471,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 gtbank-ghana,base,FY2027E,income_statement,profit_after_tax,1291.589,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-gtbank-ghana,base,FY2027E,income_statement,x_dividends_paid,720.045,GHS millions,estimated,Dividends paid in the year. FY2026E is the 604.370m actually paid in 9M-2026.
+gtbank-ghana,base,FY2027E,income_statement,x_dividends_paid,0.000,GHS millions,estimated,Dividends paid in the year. FY2026E is the 604.370m actually paid in 9M-2026.
 gtbank-ghana,base,FY2027E,balance_sheet,cash_and_bog_balances,14194.756,GHS millions,estimated,Estimate.
-gtbank-ghana,base,FY2027E,balance_sheet,investment_securities,6158.287,GHS millions,estimated,Estimate. Securities are the plug (liquid assets less cash and the central-bank reserve).
+gtbank-ghana,base,FY2027E,balance_sheet,investment_securities,6878.331,GHS millions,estimated,Estimate. Securities are the plug (liquid assets less cash and the central-bank reserve).
 gtbank-ghana,base,FY2027E,balance_sheet,loans_and_advances_net,8328.039,GHS millions,estimated,Estimate.
 gtbank-ghana,base,FY2027E,balance_sheet,property_equipment_intangibles,374.903,GHS millions,estimated,Estimate.
 gtbank-ghana,base,FY2027E,balance_sheet,other_assets,2494.623,GHS millions,estimated,Estimate.
-gtbank-ghana,base,FY2027E,balance_sheet,total_assets,31550.608,GHS millions,estimated,Estimate.
+gtbank-ghana,base,FY2027E,balance_sheet,total_assets,32270.653,GHS millions,estimated,Estimate.
 gtbank-ghana,base,FY2027E,balance_sheet,customer_deposits,27193.019,GHS millions,estimated,Estimate.
 gtbank-ghana,base,FY2027E,balance_sheet,other_liabilities,149.108,GHS millions,estimated,Estimate.
 gtbank-ghana,base,FY2027E,balance_sheet,total_liabilities,27342.127,GHS millions,estimated,Estimate.
 gtbank-ghana,base,FY2027E,balance_sheet,stated_capital,404.895,GHS millions,estimated,Estimate.
-gtbank-ghana,base,FY2027E,balance_sheet,retained_earnings,2542.071,GHS millions,estimated,Estimate.
-gtbank-ghana,base,FY2027E,balance_sheet,reserves_other,1261.515,GHS millions,estimated,Estimate.
-gtbank-ghana,base,FY2027E,balance_sheet,total_equity,4208.481,GHS millions,estimated,Estimate.
-gtbank-ghana,base,FY2027E,balance_sheet,due_from_banks,0.000,GHS millions,estimated,None assumed; no such line is printed.
-gtbank-ghana,base,FY2027E,balance_sheet,due_to_banks,0.000,GHS millions,estimated,None assumed; no such line is printed.
-gtbank-ghana,base,FY2027E,balance_sheet,borrowings,0.000,GHS millions,estimated,None assumed; no such line is printed.
-gtbank-ghana,base,FY2027E,ratios,x_car_proxy_pct,24.502,percent,estimated,"PROXY, not the regulatory ratio: book equity / (100% x loans + 38.1% x other assets), calibrated to the reported 24.08% at 30 Sep 2026."
-gtbank-ghana,base,FY2027E,ratios,x_roe_pct,32.926,percent,estimated,Profit after tax / average of opening and closing equity.
+gtbank-ghana,base,FY2027E,balance_sheet,retained_earnings,3262.117,GHS millions,estimated,Estimate.
+gtbank-ghana,base,FY2027E,balance_sheet,reserves_other,1261.514,GHS millions,estimated,Estimate.
+gtbank-ghana,base,FY2027E,balance_sheet,total_equity,4928.526,GHS millions,estimated,Estimate.
+gtbank-ghana,base,FY2027E,balance_sheet,due_from_banks,,GHS millions,unavailable,Separate actual anchor unavailable; no invented value.
+gtbank-ghana,base,FY2027E,balance_sheet,loans_and_advances_gross,,GHS millions,unavailable,Separate actual anchor unavailable; no invented value.
+gtbank-ghana,base,FY2027E,balance_sheet,loan_loss_allowance,,GHS millions,unavailable,Separate actual anchor unavailable; no invented value.
+gtbank-ghana,base,FY2027E,balance_sheet,due_to_banks,0.000,GHS millions,estimated,No separately disclosed funding assumed; included in aggregate if applicable.
+gtbank-ghana,base,FY2027E,balance_sheet,borrowings,0.000,GHS millions,estimated,No separately disclosed funding assumed; included in aggregate if applicable.
+gtbank-ghana,base,FY2027E,ratios,car_pct,,percent,unavailable,Actual regulatory or gross basis unavailable; proxy and net LDR separately disclosed.
+gtbank-ghana,base,FY2027E,ratios,tier1_pct,,percent,unavailable,Actual regulatory or gross basis unavailable; proxy and net LDR separately disclosed.
+gtbank-ghana,base,FY2027E,ratios,npl_pct,,percent,unavailable,Actual regulatory or gross basis unavailable; proxy and net LDR separately disclosed.
+gtbank-ghana,base,FY2027E,ratios,ldr_pct,,percent,unavailable,Actual regulatory or gross basis unavailable; proxy and net LDR separately disclosed.
+gtbank-ghana,base,FY2027E,ratios,roe_pct,30.158,percent,estimated,"Estimated; CAR screens are nonregulatory proxies, adverse FX uses historical static 5% loss."
+gtbank-ghana,base,FY2027E,ratios,roa_pct,4.412,percent,estimated,"Estimated; CAR screens are nonregulatory proxies, adverse FX uses historical static 5% loss."
+gtbank-ghana,base,FY2027E,ratios,cost_to_income_pct,23.612,percent,estimated,"Estimated; CAR screens are nonregulatory proxies, adverse FX uses historical static 5% loss."
+gtbank-ghana,base,FY2027E,ratios,x_net_ldr_pct,30.626,percent,estimated,"Estimated; CAR screens are nonregulatory proxies, adverse FX uses historical static 5% loss."
+gtbank-ghana,base,FY2027E,ratios,x_car_80pct_eligibility_pct,26.419,percent,estimated,"Estimated; CAR screens are nonregulatory proxies, adverse FX uses historical static 5% loss."
+gtbank-ghana,base,FY2027E,ratios,x_car_higher_density_pct,23.536,percent,estimated,"Estimated; CAR screens are nonregulatory proxies, adverse FX uses historical static 5% loss."
+gtbank-ghana,base,FY2027E,ratios,x_car_adverse_fx_pct,28.234,percent,estimated,"Estimated; CAR screens are nonregulatory proxies, adverse FX uses historical static 5% loss."
+gtbank-ghana,base,FY2027E,balance_sheet,x_statutory_reserve,1145.041,GHS millions,estimated,Estimated; no actual regulatory compliance or payout permission.
+gtbank-ghana,base,FY2027E,balance_sheet,x_statutory_reserve_transfer,161.449,GHS millions,estimated,Estimated; no actual regulatory compliance or payout permission.
+gtbank-ghana,base,FY2027E,balance_sheet,x_cash_40pct_eligible_gap,0.000,GHS millions,estimated,Estimated; no actual regulatory compliance or payout permission.
+gtbank-ghana,base,FY2027E,income_statement,x_incremental_dividend,0.000,GHS millions,estimated,Estimated; no actual regulatory compliance or payout permission.
+gtbank-ghana,base,FY2027E,ratios,x_car_proxy_pct,28.243,percent,estimated,"PROXY, not the regulatory ratio: book equity / (100% x loans + 38.1% x other assets), calibrated to the reported 24.08% at 30 Sep 2026."
+gtbank-ghana,base,FY2027E,ratios,x_roe_pct,30.158,percent,estimated,Profit after tax / average of opening and closing equity.
 gtbank-ghana,base,FY2027E,ratios,x_cost_to_income_pct,23.612,percent,estimated,Operating expenses / operating income before impairment.
 gtbank-ghana,base,FY2027E,ratios,x_ldr_pct,30.626,percent,estimated,Net loans / customer deposits.
-gtbank-ghana,base,FY2028E,income_statement,interest_income,2898.902,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+gtbank-ghana,base,FY2028E,income_statement,interest_income,2968.747,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 gtbank-ghana,base,FY2028E,income_statement,interest_expense,567.157,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-gtbank-ghana,base,FY2028E,income_statement,net_interest_income,2331.745,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+gtbank-ghana,base,FY2028E,income_statement,net_interest_income,2401.590,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 gtbank-ghana,base,FY2028E,income_statement,fee_commission_income,784.424,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 gtbank-ghana,base,FY2028E,income_statement,fee_commission_expense,239.249,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 gtbank-ghana,base,FY2028E,income_statement,net_trading_income,309.494,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 gtbank-ghana,base,FY2028E,income_statement,other_operating_income,7.841,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-gtbank-ghana,base,FY2028E,income_statement,total_operating_income,3194.255,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+gtbank-ghana,base,FY2028E,income_statement,total_operating_income,3264.099,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 gtbank-ghana,base,FY2028E,income_statement,staff_costs,218.842,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 gtbank-ghana,base,FY2028E,income_statement,depreciation_amortisation,98.016,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 gtbank-ghana,base,FY2028E,income_statement,other_operating_expenses,391.654,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 gtbank-ghana,base,FY2028E,income_statement,impairment_charge,74.952,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-gtbank-ghana,base,FY2028E,income_statement,profit_before_tax,2410.791,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-gtbank-ghana,base,FY2028E,income_statement,income_tax,843.777,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-gtbank-ghana,base,FY2028E,income_statement,profit_after_tax,1567.014,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-gtbank-ghana,base,FY2028E,income_statement,x_dividends_paid,774.954,GHS millions,estimated,Dividends paid in the year. FY2026E is the 604.370m actually paid in 9M-2026.
+gtbank-ghana,base,FY2028E,income_statement,profit_before_tax,2480.636,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+gtbank-ghana,base,FY2028E,income_statement,income_tax,868.222,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+gtbank-ghana,base,FY2028E,income_statement,profit_after_tax,1612.413,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+gtbank-ghana,base,FY2028E,income_statement,x_dividends_paid,0.000,GHS millions,estimated,Dividends paid in the year. FY2026E is the 604.370m actually paid in 9M-2026.
 gtbank-ghana,base,FY2028E,balance_sheet,cash_and_bog_balances,16948.539,GHS millions,estimated,Estimate.
-gtbank-ghana,base,FY2028E,balance_sheet,investment_securities,7202.359,GHS millions,estimated,Estimate. Securities are the plug (liquid assets less cash and the central-bank reserve).
+gtbank-ghana,base,FY2028E,balance_sheet,investment_securities,8742.757,GHS millions,estimated,Estimate. Securities are the plug (liquid assets less cash and the central-bank reserve).
 gtbank-ghana,base,FY2028E,balance_sheet,loans_and_advances_net,10410.049,GHS millions,estimated,Estimate.
 gtbank-ghana,base,FY2028E,balance_sheet,property_equipment_intangibles,374.903,GHS millions,estimated,Estimate.
 gtbank-ghana,base,FY2028E,balance_sheet,other_assets,2694.193,GHS millions,estimated,Estimate.
-gtbank-ghana,base,FY2028E,balance_sheet,total_assets,37630.043,GHS millions,estimated,Estimate.
+gtbank-ghana,base,FY2028E,balance_sheet,total_assets,39170.441,GHS millions,estimated,Estimate.
 gtbank-ghana,base,FY2028E,balance_sheet,customer_deposits,32468.465,GHS millions,estimated,Estimate.
 gtbank-ghana,base,FY2028E,balance_sheet,other_liabilities,161.037,GHS millions,estimated,Estimate.
 gtbank-ghana,base,FY2028E,balance_sheet,total_liabilities,32629.501,GHS millions,estimated,Estimate.
 gtbank-ghana,base,FY2028E,balance_sheet,stated_capital,404.895,GHS millions,estimated,Estimate.
-gtbank-ghana,base,FY2028E,balance_sheet,retained_earnings,3138.255,GHS millions,estimated,Estimate.
-gtbank-ghana,base,FY2028E,balance_sheet,reserves_other,1457.392,GHS millions,estimated,Estimate.
-gtbank-ghana,base,FY2028E,balance_sheet,total_equity,5000.542,GHS millions,estimated,Estimate.
-gtbank-ghana,base,FY2028E,balance_sheet,due_from_banks,0.000,GHS millions,estimated,None assumed; no such line is printed.
-gtbank-ghana,base,FY2028E,balance_sheet,due_to_banks,0.000,GHS millions,estimated,None assumed; no such line is printed.
-gtbank-ghana,base,FY2028E,balance_sheet,borrowings,0.000,GHS millions,estimated,None assumed; no such line is printed.
-gtbank-ghana,base,FY2028E,ratios,x_car_proxy_pct,24.063,percent,estimated,"PROXY, not the regulatory ratio: book equity / (100% x loans + 38.1% x other assets), calibrated to the reported 24.08% at 30 Sep 2026."
-gtbank-ghana,base,FY2028E,ratios,x_roe_pct,34.032,percent,estimated,Profit after tax / average of opening and closing equity.
-gtbank-ghana,base,FY2028E,ratios,x_cost_to_income_pct,22.181,percent,estimated,Operating expenses / operating income before impairment.
+gtbank-ghana,base,FY2028E,balance_sheet,retained_earnings,4672.979,GHS millions,estimated,Estimate.
+gtbank-ghana,base,FY2028E,balance_sheet,reserves_other,1463.066,GHS millions,estimated,Estimate.
+gtbank-ghana,base,FY2028E,balance_sheet,total_equity,6540.939,GHS millions,estimated,Estimate.
+gtbank-ghana,base,FY2028E,balance_sheet,due_from_banks,,GHS millions,unavailable,Separate actual anchor unavailable; no invented value.
+gtbank-ghana,base,FY2028E,balance_sheet,loans_and_advances_gross,,GHS millions,unavailable,Separate actual anchor unavailable; no invented value.
+gtbank-ghana,base,FY2028E,balance_sheet,loan_loss_allowance,,GHS millions,unavailable,Separate actual anchor unavailable; no invented value.
+gtbank-ghana,base,FY2028E,balance_sheet,due_to_banks,0.000,GHS millions,estimated,No separately disclosed funding assumed; included in aggregate if applicable.
+gtbank-ghana,base,FY2028E,balance_sheet,borrowings,0.000,GHS millions,estimated,No separately disclosed funding assumed; included in aggregate if applicable.
+gtbank-ghana,base,FY2028E,ratios,car_pct,,percent,unavailable,Actual regulatory or gross basis unavailable; proxy and net LDR separately disclosed.
+gtbank-ghana,base,FY2028E,ratios,tier1_pct,,percent,unavailable,Actual regulatory or gross basis unavailable; proxy and net LDR separately disclosed.
+gtbank-ghana,base,FY2028E,ratios,npl_pct,,percent,unavailable,Actual regulatory or gross basis unavailable; proxy and net LDR separately disclosed.
+gtbank-ghana,base,FY2028E,ratios,ldr_pct,,percent,unavailable,Actual regulatory or gross basis unavailable; proxy and net LDR separately disclosed.
+gtbank-ghana,base,FY2028E,ratios,roe_pct,28.117,percent,estimated,"Estimated; CAR screens are nonregulatory proxies, adverse FX uses historical static 5% loss."
+gtbank-ghana,base,FY2028E,ratios,roa_pct,4.514,percent,estimated,"Estimated; CAR screens are nonregulatory proxies, adverse FX uses historical static 5% loss."
+gtbank-ghana,base,FY2028E,ratios,cost_to_income_pct,21.706,percent,estimated,"Estimated; CAR screens are nonregulatory proxies, adverse FX uses historical static 5% loss."
+gtbank-ghana,base,FY2028E,ratios,x_net_ldr_pct,32.062,percent,estimated,"Estimated; CAR screens are nonregulatory proxies, adverse FX uses historical static 5% loss."
+gtbank-ghana,base,FY2028E,ratios,x_car_80pct_eligibility_pct,27.612,percent,estimated,"Estimated; CAR screens are nonregulatory proxies, adverse FX uses historical static 5% loss."
+gtbank-ghana,base,FY2028E,ratios,x_car_higher_density_pct,25.509,percent,estimated,"Estimated; CAR screens are nonregulatory proxies, adverse FX uses historical static 5% loss."
+gtbank-ghana,base,FY2028E,ratios,x_car_adverse_fx_pct,30.604,percent,estimated,"Estimated; CAR screens are nonregulatory proxies, adverse FX uses historical static 5% loss."
+gtbank-ghana,base,FY2028E,balance_sheet,x_statutory_reserve,1346.593,GHS millions,estimated,Estimated; no actual regulatory compliance or payout permission.
+gtbank-ghana,base,FY2028E,balance_sheet,x_statutory_reserve_transfer,201.552,GHS millions,estimated,Estimated; no actual regulatory compliance or payout permission.
+gtbank-ghana,base,FY2028E,balance_sheet,x_cash_40pct_eligible_gap,0.000,GHS millions,estimated,Estimated; no actual regulatory compliance or payout permission.
+gtbank-ghana,base,FY2028E,income_statement,x_incremental_dividend,0.000,GHS millions,estimated,Estimated; no actual regulatory compliance or payout permission.
+gtbank-ghana,base,FY2028E,ratios,x_car_proxy_pct,30.611,percent,estimated,"PROXY, not the regulatory ratio: book equity / (100% x loans + 38.1% x other assets), calibrated to the reported 24.08% at 30 Sep 2026."
+gtbank-ghana,base,FY2028E,ratios,x_roe_pct,28.117,percent,estimated,Profit after tax / average of opening and closing equity.
+gtbank-ghana,base,FY2028E,ratios,x_cost_to_income_pct,21.706,percent,estimated,Operating expenses / operating income before impairment.
 gtbank-ghana,base,FY2028E,ratios,x_ldr_pct,32.062,percent,estimated,Net loans / customer deposits.
-gtbank-ghana,base,FY2029E,income_statement,interest_income,3342.121,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+gtbank-ghana,base,FY2029E,income_statement,interest_income,3483.837,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 gtbank-ghana,base,FY2029E,income_statement,interest_expense,638.897,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-gtbank-ghana,base,FY2029E,income_statement,net_interest_income,2703.224,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+gtbank-ghana,base,FY2029E,income_statement,net_interest_income,2844.940,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 gtbank-ghana,base,FY2029E,income_statement,fee_commission_income,886.399,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 gtbank-ghana,base,FY2029E,income_statement,fee_commission_expense,270.352,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 gtbank-ghana,base,FY2029E,income_statement,net_trading_income,294.019,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 gtbank-ghana,base,FY2029E,income_statement,other_operating_income,7.841,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-gtbank-ghana,base,FY2029E,income_statement,total_operating_income,3621.131,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+gtbank-ghana,base,FY2029E,income_statement,total_operating_income,3762.848,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 gtbank-ghana,base,FY2029E,income_statement,staff_costs,249.479,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 gtbank-ghana,base,FY2029E,income_statement,depreciation_amortisation,105.858,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 gtbank-ghana,base,FY2029E,income_statement,other_operating_expenses,438.652,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 gtbank-ghana,base,FY2029E,income_statement,impairment_charge,91.608,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-gtbank-ghana,base,FY2029E,income_statement,profit_before_tax,2735.534,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-gtbank-ghana,base,FY2029E,income_statement,income_tax,957.437,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-gtbank-ghana,base,FY2029E,income_statement,profit_after_tax,1778.097,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-gtbank-ghana,base,FY2029E,income_statement,x_dividends_paid,940.209,GHS millions,estimated,Dividends paid in the year. FY2026E is the 604.370m actually paid in 9M-2026.
+gtbank-ghana,base,FY2029E,income_statement,profit_before_tax,2877.250,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+gtbank-ghana,base,FY2029E,income_statement,income_tax,1007.038,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+gtbank-ghana,base,FY2029E,income_statement,profit_after_tax,1870.213,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+gtbank-ghana,base,FY2029E,income_statement,x_dividends_paid,0.000,GHS millions,estimated,Dividends paid in the year. FY2026E is the 604.370m actually paid in 9M-2026.
 gtbank-ghana,base,FY2029E,balance_sheet,cash_and_bog_balances,20030.461,GHS millions,estimated,Estimate.
-gtbank-ghana,base,FY2029E,balance_sheet,investment_securities,8577.729,GHS millions,estimated,Estimate. Securities are the plug (liquid assets less cash and the central-bank reserve).
+gtbank-ghana,base,FY2029E,balance_sheet,investment_securities,11150.450,GHS millions,estimated,Estimate. Securities are the plug (liquid assets less cash and the central-bank reserve).
 gtbank-ghana,base,FY2029E,balance_sheet,loans_and_advances_net,12492.059,GHS millions,estimated,Estimate.
 gtbank-ghana,base,FY2029E,balance_sheet,property_equipment_intangibles,374.903,GHS millions,estimated,Estimate.
 gtbank-ghana,base,FY2029E,balance_sheet,other_assets,2909.729,GHS millions,estimated,Estimate.
-gtbank-ghana,base,FY2029E,balance_sheet,total_assets,44384.880,GHS millions,estimated,Estimate.
+gtbank-ghana,base,FY2029E,balance_sheet,total_assets,46957.602,GHS millions,estimated,Estimate.
 gtbank-ghana,base,FY2029E,balance_sheet,customer_deposits,38372.530,GHS millions,estimated,Estimate.
 gtbank-ghana,base,FY2029E,balance_sheet,other_liabilities,173.919,GHS millions,estimated,Estimate.
 gtbank-ghana,base,FY2029E,balance_sheet,total_liabilities,38546.450,GHS millions,estimated,Estimate.
 gtbank-ghana,base,FY2029E,balance_sheet,stated_capital,404.895,GHS millions,estimated,Estimate.
-gtbank-ghana,base,FY2029E,balance_sheet,retained_earnings,3753.882,GHS millions,estimated,Estimate.
-gtbank-ghana,base,FY2029E,balance_sheet,reserves_other,1679.654,GHS millions,estimated,Estimate.
-gtbank-ghana,base,FY2029E,balance_sheet,total_equity,5838.431,GHS millions,estimated,Estimate.
-gtbank-ghana,base,FY2029E,balance_sheet,due_from_banks,0.000,GHS millions,estimated,None assumed; no such line is printed.
-gtbank-ghana,base,FY2029E,balance_sheet,due_to_banks,0.000,GHS millions,estimated,None assumed; no such line is printed.
-gtbank-ghana,base,FY2029E,balance_sheet,borrowings,0.000,GHS millions,estimated,None assumed; no such line is printed.
-gtbank-ghana,base,FY2029E,ratios,x_car_proxy_pct,23.692,percent,estimated,"PROXY, not the regulatory ratio: book equity / (100% x loans + 38.1% x other assets), calibrated to the reported 24.08% at 30 Sep 2026."
-gtbank-ghana,base,FY2029E,ratios,x_roe_pct,32.809,percent,estimated,Profit after tax / average of opening and closing equity.
-gtbank-ghana,base,FY2029E,ratios,x_cost_to_income_pct,21.927,percent,estimated,Operating expenses / operating income before impairment.
+gtbank-ghana,base,FY2029E,balance_sheet,retained_earnings,6309.415,GHS millions,estimated,Estimate.
+gtbank-ghana,base,FY2029E,balance_sheet,reserves_other,1696.842,GHS millions,estimated,Estimate.
+gtbank-ghana,base,FY2029E,balance_sheet,total_equity,8411.152,GHS millions,estimated,Estimate.
+gtbank-ghana,base,FY2029E,balance_sheet,due_from_banks,,GHS millions,unavailable,Separate actual anchor unavailable; no invented value.
+gtbank-ghana,base,FY2029E,balance_sheet,loans_and_advances_gross,,GHS millions,unavailable,Separate actual anchor unavailable; no invented value.
+gtbank-ghana,base,FY2029E,balance_sheet,loan_loss_allowance,,GHS millions,unavailable,Separate actual anchor unavailable; no invented value.
+gtbank-ghana,base,FY2029E,balance_sheet,due_to_banks,0.000,GHS millions,estimated,No separately disclosed funding assumed; included in aggregate if applicable.
+gtbank-ghana,base,FY2029E,balance_sheet,borrowings,0.000,GHS millions,estimated,No separately disclosed funding assumed; included in aggregate if applicable.
+gtbank-ghana,base,FY2029E,ratios,car_pct,,percent,unavailable,Actual regulatory or gross basis unavailable; proxy and net LDR separately disclosed.
+gtbank-ghana,base,FY2029E,ratios,tier1_pct,,percent,unavailable,Actual regulatory or gross basis unavailable; proxy and net LDR separately disclosed.
+gtbank-ghana,base,FY2029E,ratios,npl_pct,,percent,unavailable,Actual regulatory or gross basis unavailable; proxy and net LDR separately disclosed.
+gtbank-ghana,base,FY2029E,ratios,ldr_pct,,percent,unavailable,Actual regulatory or gross basis unavailable; proxy and net LDR separately disclosed.
+gtbank-ghana,base,FY2029E,ratios,roe_pct,25.016,percent,estimated,"Estimated; CAR screens are nonregulatory proxies, adverse FX uses historical static 5% loss."
+gtbank-ghana,base,FY2029E,ratios,roa_pct,4.343,percent,estimated,"Estimated; CAR screens are nonregulatory proxies, adverse FX uses historical static 5% loss."
+gtbank-ghana,base,FY2029E,ratios,cost_to_income_pct,21.101,percent,estimated,"Estimated; CAR screens are nonregulatory proxies, adverse FX uses historical static 5% loss."
+gtbank-ghana,base,FY2029E,ratios,x_net_ldr_pct,32.555,percent,estimated,"Estimated; CAR screens are nonregulatory proxies, adverse FX uses historical static 5% loss."
+gtbank-ghana,base,FY2029E,ratios,x_car_80pct_eligibility_pct,28.865,percent,estimated,"Estimated; CAR screens are nonregulatory proxies, adverse FX uses historical static 5% loss."
+gtbank-ghana,base,FY2029E,ratios,x_car_higher_density_pct,27.355,percent,estimated,"Estimated; CAR screens are nonregulatory proxies, adverse FX uses historical static 5% loss."
+gtbank-ghana,base,FY2029E,ratios,x_car_adverse_fx_pct,32.820,percent,estimated,"Estimated; CAR screens are nonregulatory proxies, adverse FX uses historical static 5% loss."
+gtbank-ghana,base,FY2029E,balance_sheet,x_statutory_reserve,1580.369,GHS millions,estimated,Estimated; no actual regulatory compliance or payout permission.
+gtbank-ghana,base,FY2029E,balance_sheet,x_statutory_reserve_transfer,233.777,GHS millions,estimated,Estimated; no actual regulatory compliance or payout permission.
+gtbank-ghana,base,FY2029E,balance_sheet,x_cash_40pct_eligible_gap,0.000,GHS millions,estimated,Estimated; no actual regulatory compliance or payout permission.
+gtbank-ghana,base,FY2029E,income_statement,x_incremental_dividend,0.000,GHS millions,estimated,Estimated; no actual regulatory compliance or payout permission.
+gtbank-ghana,base,FY2029E,ratios,x_car_proxy_pct,32.826,percent,estimated,"PROXY, not the regulatory ratio: book equity / (100% x loans + 38.1% x other assets), calibrated to the reported 24.08% at 30 Sep 2026."
+gtbank-ghana,base,FY2029E,ratios,x_roe_pct,25.016,percent,estimated,Profit after tax / average of opening and closing equity.
+gtbank-ghana,base,FY2029E,ratios,x_cost_to_income_pct,21.101,percent,estimated,Operating expenses / operating income before impairment.
 gtbank-ghana,base,FY2029E,ratios,x_ldr_pct,32.555,percent,estimated,Net loans / customer deposits.
-gtbank-ghana,base,FY2030E,income_statement,interest_income,3940.243,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+gtbank-ghana,base,FY2030E,income_statement,interest_income,4176.934,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 gtbank-ghana,base,FY2030E,income_statement,interest_expense,731.300,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-gtbank-ghana,base,FY2030E,income_statement,net_interest_income,3208.944,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+gtbank-ghana,base,FY2030E,income_statement,net_interest_income,3445.634,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 gtbank-ghana,base,FY2030E,income_statement,fee_commission_income,1001.631,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 gtbank-ghana,base,FY2030E,income_statement,fee_commission_expense,305.497,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 gtbank-ghana,base,FY2030E,income_statement,net_trading_income,279.318,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 gtbank-ghana,base,FY2030E,income_statement,other_operating_income,7.841,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-gtbank-ghana,base,FY2030E,income_statement,total_operating_income,4192.237,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+gtbank-ghana,base,FY2030E,income_statement,total_operating_income,4428.927,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 gtbank-ghana,base,FY2030E,income_statement,staff_costs,284.407,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 gtbank-ghana,base,FY2030E,income_statement,depreciation_amortisation,114.326,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 gtbank-ghana,base,FY2030E,income_statement,other_operating_expenses,491.290,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 gtbank-ghana,base,FY2030E,income_statement,impairment_charge,107.432,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-gtbank-ghana,base,FY2030E,income_statement,profit_before_tax,3194.782,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-gtbank-ghana,base,FY2030E,income_statement,income_tax,1118.174,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-gtbank-ghana,base,FY2030E,income_statement,profit_after_tax,2076.608,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-gtbank-ghana,base,FY2030E,income_statement,x_dividends_paid,1066.858,GHS millions,estimated,Dividends paid in the year. FY2026E is the 604.370m actually paid in 9M-2026.
+gtbank-ghana,base,FY2030E,income_statement,profit_before_tax,3431.472,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+gtbank-ghana,base,FY2030E,income_statement,income_tax,1201.015,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+gtbank-ghana,base,FY2030E,income_statement,profit_after_tax,2230.457,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+gtbank-ghana,base,FY2030E,income_statement,x_dividends_paid,0.000,GHS millions,estimated,Dividends paid in the year. FY2026E is the 604.370m actually paid in 9M-2026.
 gtbank-ghana,base,FY2030E,balance_sheet,cash_and_bog_balances,23472.495,GHS millions,estimated,Estimate.
-gtbank-ghana,base,FY2030E,balance_sheet,investment_securities,10646.706,GHS millions,estimated,Estimate. Securities are the plug (liquid assets less cash and the central-bank reserve).
+gtbank-ghana,base,FY2030E,balance_sheet,investment_securities,14440.135,GHS millions,estimated,Estimate. Securities are the plug (liquid assets less cash and the central-bank reserve).
 gtbank-ghana,base,FY2030E,balance_sheet,loans_and_advances_net,14365.868,GHS millions,estimated,Estimate.
 gtbank-ghana,base,FY2030E,balance_sheet,property_equipment_intangibles,374.903,GHS millions,estimated,Estimate.
 gtbank-ghana,base,FY2030E,balance_sheet,other_assets,3142.507,GHS millions,estimated,Estimate.
-gtbank-ghana,base,FY2030E,balance_sheet,total_assets,52002.480,GHS millions,estimated,Estimate.
+gtbank-ghana,base,FY2030E,balance_sheet,total_assets,55795.908,GHS millions,estimated,Estimate.
 gtbank-ghana,base,FY2030E,balance_sheet,customer_deposits,44966.466,GHS millions,estimated,Estimate.
 gtbank-ghana,base,FY2030E,balance_sheet,other_liabilities,187.833,GHS millions,estimated,Estimate.
 gtbank-ghana,base,FY2030E,balance_sheet,total_liabilities,45154.299,GHS millions,estimated,Estimate.
 gtbank-ghana,base,FY2030E,balance_sheet,stated_capital,404.895,GHS millions,estimated,Estimate.
-gtbank-ghana,base,FY2030E,balance_sheet,retained_earnings,4504.056,GHS millions,estimated,Estimate.
-gtbank-ghana,base,FY2030E,balance_sheet,reserves_other,1939.230,GHS millions,estimated,Estimate.
-gtbank-ghana,base,FY2030E,balance_sheet,total_equity,6848.181,GHS millions,estimated,Estimate.
-gtbank-ghana,base,FY2030E,balance_sheet,due_from_banks,0.000,GHS millions,estimated,None assumed; no such line is printed.
-gtbank-ghana,base,FY2030E,balance_sheet,due_to_banks,0.000,GHS millions,estimated,None assumed; no such line is printed.
-gtbank-ghana,base,FY2030E,balance_sheet,borrowings,0.000,GHS millions,estimated,None assumed; no such line is printed.
-gtbank-ghana,base,FY2030E,ratios,x_car_proxy_pct,23.857,percent,estimated,"PROXY, not the regulatory ratio: book equity / (100% x loans + 38.1% x other assets), calibrated to the reported 24.08% at 30 Sep 2026."
-gtbank-ghana,base,FY2030E,ratios,x_roe_pct,32.737,percent,estimated,Profit after tax / average of opening and closing equity.
-gtbank-ghana,base,FY2030E,ratios,x_cost_to_income_pct,21.230,percent,estimated,Operating expenses / operating income before impairment.
+gtbank-ghana,base,FY2030E,balance_sheet,retained_earnings,8261.065,GHS millions,estimated,Estimate.
+gtbank-ghana,base,FY2030E,balance_sheet,reserves_other,1975.649,GHS millions,estimated,Estimate.
+gtbank-ghana,base,FY2030E,balance_sheet,total_equity,10641.609,GHS millions,estimated,Estimate.
+gtbank-ghana,base,FY2030E,balance_sheet,due_from_banks,,GHS millions,unavailable,Separate actual anchor unavailable; no invented value.
+gtbank-ghana,base,FY2030E,balance_sheet,loans_and_advances_gross,,GHS millions,unavailable,Separate actual anchor unavailable; no invented value.
+gtbank-ghana,base,FY2030E,balance_sheet,loan_loss_allowance,,GHS millions,unavailable,Separate actual anchor unavailable; no invented value.
+gtbank-ghana,base,FY2030E,balance_sheet,due_to_banks,0.000,GHS millions,estimated,No separately disclosed funding assumed; included in aggregate if applicable.
+gtbank-ghana,base,FY2030E,balance_sheet,borrowings,0.000,GHS millions,estimated,No separately disclosed funding assumed; included in aggregate if applicable.
+gtbank-ghana,base,FY2030E,ratios,car_pct,,percent,unavailable,Actual regulatory or gross basis unavailable; proxy and net LDR separately disclosed.
+gtbank-ghana,base,FY2030E,ratios,tier1_pct,,percent,unavailable,Actual regulatory or gross basis unavailable; proxy and net LDR separately disclosed.
+gtbank-ghana,base,FY2030E,ratios,npl_pct,,percent,unavailable,Actual regulatory or gross basis unavailable; proxy and net LDR separately disclosed.
+gtbank-ghana,base,FY2030E,ratios,ldr_pct,,percent,unavailable,Actual regulatory or gross basis unavailable; proxy and net LDR separately disclosed.
+gtbank-ghana,base,FY2030E,ratios,roe_pct,23.413,percent,estimated,"Estimated; CAR screens are nonregulatory proxies, adverse FX uses historical static 5% loss."
+gtbank-ghana,base,FY2030E,ratios,roa_pct,4.341,percent,estimated,"Estimated; CAR screens are nonregulatory proxies, adverse FX uses historical static 5% loss."
+gtbank-ghana,base,FY2030E,ratios,cost_to_income_pct,20.096,percent,estimated,"Estimated; CAR screens are nonregulatory proxies, adverse FX uses historical static 5% loss."
+gtbank-ghana,base,FY2030E,ratios,x_net_ldr_pct,31.948,percent,estimated,"Estimated; CAR screens are nonregulatory proxies, adverse FX uses historical static 5% loss."
+gtbank-ghana,base,FY2030E,ratios,x_car_80pct_eligibility_pct,30.449,percent,estimated,"Estimated; CAR screens are nonregulatory proxies, adverse FX uses historical static 5% loss."
+gtbank-ghana,base,FY2030E,ratios,x_car_higher_density_pct,29.412,percent,estimated,"Estimated; CAR screens are nonregulatory proxies, adverse FX uses historical static 5% loss."
+gtbank-ghana,base,FY2030E,ratios,x_car_adverse_fx_pct,35.289,percent,estimated,"Estimated; CAR screens are nonregulatory proxies, adverse FX uses historical static 5% loss."
+gtbank-ghana,base,FY2030E,balance_sheet,x_statutory_reserve,1859.176,GHS millions,estimated,Estimated; no actual regulatory compliance or payout permission.
+gtbank-ghana,base,FY2030E,balance_sheet,x_statutory_reserve_transfer,278.807,GHS millions,estimated,Estimated; no actual regulatory compliance or payout permission.
+gtbank-ghana,base,FY2030E,balance_sheet,x_cash_40pct_eligible_gap,0.000,GHS millions,estimated,Estimated; no actual regulatory compliance or payout permission.
+gtbank-ghana,base,FY2030E,income_statement,x_incremental_dividend,0.000,GHS millions,estimated,Estimated; no actual regulatory compliance or payout permission.
+gtbank-ghana,base,FY2030E,ratios,x_car_proxy_pct,35.295,percent,estimated,"PROXY, not the regulatory ratio: book equity / (100% x loans + 38.1% x other assets), calibrated to the reported 24.08% at 30 Sep 2026."
+gtbank-ghana,base,FY2030E,ratios,x_roe_pct,23.413,percent,estimated,Profit after tax / average of opening and closing equity.
+gtbank-ghana,base,FY2030E,ratios,x_cost_to_income_pct,20.096,percent,estimated,Operating expenses / operating income before impairment.
 gtbank-ghana,base,FY2030E,ratios,x_ldr_pct,31.948,percent,estimated,Net loans / customer deposits.
-gtbank-ghana,downside,FY2026E,income_statement,interest_income,2215.691,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
-gtbank-ghana,downside,FY2026E,income_statement,interest_expense,573.271,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
-gtbank-ghana,downside,FY2026E,income_statement,net_interest_income,1642.420,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
-gtbank-ghana,downside,FY2026E,income_statement,fee_commission_income,617.049,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
-gtbank-ghana,downside,FY2026E,income_statement,fee_commission_expense,188.124,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
-gtbank-ghana,downside,FY2026E,income_statement,net_trading_income,342.929,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
-gtbank-ghana,downside,FY2026E,income_statement,other_operating_income,7.841,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
-gtbank-ghana,downside,FY2026E,income_statement,total_operating_income,2422.116,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
-gtbank-ghana,downside,FY2026E,income_statement,staff_costs,169.133,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
-gtbank-ghana,downside,FY2026E,income_statement,depreciation_amortisation,84.424,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
-gtbank-ghana,downside,FY2026E,income_statement,other_operating_expenses,313.624,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
-gtbank-ghana,downside,FY2026E,income_statement,impairment_charge,8.665,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
-gtbank-ghana,downside,FY2026E,income_statement,profit_before_tax,1846.269,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
-gtbank-ghana,downside,FY2026E,income_statement,income_tax,646.194,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
-gtbank-ghana,downside,FY2026E,income_statement,profit_after_tax,1200.075,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
+gtbank-ghana,downside,FY2026E,income_statement,interest_income,2215.691,GHS millions,estimated,Estimate. FY2026E = 9M-2026 plus modeled Q4; actual YTD tax preserved.
+gtbank-ghana,downside,FY2026E,income_statement,interest_expense,573.271,GHS millions,estimated,Estimate. FY2026E = 9M-2026 plus modeled Q4; actual YTD tax preserved.
+gtbank-ghana,downside,FY2026E,income_statement,net_interest_income,1642.420,GHS millions,estimated,Estimate. FY2026E = 9M-2026 plus modeled Q4; actual YTD tax preserved.
+gtbank-ghana,downside,FY2026E,income_statement,fee_commission_income,617.049,GHS millions,estimated,Estimate. FY2026E = 9M-2026 plus modeled Q4; actual YTD tax preserved.
+gtbank-ghana,downside,FY2026E,income_statement,fee_commission_expense,188.124,GHS millions,estimated,Estimate. FY2026E = 9M-2026 plus modeled Q4; actual YTD tax preserved.
+gtbank-ghana,downside,FY2026E,income_statement,net_trading_income,342.929,GHS millions,estimated,Estimate. FY2026E = 9M-2026 plus modeled Q4; actual YTD tax preserved.
+gtbank-ghana,downside,FY2026E,income_statement,other_operating_income,7.841,GHS millions,estimated,Estimate. FY2026E = 9M-2026 plus modeled Q4; actual YTD tax preserved.
+gtbank-ghana,downside,FY2026E,income_statement,total_operating_income,2422.116,GHS millions,estimated,Estimate. FY2026E = 9M-2026 plus modeled Q4; actual YTD tax preserved.
+gtbank-ghana,downside,FY2026E,income_statement,staff_costs,169.133,GHS millions,estimated,Estimate. FY2026E = 9M-2026 plus modeled Q4; actual YTD tax preserved.
+gtbank-ghana,downside,FY2026E,income_statement,depreciation_amortisation,84.424,GHS millions,estimated,Estimate. FY2026E = 9M-2026 plus modeled Q4; actual YTD tax preserved.
+gtbank-ghana,downside,FY2026E,income_statement,other_operating_expenses,313.624,GHS millions,estimated,Estimate. FY2026E = 9M-2026 plus modeled Q4; actual YTD tax preserved.
+gtbank-ghana,downside,FY2026E,income_statement,impairment_charge,8.665,GHS millions,estimated,Estimate. FY2026E = 9M-2026 plus modeled Q4; actual YTD tax preserved.
+gtbank-ghana,downside,FY2026E,income_statement,profit_before_tax,1846.269,GHS millions,estimated,Estimate. FY2026E = 9M-2026 plus modeled Q4; actual YTD tax preserved.
+gtbank-ghana,downside,FY2026E,income_statement,income_tax,646.195,GHS millions,estimated,Estimate. FY2026E = 9M-2026 plus modeled Q4; actual YTD tax preserved.
+gtbank-ghana,downside,FY2026E,income_statement,profit_after_tax,1200.075,GHS millions,estimated,Estimate. FY2026E = 9M-2026 plus modeled Q4; actual YTD tax preserved.
 gtbank-ghana,downside,FY2026E,income_statement,x_dividends_paid,604.370,GHS millions,estimated,Dividends paid in the year. FY2026E is the 604.370m actually paid in 9M-2026.
 gtbank-ghana,downside,FY2026E,balance_sheet,cash_and_bog_balances,11743.335,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
 gtbank-ghana,downside,FY2026E,balance_sheet,investment_securities,5427.450,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit. Securities are the plug (liquid assets less cash and the central-bank reserve).
@@ -206,11 +291,28 @@ gtbank-ghana,downside,FY2026E,balance_sheet,other_liabilities,138.705,GHS millio
 gtbank-ghana,downside,FY2026E,balance_sheet,total_liabilities,22635.515,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
 gtbank-ghana,downside,FY2026E,balance_sheet,stated_capital,404.895,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
 gtbank-ghana,downside,FY2026E,balance_sheet,retained_earnings,2131.976,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
-gtbank-ghana,downside,FY2026E,balance_sheet,reserves_other,1100.066,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
+gtbank-ghana,downside,FY2026E,balance_sheet,reserves_other,1100.065,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
 gtbank-ghana,downside,FY2026E,balance_sheet,total_equity,3636.937,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
-gtbank-ghana,downside,FY2026E,balance_sheet,due_from_banks,0.000,GHS millions,estimated,None assumed; no such line is printed.
-gtbank-ghana,downside,FY2026E,balance_sheet,due_to_banks,0.000,GHS millions,estimated,None assumed; no such line is printed.
-gtbank-ghana,downside,FY2026E,balance_sheet,borrowings,0.000,GHS millions,estimated,None assumed; no such line is printed.
+gtbank-ghana,downside,FY2026E,balance_sheet,due_from_banks,,GHS millions,unavailable,Separate actual anchor unavailable; no invented value.
+gtbank-ghana,downside,FY2026E,balance_sheet,loans_and_advances_gross,,GHS millions,unavailable,Separate actual anchor unavailable; no invented value.
+gtbank-ghana,downside,FY2026E,balance_sheet,loan_loss_allowance,,GHS millions,unavailable,Separate actual anchor unavailable; no invented value.
+gtbank-ghana,downside,FY2026E,balance_sheet,due_to_banks,0.000,GHS millions,estimated,No separately disclosed funding assumed; included in aggregate if applicable.
+gtbank-ghana,downside,FY2026E,balance_sheet,borrowings,0.000,GHS millions,estimated,No separately disclosed funding assumed; included in aggregate if applicable.
+gtbank-ghana,downside,FY2026E,ratios,car_pct,,percent,unavailable,Actual regulatory or gross basis unavailable; proxy and net LDR separately disclosed.
+gtbank-ghana,downside,FY2026E,ratios,tier1_pct,,percent,unavailable,Actual regulatory or gross basis unavailable; proxy and net LDR separately disclosed.
+gtbank-ghana,downside,FY2026E,ratios,npl_pct,,percent,unavailable,Actual regulatory or gross basis unavailable; proxy and net LDR separately disclosed.
+gtbank-ghana,downside,FY2026E,ratios,ldr_pct,,percent,unavailable,Actual regulatory or gross basis unavailable; proxy and net LDR separately disclosed.
+gtbank-ghana,downside,FY2026E,ratios,roe_pct,35.940,percent,estimated,"Estimated; CAR screens are nonregulatory proxies, adverse FX uses historical static 5% loss."
+gtbank-ghana,downside,FY2026E,ratios,roa_pct,5.056,percent,estimated,"Estimated; CAR screens are nonregulatory proxies, adverse FX uses historical static 5% loss."
+gtbank-ghana,downside,FY2026E,ratios,cost_to_income_pct,23.417,percent,estimated,"Estimated; CAR screens are nonregulatory proxies, adverse FX uses historical static 5% loss."
+gtbank-ghana,downside,FY2026E,ratios,x_net_ldr_pct,28.476,percent,estimated,"Estimated; CAR screens are nonregulatory proxies, adverse FX uses historical static 5% loss."
+gtbank-ghana,downside,FY2026E,ratios,x_car_80pct_eligibility_pct,25.595,percent,estimated,"Estimated; CAR screens are nonregulatory proxies, adverse FX uses historical static 5% loss."
+gtbank-ghana,downside,FY2026E,ratios,x_car_higher_density_pct,21.687,percent,estimated,"Estimated; CAR screens are nonregulatory proxies, adverse FX uses historical static 5% loss."
+gtbank-ghana,downside,FY2026E,ratios,x_car_adverse_fx_pct,26.013,percent,estimated,"Estimated; CAR screens are nonregulatory proxies, adverse FX uses historical static 5% loss."
+gtbank-ghana,downside,FY2026E,balance_sheet,x_statutory_reserve,983.592,GHS millions,estimated,Estimated; no actual regulatory compliance or payout permission.
+gtbank-ghana,downside,FY2026E,balance_sheet,x_statutory_reserve_transfer,37.501,GHS millions,estimated,Estimated; no actual regulatory compliance or payout permission.
+gtbank-ghana,downside,FY2026E,balance_sheet,x_cash_40pct_eligible_gap,0.000,GHS millions,estimated,Estimated; no actual regulatory compliance or payout permission.
+gtbank-ghana,downside,FY2026E,income_statement,x_incremental_dividend,0.000,GHS millions,estimated,Estimated; no actual regulatory compliance or payout permission.
 gtbank-ghana,downside,FY2026E,ratios,x_car_proxy_pct,26.024,percent,estimated,"PROXY, not the regulatory ratio: book equity / (100% x loans + 38.1% x other assets), calibrated to the reported 24.08% at 30 Sep 2026."
 gtbank-ghana,downside,FY2026E,ratios,x_roe_pct,35.940,percent,estimated,Profit after tax / average of opening and closing equity.
 gtbank-ghana,downside,FY2026E,ratios,x_cost_to_income_pct,23.417,percent,estimated,Operating expenses / operating income before impairment.
@@ -230,150 +332,218 @@ gtbank-ghana,downside,FY2027E,income_statement,impairment_charge,168.162,GHS mil
 gtbank-ghana,downside,FY2027E,income_statement,profit_before_tax,2322.235,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 gtbank-ghana,downside,FY2027E,income_statement,income_tax,812.782,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 gtbank-ghana,downside,FY2027E,income_statement,profit_after_tax,1509.453,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-gtbank-ghana,downside,FY2027E,income_statement,x_dividends_paid,480.030,GHS millions,estimated,Dividends paid in the year. FY2026E is the 604.370m actually paid in 9M-2026.
+gtbank-ghana,downside,FY2027E,income_statement,x_dividends_paid,0.000,GHS millions,estimated,Dividends paid in the year. FY2026E is the 604.370m actually paid in 9M-2026.
 gtbank-ghana,downside,FY2027E,balance_sheet,cash_and_bog_balances,13426.155,GHS millions,estimated,Estimate.
-gtbank-ghana,downside,FY2027E,balance_sheet,investment_securities,7117.221,GHS millions,estimated,Estimate. Securities are the plug (liquid assets less cash and the central-bank reserve).
+gtbank-ghana,downside,FY2027E,balance_sheet,investment_securities,7597.251,GHS millions,estimated,Estimate. Securities are the plug (liquid assets less cash and the central-bank reserve).
 gtbank-ghana,downside,FY2027E,balance_sheet,loans_and_advances_net,7046.802,GHS millions,estimated,Estimate.
 gtbank-ghana,downside,FY2027E,balance_sheet,property_equipment_intangibles,374.903,GHS millions,estimated,Estimate.
 gtbank-ghana,downside,FY2027E,balance_sheet,other_assets,2575.844,GHS millions,estimated,Estimate.
-gtbank-ghana,downside,FY2027E,balance_sheet,total_assets,30540.925,GHS millions,estimated,Estimate.
+gtbank-ghana,downside,FY2027E,balance_sheet,total_assets,31020.955,GHS millions,estimated,Estimate.
 gtbank-ghana,downside,FY2027E,balance_sheet,customer_deposits,25720.603,GHS millions,estimated,Estimate.
 gtbank-ghana,downside,FY2027E,balance_sheet,other_liabilities,153.963,GHS millions,estimated,Estimate.
 gtbank-ghana,downside,FY2027E,balance_sheet,total_liabilities,25874.565,GHS millions,estimated,Estimate.
 gtbank-ghana,downside,FY2027E,balance_sheet,stated_capital,404.895,GHS millions,estimated,Estimate.
-gtbank-ghana,downside,FY2027E,balance_sheet,retained_earnings,2972.717,GHS millions,estimated,Estimate.
-gtbank-ghana,downside,FY2027E,balance_sheet,reserves_other,1288.748,GHS millions,estimated,Estimate.
-gtbank-ghana,downside,FY2027E,balance_sheet,total_equity,4666.360,GHS millions,estimated,Estimate.
-gtbank-ghana,downside,FY2027E,balance_sheet,due_from_banks,0.000,GHS millions,estimated,None assumed; no such line is printed.
-gtbank-ghana,downside,FY2027E,balance_sheet,due_to_banks,0.000,GHS millions,estimated,None assumed; no such line is printed.
-gtbank-ghana,downside,FY2027E,balance_sheet,borrowings,0.000,GHS millions,estimated,None assumed; no such line is printed.
-gtbank-ghana,downside,FY2027E,ratios,x_car_proxy_pct,29.168,percent,estimated,"PROXY, not the regulatory ratio: book equity / (100% x loans + 38.1% x other assets), calibrated to the reported 24.08% at 30 Sep 2026."
-gtbank-ghana,downside,FY2027E,ratios,x_roe_pct,36.358,percent,estimated,Profit after tax / average of opening and closing equity.
+gtbank-ghana,downside,FY2027E,balance_sheet,retained_earnings,3452.748,GHS millions,estimated,Estimate.
+gtbank-ghana,downside,FY2027E,balance_sheet,reserves_other,1288.747,GHS millions,estimated,Estimate.
+gtbank-ghana,downside,FY2027E,balance_sheet,total_equity,5146.390,GHS millions,estimated,Estimate.
+gtbank-ghana,downside,FY2027E,balance_sheet,due_from_banks,,GHS millions,unavailable,Separate actual anchor unavailable; no invented value.
+gtbank-ghana,downside,FY2027E,balance_sheet,loans_and_advances_gross,,GHS millions,unavailable,Separate actual anchor unavailable; no invented value.
+gtbank-ghana,downside,FY2027E,balance_sheet,loan_loss_allowance,,GHS millions,unavailable,Separate actual anchor unavailable; no invented value.
+gtbank-ghana,downside,FY2027E,balance_sheet,due_to_banks,0.000,GHS millions,estimated,No separately disclosed funding assumed; included in aggregate if applicable.
+gtbank-ghana,downside,FY2027E,balance_sheet,borrowings,0.000,GHS millions,estimated,No separately disclosed funding assumed; included in aggregate if applicable.
+gtbank-ghana,downside,FY2027E,ratios,car_pct,,percent,unavailable,Actual regulatory or gross basis unavailable; proxy and net LDR separately disclosed.
+gtbank-ghana,downside,FY2027E,ratios,tier1_pct,,percent,unavailable,Actual regulatory or gross basis unavailable; proxy and net LDR separately disclosed.
+gtbank-ghana,downside,FY2027E,ratios,npl_pct,,percent,unavailable,Actual regulatory or gross basis unavailable; proxy and net LDR separately disclosed.
+gtbank-ghana,downside,FY2027E,ratios,ldr_pct,,percent,unavailable,Actual regulatory or gross basis unavailable; proxy and net LDR separately disclosed.
+gtbank-ghana,downside,FY2027E,ratios,roe_pct,34.371,percent,estimated,"Estimated; CAR screens are nonregulatory proxies, adverse FX uses historical static 5% loss."
+gtbank-ghana,downside,FY2027E,ratios,roa_pct,5.269,percent,estimated,"Estimated; CAR screens are nonregulatory proxies, adverse FX uses historical static 5% loss."
+gtbank-ghana,downside,FY2027E,ratios,cost_to_income_pct,20.755,percent,estimated,"Estimated; CAR screens are nonregulatory proxies, adverse FX uses historical static 5% loss."
+gtbank-ghana,downside,FY2027E,ratios,x_net_ldr_pct,27.398,percent,estimated,"Estimated; CAR screens are nonregulatory proxies, adverse FX uses historical static 5% loss."
+gtbank-ghana,downside,FY2027E,ratios,x_car_80pct_eligibility_pct,29.569,percent,estimated,"Estimated; CAR screens are nonregulatory proxies, adverse FX uses historical static 5% loss."
+gtbank-ghana,downside,FY2027E,ratios,x_car_higher_density_pct,26.504,percent,estimated,"Estimated; CAR screens are nonregulatory proxies, adverse FX uses historical static 5% loss."
+gtbank-ghana,downside,FY2027E,ratios,x_car_adverse_fx_pct,31.795,percent,estimated,"Estimated; CAR screens are nonregulatory proxies, adverse FX uses historical static 5% loss."
+gtbank-ghana,downside,FY2027E,balance_sheet,x_statutory_reserve,1172.274,GHS millions,estimated,Estimated; no actual regulatory compliance or payout permission.
+gtbank-ghana,downside,FY2027E,balance_sheet,x_statutory_reserve_transfer,188.682,GHS millions,estimated,Estimated; no actual regulatory compliance or payout permission.
+gtbank-ghana,downside,FY2027E,balance_sheet,x_cash_40pct_eligible_gap,0.000,GHS millions,estimated,Estimated; no actual regulatory compliance or payout permission.
+gtbank-ghana,downside,FY2027E,income_statement,x_incremental_dividend,0.000,GHS millions,estimated,Estimated; no actual regulatory compliance or payout permission.
+gtbank-ghana,downside,FY2027E,ratios,x_car_proxy_pct,31.805,percent,estimated,"PROXY, not the regulatory ratio: book equity / (100% x loans + 38.1% x other assets), calibrated to the reported 24.08% at 30 Sep 2026."
+gtbank-ghana,downside,FY2027E,ratios,x_roe_pct,34.371,percent,estimated,Profit after tax / average of opening and closing equity.
 gtbank-ghana,downside,FY2027E,ratios,x_cost_to_income_pct,20.755,percent,estimated,Operating expenses / operating income before impairment.
 gtbank-ghana,downside,FY2027E,ratios,x_ldr_pct,27.398,percent,estimated,Net loans / customer deposits.
-gtbank-ghana,downside,FY2028E,income_statement,interest_income,3652.429,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+gtbank-ghana,downside,FY2028E,income_statement,interest_income,3720.593,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 gtbank-ghana,downside,FY2028E,income_statement,interest_expense,752.615,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-gtbank-ghana,downside,FY2028E,income_statement,net_interest_income,2899.814,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+gtbank-ghana,downside,FY2028E,income_statement,net_interest_income,2967.979,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 gtbank-ghana,downside,FY2028E,income_statement,fee_commission_income,826.723,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 gtbank-ghana,downside,FY2028E,income_statement,fee_commission_expense,252.150,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 gtbank-ghana,downside,FY2028E,income_statement,net_trading_income,219.475,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 gtbank-ghana,downside,FY2028E,income_statement,other_operating_income,7.841,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-gtbank-ghana,downside,FY2028E,income_statement,total_operating_income,3701.703,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+gtbank-ghana,downside,FY2028E,income_statement,total_operating_income,3769.867,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 gtbank-ghana,downside,FY2028E,income_statement,staff_costs,230.537,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 gtbank-ghana,downside,FY2028E,income_statement,depreciation_amortisation,103.550,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 gtbank-ghana,downside,FY2028E,income_statement,other_operating_expenses,412.964,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 gtbank-ghana,downside,FY2028E,income_statement,impairment_charge,183.217,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-gtbank-ghana,downside,FY2028E,income_statement,profit_before_tax,2771.434,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-gtbank-ghana,downside,FY2028E,income_statement,income_tax,970.002,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-gtbank-ghana,downside,FY2028E,income_statement,profit_after_tax,1801.432,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-gtbank-ghana,downside,FY2028E,income_statement,x_dividends_paid,603.781,GHS millions,estimated,Dividends paid in the year. FY2026E is the 604.370m actually paid in 9M-2026.
+gtbank-ghana,downside,FY2028E,income_statement,profit_before_tax,2839.598,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+gtbank-ghana,downside,FY2028E,income_statement,income_tax,993.859,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+gtbank-ghana,downside,FY2028E,income_statement,profit_after_tax,1845.739,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+gtbank-ghana,downside,FY2028E,income_statement,x_dividends_paid,0.000,GHS millions,estimated,Dividends paid in the year. FY2026E is the 604.370m actually paid in 9M-2026.
 gtbank-ghana,downside,FY2028E,balance_sheet,cash_and_bog_balances,15355.157,GHS millions,estimated,Estimate.
-gtbank-ghana,downside,FY2028E,balance_sheet,investment_securities,9263.236,GHS millions,estimated,Estimate. Securities are the plug (liquid assets less cash and the central-bank reserve).
+gtbank-ghana,downside,FY2028E,balance_sheet,investment_securities,10391.353,GHS millions,estimated,Estimate. Securities are the plug (liquid assets less cash and the central-bank reserve).
 gtbank-ghana,downside,FY2028E,balance_sheet,loans_and_advances_net,7610.547,GHS millions,estimated,Estimate.
 gtbank-ghana,downside,FY2028E,balance_sheet,property_equipment_intangibles,374.903,GHS millions,estimated,Estimate.
 gtbank-ghana,downside,FY2028E,balance_sheet,other_assets,2846.307,GHS millions,estimated,Estimate.
-gtbank-ghana,downside,FY2028E,balance_sheet,total_assets,35450.150,GHS millions,estimated,Estimate.
+gtbank-ghana,downside,FY2028E,balance_sheet,total_assets,36578.268,GHS millions,estimated,Estimate.
 gtbank-ghana,downside,FY2028E,balance_sheet,customer_deposits,29416.010,GHS millions,estimated,Estimate.
 gtbank-ghana,downside,FY2028E,balance_sheet,other_liabilities,170.129,GHS millions,estimated,Estimate.
 gtbank-ghana,downside,FY2028E,balance_sheet,total_liabilities,29586.139,GHS millions,estimated,Estimate.
 gtbank-ghana,downside,FY2028E,balance_sheet,stated_capital,404.895,GHS millions,estimated,Estimate.
-gtbank-ghana,downside,FY2028E,balance_sheet,retained_earnings,3945.189,GHS millions,estimated,Estimate.
-gtbank-ghana,downside,FY2028E,balance_sheet,reserves_other,1513.927,GHS millions,estimated,Estimate.
-gtbank-ghana,downside,FY2028E,balance_sheet,total_equity,5864.011,GHS millions,estimated,Estimate.
-gtbank-ghana,downside,FY2028E,balance_sheet,due_from_banks,0.000,GHS millions,estimated,None assumed; no such line is printed.
-gtbank-ghana,downside,FY2028E,balance_sheet,due_to_banks,0.000,GHS millions,estimated,None assumed; no such line is printed.
-gtbank-ghana,downside,FY2028E,balance_sheet,borrowings,0.000,GHS millions,estimated,None assumed; no such line is printed.
-gtbank-ghana,downside,FY2028E,ratios,x_car_proxy_pct,32.189,percent,estimated,"PROXY, not the regulatory ratio: book equity / (100% x loans + 38.1% x other assets), calibrated to the reported 24.08% at 30 Sep 2026."
-gtbank-ghana,downside,FY2028E,ratios,x_roe_pct,34.214,percent,estimated,Profit after tax / average of opening and closing equity.
-gtbank-ghana,downside,FY2028E,ratios,x_cost_to_income_pct,20.181,percent,estimated,Operating expenses / operating income before impairment.
+gtbank-ghana,downside,FY2028E,balance_sheet,retained_earnings,5067.769,GHS millions,estimated,Estimate.
+gtbank-ghana,downside,FY2028E,balance_sheet,reserves_other,1519.464,GHS millions,estimated,Estimate.
+gtbank-ghana,downside,FY2028E,balance_sheet,total_equity,6992.129,GHS millions,estimated,Estimate.
+gtbank-ghana,downside,FY2028E,balance_sheet,due_from_banks,,GHS millions,unavailable,Separate actual anchor unavailable; no invented value.
+gtbank-ghana,downside,FY2028E,balance_sheet,loans_and_advances_gross,,GHS millions,unavailable,Separate actual anchor unavailable; no invented value.
+gtbank-ghana,downside,FY2028E,balance_sheet,loan_loss_allowance,,GHS millions,unavailable,Separate actual anchor unavailable; no invented value.
+gtbank-ghana,downside,FY2028E,balance_sheet,due_to_banks,0.000,GHS millions,estimated,No separately disclosed funding assumed; included in aggregate if applicable.
+gtbank-ghana,downside,FY2028E,balance_sheet,borrowings,0.000,GHS millions,estimated,No separately disclosed funding assumed; included in aggregate if applicable.
+gtbank-ghana,downside,FY2028E,ratios,car_pct,,percent,unavailable,Actual regulatory or gross basis unavailable; proxy and net LDR separately disclosed.
+gtbank-ghana,downside,FY2028E,ratios,tier1_pct,,percent,unavailable,Actual regulatory or gross basis unavailable; proxy and net LDR separately disclosed.
+gtbank-ghana,downside,FY2028E,ratios,npl_pct,,percent,unavailable,Actual regulatory or gross basis unavailable; proxy and net LDR separately disclosed.
+gtbank-ghana,downside,FY2028E,ratios,ldr_pct,,percent,unavailable,Actual regulatory or gross basis unavailable; proxy and net LDR separately disclosed.
+gtbank-ghana,downside,FY2028E,ratios,roe_pct,30.411,percent,estimated,"Estimated; CAR screens are nonregulatory proxies, adverse FX uses historical static 5% loss."
+gtbank-ghana,downside,FY2028E,ratios,roa_pct,5.461,percent,estimated,"Estimated; CAR screens are nonregulatory proxies, adverse FX uses historical static 5% loss."
+gtbank-ghana,downside,FY2028E,ratios,cost_to_income_pct,19.816,percent,estimated,"Estimated; CAR screens are nonregulatory proxies, adverse FX uses historical static 5% loss."
+gtbank-ghana,downside,FY2028E,ratios,x_net_ldr_pct,25.872,percent,estimated,"Estimated; CAR screens are nonregulatory proxies, adverse FX uses historical static 5% loss."
+gtbank-ghana,downside,FY2028E,ratios,x_car_80pct_eligibility_pct,33.576,percent,estimated,"Estimated; CAR screens are nonregulatory proxies, adverse FX uses historical static 5% loss."
+gtbank-ghana,downside,FY2028E,ratios,x_car_higher_density_pct,31.247,percent,estimated,"Estimated; CAR screens are nonregulatory proxies, adverse FX uses historical static 5% loss."
+gtbank-ghana,downside,FY2028E,ratios,x_car_adverse_fx_pct,37.488,percent,estimated,"Estimated; CAR screens are nonregulatory proxies, adverse FX uses historical static 5% loss."
+gtbank-ghana,downside,FY2028E,balance_sheet,x_statutory_reserve,1402.991,GHS millions,estimated,Estimated; no actual regulatory compliance or payout permission.
+gtbank-ghana,downside,FY2028E,balance_sheet,x_statutory_reserve_transfer,230.717,GHS millions,estimated,Estimated; no actual regulatory compliance or payout permission.
+gtbank-ghana,downside,FY2028E,balance_sheet,x_cash_40pct_eligible_gap,0.000,GHS millions,estimated,Estimated; no actual regulatory compliance or payout permission.
+gtbank-ghana,downside,FY2028E,income_statement,x_incremental_dividend,0.000,GHS millions,estimated,Estimated; no actual regulatory compliance or payout permission.
+gtbank-ghana,downside,FY2028E,ratios,x_car_proxy_pct,37.497,percent,estimated,"PROXY, not the regulatory ratio: book equity / (100% x loans + 38.1% x other assets), calibrated to the reported 24.08% at 30 Sep 2026."
+gtbank-ghana,downside,FY2028E,ratios,x_roe_pct,30.411,percent,estimated,Profit after tax / average of opening and closing equity.
+gtbank-ghana,downside,FY2028E,ratios,x_cost_to_income_pct,19.816,percent,estimated,Operating expenses / operating income before impairment.
 gtbank-ghana,downside,FY2028E,ratios,x_ldr_pct,25.872,percent,estimated,Net loans / customer deposits.
-gtbank-ghana,downside,FY2029E,income_statement,interest_income,3710.388,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+gtbank-ghana,downside,FY2029E,income_statement,interest_income,3848.018,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 gtbank-ghana,downside,FY2029E,income_statement,interest_expense,799.386,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-gtbank-ghana,downside,FY2029E,income_statement,net_interest_income,2911.002,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+gtbank-ghana,downside,FY2029E,income_statement,net_interest_income,3048.632,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 gtbank-ghana,downside,FY2029E,income_statement,fee_commission_income,950.731,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 gtbank-ghana,downside,FY2029E,income_statement,fee_commission_expense,289.973,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 gtbank-ghana,downside,FY2029E,income_statement,net_trading_income,175.580,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 gtbank-ghana,downside,FY2029E,income_statement,other_operating_income,7.841,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-gtbank-ghana,downside,FY2029E,income_statement,total_operating_income,3755.181,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+gtbank-ghana,downside,FY2029E,income_statement,total_operating_income,3892.811,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 gtbank-ghana,downside,FY2029E,income_statement,staff_costs,267.423,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 gtbank-ghana,downside,FY2029E,income_statement,depreciation_amortisation,113.905,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 gtbank-ghana,downside,FY2029E,income_statement,other_operating_expenses,470.779,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 gtbank-ghana,downside,FY2029E,income_statement,impairment_charge,197.874,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-gtbank-ghana,downside,FY2029E,income_statement,profit_before_tax,2705.199,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-gtbank-ghana,downside,FY2029E,income_statement,income_tax,946.820,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-gtbank-ghana,downside,FY2029E,income_statement,profit_after_tax,1758.379,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-gtbank-ghana,downside,FY2029E,income_statement,x_dividends_paid,720.573,GHS millions,estimated,Dividends paid in the year. FY2026E is the 604.370m actually paid in 9M-2026.
+gtbank-ghana,downside,FY2029E,income_statement,profit_before_tax,2842.829,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+gtbank-ghana,downside,FY2029E,income_statement,income_tax,994.990,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+gtbank-ghana,downside,FY2029E,income_statement,profit_after_tax,1847.839,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+gtbank-ghana,downside,FY2029E,income_statement,x_dividends_paid,0.000,GHS millions,estimated,Dividends paid in the year. FY2026E is the 604.370m actually paid in 9M-2026.
 gtbank-ghana,downside,FY2029E,balance_sheet,cash_and_bog_balances,17566.300,GHS millions,estimated,Estimate.
-gtbank-ghana,downside,FY2029E,balance_sheet,investment_securities,11449.343,GHS millions,estimated,Estimate. Securities are the plug (liquid assets less cash and the central-bank reserve).
+gtbank-ghana,downside,FY2029E,balance_sheet,investment_securities,13387.493,GHS millions,estimated,Estimate. Securities are the plug (liquid assets less cash and the central-bank reserve).
 gtbank-ghana,downside,FY2029E,balance_sheet,loans_and_advances_net,8219.390,GHS millions,estimated,Estimate.
 gtbank-ghana,downside,FY2029E,balance_sheet,property_equipment_intangibles,374.903,GHS millions,estimated,Estimate.
 gtbank-ghana,downside,FY2029E,balance_sheet,other_assets,3130.938,GHS millions,estimated,Estimate.
-gtbank-ghana,downside,FY2029E,balance_sheet,total_assets,40740.875,GHS millions,estimated,Estimate.
+gtbank-ghana,downside,FY2029E,balance_sheet,total_assets,42679.025,GHS millions,estimated,Estimate.
 gtbank-ghana,downside,FY2029E,balance_sheet,customer_deposits,33651.916,GHS millions,estimated,Estimate.
 gtbank-ghana,downside,FY2029E,balance_sheet,other_liabilities,187.141,GHS millions,estimated,Estimate.
 gtbank-ghana,downside,FY2029E,balance_sheet,total_liabilities,33839.057,GHS millions,estimated,Estimate.
 gtbank-ghana,downside,FY2029E,balance_sheet,stated_capital,404.895,GHS millions,estimated,Estimate.
-gtbank-ghana,downside,FY2029E,balance_sheet,retained_earnings,4763.198,GHS millions,estimated,Estimate.
-gtbank-ghana,downside,FY2029E,balance_sheet,reserves_other,1733.724,GHS millions,estimated,Estimate.
-gtbank-ghana,downside,FY2029E,balance_sheet,total_equity,6901.817,GHS millions,estimated,Estimate.
-gtbank-ghana,downside,FY2029E,balance_sheet,due_from_banks,0.000,GHS millions,estimated,None assumed; no such line is printed.
-gtbank-ghana,downside,FY2029E,balance_sheet,due_to_banks,0.000,GHS millions,estimated,None assumed; no such line is printed.
-gtbank-ghana,downside,FY2029E,balance_sheet,borrowings,0.000,GHS millions,estimated,None assumed; no such line is printed.
-gtbank-ghana,downside,FY2029E,ratios,x_car_proxy_pct,33.488,percent,estimated,"PROXY, not the regulatory ratio: book equity / (100% x loans + 38.1% x other assets), calibrated to the reported 24.08% at 30 Sep 2026."
-gtbank-ghana,downside,FY2029E,ratios,x_roe_pct,27.548,percent,estimated,Profit after tax / average of opening and closing equity.
-gtbank-ghana,downside,FY2029E,ratios,x_cost_to_income_pct,22.692,percent,estimated,Operating expenses / operating income before impairment.
+gtbank-ghana,downside,FY2029E,balance_sheet,retained_earnings,6684.628,GHS millions,estimated,Estimate.
+gtbank-ghana,downside,FY2029E,balance_sheet,reserves_other,1750.444,GHS millions,estimated,Estimate.
+gtbank-ghana,downside,FY2029E,balance_sheet,total_equity,8839.968,GHS millions,estimated,Estimate.
+gtbank-ghana,downside,FY2029E,balance_sheet,due_from_banks,,GHS millions,unavailable,Separate actual anchor unavailable; no invented value.
+gtbank-ghana,downside,FY2029E,balance_sheet,loans_and_advances_gross,,GHS millions,unavailable,Separate actual anchor unavailable; no invented value.
+gtbank-ghana,downside,FY2029E,balance_sheet,loan_loss_allowance,,GHS millions,unavailable,Separate actual anchor unavailable; no invented value.
+gtbank-ghana,downside,FY2029E,balance_sheet,due_to_banks,0.000,GHS millions,estimated,No separately disclosed funding assumed; included in aggregate if applicable.
+gtbank-ghana,downside,FY2029E,balance_sheet,borrowings,0.000,GHS millions,estimated,No separately disclosed funding assumed; included in aggregate if applicable.
+gtbank-ghana,downside,FY2029E,ratios,car_pct,,percent,unavailable,Actual regulatory or gross basis unavailable; proxy and net LDR separately disclosed.
+gtbank-ghana,downside,FY2029E,ratios,tier1_pct,,percent,unavailable,Actual regulatory or gross basis unavailable; proxy and net LDR separately disclosed.
+gtbank-ghana,downside,FY2029E,ratios,npl_pct,,percent,unavailable,Actual regulatory or gross basis unavailable; proxy and net LDR separately disclosed.
+gtbank-ghana,downside,FY2029E,ratios,ldr_pct,,percent,unavailable,Actual regulatory or gross basis unavailable; proxy and net LDR separately disclosed.
+gtbank-ghana,downside,FY2029E,ratios,roe_pct,23.343,percent,estimated,"Estimated; CAR screens are nonregulatory proxies, adverse FX uses historical static 5% loss."
+gtbank-ghana,downside,FY2029E,ratios,roa_pct,4.663,percent,estimated,"Estimated; CAR screens are nonregulatory proxies, adverse FX uses historical static 5% loss."
+gtbank-ghana,downside,FY2029E,ratios,cost_to_income_pct,21.889,percent,estimated,"Estimated; CAR screens are nonregulatory proxies, adverse FX uses historical static 5% loss."
+gtbank-ghana,downside,FY2029E,ratios,x_net_ldr_pct,24.425,percent,estimated,"Estimated; CAR screens are nonregulatory proxies, adverse FX uses historical static 5% loss."
+gtbank-ghana,downside,FY2029E,ratios,x_car_80pct_eligibility_pct,36.252,percent,estimated,"Estimated; CAR screens are nonregulatory proxies, adverse FX uses historical static 5% loss."
+gtbank-ghana,downside,FY2029E,ratios,x_car_higher_density_pct,34.507,percent,estimated,"Estimated; CAR screens are nonregulatory proxies, adverse FX uses historical static 5% loss."
+gtbank-ghana,downside,FY2029E,ratios,x_car_adverse_fx_pct,41.400,percent,estimated,"Estimated; CAR screens are nonregulatory proxies, adverse FX uses historical static 5% loss."
+gtbank-ghana,downside,FY2029E,balance_sheet,x_statutory_reserve,1633.971,GHS millions,estimated,Estimated; no actual regulatory compliance or payout permission.
+gtbank-ghana,downside,FY2029E,balance_sheet,x_statutory_reserve_transfer,230.980,GHS millions,estimated,Estimated; no actual regulatory compliance or payout permission.
+gtbank-ghana,downside,FY2029E,balance_sheet,x_cash_40pct_eligible_gap,0.000,GHS millions,estimated,Estimated; no actual regulatory compliance or payout permission.
+gtbank-ghana,downside,FY2029E,income_statement,x_incremental_dividend,0.000,GHS millions,estimated,Estimated; no actual regulatory compliance or payout permission.
+gtbank-ghana,downside,FY2029E,ratios,x_car_proxy_pct,41.408,percent,estimated,"PROXY, not the regulatory ratio: book equity / (100% x loans + 38.1% x other assets), calibrated to the reported 24.08% at 30 Sep 2026."
+gtbank-ghana,downside,FY2029E,ratios,x_roe_pct,23.343,percent,estimated,Profit after tax / average of opening and closing equity.
+gtbank-ghana,downside,FY2029E,ratios,x_cost_to_income_pct,21.889,percent,estimated,Operating expenses / operating income before impairment.
 gtbank-ghana,downside,FY2029E,ratios,x_ldr_pct,24.425,percent,estimated,Net loans / customer deposits.
-gtbank-ghana,downside,FY2030E,income_statement,interest_income,3949.137,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+gtbank-ghana,downside,FY2030E,income_statement,interest_income,4166.210,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 gtbank-ghana,downside,FY2030E,income_statement,interest_expense,807.017,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-gtbank-ghana,downside,FY2030E,income_statement,net_interest_income,3142.121,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+gtbank-ghana,downside,FY2030E,income_statement,net_interest_income,3359.194,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 gtbank-ghana,downside,FY2030E,income_statement,fee_commission_income,1088.587,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 gtbank-ghana,downside,FY2030E,income_statement,fee_commission_expense,332.019,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 gtbank-ghana,downside,FY2030E,income_statement,net_trading_income,140.464,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 gtbank-ghana,downside,FY2030E,income_statement,other_operating_income,7.841,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-gtbank-ghana,downside,FY2030E,income_statement,total_operating_income,4046.994,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+gtbank-ghana,downside,FY2030E,income_statement,total_operating_income,4264.067,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 gtbank-ghana,downside,FY2030E,income_statement,staff_costs,308.874,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 gtbank-ghana,downside,FY2030E,income_statement,depreciation_amortisation,124.726,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 gtbank-ghana,downside,FY2030E,income_statement,other_operating_expenses,534.335,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 gtbank-ghana,downside,FY2030E,income_statement,impairment_charge,213.704,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-gtbank-ghana,downside,FY2030E,income_statement,profit_before_tax,2865.355,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-gtbank-ghana,downside,FY2030E,income_statement,income_tax,1002.874,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-gtbank-ghana,downside,FY2030E,income_statement,profit_after_tax,1862.481,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-gtbank-ghana,downside,FY2030E,income_statement,x_dividends_paid,703.352,GHS millions,estimated,Dividends paid in the year. FY2026E is the 604.370m actually paid in 9M-2026.
+gtbank-ghana,downside,FY2030E,income_statement,profit_before_tax,3082.428,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+gtbank-ghana,downside,FY2030E,income_statement,income_tax,1078.850,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+gtbank-ghana,downside,FY2030E,income_statement,profit_after_tax,2003.578,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+gtbank-ghana,downside,FY2030E,income_statement,x_dividends_paid,0.000,GHS millions,estimated,Dividends paid in the year. FY2026E is the 604.370m actually paid in 9M-2026.
 gtbank-ghana,downside,FY2030E,balance_sheet,cash_and_bog_balances,20004.503,GHS millions,estimated,Estimate.
-gtbank-ghana,downside,FY2030E,balance_sheet,investment_securities,13903.944,GHS millions,estimated,Estimate. Securities are the plug (liquid assets less cash and the central-bank reserve).
+gtbank-ghana,downside,FY2030E,balance_sheet,investment_securities,16686.543,GHS millions,estimated,Estimate. Securities are the plug (liquid assets less cash and the central-bank reserve).
 gtbank-ghana,downside,FY2030E,balance_sheet,loans_and_advances_net,8876.942,GHS millions,estimated,Estimate.
 gtbank-ghana,downside,FY2030E,balance_sheet,property_equipment_intangibles,374.903,GHS millions,estimated,Estimate.
 gtbank-ghana,downside,FY2030E,balance_sheet,other_assets,3428.377,GHS millions,estimated,Estimate.
-gtbank-ghana,downside,FY2030E,balance_sheet,total_assets,46588.668,GHS millions,estimated,Estimate.
+gtbank-ghana,downside,FY2030E,balance_sheet,total_assets,49371.268,GHS millions,estimated,Estimate.
 gtbank-ghana,downside,FY2030E,balance_sheet,customer_deposits,38322.802,GHS millions,estimated,Estimate.
 gtbank-ghana,downside,FY2030E,balance_sheet,other_liabilities,204.920,GHS millions,estimated,Estimate.
 gtbank-ghana,downside,FY2030E,balance_sheet,total_liabilities,38527.722,GHS millions,estimated,Estimate.
 gtbank-ghana,downside,FY2030E,balance_sheet,stated_capital,404.895,GHS millions,estimated,Estimate.
-gtbank-ghana,downside,FY2030E,balance_sheet,retained_earnings,5689.517,GHS millions,estimated,Estimate.
-gtbank-ghana,downside,FY2030E,balance_sheet,reserves_other,1966.535,GHS millions,estimated,Estimate.
-gtbank-ghana,downside,FY2030E,balance_sheet,total_equity,8060.947,GHS millions,estimated,Estimate.
-gtbank-ghana,downside,FY2030E,balance_sheet,due_from_banks,0.000,GHS millions,estimated,None assumed; no such line is printed.
-gtbank-ghana,downside,FY2030E,balance_sheet,due_to_banks,0.000,GHS millions,estimated,None assumed; no such line is printed.
-gtbank-ghana,downside,FY2030E,balance_sheet,borrowings,0.000,GHS millions,estimated,None assumed; no such line is printed.
-gtbank-ghana,downside,FY2030E,ratios,x_car_proxy_pct,34.678,percent,estimated,"PROXY, not the regulatory ratio: book equity / (100% x loans + 38.1% x other assets), calibrated to the reported 24.08% at 30 Sep 2026."
-gtbank-ghana,downside,FY2030E,ratios,x_roe_pct,24.895,percent,estimated,Profit after tax / average of opening and closing equity.
-gtbank-ghana,downside,FY2030E,ratios,x_cost_to_income_pct,23.917,percent,estimated,Operating expenses / operating income before impairment.
+gtbank-ghana,downside,FY2030E,balance_sheet,retained_earnings,8437.759,GHS millions,estimated,Estimate.
+gtbank-ghana,downside,FY2030E,balance_sheet,reserves_other,2000.891,GHS millions,estimated,Estimate.
+gtbank-ghana,downside,FY2030E,balance_sheet,total_equity,10843.546,GHS millions,estimated,Estimate.
+gtbank-ghana,downside,FY2030E,balance_sheet,due_from_banks,,GHS millions,unavailable,Separate actual anchor unavailable; no invented value.
+gtbank-ghana,downside,FY2030E,balance_sheet,loans_and_advances_gross,,GHS millions,unavailable,Separate actual anchor unavailable; no invented value.
+gtbank-ghana,downside,FY2030E,balance_sheet,loan_loss_allowance,,GHS millions,unavailable,Separate actual anchor unavailable; no invented value.
+gtbank-ghana,downside,FY2030E,balance_sheet,due_to_banks,0.000,GHS millions,estimated,No separately disclosed funding assumed; included in aggregate if applicable.
+gtbank-ghana,downside,FY2030E,balance_sheet,borrowings,0.000,GHS millions,estimated,No separately disclosed funding assumed; included in aggregate if applicable.
+gtbank-ghana,downside,FY2030E,ratios,car_pct,,percent,unavailable,Actual regulatory or gross basis unavailable; proxy and net LDR separately disclosed.
+gtbank-ghana,downside,FY2030E,ratios,tier1_pct,,percent,unavailable,Actual regulatory or gross basis unavailable; proxy and net LDR separately disclosed.
+gtbank-ghana,downside,FY2030E,ratios,npl_pct,,percent,unavailable,Actual regulatory or gross basis unavailable; proxy and net LDR separately disclosed.
+gtbank-ghana,downside,FY2030E,ratios,ldr_pct,,percent,unavailable,Actual regulatory or gross basis unavailable; proxy and net LDR separately disclosed.
+gtbank-ghana,downside,FY2030E,ratios,roe_pct,20.358,percent,estimated,"Estimated; CAR screens are nonregulatory proxies, adverse FX uses historical static 5% loss."
+gtbank-ghana,downside,FY2030E,ratios,roa_pct,4.353,percent,estimated,"Estimated; CAR screens are nonregulatory proxies, adverse FX uses historical static 5% loss."
+gtbank-ghana,downside,FY2030E,ratios,cost_to_income_pct,22.700,percent,estimated,"Estimated; CAR screens are nonregulatory proxies, adverse FX uses historical static 5% loss."
+gtbank-ghana,downside,FY2030E,ratios,x_net_ldr_pct,23.164,percent,estimated,"Estimated; CAR screens are nonregulatory proxies, adverse FX uses historical static 5% loss."
+gtbank-ghana,downside,FY2030E,ratios,x_car_80pct_eligibility_pct,38.437,percent,estimated,"Estimated; CAR screens are nonregulatory proxies, adverse FX uses historical static 5% loss."
+gtbank-ghana,downside,FY2030E,ratios,x_car_higher_density_pct,37.178,percent,estimated,"Estimated; CAR screens are nonregulatory proxies, adverse FX uses historical static 5% loss."
+gtbank-ghana,downside,FY2030E,ratios,x_car_adverse_fx_pct,44.607,percent,estimated,"Estimated; CAR screens are nonregulatory proxies, adverse FX uses historical static 5% loss."
+gtbank-ghana,downside,FY2030E,balance_sheet,x_statutory_reserve,1884.418,GHS millions,estimated,Estimated; no actual regulatory compliance or payout permission.
+gtbank-ghana,downside,FY2030E,balance_sheet,x_statutory_reserve_transfer,250.447,GHS millions,estimated,Estimated; no actual regulatory compliance or payout permission.
+gtbank-ghana,downside,FY2030E,balance_sheet,x_cash_40pct_eligible_gap,0.000,GHS millions,estimated,Estimated; no actual regulatory compliance or payout permission.
+gtbank-ghana,downside,FY2030E,income_statement,x_incremental_dividend,0.000,GHS millions,estimated,Estimated; no actual regulatory compliance or payout permission.
+gtbank-ghana,downside,FY2030E,ratios,x_car_proxy_pct,44.614,percent,estimated,"PROXY, not the regulatory ratio: book equity / (100% x loans + 38.1% x other assets), calibrated to the reported 24.08% at 30 Sep 2026."
+gtbank-ghana,downside,FY2030E,ratios,x_roe_pct,20.358,percent,estimated,Profit after tax / average of opening and closing equity.
+gtbank-ghana,downside,FY2030E,ratios,x_cost_to_income_pct,22.700,percent,estimated,Operating expenses / operating income before impairment.
 gtbank-ghana,downside,FY2030E,ratios,x_ldr_pct,23.164,percent,estimated,Net loans / customer deposits.
-gtbank-ghana,upside,FY2026E,income_statement,interest_income,2215.691,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
-gtbank-ghana,upside,FY2026E,income_statement,interest_expense,573.271,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
-gtbank-ghana,upside,FY2026E,income_statement,net_interest_income,1642.420,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
-gtbank-ghana,upside,FY2026E,income_statement,fee_commission_income,617.049,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
-gtbank-ghana,upside,FY2026E,income_statement,fee_commission_expense,188.124,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
-gtbank-ghana,upside,FY2026E,income_statement,net_trading_income,342.929,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
-gtbank-ghana,upside,FY2026E,income_statement,other_operating_income,7.841,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
-gtbank-ghana,upside,FY2026E,income_statement,total_operating_income,2422.116,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
-gtbank-ghana,upside,FY2026E,income_statement,staff_costs,169.133,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
-gtbank-ghana,upside,FY2026E,income_statement,depreciation_amortisation,84.424,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
-gtbank-ghana,upside,FY2026E,income_statement,other_operating_expenses,313.624,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
-gtbank-ghana,upside,FY2026E,income_statement,impairment_charge,8.665,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
-gtbank-ghana,upside,FY2026E,income_statement,profit_before_tax,1846.269,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
-gtbank-ghana,upside,FY2026E,income_statement,income_tax,646.194,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
-gtbank-ghana,upside,FY2026E,income_statement,profit_after_tax,1200.075,GHS millions,estimated,Estimate. FY2026E = 9M-2026 x 12/9 (see assumptions.json).
+gtbank-ghana,upside,FY2026E,income_statement,interest_income,2215.691,GHS millions,estimated,Estimate. FY2026E = 9M-2026 plus modeled Q4; actual YTD tax preserved.
+gtbank-ghana,upside,FY2026E,income_statement,interest_expense,573.271,GHS millions,estimated,Estimate. FY2026E = 9M-2026 plus modeled Q4; actual YTD tax preserved.
+gtbank-ghana,upside,FY2026E,income_statement,net_interest_income,1642.420,GHS millions,estimated,Estimate. FY2026E = 9M-2026 plus modeled Q4; actual YTD tax preserved.
+gtbank-ghana,upside,FY2026E,income_statement,fee_commission_income,617.049,GHS millions,estimated,Estimate. FY2026E = 9M-2026 plus modeled Q4; actual YTD tax preserved.
+gtbank-ghana,upside,FY2026E,income_statement,fee_commission_expense,188.124,GHS millions,estimated,Estimate. FY2026E = 9M-2026 plus modeled Q4; actual YTD tax preserved.
+gtbank-ghana,upside,FY2026E,income_statement,net_trading_income,342.929,GHS millions,estimated,Estimate. FY2026E = 9M-2026 plus modeled Q4; actual YTD tax preserved.
+gtbank-ghana,upside,FY2026E,income_statement,other_operating_income,7.841,GHS millions,estimated,Estimate. FY2026E = 9M-2026 plus modeled Q4; actual YTD tax preserved.
+gtbank-ghana,upside,FY2026E,income_statement,total_operating_income,2422.116,GHS millions,estimated,Estimate. FY2026E = 9M-2026 plus modeled Q4; actual YTD tax preserved.
+gtbank-ghana,upside,FY2026E,income_statement,staff_costs,169.133,GHS millions,estimated,Estimate. FY2026E = 9M-2026 plus modeled Q4; actual YTD tax preserved.
+gtbank-ghana,upside,FY2026E,income_statement,depreciation_amortisation,84.424,GHS millions,estimated,Estimate. FY2026E = 9M-2026 plus modeled Q4; actual YTD tax preserved.
+gtbank-ghana,upside,FY2026E,income_statement,other_operating_expenses,313.624,GHS millions,estimated,Estimate. FY2026E = 9M-2026 plus modeled Q4; actual YTD tax preserved.
+gtbank-ghana,upside,FY2026E,income_statement,impairment_charge,8.665,GHS millions,estimated,Estimate. FY2026E = 9M-2026 plus modeled Q4; actual YTD tax preserved.
+gtbank-ghana,upside,FY2026E,income_statement,profit_before_tax,1846.269,GHS millions,estimated,Estimate. FY2026E = 9M-2026 plus modeled Q4; actual YTD tax preserved.
+gtbank-ghana,upside,FY2026E,income_statement,income_tax,646.195,GHS millions,estimated,Estimate. FY2026E = 9M-2026 plus modeled Q4; actual YTD tax preserved.
+gtbank-ghana,upside,FY2026E,income_statement,profit_after_tax,1200.075,GHS millions,estimated,Estimate. FY2026E = 9M-2026 plus modeled Q4; actual YTD tax preserved.
 gtbank-ghana,upside,FY2026E,income_statement,x_dividends_paid,604.370,GHS millions,estimated,Dividends paid in the year. FY2026E is the 604.370m actually paid in 9M-2026.
 gtbank-ghana,upside,FY2026E,balance_sheet,cash_and_bog_balances,11743.335,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
 gtbank-ghana,upside,FY2026E,balance_sheet,investment_securities,5427.450,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit. Securities are the plug (liquid assets less cash and the central-bank reserve).
@@ -386,11 +556,28 @@ gtbank-ghana,upside,FY2026E,balance_sheet,other_liabilities,138.705,GHS millions
 gtbank-ghana,upside,FY2026E,balance_sheet,total_liabilities,22635.515,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
 gtbank-ghana,upside,FY2026E,balance_sheet,stated_capital,404.895,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
 gtbank-ghana,upside,FY2026E,balance_sheet,retained_earnings,2131.976,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
-gtbank-ghana,upside,FY2026E,balance_sheet,reserves_other,1100.066,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
+gtbank-ghana,upside,FY2026E,balance_sheet,reserves_other,1100.065,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
 gtbank-ghana,upside,FY2026E,balance_sheet,total_equity,3636.937,GHS millions,estimated,Estimate. FY2026E carries the 30 Sep 2026 balance sheet forward; equity adds Q4 profit.
-gtbank-ghana,upside,FY2026E,balance_sheet,due_from_banks,0.000,GHS millions,estimated,None assumed; no such line is printed.
-gtbank-ghana,upside,FY2026E,balance_sheet,due_to_banks,0.000,GHS millions,estimated,None assumed; no such line is printed.
-gtbank-ghana,upside,FY2026E,balance_sheet,borrowings,0.000,GHS millions,estimated,None assumed; no such line is printed.
+gtbank-ghana,upside,FY2026E,balance_sheet,due_from_banks,,GHS millions,unavailable,Separate actual anchor unavailable; no invented value.
+gtbank-ghana,upside,FY2026E,balance_sheet,loans_and_advances_gross,,GHS millions,unavailable,Separate actual anchor unavailable; no invented value.
+gtbank-ghana,upside,FY2026E,balance_sheet,loan_loss_allowance,,GHS millions,unavailable,Separate actual anchor unavailable; no invented value.
+gtbank-ghana,upside,FY2026E,balance_sheet,due_to_banks,0.000,GHS millions,estimated,No separately disclosed funding assumed; included in aggregate if applicable.
+gtbank-ghana,upside,FY2026E,balance_sheet,borrowings,0.000,GHS millions,estimated,No separately disclosed funding assumed; included in aggregate if applicable.
+gtbank-ghana,upside,FY2026E,ratios,car_pct,,percent,unavailable,Actual regulatory or gross basis unavailable; proxy and net LDR separately disclosed.
+gtbank-ghana,upside,FY2026E,ratios,tier1_pct,,percent,unavailable,Actual regulatory or gross basis unavailable; proxy and net LDR separately disclosed.
+gtbank-ghana,upside,FY2026E,ratios,npl_pct,,percent,unavailable,Actual regulatory or gross basis unavailable; proxy and net LDR separately disclosed.
+gtbank-ghana,upside,FY2026E,ratios,ldr_pct,,percent,unavailable,Actual regulatory or gross basis unavailable; proxy and net LDR separately disclosed.
+gtbank-ghana,upside,FY2026E,ratios,roe_pct,35.940,percent,estimated,"Estimated; CAR screens are nonregulatory proxies, adverse FX uses historical static 5% loss."
+gtbank-ghana,upside,FY2026E,ratios,roa_pct,5.056,percent,estimated,"Estimated; CAR screens are nonregulatory proxies, adverse FX uses historical static 5% loss."
+gtbank-ghana,upside,FY2026E,ratios,cost_to_income_pct,23.417,percent,estimated,"Estimated; CAR screens are nonregulatory proxies, adverse FX uses historical static 5% loss."
+gtbank-ghana,upside,FY2026E,ratios,x_net_ldr_pct,28.476,percent,estimated,"Estimated; CAR screens are nonregulatory proxies, adverse FX uses historical static 5% loss."
+gtbank-ghana,upside,FY2026E,ratios,x_car_80pct_eligibility_pct,25.595,percent,estimated,"Estimated; CAR screens are nonregulatory proxies, adverse FX uses historical static 5% loss."
+gtbank-ghana,upside,FY2026E,ratios,x_car_higher_density_pct,21.687,percent,estimated,"Estimated; CAR screens are nonregulatory proxies, adverse FX uses historical static 5% loss."
+gtbank-ghana,upside,FY2026E,ratios,x_car_adverse_fx_pct,26.013,percent,estimated,"Estimated; CAR screens are nonregulatory proxies, adverse FX uses historical static 5% loss."
+gtbank-ghana,upside,FY2026E,balance_sheet,x_statutory_reserve,983.592,GHS millions,estimated,Estimated; no actual regulatory compliance or payout permission.
+gtbank-ghana,upside,FY2026E,balance_sheet,x_statutory_reserve_transfer,37.501,GHS millions,estimated,Estimated; no actual regulatory compliance or payout permission.
+gtbank-ghana,upside,FY2026E,balance_sheet,x_cash_40pct_eligible_gap,0.000,GHS millions,estimated,Estimated; no actual regulatory compliance or payout permission.
+gtbank-ghana,upside,FY2026E,income_statement,x_incremental_dividend,0.000,GHS millions,estimated,Estimated; no actual regulatory compliance or payout permission.
 gtbank-ghana,upside,FY2026E,ratios,x_car_proxy_pct,26.024,percent,estimated,"PROXY, not the regulatory ratio: book equity / (100% x loans + 38.1% x other assets), calibrated to the reported 24.08% at 30 Sep 2026."
 gtbank-ghana,upside,FY2026E,ratios,x_roe_pct,35.940,percent,estimated,Profit after tax / average of opening and closing equity.
 gtbank-ghana,upside,FY2026E,ratios,x_cost_to_income_pct,23.417,percent,estimated,Operating expenses / operating income before impairment.
@@ -410,132 +597,200 @@ gtbank-ghana,upside,FY2027E,income_statement,impairment_charge,30.750,GHS millio
 gtbank-ghana,upside,FY2027E,income_statement,profit_before_tax,1897.108,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 gtbank-ghana,upside,FY2027E,income_statement,income_tax,663.988,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 gtbank-ghana,upside,FY2027E,income_statement,profit_after_tax,1233.120,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-gtbank-ghana,upside,FY2027E,income_statement,x_dividends_paid,780.049,GHS millions,estimated,Dividends paid in the year. FY2026E is the 604.370m actually paid in 9M-2026.
+gtbank-ghana,upside,FY2027E,income_statement,x_dividends_paid,0.000,GHS millions,estimated,Dividends paid in the year. FY2026E is the 604.370m actually paid in 9M-2026.
 gtbank-ghana,upside,FY2027E,balance_sheet,cash_and_bog_balances,14604.011,GHS millions,estimated,Estimate.
-gtbank-ghana,upside,FY2027E,balance_sheet,investment_securities,5806.682,GHS millions,estimated,Estimate. Securities are the plug (liquid assets less cash and the central-bank reserve).
+gtbank-ghana,upside,FY2027E,balance_sheet,investment_securities,6586.731,GHS millions,estimated,Estimate. Securities are the plug (liquid assets less cash and the central-bank reserve).
 gtbank-ghana,upside,FY2027E,balance_sheet,loans_and_advances_net,8968.658,GHS millions,estimated,Estimate.
 gtbank-ghana,upside,FY2027E,balance_sheet,property_equipment_intangibles,374.903,GHS millions,estimated,Estimate.
 gtbank-ghana,upside,FY2027E,balance_sheet,other_assets,2459.815,GHS millions,estimated,Estimate.
-gtbank-ghana,upside,FY2027E,balance_sheet,total_assets,32214.069,GHS millions,estimated,Estimate.
+gtbank-ghana,upside,FY2027E,balance_sheet,total_assets,32994.117,GHS millions,estimated,Estimate.
 gtbank-ghana,upside,FY2027E,balance_sheet,customer_deposits,27977.033,GHS millions,estimated,Estimate.
 gtbank-ghana,upside,FY2027E,balance_sheet,other_liabilities,147.027,GHS millions,estimated,Estimate.
 gtbank-ghana,upside,FY2027E,balance_sheet,total_liabilities,28124.060,GHS millions,estimated,Estimate.
 gtbank-ghana,upside,FY2027E,balance_sheet,stated_capital,404.895,GHS millions,estimated,Estimate.
-gtbank-ghana,upside,FY2027E,balance_sheet,retained_earnings,2430.907,GHS millions,estimated,Estimate.
-gtbank-ghana,upside,FY2027E,balance_sheet,reserves_other,1254.206,GHS millions,estimated,Estimate.
-gtbank-ghana,upside,FY2027E,balance_sheet,total_equity,4090.009,GHS millions,estimated,Estimate.
-gtbank-ghana,upside,FY2027E,balance_sheet,due_from_banks,0.000,GHS millions,estimated,None assumed; no such line is printed.
-gtbank-ghana,upside,FY2027E,balance_sheet,due_to_banks,0.000,GHS millions,estimated,None assumed; no such line is printed.
-gtbank-ghana,upside,FY2027E,balance_sheet,borrowings,0.000,GHS millions,estimated,None assumed; no such line is printed.
-gtbank-ghana,upside,FY2027E,ratios,x_car_proxy_pct,22.945,percent,estimated,"PROXY, not the regulatory ratio: book equity / (100% x loans + 38.1% x other assets), calibrated to the reported 24.08% at 30 Sep 2026."
-gtbank-ghana,upside,FY2027E,ratios,x_roe_pct,31.917,percent,estimated,Profit after tax / average of opening and closing equity.
+gtbank-ghana,upside,FY2027E,balance_sheet,retained_earnings,3210.957,GHS millions,estimated,Estimate.
+gtbank-ghana,upside,FY2027E,balance_sheet,reserves_other,1254.205,GHS millions,estimated,Estimate.
+gtbank-ghana,upside,FY2027E,balance_sheet,total_equity,4870.057,GHS millions,estimated,Estimate.
+gtbank-ghana,upside,FY2027E,balance_sheet,due_from_banks,,GHS millions,unavailable,Separate actual anchor unavailable; no invented value.
+gtbank-ghana,upside,FY2027E,balance_sheet,loans_and_advances_gross,,GHS millions,unavailable,Separate actual anchor unavailable; no invented value.
+gtbank-ghana,upside,FY2027E,balance_sheet,loan_loss_allowance,,GHS millions,unavailable,Separate actual anchor unavailable; no invented value.
+gtbank-ghana,upside,FY2027E,balance_sheet,due_to_banks,0.000,GHS millions,estimated,No separately disclosed funding assumed; included in aggregate if applicable.
+gtbank-ghana,upside,FY2027E,balance_sheet,borrowings,0.000,GHS millions,estimated,No separately disclosed funding assumed; included in aggregate if applicable.
+gtbank-ghana,upside,FY2027E,ratios,car_pct,,percent,unavailable,Actual regulatory or gross basis unavailable; proxy and net LDR separately disclosed.
+gtbank-ghana,upside,FY2027E,ratios,tier1_pct,,percent,unavailable,Actual regulatory or gross basis unavailable; proxy and net LDR separately disclosed.
+gtbank-ghana,upside,FY2027E,ratios,npl_pct,,percent,unavailable,Actual regulatory or gross basis unavailable; proxy and net LDR separately disclosed.
+gtbank-ghana,upside,FY2027E,ratios,ldr_pct,,percent,unavailable,Actual regulatory or gross basis unavailable; proxy and net LDR separately disclosed.
+gtbank-ghana,upside,FY2027E,ratios,roe_pct,28.991,percent,estimated,"Estimated; CAR screens are nonregulatory proxies, adverse FX uses historical static 5% loss."
+gtbank-ghana,upside,FY2027E,ratios,roa_pct,4.161,percent,estimated,"Estimated; CAR screens are nonregulatory proxies, adverse FX uses historical static 5% loss."
+gtbank-ghana,upside,FY2027E,ratios,cost_to_income_pct,24.450,percent,estimated,"Estimated; CAR screens are nonregulatory proxies, adverse FX uses historical static 5% loss."
+gtbank-ghana,upside,FY2027E,ratios,x_net_ldr_pct,32.057,percent,estimated,"Estimated; CAR screens are nonregulatory proxies, adverse FX uses historical static 5% loss."
+gtbank-ghana,upside,FY2027E,ratios,x_car_80pct_eligibility_pct,25.181,percent,estimated,"Estimated; CAR screens are nonregulatory proxies, adverse FX uses historical static 5% loss."
+gtbank-ghana,upside,FY2027E,ratios,x_car_higher_density_pct,22.394,percent,estimated,"Estimated; CAR screens are nonregulatory proxies, adverse FX uses historical static 5% loss."
+gtbank-ghana,upside,FY2027E,ratios,x_car_adverse_fx_pct,26.864,percent,estimated,"Estimated; CAR screens are nonregulatory proxies, adverse FX uses historical static 5% loss."
+gtbank-ghana,upside,FY2027E,balance_sheet,x_statutory_reserve,1137.732,GHS millions,estimated,Estimated; no actual regulatory compliance or payout permission.
+gtbank-ghana,upside,FY2027E,balance_sheet,x_statutory_reserve_transfer,154.140,GHS millions,estimated,Estimated; no actual regulatory compliance or payout permission.
+gtbank-ghana,upside,FY2027E,balance_sheet,x_cash_40pct_eligible_gap,0.000,GHS millions,estimated,Estimated; no actual regulatory compliance or payout permission.
+gtbank-ghana,upside,FY2027E,income_statement,x_incremental_dividend,0.000,GHS millions,estimated,Estimated; no actual regulatory compliance or payout permission.
+gtbank-ghana,upside,FY2027E,ratios,x_car_proxy_pct,26.873,percent,estimated,"PROXY, not the regulatory ratio: book equity / (100% x loans + 38.1% x other assets), calibrated to the reported 24.08% at 30 Sep 2026."
+gtbank-ghana,upside,FY2027E,ratios,x_roe_pct,28.991,percent,estimated,Profit after tax / average of opening and closing equity.
 gtbank-ghana,upside,FY2027E,ratios,x_cost_to_income_pct,24.450,percent,estimated,Operating expenses / operating income before impairment.
 gtbank-ghana,upside,FY2027E,ratios,x_ldr_pct,32.057,percent,estimated,Net loans / customer deposits.
-gtbank-ghana,upside,FY2028E,income_statement,interest_income,2658.807,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+gtbank-ghana,upside,FY2028E,income_statement,interest_income,2722.771,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 gtbank-ghana,upside,FY2028E,income_statement,interest_expense,530.359,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-gtbank-ghana,upside,FY2028E,income_statement,net_interest_income,2128.448,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+gtbank-ghana,upside,FY2028E,income_statement,net_interest_income,2192.412,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 gtbank-ghana,upside,FY2028E,income_statement,fee_commission_income,767.116,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 gtbank-ghana,upside,FY2028E,income_statement,fee_commission_expense,233.970,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 gtbank-ghana,upside,FY2028E,income_statement,net_trading_income,342.929,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 gtbank-ghana,upside,FY2028E,income_statement,other_operating_income,7.841,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-gtbank-ghana,upside,FY2028E,income_statement,total_operating_income,3012.364,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+gtbank-ghana,upside,FY2028E,income_statement,total_operating_income,3076.328,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 gtbank-ghana,upside,FY2028E,income_statement,staff_costs,214.055,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 gtbank-ghana,upside,FY2028E,income_statement,depreciation_amortisation,95.754,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 gtbank-ghana,upside,FY2028E,income_statement,other_operating_expenses,382.935,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 gtbank-ghana,upside,FY2028E,income_statement,impairment_charge,41.256,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-gtbank-ghana,upside,FY2028E,income_statement,profit_before_tax,2278.365,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-gtbank-ghana,upside,FY2028E,income_statement,income_tax,797.428,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-gtbank-ghana,upside,FY2028E,income_statement,profit_after_tax,1480.937,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-gtbank-ghana,upside,FY2028E,income_statement,x_dividends_paid,801.528,GHS millions,estimated,Dividends paid in the year. FY2026E is the 604.370m actually paid in 9M-2026.
+gtbank-ghana,upside,FY2028E,income_statement,profit_before_tax,2342.329,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+gtbank-ghana,upside,FY2028E,income_statement,income_tax,819.815,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+gtbank-ghana,upside,FY2028E,income_statement,profit_after_tax,1522.514,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+gtbank-ghana,upside,FY2028E,income_statement,x_dividends_paid,0.000,GHS millions,estimated,Dividends paid in the year. FY2026E is the 604.370m actually paid in 9M-2026.
 gtbank-ghana,upside,FY2028E,balance_sheet,cash_and_bog_balances,17846.978,GHS millions,estimated,Estimate.
-gtbank-ghana,upside,FY2028E,balance_sheet,investment_securities,6603.212,GHS millions,estimated,Estimate. Securities are the plug (liquid assets less cash and the central-bank reserve).
+gtbank-ghana,upside,FY2028E,balance_sheet,investment_securities,8226.365,GHS millions,estimated,Estimate. Securities are the plug (liquid assets less cash and the central-bank reserve).
 gtbank-ghana,upside,FY2028E,balance_sheet,loans_and_advances_net,11659.255,GHS millions,estimated,Estimate.
 gtbank-ghana,upside,FY2028E,balance_sheet,property_equipment_intangibles,374.903,GHS millions,estimated,Estimate.
 gtbank-ghana,upside,FY2028E,balance_sheet,other_assets,2632.002,GHS millions,estimated,Estimate.
-gtbank-ghana,upside,FY2028E,balance_sheet,total_assets,39116.350,GHS millions,estimated,Estimate.
+gtbank-ghana,upside,FY2028E,balance_sheet,total_assets,40739.503,GHS millions,estimated,Estimate.
 gtbank-ghana,upside,FY2028E,balance_sheet,customer_deposits,34189.613,GHS millions,estimated,Estimate.
 gtbank-ghana,upside,FY2028E,balance_sheet,other_liabilities,157.319,GHS millions,estimated,Estimate.
 gtbank-ghana,upside,FY2028E,balance_sheet,total_liabilities,34346.932,GHS millions,estimated,Estimate.
 gtbank-ghana,upside,FY2028E,balance_sheet,stated_capital,404.895,GHS millions,estimated,Estimate.
-gtbank-ghana,upside,FY2028E,balance_sheet,retained_earnings,2925.199,GHS millions,estimated,Estimate.
-gtbank-ghana,upside,FY2028E,balance_sheet,reserves_other,1439.324,GHS millions,estimated,Estimate.
-gtbank-ghana,upside,FY2028E,balance_sheet,total_equity,4769.418,GHS millions,estimated,Estimate.
-gtbank-ghana,upside,FY2028E,balance_sheet,due_from_banks,0.000,GHS millions,estimated,None assumed; no such line is printed.
-gtbank-ghana,upside,FY2028E,balance_sheet,due_to_banks,0.000,GHS millions,estimated,None assumed; no such line is printed.
-gtbank-ghana,upside,FY2028E,balance_sheet,borrowings,0.000,GHS millions,estimated,None assumed; no such line is printed.
-gtbank-ghana,upside,FY2028E,ratios,x_car_proxy_pct,21.561,percent,estimated,"PROXY, not the regulatory ratio: book equity / (100% x loans + 38.1% x other assets), calibrated to the reported 24.08% at 30 Sep 2026."
-gtbank-ghana,upside,FY2028E,ratios,x_roe_pct,33.432,percent,estimated,Profit after tax / average of opening and closing equity.
-gtbank-ghana,upside,FY2028E,ratios,x_cost_to_income_pct,22.997,percent,estimated,Operating expenses / operating income before impairment.
+gtbank-ghana,upside,FY2028E,balance_sheet,retained_earnings,4543.156,GHS millions,estimated,Estimate.
+gtbank-ghana,upside,FY2028E,balance_sheet,reserves_other,1444.520,GHS millions,estimated,Estimate.
+gtbank-ghana,upside,FY2028E,balance_sheet,total_equity,6392.571,GHS millions,estimated,Estimate.
+gtbank-ghana,upside,FY2028E,balance_sheet,due_from_banks,,GHS millions,unavailable,Separate actual anchor unavailable; no invented value.
+gtbank-ghana,upside,FY2028E,balance_sheet,loans_and_advances_gross,,GHS millions,unavailable,Separate actual anchor unavailable; no invented value.
+gtbank-ghana,upside,FY2028E,balance_sheet,loan_loss_allowance,,GHS millions,unavailable,Separate actual anchor unavailable; no invented value.
+gtbank-ghana,upside,FY2028E,balance_sheet,due_to_banks,0.000,GHS millions,estimated,No separately disclosed funding assumed; included in aggregate if applicable.
+gtbank-ghana,upside,FY2028E,balance_sheet,borrowings,0.000,GHS millions,estimated,No separately disclosed funding assumed; included in aggregate if applicable.
+gtbank-ghana,upside,FY2028E,ratios,car_pct,,percent,unavailable,Actual regulatory or gross basis unavailable; proxy and net LDR separately disclosed.
+gtbank-ghana,upside,FY2028E,ratios,tier1_pct,,percent,unavailable,Actual regulatory or gross basis unavailable; proxy and net LDR separately disclosed.
+gtbank-ghana,upside,FY2028E,ratios,npl_pct,,percent,unavailable,Actual regulatory or gross basis unavailable; proxy and net LDR separately disclosed.
+gtbank-ghana,upside,FY2028E,ratios,ldr_pct,,percent,unavailable,Actual regulatory or gross basis unavailable; proxy and net LDR separately disclosed.
+gtbank-ghana,upside,FY2028E,ratios,roe_pct,27.037,percent,estimated,"Estimated; CAR screens are nonregulatory proxies, adverse FX uses historical static 5% loss."
+gtbank-ghana,upside,FY2028E,ratios,roa_pct,4.130,percent,estimated,"Estimated; CAR screens are nonregulatory proxies, adverse FX uses historical static 5% loss."
+gtbank-ghana,upside,FY2028E,ratios,cost_to_income_pct,22.519,percent,estimated,"Estimated; CAR screens are nonregulatory proxies, adverse FX uses historical static 5% loss."
+gtbank-ghana,upside,FY2028E,ratios,x_net_ldr_pct,34.102,percent,estimated,"Estimated; CAR screens are nonregulatory proxies, adverse FX uses historical static 5% loss."
+gtbank-ghana,upside,FY2028E,ratios,x_car_80pct_eligibility_pct,25.425,percent,estimated,"Estimated; CAR screens are nonregulatory proxies, adverse FX uses historical static 5% loss."
+gtbank-ghana,upside,FY2028E,ratios,x_car_higher_density_pct,23.428,percent,estimated,"Estimated; CAR screens are nonregulatory proxies, adverse FX uses historical static 5% loss."
+gtbank-ghana,upside,FY2028E,ratios,x_car_adverse_fx_pct,28.106,percent,estimated,"Estimated; CAR screens are nonregulatory proxies, adverse FX uses historical static 5% loss."
+gtbank-ghana,upside,FY2028E,balance_sheet,x_statutory_reserve,1328.047,GHS millions,estimated,Estimated; no actual regulatory compliance or payout permission.
+gtbank-ghana,upside,FY2028E,balance_sheet,x_statutory_reserve_transfer,190.314,GHS millions,estimated,Estimated; no actual regulatory compliance or payout permission.
+gtbank-ghana,upside,FY2028E,balance_sheet,x_cash_40pct_eligible_gap,0.000,GHS millions,estimated,Estimated; no actual regulatory compliance or payout permission.
+gtbank-ghana,upside,FY2028E,income_statement,x_incremental_dividend,0.000,GHS millions,estimated,Estimated; no actual regulatory compliance or payout permission.
+gtbank-ghana,upside,FY2028E,ratios,x_car_proxy_pct,28.113,percent,estimated,"PROXY, not the regulatory ratio: book equity / (100% x loans + 38.1% x other assets), calibrated to the reported 24.08% at 30 Sep 2026."
+gtbank-ghana,upside,FY2028E,ratios,x_roe_pct,27.037,percent,estimated,Profit after tax / average of opening and closing equity.
+gtbank-ghana,upside,FY2028E,ratios,x_cost_to_income_pct,22.519,percent,estimated,Operating expenses / operating income before impairment.
 gtbank-ghana,upside,FY2028E,ratios,x_ldr_pct,34.102,percent,estimated,Net loans / customer deposits.
-gtbank-ghana,upside,FY2029E,income_statement,interest_income,3280.539,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+gtbank-ghana,upside,FY2029E,income_statement,interest_income,3413.637,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 gtbank-ghana,upside,FY2029E,income_statement,interest_expense,624.531,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-gtbank-ghana,upside,FY2029E,income_statement,net_interest_income,2656.008,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+gtbank-ghana,upside,FY2029E,income_statement,net_interest_income,2789.106,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 gtbank-ghana,upside,FY2029E,income_statement,fee_commission_income,863.005,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 gtbank-ghana,upside,FY2029E,income_statement,fee_commission_expense,263.217,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 gtbank-ghana,upside,FY2029E,income_statement,net_trading_income,342.929,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 gtbank-ghana,upside,FY2029E,income_statement,other_operating_income,7.841,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-gtbank-ghana,upside,FY2029E,income_statement,total_operating_income,3606.567,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+gtbank-ghana,upside,FY2029E,income_statement,total_operating_income,3739.665,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 gtbank-ghana,upside,FY2029E,income_statement,staff_costs,242.953,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 gtbank-ghana,upside,FY2029E,income_statement,depreciation_amortisation,102.935,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 gtbank-ghana,upside,FY2029E,income_statement,other_operating_expenses,426.972,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 gtbank-ghana,upside,FY2029E,income_statement,impairment_charge,52.467,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-gtbank-ghana,upside,FY2029E,income_statement,profit_before_tax,2781.240,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-gtbank-ghana,upside,FY2029E,income_statement,income_tax,973.434,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-gtbank-ghana,upside,FY2029E,income_statement,profit_after_tax,1807.806,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-gtbank-ghana,upside,FY2029E,income_statement,x_dividends_paid,962.609,GHS millions,estimated,Dividends paid in the year. FY2026E is the 604.370m actually paid in 9M-2026.
+gtbank-ghana,upside,FY2029E,income_statement,profit_before_tax,2914.339,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+gtbank-ghana,upside,FY2029E,income_statement,income_tax,1020.019,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+gtbank-ghana,upside,FY2029E,income_statement,profit_after_tax,1894.320,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+gtbank-ghana,upside,FY2029E,income_statement,x_dividends_paid,0.000,GHS millions,estimated,Dividends paid in the year. FY2026E is the 604.370m actually paid in 9M-2026.
 gtbank-ghana,upside,FY2029E,balance_sheet,cash_and_bog_balances,21489.992,GHS millions,estimated,Estimate.
-gtbank-ghana,upside,FY2029E,balance_sheet,investment_securities,7683.934,GHS millions,estimated,Estimate. Securities are the plug (liquid assets less cash and the central-bank reserve).
+gtbank-ghana,upside,FY2029E,balance_sheet,investment_securities,10356.211,GHS millions,estimated,Estimate. Securities are the plug (liquid assets less cash and the central-bank reserve).
 gtbank-ghana,upside,FY2029E,balance_sheet,loans_and_advances_net,14574.069,GHS millions,estimated,Estimate.
 gtbank-ghana,upside,FY2029E,balance_sheet,property_equipment_intangibles,374.903,GHS millions,estimated,Estimate.
 gtbank-ghana,upside,FY2029E,balance_sheet,other_assets,2829.402,GHS millions,estimated,Estimate.
-gtbank-ghana,upside,FY2029E,balance_sheet,total_assets,46952.300,GHS millions,estimated,Estimate.
+gtbank-ghana,upside,FY2029E,balance_sheet,total_assets,49624.577,GHS millions,estimated,Estimate.
 gtbank-ghana,upside,FY2029E,balance_sheet,customer_deposits,41168.568,GHS millions,estimated,Estimate.
 gtbank-ghana,upside,FY2029E,balance_sheet,other_liabilities,169.118,GHS millions,estimated,Estimate.
 gtbank-ghana,upside,FY2029E,balance_sheet,total_liabilities,41337.686,GHS millions,estimated,Estimate.
 gtbank-ghana,upside,FY2029E,balance_sheet,stated_capital,404.895,GHS millions,estimated,Estimate.
-gtbank-ghana,upside,FY2029E,balance_sheet,retained_earnings,3544.420,GHS millions,estimated,Estimate.
-gtbank-ghana,upside,FY2029E,balance_sheet,reserves_other,1665.299,GHS millions,estimated,Estimate.
-gtbank-ghana,upside,FY2029E,balance_sheet,total_equity,5614.614,GHS millions,estimated,Estimate.
-gtbank-ghana,upside,FY2029E,balance_sheet,due_from_banks,0.000,GHS millions,estimated,None assumed; no such line is printed.
-gtbank-ghana,upside,FY2029E,balance_sheet,due_to_banks,0.000,GHS millions,estimated,None assumed; no such line is printed.
-gtbank-ghana,upside,FY2029E,balance_sheet,borrowings,0.000,GHS millions,estimated,None assumed; no such line is printed.
-gtbank-ghana,upside,FY2029E,ratios,x_car_proxy_pct,20.864,percent,estimated,"PROXY, not the regulatory ratio: book equity / (100% x loans + 38.1% x other assets), calibrated to the reported 24.08% at 30 Sep 2026."
-gtbank-ghana,upside,FY2029E,ratios,x_roe_pct,34.819,percent,estimated,Profit after tax / average of opening and closing equity.
-gtbank-ghana,upside,FY2029E,ratios,x_cost_to_income_pct,21.429,percent,estimated,Operating expenses / operating income before impairment.
+gtbank-ghana,upside,FY2029E,balance_sheet,retained_earnings,6200.686,GHS millions,estimated,Estimate.
+gtbank-ghana,upside,FY2029E,balance_sheet,reserves_other,1681.310,GHS millions,estimated,Estimate.
+gtbank-ghana,upside,FY2029E,balance_sheet,total_equity,8286.891,GHS millions,estimated,Estimate.
+gtbank-ghana,upside,FY2029E,balance_sheet,due_from_banks,,GHS millions,unavailable,Separate actual anchor unavailable; no invented value.
+gtbank-ghana,upside,FY2029E,balance_sheet,loans_and_advances_gross,,GHS millions,unavailable,Separate actual anchor unavailable; no invented value.
+gtbank-ghana,upside,FY2029E,balance_sheet,loan_loss_allowance,,GHS millions,unavailable,Separate actual anchor unavailable; no invented value.
+gtbank-ghana,upside,FY2029E,balance_sheet,due_to_banks,0.000,GHS millions,estimated,No separately disclosed funding assumed; included in aggregate if applicable.
+gtbank-ghana,upside,FY2029E,balance_sheet,borrowings,0.000,GHS millions,estimated,No separately disclosed funding assumed; included in aggregate if applicable.
+gtbank-ghana,upside,FY2029E,ratios,car_pct,,percent,unavailable,Actual regulatory or gross basis unavailable; proxy and net LDR separately disclosed.
+gtbank-ghana,upside,FY2029E,ratios,tier1_pct,,percent,unavailable,Actual regulatory or gross basis unavailable; proxy and net LDR separately disclosed.
+gtbank-ghana,upside,FY2029E,ratios,npl_pct,,percent,unavailable,Actual regulatory or gross basis unavailable; proxy and net LDR separately disclosed.
+gtbank-ghana,upside,FY2029E,ratios,ldr_pct,,percent,unavailable,Actual regulatory or gross basis unavailable; proxy and net LDR separately disclosed.
+gtbank-ghana,upside,FY2029E,ratios,roe_pct,25.809,percent,estimated,"Estimated; CAR screens are nonregulatory proxies, adverse FX uses historical static 5% loss."
+gtbank-ghana,upside,FY2029E,ratios,roa_pct,4.193,percent,estimated,"Estimated; CAR screens are nonregulatory proxies, adverse FX uses historical static 5% loss."
+gtbank-ghana,upside,FY2029E,ratios,cost_to_income_pct,20.667,percent,estimated,"Estimated; CAR screens are nonregulatory proxies, adverse FX uses historical static 5% loss."
+gtbank-ghana,upside,FY2029E,ratios,x_net_ldr_pct,35.401,percent,estimated,"Estimated; CAR screens are nonregulatory proxies, adverse FX uses historical static 5% loss."
+gtbank-ghana,upside,FY2029E,ratios,x_car_80pct_eligibility_pct,26.127,percent,estimated,"Estimated; CAR screens are nonregulatory proxies, adverse FX uses historical static 5% loss."
+gtbank-ghana,upside,FY2029E,ratios,x_car_higher_density_pct,24.727,percent,estimated,"Estimated; CAR screens are nonregulatory proxies, adverse FX uses historical static 5% loss."
+gtbank-ghana,upside,FY2029E,ratios,x_car_adverse_fx_pct,29.666,percent,estimated,"Estimated; CAR screens are nonregulatory proxies, adverse FX uses historical static 5% loss."
+gtbank-ghana,upside,FY2029E,balance_sheet,x_statutory_reserve,1564.837,GHS millions,estimated,Estimated; no actual regulatory compliance or payout permission.
+gtbank-ghana,upside,FY2029E,balance_sheet,x_statutory_reserve_transfer,236.790,GHS millions,estimated,Estimated; no actual regulatory compliance or payout permission.
+gtbank-ghana,upside,FY2029E,balance_sheet,x_cash_40pct_eligible_gap,0.000,GHS millions,estimated,Estimated; no actual regulatory compliance or payout permission.
+gtbank-ghana,upside,FY2029E,income_statement,x_incremental_dividend,0.000,GHS millions,estimated,Estimated; no actual regulatory compliance or payout permission.
+gtbank-ghana,upside,FY2029E,ratios,x_car_proxy_pct,29.672,percent,estimated,"PROXY, not the regulatory ratio: book equity / (100% x loans + 38.1% x other assets), calibrated to the reported 24.08% at 30 Sep 2026."
+gtbank-ghana,upside,FY2029E,ratios,x_roe_pct,25.809,percent,estimated,Profit after tax / average of opening and closing equity.
+gtbank-ghana,upside,FY2029E,ratios,x_cost_to_income_pct,20.667,percent,estimated,Operating expenses / operating income before impairment.
 gtbank-ghana,upside,FY2029E,ratios,x_ldr_pct,35.401,percent,estimated,Net loans / customer deposits.
-gtbank-ghana,upside,FY2030E,income_statement,interest_income,3961.504,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+gtbank-ghana,upside,FY2030E,income_statement,interest_income,4180.631,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 gtbank-ghana,upside,FY2030E,income_statement,interest_expense,746.989,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-gtbank-ghana,upside,FY2030E,income_statement,net_interest_income,3214.515,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+gtbank-ghana,upside,FY2030E,income_statement,net_interest_income,3433.641,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 gtbank-ghana,upside,FY2030E,income_statement,fee_commission_income,975.196,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 gtbank-ghana,upside,FY2030E,income_statement,fee_commission_expense,297.435,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 gtbank-ghana,upside,FY2030E,income_statement,net_trading_income,342.929,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 gtbank-ghana,upside,FY2030E,income_statement,other_operating_income,7.841,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-gtbank-ghana,upside,FY2030E,income_statement,total_operating_income,4243.046,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+gtbank-ghana,upside,FY2030E,income_statement,total_operating_income,4462.173,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 gtbank-ghana,upside,FY2030E,income_statement,staff_costs,276.966,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 gtbank-ghana,upside,FY2030E,income_statement,depreciation_amortisation,111.170,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 gtbank-ghana,upside,FY2030E,income_statement,other_operating_expenses,478.209,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
 gtbank-ghana,upside,FY2030E,income_statement,impairment_charge,64.126,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-gtbank-ghana,upside,FY2030E,income_statement,profit_before_tax,3312.575,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-gtbank-ghana,upside,FY2030E,income_statement,income_tax,1159.401,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-gtbank-ghana,upside,FY2030E,income_statement,profit_after_tax,2153.174,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
-gtbank-ghana,upside,FY2030E,income_statement,x_dividends_paid,1175.074,GHS millions,estimated,Dividends paid in the year. FY2026E is the 604.370m actually paid in 9M-2026.
+gtbank-ghana,upside,FY2030E,income_statement,profit_before_tax,3531.702,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+gtbank-ghana,upside,FY2030E,income_statement,income_tax,1236.096,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+gtbank-ghana,upside,FY2030E,income_statement,profit_after_tax,2295.606,GHS millions,estimated,Estimate from assumptions.json and the macro rows of this scenario.
+gtbank-ghana,upside,FY2030E,income_statement,x_dividends_paid,0.000,GHS millions,estimated,Dividends paid in the year. FY2026E is the 604.370m actually paid in 9M-2026.
 gtbank-ghana,upside,FY2030E,balance_sheet,cash_and_bog_balances,25560.197,GHS millions,estimated,Estimate.
-gtbank-ghana,upside,FY2030E,balance_sheet,investment_securities,9261.520,GHS millions,estimated,Estimate. Securities are the plug (liquid assets less cash and the central-bank reserve).
+gtbank-ghana,upside,FY2030E,balance_sheet,investment_securities,13251.303,GHS millions,estimated,Estimate. Securities are the plug (liquid assets less cash and the central-bank reserve).
 gtbank-ghana,upside,FY2030E,balance_sheet,loans_and_advances_net,17488.882,GHS millions,estimated,Estimate.
 gtbank-ghana,upside,FY2030E,balance_sheet,property_equipment_intangibles,374.903,GHS millions,estimated,Estimate.
 gtbank-ghana,upside,FY2030E,balance_sheet,other_assets,3055.754,GHS millions,estimated,Estimate.
-gtbank-ghana,upside,FY2030E,balance_sheet,total_assets,55741.256,GHS millions,estimated,Estimate.
+gtbank-ghana,upside,FY2030E,balance_sheet,total_assets,59731.039,GHS millions,estimated,Estimate.
 gtbank-ghana,upside,FY2030E,balance_sheet,customer_deposits,48965.894,GHS millions,estimated,Estimate.
 gtbank-ghana,upside,FY2030E,balance_sheet,other_liabilities,182.648,GHS millions,estimated,Estimate.
 gtbank-ghana,upside,FY2030E,balance_sheet,total_liabilities,49148.542,GHS millions,estimated,Estimate.
 gtbank-ghana,upside,FY2030E,balance_sheet,stated_capital,404.895,GHS millions,estimated,Estimate.
-gtbank-ghana,upside,FY2030E,balance_sheet,retained_earnings,4253.373,GHS millions,estimated,Estimate.
-gtbank-ghana,upside,FY2030E,balance_sheet,reserves_other,1934.446,GHS millions,estimated,Estimate.
-gtbank-ghana,upside,FY2030E,balance_sheet,total_equity,6592.715,GHS millions,estimated,Estimate.
-gtbank-ghana,upside,FY2030E,balance_sheet,due_from_banks,0.000,GHS millions,estimated,None assumed; no such line is printed.
-gtbank-ghana,upside,FY2030E,balance_sheet,due_to_banks,0.000,GHS millions,estimated,None assumed; no such line is printed.
-gtbank-ghana,upside,FY2030E,balance_sheet,borrowings,0.000,GHS millions,estimated,None assumed; no such line is printed.
-gtbank-ghana,upside,FY2030E,ratios,x_car_proxy_pct,20.562,percent,estimated,"PROXY, not the regulatory ratio: book equity / (100% x loans + 38.1% x other assets), calibrated to the reported 24.08% at 30 Sep 2026."
-gtbank-ghana,upside,FY2030E,ratios,x_roe_pct,35.277,percent,estimated,Profit after tax / average of opening and closing equity.
-gtbank-ghana,upside,FY2030E,ratios,x_cost_to_income_pct,20.418,percent,estimated,Operating expenses / operating income before impairment.
+gtbank-ghana,upside,FY2030E,balance_sheet,retained_earnings,8209.342,GHS millions,estimated,Estimate.
+gtbank-ghana,upside,FY2030E,balance_sheet,reserves_other,1968.260,GHS millions,estimated,Estimate.
+gtbank-ghana,upside,FY2030E,balance_sheet,total_equity,10582.497,GHS millions,estimated,Estimate.
+gtbank-ghana,upside,FY2030E,balance_sheet,due_from_banks,,GHS millions,unavailable,Separate actual anchor unavailable; no invented value.
+gtbank-ghana,upside,FY2030E,balance_sheet,loans_and_advances_gross,,GHS millions,unavailable,Separate actual anchor unavailable; no invented value.
+gtbank-ghana,upside,FY2030E,balance_sheet,loan_loss_allowance,,GHS millions,unavailable,Separate actual anchor unavailable; no invented value.
+gtbank-ghana,upside,FY2030E,balance_sheet,due_to_banks,0.000,GHS millions,estimated,No separately disclosed funding assumed; included in aggregate if applicable.
+gtbank-ghana,upside,FY2030E,balance_sheet,borrowings,0.000,GHS millions,estimated,No separately disclosed funding assumed; included in aggregate if applicable.
+gtbank-ghana,upside,FY2030E,ratios,car_pct,,percent,unavailable,Actual regulatory or gross basis unavailable; proxy and net LDR separately disclosed.
+gtbank-ghana,upside,FY2030E,ratios,tier1_pct,,percent,unavailable,Actual regulatory or gross basis unavailable; proxy and net LDR separately disclosed.
+gtbank-ghana,upside,FY2030E,ratios,npl_pct,,percent,unavailable,Actual regulatory or gross basis unavailable; proxy and net LDR separately disclosed.
+gtbank-ghana,upside,FY2030E,ratios,ldr_pct,,percent,unavailable,Actual regulatory or gross basis unavailable; proxy and net LDR separately disclosed.
+gtbank-ghana,upside,FY2030E,ratios,roe_pct,24.332,percent,estimated,"Estimated; CAR screens are nonregulatory proxies, adverse FX uses historical static 5% loss."
+gtbank-ghana,upside,FY2030E,ratios,roa_pct,4.198,percent,estimated,"Estimated; CAR screens are nonregulatory proxies, adverse FX uses historical static 5% loss."
+gtbank-ghana,upside,FY2030E,ratios,cost_to_income_pct,19.415,percent,estimated,"Estimated; CAR screens are nonregulatory proxies, adverse FX uses historical static 5% loss."
+gtbank-ghana,upside,FY2030E,ratios,x_net_ldr_pct,35.716,percent,estimated,"Estimated; CAR screens are nonregulatory proxies, adverse FX uses historical static 5% loss."
+gtbank-ghana,upside,FY2030E,ratios,x_car_80pct_eligibility_pct,27.196,percent,estimated,"Estimated; CAR screens are nonregulatory proxies, adverse FX uses historical static 5% loss."
+gtbank-ghana,upside,FY2030E,ratios,x_car_higher_density_pct,26.259,percent,estimated,"Estimated; CAR screens are nonregulatory proxies, adverse FX uses historical static 5% loss."
+gtbank-ghana,upside,FY2030E,ratios,x_car_adverse_fx_pct,31.507,percent,estimated,"Estimated; CAR screens are nonregulatory proxies, adverse FX uses historical static 5% loss."
+gtbank-ghana,upside,FY2030E,balance_sheet,x_statutory_reserve,1851.787,GHS millions,estimated,Estimated; no actual regulatory compliance or payout permission.
+gtbank-ghana,upside,FY2030E,balance_sheet,x_statutory_reserve_transfer,286.951,GHS millions,estimated,Estimated; no actual regulatory compliance or payout permission.
+gtbank-ghana,upside,FY2030E,balance_sheet,x_cash_40pct_eligible_gap,0.000,GHS millions,estimated,Estimated; no actual regulatory compliance or payout permission.
+gtbank-ghana,upside,FY2030E,income_statement,x_incremental_dividend,0.000,GHS millions,estimated,Estimated; no actual regulatory compliance or payout permission.
+gtbank-ghana,upside,FY2030E,ratios,x_car_proxy_pct,31.511,percent,estimated,"PROXY, not the regulatory ratio: book equity / (100% x loans + 38.1% x other assets), calibrated to the reported 24.08% at 30 Sep 2026."
+gtbank-ghana,upside,FY2030E,ratios,x_roe_pct,24.332,percent,estimated,Profit after tax / average of opening and closing equity.
+gtbank-ghana,upside,FY2030E,ratios,x_cost_to_income_pct,19.415,percent,estimated,Operating expenses / operating income before impairment.
 gtbank-ghana,upside,FY2030E,ratios,x_ldr_pct,35.716,percent,estimated,Net loans / customer deposits.
