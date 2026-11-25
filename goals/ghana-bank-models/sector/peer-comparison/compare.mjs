@@ -4,7 +4,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath,pathToFileURL} from 'node:url';
 import {execFileSync} from 'node:child_process';
-import {partitionTasks} from '../sector-rollup/conditional-scope.mjs';
+import {partitionTasks,validateDiagnosticRows} from '../sector-rollup/conditional-scope.mjs';
 const here=path.dirname(fileURLToPath(import.meta.url));
 const args=process.argv.slice(2), options={};
 for(let i=0;i<args.length;i+=2){if(!['--input-root','--output','--report'].includes(args[i])||!args[i+1]||Object.hasOwn(options,args[i]))throw Error('Usage: compare.mjs [--input-root PATH] [--output PATH] [--report PATH]');options[args[i]]=args[i+1];}
@@ -47,7 +47,7 @@ if(execFileSync('git',['rev-parse','HEAD'],{cwd:root,encoding:'utf8'}).trim()!==
 const conditionalErrors=[];
 const conditionalRows=conditional.map(t=>{
  const bd=path.join(dir,'banks',t.slug), get=(file)=>{const p=path.join(bd,file);return fs.existsSync(p)?csv(fs.readFileSync(p,'utf8')):[]};
- const safe=(file,period,scenario)=>{try{return values(get(file),period,scenario)}catch(e){conditionalErrors.push({bank:t.slug,file,period,scenario:scenario??null,error:String(e.message)});return {}}};
+ const safe=(file,period,scenario)=>{try{return values(validateDiagnosticRows(get(file),t.slug,file==='financials.csv'),period,scenario)}catch(e){conditionalErrors.push({bank:t.slug,file,period,scenario:scenario??null,error:String(e.message)});return {}}};
  const a=safe('financials.csv','FY2025'),b=safe('forecast.csv','FY2030E','base'),d=safe('forecast.csv','FY2030E','downside'),u=safe('forecast.csv','FY2030E','upside');
  return {bank:t.slug,scope:markers[t.slug].label,claim_status:t.status??'',review_stage:t.reviewStage??'',assets_2025_m:a.total_assets,customer_deposits_2025_m:a.customer_deposits,pat_2025_m:a.profit_after_tax,pat_base_2030_m:b.profit_after_tax,pat_downside_2030_m:d.profit_after_tax,pat_upside_2030_m:u.profit_after_tax,car_base_2030_proxy_pct:car(b),car_downside_2030_proxy_pct:car(d),car_upside_2030_proxy_pct:car(u),package_sha256:t.gate?.fingerprint??'',macro_sha256:t.gate?.macroFingerprint??'',scope_marker_sha256:markers[t.slug].sha256,source_commit:sha};
 });
