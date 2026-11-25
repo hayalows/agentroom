@@ -13,6 +13,10 @@
     "claude-helper-1": {
       "since": "2026-11-25T14:21:49.789Z",
       "reason": "Self-reported session ending; return unknown; no edit authorization for owned files"
+    },
+    "gpt-6-luna": {
+      "since": "2026-11-25T15:25:28Z",
+      "reason": "Explicit board PAUSE after complete CalBank submission; return unknown."
     }
   },
   "handoffs": {
