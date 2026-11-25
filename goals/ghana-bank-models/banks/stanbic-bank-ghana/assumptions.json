@@ -1,0 +1,178 @@
+{
+  "bank": "stanbic-bank-ghana",
+  "status": "Bank-specific scenario estimates using shared macro v1; regulatory threshold 13% corroborated by the September 2026 BoG Monetary Policy Report; not investment advice.",
+  "forecast_periods": ["FY2026E", "FY2027E", "FY2028E", "FY2029E", "FY2030E"],
+  "macro_file": "../../sector/macro-assumptions/macro.csv",
+  "macro_schema": "../../sector/macro-assumptions/SCHEMA.md",
+  "anchor": {
+    "period": "9M-2026",
+    "source": "SB26Q3",
+    "method": "Use the observed September 2026 balance sheet and year-to-date earnings. Q4 is estimated from the 9M run rate with a scenario multiplier. 9M gross loans and allowance are not disclosed: estimate 9M gross from 9M net using the FY2025 reported allowance/net ratio, then treat allowance = gross - net as an estimate. No historical imputation."
+  },
+  "drivers": {
+    "loan_growth": {
+      "status": "estimated",
+      "method": "2027 onward nominal GDP approximation = shared real GDP growth + CPI inflation, plus a bank-specific spread in percentage points; 2026 Q4 net-loan growth applied to the September actual. Annual growth capped/floored at -10% and 35%.",
+      "reason": "Gross loans fell from 9,390.373m (FY2024) to 9,820.519m (FY2025) then net loans 7,652.776m -> 9,027.632m at 9M-2026; assume a return to nominal-GDP-linked growth rather than trend extrapolation.",
+      "base": { "spread_pp": 2, "q4_pct": 4 },
+      "downside": { "spread_pp": -6, "q4_pct": -2 },
+      "upside": { "spread_pp": 7, "q4_pct": 8 }
+    },
+    "deposit_growth": {
+      "status": "estimated",
+      "method": "Nominal GDP approximation plus spread; 2026 Q4 from the September deposit balance.",
+      "reason": "FY2025 customer deposits 24,013.184m; September 2026 29,292.992m, a strong inflow. Assume growth normalises toward nominal GDP.",
+      "base": { "spread_pp": 1, "q4_pct": 4 },
+      "downside": { "spread_pp": -4, "q4_pct": -1 },
+      "upside": { "spread_pp": 6, "q4_pct": 8 }
+    },
+    "investment_yield": {
+      "status": "estimated",
+      "method": "Use 50% shared 364-day T-bill and 50% representative medium-term government bond yield; a portfolio mix proxy, not a reported yield.",
+      "reason": "The Bank holds 11,911.532m investment securities at FY2025 (largely government paper); the implied FY2025 securities yield is consistent with a blend of the 364-day bill and the medium-term bond.",
+      "weights": { "tbill_364d_pct": 0.5, "govt_bond_yield_pct": 0.5 }
+    },
+    "loan_yield": {
+      "status": "estimated",
+      "method": "Shared policy rate plus a scenario spread in percentage points.",
+      "reason": "Standalone loan-specific yield is not reconciled to the interest-income note; the spread is an analyst stress assumption, aligned with peers' models.",
+      "base": 8,
+      "downside": 6,
+      "upside": 10
+    },
+    "cash_yield_factor": {
+      "status": "estimated",
+      "method": "Cash and BoG balances yield = shared policy rate multiplied by this factor; effective blended yield, not a quoted reserve rate.",
+      "reason": "FY2025 interest income is consistent with a low yield on the large cash/BoG and inter-bank balance relative to the policy rate.",
+      "base": 0.35,
+      "downside": 0.4,
+      "upside": 0.3
+    },
+    "cost_of_funds": {
+      "status": "estimated",
+      "method": "Interest-bearing funding cost = shared policy rate multiplied by this factor; applied to average customer deposits, due to banks and borrowings; effective blended cost, not a quoted deposit rate.",
+      "reason": "FY2025 interest expense 578.935m against average FY2024-FY2025 deposits and borrowings of roughly 25,400m is about 2.3%; 9M-2026 annualises to about 1.3%, reflecting cheap deposit funding.",
+      "base": 0.15,
+      "downside": 0.28,
+      "upside": 0.12
+    },
+    "fee_growth": {
+      "status": "estimated",
+      "method": "Shared nominal GDP proxy plus spread; preserve the fee expense/income ratio unless stress applied.",
+      "reason": "Fee and commission revenue grew from 700.025m (FY2024) to 771.076m (FY2025).",
+      "base": 2,
+      "downside": -5,
+      "upside": 6
+    },
+    "trading_growth_spread_pp": {
+      "status": "estimated",
+      "method": "Trading revenue and other gains grow with the nominal GDP proxy plus a scenario spread.",
+      "reason": "Trading revenue is a large and volatile line (591.788m FY2024 -> 1,011.641m FY2025).",
+      "base": 0,
+      "downside": -10,
+      "upside": 5
+    },
+    "opex_growth": {
+      "status": "estimated",
+      "method": "Shared CPI inflation plus a percentage-point spread.",
+      "reason": "Staff and other operating expenses grew sharply in FY2025; inflation plus a growth-related overhead is a transparent sensitivity, not guidance.",
+      "base": 4,
+      "downside": 8,
+      "upside": 2
+    },
+    "cost_of_risk": {
+      "status": "estimated",
+      "method": "Loan impairment charge / average gross loans; scenario percentage. No repeat of the FY2022 DDEP/credit event assumed. Floor modelled impairment at the increase in allowance stock to prevent an unfunded allowance build.",
+      "reason": "FY2022 credit impairment was 965.937m; FY2023-FY2025 fell to 31.876m / 364.191m / 52.178m. 9M-2026 charge 102.757m against gross loans near 9,800m annualises to about 1.4%. Base reflects a normalisation from a low base, near the reported loan-loss ratio.",
+      "base": 1.5,
+      "downside": 4.0,
+      "upside": 0.8
+    },
+    "npl_pct": {
+      "status": "estimated",
+      "method": "2026 year-end based on the reported 9M 9.54%; subsequent scenario target, not a forecast from loan-level data.",
+      "base": 10.0,
+      "downside": 15.0,
+      "upside": 8.0
+    },
+    "net_to_gross_pct": {
+      "status": "estimated",
+      "method": "Net loans = gross loans x net-to-gross ratio. For the forecast, net loans grow by the loan-growth driver and gross = net / net-to-gross; the loan_loss_allowance stock is then gross minus net (which folds in any interest in suspense on the same basis as the FY2025 filing). FY2026E starts from the actual 9M net loans.",
+      "reason": "FY2025 reported net 7,652.776m / gross 9,820.519m = 77.93% (allowance 1,502.630m + interest in suspense 665.113m = 22.07% of gross). The interim reports a lower NPL (9.54% vs FY2025 24.63%), so the base ratio rises modestly as the loan book seasons; the downside keeps a heavier deduction.",
+      "base": 82.0,
+      "downside": 75.0,
+      "upside": 85.0
+    },
+    "tax_rate_pct": {
+      "status": "estimated",
+      "method": "Effective total tax (indirect + direct) on positive PBT; no automatic deferred tax benefit for losses.",
+      "reason": "FY2025 total tax 998.865/2,607.532 = 38.3%; 9M-2026 501.929/1,405.714 = 35.7%; FY2024 34.5%. 25% corporate rate plus levies. Forecast uses a blended 37%; future levy law changes not assumed.",
+      "base": 37,
+      "downside": 37,
+      "upside": 37
+    },
+    "indirect_tax_ratio_pct": {
+      "status": "estimated",
+      "method": "Indirect tax expressed as a share of PBT for the forecast split only; not additive to the total tax.",
+      "reason": "FY2025 indirect tax 78.313m / PBT 2,607.532m = 3.0%; 9M-2026 2.58%. Use 3% of PBT as the reported indirect-tax estimate; the remainder of `income_tax` is the direct tax.",
+      "base": 3.0,
+      "downside": 3.0,
+      "upside": 3.0
+    },
+    "dividend_payout_pct": {
+      "status": "estimated",
+      "method": "Payout on positive PAT; constrained if a capital target or cash minimum is breached.",
+      "reason": "FY2022 dividend 180.000m on a loss (prior-year profit); 9M-2026 dividends paid 1,126.334m. Scenario payout sensitivity.",
+      "base": 40,
+      "downside": 0,
+      "upside": 50
+    },
+    "capital_ratio_target_pct": {
+      "status": "estimated",
+      "method": "Management buffer (percentage points) above the shared minimum CAR, not an official target; RWA intensity calibrated from the FY2025 audited RWA / assets, then independently flag any minimum shortfall.",
+      "reason": "FY2025 regulatory capital 4,011.995m / RWA 17,314.504m = 23.2%; 9M-2026 reported CAR 23.32% but no interim RWA/capital breakdown.",
+      "base": 6,
+      "downside": 8,
+      "upside": 7
+    },
+    "q4_income_runrate_multiplier": {
+      "status": "estimated",
+      "method": "Scale Q4 revenues by the scenario multiplier; Q4 funding expenses multiplied by 1.25 downside / 0.9 upside / 1 base, OPEX 1.10 downside / 1 base / 1 upside, and Q4 risk charge by estimated gross loans and scenario risk / 4; keep the actual 9M flows fixed. Impairment is subject to the allowance-stock floor.",
+      "base": 1,
+      "downside": 0.85,
+      "upside": 1.15
+    },
+    "fx": {
+      "status": "estimated",
+      "method": "The Bank does not disclose a separate net monetary FX position in the summary statements used, so no incremental FX translation P&L is modelled; the balance sheet is not revalued by currency. Flagged rather than guessed.",
+      "reason": "Avoid inventing a currency split that is not in the sources."
+    },
+    "cash_reserve": {
+      "status": "estimated",
+      "method": "Proxy required reserve = scenario CRR x year-end customer deposits. Cash and BoG balances include non-eligible cash, so this is a liquidity screening test, not regulatory compliance."
+    },
+    "model_structure": {
+      "status": "estimated",
+      "method": "Hold non-core balance sheet lines proportional to deposit growth, except property/other assets grow with opex; stated capital and other reserves held constant; non-pledged and pledged trading assets and investment securities follow deposit growth; cash balances plug the accounting identity, flagging negative balances or a reserve shortfall without automatically borrowing. RWA = gross loans + FY2025 calibrated residual risk intensity x (total assets minus gross loans). Q3 regulatory capital anchored on reported CAR x estimated RWA; Tier 1 capital anchored using the FY2025 Tier 1 / total regulatory capital relationship. Retained profit increments regulatory capital; dividends constrained to pre-dividend cash and the CAR buffer. Report a proxy, not a regulatory return.",
+      "q4_cost_multiplier": { "base": 1, "downside": 1.1, "upside": 1 },
+      "q4_funding_multiplier": { "base": 1, "downside": 1.25, "upside": 0.9 },
+      "fee_expense_ratio_multiplier": { "base": 1, "downside": 1.1, "upside": 0.95 },
+      "cash_yield_policy_factor": 0.35,
+      "q4_opex_balance_growth": "Annual opex growth divided by four for Q4 property and other assets.",
+      "allowance_bridge": "Implied write-offs/other reductions = opening allowance + modelled impairment - closing allowance; the impairment floor is max(risk-based charge, allowance stock increase, zero). Movements are scenario estimates, not observed write-offs. FY2026 opening allowance is estimated; Q4 only.",
+      "cash_residual": "Do not hide negative cash; show the reserve and funding gap. Cash is the reported cash-and-BoG aggregate, so regulatory compliance is not established."
+    }
+  },
+  "notes": [
+    "All numeric driver assumptions are analyst estimates, not reported bank results or management guidance.",
+    "2026 income must retain reported 9M results plus separately estimated Q4; model checks must flag any liquidity or capital shortfall.",
+    "Shared macro v1 numeric paths are used. Regulatory minimum CAR of 13.0% is quoted in the Bank of Ghana September 2026 Monetary Policy Report; not re-derived here.",
+    "Stanbic Bank Ghana is a Bank (separate) model; Standard Bank Group figures are never mixed in.",
+    "The Bank reports an indirect tax line above the direct income tax; the model forecasts total `income_tax` (indirect + direct) and splits 3% of PBT to x_indirect_tax."
+  ],
+  "macro_snapshot": {
+    "path": "../../sector/macro-assumptions/macro.csv",
+    "status": "shared",
+    "note": "Use all three shared scenarios; rerun after macro revisions. A missing required driver is a hard error."
+  }
+}
