@@ -1,0 +1,1138 @@
+[
+  {
+    "slug": "access-bank-ghana",
+    "blob": "75c510dd468b0c6b9e9b1c7c8089da86442a7bfb",
+    "rows": 660,
+    "data": [
+      {
+        "scenario": "base",
+        "year": 2026,
+        "pat": 483.41,
+        "assets": 20922.213,
+        "equity": 2419.299,
+        "car": 16.079,
+        "car_key": "car_pct"
+      },
+      {
+        "scenario": "base",
+        "year": 2027,
+        "pat": 527.919,
+        "assets": 23533.808,
+        "equity": 2868.031,
+        "car": 16.946,
+        "car_key": "car_pct"
+      },
+      {
+        "scenario": "base",
+        "year": 2028,
+        "pat": 537.923,
+        "assets": 26524.728,
+        "equity": 3325.266,
+        "car": 17.432,
+        "car_key": "car_pct"
+      },
+      {
+        "scenario": "base",
+        "year": 2029,
+        "pat": 536.651,
+        "assets": 29799.103,
+        "equity": 3781.419,
+        "car": 17.645,
+        "car_key": "car_pct"
+      },
+      {
+        "scenario": "base",
+        "year": 2030,
+        "pat": 598.229,
+        "assets": 33486.595,
+        "equity": 4289.913,
+        "car": 17.814,
+        "car_key": "car_pct"
+      },
+      {
+        "scenario": "downside",
+        "year": 2026,
+        "pat": 449.973,
+        "assets": 20651.864,
+        "equity": 2385.863,
+        "car": 16.064,
+        "car_key": "car_pct"
+      },
+      {
+        "scenario": "downside",
+        "year": 2027,
+        "pat": 405.516,
+        "assets": 23140.437,
+        "equity": 2791.379,
+        "car": 16.773,
+        "car_key": "car_pct"
+      },
+      {
+        "scenario": "downside",
+        "year": 2028,
+        "pat": 342.567,
+        "assets": 25817.837,
+        "equity": 3133.946,
+        "car": 16.879,
+        "car_key": "car_pct"
+      },
+      {
+        "scenario": "downside",
+        "year": 2029,
+        "pat": 360.773,
+        "assets": 28795.285,
+        "equity": 3494.719,
+        "car": 16.876,
+        "car_key": "car_pct"
+      },
+      {
+        "scenario": "downside",
+        "year": 2030,
+        "pat": 397.48,
+        "assets": 32001.687,
+        "equity": 3892.199,
+        "car": 16.912,
+        "car_key": "car_pct"
+      },
+      {
+        "scenario": "upside",
+        "year": 2026,
+        "pat": 497.04,
+        "assets": 21093.785,
+        "equity": 2432.93,
+        "car": 16.038,
+        "car_key": "car_pct"
+      },
+      {
+        "scenario": "upside",
+        "year": 2027,
+        "pat": 584.497,
+        "assets": 23889.248,
+        "equity": 2900.527,
+        "car": 16.883,
+        "car_key": "car_pct"
+      },
+      {
+        "scenario": "upside",
+        "year": 2028,
+        "pat": 651.76,
+        "assets": 27218.87,
+        "equity": 3421.935,
+        "car": 17.481,
+        "car_key": "car_pct"
+      },
+      {
+        "scenario": "upside",
+        "year": 2029,
+        "pat": 713.916,
+        "assets": 31048.33,
+        "equity": 3993.068,
+        "car": 17.883,
+        "car_key": "car_pct"
+      },
+      {
+        "scenario": "upside",
+        "year": 2030,
+        "pat": 824.936,
+        "assets": 35573.423,
+        "equity": 4653.017,
+        "car": 18.188,
+        "car_key": "car_pct"
+      }
+    ]
+  },
+  {
+    "slug": "bank-of-africa-ghana",
+    "blob": "0464611561b551911d7b93940f393cc10c3df930",
+    "rows": 1035,
+    "data": [
+      {
+        "scenario": "base",
+        "year": 2026,
+        "pat": 73.782,
+        "assets": 4636.524,
+        "equity": 933.392,
+        "car": 26.96689,
+        "car_key": "x_car_proxy_pct"
+      },
+      {
+        "scenario": "base",
+        "year": 2027,
+        "pat": 97.73,
+        "assets": 5175.126,
+        "equity": 1020.055,
+        "car": 26.40352,
+        "car_key": "x_car_proxy_pct"
+      },
+      {
+        "scenario": "base",
+        "year": 2028,
+        "pat": 115.66,
+        "assets": 5805.617,
+        "equity": 1121.055,
+        "car": 25.8665,
+        "car_key": "x_car_proxy_pct"
+      },
+      {
+        "scenario": "base",
+        "year": 2029,
+        "pat": 132.631,
+        "assets": 6510.021,
+        "equity": 1236.337,
+        "car": 25.43979,
+        "car_key": "x_car_proxy_pct"
+      },
+      {
+        "scenario": "base",
+        "year": 2030,
+        "pat": 153.763,
+        "assets": 7308.722,
+        "equity": 1370.205,
+        "car": 25.11327,
+        "car_key": "x_car_proxy_pct"
+      },
+      {
+        "scenario": "downside",
+        "year": 2026,
+        "pat": 64.421,
+        "assets": 4579.527,
+        "equity": 924.031,
+        "car": 27.02871,
+        "car_key": "x_car_proxy_pct"
+      },
+      {
+        "scenario": "downside",
+        "year": 2027,
+        "pat": 51.443,
+        "assets": 4894.646,
+        "equity": 975.475,
+        "car": 26.69648,
+        "car_key": "x_car_proxy_pct"
+      },
+      {
+        "scenario": "downside",
+        "year": 2028,
+        "pat": 52.499,
+        "assets": 5230.943,
+        "equity": 1027.973,
+        "car": 26.32456,
+        "car_key": "x_car_proxy_pct"
+      },
+      {
+        "scenario": "downside",
+        "year": 2029,
+        "pat": 39.834,
+        "assets": 5576.03,
+        "equity": 1067.808,
+        "car": 25.65236,
+        "car_key": "x_car_proxy_pct"
+      },
+      {
+        "scenario": "downside",
+        "year": 2030,
+        "pat": 26.126,
+        "assets": 5907.442,
+        "equity": 1093.934,
+        "car": 24.80566,
+        "car_key": "x_car_proxy_pct"
+      },
+      {
+        "scenario": "upside",
+        "year": 2026,
+        "pat": 80.023,
+        "assets": 4670.351,
+        "equity": 939.633,
+        "car": 26.95058,
+        "car_key": "x_car_proxy_pct"
+      },
+      {
+        "scenario": "upside",
+        "year": 2027,
+        "pat": 130.564,
+        "assets": 5358.39,
+        "equity": 1054.193,
+        "car": 26.35391,
+        "car_key": "x_car_proxy_pct"
+      },
+      {
+        "scenario": "upside",
+        "year": 2028,
+        "pat": 162.887,
+        "assets": 6195.218,
+        "equity": 1190.966,
+        "car": 25.75148,
+        "car_key": "x_car_proxy_pct"
+      },
+      {
+        "scenario": "upside",
+        "year": 2029,
+        "pat": 204.341,
+        "assets": 7194.81,
+        "equity": 1362.73,
+        "car": 25.37171,
+        "car_key": "x_car_proxy_pct"
+      },
+      {
+        "scenario": "upside",
+        "year": 2030,
+        "pat": 255.972,
+        "assets": 8408.172,
+        "equity": 1577.834,
+        "car": 25.13732,
+        "car_key": "x_car_proxy_pct"
+      }
+    ]
+  },
+  {
+    "slug": "calbank",
+    "blob": "063ab1f058c6d62db039cfc9d85c73210a5a7df6",
+    "rows": 675,
+    "data": [
+      {
+        "scenario": "base",
+        "year": 2026,
+        "pat": 427.151,
+        "assets": 14986.426,
+        "equity": 1955.593,
+        "car": 18.882,
+        "car_key": "car_pct"
+      },
+      {
+        "scenario": "base",
+        "year": 2027,
+        "pat": 371.963,
+        "assets": 16894.284,
+        "equity": 2327.556,
+        "car": 19.936,
+        "car_key": "car_pct"
+      },
+      {
+        "scenario": "base",
+        "year": 2028,
+        "pat": 381.784,
+        "assets": 19082.277,
+        "equity": 2709.34,
+        "car": 20.545,
+        "car_key": "car_pct"
+      },
+      {
+        "scenario": "base",
+        "year": 2029,
+        "pat": 384.984,
+        "assets": 21411.289,
+        "equity": 3017.327,
+        "car": 20.392,
+        "car_key": "car_pct"
+      },
+      {
+        "scenario": "base",
+        "year": 2030,
+        "pat": 418.8,
+        "assets": 24038.609,
+        "equity": 3352.367,
+        "car": 20.18,
+        "car_key": "car_pct"
+      },
+      {
+        "scenario": "downside",
+        "year": 2026,
+        "pat": 425.804,
+        "assets": 14767.661,
+        "equity": 1954.246,
+        "car": 19.149,
+        "car_key": "car_pct"
+      },
+      {
+        "scenario": "downside",
+        "year": 2027,
+        "pat": 491.132,
+        "assets": 16724.183,
+        "equity": 2445.378,
+        "car": 21.158,
+        "car_key": "car_pct"
+      },
+      {
+        "scenario": "downside",
+        "year": 2028,
+        "pat": 564.924,
+        "assets": 18884.783,
+        "equity": 2953.809,
+        "car": 22.633,
+        "car_key": "car_pct"
+      },
+      {
+        "scenario": "downside",
+        "year": 2029,
+        "pat": 516.956,
+        "assets": 21212.64,
+        "equity": 3419.07,
+        "car": 23.323,
+        "car_key": "car_pct"
+      },
+      {
+        "scenario": "downside",
+        "year": 2030,
+        "pat": 503.084,
+        "assets": 23678.925,
+        "equity": 3871.845,
+        "car": 23.661,
+        "car_key": "car_pct"
+      },
+      {
+        "scenario": "upside",
+        "year": 2026,
+        "pat": 427.498,
+        "assets": 15095.482,
+        "equity": 1955.94,
+        "car": 18.749,
+        "car_key": "car_pct"
+      },
+      {
+        "scenario": "upside",
+        "year": 2027,
+        "pat": 326.693,
+        "assets": 17076.014,
+        "equity": 2282.633,
+        "car": 19.343,
+        "car_key": "car_pct"
+      },
+      {
+        "scenario": "upside",
+        "year": 2028,
+        "pat": 334.667,
+        "assets": 19411.59,
+        "equity": 2617.3,
+        "car": 19.51,
+        "car_key": "car_pct"
+      },
+      {
+        "scenario": "upside",
+        "year": 2029,
+        "pat": 368.532,
+        "assets": 22020.606,
+        "equity": 2893.699,
+        "car": 19.015,
+        "car_key": "car_pct"
+      },
+      {
+        "scenario": "upside",
+        "year": 2030,
+        "pat": 414.106,
+        "assets": 25109.965,
+        "equity": 3204.279,
+        "car": 18.465,
+        "car_key": "car_pct"
+      }
+    ]
+  },
+  {
+    "slug": "consolidated-bank-ghana",
+    "blob": "c9303aa4930a641602df37431afa1ba6ffe79b93",
+    "rows": 945,
+    "data": [
+      {
+        "scenario": "base",
+        "year": 2026,
+        "pat": 106.007,
+        "assets": 19947.989,
+        "equity": 1606.349,
+        "car": 15.2877,
+        "car_key": "car_pct"
+      },
+      {
+        "scenario": "base",
+        "year": 2027,
+        "pat": 79.81,
+        "assets": 22389.285,
+        "equity": 1686.158,
+        "car": 15.2066,
+        "car_key": "car_pct"
+      },
+      {
+        "scenario": "base",
+        "year": 2028,
+        "pat": 74.536,
+        "assets": 25238.04,
+        "equity": 1760.694,
+        "car": 14.8487,
+        "car_key": "car_pct"
+      },
+      {
+        "scenario": "base",
+        "year": 2029,
+        "pat": 71.635,
+        "assets": 28404.929,
+        "equity": 1832.33,
+        "car": 14.3345,
+        "car_key": "car_pct"
+      },
+      {
+        "scenario": "base",
+        "year": 2030,
+        "pat": 50.03,
+        "assets": 31958.291,
+        "equity": 1882.36,
+        "car": 13.5074,
+        "car_key": "car_pct"
+      },
+      {
+        "scenario": "downside",
+        "year": 2026,
+        "pat": -44.552,
+        "assets": 18562.897,
+        "equity": 1455.79,
+        "car": 13.1222,
+        "car_key": "car_pct"
+      },
+      {
+        "scenario": "downside",
+        "year": 2027,
+        "pat": -314.063,
+        "assets": 19331.714,
+        "equity": 1141.727,
+        "car": 6.6817,
+        "car_key": "car_pct"
+      },
+      {
+        "scenario": "downside",
+        "year": 2028,
+        "pat": -434.787,
+        "assets": 20055.175,
+        "equity": 706.94,
+        "car": -1.2546,
+        "car_key": "car_pct"
+      },
+      {
+        "scenario": "downside",
+        "year": 2029,
+        "pat": -615.365,
+        "assets": 20678.097,
+        "equity": 91.576,
+        "car": -11.8181,
+        "car_key": "car_pct"
+      },
+      {
+        "scenario": "downside",
+        "year": 2030,
+        "pat": -843.118,
+        "assets": 21045.466,
+        "equity": -751.543,
+        "car": -25.9517,
+        "car_key": "car_pct"
+      },
+      {
+        "scenario": "upside",
+        "year": 2026,
+        "pat": 139,
+        "assets": 20510.068,
+        "equity": 1639.342,
+        "car": 15.4989,
+        "car_key": "car_pct"
+      },
+      {
+        "scenario": "upside",
+        "year": 2027,
+        "pat": 170.823,
+        "assets": 23768.142,
+        "equity": 1810.165,
+        "car": 16.2091,
+        "car_key": "car_pct"
+      },
+      {
+        "scenario": "upside",
+        "year": 2028,
+        "pat": 202.058,
+        "assets": 27748.29,
+        "equity": 2012.223,
+        "car": 16.7792,
+        "car_key": "car_pct"
+      },
+      {
+        "scenario": "upside",
+        "year": 2029,
+        "pat": 236.109,
+        "assets": 32465.692,
+        "equity": 2248.332,
+        "car": 17.2572,
+        "car_key": "car_pct"
+      },
+      {
+        "scenario": "upside",
+        "year": 2030,
+        "pat": 280.903,
+        "assets": 38167.59,
+        "equity": 2529.236,
+        "car": 17.5906,
+        "car_key": "car_pct"
+      }
+    ]
+  },
+  {
+    "slug": "ecobank-ghana",
+    "blob": "b147322ab51f0cd44640fdf375b471845a74010d",
+    "rows": 615,
+    "data": [
+      {
+        "scenario": "base",
+        "year": 2026,
+        "pat": 1850.05,
+        "assets": 55345.642,
+        "equity": 8555.476,
+        "car": 18.84,
+        "car_key": "car_pct"
+      },
+      {
+        "scenario": "base",
+        "year": 2027,
+        "pat": 2200.826,
+        "assets": 62399.088,
+        "equity": 10206.095,
+        "car": 19.934,
+        "car_key": "car_pct"
+      },
+      {
+        "scenario": "base",
+        "year": 2028,
+        "pat": 2088.008,
+        "assets": 70276.763,
+        "equity": 11772.101,
+        "car": 20.415,
+        "car_key": "car_pct"
+      },
+      {
+        "scenario": "base",
+        "year": 2029,
+        "pat": 1883.966,
+        "assets": 78691.214,
+        "equity": 13185.076,
+        "car": 20.421,
+        "car_key": "car_pct"
+      },
+      {
+        "scenario": "base",
+        "year": 2030,
+        "pat": 1910.179,
+        "assets": 88001.789,
+        "equity": 14617.71,
+        "car": 20.244,
+        "car_key": "car_pct"
+      },
+      {
+        "scenario": "downside",
+        "year": 2026,
+        "pat": 1807.445,
+        "assets": 54709.782,
+        "equity": 8512.871,
+        "car": 18.964,
+        "car_key": "car_pct"
+      },
+      {
+        "scenario": "downside",
+        "year": 2027,
+        "pat": 1574.283,
+        "assets": 61447.92,
+        "equity": 9851.011,
+        "car": 19.538,
+        "car_key": "car_pct"
+      },
+      {
+        "scenario": "downside",
+        "year": 2028,
+        "pat": 1228.789,
+        "assets": 68554.424,
+        "equity": 10895.482,
+        "car": 19.37,
+        "car_key": "car_pct"
+      },
+      {
+        "scenario": "downside",
+        "year": 2029,
+        "pat": 1275.693,
+        "assets": 76444.245,
+        "equity": 11979.821,
+        "car": 19.099,
+        "car_key": "car_pct"
+      },
+      {
+        "scenario": "downside",
+        "year": 2030,
+        "pat": 1351.611,
+        "assets": 84923.531,
+        "equity": 13128.69,
+        "car": 18.841,
+        "car_key": "car_pct"
+      },
+      {
+        "scenario": "upside",
+        "year": 2026,
+        "pat": 1865.874,
+        "assets": 55756.969,
+        "equity": 8571.3,
+        "car": 18.735,
+        "car_key": "car_pct"
+      },
+      {
+        "scenario": "upside",
+        "year": 2027,
+        "pat": 2409.583,
+        "assets": 63260.019,
+        "equity": 10258.008,
+        "car": 19.763,
+        "car_key": "car_pct"
+      },
+      {
+        "scenario": "upside",
+        "year": 2028,
+        "pat": 2484.737,
+        "assets": 71994.595,
+        "equity": 11997.324,
+        "car": 20.309,
+        "car_key": "car_pct"
+      },
+      {
+        "scenario": "upside",
+        "year": 2029,
+        "pat": 2483.876,
+        "assets": 81825.673,
+        "equity": 13736.037,
+        "car": 20.459,
+        "car_key": "car_pct"
+      },
+      {
+        "scenario": "upside",
+        "year": 2030,
+        "pat": 2641.911,
+        "assets": 93247.456,
+        "equity": 15585.374,
+        "car": 20.37,
+        "car_key": "car_pct"
+      }
+    ]
+  },
+  {
+    "slug": "fbnbank-ghana",
+    "blob": "96d3ed5c0b85b0dcc64ff4551a0283140f841c54",
+    "rows": 855,
+    "data": [
+      {
+        "scenario": "base",
+        "year": 2026,
+        "pat": 46.96,
+        "assets": 6771.67,
+        "equity": 1088.415,
+        "car": 37.082,
+        "car_key": "x_car_proxy_pct"
+      },
+      {
+        "scenario": "base",
+        "year": 2027,
+        "pat": 89.84,
+        "assets": 7546.279,
+        "equity": 1178.254,
+        "car": 36.0223,
+        "car_key": "x_car_proxy_pct"
+      },
+      {
+        "scenario": "base",
+        "year": 2028,
+        "pat": 87.658,
+        "assets": 8436.135,
+        "equity": 1265.912,
+        "car": 34.6198,
+        "car_key": "x_car_proxy_pct"
+      },
+      {
+        "scenario": "base",
+        "year": 2029,
+        "pat": 72.25,
+        "assets": 9397.786,
+        "equity": 1338.162,
+        "car": 32.851,
+        "car_key": "x_car_proxy_pct"
+      },
+      {
+        "scenario": "base",
+        "year": 2030,
+        "pat": 74.166,
+        "assets": 10473.475,
+        "equity": 1412.328,
+        "car": 31.1107,
+        "car_key": "x_car_proxy_pct"
+      },
+      {
+        "scenario": "downside",
+        "year": 2026,
+        "pat": 2.722,
+        "assets": 6212.248,
+        "equity": 1044.177,
+        "car": 38.7784,
+        "car_key": "x_car_proxy_pct"
+      },
+      {
+        "scenario": "downside",
+        "year": 2027,
+        "pat": 33.654,
+        "assets": 6660.32,
+        "equity": 1077.831,
+        "car": 37.3354,
+        "car_key": "x_car_proxy_pct"
+      },
+      {
+        "scenario": "downside",
+        "year": 2028,
+        "pat": -13.77,
+        "assets": 7100.149,
+        "equity": 1064.061,
+        "car": 34.5752,
+        "car_key": "x_car_proxy_pct"
+      },
+      {
+        "scenario": "downside",
+        "year": 2029,
+        "pat": -116.705,
+        "assets": 7479.853,
+        "equity": 947.356,
+        "car": 29.2203,
+        "car_key": "x_car_proxy_pct"
+      },
+      {
+        "scenario": "downside",
+        "year": 2030,
+        "pat": -216.453,
+        "assets": 7770.799,
+        "equity": 730.903,
+        "car": 21.7,
+        "car_key": "x_car_proxy_pct"
+      },
+      {
+        "scenario": "upside",
+        "year": 2026,
+        "pat": 59.062,
+        "assets": 6952.706,
+        "equity": 1100.517,
+        "car": 36.5181,
+        "car_key": "x_car_proxy_pct"
+      },
+      {
+        "scenario": "upside",
+        "year": 2027,
+        "pat": 112.974,
+        "assets": 8021.117,
+        "equity": 1213.49,
+        "car": 34.9033,
+        "car_key": "x_car_proxy_pct"
+      },
+      {
+        "scenario": "upside",
+        "year": 2028,
+        "pat": 130.568,
+        "assets": 9323.101,
+        "equity": 1344.058,
+        "car": 33.26,
+        "car_key": "x_car_proxy_pct"
+      },
+      {
+        "scenario": "upside",
+        "year": 2029,
+        "pat": 152.886,
+        "assets": 10868.17,
+        "equity": 1496.944,
+        "car": 31.7771,
+        "car_key": "x_car_proxy_pct"
+      },
+      {
+        "scenario": "upside",
+        "year": 2030,
+        "pat": 188.566,
+        "assets": 12744.367,
+        "equity": 1685.51,
+        "car": 30.5125,
+        "car_key": "x_car_proxy_pct"
+      }
+    ]
+  },
+  {
+    "slug": "fidelity-bank-ghana",
+    "blob": "8ee021061a9dd4da0b000c5d13ea85c8551c9dbe",
+    "rows": 1005,
+    "data": [
+      {
+        "scenario": "base",
+        "year": 2026,
+        "pat": 703.992,
+        "assets": 31273.099,
+        "equity": 3081.871,
+        "car": 18.8268,
+        "car_key": "car_pct"
+      },
+      {
+        "scenario": "base",
+        "year": 2027,
+        "pat": 884.507,
+        "assets": 35684.758,
+        "equity": 3656.8,
+        "car": 20.2407,
+        "car_key": "car_pct"
+      },
+      {
+        "scenario": "base",
+        "year": 2028,
+        "pat": 1013.392,
+        "assets": 40872.219,
+        "equity": 4315.505,
+        "car": 21.3552,
+        "car_key": "car_pct"
+      },
+      {
+        "scenario": "base",
+        "year": 2029,
+        "pat": 1176,
+        "assets": 46735.267,
+        "equity": 5079.905,
+        "car": 22.3648,
+        "car_key": "car_pct"
+      },
+      {
+        "scenario": "base",
+        "year": 2030,
+        "pat": 1351.125,
+        "assets": 53425.816,
+        "equity": 5958.136,
+        "car": 23.2169,
+        "car_key": "car_pct"
+      },
+      {
+        "scenario": "downside",
+        "year": 2026,
+        "pat": 560.782,
+        "assets": 29953.349,
+        "equity": 3001.359,
+        "car": 19.1249,
+        "car_key": "car_pct"
+      },
+      {
+        "scenario": "downside",
+        "year": 2027,
+        "pat": 597.667,
+        "assets": 33237.296,
+        "equity": 3599.026,
+        "car": 22.0359,
+        "car_key": "car_pct"
+      },
+      {
+        "scenario": "downside",
+        "year": 2028,
+        "pat": 591.484,
+        "assets": 36791.911,
+        "equity": 4190.511,
+        "car": 24.3086,
+        "car_key": "car_pct"
+      },
+      {
+        "scenario": "downside",
+        "year": 2029,
+        "pat": 533.281,
+        "assets": 40591.062,
+        "equity": 4723.791,
+        "car": 25.7281,
+        "car_key": "car_pct"
+      },
+      {
+        "scenario": "downside",
+        "year": 2030,
+        "pat": 461.077,
+        "assets": 44471.414,
+        "equity": 5184.868,
+        "car": 26.4921,
+        "car_key": "car_pct"
+      },
+      {
+        "scenario": "upside",
+        "year": 2026,
+        "pat": 752.033,
+        "assets": 32024.609,
+        "equity": 3090.38,
+        "car": 18.4147,
+        "car_key": "car_pct"
+      },
+      {
+        "scenario": "upside",
+        "year": 2027,
+        "pat": 959.685,
+        "assets": 36812.576,
+        "equity": 3618.206,
+        "car": 19.1521,
+        "car_key": "car_pct"
+      },
+      {
+        "scenario": "upside",
+        "year": 2028,
+        "pat": 1147.344,
+        "assets": 42629.677,
+        "equity": 4249.245,
+        "car": 19.6987,
+        "car_key": "car_pct"
+      },
+      {
+        "scenario": "upside",
+        "year": 2029,
+        "pat": 1394.301,
+        "assets": 49494.31,
+        "equity": 5016.111,
+        "car": 20.2084,
+        "car_key": "car_pct"
+      },
+      {
+        "scenario": "upside",
+        "year": 2030,
+        "pat": 1693.667,
+        "assets": 57741.134,
+        "equity": 5947.628,
+        "car": 20.6265,
+        "car_key": "car_pct"
+      }
+    ]
+  },
+  {
+    "slug": "first-atlantic-bank",
+    "blob": "13b63335b251d90b3bb2c06e98d72b6358aeec1a",
+    "rows": 900,
+    "data": [
+      {
+        "scenario": "base",
+        "year": 2026,
+        "pat": 358.422,
+        "assets": 22425.91,
+        "equity": 2466.055,
+        "car": 15.0447,
+        "car_key": "car_pct"
+      },
+      {
+        "scenario": "base",
+        "year": 2027,
+        "pat": 495.995,
+        "assets": 25667.711,
+        "equity": 2962.05,
+        "car": 17.384,
+        "car_key": "car_pct"
+      },
+      {
+        "scenario": "base",
+        "year": 2028,
+        "pat": 629.116,
+        "assets": 29540.946,
+        "equity": 3591.166,
+        "car": 19.7687,
+        "car_key": "car_pct"
+      },
+      {
+        "scenario": "base",
+        "year": 2029,
+        "pat": 781.09,
+        "assets": 33976.147,
+        "equity": 4372.256,
+        "car": 22.2153,
+        "car_key": "car_pct"
+      },
+      {
+        "scenario": "base",
+        "year": 2030,
+        "pat": 936.515,
+        "assets": 39082.943,
+        "equity": 5308.771,
+        "car": 24.5409,
+        "car_key": "car_pct"
+      },
+      {
+        "scenario": "downside",
+        "year": 2026,
+        "pat": 302.232,
+        "assets": 21229.51,
+        "equity": 2409.865,
+        "car": 15.3459,
+        "car_key": "car_pct"
+      },
+      {
+        "scenario": "downside",
+        "year": 2027,
+        "pat": 219.949,
+        "assets": 22842.572,
+        "equity": 2629.814,
+        "car": 16.5371,
+        "car_key": "car_pct"
+      },
+      {
+        "scenario": "downside",
+        "year": 2028,
+        "pat": 234.457,
+        "assets": 24579.121,
+        "equity": 2864.271,
+        "car": 17.6437,
+        "car_key": "car_pct"
+      },
+      {
+        "scenario": "downside",
+        "year": 2029,
+        "pat": 283.754,
+        "assets": 26481.621,
+        "equity": 3148.025,
+        "car": 18.9405,
+        "car_key": "car_pct"
+      },
+      {
+        "scenario": "downside",
+        "year": 2030,
+        "pat": 300.067,
+        "assets": 28400.172,
+        "equity": 3448.092,
+        "car": 20.215,
+        "car_key": "car_pct"
+      },
+      {
+        "scenario": "upside",
+        "year": 2026,
+        "pat": 378.516,
+        "assets": 23016.109,
+        "equity": 2486.149,
+        "car": 14.8458,
+        "car_key": "car_pct"
+      },
+      {
+        "scenario": "upside",
+        "year": 2027,
+        "pat": 585.222,
+        "assets": 26921.688,
+        "equity": 3071.37,
+        "car": 17.4136,
+        "car_key": "car_pct"
+      },
+      {
+        "scenario": "upside",
+        "year": 2028,
+        "pat": 755.406,
+        "assets": 31740.738,
+        "equity": 3826.776,
+        "car": 19.9095,
+        "car_key": "car_pct"
+      },
+      {
+        "scenario": "upside",
+        "year": 2029,
+        "pat": 947.698,
+        "assets": 37507.344,
+        "equity": 4774.475,
+        "car": 22.2718,
+        "car_key": "car_pct"
+      },
+      {
+        "scenario": "upside",
+        "year": 2030,
+        "pat": 1174.766,
+        "assets": 44509.53,
+        "equity": 5949.241,
+        "car": 24.3956,
+        "car_key": "car_pct"
+      }
+    ]
+  }
+]
