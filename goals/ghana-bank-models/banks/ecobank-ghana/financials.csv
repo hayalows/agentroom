@@ -21,8 +21,8 @@ ecobank-ghana,FY2021,balance_sheet,investment_securities,6012.495,GHS millions,E
 ecobank-ghana,FY2021,balance_sheet,loans_and_advances_gross,,GHS millions,,,unavailable,Not disclosed in GSE summary statements (net loans only).
 ecobank-ghana,FY2021,balance_sheet,loan_loss_allowance,,GHS millions,,,unavailable,Not disclosed in GSE summary statements (net loans only).
 ecobank-ghana,FY2021,balance_sheet,loans_and_advances_net,5634.861,GHS millions,EGH22,1,reported,Bank-only net loans and advances to customers.
-ecobank-ghana,FY2021,balance_sheet,property_equipment_intangibles,612.031,GHS millions,EGH22,1,derived,Property and equipment plus intangible assets.
-ecobank-ghana,FY2021,balance_sheet,other_assets,2726.721,GHS millions,EGH22,1,derived,"Sum of non-pledged trading assets, other assets, tax assets, ROU assets, investment in subsidiaries, and assets held for sale."
+ecobank-ghana,FY2021,balance_sheet,property_equipment_intangibles,657.561,GHS millions,EGH22,1,derived,"Property and equipment, intangible assets, and ROU assets (45.530m moved from other_assets per MODEL-SPEC)."
+ecobank-ghana,FY2021,balance_sheet,other_assets,2681.191,GHS millions,EGH22,1,derived,"Sum of non-pledged trading assets, other assets, tax assets, investment in subsidiaries, and assets held for sale (excludes ROU assets of 45.530m, classified in property_equipment_intangibles)."
 ecobank-ghana,FY2021,balance_sheet,total_assets,17856.679,GHS millions,EGH22,1,reported,Bank-only.
 ecobank-ghana,FY2021,balance_sheet,customer_deposits,12877.525,GHS millions,EGH22,1,reported,Bank-only.
 ecobank-ghana,FY2021,balance_sheet,due_to_banks,1653.588,GHS millions,EGH22,1,reported,Bank-only deposits from banks.
@@ -63,8 +63,8 @@ ecobank-ghana,FY2022,balance_sheet,investment_securities,6617.538,GHS millions,E
 ecobank-ghana,FY2022,balance_sheet,loans_and_advances_gross,,GHS millions,,,unavailable,Not disclosed in GSE summary statements (net loans only).
 ecobank-ghana,FY2022,balance_sheet,loan_loss_allowance,,GHS millions,,,unavailable,Not disclosed in GSE summary statements (net loans only).
 ecobank-ghana,FY2022,balance_sheet,loans_and_advances_net,8802.239,GHS millions,EGH22,1,reported,Bank-only net loans and advances to customers.
-ecobank-ghana,FY2022,balance_sheet,property_equipment_intangibles,1274.1,GHS millions,EGH22,1,derived,Property and equipment plus intangible assets.
-ecobank-ghana,FY2022,balance_sheet,other_assets,2636.591,GHS millions,EGH22,1,derived,"Sum of non-pledged trading assets, other assets, tax assets, ROU assets, investment in subsidiaries, and assets held for sale."
+ecobank-ghana,FY2022,balance_sheet,property_equipment_intangibles,1312.770,GHS millions,EGH22,1,derived,"Property and equipment, intangible assets, and ROU assets (38.670m moved from other_assets per MODEL-SPEC)."
+ecobank-ghana,FY2022,balance_sheet,other_assets,2597.921,GHS millions,EGH22,1,derived,"Sum of non-pledged trading assets, other assets, tax assets, investment in subsidiaries, and assets held for sale (excludes ROU assets of 38.670m, classified in property_equipment_intangibles)."
 ecobank-ghana,FY2022,balance_sheet,total_assets,25774.085,GHS millions,EGH22,1,reported,Bank-only.
 ecobank-ghana,FY2022,balance_sheet,customer_deposits,19590.418,GHS millions,EGH22,1,reported,Bank-only.
 ecobank-ghana,FY2022,balance_sheet,due_to_banks,2635.136,GHS millions,EGH22,1,reported,Bank-only deposits from banks.
@@ -106,8 +106,8 @@ ecobank-ghana,FY2023,balance_sheet,investment_securities,9779.471,GHS millions,E
 ecobank-ghana,FY2023,balance_sheet,loans_and_advances_gross,,GHS millions,,,unavailable,Not disclosed in GSE summary statements (net loans only).
 ecobank-ghana,FY2023,balance_sheet,loan_loss_allowance,,GHS millions,,,unavailable,Not disclosed in GSE summary statements (net loans only).
 ecobank-ghana,FY2023,balance_sheet,loans_and_advances_net,9444.131,GHS millions,EGH24,1,reported,Bank-only net loans and advances to customers.
-ecobank-ghana,FY2023,balance_sheet,property_equipment_intangibles,1264.748,GHS millions,EGH24,1,derived,Property and equipment plus intangible assets.
-ecobank-ghana,FY2023,balance_sheet,other_assets,1777.035,GHS millions,EGH24,1,derived,"Sum of non-pledged trading assets, other assets, tax assets, ROU assets, investment in subsidiaries, and assets held for sale."
+ecobank-ghana,FY2023,balance_sheet,property_equipment_intangibles,1327.220,GHS millions,EGH24,1,derived,"Property and equipment, intangible assets, and ROU assets (62.472m moved from other_assets per MODEL-SPEC)."
+ecobank-ghana,FY2023,balance_sheet,other_assets,1714.563,GHS millions,EGH24,1,derived,"Sum of non-pledged trading assets, other assets, tax assets, investment in subsidiaries, and assets held for sale (excludes ROU assets of 62.472m, classified in property_equipment_intangibles)."
 ecobank-ghana,FY2023,balance_sheet,total_assets,33520.636,GHS millions,EGH24,1,reported,Bank-only.
 ecobank-ghana,FY2023,balance_sheet,customer_deposits,25642.117,GHS millions,EGH24,1,reported,Bank-only.
 ecobank-ghana,FY2023,balance_sheet,due_to_banks,3010.316,GHS millions,EGH24,1,reported,Bank-only deposits from banks.
@@ -148,8 +148,8 @@ ecobank-ghana,FY2024,balance_sheet,investment_securities,10299.404,GHS millions,
 ecobank-ghana,FY2024,balance_sheet,loans_and_advances_gross,,GHS millions,,,unavailable,Not disclosed in GSE summary statements (net loans only).
 ecobank-ghana,FY2024,balance_sheet,loan_loss_allowance,,GHS millions,,,unavailable,Not disclosed in GSE summary statements (net loans only).
 ecobank-ghana,FY2024,balance_sheet,loans_and_advances_net,10533.576,GHS millions,EGH25,1,reported,Bank-only net loans and advances to customers.
-ecobank-ghana,FY2024,balance_sheet,property_equipment_intangibles,1261.622,GHS millions,EGH25,1,derived,Property and equipment plus intangible assets.
-ecobank-ghana,FY2024,balance_sheet,other_assets,2909.665,GHS millions,EGH25,1,derived,"Sum of non-pledged trading assets, other assets, tax assets, ROU assets, investment in subsidiaries, and assets held for sale."
+ecobank-ghana,FY2024,balance_sheet,property_equipment_intangibles,1353.975,GHS millions,EGH25,1,derived,"Property and equipment, intangible assets, and ROU assets (92.353m moved from other_assets per MODEL-SPEC)."
+ecobank-ghana,FY2024,balance_sheet,other_assets,2817.312,GHS millions,EGH25,1,derived,"Sum of non-pledged trading assets, other assets, tax assets, investment in subsidiaries, and assets held for sale (excludes ROU assets of 92.353m, classified in property_equipment_intangibles)."
 ecobank-ghana,FY2024,balance_sheet,total_assets,45651.283,GHS millions,EGH25,1,reported,Bank-only.
 ecobank-ghana,FY2024,balance_sheet,customer_deposits,31198.857,GHS millions,EGH25,1,reported,Bank-only.
 ecobank-ghana,FY2024,balance_sheet,due_to_banks,7010.399,GHS millions,EGH25,1,reported,Bank-only deposits from banks.
@@ -190,8 +190,8 @@ ecobank-ghana,FY2025,balance_sheet,investment_securities,14101.974,GHS millions,
 ecobank-ghana,FY2025,balance_sheet,loans_and_advances_gross,,GHS millions,,,unavailable,Not disclosed in GSE summary statements (net loans only).
 ecobank-ghana,FY2025,balance_sheet,loan_loss_allowance,,GHS millions,,,unavailable,Not disclosed in GSE summary statements (net loans only).
 ecobank-ghana,FY2025,balance_sheet,loans_and_advances_net,13058.608,GHS millions,EGH25,1,reported,Bank-only net loans and advances to customers.
-ecobank-ghana,FY2025,balance_sheet,property_equipment_intangibles,1298.803,GHS millions,EGH25,1,derived,Property and equipment plus intangible assets.
-ecobank-ghana,FY2025,balance_sheet,other_assets,2745.667,GHS millions,EGH25,1,derived,"Sum of non-pledged trading assets, other assets, tax assets, ROU assets, investment in subsidiaries, and assets held for sale."
+ecobank-ghana,FY2025,balance_sheet,property_equipment_intangibles,1389.626,GHS millions,EGH25,1,derived,"Property and equipment, intangible assets, and ROU assets (90.823m moved from other_assets per MODEL-SPEC)."
+ecobank-ghana,FY2025,balance_sheet,other_assets,2654.844,GHS millions,EGH25,1,derived,"Sum of non-pledged trading assets, other assets, tax assets, investment in subsidiaries, and assets held for sale (excludes ROU assets of 90.823m, classified in property_equipment_intangibles)."
 ecobank-ghana,FY2025,balance_sheet,total_assets,46076.237,GHS millions,EGH25,1,reported,Bank-only.
 ecobank-ghana,FY2025,balance_sheet,customer_deposits,30397.499,GHS millions,EGH25,1,reported,Bank-only.
 ecobank-ghana,FY2025,balance_sheet,due_to_banks,4763.955,GHS millions,EGH25,1,reported,Bank-only deposits from banks.
@@ -232,8 +232,8 @@ ecobank-ghana,9M-2026,balance_sheet,investment_securities,15641.223,GHS millions
 ecobank-ghana,9M-2026,balance_sheet,loans_and_advances_gross,,GHS millions,,,unavailable,Not disclosed in GSE summary statements (net loans only).
 ecobank-ghana,9M-2026,balance_sheet,loan_loss_allowance,,GHS millions,,,unavailable,Not disclosed in GSE summary statements (net loans only).
 ecobank-ghana,9M-2026,balance_sheet,loans_and_advances_net,16162.005,GHS millions,EGH26Q3,1,reported,Bank-only net loans and advances to customers.
-ecobank-ghana,9M-2026,balance_sheet,property_equipment_intangibles,1288.006,GHS millions,EGH26Q3,1,derived,Property and equipment plus intangible assets.
-ecobank-ghana,9M-2026,balance_sheet,other_assets,3592.488,GHS millions,EGH26Q3,1,derived,"Sum of non-pledged trading assets, other assets, tax assets, ROU assets, investment in subsidiaries, and assets held for sale."
+ecobank-ghana,9M-2026,balance_sheet,property_equipment_intangibles,1361.731,GHS millions,EGH26Q3,1,derived,"Property and equipment, intangible assets, and ROU assets (73.725m moved from other_assets per MODEL-SPEC)."
+ecobank-ghana,9M-2026,balance_sheet,other_assets,3518.763,GHS millions,EGH26Q3,1,derived,"Sum of non-pledged trading assets, other assets, tax assets, investment in subsidiaries, and assets held for sale (excludes ROU assets of 73.725m, classified in property_equipment_intangibles)."
 ecobank-ghana,9M-2026,balance_sheet,total_assets,53807.3,GHS millions,EGH26Q3,1,reported,Bank-only.
 ecobank-ghana,9M-2026,balance_sheet,customer_deposits,36100.191,GHS millions,EGH26Q3,1,reported,Bank-only.
 ecobank-ghana,9M-2026,balance_sheet,due_to_banks,6900.227,GHS millions,EGH26Q3,1,reported,Bank-only deposits from banks.
