@@ -1,601 +1,616 @@
 bank,scenario,period,statement,line_item,value,unit,source_id,status,notes
-adb,base,FY2026E,income_statement,interest_income,1529.626,GHS millions,MODEL-ESTIMATE,estimated,FY26E = 9M-26 + iterative Q4; FY27E+ = avg loans*y_loan + avg inv*y_inv (macro.csv).
+adb,base,FY2026E,income_statement,interest_income,1589.331,GHS millions,MODEL-ESTIMATE,estimated,FY26E = 9M-26 + iterative Q4; FY27E+ = avg loans*y_loan + avg inv*y_inv + short-bill income on non-reserve cash (macro.csv).
+adb,base,FY2026E,income_statement,x_interest_on_cash_short_bills,59.408,GHS millions,MODEL-ESTIMATE,estimated,"Memo, included in interest_income: short_bill_share x non-reserve cash x 91-day bill rate. FY2026E is the Q4 piece only (9M actual already contains its own)."
 adb,base,FY2026E,income_statement,interest_expense,546.893,GHS millions,MODEL-ESTIMATE,estimated,Linked to macro.csv tbill_91d_pct.
-adb,base,FY2026E,income_statement,net_interest_income,982.733,GHS millions,MODEL-ESTIMATE,estimated,interest_income - interest_expense.
+adb,base,FY2026E,income_statement,net_interest_income,1042.438,GHS millions,MODEL-ESTIMATE,estimated,interest_income - interest_expense.
 adb,base,FY2026E,income_statement,fee_commission_income,280.473,GHS millions,MODEL-ESTIMATE,estimated,Linked to nominal GDP (macro.csv).
 adb,base,FY2026E,income_statement,fee_commission_expense,28.838,GHS millions,MODEL-ESTIMATE,estimated,0.8x fee growth.
 adb,base,FY2026E,income_statement,net_trading_income,100.664,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ trading growth.
 adb,base,FY2026E,income_statement,other_operating_income,25.619,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ 3% growth.
-adb,base,FY2026E,income_statement,total_operating_income,1360.651,GHS millions,MODEL-ESTIMATE,estimated,NII + net fees + trading + other operating income.
+adb,base,FY2026E,income_statement,total_operating_income,1420.356,GHS millions,MODEL-ESTIMATE,estimated,NII + net fees + trading + other operating income.
 adb,base,FY2026E,income_statement,staff_costs,557.766,GHS millions,MODEL-ESTIMATE,estimated,Linked to inflation_cpi_pct (macro.csv).
 adb,base,FY2026E,income_statement,depreciation_amortisation,69.490,GHS millions,MODEL-ESTIMATE,estimated,3% annual growth.
 adb,base,FY2026E,income_statement,other_operating_expenses,304.651,GHS millions,MODEL-ESTIMATE,estimated,Linked to inflation_cpi_pct (macro.csv).
 adb,base,FY2026E,income_statement,impairment_charge,-24.138,GHS millions,MODEL-ESTIMATE,estimated,avg net loans * cost_of_risk (independent of NPL path).
-adb,base,FY2026E,income_statement,profit_before_tax,452.883,GHS millions,MODEL-ESTIMATE,estimated,total_operating_income - opex - impairment.
-adb,base,FY2026E,income_statement,income_tax,176.812,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax * tax_rate.
-adb,base,FY2026E,income_statement,profit_after_tax,276.071,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax - income_tax.
-adb,base,FY2026E,balance_sheet,cash_and_bog_balances,10505.038,GHS millions,MODEL-ESTIMATE,estimated,Proxy screen >= crr_pct (20%) on customer_deposits; includes due_from_banks aggregate.
+adb,base,FY2026E,income_statement,profit_before_tax,512.587,GHS millions,MODEL-ESTIMATE,estimated,total_operating_income - opex - impairment.
+adb,base,FY2026E,income_statement,income_tax,189.074,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax * tax_rate.
+adb,base,FY2026E,income_statement,profit_after_tax,323.513,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax - income_tax.
+adb,base,FY2026E,balance_sheet,cash_and_bog_balances,10533.503,GHS millions,MODEL-ESTIMATE,estimated,Proxy screen >= crr_pct (20%) on customer_deposits; includes due_from_banks aggregate. Non-reserve part earns short_bill_share x 91-day bill rate (v2).
 adb,base,FY2026E,balance_sheet,due_from_banks,,GHS millions,MODEL-ESTIMATE,unavailable,Combined with cash_and_bog_balances (same basis as FY23-9M26).
-adb,base,FY2026E,balance_sheet,investment_securities,7003.358,GHS millions,MODEL-ESTIMATE,estimated,Balancing liquid asset; solved iteratively with interest_income.
+adb,base,FY2026E,balance_sheet,investment_securities,7022.335,GHS millions,MODEL-ESTIMATE,estimated,Balancing liquid asset; solved iteratively with interest_income.
 adb,base,FY2026E,balance_sheet,loans_and_advances_gross,,GHS millions,MODEL-ESTIMATE,unavailable,Not disclosed in GSE summary statements.
 adb,base,FY2026E,balance_sheet,loan_loss_allowance,,GHS millions,MODEL-ESTIMATE,unavailable,Not disclosed in GSE summary statements.
 adb,base,FY2026E,balance_sheet,loans_and_advances_net,2183.432,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ linked to nominal GDP.
-adb,base,FY2026E,balance_sheet,property_equipment_intangibles,195.432,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
-adb,base,FY2026E,balance_sheet,other_assets,754.036,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
-adb,base,FY2026E,balance_sheet,total_assets,20641.296,GHS millions,MODEL-ESTIMATE,estimated,total_liabilities + total_equity.
+adb,base,FY2026E,balance_sheet,property_equipment_intangibles,222.104,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
+adb,base,FY2026E,balance_sheet,other_assets,727.364,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
+adb,base,FY2026E,balance_sheet,total_assets,20688.738,GHS millions,MODEL-ESTIMATE,estimated,total_liabilities + total_equity.
 adb,base,FY2026E,balance_sheet,customer_deposits,15746.786,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ linked to nominal GDP.
 adb,base,FY2026E,balance_sheet,due_to_banks,,GHS millions,MODEL-ESTIMATE,unavailable,Not separately reported.
 adb,base,FY2026E,balance_sheet,borrowings,1665.710,GHS millions,MODEL-ESTIMATE,estimated,Held flat.
 adb,base,FY2026E,balance_sheet,other_liabilities,492.596,GHS millions,MODEL-ESTIMATE,estimated,Tracks CPI inflation.
 adb,base,FY2026E,balance_sheet,total_liabilities,17905.092,GHS millions,MODEL-ESTIMATE,estimated,Sum of liability items.
 adb,base,FY2026E,balance_sheet,stated_capital,2146.745,GHS millions,MODEL-ESTIMATE,estimated,Held flat (no automatic capital injection assumed).
-adb,base,FY2026E,balance_sheet,retained_earnings,-1548.503,GHS millions,MODEL-ESTIMATE,estimated,Prior retained_earnings + PAT - dividends.
+adb,base,FY2026E,balance_sheet,retained_earnings,-1501.061,GHS millions,MODEL-ESTIMATE,estimated,Prior retained_earnings + PAT - dividends.
 adb,base,FY2026E,balance_sheet,reserves_other,2137.962,GHS millions,MODEL-ESTIMATE,estimated,Held flat.
-adb,base,FY2026E,balance_sheet,total_equity,2736.204,GHS millions,MODEL-ESTIMATE,estimated,stated_capital + retained_earnings + reserves_other.
-adb,base,FY2026E,ratios,car_pct,26.678,%,MODEL-ESTIMATE,estimated,Proxy anchored on 9M-2026 reported 27.41% CAR (no automatic capital injection assumed).
+adb,base,FY2026E,balance_sheet,total_equity,2783.646,GHS millions,MODEL-ESTIMATE,estimated,stated_capital + retained_earnings + reserves_other.
+adb,base,FY2026E,ratios,car_pct,27.309,%,MODEL-ESTIMATE,estimated,"v2 proxy: (FY2025 regulatory capital + change in book equity since FY2025) / (total assets x RWA density), anchored on reported 9M-2026 CAR 27.41%; no capital injection assumed."
 adb,base,FY2026E,ratios,tier1_pct,,%,MODEL-ESTIMATE,unavailable,Not projected separately.
 adb,base,FY2026E,ratios,npl_pct,61.320,%,MODEL-ESTIMATE,estimated,Estimated recovery path from 66.32% in 9M-2026.
 adb,base,FY2026E,ratios,ldr_pct,13.866,%,MODEL-ESTIMATE,estimated,loans_and_advances_net / customer_deposits * 100 (net basis).
-adb,base,FY2026E,ratios,cost_to_income_pct,68.490,%,MODEL-ESTIMATE,estimated,opex / total_operating_income * 100.
-adb,base,FY2026E,ratios,roe_pct,10.589,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_equity * 100 (blank when avg_eq <= 0).
-adb,base,FY2026E,ratios,roa_pct,1.433,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_assets * 100.
-adb,base,FY2027E,income_statement,interest_income,1233.371,GHS millions,MODEL-ESTIMATE,estimated,FY26E = 9M-26 + iterative Q4; FY27E+ = avg loans*y_loan + avg inv*y_inv (macro.csv).
+adb,base,FY2026E,ratios,cost_to_income_pct,65.611,%,MODEL-ESTIMATE,estimated,opex / total_operating_income * 100.
+adb,base,FY2026E,ratios,roe_pct,12.297,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_equity * 100 (blank when avg_eq <= 0).
+adb,base,FY2026E,ratios,roa_pct,1.677,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_assets * 100.
+adb,base,FY2027E,income_statement,interest_income,1469.819,GHS millions,MODEL-ESTIMATE,estimated,FY26E = 9M-26 + iterative Q4; FY27E+ = avg loans*y_loan + avg inv*y_inv + short-bill income on non-reserve cash (macro.csv).
+adb,base,FY2027E,income_statement,x_interest_on_cash_short_bills,229.424,GHS millions,MODEL-ESTIMATE,estimated,"Memo, included in interest_income: short_bill_share x non-reserve cash x 91-day bill rate. FY2026E is the Q4 piece only (9M actual already contains its own)."
 adb,base,FY2027E,income_statement,interest_expense,737.048,GHS millions,MODEL-ESTIMATE,estimated,Linked to macro.csv tbill_91d_pct.
-adb,base,FY2027E,income_statement,net_interest_income,496.323,GHS millions,MODEL-ESTIMATE,estimated,interest_income - interest_expense.
+adb,base,FY2027E,income_statement,net_interest_income,732.771,GHS millions,MODEL-ESTIMATE,estimated,interest_income - interest_expense.
 adb,base,FY2027E,income_statement,fee_commission_income,316.584,GHS millions,MODEL-ESTIMATE,estimated,Linked to nominal GDP (macro.csv).
 adb,base,FY2027E,income_statement,fee_commission_expense,31.808,GHS millions,MODEL-ESTIMATE,estimated,0.8x fee growth.
 adb,base,FY2027E,income_statement,net_trading_income,108.717,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ trading growth.
 adb,base,FY2027E,income_statement,other_operating_income,26.388,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ 3% growth.
-adb,base,FY2027E,income_statement,total_operating_income,916.204,GHS millions,MODEL-ESTIMATE,estimated,NII + net fees + trading + other operating income.
+adb,base,FY2027E,income_statement,total_operating_income,1152.652,GHS millions,MODEL-ESTIMATE,estimated,NII + net fees + trading + other operating income.
 adb,base,FY2027E,income_statement,staff_costs,610.754,GHS millions,MODEL-ESTIMATE,estimated,Linked to inflation_cpi_pct (macro.csv).
 adb,base,FY2027E,income_statement,depreciation_amortisation,71.575,GHS millions,MODEL-ESTIMATE,estimated,3% annual growth.
 adb,base,FY2027E,income_statement,other_operating_expenses,333.593,GHS millions,MODEL-ESTIMATE,estimated,Linked to inflation_cpi_pct (macro.csv).
 adb,base,FY2027E,income_statement,impairment_charge,46.589,GHS millions,MODEL-ESTIMATE,estimated,avg net loans * cost_of_risk (independent of NPL path).
-adb,base,FY2027E,income_statement,profit_before_tax,-146.306,GHS millions,MODEL-ESTIMATE,estimated,total_operating_income - opex - impairment.
-adb,base,FY2027E,income_statement,income_tax,0.000,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax * tax_rate.
-adb,base,FY2027E,income_statement,profit_after_tax,-146.306,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax - income_tax.
-adb,base,FY2027E,balance_sheet,cash_and_bog_balances,11469.246,GHS millions,MODEL-ESTIMATE,estimated,Proxy screen >= crr_pct (20%) on customer_deposits; includes due_from_banks aggregate.
+adb,base,FY2027E,income_statement,profit_before_tax,90.141,GHS millions,MODEL-ESTIMATE,estimated,total_operating_income - opex - impairment.
+adb,base,FY2027E,income_statement,income_tax,32.451,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax * tax_rate.
+adb,base,FY2027E,income_statement,profit_after_tax,57.690,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax - income_tax.
+adb,base,FY2027E,balance_sheet,cash_and_bog_balances,11620.109,GHS millions,MODEL-ESTIMATE,estimated,Proxy screen >= crr_pct (20%) on customer_deposits; includes due_from_banks aggregate. Non-reserve part earns short_bill_share x 91-day bill rate (v2).
 adb,base,FY2027E,balance_sheet,due_from_banks,,GHS millions,MODEL-ESTIMATE,unavailable,Combined with cash_and_bog_balances (same basis as FY23-9M26).
-adb,base,FY2027E,balance_sheet,investment_securities,7646.164,GHS millions,MODEL-ESTIMATE,estimated,Balancing liquid asset; solved iteratively with interest_income.
+adb,base,FY2027E,balance_sheet,investment_securities,7746.739,GHS millions,MODEL-ESTIMATE,estimated,Balancing liquid asset; solved iteratively with interest_income.
 adb,base,FY2027E,balance_sheet,loans_and_advances_gross,,GHS millions,MODEL-ESTIMATE,unavailable,Not disclosed in GSE summary statements.
 adb,base,FY2027E,balance_sheet,loan_loss_allowance,,GHS millions,MODEL-ESTIMATE,unavailable,Not disclosed in GSE summary statements.
 adb,base,FY2027E,balance_sheet,loans_and_advances_net,2475.466,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ linked to nominal GDP.
-adb,base,FY2027E,balance_sheet,property_equipment_intangibles,199.341,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
-adb,base,FY2027E,balance_sheet,other_assets,769.116,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
-adb,base,FY2027E,balance_sheet,total_assets,22559.333,GHS millions,MODEL-ESTIMATE,estimated,total_liabilities + total_equity.
+adb,base,FY2027E,balance_sheet,property_equipment_intangibles,226.546,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
+adb,base,FY2027E,balance_sheet,other_assets,741.911,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
+adb,base,FY2027E,balance_sheet,total_assets,22810.772,GHS millions,MODEL-ESTIMATE,estimated,total_liabilities + total_equity.
 adb,base,FY2027E,balance_sheet,customer_deposits,17774.185,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ linked to nominal GDP.
 adb,base,FY2027E,balance_sheet,due_to_banks,,GHS millions,MODEL-ESTIMATE,unavailable,Not separately reported.
 adb,base,FY2027E,balance_sheet,borrowings,1665.710,GHS millions,MODEL-ESTIMATE,estimated,Held flat.
 adb,base,FY2027E,balance_sheet,other_liabilities,529.541,GHS millions,MODEL-ESTIMATE,estimated,Tracks CPI inflation.
 adb,base,FY2027E,balance_sheet,total_liabilities,19969.436,GHS millions,MODEL-ESTIMATE,estimated,Sum of liability items.
 adb,base,FY2027E,balance_sheet,stated_capital,2146.745,GHS millions,MODEL-ESTIMATE,estimated,Held flat (no automatic capital injection assumed).
-adb,base,FY2027E,balance_sheet,retained_earnings,-1694.810,GHS millions,MODEL-ESTIMATE,estimated,Prior retained_earnings + PAT - dividends.
+adb,base,FY2027E,balance_sheet,retained_earnings,-1443.371,GHS millions,MODEL-ESTIMATE,estimated,Prior retained_earnings + PAT - dividends.
 adb,base,FY2027E,balance_sheet,reserves_other,2137.962,GHS millions,MODEL-ESTIMATE,estimated,Held flat.
-adb,base,FY2027E,balance_sheet,total_equity,2589.897,GHS millions,MODEL-ESTIMATE,estimated,stated_capital + retained_earnings + reserves_other.
-adb,base,FY2027E,ratios,car_pct,23.104,%,MODEL-ESTIMATE,estimated,Proxy anchored on 9M-2026 reported 27.41% CAR (no automatic capital injection assumed).
+adb,base,FY2027E,balance_sheet,total_equity,2841.336,GHS millions,MODEL-ESTIMATE,estimated,stated_capital + retained_earnings + reserves_other.
+adb,base,FY2027E,ratios,car_pct,25.831,%,MODEL-ESTIMATE,estimated,"v2 proxy: (FY2025 regulatory capital + change in book equity since FY2025) / (total assets x RWA density), anchored on reported 9M-2026 CAR 27.41%; no capital injection assumed."
 adb,base,FY2027E,ratios,tier1_pct,,%,MODEL-ESTIMATE,unavailable,Not projected separately.
 adb,base,FY2027E,ratios,npl_pct,56.320,%,MODEL-ESTIMATE,estimated,Estimated recovery path from 66.32% in 9M-2026.
 adb,base,FY2027E,ratios,ldr_pct,13.927,%,MODEL-ESTIMATE,estimated,loans_and_advances_net / customer_deposits * 100 (net basis).
-adb,base,FY2027E,ratios,cost_to_income_pct,110.884,%,MODEL-ESTIMATE,estimated,opex / total_operating_income * 100.
-adb,base,FY2027E,ratios,roe_pct,-5.494,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_equity * 100 (blank when avg_eq <= 0).
-adb,base,FY2027E,ratios,roa_pct,-0.677,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_assets * 100.
-adb,base,FY2028E,income_statement,interest_income,1307.568,GHS millions,MODEL-ESTIMATE,estimated,FY26E = 9M-26 + iterative Q4; FY27E+ = avg loans*y_loan + avg inv*y_inv (macro.csv).
+adb,base,FY2027E,ratios,cost_to_income_pct,88.138,%,MODEL-ESTIMATE,estimated,opex / total_operating_income * 100.
+adb,base,FY2027E,ratios,roe_pct,2.051,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_equity * 100 (blank when avg_eq <= 0).
+adb,base,FY2027E,ratios,roa_pct,0.265,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_assets * 100.
+adb,base,FY2028E,income_statement,interest_income,1621.297,GHS millions,MODEL-ESTIMATE,estimated,FY26E = 9M-26 + iterative Q4; FY27E+ = avg loans*y_loan + avg inv*y_inv + short-bill income on non-reserve cash (macro.csv).
+adb,base,FY2028E,income_statement,x_interest_on_cash_short_bills,295.355,GHS millions,MODEL-ESTIMATE,estimated,"Memo, included in interest_income: short_bill_share x non-reserve cash x 91-day bill rate. FY2026E is the Q4 piece only (9M actual already contains its own)."
 adb,base,FY2028E,income_statement,interest_expense,1031.538,GHS millions,MODEL-ESTIMATE,estimated,Linked to macro.csv tbill_91d_pct.
-adb,base,FY2028E,income_statement,net_interest_income,276.030,GHS millions,MODEL-ESTIMATE,estimated,interest_income - interest_expense.
+adb,base,FY2028E,income_statement,net_interest_income,589.759,GHS millions,MODEL-ESTIMATE,estimated,interest_income - interest_expense.
 adb,base,FY2028E,income_statement,fee_commission_income,359.006,GHS millions,MODEL-ESTIMATE,estimated,Linked to nominal GDP (macro.csv).
 adb,base,FY2028E,income_statement,fee_commission_expense,35.218,GHS millions,MODEL-ESTIMATE,estimated,0.8x fee growth.
 adb,base,FY2028E,income_statement,net_trading_income,117.415,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ trading growth.
 adb,base,FY2028E,income_statement,other_operating_income,27.180,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ 3% growth.
-adb,base,FY2028E,income_statement,total_operating_income,744.412,GHS millions,MODEL-ESTIMATE,estimated,NII + net fees + trading + other operating income.
+adb,base,FY2028E,income_statement,total_operating_income,1058.141,GHS millions,MODEL-ESTIMATE,estimated,NII + net fees + trading + other operating income.
 adb,base,FY2028E,income_statement,staff_costs,671.829,GHS millions,MODEL-ESTIMATE,estimated,Linked to inflation_cpi_pct (macro.csv).
 adb,base,FY2028E,income_statement,depreciation_amortisation,73.722,GHS millions,MODEL-ESTIMATE,estimated,3% annual growth.
 adb,base,FY2028E,income_statement,other_operating_expenses,366.952,GHS millions,MODEL-ESTIMATE,estimated,Linked to inflation_cpi_pct (macro.csv).
 adb,base,FY2028E,income_statement,impairment_charge,47.655,GHS millions,MODEL-ESTIMATE,estimated,avg net loans * cost_of_risk (independent of NPL path).
-adb,base,FY2028E,income_statement,profit_before_tax,-415.747,GHS millions,MODEL-ESTIMATE,estimated,total_operating_income - opex - impairment.
+adb,base,FY2028E,income_statement,profit_before_tax,-102.018,GHS millions,MODEL-ESTIMATE,estimated,total_operating_income - opex - impairment.
 adb,base,FY2028E,income_statement,income_tax,0.000,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax * tax_rate.
-adb,base,FY2028E,income_statement,profit_after_tax,-415.747,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax - income_tax.
-adb,base,FY2028E,balance_sheet,cash_and_bog_balances,12456.185,GHS millions,MODEL-ESTIMATE,estimated,Proxy screen >= crr_pct (20%) on customer_deposits; includes due_from_banks aggregate.
+adb,base,FY2028E,income_statement,profit_after_tax,-102.018,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax - income_tax.
+adb,base,FY2028E,balance_sheet,cash_and_bog_balances,12795.286,GHS millions,MODEL-ESTIMATE,estimated,Proxy screen >= crr_pct (20%) on customer_deposits; includes due_from_banks aggregate. Non-reserve part earns short_bill_share x 91-day bill rate (v2).
 adb,base,FY2028E,balance_sheet,due_from_banks,,GHS millions,MODEL-ESTIMATE,unavailable,Combined with cash_and_bog_balances (same basis as FY23-9M26).
-adb,base,FY2028E,balance_sheet,investment_securities,8304.123,GHS millions,MODEL-ESTIMATE,estimated,Balancing liquid asset; solved iteratively with interest_income.
+adb,base,FY2028E,balance_sheet,investment_securities,8530.190,GHS millions,MODEL-ESTIMATE,estimated,Balancing liquid asset; solved iteratively with interest_income.
 adb,base,FY2028E,balance_sheet,loans_and_advances_gross,,GHS millions,MODEL-ESTIMATE,unavailable,Not disclosed in GSE summary statements.
 adb,base,FY2028E,balance_sheet,loan_loss_allowance,,GHS millions,MODEL-ESTIMATE,unavailable,Not disclosed in GSE summary statements.
 adb,base,FY2028E,balance_sheet,loans_and_advances_net,2819.556,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ linked to nominal GDP.
-adb,base,FY2028E,balance_sheet,property_equipment_intangibles,203.327,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
-adb,base,FY2028E,balance_sheet,other_assets,784.499,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
-adb,base,FY2028E,balance_sheet,total_assets,24567.690,GHS millions,MODEL-ESTIMATE,estimated,total_liabilities + total_equity.
+adb,base,FY2028E,balance_sheet,property_equipment_intangibles,231.077,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
+adb,base,FY2028E,balance_sheet,other_assets,756.749,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
+adb,base,FY2028E,balance_sheet,total_assets,25132.858,GHS millions,MODEL-ESTIMATE,estimated,total_liabilities + total_equity.
 adb,base,FY2028E,balance_sheet,customer_deposits,20155.925,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ linked to nominal GDP.
 adb,base,FY2028E,balance_sheet,due_to_banks,,GHS millions,MODEL-ESTIMATE,unavailable,Not separately reported.
 adb,base,FY2028E,balance_sheet,borrowings,1665.710,GHS millions,MODEL-ESTIMATE,estimated,Held flat.
 adb,base,FY2028E,balance_sheet,other_liabilities,571.904,GHS millions,MODEL-ESTIMATE,estimated,Tracks CPI inflation.
 adb,base,FY2028E,balance_sheet,total_liabilities,22393.540,GHS millions,MODEL-ESTIMATE,estimated,Sum of liability items.
 adb,base,FY2028E,balance_sheet,stated_capital,2146.745,GHS millions,MODEL-ESTIMATE,estimated,Held flat (no automatic capital injection assumed).
-adb,base,FY2028E,balance_sheet,retained_earnings,-2110.557,GHS millions,MODEL-ESTIMATE,estimated,Prior retained_earnings + PAT - dividends.
+adb,base,FY2028E,balance_sheet,retained_earnings,-1545.389,GHS millions,MODEL-ESTIMATE,estimated,Prior retained_earnings + PAT - dividends.
 adb,base,FY2028E,balance_sheet,reserves_other,2137.962,GHS millions,MODEL-ESTIMATE,estimated,Held flat.
-adb,base,FY2028E,balance_sheet,total_equity,2174.150,GHS millions,MODEL-ESTIMATE,estimated,stated_capital + retained_earnings + reserves_other.
-adb,base,FY2028E,ratios,car_pct,17.810,%,MODEL-ESTIMATE,estimated,Proxy anchored on 9M-2026 reported 27.41% CAR (no automatic capital injection assumed).
+adb,base,FY2028E,balance_sheet,total_equity,2739.318,GHS millions,MODEL-ESTIMATE,estimated,stated_capital + retained_earnings + reserves_other.
+adb,base,FY2028E,ratios,car_pct,21.739,%,MODEL-ESTIMATE,estimated,"v2 proxy: (FY2025 regulatory capital + change in book equity since FY2025) / (total assets x RWA density), anchored on reported 9M-2026 CAR 27.41%; no capital injection assumed."
 adb,base,FY2028E,ratios,tier1_pct,,%,MODEL-ESTIMATE,unavailable,Not projected separately.
 adb,base,FY2028E,ratios,npl_pct,51.320,%,MODEL-ESTIMATE,estimated,Estimated recovery path from 66.32% in 9M-2026.
 adb,base,FY2028E,ratios,ldr_pct,13.989,%,MODEL-ESTIMATE,estimated,loans_and_advances_net / customer_deposits * 100 (net basis).
-adb,base,FY2028E,ratios,cost_to_income_pct,149.447,%,MODEL-ESTIMATE,estimated,opex / total_operating_income * 100.
-adb,base,FY2028E,ratios,roe_pct,-17.454,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_equity * 100 (blank when avg_eq <= 0).
-adb,base,FY2028E,ratios,roa_pct,-1.764,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_assets * 100.
-adb,base,FY2029E,income_statement,interest_income,1377.709,GHS millions,MODEL-ESTIMATE,estimated,FY26E = 9M-26 + iterative Q4; FY27E+ = avg loans*y_loan + avg inv*y_inv (macro.csv).
+adb,base,FY2028E,ratios,cost_to_income_pct,105.138,%,MODEL-ESTIMATE,estimated,opex / total_operating_income * 100.
+adb,base,FY2028E,ratios,roe_pct,-3.656,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_equity * 100 (blank when avg_eq <= 0).
+adb,base,FY2028E,ratios,roa_pct,-0.426,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_assets * 100.
+adb,base,FY2029E,income_statement,interest_income,1778.409,GHS millions,MODEL-ESTIMATE,estimated,FY26E = 9M-26 + iterative Q4; FY27E+ = avg loans*y_loan + avg inv*y_inv + short-bill income on non-reserve cash (macro.csv).
+adb,base,FY2029E,income_statement,x_interest_on_cash_short_bills,367.783,GHS millions,MODEL-ESTIMATE,estimated,"Memo, included in interest_income: short_bill_share x non-reserve cash x 91-day bill rate. FY2026E is the Q4 piece only (9M actual already contains its own)."
 adb,base,FY2029E,income_statement,interest_expense,1389.019,GHS millions,MODEL-ESTIMATE,estimated,Linked to macro.csv tbill_91d_pct.
-adb,base,FY2029E,income_statement,net_interest_income,-11.310,GHS millions,MODEL-ESTIMATE,estimated,interest_income - interest_expense.
+adb,base,FY2029E,income_statement,net_interest_income,389.390,GHS millions,MODEL-ESTIMATE,estimated,interest_income - interest_expense.
 adb,base,FY2029E,income_statement,fee_commission_income,406.337,GHS millions,MODEL-ESTIMATE,estimated,Linked to nominal GDP (macro.csv).
 adb,base,FY2029E,income_statement,fee_commission_expense,38.933,GHS millions,MODEL-ESTIMATE,estimated,0.8x fee growth.
 adb,base,FY2029E,income_statement,net_trading_income,126.808,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ trading growth.
 adb,base,FY2029E,income_statement,other_operating_income,27.995,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ 3% growth.
-adb,base,FY2029E,income_statement,total_operating_income,510.898,GHS millions,MODEL-ESTIMATE,estimated,NII + net fees + trading + other operating income.
+adb,base,FY2029E,income_statement,total_operating_income,911.598,GHS millions,MODEL-ESTIMATE,estimated,NII + net fees + trading + other operating income.
 adb,base,FY2029E,income_statement,staff_costs,739.012,GHS millions,MODEL-ESTIMATE,estimated,Linked to inflation_cpi_pct (macro.csv).
 adb,base,FY2029E,income_statement,depreciation_amortisation,75.934,GHS millions,MODEL-ESTIMATE,estimated,3% annual growth.
 adb,base,FY2029E,income_statement,other_operating_expenses,403.647,GHS millions,MODEL-ESTIMATE,estimated,Linked to inflation_cpi_pct (macro.csv).
 adb,base,FY2029E,income_statement,impairment_charge,48.200,GHS millions,MODEL-ESTIMATE,estimated,avg net loans * cost_of_risk (independent of NPL path).
-adb,base,FY2029E,income_statement,profit_before_tax,-755.895,GHS millions,MODEL-ESTIMATE,estimated,total_operating_income - opex - impairment.
+adb,base,FY2029E,income_statement,profit_before_tax,-355.195,GHS millions,MODEL-ESTIMATE,estimated,total_operating_income - opex - impairment.
 adb,base,FY2029E,income_statement,income_tax,0.000,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax * tax_rate.
-adb,base,FY2029E,income_statement,profit_after_tax,-755.895,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax - income_tax.
-adb,base,FY2029E,balance_sheet,cash_and_bog_balances,13381.162,GHS millions,MODEL-ESTIMATE,estimated,Proxy screen >= crr_pct (20%) on customer_deposits; includes due_from_banks aggregate.
+adb,base,FY2029E,income_statement,profit_after_tax,-355.195,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax - income_tax.
+adb,base,FY2029E,balance_sheet,cash_and_bog_balances,13960.684,GHS millions,MODEL-ESTIMATE,estimated,Proxy screen >= crr_pct (20%) on customer_deposits; includes due_from_banks aggregate. Non-reserve part earns short_bill_share x 91-day bill rate (v2).
 adb,base,FY2029E,balance_sheet,due_from_banks,,GHS millions,MODEL-ESTIMATE,unavailable,Combined with cash_and_bog_balances (same basis as FY23-9M26).
-adb,base,FY2029E,balance_sheet,investment_securities,8920.775,GHS millions,MODEL-ESTIMATE,estimated,Balancing liquid asset; solved iteratively with interest_income.
+adb,base,FY2029E,balance_sheet,investment_securities,9307.122,GHS millions,MODEL-ESTIMATE,estimated,Balancing liquid asset; solved iteratively with interest_income.
 adb,base,FY2029E,balance_sheet,loans_and_advances_gross,,GHS millions,MODEL-ESTIMATE,unavailable,Not disclosed in GSE summary statements.
 adb,base,FY2029E,balance_sheet,loan_loss_allowance,,GHS millions,MODEL-ESTIMATE,unavailable,Not disclosed in GSE summary statements.
 adb,base,FY2029E,balance_sheet,loans_and_advances_net,3205.384,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ linked to nominal GDP.
-adb,base,FY2029E,balance_sheet,property_equipment_intangibles,207.394,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
-adb,base,FY2029E,balance_sheet,other_assets,800.189,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
-adb,base,FY2029E,balance_sheet,total_assets,26514.904,GHS millions,MODEL-ESTIMATE,estimated,total_liabilities + total_equity.
+adb,base,FY2029E,balance_sheet,property_equipment_intangibles,235.699,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
+adb,base,FY2029E,balance_sheet,other_assets,771.884,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
+adb,base,FY2029E,balance_sheet,total_assets,27480.773,GHS millions,MODEL-ESTIMATE,estimated,total_liabilities + total_equity.
 adb,base,FY2029E,balance_sheet,customer_deposits,22813.283,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ linked to nominal GDP.
 adb,base,FY2029E,balance_sheet,due_to_banks,,GHS millions,MODEL-ESTIMATE,unavailable,Not separately reported.
 adb,base,FY2029E,balance_sheet,borrowings,1665.710,GHS millions,MODEL-ESTIMATE,estimated,Held flat.
 adb,base,FY2029E,balance_sheet,other_liabilities,617.657,GHS millions,MODEL-ESTIMATE,estimated,Tracks CPI inflation.
 adb,base,FY2029E,balance_sheet,total_liabilities,25096.649,GHS millions,MODEL-ESTIMATE,estimated,Sum of liability items.
 adb,base,FY2029E,balance_sheet,stated_capital,2146.745,GHS millions,MODEL-ESTIMATE,estimated,Held flat (no automatic capital injection assumed).
-adb,base,FY2029E,balance_sheet,retained_earnings,-2866.452,GHS millions,MODEL-ESTIMATE,estimated,Prior retained_earnings + PAT - dividends.
+adb,base,FY2029E,balance_sheet,retained_earnings,-1900.584,GHS millions,MODEL-ESTIMATE,estimated,Prior retained_earnings + PAT - dividends.
 adb,base,FY2029E,balance_sheet,reserves_other,2137.962,GHS millions,MODEL-ESTIMATE,estimated,Held flat.
-adb,base,FY2029E,balance_sheet,total_equity,1418.255,GHS millions,MODEL-ESTIMATE,estimated,stated_capital + retained_earnings + reserves_other.
-adb,base,FY2029E,ratios,car_pct,10.765,%,MODEL-ESTIMATE,estimated,Proxy anchored on 9M-2026 reported 27.41% CAR (no automatic capital injection assumed).
+adb,base,FY2029E,balance_sheet,total_equity,2384.123,GHS millions,MODEL-ESTIMATE,estimated,stated_capital + retained_earnings + reserves_other.
+adb,base,FY2029E,ratios,car_pct,14.449,%,MODEL-ESTIMATE,estimated,"v2 proxy: (FY2025 regulatory capital + change in book equity since FY2025) / (total assets x RWA density), anchored on reported 9M-2026 CAR 27.41%; no capital injection assumed."
 adb,base,FY2029E,ratios,tier1_pct,,%,MODEL-ESTIMATE,unavailable,Not projected separately.
 adb,base,FY2029E,ratios,npl_pct,46.320,%,MODEL-ESTIMATE,estimated,Estimated recovery path from 66.32% in 9M-2026.
 adb,base,FY2029E,ratios,ldr_pct,14.051,%,MODEL-ESTIMATE,estimated,loans_and_advances_net / customer_deposits * 100 (net basis).
-adb,base,FY2029E,ratios,cost_to_income_pct,238.520,%,MODEL-ESTIMATE,estimated,opex / total_operating_income * 100.
-adb,base,FY2029E,ratios,roe_pct,-42.083,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_equity * 100 (blank when avg_eq <= 0).
-adb,base,FY2029E,ratios,roa_pct,-2.960,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_assets * 100.
-adb,base,FY2030E,income_statement,interest_income,1483.763,GHS millions,MODEL-ESTIMATE,estimated,FY26E = 9M-26 + iterative Q4; FY27E+ = avg loans*y_loan + avg inv*y_inv (macro.csv).
+adb,base,FY2029E,ratios,cost_to_income_pct,133.677,%,MODEL-ESTIMATE,estimated,opex / total_operating_income * 100.
+adb,base,FY2029E,ratios,roe_pct,-13.865,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_equity * 100 (blank when avg_eq <= 0).
+adb,base,FY2029E,ratios,roa_pct,-1.350,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_assets * 100.
+adb,base,FY2030E,income_statement,interest_income,1953.894,GHS millions,MODEL-ESTIMATE,estimated,FY26E = 9M-26 + iterative Q4; FY27E+ = avg loans*y_loan + avg inv*y_inv + short-bill income on non-reserve cash (macro.csv).
+adb,base,FY2030E,income_statement,x_interest_on_cash_short_bills,419.693,GHS millions,MODEL-ESTIMATE,estimated,"Memo, included in interest_income: short_bill_share x non-reserve cash x 91-day bill rate. FY2026E is the Q4 piece only (9M actual already contains its own)."
 adb,base,FY2030E,income_statement,interest_expense,1688.885,GHS millions,MODEL-ESTIMATE,estimated,Linked to macro.csv tbill_91d_pct.
-adb,base,FY2030E,income_statement,net_interest_income,-205.122,GHS millions,MODEL-ESTIMATE,estimated,interest_income - interest_expense.
+adb,base,FY2030E,income_statement,net_interest_income,265.009,GHS millions,MODEL-ESTIMATE,estimated,interest_income - interest_expense.
 adb,base,FY2030E,income_statement,fee_commission_income,459.909,GHS millions,MODEL-ESTIMATE,estimated,Linked to nominal GDP (macro.csv).
 adb,base,FY2030E,income_statement,fee_commission_expense,43.039,GHS millions,MODEL-ESTIMATE,estimated,0.8x fee growth.
 adb,base,FY2030E,income_statement,net_trading_income,136.952,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ trading growth.
 adb,base,FY2030E,income_statement,other_operating_income,28.835,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ 3% growth.
-adb,base,FY2030E,income_statement,total_operating_income,377.535,GHS millions,MODEL-ESTIMATE,estimated,NII + net fees + trading + other operating income.
+adb,base,FY2030E,income_statement,total_operating_income,847.667,GHS millions,MODEL-ESTIMATE,estimated,NII + net fees + trading + other operating income.
 adb,base,FY2030E,income_statement,staff_costs,812.913,GHS millions,MODEL-ESTIMATE,estimated,Linked to inflation_cpi_pct (macro.csv).
 adb,base,FY2030E,income_statement,depreciation_amortisation,78.212,GHS millions,MODEL-ESTIMATE,estimated,3% annual growth.
 adb,base,FY2030E,income_statement,other_operating_expenses,444.012,GHS millions,MODEL-ESTIMATE,estimated,Linked to inflation_cpi_pct (macro.csv).
 adb,base,FY2030E,income_statement,impairment_charge,51.370,GHS millions,MODEL-ESTIMATE,estimated,avg net loans * cost_of_risk (independent of NPL path).
-adb,base,FY2030E,income_statement,profit_before_tax,-1008.973,GHS millions,MODEL-ESTIMATE,estimated,total_operating_income - opex - impairment.
+adb,base,FY2030E,income_statement,profit_before_tax,-538.841,GHS millions,MODEL-ESTIMATE,estimated,total_operating_income - opex - impairment.
 adb,base,FY2030E,income_statement,income_tax,0.000,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax * tax_rate.
-adb,base,FY2030E,income_statement,profit_after_tax,-1008.973,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax - income_tax.
-adb,base,FY2030E,balance_sheet,cash_and_bog_balances,14334.782,GHS millions,MODEL-ESTIMATE,estimated,Proxy screen >= crr_pct (20%) on customer_deposits; includes due_from_banks aggregate.
+adb,base,FY2030E,income_statement,profit_after_tax,-538.841,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax - income_tax.
+adb,base,FY2030E,balance_sheet,cash_and_bog_balances,15196.383,GHS millions,MODEL-ESTIMATE,estimated,Proxy screen >= crr_pct (20%) on customer_deposits; includes due_from_banks aggregate. Non-reserve part earns short_bill_share x 91-day bill rate (v2).
 adb,base,FY2030E,balance_sheet,due_from_banks,,GHS millions,MODEL-ESTIMATE,unavailable,Combined with cash_and_bog_balances (same basis as FY23-9M26).
-adb,base,FY2030E,balance_sheet,investment_securities,9556.521,GHS millions,MODEL-ESTIMATE,estimated,Balancing liquid asset; solved iteratively with interest_income.
+adb,base,FY2030E,balance_sheet,investment_securities,10130.922,GHS millions,MODEL-ESTIMATE,estimated,Balancing liquid asset; solved iteratively with interest_income.
 adb,base,FY2030E,balance_sheet,loans_and_advances_gross,,GHS millions,MODEL-ESTIMATE,unavailable,Not disclosed in GSE summary statements.
 adb,base,FY2030E,balance_sheet,loan_loss_allowance,,GHS millions,MODEL-ESTIMATE,unavailable,Not disclosed in GSE summary statements.
 adb,base,FY2030E,balance_sheet,loans_and_advances_net,3644.009,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ linked to nominal GDP.
-adb,base,FY2030E,balance_sheet,property_equipment_intangibles,211.542,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
-adb,base,FY2030E,balance_sheet,other_assets,816.192,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
-adb,base,FY2030E,balance_sheet,total_assets,28563.047,GHS millions,MODEL-ESTIMATE,estimated,total_liabilities + total_equity.
+adb,base,FY2030E,balance_sheet,property_equipment_intangibles,240.413,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
+adb,base,FY2030E,balance_sheet,other_assets,787.322,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
+adb,base,FY2030E,balance_sheet,total_assets,29999.047,GHS millions,MODEL-ESTIMATE,estimated,total_liabilities + total_equity.
 adb,base,FY2030E,balance_sheet,customer_deposits,25820.986,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ linked to nominal GDP.
 adb,base,FY2030E,balance_sheet,due_to_banks,,GHS millions,MODEL-ESTIMATE,unavailable,Not separately reported.
 adb,base,FY2030E,balance_sheet,borrowings,1665.710,GHS millions,MODEL-ESTIMATE,estimated,Held flat.
 adb,base,FY2030E,balance_sheet,other_liabilities,667.069,GHS millions,MODEL-ESTIMATE,estimated,Tracks CPI inflation.
 adb,base,FY2030E,balance_sheet,total_liabilities,28153.765,GHS millions,MODEL-ESTIMATE,estimated,Sum of liability items.
 adb,base,FY2030E,balance_sheet,stated_capital,2146.745,GHS millions,MODEL-ESTIMATE,estimated,Held flat (no automatic capital injection assumed).
-adb,base,FY2030E,balance_sheet,retained_earnings,-3875.425,GHS millions,MODEL-ESTIMATE,estimated,Prior retained_earnings + PAT - dividends.
+adb,base,FY2030E,balance_sheet,retained_earnings,-2439.425,GHS millions,MODEL-ESTIMATE,estimated,Prior retained_earnings + PAT - dividends.
 adb,base,FY2030E,balance_sheet,reserves_other,2137.962,GHS millions,MODEL-ESTIMATE,estimated,Held flat.
-adb,base,FY2030E,balance_sheet,total_equity,409.282,GHS millions,MODEL-ESTIMATE,estimated,stated_capital + retained_earnings + reserves_other.
-adb,base,FY2030E,ratios,car_pct,2.884,%,MODEL-ESTIMATE,estimated,Proxy anchored on 9M-2026 reported 27.41% CAR (no automatic capital injection assumed).
+adb,base,FY2030E,balance_sheet,total_equity,1845.282,GHS millions,MODEL-ESTIMATE,estimated,stated_capital + retained_earnings + reserves_other.
+adb,base,FY2030E,ratios,car_pct,5.687,%,MODEL-ESTIMATE,estimated,"v2 proxy: (FY2025 regulatory capital + change in book equity since FY2025) / (total assets x RWA density), anchored on reported 9M-2026 CAR 27.41%; no capital injection assumed."
 adb,base,FY2030E,ratios,tier1_pct,,%,MODEL-ESTIMATE,unavailable,Not projected separately.
 adb,base,FY2030E,ratios,npl_pct,41.320,%,MODEL-ESTIMATE,estimated,Estimated recovery path from 66.32% in 9M-2026.
 adb,base,FY2030E,ratios,ldr_pct,14.113,%,MODEL-ESTIMATE,estimated,loans_and_advances_net / customer_deposits * 100 (net basis).
-adb,base,FY2030E,ratios,cost_to_income_pct,353.646,%,MODEL-ESTIMATE,estimated,opex / total_operating_income * 100.
-adb,base,FY2030E,ratios,roe_pct,-110.419,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_equity * 100 (blank when avg_eq <= 0).
-adb,base,FY2030E,ratios,roa_pct,-3.664,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_assets * 100.
-adb,downside,FY2026E,income_statement,interest_income,1530.193,GHS millions,MODEL-ESTIMATE,estimated,FY26E = 9M-26 + iterative Q4; FY27E+ = avg loans*y_loan + avg inv*y_inv (macro.csv).
+adb,base,FY2030E,ratios,cost_to_income_pct,157.507,%,MODEL-ESTIMATE,estimated,opex / total_operating_income * 100.
+adb,base,FY2030E,ratios,roe_pct,-25.481,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_equity * 100 (blank when avg_eq <= 0).
+adb,base,FY2030E,ratios,roa_pct,-1.875,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_assets * 100.
+adb,downside,FY2026E,income_statement,interest_income,1589.634,GHS millions,MODEL-ESTIMATE,estimated,FY26E = 9M-26 + iterative Q4; FY27E+ = avg loans*y_loan + avg inv*y_inv + short-bill income on non-reserve cash (macro.csv).
+adb,downside,FY2026E,income_statement,x_interest_on_cash_short_bills,59.141,GHS millions,MODEL-ESTIMATE,estimated,"Memo, included in interest_income: short_bill_share x non-reserve cash x 91-day bill rate. FY2026E is the Q4 piece only (9M actual already contains its own)."
 adb,downside,FY2026E,income_statement,interest_expense,567.034,GHS millions,MODEL-ESTIMATE,estimated,Linked to macro.csv tbill_91d_pct.
-adb,downside,FY2026E,income_statement,net_interest_income,963.160,GHS millions,MODEL-ESTIMATE,estimated,interest_income - interest_expense.
+adb,downside,FY2026E,income_statement,net_interest_income,1022.601,GHS millions,MODEL-ESTIMATE,estimated,interest_income - interest_expense.
 adb,downside,FY2026E,income_statement,fee_commission_income,269.261,GHS millions,MODEL-ESTIMATE,estimated,Linked to nominal GDP (macro.csv).
 adb,downside,FY2026E,income_statement,fee_commission_expense,27.685,GHS millions,MODEL-ESTIMATE,estimated,0.8x fee growth.
 adb,downside,FY2026E,income_statement,net_trading_income,96.640,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ trading growth.
 adb,downside,FY2026E,income_statement,other_operating_income,24.595,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ 3% growth.
-adb,downside,FY2026E,income_statement,total_operating_income,1325.971,GHS millions,MODEL-ESTIMATE,estimated,NII + net fees + trading + other operating income.
+adb,downside,FY2026E,income_statement,total_operating_income,1385.412,GHS millions,MODEL-ESTIMATE,estimated,NII + net fees + trading + other operating income.
 adb,downside,FY2026E,income_statement,staff_costs,535.469,GHS millions,MODEL-ESTIMATE,estimated,Linked to inflation_cpi_pct (macro.csv).
 adb,downside,FY2026E,income_statement,depreciation_amortisation,66.712,GHS millions,MODEL-ESTIMATE,estimated,3% annual growth.
 adb,downside,FY2026E,income_statement,other_operating_expenses,292.472,GHS millions,MODEL-ESTIMATE,estimated,Linked to inflation_cpi_pct (macro.csv).
 adb,downside,FY2026E,income_statement,impairment_charge,-18.839,GHS millions,MODEL-ESTIMATE,estimated,avg net loans * cost_of_risk (independent of NPL path).
-adb,downside,FY2026E,income_statement,profit_before_tax,450.156,GHS millions,MODEL-ESTIMATE,estimated,total_operating_income - opex - impairment.
-adb,downside,FY2026E,income_statement,income_tax,176.812,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax * tax_rate.
-adb,downside,FY2026E,income_statement,profit_after_tax,273.344,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax - income_tax.
-adb,downside,FY2026E,balance_sheet,cash_and_bog_balances,10390.575,GHS millions,MODEL-ESTIMATE,estimated,Proxy screen >= crr_pct (20%) on customer_deposits; includes due_from_banks aggregate.
+adb,downside,FY2026E,income_statement,profit_before_tax,509.597,GHS millions,MODEL-ESTIMATE,estimated,total_operating_income - opex - impairment.
+adb,downside,FY2026E,income_statement,income_tax,188.309,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax * tax_rate.
+adb,downside,FY2026E,income_statement,profit_after_tax,321.288,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax - income_tax.
+adb,downside,FY2026E,balance_sheet,cash_and_bog_balances,10419.342,GHS millions,MODEL-ESTIMATE,estimated,Proxy screen >= crr_pct (20%) on customer_deposits; includes due_from_banks aggregate. Non-reserve part earns short_bill_share x 91-day bill rate (v2).
 adb,downside,FY2026E,balance_sheet,due_from_banks,,GHS millions,MODEL-ESTIMATE,unavailable,Combined with cash_and_bog_balances (same basis as FY23-9M26).
-adb,downside,FY2026E,balance_sheet,investment_securities,6927.050,GHS millions,MODEL-ESTIMATE,estimated,Balancing liquid asset; solved iteratively with interest_income.
+adb,downside,FY2026E,balance_sheet,investment_securities,6946.228,GHS millions,MODEL-ESTIMATE,estimated,Balancing liquid asset; solved iteratively with interest_income.
 adb,downside,FY2026E,balance_sheet,loans_and_advances_gross,,GHS millions,MODEL-ESTIMATE,unavailable,Not disclosed in GSE summary statements.
 adb,downside,FY2026E,balance_sheet,loan_loss_allowance,,GHS millions,MODEL-ESTIMATE,unavailable,Not disclosed in GSE summary statements.
 adb,downside,FY2026E,balance_sheet,loans_and_advances_net,2141.035,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ linked to nominal GDP.
-adb,downside,FY2026E,balance_sheet,property_equipment_intangibles,195.432,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
-adb,downside,FY2026E,balance_sheet,other_assets,754.036,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
-adb,downside,FY2026E,balance_sheet,total_assets,20408.128,GHS millions,MODEL-ESTIMATE,estimated,total_liabilities + total_equity.
+adb,downside,FY2026E,balance_sheet,property_equipment_intangibles,222.104,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
+adb,downside,FY2026E,balance_sheet,other_assets,727.364,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
+adb,downside,FY2026E,balance_sheet,total_assets,20456.073,GHS millions,MODEL-ESTIMATE,estimated,total_liabilities + total_equity.
 adb,downside,FY2026E,balance_sheet,customer_deposits,15516.345,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ linked to nominal GDP.
 adb,downside,FY2026E,balance_sheet,due_to_banks,,GHS millions,MODEL-ESTIMATE,unavailable,Not separately reported.
 adb,downside,FY2026E,balance_sheet,borrowings,1665.710,GHS millions,MODEL-ESTIMATE,estimated,Held flat.
 adb,downside,FY2026E,balance_sheet,other_liabilities,492.596,GHS millions,MODEL-ESTIMATE,estimated,Tracks CPI inflation.
 adb,downside,FY2026E,balance_sheet,total_liabilities,17674.651,GHS millions,MODEL-ESTIMATE,estimated,Sum of liability items.
 adb,downside,FY2026E,balance_sheet,stated_capital,2146.745,GHS millions,MODEL-ESTIMATE,estimated,Held flat (no automatic capital injection assumed).
-adb,downside,FY2026E,balance_sheet,retained_earnings,-1551.230,GHS millions,MODEL-ESTIMATE,estimated,Prior retained_earnings + PAT - dividends.
+adb,downside,FY2026E,balance_sheet,retained_earnings,-1503.286,GHS millions,MODEL-ESTIMATE,estimated,Prior retained_earnings + PAT - dividends.
 adb,downside,FY2026E,balance_sheet,reserves_other,2137.962,GHS millions,MODEL-ESTIMATE,estimated,Held flat.
-adb,downside,FY2026E,balance_sheet,total_equity,2733.477,GHS millions,MODEL-ESTIMATE,estimated,stated_capital + retained_earnings + reserves_other.
-adb,downside,FY2026E,ratios,car_pct,26.955,%,MODEL-ESTIMATE,estimated,Proxy anchored on 9M-2026 reported 27.41% CAR (no automatic capital injection assumed).
+adb,downside,FY2026E,balance_sheet,total_equity,2781.421,GHS millions,MODEL-ESTIMATE,estimated,stated_capital + retained_earnings + reserves_other.
+adb,downside,FY2026E,ratios,car_pct,27.574,%,MODEL-ESTIMATE,estimated,"v2 proxy: (FY2025 regulatory capital + change in book equity since FY2025) / (total assets x RWA density), anchored on reported 9M-2026 CAR 27.41%; no capital injection assumed."
 adb,downside,FY2026E,ratios,tier1_pct,,%,MODEL-ESTIMATE,unavailable,Not projected separately.
 adb,downside,FY2026E,ratios,npl_pct,64.320,%,MODEL-ESTIMATE,estimated,Estimated recovery path from 66.32% in 9M-2026.
 adb,downside,FY2026E,ratios,ldr_pct,13.799,%,MODEL-ESTIMATE,estimated,loans_and_advances_net / customer_deposits * 100 (net basis).
-adb,downside,FY2026E,ratios,cost_to_income_pct,67.472,%,MODEL-ESTIMATE,estimated,opex / total_operating_income * 100.
-adb,downside,FY2026E,ratios,roe_pct,10.490,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_equity * 100 (blank when avg_eq <= 0).
-adb,downside,FY2026E,ratios,roa_pct,1.428,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_assets * 100.
-adb,downside,FY2027E,income_statement,interest_income,1538.345,GHS millions,MODEL-ESTIMATE,estimated,FY26E = 9M-26 + iterative Q4; FY27E+ = avg loans*y_loan + avg inv*y_inv (macro.csv).
+adb,downside,FY2026E,ratios,cost_to_income_pct,64.577,%,MODEL-ESTIMATE,estimated,opex / total_operating_income * 100.
+adb,downside,FY2026E,ratios,roe_pct,12.218,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_equity * 100 (blank when avg_eq <= 0).
+adb,downside,FY2026E,ratios,roa_pct,1.676,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_assets * 100.
+adb,downside,FY2027E,income_statement,interest_income,1921.445,GHS millions,MODEL-ESTIMATE,estimated,FY26E = 9M-26 + iterative Q4; FY27E+ = avg loans*y_loan + avg inv*y_inv + short-bill income on non-reserve cash (macro.csv).
+adb,downside,FY2027E,income_statement,x_interest_on_cash_short_bills,368.730,GHS millions,MODEL-ESTIMATE,estimated,"Memo, included in interest_income: short_bill_share x non-reserve cash x 91-day bill rate. FY2026E is the Q4 piece only (9M actual already contains its own)."
 adb,downside,FY2027E,income_statement,interest_expense,1454.194,GHS millions,MODEL-ESTIMATE,estimated,Linked to macro.csv tbill_91d_pct.
-adb,downside,FY2027E,income_statement,net_interest_income,84.151,GHS millions,MODEL-ESTIMATE,estimated,interest_income - interest_expense.
+adb,downside,FY2027E,income_statement,net_interest_income,467.250,GHS millions,MODEL-ESTIMATE,estimated,interest_income - interest_expense.
 adb,downside,FY2027E,income_statement,fee_commission_income,307.846,GHS millions,MODEL-ESTIMATE,estimated,Linked to nominal GDP (macro.csv).
 adb,downside,FY2027E,income_statement,fee_commission_expense,30.859,GHS millions,MODEL-ESTIMATE,estimated,0.8x fee growth.
 adb,downside,FY2027E,income_statement,net_trading_income,101.472,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ trading growth.
 adb,downside,FY2027E,income_statement,other_operating_income,25.333,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ 3% growth.
-adb,downside,FY2027E,income_statement,total_operating_income,487.943,GHS millions,MODEL-ESTIMATE,estimated,NII + net fees + trading + other operating income.
+adb,downside,FY2027E,income_statement,total_operating_income,871.042,GHS millions,MODEL-ESTIMATE,estimated,NII + net fees + trading + other operating income.
 adb,downside,FY2027E,income_statement,staff_costs,607.757,GHS millions,MODEL-ESTIMATE,estimated,Linked to inflation_cpi_pct (macro.csv).
 adb,downside,FY2027E,income_statement,depreciation_amortisation,68.714,GHS millions,MODEL-ESTIMATE,estimated,3% annual growth.
 adb,downside,FY2027E,income_statement,other_operating_expenses,331.956,GHS millions,MODEL-ESTIMATE,estimated,Linked to inflation_cpi_pct (macro.csv).
 adb,downside,FY2027E,income_statement,impairment_charge,79.181,GHS millions,MODEL-ESTIMATE,estimated,avg net loans * cost_of_risk (independent of NPL path).
-adb,downside,FY2027E,income_statement,profit_before_tax,-599.665,GHS millions,MODEL-ESTIMATE,estimated,total_operating_income - opex - impairment.
+adb,downside,FY2027E,income_statement,profit_before_tax,-216.566,GHS millions,MODEL-ESTIMATE,estimated,total_operating_income - opex - impairment.
 adb,downside,FY2027E,income_statement,income_tax,0.000,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax * tax_rate.
-adb,downside,FY2027E,income_statement,profit_after_tax,-599.665,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax - income_tax.
-adb,downside,FY2027E,balance_sheet,cash_and_bog_balances,11100.794,GHS millions,MODEL-ESTIMATE,estimated,Proxy screen >= crr_pct (20%) on customer_deposits; includes due_from_banks aggregate.
+adb,downside,FY2027E,income_statement,profit_after_tax,-216.566,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax - income_tax.
+adb,downside,FY2027E,balance_sheet,cash_and_bog_balances,11359.421,GHS millions,MODEL-ESTIMATE,estimated,Proxy screen >= crr_pct (20%) on customer_deposits; includes due_from_banks aggregate. Non-reserve part earns short_bill_share x 91-day bill rate (v2).
 adb,downside,FY2027E,balance_sheet,due_from_banks,,GHS millions,MODEL-ESTIMATE,unavailable,Combined with cash_and_bog_balances (same basis as FY23-9M26).
-adb,downside,FY2027E,balance_sheet,investment_securities,7400.530,GHS millions,MODEL-ESTIMATE,estimated,Balancing liquid asset; solved iteratively with interest_income.
+adb,downside,FY2027E,balance_sheet,investment_securities,7572.947,GHS millions,MODEL-ESTIMATE,estimated,Balancing liquid asset; solved iteratively with interest_income.
 adb,downside,FY2027E,balance_sheet,loans_and_advances_gross,,GHS millions,MODEL-ESTIMATE,unavailable,Not disclosed in GSE summary statements.
 adb,downside,FY2027E,balance_sheet,loan_loss_allowance,,GHS millions,MODEL-ESTIMATE,unavailable,Not disclosed in GSE summary statements.
 adb,downside,FY2027E,balance_sheet,loans_and_advances_net,2383.615,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ linked to nominal GDP.
-adb,downside,FY2027E,balance_sheet,property_equipment_intangibles,199.341,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
-adb,downside,FY2027E,balance_sheet,other_assets,769.116,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
-adb,downside,FY2027E,balance_sheet,total_assets,21853.396,GHS millions,MODEL-ESTIMATE,estimated,total_liabilities + total_equity.
+adb,downside,FY2027E,balance_sheet,property_equipment_intangibles,226.546,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
+adb,downside,FY2027E,balance_sheet,other_assets,741.911,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
+adb,downside,FY2027E,balance_sheet,total_assets,22284.440,GHS millions,MODEL-ESTIMATE,estimated,total_liabilities + total_equity.
 adb,downside,FY2027E,balance_sheet,customer_deposits,17507.092,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ linked to nominal GDP.
 adb,downside,FY2027E,balance_sheet,due_to_banks,,GHS millions,MODEL-ESTIMATE,unavailable,Not separately reported.
 adb,downside,FY2027E,balance_sheet,borrowings,1665.710,GHS millions,MODEL-ESTIMATE,estimated,Held flat.
 adb,downside,FY2027E,balance_sheet,other_liabilities,546.782,GHS millions,MODEL-ESTIMATE,estimated,Tracks CPI inflation.
 adb,downside,FY2027E,balance_sheet,total_liabilities,19719.584,GHS millions,MODEL-ESTIMATE,estimated,Sum of liability items.
 adb,downside,FY2027E,balance_sheet,stated_capital,2146.745,GHS millions,MODEL-ESTIMATE,estimated,Held flat (no automatic capital injection assumed).
-adb,downside,FY2027E,balance_sheet,retained_earnings,-2150.895,GHS millions,MODEL-ESTIMATE,estimated,Prior retained_earnings + PAT - dividends.
+adb,downside,FY2027E,balance_sheet,retained_earnings,-1719.851,GHS millions,MODEL-ESTIMATE,estimated,Prior retained_earnings + PAT - dividends.
 adb,downside,FY2027E,balance_sheet,reserves_other,2137.962,GHS millions,MODEL-ESTIMATE,estimated,Held flat.
-adb,downside,FY2027E,balance_sheet,total_equity,2133.812,GHS millions,MODEL-ESTIMATE,estimated,stated_capital + retained_earnings + reserves_other.
-adb,downside,FY2027E,ratios,car_pct,19.650,%,MODEL-ESTIMATE,estimated,Proxy anchored on 9M-2026 reported 27.41% CAR (no automatic capital injection assumed).
+adb,downside,FY2027E,balance_sheet,total_equity,2564.856,GHS millions,MODEL-ESTIMATE,estimated,stated_capital + retained_earnings + reserves_other.
+adb,downside,FY2027E,ratios,car_pct,21.227,%,MODEL-ESTIMATE,estimated,"v2 proxy: (FY2025 regulatory capital + change in book equity since FY2025) / (total assets x RWA density), anchored on reported 9M-2026 CAR 27.41%; no capital injection assumed."
 adb,downside,FY2027E,ratios,tier1_pct,,%,MODEL-ESTIMATE,unavailable,Not projected separately.
 adb,downside,FY2027E,ratios,npl_pct,62.320,%,MODEL-ESTIMATE,estimated,Estimated recovery path from 66.32% in 9M-2026.
 adb,downside,FY2027E,ratios,ldr_pct,13.615,%,MODEL-ESTIMATE,estimated,loans_and_advances_net / customer_deposits * 100 (net basis).
-adb,downside,FY2027E,ratios,cost_to_income_pct,206.669,%,MODEL-ESTIMATE,estimated,opex / total_operating_income * 100.
-adb,downside,FY2027E,ratios,roe_pct,-24.641,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_equity * 100 (blank when avg_eq <= 0).
-adb,downside,FY2027E,ratios,roa_pct,-2.838,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_assets * 100.
-adb,downside,FY2028E,income_statement,interest_income,1692.144,GHS millions,MODEL-ESTIMATE,estimated,FY26E = 9M-26 + iterative Q4; FY27E+ = avg loans*y_loan + avg inv*y_inv (macro.csv).
+adb,downside,FY2027E,ratios,cost_to_income_pct,115.772,%,MODEL-ESTIMATE,estimated,opex / total_operating_income * 100.
+adb,downside,FY2027E,ratios,roe_pct,-8.102,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_equity * 100 (blank when avg_eq <= 0).
+adb,downside,FY2027E,ratios,roa_pct,-1.013,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_assets * 100.
+adb,downside,FY2028E,income_statement,interest_income,2214.208,GHS millions,MODEL-ESTIMATE,estimated,FY26E = 9M-26 + iterative Q4; FY27E+ = avg loans*y_loan + avg inv*y_inv + short-bill income on non-reserve cash (macro.csv).
+adb,downside,FY2028E,income_statement,x_interest_on_cash_short_bills,479.155,GHS millions,MODEL-ESTIMATE,estimated,"Memo, included in interest_income: short_bill_share x non-reserve cash x 91-day bill rate. FY2026E is the Q4 piece only (9M actual already contains its own)."
 adb,downside,FY2028E,income_statement,interest_expense,2029.916,GHS millions,MODEL-ESTIMATE,estimated,Linked to macro.csv tbill_91d_pct.
-adb,downside,FY2028E,income_statement,net_interest_income,-337.772,GHS millions,MODEL-ESTIMATE,estimated,interest_income - interest_expense.
+adb,downside,FY2028E,income_statement,net_interest_income,184.291,GHS millions,MODEL-ESTIMATE,estimated,interest_income - interest_expense.
 adb,downside,FY2028E,income_statement,fee_commission_income,352.076,GHS millions,MODEL-ESTIMATE,estimated,Linked to nominal GDP (macro.csv).
 adb,downside,FY2028E,income_statement,fee_commission_expense,34.406,GHS millions,MODEL-ESTIMATE,estimated,0.8x fee growth.
 adb,downside,FY2028E,income_statement,net_trading_income,106.546,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ trading growth.
 adb,downside,FY2028E,income_statement,other_operating_income,26.093,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ 3% growth.
-adb,downside,FY2028E,income_statement,total_operating_income,112.536,GHS millions,MODEL-ESTIMATE,estimated,NII + net fees + trading + other operating income.
+adb,downside,FY2028E,income_statement,total_operating_income,634.600,GHS millions,MODEL-ESTIMATE,estimated,NII + net fees + trading + other operating income.
 adb,downside,FY2028E,income_statement,staff_costs,686.766,GHS millions,MODEL-ESTIMATE,estimated,Linked to inflation_cpi_pct (macro.csv).
 adb,downside,FY2028E,income_statement,depreciation_amortisation,70.775,GHS millions,MODEL-ESTIMATE,estimated,3% annual growth.
 adb,downside,FY2028E,income_statement,other_operating_expenses,375.110,GHS millions,MODEL-ESTIMATE,estimated,Linked to inflation_cpi_pct (macro.csv).
 adb,downside,FY2028E,income_statement,impairment_charge,75.573,GHS millions,MODEL-ESTIMATE,estimated,avg net loans * cost_of_risk (independent of NPL path).
-adb,downside,FY2028E,income_statement,profit_before_tax,-1095.688,GHS millions,MODEL-ESTIMATE,estimated,total_operating_income - opex - impairment.
+adb,downside,FY2028E,income_statement,profit_before_tax,-573.624,GHS millions,MODEL-ESTIMATE,estimated,total_operating_income - opex - impairment.
 adb,downside,FY2028E,income_statement,income_tax,0.000,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax * tax_rate.
-adb,downside,FY2028E,income_statement,profit_after_tax,-1095.688,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax - income_tax.
-adb,downside,FY2028E,balance_sheet,cash_and_bog_balances,11655.268,GHS millions,MODEL-ESTIMATE,estimated,Proxy screen >= crr_pct (20%) on customer_deposits; includes due_from_banks aggregate.
+adb,downside,FY2028E,income_statement,profit_after_tax,-573.624,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax - income_tax.
+adb,downside,FY2028E,balance_sheet,cash_and_bog_balances,12227.133,GHS millions,MODEL-ESTIMATE,estimated,Proxy screen >= crr_pct (20%) on customer_deposits; includes due_from_banks aggregate. Non-reserve part earns short_bill_share x 91-day bill rate (v2).
 adb,downside,FY2028E,balance_sheet,due_from_banks,,GHS millions,MODEL-ESTIMATE,unavailable,Combined with cash_and_bog_balances (same basis as FY23-9M26).
-adb,downside,FY2028E,balance_sheet,investment_securities,7770.179,GHS millions,MODEL-ESTIMATE,estimated,Balancing liquid asset; solved iteratively with interest_income.
+adb,downside,FY2028E,balance_sheet,investment_securities,8151.422,GHS millions,MODEL-ESTIMATE,estimated,Balancing liquid asset; solved iteratively with interest_income.
 adb,downside,FY2028E,balance_sheet,loans_and_advances_gross,,GHS millions,MODEL-ESTIMATE,unavailable,Not disclosed in GSE summary statements.
 adb,downside,FY2028E,balance_sheet,loan_loss_allowance,,GHS millions,MODEL-ESTIMATE,unavailable,Not disclosed in GSE summary statements.
 adb,downside,FY2028E,balance_sheet,loans_and_advances_net,2654.572,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ linked to nominal GDP.
-adb,downside,FY2028E,balance_sheet,property_equipment_intangibles,203.327,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
-adb,downside,FY2028E,balance_sheet,other_assets,784.499,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
-adb,downside,FY2028E,balance_sheet,total_assets,23067.845,GHS millions,MODEL-ESTIMATE,estimated,total_liabilities + total_equity.
+adb,downside,FY2028E,balance_sheet,property_equipment_intangibles,231.077,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
+adb,downside,FY2028E,balance_sheet,other_assets,756.749,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
+adb,downside,FY2028E,balance_sheet,total_assets,24020.953,GHS millions,MODEL-ESTIMATE,estimated,total_liabilities + total_equity.
 adb,downside,FY2028E,balance_sheet,customer_deposits,19759.817,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ linked to nominal GDP.
 adb,downside,FY2028E,balance_sheet,due_to_banks,,GHS millions,MODEL-ESTIMATE,unavailable,Not separately reported.
 adb,downside,FY2028E,balance_sheet,borrowings,1665.710,GHS millions,MODEL-ESTIMATE,estimated,Held flat.
 adb,downside,FY2028E,balance_sheet,other_liabilities,604.194,GHS millions,MODEL-ESTIMATE,estimated,Tracks CPI inflation.
 adb,downside,FY2028E,balance_sheet,total_liabilities,22029.721,GHS millions,MODEL-ESTIMATE,estimated,Sum of liability items.
 adb,downside,FY2028E,balance_sheet,stated_capital,2146.745,GHS millions,MODEL-ESTIMATE,estimated,Held flat (no automatic capital injection assumed).
-adb,downside,FY2028E,balance_sheet,retained_earnings,-3246.583,GHS millions,MODEL-ESTIMATE,estimated,Prior retained_earnings + PAT - dividends.
+adb,downside,FY2028E,balance_sheet,retained_earnings,-2293.475,GHS millions,MODEL-ESTIMATE,estimated,Prior retained_earnings + PAT - dividends.
 adb,downside,FY2028E,balance_sheet,reserves_other,2137.962,GHS millions,MODEL-ESTIMATE,estimated,Held flat.
-adb,downside,FY2028E,balance_sheet,total_equity,1038.124,GHS millions,MODEL-ESTIMATE,estimated,stated_capital + retained_earnings + reserves_other.
-adb,downside,FY2028E,ratios,car_pct,9.057,%,MODEL-ESTIMATE,estimated,Proxy anchored on 9M-2026 reported 27.41% CAR (no automatic capital injection assumed).
+adb,downside,FY2028E,balance_sheet,total_equity,1991.232,GHS millions,MODEL-ESTIMATE,estimated,stated_capital + retained_earnings + reserves_other.
+adb,downside,FY2028E,ratios,car_pct,9.656,%,MODEL-ESTIMATE,estimated,"v2 proxy: (FY2025 regulatory capital + change in book equity since FY2025) / (total assets x RWA density), anchored on reported 9M-2026 CAR 27.41%; no capital injection assumed."
 adb,downside,FY2028E,ratios,tier1_pct,,%,MODEL-ESTIMATE,unavailable,Not projected separately.
 adb,downside,FY2028E,ratios,npl_pct,60.320,%,MODEL-ESTIMATE,estimated,Estimated recovery path from 66.32% in 9M-2026.
 adb,downside,FY2028E,ratios,ldr_pct,13.434,%,MODEL-ESTIMATE,estimated,loans_and_advances_net / customer_deposits * 100 (net basis).
-adb,downside,FY2028E,ratios,cost_to_income_pct,1006.479,%,MODEL-ESTIMATE,estimated,opex / total_operating_income * 100.
-adb,downside,FY2028E,ratios,roe_pct,-69.086,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_equity * 100 (blank when avg_eq <= 0).
-adb,downside,FY2028E,ratios,roa_pct,-4.878,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_assets * 100.
-adb,downside,FY2029E,income_statement,interest_income,1615.682,GHS millions,MODEL-ESTIMATE,estimated,FY26E = 9M-26 + iterative Q4; FY27E+ = avg loans*y_loan + avg inv*y_inv (macro.csv).
+adb,downside,FY2028E,ratios,cost_to_income_pct,178.483,%,MODEL-ESTIMATE,estimated,opex / total_operating_income * 100.
+adb,downside,FY2028E,ratios,roe_pct,-25.181,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_equity * 100 (blank when avg_eq <= 0).
+adb,downside,FY2028E,ratios,roa_pct,-2.478,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_assets * 100.
+adb,downside,FY2029E,income_statement,interest_income,2140.752,GHS millions,MODEL-ESTIMATE,estimated,FY26E = 9M-26 + iterative Q4; FY27E+ = avg loans*y_loan + avg inv*y_inv + short-bill income on non-reserve cash (macro.csv).
+adb,downside,FY2029E,income_statement,x_interest_on_cash_short_bills,458.209,GHS millions,MODEL-ESTIMATE,estimated,"Memo, included in interest_income: short_bill_share x non-reserve cash x 91-day bill rate. FY2026E is the Q4 piece only (9M actual already contains its own)."
 adb,downside,FY2029E,income_statement,interest_expense,2043.003,GHS millions,MODEL-ESTIMATE,estimated,Linked to macro.csv tbill_91d_pct.
-adb,downside,FY2029E,income_statement,net_interest_income,-427.321,GHS millions,MODEL-ESTIMATE,estimated,interest_income - interest_expense.
+adb,downside,FY2029E,income_statement,net_interest_income,97.748,GHS millions,MODEL-ESTIMATE,estimated,interest_income - interest_expense.
 adb,downside,FY2029E,income_statement,fee_commission_income,402.775,GHS millions,MODEL-ESTIMATE,estimated,Linked to nominal GDP (macro.csv).
 adb,downside,FY2029E,income_statement,fee_commission_expense,38.369,GHS millions,MODEL-ESTIMATE,estimated,0.8x fee growth.
 adb,downside,FY2029E,income_statement,net_trading_income,111.873,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ trading growth.
 adb,downside,FY2029E,income_statement,other_operating_income,26.876,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ 3% growth.
-adb,downside,FY2029E,income_statement,total_operating_income,75.832,GHS millions,MODEL-ESTIMATE,estimated,NII + net fees + trading + other operating income.
+adb,downside,FY2029E,income_statement,total_operating_income,600.902,GHS millions,MODEL-ESTIMATE,estimated,NII + net fees + trading + other operating income.
 adb,downside,FY2029E,income_statement,staff_costs,772.611,GHS millions,MODEL-ESTIMATE,estimated,Linked to inflation_cpi_pct (macro.csv).
 adb,downside,FY2029E,income_statement,depreciation_amortisation,72.898,GHS millions,MODEL-ESTIMATE,estimated,3% annual growth.
 adb,downside,FY2029E,income_statement,other_operating_expenses,421.999,GHS millions,MODEL-ESTIMATE,estimated,Linked to inflation_cpi_pct (macro.csv).
 adb,downside,FY2029E,income_statement,impairment_charge,70.147,GHS millions,MODEL-ESTIMATE,estimated,avg net loans * cost_of_risk (independent of NPL path).
-adb,downside,FY2029E,income_statement,profit_before_tax,-1261.823,GHS millions,MODEL-ESTIMATE,estimated,total_operating_income - opex - impairment.
+adb,downside,FY2029E,income_statement,profit_before_tax,-736.754,GHS millions,MODEL-ESTIMATE,estimated,total_operating_income - opex - impairment.
 adb,downside,FY2029E,income_statement,income_tax,0.000,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax * tax_rate.
-adb,downside,FY2029E,income_statement,profit_after_tax,-1261.823,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax - income_tax.
-adb,downside,FY2029E,balance_sheet,cash_and_bog_balances,12270.409,GHS millions,MODEL-ESTIMATE,estimated,Proxy screen >= crr_pct (20%) on customer_deposits; includes due_from_banks aggregate.
+adb,downside,FY2029E,income_statement,profit_after_tax,-736.754,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax - income_tax.
+adb,downside,FY2029E,balance_sheet,cash_and_bog_balances,13157.315,GHS millions,MODEL-ESTIMATE,estimated,Proxy screen >= crr_pct (20%) on customer_deposits; includes due_from_banks aggregate. Non-reserve part earns short_bill_share x 91-day bill rate (v2).
 adb,downside,FY2029E,balance_sheet,due_from_banks,,GHS millions,MODEL-ESTIMATE,unavailable,Combined with cash_and_bog_balances (same basis as FY23-9M26).
-adb,downside,FY2029E,balance_sheet,investment_securities,8180.273,GHS millions,MODEL-ESTIMATE,estimated,Balancing liquid asset; solved iteratively with interest_income.
+adb,downside,FY2029E,balance_sheet,investment_securities,8771.544,GHS millions,MODEL-ESTIMATE,estimated,Balancing liquid asset; solved iteratively with interest_income.
 adb,downside,FY2029E,balance_sheet,loans_and_advances_gross,,GHS millions,MODEL-ESTIMATE,unavailable,Not disclosed in GSE summary statements.
 adb,downside,FY2029E,balance_sheet,loan_loss_allowance,,GHS millions,MODEL-ESTIMATE,unavailable,Not disclosed in GSE summary statements.
 adb,downside,FY2029E,balance_sheet,loans_and_advances_net,2957.193,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ linked to nominal GDP.
-adb,downside,FY2029E,balance_sheet,property_equipment_intangibles,207.394,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
-adb,downside,FY2029E,balance_sheet,other_assets,800.189,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
-adb,downside,FY2029E,balance_sheet,total_assets,24415.457,GHS millions,MODEL-ESTIMATE,estimated,total_liabilities + total_equity.
+adb,downside,FY2029E,balance_sheet,property_equipment_intangibles,235.699,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
+adb,downside,FY2029E,balance_sheet,other_assets,771.884,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
+adb,downside,FY2029E,balance_sheet,total_assets,25893.635,GHS millions,MODEL-ESTIMATE,estimated,total_liabilities + total_equity.
 adb,downside,FY2029E,balance_sheet,customer_deposits,22308.834,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ linked to nominal GDP.
 adb,downside,FY2029E,balance_sheet,due_to_banks,,GHS millions,MODEL-ESTIMATE,unavailable,Not separately reported.
 adb,downside,FY2029E,balance_sheet,borrowings,1665.710,GHS millions,MODEL-ESTIMATE,estimated,Held flat.
 adb,downside,FY2029E,balance_sheet,other_liabilities,664.613,GHS millions,MODEL-ESTIMATE,estimated,Tracks CPI inflation.
 adb,downside,FY2029E,balance_sheet,total_liabilities,24639.157,GHS millions,MODEL-ESTIMATE,estimated,Sum of liability items.
 adb,downside,FY2029E,balance_sheet,stated_capital,2146.745,GHS millions,MODEL-ESTIMATE,estimated,Held flat (no automatic capital injection assumed).
-adb,downside,FY2029E,balance_sheet,retained_earnings,-4508.407,GHS millions,MODEL-ESTIMATE,estimated,Prior retained_earnings + PAT - dividends.
+adb,downside,FY2029E,balance_sheet,retained_earnings,-3030.229,GHS millions,MODEL-ESTIMATE,estimated,Prior retained_earnings + PAT - dividends.
 adb,downside,FY2029E,balance_sheet,reserves_other,2137.962,GHS millions,MODEL-ESTIMATE,estimated,Held flat.
-adb,downside,FY2029E,balance_sheet,total_equity,-223.700,GHS millions,MODEL-ESTIMATE,estimated,stated_capital + retained_earnings + reserves_other.
-adb,downside,FY2029E,ratios,car_pct,-1.844,%,MODEL-ESTIMATE,estimated,Proxy anchored on 9M-2026 reported 27.41% CAR (no automatic capital injection assumed).
+adb,downside,FY2029E,balance_sheet,total_equity,1254.478,GHS millions,MODEL-ESTIMATE,estimated,stated_capital + retained_earnings + reserves_other.
+adb,downside,FY2029E,ratios,car_pct,-3.001,%,MODEL-ESTIMATE,estimated,"v2 proxy: (FY2025 regulatory capital + change in book equity since FY2025) / (total assets x RWA density), anchored on reported 9M-2026 CAR 27.41%; no capital injection assumed."
 adb,downside,FY2029E,ratios,tier1_pct,,%,MODEL-ESTIMATE,unavailable,Not projected separately.
 adb,downside,FY2029E,ratios,npl_pct,58.320,%,MODEL-ESTIMATE,estimated,Estimated recovery path from 66.32% in 9M-2026.
 adb,downside,FY2029E,ratios,ldr_pct,13.256,%,MODEL-ESTIMATE,estimated,loans_and_advances_net / customer_deposits * 100 (net basis).
-adb,downside,FY2029E,ratios,cost_to_income_pct,1671.460,%,MODEL-ESTIMATE,estimated,opex / total_operating_income * 100.
-adb,downside,FY2029E,ratios,roe_pct,-309.869,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_equity * 100 (blank when avg_eq <= 0).
-adb,downside,FY2029E,ratios,roa_pct,-5.315,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_assets * 100.
-adb,downside,FY2030E,income_statement,interest_income,1614.710,GHS millions,MODEL-ESTIMATE,estimated,FY26E = 9M-26 + iterative Q4; FY27E+ = avg loans*y_loan + avg inv*y_inv (macro.csv).
+adb,downside,FY2029E,ratios,cost_to_income_pct,210.934,%,MODEL-ESTIMATE,estimated,opex / total_operating_income * 100.
+adb,downside,FY2029E,ratios,roe_pct,-45.399,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_equity * 100 (blank when avg_eq <= 0).
+adb,downside,FY2029E,ratios,roa_pct,-2.952,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_assets * 100.
+adb,downside,FY2030E,income_statement,interest_income,2160.040,GHS millions,MODEL-ESTIMATE,estimated,FY26E = 9M-26 + iterative Q4; FY27E+ = avg loans*y_loan + avg inv*y_inv + short-bill income on non-reserve cash (macro.csv).
+adb,downside,FY2030E,income_statement,x_interest_on_cash_short_bills,456.037,GHS millions,MODEL-ESTIMATE,estimated,"Memo, included in interest_income: short_bill_share x non-reserve cash x 91-day bill rate. FY2026E is the Q4 piece only (9M actual already contains its own)."
 adb,downside,FY2030E,income_statement,interest_expense,2155.214,GHS millions,MODEL-ESTIMATE,estimated,Linked to macro.csv tbill_91d_pct.
-adb,downside,FY2030E,income_statement,net_interest_income,-540.504,GHS millions,MODEL-ESTIMATE,estimated,interest_income - interest_expense.
+adb,downside,FY2030E,income_statement,net_interest_income,4.826,GHS millions,MODEL-ESTIMATE,estimated,interest_income - interest_expense.
 adb,downside,FY2030E,income_statement,fee_commission_income,458.680,GHS millions,MODEL-ESTIMATE,estimated,Linked to nominal GDP (macro.csv).
 adb,downside,FY2030E,income_statement,fee_commission_expense,42.630,GHS millions,MODEL-ESTIMATE,estimated,0.8x fee growth.
 adb,downside,FY2030E,income_statement,net_trading_income,117.467,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ trading growth.
 adb,downside,FY2030E,income_statement,other_operating_income,27.682,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ 3% growth.
-adb,downside,FY2030E,income_statement,total_operating_income,20.694,GHS millions,MODEL-ESTIMATE,estimated,NII + net fees + trading + other operating income.
+adb,downside,FY2030E,income_statement,total_operating_income,566.024,GHS millions,MODEL-ESTIMATE,estimated,NII + net fees + trading + other operating income.
 adb,downside,FY2030E,income_statement,staff_costs,865.325,GHS millions,MODEL-ESTIMATE,estimated,Linked to inflation_cpi_pct (macro.csv).
 adb,downside,FY2030E,income_statement,depreciation_amortisation,75.085,GHS millions,MODEL-ESTIMATE,estimated,3% annual growth.
 adb,downside,FY2030E,income_statement,other_operating_expenses,472.639,GHS millions,MODEL-ESTIMATE,estimated,Linked to inflation_cpi_pct (macro.csv).
 adb,downside,FY2030E,income_statement,impairment_charge,68.597,GHS millions,MODEL-ESTIMATE,estimated,avg net loans * cost_of_risk (independent of NPL path).
-adb,downside,FY2030E,income_statement,profit_before_tax,-1460.952,GHS millions,MODEL-ESTIMATE,estimated,total_operating_income - opex - impairment.
+adb,downside,FY2030E,income_statement,profit_before_tax,-915.622,GHS millions,MODEL-ESTIMATE,estimated,total_operating_income - opex - impairment.
 adb,downside,FY2030E,income_statement,income_tax,0.000,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax * tax_rate.
-adb,downside,FY2030E,income_statement,profit_after_tax,-1460.952,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax - income_tax.
-adb,downside,FY2030E,balance_sheet,cash_and_bog_balances,12883.684,GHS millions,MODEL-ESTIMATE,estimated,Proxy screen >= crr_pct (20%) on customer_deposits; includes due_from_banks aggregate.
+adb,downside,FY2030E,income_statement,profit_after_tax,-915.622,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax - income_tax.
+adb,downside,FY2030E,balance_sheet,cash_and_bog_balances,14097.789,GHS millions,MODEL-ESTIMATE,estimated,Proxy screen >= crr_pct (20%) on customer_deposits; includes due_from_banks aggregate. Non-reserve part earns short_bill_share x 91-day bill rate (v2).
 adb,downside,FY2030E,balance_sheet,due_from_banks,,GHS millions,MODEL-ESTIMATE,unavailable,Combined with cash_and_bog_balances (same basis as FY23-9M26).
-adb,downside,FY2030E,balance_sheet,investment_securities,8589.123,GHS millions,MODEL-ESTIMATE,estimated,Balancing liquid asset; solved iteratively with interest_income.
+adb,downside,FY2030E,balance_sheet,investment_securities,9398.526,GHS millions,MODEL-ESTIMATE,estimated,Balancing liquid asset; solved iteratively with interest_income.
 adb,downside,FY2030E,balance_sheet,loans_and_advances_gross,,GHS millions,MODEL-ESTIMATE,unavailable,Not disclosed in GSE summary statements.
 adb,downside,FY2030E,balance_sheet,loan_loss_allowance,,GHS millions,MODEL-ESTIMATE,unavailable,Not disclosed in GSE summary statements.
 adb,downside,FY2030E,balance_sheet,loans_and_advances_net,3278.936,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ linked to nominal GDP.
-adb,downside,FY2030E,balance_sheet,property_equipment_intangibles,211.542,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
-adb,downside,FY2030E,balance_sheet,other_assets,816.192,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
-adb,downside,FY2030E,balance_sheet,total_assets,25779.477,GHS millions,MODEL-ESTIMATE,estimated,total_liabilities + total_equity.
+adb,downside,FY2030E,balance_sheet,property_equipment_intangibles,240.413,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
+adb,downside,FY2030E,balance_sheet,other_assets,787.322,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
+adb,downside,FY2030E,balance_sheet,total_assets,27802.985,GHS millions,MODEL-ESTIMATE,estimated,total_liabilities + total_equity.
 adb,downside,FY2030E,balance_sheet,customer_deposits,25070.667,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ linked to nominal GDP.
 adb,downside,FY2030E,balance_sheet,due_to_banks,,GHS millions,MODEL-ESTIMATE,unavailable,Not separately reported.
 adb,downside,FY2030E,balance_sheet,borrowings,1665.710,GHS millions,MODEL-ESTIMATE,estimated,Held flat.
 adb,downside,FY2030E,balance_sheet,other_liabilities,727.752,GHS millions,MODEL-ESTIMATE,estimated,Tracks CPI inflation.
 adb,downside,FY2030E,balance_sheet,total_liabilities,27464.129,GHS millions,MODEL-ESTIMATE,estimated,Sum of liability items.
 adb,downside,FY2030E,balance_sheet,stated_capital,2146.745,GHS millions,MODEL-ESTIMATE,estimated,Held flat (no automatic capital injection assumed).
-adb,downside,FY2030E,balance_sheet,retained_earnings,-5969.358,GHS millions,MODEL-ESTIMATE,estimated,Prior retained_earnings + PAT - dividends.
+adb,downside,FY2030E,balance_sheet,retained_earnings,-3945.851,GHS millions,MODEL-ESTIMATE,estimated,Prior retained_earnings + PAT - dividends.
 adb,downside,FY2030E,balance_sheet,reserves_other,2137.962,GHS millions,MODEL-ESTIMATE,estimated,Held flat.
-adb,downside,FY2030E,balance_sheet,total_equity,-1684.651,GHS millions,MODEL-ESTIMATE,estimated,stated_capital + retained_earnings + reserves_other.
-adb,downside,FY2030E,ratios,car_pct,-13.151,%,MODEL-ESTIMATE,estimated,Proxy anchored on 9M-2026 reported 27.41% CAR (no automatic capital injection assumed).
+adb,downside,FY2030E,balance_sheet,total_equity,338.856,GHS millions,MODEL-ESTIMATE,estimated,stated_capital + retained_earnings + reserves_other.
+adb,downside,FY2030E,ratios,car_pct,-16.636,%,MODEL-ESTIMATE,estimated,"v2 proxy: (FY2025 regulatory capital + change in book equity since FY2025) / (total assets x RWA density), anchored on reported 9M-2026 CAR 27.41%; no capital injection assumed."
 adb,downside,FY2030E,ratios,tier1_pct,,%,MODEL-ESTIMATE,unavailable,Not projected separately.
 adb,downside,FY2030E,ratios,npl_pct,56.320,%,MODEL-ESTIMATE,estimated,Estimated recovery path from 66.32% in 9M-2026.
 adb,downside,FY2030E,ratios,ldr_pct,13.079,%,MODEL-ESTIMATE,estimated,loans_and_advances_net / customer_deposits * 100 (net basis).
-adb,downside,FY2030E,ratios,cost_to_income_pct,6828.167,%,MODEL-ESTIMATE,estimated,opex / total_operating_income * 100.
-adb,downside,FY2030E,ratios,roe_pct,,%,MODEL-ESTIMATE,unavailable,profit_after_tax / average total_equity * 100 (blank when avg_eq <= 0).
-adb,downside,FY2030E,ratios,roa_pct,-5.821,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_assets * 100.
-adb,upside,FY2026E,income_statement,interest_income,1528.273,GHS millions,MODEL-ESTIMATE,estimated,FY26E = 9M-26 + iterative Q4; FY27E+ = avg loans*y_loan + avg inv*y_inv (macro.csv).
+adb,downside,FY2030E,ratios,cost_to_income_pct,249.645,%,MODEL-ESTIMATE,estimated,opex / total_operating_income * 100.
+adb,downside,FY2030E,ratios,roe_pct,-114.932,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_equity * 100 (blank when avg_eq <= 0).
+adb,downside,FY2030E,ratios,roa_pct,-3.410,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_assets * 100.
+adb,upside,FY2026E,income_statement,interest_income,1588.165,GHS millions,MODEL-ESTIMATE,estimated,FY26E = 9M-26 + iterative Q4; FY27E+ = avg loans*y_loan + avg inv*y_inv + short-bill income on non-reserve cash (macro.csv).
+adb,upside,FY2026E,income_statement,x_interest_on_cash_short_bills,59.617,GHS millions,MODEL-ESTIMATE,estimated,"Memo, included in interest_income: short_bill_share x non-reserve cash x 91-day bill rate. FY2026E is the Q4 piece only (9M actual already contains its own)."
 adb,upside,FY2026E,income_statement,interest_expense,526.100,GHS millions,MODEL-ESTIMATE,estimated,Linked to macro.csv tbill_91d_pct.
-adb,upside,FY2026E,income_statement,net_interest_income,1002.173,GHS millions,MODEL-ESTIMATE,estimated,interest_income - interest_expense.
+adb,upside,FY2026E,income_statement,net_interest_income,1062.066,GHS millions,MODEL-ESTIMATE,estimated,interest_income - interest_expense.
 adb,upside,FY2026E,income_statement,fee_commission_income,286.090,GHS millions,MODEL-ESTIMATE,estimated,Linked to nominal GDP (macro.csv).
 adb,upside,FY2026E,income_statement,fee_commission_expense,29.415,GHS millions,MODEL-ESTIMATE,estimated,0.8x fee growth.
 adb,upside,FY2026E,income_statement,net_trading_income,102.680,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ trading growth.
 adb,upside,FY2026E,income_statement,other_operating_income,26.132,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ 3% growth.
-adb,upside,FY2026E,income_statement,total_operating_income,1387.660,GHS millions,MODEL-ESTIMATE,estimated,NII + net fees + trading + other operating income.
+adb,upside,FY2026E,income_statement,total_operating_income,1447.552,GHS millions,MODEL-ESTIMATE,estimated,NII + net fees + trading + other operating income.
 adb,upside,FY2026E,income_statement,staff_costs,568.936,GHS millions,MODEL-ESTIMATE,estimated,Linked to inflation_cpi_pct (macro.csv).
 adb,upside,FY2026E,income_statement,depreciation_amortisation,70.882,GHS millions,MODEL-ESTIMATE,estimated,3% annual growth.
 adb,upside,FY2026E,income_statement,other_operating_expenses,310.752,GHS millions,MODEL-ESTIMATE,estimated,Linked to inflation_cpi_pct (macro.csv).
 adb,upside,FY2026E,income_statement,impairment_charge,-26.828,GHS millions,MODEL-ESTIMATE,estimated,avg net loans * cost_of_risk (independent of NPL path).
-adb,upside,FY2026E,income_statement,profit_before_tax,463.919,GHS millions,MODEL-ESTIMATE,estimated,total_operating_income - opex - impairment.
-adb,upside,FY2026E,income_statement,income_tax,176.812,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax * tax_rate.
-adb,upside,FY2026E,income_statement,profit_after_tax,287.107,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax - income_tax.
-adb,upside,FY2026E,balance_sheet,cash_and_bog_balances,10591.116,GHS millions,MODEL-ESTIMATE,estimated,Proxy screen >= crr_pct (20%) on customer_deposits; includes due_from_banks aggregate.
+adb,upside,FY2026E,income_statement,profit_before_tax,523.811,GHS millions,MODEL-ESTIMATE,estimated,total_operating_income - opex - impairment.
+adb,upside,FY2026E,income_statement,income_tax,192.662,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax * tax_rate.
+adb,upside,FY2026E,income_statement,profit_after_tax,331.149,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax - income_tax.
+adb,upside,FY2026E,balance_sheet,cash_and_bog_balances,10617.542,GHS millions,MODEL-ESTIMATE,estimated,Proxy screen >= crr_pct (20%) on customer_deposits; includes due_from_banks aggregate. Non-reserve part earns short_bill_share x 91-day bill rate (v2).
 adb,upside,FY2026E,balance_sheet,due_from_banks,,GHS millions,MODEL-ESTIMATE,unavailable,Combined with cash_and_bog_balances (same basis as FY23-9M26).
-adb,upside,FY2026E,balance_sheet,investment_securities,7060.744,GHS millions,MODEL-ESTIMATE,estimated,Balancing liquid asset; solved iteratively with interest_income.
+adb,upside,FY2026E,balance_sheet,investment_securities,7078.361,GHS millions,MODEL-ESTIMATE,estimated,Balancing liquid asset; solved iteratively with interest_income.
 adb,upside,FY2026E,balance_sheet,loans_and_advances_gross,,GHS millions,MODEL-ESTIMATE,unavailable,Not disclosed in GSE summary statements.
 adb,upside,FY2026E,balance_sheet,loan_loss_allowance,,GHS millions,MODEL-ESTIMATE,unavailable,Not disclosed in GSE summary statements.
 adb,upside,FY2026E,balance_sheet,loans_and_advances_net,2204.630,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ linked to nominal GDP.
-adb,upside,FY2026E,balance_sheet,property_equipment_intangibles,195.432,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
-adb,upside,FY2026E,balance_sheet,other_assets,754.036,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
-adb,upside,FY2026E,balance_sheet,total_assets,20805.959,GHS millions,MODEL-ESTIMATE,estimated,total_liabilities + total_equity.
+adb,upside,FY2026E,balance_sheet,property_equipment_intangibles,222.104,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
+adb,upside,FY2026E,balance_sheet,other_assets,727.364,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
+adb,upside,FY2026E,balance_sheet,total_assets,20850.001,GHS millions,MODEL-ESTIMATE,estimated,total_liabilities + total_equity.
 adb,upside,FY2026E,balance_sheet,customer_deposits,15900.413,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ linked to nominal GDP.
 adb,upside,FY2026E,balance_sheet,due_to_banks,,GHS millions,MODEL-ESTIMATE,unavailable,Not separately reported.
 adb,upside,FY2026E,balance_sheet,borrowings,1665.710,GHS millions,MODEL-ESTIMATE,estimated,Held flat.
 adb,upside,FY2026E,balance_sheet,other_liabilities,492.596,GHS millions,MODEL-ESTIMATE,estimated,Tracks CPI inflation.
 adb,upside,FY2026E,balance_sheet,total_liabilities,18058.719,GHS millions,MODEL-ESTIMATE,estimated,Sum of liability items.
 adb,upside,FY2026E,balance_sheet,stated_capital,2146.745,GHS millions,MODEL-ESTIMATE,estimated,Held flat (no automatic capital injection assumed).
-adb,upside,FY2026E,balance_sheet,retained_earnings,-1537.467,GHS millions,MODEL-ESTIMATE,estimated,Prior retained_earnings + PAT - dividends.
+adb,upside,FY2026E,balance_sheet,retained_earnings,-1493.425,GHS millions,MODEL-ESTIMATE,estimated,Prior retained_earnings + PAT - dividends.
 adb,upside,FY2026E,balance_sheet,reserves_other,2137.962,GHS millions,MODEL-ESTIMATE,estimated,Held flat.
-adb,upside,FY2026E,balance_sheet,total_equity,2747.240,GHS millions,MODEL-ESTIMATE,estimated,stated_capital + retained_earnings + reserves_other.
-adb,upside,FY2026E,ratios,car_pct,26.573,%,MODEL-ESTIMATE,estimated,Proxy anchored on 9M-2026 reported 27.41% CAR (no automatic capital injection assumed).
+adb,upside,FY2026E,balance_sheet,total_equity,2791.282,GHS millions,MODEL-ESTIMATE,estimated,stated_capital + retained_earnings + reserves_other.
+adb,upside,FY2026E,ratios,car_pct,27.251,%,MODEL-ESTIMATE,estimated,"v2 proxy: (FY2025 regulatory capital + change in book equity since FY2025) / (total assets x RWA density), anchored on reported 9M-2026 CAR 27.41%; no capital injection assumed."
 adb,upside,FY2026E,ratios,tier1_pct,,%,MODEL-ESTIMATE,unavailable,Not projected separately.
 adb,upside,FY2026E,ratios,npl_pct,59.320,%,MODEL-ESTIMATE,estimated,Estimated recovery path from 66.32% in 9M-2026.
 adb,upside,FY2026E,ratios,ldr_pct,13.865,%,MODEL-ESTIMATE,estimated,loans_and_advances_net / customer_deposits * 100 (net basis).
-adb,upside,FY2026E,ratios,cost_to_income_pct,68.502,%,MODEL-ESTIMATE,estimated,opex / total_operating_income * 100.
-adb,upside,FY2026E,ratios,roe_pct,10.990,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_equity * 100 (blank when avg_eq <= 0).
-adb,upside,FY2026E,ratios,roa_pct,1.484,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_assets * 100.
-adb,upside,FY2027E,income_statement,interest_income,1124.397,GHS millions,MODEL-ESTIMATE,estimated,FY26E = 9M-26 + iterative Q4; FY27E+ = avg loans*y_loan + avg inv*y_inv (macro.csv).
+adb,upside,FY2026E,ratios,cost_to_income_pct,65.667,%,MODEL-ESTIMATE,estimated,opex / total_operating_income * 100.
+adb,upside,FY2026E,ratios,roe_pct,12.569,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_equity * 100 (blank when avg_eq <= 0).
+adb,upside,FY2026E,ratios,roa_pct,1.710,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_assets * 100.
+adb,upside,FY2027E,income_statement,interest_income,1319.227,GHS millions,MODEL-ESTIMATE,estimated,FY26E = 9M-26 + iterative Q4; FY27E+ = avg loans*y_loan + avg inv*y_inv + short-bill income on non-reserve cash (macro.csv).
+adb,upside,FY2027E,income_statement,x_interest_on_cash_short_bills,190.321,GHS millions,MODEL-ESTIMATE,estimated,"Memo, included in interest_income: short_bill_share x non-reserve cash x 91-day bill rate. FY2026E is the Q4 piece only (9M actual already contains its own)."
 adb,upside,FY2027E,income_statement,interest_expense,466.701,GHS millions,MODEL-ESTIMATE,estimated,Linked to macro.csv tbill_91d_pct.
-adb,upside,FY2027E,income_statement,net_interest_income,657.696,GHS millions,MODEL-ESTIMATE,estimated,interest_income - interest_expense.
+adb,upside,FY2027E,income_statement,net_interest_income,852.526,GHS millions,MODEL-ESTIMATE,estimated,interest_income - interest_expense.
 adb,upside,FY2027E,income_statement,fee_commission_income,321.450,GHS millions,MODEL-ESTIMATE,estimated,Linked to nominal GDP (macro.csv).
 adb,upside,FY2027E,income_statement,fee_commission_expense,32.324,GHS millions,MODEL-ESTIMATE,estimated,0.8x fee growth.
 adb,upside,FY2027E,income_statement,net_trading_income,112.948,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ trading growth.
 adb,upside,FY2027E,income_statement,other_operating_income,26.916,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ 3% growth.
-adb,upside,FY2027E,income_statement,total_operating_income,1086.687,GHS millions,MODEL-ESTIMATE,estimated,NII + net fees + trading + other operating income.
+adb,upside,FY2027E,income_statement,total_operating_income,1281.517,GHS millions,MODEL-ESTIMATE,estimated,NII + net fees + trading + other operating income.
 adb,upside,FY2027E,income_statement,staff_costs,611.606,GHS millions,MODEL-ESTIMATE,estimated,Linked to inflation_cpi_pct (macro.csv).
 adb,upside,FY2027E,income_statement,depreciation_amortisation,73.008,GHS millions,MODEL-ESTIMATE,estimated,3% annual growth.
 adb,upside,FY2027E,income_statement,other_operating_expenses,334.058,GHS millions,MODEL-ESTIMATE,estimated,Linked to inflation_cpi_pct (macro.csv).
 adb,upside,FY2027E,income_statement,impairment_charge,28.355,GHS millions,MODEL-ESTIMATE,estimated,avg net loans * cost_of_risk (independent of NPL path).
-adb,upside,FY2027E,income_statement,profit_before_tax,39.659,GHS millions,MODEL-ESTIMATE,estimated,total_operating_income - opex - impairment.
-adb,upside,FY2027E,income_statement,income_tax,13.881,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax * tax_rate.
-adb,upside,FY2027E,income_statement,profit_after_tax,25.779,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax - income_tax.
-adb,upside,FY2027E,balance_sheet,cash_and_bog_balances,11745.251,GHS millions,MODEL-ESTIMATE,estimated,Proxy screen >= crr_pct (20%) on customer_deposits; includes due_from_banks aggregate.
+adb,upside,FY2027E,income_statement,profit_before_tax,234.490,GHS millions,MODEL-ESTIMATE,estimated,total_operating_income - opex - impairment.
+adb,upside,FY2027E,income_statement,income_tax,82.071,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax * tax_rate.
+adb,upside,FY2027E,income_statement,profit_after_tax,152.418,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax - income_tax.
+adb,upside,FY2027E,balance_sheet,cash_and_bog_balances,11847.660,GHS millions,MODEL-ESTIMATE,estimated,Proxy screen >= crr_pct (20%) on customer_deposits; includes due_from_banks aggregate. Non-reserve part earns short_bill_share x 91-day bill rate (v2).
 adb,upside,FY2027E,balance_sheet,due_from_banks,,GHS millions,MODEL-ESTIMATE,unavailable,Combined with cash_and_bog_balances (same basis as FY23-9M26).
-adb,upside,FY2027E,balance_sheet,investment_securities,7830.167,GHS millions,MODEL-ESTIMATE,estimated,Balancing liquid asset; solved iteratively with interest_income.
+adb,upside,FY2027E,balance_sheet,investment_securities,7898.440,GHS millions,MODEL-ESTIMATE,estimated,Balancing liquid asset; solved iteratively with interest_income.
 adb,upside,FY2027E,balance_sheet,loans_and_advances_gross,,GHS millions,MODEL-ESTIMATE,unavailable,Not disclosed in GSE summary statements.
 adb,upside,FY2027E,balance_sheet,loan_loss_allowance,,GHS millions,MODEL-ESTIMATE,unavailable,Not disclosed in GSE summary statements.
 adb,upside,FY2027E,balance_sheet,loans_and_advances_net,2521.215,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ linked to nominal GDP.
-adb,upside,FY2027E,balance_sheet,property_equipment_intangibles,199.341,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
-adb,upside,FY2027E,balance_sheet,other_assets,769.116,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
-adb,upside,FY2027E,balance_sheet,total_assets,23065.090,GHS millions,MODEL-ESTIMATE,estimated,total_liabilities + total_equity.
+adb,upside,FY2027E,balance_sheet,property_equipment_intangibles,226.546,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
+adb,upside,FY2027E,balance_sheet,other_assets,741.911,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
+adb,upside,FY2027E,balance_sheet,total_assets,23235.773,GHS millions,MODEL-ESTIMATE,estimated,total_liabilities + total_equity.
 adb,upside,FY2027E,balance_sheet,customer_deposits,18104.210,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ linked to nominal GDP.
 adb,upside,FY2027E,balance_sheet,due_to_banks,,GHS millions,MODEL-ESTIMATE,unavailable,Not separately reported.
 adb,upside,FY2027E,balance_sheet,borrowings,1665.710,GHS millions,MODEL-ESTIMATE,estimated,Held flat.
 adb,upside,FY2027E,balance_sheet,other_liabilities,522.152,GHS millions,MODEL-ESTIMATE,estimated,Tracks CPI inflation.
 adb,upside,FY2027E,balance_sheet,total_liabilities,20292.072,GHS millions,MODEL-ESTIMATE,estimated,Sum of liability items.
 adb,upside,FY2027E,balance_sheet,stated_capital,2146.745,GHS millions,MODEL-ESTIMATE,estimated,Held flat (no automatic capital injection assumed).
-adb,upside,FY2027E,balance_sheet,retained_earnings,-1511.689,GHS millions,MODEL-ESTIMATE,estimated,Prior retained_earnings + PAT - dividends.
+adb,upside,FY2027E,balance_sheet,retained_earnings,-1341.007,GHS millions,MODEL-ESTIMATE,estimated,Prior retained_earnings + PAT - dividends.
 adb,upside,FY2027E,balance_sheet,reserves_other,2137.962,GHS millions,MODEL-ESTIMATE,estimated,Held flat.
-adb,upside,FY2027E,balance_sheet,total_equity,2773.018,GHS millions,MODEL-ESTIMATE,estimated,stated_capital + retained_earnings + reserves_other.
-adb,upside,FY2027E,ratios,car_pct,24.195,%,MODEL-ESTIMATE,estimated,Proxy anchored on 9M-2026 reported 27.41% CAR (no automatic capital injection assumed).
+adb,upside,FY2027E,balance_sheet,total_equity,2943.700,GHS millions,MODEL-ESTIMATE,estimated,stated_capital + retained_earnings + reserves_other.
+adb,upside,FY2027E,ratios,car_pct,27.210,%,MODEL-ESTIMATE,estimated,"v2 proxy: (FY2025 regulatory capital + change in book equity since FY2025) / (total assets x RWA density), anchored on reported 9M-2026 CAR 27.41%; no capital injection assumed."
 adb,upside,FY2027E,ratios,tier1_pct,,%,MODEL-ESTIMATE,unavailable,Not projected separately.
 adb,upside,FY2027E,ratios,npl_pct,52.320,%,MODEL-ESTIMATE,estimated,Estimated recovery path from 66.32% in 9M-2026.
 adb,upside,FY2027E,ratios,ldr_pct,13.926,%,MODEL-ESTIMATE,estimated,loans_and_advances_net / customer_deposits * 100 (net basis).
-adb,upside,FY2027E,ratios,cost_to_income_pct,93.741,%,MODEL-ESTIMATE,estimated,opex / total_operating_income * 100.
-adb,upside,FY2027E,ratios,roe_pct,0.934,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_equity * 100 (blank when avg_eq <= 0).
-adb,upside,FY2027E,ratios,roa_pct,0.118,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_assets * 100.
-adb,upside,FY2028E,income_statement,interest_income,1186.061,GHS millions,MODEL-ESTIMATE,estimated,FY26E = 9M-26 + iterative Q4; FY27E+ = avg loans*y_loan + avg inv*y_inv (macro.csv).
+adb,upside,FY2027E,ratios,cost_to_income_pct,79.490,%,MODEL-ESTIMATE,estimated,opex / total_operating_income * 100.
+adb,upside,FY2027E,ratios,roe_pct,5.315,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_equity * 100 (blank when avg_eq <= 0).
+adb,upside,FY2027E,ratios,roa_pct,0.691,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_assets * 100.
+adb,upside,FY2028E,income_statement,interest_income,1430.800,GHS millions,MODEL-ESTIMATE,estimated,FY26E = 9M-26 + iterative Q4; FY27E+ = avg loans*y_loan + avg inv*y_inv + short-bill income on non-reserve cash (macro.csv).
+adb,upside,FY2028E,income_statement,x_interest_on_cash_short_bills,234.294,GHS millions,MODEL-ESTIMATE,estimated,"Memo, included in interest_income: short_bill_share x non-reserve cash x 91-day bill rate. FY2026E is the Q4 piece only (9M actual already contains its own)."
 adb,upside,FY2028E,income_statement,interest_expense,633.034,GHS millions,MODEL-ESTIMATE,estimated,Linked to macro.csv tbill_91d_pct.
-adb,upside,FY2028E,income_statement,net_interest_income,553.028,GHS millions,MODEL-ESTIMATE,estimated,interest_income - interest_expense.
+adb,upside,FY2028E,income_statement,net_interest_income,797.767,GHS millions,MODEL-ESTIMATE,estimated,interest_income - interest_expense.
 adb,upside,FY2028E,income_statement,fee_commission_income,363.901,GHS millions,MODEL-ESTIMATE,estimated,Linked to nominal GDP (macro.csv).
 adb,upside,FY2028E,income_statement,fee_commission_expense,35.739,GHS millions,MODEL-ESTIMATE,estimated,0.8x fee growth.
 adb,upside,FY2028E,income_statement,net_trading_income,124.243,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ trading growth.
 adb,upside,FY2028E,income_statement,other_operating_income,27.724,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ 3% growth.
-adb,upside,FY2028E,income_statement,total_operating_income,1033.156,GHS millions,MODEL-ESTIMATE,estimated,NII + net fees + trading + other operating income.
+adb,upside,FY2028E,income_statement,total_operating_income,1277.895,GHS millions,MODEL-ESTIMATE,estimated,NII + net fees + trading + other operating income.
 adb,upside,FY2028E,income_statement,staff_costs,663.592,GHS millions,MODEL-ESTIMATE,estimated,Linked to inflation_cpi_pct (macro.csv).
 adb,upside,FY2028E,income_statement,depreciation_amortisation,75.199,GHS millions,MODEL-ESTIMATE,estimated,3% annual growth.
 adb,upside,FY2028E,income_statement,other_operating_expenses,362.453,GHS millions,MODEL-ESTIMATE,estimated,Linked to inflation_cpi_pct (macro.csv).
 adb,upside,FY2028E,income_statement,impairment_charge,32.555,GHS millions,MODEL-ESTIMATE,estimated,avg net loans * cost_of_risk (independent of NPL path).
-adb,upside,FY2028E,income_statement,profit_before_tax,-100.642,GHS millions,MODEL-ESTIMATE,estimated,total_operating_income - opex - impairment.
-adb,upside,FY2028E,income_statement,income_tax,0.000,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax * tax_rate.
-adb,upside,FY2028E,income_statement,profit_after_tax,-100.642,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax - income_tax.
-adb,upside,FY2028E,balance_sheet,cash_and_bog_balances,13062.592,GHS millions,MODEL-ESTIMATE,estimated,Proxy screen >= crr_pct (20%) on customer_deposits; includes due_from_banks aggregate.
+adb,upside,FY2028E,income_statement,profit_before_tax,144.097,GHS millions,MODEL-ESTIMATE,estimated,total_operating_income - opex - impairment.
+adb,upside,FY2028E,income_statement,income_tax,50.434,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax * tax_rate.
+adb,upside,FY2028E,income_statement,profit_after_tax,93.663,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax - income_tax.
+adb,upside,FY2028E,balance_sheet,cash_and_bog_balances,13281.584,GHS millions,MODEL-ESTIMATE,estimated,Proxy screen >= crr_pct (20%) on customer_deposits; includes due_from_banks aggregate. Non-reserve part earns short_bill_share x 91-day bill rate (v2).
 adb,upside,FY2028E,balance_sheet,due_from_banks,,GHS millions,MODEL-ESTIMATE,unavailable,Combined with cash_and_bog_balances (same basis as FY23-9M26).
-adb,upside,FY2028E,balance_sheet,investment_securities,8708.394,GHS millions,MODEL-ESTIMATE,estimated,Balancing liquid asset; solved iteratively with interest_income.
+adb,upside,FY2028E,balance_sheet,investment_securities,8854.389,GHS millions,MODEL-ESTIMATE,estimated,Balancing liquid asset; solved iteratively with interest_income.
 adb,upside,FY2028E,balance_sheet,loans_and_advances_gross,,GHS millions,MODEL-ESTIMATE,unavailable,Not disclosed in GSE summary statements.
 adb,upside,FY2028E,balance_sheet,loan_loss_allowance,,GHS millions,MODEL-ESTIMATE,unavailable,Not disclosed in GSE summary statements.
 adb,upside,FY2028E,balance_sheet,loans_and_advances_net,2904.591,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ linked to nominal GDP.
-adb,upside,FY2028E,balance_sheet,property_equipment_intangibles,203.327,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
-adb,upside,FY2028E,balance_sheet,other_assets,784.499,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
-adb,upside,FY2028E,balance_sheet,total_assets,25663.404,GHS millions,MODEL-ESTIMATE,estimated,total_liabilities + total_equity.
+adb,upside,FY2028E,balance_sheet,property_equipment_intangibles,231.077,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
+adb,upside,FY2028E,balance_sheet,other_assets,756.749,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
+adb,upside,FY2028E,balance_sheet,total_assets,26028.391,GHS millions,MODEL-ESTIMATE,estimated,total_liabilities + total_equity.
 adb,upside,FY2028E,balance_sheet,customer_deposits,20766.616,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ linked to nominal GDP.
 adb,upside,FY2028E,balance_sheet,due_to_banks,,GHS millions,MODEL-ESTIMATE,unavailable,Not separately reported.
 adb,upside,FY2028E,balance_sheet,borrowings,1665.710,GHS millions,MODEL-ESTIMATE,estimated,Held flat.
 adb,upside,FY2028E,balance_sheet,other_liabilities,558.703,GHS millions,MODEL-ESTIMATE,estimated,Tracks CPI inflation.
 adb,upside,FY2028E,balance_sheet,total_liabilities,22991.028,GHS millions,MODEL-ESTIMATE,estimated,Sum of liability items.
 adb,upside,FY2028E,balance_sheet,stated_capital,2146.745,GHS millions,MODEL-ESTIMATE,estimated,Held flat (no automatic capital injection assumed).
-adb,upside,FY2028E,balance_sheet,retained_earnings,-1612.331,GHS millions,MODEL-ESTIMATE,estimated,Prior retained_earnings + PAT - dividends.
+adb,upside,FY2028E,balance_sheet,retained_earnings,-1247.344,GHS millions,MODEL-ESTIMATE,estimated,Prior retained_earnings + PAT - dividends.
 adb,upside,FY2028E,balance_sheet,reserves_other,2137.962,GHS millions,MODEL-ESTIMATE,estimated,Held flat.
-adb,upside,FY2028E,balance_sheet,total_equity,2672.376,GHS millions,MODEL-ESTIMATE,estimated,stated_capital + retained_earnings + reserves_other.
-adb,upside,FY2028E,ratios,car_pct,20.956,%,MODEL-ESTIMATE,estimated,Proxy anchored on 9M-2026 reported 27.41% CAR (no automatic capital injection assumed).
+adb,upside,FY2028E,balance_sheet,total_equity,3037.363,GHS millions,MODEL-ESTIMATE,estimated,stated_capital + retained_earnings + reserves_other.
+adb,upside,FY2028E,ratios,car_pct,25.803,%,MODEL-ESTIMATE,estimated,"v2 proxy: (FY2025 regulatory capital + change in book equity since FY2025) / (total assets x RWA density), anchored on reported 9M-2026 CAR 27.41%; no capital injection assumed."
 adb,upside,FY2028E,ratios,tier1_pct,,%,MODEL-ESTIMATE,unavailable,Not projected separately.
 adb,upside,FY2028E,ratios,npl_pct,45.320,%,MODEL-ESTIMATE,estimated,Estimated recovery path from 66.32% in 9M-2026.
 adb,upside,FY2028E,ratios,ldr_pct,13.987,%,MODEL-ESTIMATE,estimated,loans_and_advances_net / customer_deposits * 100 (net basis).
-adb,upside,FY2028E,ratios,cost_to_income_pct,106.590,%,MODEL-ESTIMATE,estimated,opex / total_operating_income * 100.
-adb,upside,FY2028E,ratios,roe_pct,-3.696,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_equity * 100 (blank when avg_eq <= 0).
-adb,upside,FY2028E,ratios,roa_pct,-0.413,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_assets * 100.
-adb,upside,FY2029E,income_statement,interest_income,1309.602,GHS millions,MODEL-ESTIMATE,estimated,FY26E = 9M-26 + iterative Q4; FY27E+ = avg loans*y_loan + avg inv*y_inv (macro.csv).
+adb,upside,FY2028E,ratios,cost_to_income_pct,86.176,%,MODEL-ESTIMATE,estimated,opex / total_operating_income * 100.
+adb,upside,FY2028E,ratios,roe_pct,3.132,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_equity * 100 (blank when avg_eq <= 0).
+adb,upside,FY2028E,ratios,roa_pct,0.380,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_assets * 100.
+adb,upside,FY2029E,income_statement,interest_income,1641.399,GHS millions,MODEL-ESTIMATE,estimated,FY26E = 9M-26 + iterative Q4; FY27E+ = avg loans*y_loan + avg inv*y_inv + short-bill income on non-reserve cash (macro.csv).
+adb,upside,FY2029E,income_statement,x_interest_on_cash_short_bills,311.623,GHS millions,MODEL-ESTIMATE,estimated,"Memo, included in interest_income: short_bill_share x non-reserve cash x 91-day bill rate. FY2026E is the Q4 piece only (9M actual already contains its own)."
 adb,upside,FY2029E,income_statement,interest_expense,959.229,GHS millions,MODEL-ESTIMATE,estimated,Linked to macro.csv tbill_91d_pct.
-adb,upside,FY2029E,income_statement,net_interest_income,350.373,GHS millions,MODEL-ESTIMATE,estimated,interest_income - interest_expense.
+adb,upside,FY2029E,income_statement,net_interest_income,682.169,GHS millions,MODEL-ESTIMATE,estimated,interest_income - interest_expense.
 adb,upside,FY2029E,income_statement,fee_commission_income,412.709,GHS millions,MODEL-ESTIMATE,estimated,Linked to nominal GDP (macro.csv).
 adb,upside,FY2029E,income_statement,fee_commission_expense,39.574,GHS millions,MODEL-ESTIMATE,estimated,0.8x fee growth.
 adb,upside,FY2029E,income_statement,net_trading_income,136.667,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ trading growth.
 adb,upside,FY2029E,income_statement,other_operating_income,28.556,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ 3% growth.
-adb,upside,FY2029E,income_statement,total_operating_income,888.731,GHS millions,MODEL-ESTIMATE,estimated,NII + net fees + trading + other operating income.
+adb,upside,FY2029E,income_statement,total_operating_income,1220.527,GHS millions,MODEL-ESTIMATE,estimated,NII + net fees + trading + other operating income.
 adb,upside,FY2029E,income_statement,staff_costs,723.316,GHS millions,MODEL-ESTIMATE,estimated,Linked to inflation_cpi_pct (macro.csv).
 adb,upside,FY2029E,income_statement,depreciation_amortisation,77.455,GHS millions,MODEL-ESTIMATE,estimated,3% annual growth.
 adb,upside,FY2029E,income_statement,other_operating_expenses,395.074,GHS millions,MODEL-ESTIMATE,estimated,Linked to inflation_cpi_pct (macro.csv).
 adb,upside,FY2029E,income_statement,impairment_charge,31.284,GHS millions,MODEL-ESTIMATE,estimated,avg net loans * cost_of_risk (independent of NPL path).
-adb,upside,FY2029E,income_statement,profit_before_tax,-338.397,GHS millions,MODEL-ESTIMATE,estimated,total_operating_income - opex - impairment.
+adb,upside,FY2029E,income_statement,profit_before_tax,-6.601,GHS millions,MODEL-ESTIMATE,estimated,total_operating_income - opex - impairment.
 adb,upside,FY2029E,income_statement,income_tax,0.000,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax * tax_rate.
-adb,upside,FY2029E,income_statement,profit_after_tax,-338.397,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax - income_tax.
-adb,upside,FY2029E,balance_sheet,cash_and_bog_balances,14462.332,GHS millions,MODEL-ESTIMATE,estimated,Proxy screen >= crr_pct (20%) on customer_deposits; includes due_from_banks aggregate.
+adb,upside,FY2029E,income_statement,profit_after_tax,-6.601,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax - income_tax.
+adb,upside,FY2029E,balance_sheet,cash_and_bog_balances,14880.402,GHS millions,MODEL-ESTIMATE,estimated,Proxy screen >= crr_pct (20%) on customer_deposits; includes due_from_banks aggregate. Non-reserve part earns short_bill_share x 91-day bill rate (v2).
 adb,upside,FY2029E,balance_sheet,due_from_banks,,GHS millions,MODEL-ESTIMATE,unavailable,Combined with cash_and_bog_balances (same basis as FY23-9M26).
-adb,upside,FY2029E,balance_sheet,investment_securities,9641.555,GHS millions,MODEL-ESTIMATE,estimated,Balancing liquid asset; solved iteratively with interest_income.
+adb,upside,FY2029E,balance_sheet,investment_securities,9920.268,GHS millions,MODEL-ESTIMATE,estimated,Balancing liquid asset; solved iteratively with interest_income.
 adb,upside,FY2029E,balance_sheet,loans_and_advances_gross,,GHS millions,MODEL-ESTIMATE,unavailable,Not disclosed in GSE summary statements.
 adb,upside,FY2029E,balance_sheet,loan_loss_allowance,,GHS millions,MODEL-ESTIMATE,unavailable,Not disclosed in GSE summary statements.
 adb,upside,FY2029E,balance_sheet,loans_and_advances_net,3352.262,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ linked to nominal GDP.
-adb,upside,FY2029E,balance_sheet,property_equipment_intangibles,207.394,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
-adb,upside,FY2029E,balance_sheet,other_assets,800.189,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
-adb,upside,FY2029E,balance_sheet,total_assets,28463.731,GHS millions,MODEL-ESTIMATE,estimated,total_liabilities + total_equity.
+adb,upside,FY2029E,balance_sheet,property_equipment_intangibles,235.699,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
+adb,upside,FY2029E,balance_sheet,other_assets,771.884,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
+adb,upside,FY2029E,balance_sheet,total_assets,29160.514,GHS millions,MODEL-ESTIMATE,estimated,total_liabilities + total_equity.
 adb,upside,FY2029E,balance_sheet,customer_deposits,23863.437,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ linked to nominal GDP.
 adb,upside,FY2029E,balance_sheet,due_to_banks,,GHS millions,MODEL-ESTIMATE,unavailable,Not separately reported.
 adb,upside,FY2029E,balance_sheet,borrowings,1665.710,GHS millions,MODEL-ESTIMATE,estimated,Held flat.
 adb,upside,FY2029E,balance_sheet,other_liabilities,600.605,GHS millions,MODEL-ESTIMATE,estimated,Tracks CPI inflation.
 adb,upside,FY2029E,balance_sheet,total_liabilities,26129.752,GHS millions,MODEL-ESTIMATE,estimated,Sum of liability items.
 adb,upside,FY2029E,balance_sheet,stated_capital,2146.745,GHS millions,MODEL-ESTIMATE,estimated,Held flat (no automatic capital injection assumed).
-adb,upside,FY2029E,balance_sheet,retained_earnings,-1950.729,GHS millions,MODEL-ESTIMATE,estimated,Prior retained_earnings + PAT - dividends.
+adb,upside,FY2029E,balance_sheet,retained_earnings,-1253.945,GHS millions,MODEL-ESTIMATE,estimated,Prior retained_earnings + PAT - dividends.
 adb,upside,FY2029E,balance_sheet,reserves_other,2137.962,GHS millions,MODEL-ESTIMATE,estimated,Held flat.
-adb,upside,FY2029E,balance_sheet,total_equity,2333.978,GHS millions,MODEL-ESTIMATE,estimated,stated_capital + retained_earnings + reserves_other.
-adb,upside,FY2029E,ratios,car_pct,16.502,%,MODEL-ESTIMATE,estimated,Proxy anchored on 9M-2026 reported 27.41% CAR (no automatic capital injection assumed).
+adb,upside,FY2029E,balance_sheet,total_equity,3030.762,GHS millions,MODEL-ESTIMATE,estimated,stated_capital + retained_earnings + reserves_other.
+adb,upside,FY2029E,ratios,car_pct,22.937,%,MODEL-ESTIMATE,estimated,"v2 proxy: (FY2025 regulatory capital + change in book equity since FY2025) / (total assets x RWA density), anchored on reported 9M-2026 CAR 27.41%; no capital injection assumed."
 adb,upside,FY2029E,ratios,tier1_pct,,%,MODEL-ESTIMATE,unavailable,Not projected separately.
 adb,upside,FY2029E,ratios,npl_pct,38.320,%,MODEL-ESTIMATE,estimated,Estimated recovery path from 66.32% in 9M-2026.
 adb,upside,FY2029E,ratios,ldr_pct,14.048,%,MODEL-ESTIMATE,estimated,loans_and_advances_net / customer_deposits * 100 (net basis).
-adb,upside,FY2029E,ratios,cost_to_income_pct,134.556,%,MODEL-ESTIMATE,estimated,opex / total_operating_income * 100.
-adb,upside,FY2029E,ratios,roe_pct,-13.519,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_equity * 100 (blank when avg_eq <= 0).
-adb,upside,FY2029E,ratios,roa_pct,-1.250,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_assets * 100.
-adb,upside,FY2030E,income_statement,interest_income,1447.766,GHS millions,MODEL-ESTIMATE,estimated,FY26E = 9M-26 + iterative Q4; FY27E+ = avg loans*y_loan + avg inv*y_inv (macro.csv).
+adb,upside,FY2029E,ratios,cost_to_income_pct,97.978,%,MODEL-ESTIMATE,estimated,opex / total_operating_income * 100.
+adb,upside,FY2029E,ratios,roe_pct,-0.218,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_equity * 100 (blank when avg_eq <= 0).
+adb,upside,FY2029E,ratios,roa_pct,-0.024,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_assets * 100.
+adb,upside,FY2030E,income_statement,interest_income,1855.228,GHS millions,MODEL-ESTIMATE,estimated,FY26E = 9M-26 + iterative Q4; FY27E+ = avg loans*y_loan + avg inv*y_inv + short-bill income on non-reserve cash (macro.csv).
+adb,upside,FY2030E,income_statement,x_interest_on_cash_short_bills,374.143,GHS millions,MODEL-ESTIMATE,estimated,"Memo, included in interest_income: short_bill_share x non-reserve cash x 91-day bill rate. FY2026E is the Q4 piece only (9M actual already contains its own)."
 adb,upside,FY2030E,income_statement,interest_expense,1231.713,GHS millions,MODEL-ESTIMATE,estimated,Linked to macro.csv tbill_91d_pct.
-adb,upside,FY2030E,income_statement,net_interest_income,216.053,GHS millions,MODEL-ESTIMATE,estimated,interest_income - interest_expense.
+adb,upside,FY2030E,income_statement,net_interest_income,623.515,GHS millions,MODEL-ESTIMATE,estimated,interest_income - interest_expense.
 adb,upside,FY2030E,income_statement,fee_commission_income,470.241,GHS millions,MODEL-ESTIMATE,estimated,Linked to nominal GDP (macro.csv).
 adb,upside,FY2030E,income_statement,fee_commission_expense,43.987,GHS millions,MODEL-ESTIMATE,estimated,0.8x fee growth.
 adb,upside,FY2030E,income_statement,net_trading_income,150.334,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ trading growth.
 adb,upside,FY2030E,income_statement,other_operating_income,29.412,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ 3% growth.
-adb,upside,FY2030E,income_statement,total_operating_income,822.052,GHS millions,MODEL-ESTIMATE,estimated,NII + net fees + trading + other operating income.
+adb,upside,FY2030E,income_statement,total_operating_income,1229.515,GHS millions,MODEL-ESTIMATE,estimated,NII + net fees + trading + other operating income.
 adb,upside,FY2030E,income_statement,staff_costs,792.031,GHS millions,MODEL-ESTIMATE,estimated,Linked to inflation_cpi_pct (macro.csv).
 adb,upside,FY2030E,income_statement,depreciation_amortisation,79.778,GHS millions,MODEL-ESTIMATE,estimated,3% annual growth.
 adb,upside,FY2030E,income_statement,other_operating_expenses,432.606,GHS millions,MODEL-ESTIMATE,estimated,Linked to inflation_cpi_pct (macro.csv).
 adb,upside,FY2030E,income_statement,impairment_charge,36.194,GHS millions,MODEL-ESTIMATE,estimated,avg net loans * cost_of_risk (independent of NPL path).
-adb,upside,FY2030E,income_statement,profit_before_tax,-518.557,GHS millions,MODEL-ESTIMATE,estimated,total_operating_income - opex - impairment.
+adb,upside,FY2030E,income_statement,profit_before_tax,-111.094,GHS millions,MODEL-ESTIMATE,estimated,total_operating_income - opex - impairment.
 adb,upside,FY2030E,income_statement,income_tax,0.000,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax * tax_rate.
-adb,upside,FY2030E,income_statement,profit_after_tax,-518.557,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax - income_tax.
-adb,upside,FY2030E,balance_sheet,cash_and_bog_balances,16058.034,GHS millions,MODEL-ESTIMATE,estimated,Proxy screen >= crr_pct (20%) on customer_deposits; includes due_from_banks aggregate.
+adb,upside,FY2030E,income_statement,profit_after_tax,-111.094,GHS millions,MODEL-ESTIMATE,estimated,profit_before_tax - income_tax.
+adb,upside,FY2030E,balance_sheet,cash_and_bog_balances,16720.582,GHS millions,MODEL-ESTIMATE,estimated,Proxy screen >= crr_pct (20%) on customer_deposits; includes due_from_banks aggregate. Non-reserve part earns short_bill_share x 91-day bill rate (v2).
 adb,upside,FY2030E,balance_sheet,due_from_banks,,GHS millions,MODEL-ESTIMATE,unavailable,Combined with cash_and_bog_balances (same basis as FY23-9M26).
-adb,upside,FY2030E,balance_sheet,investment_securities,10705.356,GHS millions,MODEL-ESTIMATE,estimated,Balancing liquid asset; solved iteratively with interest_income.
+adb,upside,FY2030E,balance_sheet,investment_securities,11147.055,GHS millions,MODEL-ESTIMATE,estimated,Balancing liquid asset; solved iteratively with interest_income.
 adb,upside,FY2030E,balance_sheet,loans_and_advances_gross,,GHS millions,MODEL-ESTIMATE,unavailable,Not disclosed in GSE summary statements.
 adb,upside,FY2030E,balance_sheet,loan_loss_allowance,,GHS millions,MODEL-ESTIMATE,unavailable,Not disclosed in GSE summary statements.
 adb,upside,FY2030E,balance_sheet,loans_and_advances_net,3886.612,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ linked to nominal GDP.
-adb,upside,FY2030E,balance_sheet,property_equipment_intangibles,211.542,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
-adb,upside,FY2030E,balance_sheet,other_assets,816.192,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
-adb,upside,FY2030E,balance_sheet,total_assets,31677.737,GHS millions,MODEL-ESTIMATE,estimated,total_liabilities + total_equity.
+adb,upside,FY2030E,balance_sheet,property_equipment_intangibles,240.413,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
+adb,upside,FY2030E,balance_sheet,other_assets,787.322,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
+adb,upside,FY2030E,balance_sheet,total_assets,32781.983,GHS millions,MODEL-ESTIMATE,estimated,total_liabilities + total_equity.
 adb,upside,FY2030E,balance_sheet,customer_deposits,27547.952,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ linked to nominal GDP.
 adb,upside,FY2030E,balance_sheet,due_to_banks,,GHS millions,MODEL-ESTIMATE,unavailable,Not separately reported.
 adb,upside,FY2030E,balance_sheet,borrowings,1665.710,GHS millions,MODEL-ESTIMATE,estimated,Held flat.
 adb,upside,FY2030E,balance_sheet,other_liabilities,648.654,GHS millions,MODEL-ESTIMATE,estimated,Tracks CPI inflation.
 adb,upside,FY2030E,balance_sheet,total_liabilities,29862.316,GHS millions,MODEL-ESTIMATE,estimated,Sum of liability items.
 adb,upside,FY2030E,balance_sheet,stated_capital,2146.745,GHS millions,MODEL-ESTIMATE,estimated,Held flat (no automatic capital injection assumed).
-adb,upside,FY2030E,balance_sheet,retained_earnings,-2469.285,GHS millions,MODEL-ESTIMATE,estimated,Prior retained_earnings + PAT - dividends.
+adb,upside,FY2030E,balance_sheet,retained_earnings,-1365.039,GHS millions,MODEL-ESTIMATE,estimated,Prior retained_earnings + PAT - dividends.
 adb,upside,FY2030E,balance_sheet,reserves_other,2137.962,GHS millions,MODEL-ESTIMATE,estimated,Held flat.
-adb,upside,FY2030E,balance_sheet,total_equity,1815.422,GHS millions,MODEL-ESTIMATE,estimated,stated_capital + retained_earnings + reserves_other.
-adb,upside,FY2030E,ratios,car_pct,11.533,%,MODEL-ESTIMATE,estimated,Proxy anchored on 9M-2026 reported 27.41% CAR (no automatic capital injection assumed).
+adb,upside,FY2030E,balance_sheet,total_equity,2919.668,GHS millions,MODEL-ESTIMATE,estimated,stated_capital + retained_earnings + reserves_other.
+adb,upside,FY2030E,ratios,car_pct,18.978,%,MODEL-ESTIMATE,estimated,"v2 proxy: (FY2025 regulatory capital + change in book equity since FY2025) / (total assets x RWA density), anchored on reported 9M-2026 CAR 27.41%; no capital injection assumed."
 adb,upside,FY2030E,ratios,tier1_pct,,%,MODEL-ESTIMATE,unavailable,Not projected separately.
 adb,upside,FY2030E,ratios,npl_pct,31.320,%,MODEL-ESTIMATE,estimated,Estimated recovery path from 66.32% in 9M-2026.
 adb,upside,FY2030E,ratios,ldr_pct,14.109,%,MODEL-ESTIMATE,estimated,loans_and_advances_net / customer_deposits * 100 (net basis).
-adb,upside,FY2030E,ratios,cost_to_income_pct,158.678,%,MODEL-ESTIMATE,estimated,opex / total_operating_income * 100.
-adb,upside,FY2030E,ratios,roe_pct,-24.994,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_equity * 100 (blank when avg_eq <= 0).
-adb,upside,FY2030E,ratios,roa_pct,-1.724,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_assets * 100.
+adb,upside,FY2030E,ratios,cost_to_income_pct,106.092,%,MODEL-ESTIMATE,estimated,opex / total_operating_income * 100.
+adb,upside,FY2030E,ratios,roe_pct,-3.734,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_equity * 100 (blank when avg_eq <= 0).
+adb,upside,FY2030E,ratios,roa_pct,-0.359,%,MODEL-ESTIMATE,estimated,profit_after_tax / average total_assets * 100.

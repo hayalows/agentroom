@@ -3,7 +3,13 @@
   "currency": "GHS millions",
   "scope": "standalone Bank",
   "macro_source": "../../sector/macro-assumptions/macro.csv",
-  "forecast_years": ["FY2026E", "FY2027E", "FY2028E", "FY2029E", "FY2030E"],
+  "forecast_years": [
+    "FY2026E",
+    "FY2027E",
+    "FY2028E",
+    "FY2029E",
+    "FY2030E"
+  ],
   "anchor": {
     "historical_end": "FY2025",
     "interim_period": "9M-2026",
@@ -11,55 +17,223 @@
   },
   "drivers": {
     "base": {
-      "q4_2026_loan_growth_pct": {"value": 3.0, "note": "Q4-2026 net loan growth over 30 Sep 2026."},
-      "q4_2026_deposit_growth_pct": {"value": 2.5, "note": "Q4-2026 deposit growth over 30 Sep 2026."},
-      "q4_2026_flow_scale": {"value": 0.3333, "note": "Q4-2026 non-interest income and opex run-rate as fraction of 9M-2026."},
-      "loan_spread_over_nom_gdp_pct": {"value": 0.5, "note": "FY2027E+ loan growth = nominal GDP (from macro.csv) + 0.5%."},
-      "deposit_spread_over_nom_gdp_pct": {"value": 0.0, "note": "FY2027E+ deposit growth = nominal GDP (from macro.csv) + 0.0%."},
-      "opex_spread_over_cpi_pct": {"value": 2.0, "note": "FY2027E+ opex growth = inflation_cpi_pct (from macro.csv) + 2.0%."},
-      "npl_step_pct": {"value": -5.0, "note": "Annual NPL ratio change (pp) from 9M-2026 66.32%, floored at 10.0%."},
-      "yield_on_investments_spread_over_blend_pct": {"value": 0.0, "note": "50% tbill_364d_pct + 50% govt_bond_yield_pct from macro.csv."},
-      "yield_on_loans_spread_over_policy_pct": {"value": 6.0, "note": "policy_rate_pct + 6.0% spread."},
-      "cost_of_funds_spread_over_tbill91_pct": {"value": -1.5, "note": "max(2.0%, tbill_91d_pct - 1.5%)."},
-      "trading_income_growth_pct": {"FY2027E": 8.0, "FY2028E": 8.0, "FY2029E": 8.0, "FY2030E": 8.0, "note": "FY27E+ trading growth."},
-      "cost_of_risk_pct": {"FY2026E": 0.5, "FY2027E": 2.0, "FY2028E": 1.8, "FY2029E": 1.6, "FY2030E": 1.5, "note": "Continued recoveries in 2026E; normalizes to 1.5-2.0%."},
-      "tax_rate_pct": {"value": 36.0, "note": "Effective tax + levies (9M-2026 = 36.9%, FY2025 = 36.8%)."},
-      "dividend_payout_pct": {"value": 0.0, "note": "0% payout while accumulated losses (-1,522.9m at 9M-26) clear; gated on CAR >= target_car_pct."},
-      "target_car_pct": {"value": 15.0, "note": "Target CAR proxy buffer above 13.0% min_car_pct."}
+      "q4_2026_loan_growth_pct": {
+        "value": 3.0,
+        "note": "Q4-2026 net loan growth over 30 Sep 2026."
+      },
+      "q4_2026_deposit_growth_pct": {
+        "value": 2.5,
+        "note": "Q4-2026 deposit growth over 30 Sep 2026."
+      },
+      "q4_2026_flow_scale": {
+        "value": 0.3333,
+        "note": "Q4-2026 non-interest income and opex run-rate as fraction of 9M-2026."
+      },
+      "loan_spread_over_nom_gdp_pct": {
+        "value": 0.5,
+        "note": "FY2027E+ loan growth = nominal GDP (from macro.csv) + 0.5%."
+      },
+      "deposit_spread_over_nom_gdp_pct": {
+        "value": 0.0,
+        "note": "FY2027E+ deposit growth = nominal GDP (from macro.csv) + 0.0%."
+      },
+      "opex_spread_over_cpi_pct": {
+        "value": 2.0,
+        "note": "FY2027E+ opex growth = inflation_cpi_pct (from macro.csv) + 2.0%."
+      },
+      "npl_step_pct": {
+        "value": -5.0,
+        "note": "Annual NPL ratio change (pp) from 9M-2026 66.32%, floored at 10.0%."
+      },
+      "yield_on_investments_spread_over_blend_pct": {
+        "value": 0.0,
+        "note": "50% tbill_364d_pct + 50% govt_bond_yield_pct from macro.csv."
+      },
+      "yield_on_loans_spread_over_policy_pct": {
+        "value": 6.0,
+        "note": "policy_rate_pct + 6.0% spread."
+      },
+      "cost_of_funds_spread_over_tbill91_pct": {
+        "value": -1.5,
+        "note": "max(2.0%, tbill_91d_pct - 1.5%)."
+      },
+      "trading_income_growth_pct": {
+        "FY2027E": 8.0,
+        "FY2028E": 8.0,
+        "FY2029E": 8.0,
+        "FY2030E": 8.0,
+        "note": "FY27E+ trading growth."
+      },
+      "cost_of_risk_pct": {
+        "FY2026E": 0.5,
+        "FY2027E": 2.0,
+        "FY2028E": 1.8,
+        "FY2029E": 1.6,
+        "FY2030E": 1.5,
+        "note": "Continued recoveries in 2026E; normalizes to 1.5-2.0%."
+      },
+      "tax_rate_pct": {
+        "value": 36.0,
+        "note": "Effective tax + levies (9M-2026 = 36.9%, FY2025 = 36.8%)."
+      },
+      "dividend_payout_pct": {
+        "value": 0.0,
+        "note": "0% payout while accumulated losses (-1,522.9m at 9M-26) clear; gated on CAR >= target_car_pct."
+      },
+      "target_car_pct": {
+        "value": 15.0,
+        "note": "Target CAR proxy buffer above 13.0% min_car_pct."
+      },
+      "short_bill_share_of_noncash_reserve_cash": {
+        "value": 0.54,
+        "note": "Share of cash above the CRR proxy that earns the 91-day bill rate. FY2025 observed 54.0% = 3561.795 / (9902.445 - 3306.666) (ADB25AR note 18 p117). Held flat; 9M-2026 mix unavailable."
+      }
     },
     "downside": {
-      "q4_2026_loan_growth_pct": {"value": 1.0, "note": "Q4-2026 net loan growth over 30 Sep 2026."},
-      "q4_2026_deposit_growth_pct": {"value": 1.0, "note": "Q4-2026 deposit growth over 30 Sep 2026."},
-      "q4_2026_flow_scale": {"value": 0.28, "note": "Q4-2026 non-interest income and opex run-rate."},
-      "loan_spread_over_nom_gdp_pct": {"value": -3.0, "note": "FY2027E+ loan growth = nominal GDP - 3.0%."},
-      "deposit_spread_over_nom_gdp_pct": {"value": -1.5, "note": "FY2027E+ deposit growth = nominal GDP - 1.5%."},
-      "opex_spread_over_cpi_pct": {"value": 2.5, "note": "FY2027E+ opex growth = CPI + 2.5%."},
-      "npl_step_pct": {"value": -2.0, "note": "Slower NPL reduction (pp/yr) from 66.32%."},
-      "yield_on_investments_spread_over_blend_pct": {"value": 0.0, "note": "Linked to macro.csv downside yields."},
-      "yield_on_loans_spread_over_policy_pct": {"value": 6.5, "note": "Higher risk spread."},
-      "cost_of_funds_spread_over_tbill91_pct": {"value": -1.0, "note": "Higher funding cost pressure."},
-      "trading_income_growth_pct": {"FY2027E": 5.0, "FY2028E": 5.0, "FY2029E": 5.0, "FY2030E": 5.0, "note": "Lower trading gains."},
-      "cost_of_risk_pct": {"FY2026E": 1.5, "FY2027E": 3.5, "FY2028E": 3.0, "FY2029E": 2.5, "FY2030E": 2.2, "note": "Higher provisioning on legacy 66.3% NPL book."},
-      "tax_rate_pct": {"value": 37.0, "note": "Effective tax + levies."},
-      "dividend_payout_pct": {"value": 0.0, "note": "Capital retention."},
-      "target_car_pct": {"value": 15.0, "note": "Target buffer above 13.0% min_car_pct."}
+      "q4_2026_loan_growth_pct": {
+        "value": 1.0,
+        "note": "Q4-2026 net loan growth over 30 Sep 2026."
+      },
+      "q4_2026_deposit_growth_pct": {
+        "value": 1.0,
+        "note": "Q4-2026 deposit growth over 30 Sep 2026."
+      },
+      "q4_2026_flow_scale": {
+        "value": 0.28,
+        "note": "Q4-2026 non-interest income and opex run-rate."
+      },
+      "loan_spread_over_nom_gdp_pct": {
+        "value": -3.0,
+        "note": "FY2027E+ loan growth = nominal GDP - 3.0%."
+      },
+      "deposit_spread_over_nom_gdp_pct": {
+        "value": -1.5,
+        "note": "FY2027E+ deposit growth = nominal GDP - 1.5%."
+      },
+      "opex_spread_over_cpi_pct": {
+        "value": 2.5,
+        "note": "FY2027E+ opex growth = CPI + 2.5%."
+      },
+      "npl_step_pct": {
+        "value": -2.0,
+        "note": "Slower NPL reduction (pp/yr) from 66.32%."
+      },
+      "yield_on_investments_spread_over_blend_pct": {
+        "value": 0.0,
+        "note": "Linked to macro.csv downside yields."
+      },
+      "yield_on_loans_spread_over_policy_pct": {
+        "value": 6.5,
+        "note": "Higher risk spread."
+      },
+      "cost_of_funds_spread_over_tbill91_pct": {
+        "value": -1.0,
+        "note": "Higher funding cost pressure."
+      },
+      "trading_income_growth_pct": {
+        "FY2027E": 5.0,
+        "FY2028E": 5.0,
+        "FY2029E": 5.0,
+        "FY2030E": 5.0,
+        "note": "Lower trading gains."
+      },
+      "cost_of_risk_pct": {
+        "FY2026E": 1.5,
+        "FY2027E": 3.5,
+        "FY2028E": 3.0,
+        "FY2029E": 2.5,
+        "FY2030E": 2.2,
+        "note": "Higher provisioning on legacy 66.3% NPL book."
+      },
+      "tax_rate_pct": {
+        "value": 37.0,
+        "note": "Effective tax + levies."
+      },
+      "dividend_payout_pct": {
+        "value": 0.0,
+        "note": "Capital retention."
+      },
+      "target_car_pct": {
+        "value": 15.0,
+        "note": "Target buffer above 13.0% min_car_pct."
+      },
+      "short_bill_share_of_noncash_reserve_cash": {
+        "value": 0.54,
+        "note": "Share of cash above the CRR proxy that earns the 91-day bill rate. FY2025 observed 54.0% = 3561.795 / (9902.445 - 3306.666) (ADB25AR note 18 p117). Held flat; 9M-2026 mix unavailable."
+      }
     },
     "upside": {
-      "q4_2026_loan_growth_pct": {"value": 4.0, "note": "Q4-2026 net loan growth over 30 Sep 2026."},
-      "q4_2026_deposit_growth_pct": {"value": 3.5, "note": "Q4-2026 deposit growth over 30 Sep 2026."},
-      "q4_2026_flow_scale": {"value": 0.36, "note": "Q4-2026 non-interest income and opex run-rate."},
-      "loan_spread_over_nom_gdp_pct": {"value": 2.0, "note": "FY2027E+ loan growth = nominal GDP + 2.0%."},
-      "deposit_spread_over_nom_gdp_pct": {"value": 1.5, "note": "FY2027E+ deposit growth = nominal GDP + 1.5%."},
-      "opex_spread_over_cpi_pct": {"value": 1.5, "note": "FY2027E+ opex growth = CPI + 1.5%."},
-      "npl_step_pct": {"value": -7.0, "note": "Faster NPL resolution (pp/yr) from 66.32%."},
-      "yield_on_investments_spread_over_blend_pct": {"value": 0.0, "note": "Linked to macro.csv upside yields."},
-      "yield_on_loans_spread_over_policy_pct": {"value": 5.5, "note": "Gradual spread compression."},
-      "cost_of_funds_spread_over_tbill91_pct": {"value": -2.0, "note": "Lower funding cost."},
-      "trading_income_growth_pct": {"FY2027E": 10.0, "FY2028E": 10.0, "FY2029E": 10.0, "FY2030E": 10.0, "note": "Stronger FX/trading."},
-      "cost_of_risk_pct": {"FY2026E": 0.0, "FY2027E": 1.2, "FY2028E": 1.2, "FY2029E": 1.0, "FY2030E": 1.0, "note": "Stronger NPL recoveries."},
-      "tax_rate_pct": {"value": 35.0, "note": "Effective tax + levies."},
-      "dividend_payout_pct": {"value": 0.0, "note": "Capital retention while accumulated losses clear."},
-      "target_car_pct": {"value": 15.0, "note": "Target buffer above 13.0% min_car_pct."}
+      "q4_2026_loan_growth_pct": {
+        "value": 4.0,
+        "note": "Q4-2026 net loan growth over 30 Sep 2026."
+      },
+      "q4_2026_deposit_growth_pct": {
+        "value": 3.5,
+        "note": "Q4-2026 deposit growth over 30 Sep 2026."
+      },
+      "q4_2026_flow_scale": {
+        "value": 0.36,
+        "note": "Q4-2026 non-interest income and opex run-rate."
+      },
+      "loan_spread_over_nom_gdp_pct": {
+        "value": 2.0,
+        "note": "FY2027E+ loan growth = nominal GDP + 2.0%."
+      },
+      "deposit_spread_over_nom_gdp_pct": {
+        "value": 1.5,
+        "note": "FY2027E+ deposit growth = nominal GDP + 1.5%."
+      },
+      "opex_spread_over_cpi_pct": {
+        "value": 1.5,
+        "note": "FY2027E+ opex growth = CPI + 1.5%."
+      },
+      "npl_step_pct": {
+        "value": -7.0,
+        "note": "Faster NPL resolution (pp/yr) from 66.32%."
+      },
+      "yield_on_investments_spread_over_blend_pct": {
+        "value": 0.0,
+        "note": "Linked to macro.csv upside yields."
+      },
+      "yield_on_loans_spread_over_policy_pct": {
+        "value": 5.5,
+        "note": "Gradual spread compression."
+      },
+      "cost_of_funds_spread_over_tbill91_pct": {
+        "value": -2.0,
+        "note": "Lower funding cost."
+      },
+      "trading_income_growth_pct": {
+        "FY2027E": 10.0,
+        "FY2028E": 10.0,
+        "FY2029E": 10.0,
+        "FY2030E": 10.0,
+        "note": "Stronger FX/trading."
+      },
+      "cost_of_risk_pct": {
+        "FY2026E": 0.0,
+        "FY2027E": 1.2,
+        "FY2028E": 1.2,
+        "FY2029E": 1.0,
+        "FY2030E": 1.0,
+        "note": "Stronger NPL recoveries."
+      },
+      "tax_rate_pct": {
+        "value": 35.0,
+        "note": "Effective tax + levies."
+      },
+      "dividend_payout_pct": {
+        "value": 0.0,
+        "note": "Capital retention while accumulated losses clear."
+      },
+      "target_car_pct": {
+        "value": 15.0,
+        "note": "Target buffer above 13.0% min_car_pct."
+      },
+      "short_bill_share_of_noncash_reserve_cash": {
+        "value": 0.54,
+        "note": "Share of cash above the CRR proxy that earns the 91-day bill rate. FY2025 observed 54.0% = 3561.795 / (9902.445 - 3306.666) (ADB25AR note 18 p117). Held flat; 9M-2026 mix unavailable."
+      }
     }
   }
 }

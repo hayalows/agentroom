@@ -45,7 +45,7 @@ def check_historical(hist, hist_rows):
     dups = len(hist_rows) - len(set((r['period'], r['statement'], r['line_item']) for r in hist_rows))
     return res, missing_src, nonblank_unavail, dups
 
-def run():
+def run(share_override=None, write=True):
     hist, hist_rows = load_hist()
     macro = load_macro()
     with open(ASSUMP_PATH, encoding='utf-8') as f:
@@ -54,10 +54,17 @@ def run():
     years = assump['forecast_years']
     fy25 = hist['FY2025']
     q3 = hist['9M-2026']
-    rwa_density_q3 = (q3['total_equity'] / (q3['car_pct'] / 100.0)) / q3['total_assets']
+    # Regulatory-capital proxy (v2): FY2025 reported regulatory capital (note 5.7.2) rolled to 9M-2026 by the
+    # change in book equity, then RWA backed out of the reported 9M-2026 CAR. Level is regulatory, not book equity.
+    cap0 = fy25['x_regulatory_capital'] + (q3['total_equity'] - fy25['total_equity'])
+    rwa0 = cap0 / (q3['car_pct'] / 100.0)
+    rwa_density_q3 = rwa0 / q3['total_assets']
+    def car_of(te, ta):
+        return ((cap0 + te - q3['total_equity']) / (ta * rwa_density_q3)) * 100.0
 
     fc_rows = []
     fc_checks = []
+    cap_info = (fy25['x_regulatory_capital'], cap0, rwa0, rwa_density_q3)
 
     for scen in ['base', 'downside', 'upside']:
         drv = assump['drivers'][scen]
@@ -74,6 +81,7 @@ def run():
         tax_r = drv['tax_rate_pct']['value'] / 100.0
         payout = drv['dividend_payout_pct']['value'] / 100.0
         target_car = drv['target_car_pct']['value']
+        sb_share = drv['short_bill_share_of_noncash_reserve_cash']['value'] if share_override is None else share_override
 
         for yr in years:
             pol = macro[(scen, yr, 'policy_rate_pct')]
@@ -110,10 +118,13 @@ def run():
                 impairment = q3['impairment_charge'] + (0.5 * (q3['loans_and_advances_net'] + loans_net)) * (cor / 4.0)
 
                 inv_sec = q3['investment_securities']
+                cash_bog = q3['cash_and_bog_balances']
                 iter_diff = 0.0
                 for _ in range(15):
                     inv_prev = inv_sec
-                    q4_int_inc = (0.5 * (q3['loans_and_advances_net'] + loans_net) * y_loan + 0.5 * (q3['investment_securities'] + inv_sec) * y_inv) / 4.0
+                    nc_avg = max(0.0, 0.5 * ((q3['cash_and_bog_balances'] - crr * q3['customer_deposits']) + (cash_bog - crr * cust_dep)))
+                    cash_inc = sb_share * nc_avg * (tb91 / 100.0) / 4.0
+                    q4_int_inc = (0.5 * (q3['loans_and_advances_net'] + loans_net) * y_loan + 0.5 * (q3['investment_securities'] + inv_sec) * y_inv) / 4.0 + cash_inc
                     q4_int_exp = (0.5 * (q3['customer_deposits'] + cust_dep + q3['borrowings'] + borrowings) * cof) / 4.0
                     int_inc = q3['interest_income'] + q4_int_inc
                     int_exp = q3['interest_expense'] + q4_int_exp
@@ -159,11 +170,14 @@ def run():
                 impairment = avg_loans * cor
 
                 inv_sec = prev['investment_securities'] * (1.0 + dep_g * 0.8)
+                cash_bog = prev['cash_and_bog_balances']
                 iter_diff = 0.0
                 for _ in range(15):
                     inv_prev = inv_sec
                     avg_inv = 0.5 * (prev['investment_securities'] + inv_sec)
-                    int_inc = avg_loans * y_loan + avg_inv * y_inv
+                    nc_avg = max(0.0, 0.5 * ((prev['cash_and_bog_balances'] - crr * prev['customer_deposits']) + (cash_bog - crr * cust_dep)))
+                    cash_inc = sb_share * nc_avg * (tb91 / 100.0)
+                    int_inc = avg_loans * y_loan + avg_inv * y_inv + cash_inc
                     int_exp = avg_dep * cof
                     nii = int_inc - int_exp
                     toi = nii + (fee_inc - fee_exp) + trd_inc + oth_inc
@@ -176,7 +190,7 @@ def run():
                     res_other = prev['reserves_other']
                     total_eq = stated_cap + ret_earn + res_other
                     total_assets = total_liab + total_eq
-                    car_test = (total_eq / (total_assets * rwa_density_q3)) * 100.0
+                    car_test = car_of(total_eq, total_assets)
                     if car_test < target_car and div > 0:
                         ret_earn = prev['retained_earnings'] + pat
                         total_eq = stated_cap + ret_earn + res_other
@@ -188,7 +202,7 @@ def run():
 
             avg_eq = 0.5 * (prev['total_equity'] + total_eq)
             avg_as = 0.5 * (prev['total_assets'] + total_assets)
-            car_pct = (total_eq / (total_assets * rwa_density_q3)) * 100.0
+            car_pct = car_of(total_eq, total_assets)
             npl_pct = max(10.0, npl_prev + npl_step)
             npl_prev = npl_pct
             ldr_pct = (loans_net / cust_dep) * 100.0
@@ -197,7 +211,8 @@ def run():
             roa_pct = (pat / avg_as) * 100.0
 
             items = [
-                ('income_statement', 'interest_income', int_inc, 'GHS millions', 'FY26E = 9M-26 + iterative Q4; FY27E+ = avg loans*y_loan + avg inv*y_inv (macro.csv).'),
+                ('income_statement', 'interest_income', int_inc, 'GHS millions', 'FY26E = 9M-26 + iterative Q4; FY27E+ = avg loans*y_loan + avg inv*y_inv + short-bill income on non-reserve cash (macro.csv).'),
+                ('income_statement', 'x_interest_on_cash_short_bills', cash_inc, 'GHS millions', 'Memo, included in interest_income: short_bill_share x non-reserve cash x 91-day bill rate. FY2026E is the Q4 piece only (9M actual already contains its own).'),
                 ('income_statement', 'interest_expense', int_exp, 'GHS millions', 'Linked to macro.csv tbill_91d_pct.'),
                 ('income_statement', 'net_interest_income', nii, 'GHS millions', 'interest_income - interest_expense.'),
                 ('income_statement', 'fee_commission_income', fee_inc, 'GHS millions', 'Linked to nominal GDP (macro.csv).'),
@@ -212,7 +227,7 @@ def run():
                 ('income_statement', 'profit_before_tax', pbt, 'GHS millions', 'total_operating_income - opex - impairment.'),
                 ('income_statement', 'income_tax', tax, 'GHS millions', 'profit_before_tax * tax_rate.'),
                 ('income_statement', 'profit_after_tax', pat, 'GHS millions', 'profit_before_tax - income_tax.'),
-                ('balance_sheet', 'cash_and_bog_balances', cash_bog, 'GHS millions', 'Proxy screen >= crr_pct (20%) on customer_deposits; includes due_from_banks aggregate.'),
+                ('balance_sheet', 'cash_and_bog_balances', cash_bog, 'GHS millions', 'Proxy screen >= crr_pct (20%) on customer_deposits; includes due_from_banks aggregate. Non-reserve part earns short_bill_share x 91-day bill rate (v2).'),
                 ('balance_sheet', 'due_from_banks', None, 'GHS millions', 'Combined with cash_and_bog_balances (same basis as FY23-9M26).'),
                 ('balance_sheet', 'investment_securities', inv_sec, 'GHS millions', 'Balancing liquid asset; solved iteratively with interest_income.'),
                 ('balance_sheet', 'loans_and_advances_gross', None, 'GHS millions', 'Not disclosed in GSE summary statements.'),
@@ -230,7 +245,7 @@ def run():
                 ('balance_sheet', 'retained_earnings', ret_earn, 'GHS millions', 'Prior retained_earnings + PAT - dividends.'),
                 ('balance_sheet', 'reserves_other', res_other, 'GHS millions', 'Held flat.'),
                 ('balance_sheet', 'total_equity', total_eq, 'GHS millions', 'stated_capital + retained_earnings + reserves_other.'),
-                ('ratios', 'car_pct', car_pct, '%', 'Proxy anchored on 9M-2026 reported 27.41% CAR (no automatic capital injection assumed).'),
+                ('ratios', 'car_pct', car_pct, '%', 'v2 proxy: (FY2025 regulatory capital + change in book equity since FY2025) / (total assets x RWA density), anchored on reported 9M-2026 CAR 27.41%; no capital injection assumed.'),
                 ('ratios', 'tier1_pct', None, '%', 'Not projected separately.'),
                 ('ratios', 'npl_pct', npl_pct, '%', 'Estimated recovery path from 66.32% in 9M-2026.'),
                 ('ratios', 'ldr_pct', ldr_pct, '%', 'loans_and_advances_net / customer_deposits * 100 (net basis).'),
@@ -259,7 +274,7 @@ def run():
             prev = {
                 'loans_and_advances_net': loans_net, 'customer_deposits': cust_dep,
                 'borrowings': borrowings, 'other_liabilities': other_liab,
-                'investment_securities': inv_sec, 'property_equipment_intangibles': ppe_int, 'other_assets': oth_assets,
+                'cash_and_bog_balances': cash_bog, 'investment_securities': inv_sec, 'property_equipment_intangibles': ppe_int, 'other_assets': oth_assets,
                 'total_assets': total_assets, 'stated_capital': stated_cap, 'retained_earnings': ret_earn,
                 'reserves_other': res_other, 'total_equity': total_eq,
                 'fee_commission_income': fee_inc, 'fee_commission_expense': fee_exp,
@@ -267,12 +282,28 @@ def run():
                 'staff_costs': staff, 'depreciation_amortisation': da, 'other_operating_expenses': oth_opex,
             }
 
+    if not write:
+        return fc_checks
+
     with open(FORECAST_PATH, 'w', newline='', encoding='utf-8') as f:
         w = csv.writer(f)
         w.writerow(['bank', 'scenario', 'period', 'statement', 'line_item', 'value', 'unit', 'source_id', 'status', 'notes'])
         w.writerows(fc_rows)
 
     hist_res, missing_src, nonblank_unavail, dups = check_historical(hist, hist_rows)
+    # v2 source-bridge checks (FY2024, FY2025) and short-bill sensitivity
+    bridge = []
+    for p in ['FY2024', 'FY2025']:
+        d = hist[p]
+        bridge.append((p, 'gross loans - allowance - net loans', d['loans_and_advances_gross'] - d['loan_loss_allowance'] - d['loans_and_advances_net']))
+        bridge.append((p, 'note 8 components - interest_income', d['x_interest_income_loans'] + d['x_interest_income_govt_securities'] + d['x_interest_income_placements'] - d['interest_income']))
+        bridge.append((p, 'regulatory capital - CET1 - tier 2', d['x_regulatory_capital'] - d['x_cet1_capital'] - d['x_tier2_capital']))
+        bridge.append((p, 'cash - short bills - mandatory reserve (must be >= 0)', d['cash_and_bog_balances'] - d['x_cash_treasury_bills_under_91d'] - d['x_cash_mandatory_reserve_included']))
+    rou_rows = [(p, hist[p]['x_right_of_use_assets'], hist[p]['property_equipment_intangibles']) for p in ['FY2021', 'FY2022', 'FY2023', 'FY2024', 'FY2025', '9M-2026']]
+    sens = {s: run(s, False) for s in (0.0, 0.27)}
+    sens[None] = fc_checks
+    def pick(rows, scen, yr):
+        return next(r for r in rows if r[0] == scen and r[1] == yr)
     lines = [
         '# Checks: Agricultural Development Bank PLC (`adb`)',
         '',
@@ -299,11 +330,29 @@ def run():
         lines.append(f'| {scen} | {yr} | {max_res:.3f} | {iter_diff:.6f} | {"PASS" if inv_ok else "FAIL"} | {car_pct:.2f}% | {min_car:.2f}% | {"PASS" if car_ok else "FAIL"} | {pat:.1f} | {roe_str} |')
     lines.extend([
         '',
-        '## 3. Spot-checks & Caveats',
+        '## 3. Source bridges and short-bill sensitivity (v2)',
+        '| Period | Bridge | Residual (GHS m) |',
+        '| --- | --- | --- |',
+    ])
+    for p, label, v in bridge:
+        lines.append(f'| {p} | {label} | {v:.3f} |')
+    lines.append(f'- Capital proxy anchors: FY2025 reported regulatory capital {cap_info[0]:.3f}; rolled to 9M-2026 by the change in book equity = {cap_info[1]:.3f}; implied RWA = {cap_info[2]:.3f}; RWA / total assets = {cap_info[3]*100:.2f}%. Reported FY2025 RWA / total assets = {hist["FY2025"]["x_risk_weighted_assets"]/hist["FY2025"]["total_assets"]*100:.2f}%.')
+    lines.append('- Right-of-use assets are inside `property_equipment_intangibles` once (never in `other_assets`): ' + '; '.join(f'{p} {r:.3f} of {pp:.3f}' for p, r, pp in rou_rows) + '. `ROU <= PPE` holds in every period: ' + ('PASS' if all(r <= pp for _, r, pp in rou_rows) else 'FAIL') + '.')
+    lines.append('')
+    lines.append('Short-bill share of non-reserve cash (driver `short_bill_share_of_noncash_reserve_cash`; FY2025 observed 54.0% = 3561.795 / (9902.445 - 3306.666)). Model value 54.0%; 0% reproduces the version before this repair on this line only.')
+    lines.append('| Share | Scenario | FY2026E PAT | FY2027E PAT | FY2030E PAT | FY2030E CAR proxy |')
+    lines.append('| --- | --- | --- | --- | --- | --- |')
+    for s, label in ((0.0, '0%'), (0.27, '27%'), (None, '54% (model)')):
+        for scen in ('base', 'downside', 'upside'):
+            a, b, c = pick(sens[s], scen, 'FY2026E'), pick(sens[s], scen, 'FY2027E'), pick(sens[s], scen, 'FY2030E')
+            lines.append(f'| {label} | {scen} | {a[8]:.1f} | {b[8]:.1f} | {c[8]:.1f} | {c[5]:.2f}% |')
+    lines.extend([
+        '',
+        '## 4. Spot-checks & Caveats',
         '- `ADB25` p. 1: `total_assets` = `17,887,521` GHS \'000 (`17887.521` GHS m); `profit_after_tax` = `367,291` GHS \'000 (`367.291` GHS m).',
         '- `ADB26Q3` p. 1–2: `customer_deposits` = `15,362,718` GHS \'000 (`15362.718` GHS m); `profit_after_tax` = `301,714` GHS \'000 (`301.714` GHS m).',
         '- **CRR proxy caveat:** `cash_and_bog_balances` includes `due_from_banks` in FY2023–9M-2026 summary statements; `cash_bog >= 20% * customer_deposits` is a liquidity proxy screen, not regulatory BoG cedi CRR compliance.',
-        '- **CAR & solvency caveat:** Forecast `car_pct` is a proxy anchored on `9M-2026` reported `27.41%` CAR with no automatic capital injection assumed. Where `car_pct < 13%` (flagged `FAIL`), that reflects the proxy under stressed/normalizing yields rather than a demonstrated regulatory breach.',
+        '- **CAR & solvency caveat:** Forecast `car_pct` is a proxy: FY2025 reported regulatory capital (note 5.7.2) rolled forward by the change in book equity, over total assets x RWA density backed out of the reported `9M-2026` `27.41%` CAR, with no automatic capital injection assumed. Where `car_pct < 13%` (flagged `FAIL`), that reflects the proxy under stressed/normalizing yields rather than a demonstrated regulatory breach.',
     ])
     with open(CHECKS_PATH, 'w', encoding='utf-8') as f:
         f.write('\n'.join(lines) + '\n')

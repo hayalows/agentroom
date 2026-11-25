@@ -20,8 +20,8 @@ adb,FY2021,balance_sheet,investment_securities,2400.655,GHS millions,ADB22,1,rep
 adb,FY2021,balance_sheet,loans_and_advances_gross,,GHS millions,,,unavailable,Not disclosed in GSE summary statements (net loans only).
 adb,FY2021,balance_sheet,loan_loss_allowance,,GHS millions,,,unavailable,Not disclosed in GSE summary statements (net loans only).
 adb,FY2021,balance_sheet,loans_and_advances_net,2282.312,GHS millions,ADB22,1,reported,Bank-only.
-adb,FY2021,balance_sheet,property_equipment_intangibles,141.767,GHS millions,ADB22,1,derived,Property & equipment plus intangible assets.
-adb,FY2021,balance_sheet,other_assets,358.547,GHS millions,ADB22,1,derived,"Sum of restricted cash, investment other than securities, tax assets, ROU assets, and other assets."
+adb,FY2021,balance_sheet,property_equipment_intangibles,292.322,GHS millions,ADB22,1,derived,Property & equipment plus intangible assets plus right-of-use assets (ROU moved here from other_assets in model v2; see x_right_of_use_assets).
+adb,FY2021,balance_sheet,other_assets,207.992,GHS millions,ADB22,1,derived,"Sum of restricted cash, investment other than securities, tax assets and other assets. Right-of-use assets are excluded (they are in property_equipment_intangibles)."
 adb,FY2021,balance_sheet,total_assets,6454.119,GHS millions,ADB22,1,reported,Bank-only.
 adb,FY2021,balance_sheet,customer_deposits,4927.216,GHS millions,ADB22,1,reported,Bank-only.
 adb,FY2021,balance_sheet,due_to_banks,,GHS millions,,,unavailable,Not separately reported on balance sheet face (included in deposits/borrowings if any).
@@ -61,8 +61,8 @@ adb,FY2022,balance_sheet,investment_securities,1316.584,GHS millions,ADB22,1,rep
 adb,FY2022,balance_sheet,loans_and_advances_gross,,GHS millions,,,unavailable,Not disclosed in GSE summary statements (net loans only).
 adb,FY2022,balance_sheet,loan_loss_allowance,,GHS millions,,,unavailable,Not disclosed in GSE summary statements (net loans only).
 adb,FY2022,balance_sheet,loans_and_advances_net,3242.189,GHS millions,ADB22,1,reported,Bank-only.
-adb,FY2022,balance_sheet,property_equipment_intangibles,236.424,GHS millions,ADB22,1,derived,Property & equipment plus intangible assets.
-adb,FY2022,balance_sheet,other_assets,358.967,GHS millions,ADB22,1,derived,"Sum of restricted cash, investment other than securities, tax assets, ROU assets, and other assets."
+adb,FY2022,balance_sheet,property_equipment_intangibles,347.347,GHS millions,ADB22,1,derived,Property & equipment plus intangible assets plus right-of-use assets (ROU moved here from other_assets in model v2; see x_right_of_use_assets).
+adb,FY2022,balance_sheet,other_assets,248.044,GHS millions,ADB22,1,derived,"Sum of restricted cash, investment other than securities, tax assets and other assets. Right-of-use assets are excluded (they are in property_equipment_intangibles)."
 adb,FY2022,balance_sheet,total_assets,7412.72,GHS millions,ADB22,1,reported,Bank-only.
 adb,FY2022,balance_sheet,customer_deposits,5864.85,GHS millions,ADB22,1,reported,Bank-only.
 adb,FY2022,balance_sheet,due_to_banks,,GHS millions,,,unavailable,Not separately reported on balance sheet face (included in deposits/borrowings if any).
@@ -102,8 +102,8 @@ adb,FY2023,balance_sheet,investment_securities,1784.902,GHS millions,ADB24,1,rep
 adb,FY2023,balance_sheet,loans_and_advances_gross,,GHS millions,,,unavailable,Not disclosed in GSE summary statements (net loans only).
 adb,FY2023,balance_sheet,loan_loss_allowance,,GHS millions,,,unavailable,Not disclosed in GSE summary statements (net loans only).
 adb,FY2023,balance_sheet,loans_and_advances_net,2937.636,GHS millions,ADB24,1,reported,Bank-only.
-adb,FY2023,balance_sheet,property_equipment_intangibles,230.179,GHS millions,ADB24,1,derived,Property & equipment plus intangible assets.
-adb,FY2023,balance_sheet,other_assets,559.89,GHS millions,ADB24,1,derived,"Sum of restricted cash, investment other than securities, tax assets, ROU assets, and other assets."
+adb,FY2023,balance_sheet,property_equipment_intangibles,325.806,GHS millions,ADB24,1,derived,Property & equipment plus intangible assets plus right-of-use assets (ROU moved here from other_assets in model v2; see x_right_of_use_assets).
+adb,FY2023,balance_sheet,other_assets,464.263,GHS millions,ADB24,1,derived,"Sum of restricted cash, investment other than securities, tax assets and other assets. Right-of-use assets are excluded (they are in property_equipment_intangibles)."
 adb,FY2023,balance_sheet,total_assets,9312.647,GHS millions,ADB24,1,reported,Bank-only.
 adb,FY2023,balance_sheet,customer_deposits,8545.307,GHS millions,ADB24,1,reported,Bank-only.
 adb,FY2023,balance_sheet,due_to_banks,,GHS millions,,,unavailable,Not separately reported on balance sheet face (included in deposits/borrowings if any).
@@ -140,11 +140,11 @@ adb,FY2024,income_statement,profit_after_tax,35.061,GHS millions,ADB25,1,reporte
 adb,FY2024,balance_sheet,cash_and_bog_balances,7176.917,GHS millions,ADB25,1,reported,Cash and bank/cash equivalents (excludes restricted cash).
 adb,FY2024,balance_sheet,due_from_banks,,GHS millions,,,unavailable,Combined with cash_and_bog_balances in FY2023-9M-2026 summary statements.
 adb,FY2024,balance_sheet,investment_securities,3804.236,GHS millions,ADB25,1,reported,Bank-only investment securities.
-adb,FY2024,balance_sheet,loans_and_advances_gross,,GHS millions,,,unavailable,Not disclosed in GSE summary statements (net loans only).
-adb,FY2024,balance_sheet,loan_loss_allowance,,GHS millions,,,unavailable,Not disclosed in GSE summary statements (net loans only).
+adb,FY2024,balance_sheet,loans_and_advances_gross,4225.264,GHS millions,ADB25AR,121,reported,"Note 21 (printed p121), Bank. Transcribed from the papa-kojo-agent evidence pack (assistance/gemini/adb-earning-assets/findings.md); steward did not view the page."
+adb,FY2024,balance_sheet,loan_loss_allowance,1650.737,GHS millions,ADB25AR,121,reported,"Note 21 (printed p121), Bank; ECL allowance, positive. Transcribed from the evidence pack; gross - allowance = net 2574.527."
 adb,FY2024,balance_sheet,loans_and_advances_net,2574.527,GHS millions,ADB25,1,reported,Bank-only.
-adb,FY2024,balance_sheet,property_equipment_intangibles,207.251,GHS millions,ADB25,1,derived,Property & equipment plus intangible assets.
-adb,FY2024,balance_sheet,other_assets,841.846,GHS millions,ADB25,1,derived,"Sum of restricted cash, investment other than securities, tax assets, ROU assets, and other assets."
+adb,FY2024,balance_sheet,property_equipment_intangibles,279.842,GHS millions,ADB25,1,derived,Property & equipment plus intangible assets plus right-of-use assets (ROU moved here from other_assets in model v2; see x_right_of_use_assets).
+adb,FY2024,balance_sheet,other_assets,769.255,GHS millions,ADB25,1,derived,"Sum of restricted cash, investment other than securities, tax assets and other assets. Right-of-use assets are excluded (they are in property_equipment_intangibles)."
 adb,FY2024,balance_sheet,total_assets,14604.777,GHS millions,ADB25,1,reported,Bank-only.
 adb,FY2024,balance_sheet,customer_deposits,12045.885,GHS millions,ADB25,1,reported,Bank-only.
 adb,FY2024,balance_sheet,due_to_banks,,GHS millions,,,unavailable,Not separately reported on balance sheet face (included in deposits/borrowings if any).
@@ -181,11 +181,11 @@ adb,FY2025,income_statement,profit_after_tax,367.291,GHS millions,ADB25,1,report
 adb,FY2025,balance_sheet,cash_and_bog_balances,9902.445,GHS millions,ADB25,1,reported,Cash and bank/cash equivalents (excludes restricted cash).
 adb,FY2025,balance_sheet,due_from_banks,,GHS millions,,,unavailable,Combined with cash_and_bog_balances in FY2023-9M-2026 summary statements.
 adb,FY2025,balance_sheet,investment_securities,5029.965,GHS millions,ADB25,1,reported,Bank-only investment securities.
-adb,FY2025,balance_sheet,loans_and_advances_gross,,GHS millions,,,unavailable,Not disclosed in GSE summary statements (net loans only).
-adb,FY2025,balance_sheet,loan_loss_allowance,,GHS millions,,,unavailable,Not disclosed in GSE summary statements (net loans only).
+adb,FY2025,balance_sheet,loans_and_advances_gross,3894.061,GHS millions,ADB25AR,121,reported,"Note 21 (printed p121), Bank. Auditor key audit matter (printed p38) states about 3.89bn. Transcribed from the evidence pack."
+adb,FY2025,balance_sheet,loan_loss_allowance,1882.330,GHS millions,ADB25AR,121,reported,"Note 21 (printed p121), Bank; ECL allowance, positive. Auditor key audit matter (p38) states about 1.88bn. gross - allowance = net 2011.731."
 adb,FY2025,balance_sheet,loans_and_advances_net,2011.731,GHS millions,ADB25,1,reported,Bank-only.
-adb,FY2025,balance_sheet,property_equipment_intangibles,181.806,GHS millions,ADB25,1,derived,Property & equipment plus intangible assets.
-adb,FY2025,balance_sheet,other_assets,761.575,GHS millions,ADB25,1,derived,"Sum of restricted cash, investment other than securities, tax assets, ROU assets, and other assets."
+adb,FY2025,balance_sheet,property_equipment_intangibles,229.544,GHS millions,ADB25,1,derived,Property & equipment plus intangible assets plus right-of-use assets (ROU moved here from other_assets in model v2; see x_right_of_use_assets).
+adb,FY2025,balance_sheet,other_assets,713.837,GHS millions,ADB25,1,derived,"Sum of restricted cash, investment other than securities, tax assets and other assets. Right-of-use assets are excluded (they are in property_equipment_intangibles)."
 adb,FY2025,balance_sheet,total_assets,17887.521,GHS millions,ADB25,1,reported,Bank-only.
 adb,FY2025,balance_sheet,customer_deposits,13220.185,GHS millions,ADB25,1,reported,Bank-only.
 adb,FY2025,balance_sheet,due_to_banks,,GHS millions,,,unavailable,Not separately reported on balance sheet face (included in deposits/borrowings if any).
@@ -225,8 +225,8 @@ adb,9M-2026,balance_sheet,investment_securities,6381.47,GHS millions,ADB26Q3,1,r
 adb,9M-2026,balance_sheet,loans_and_advances_gross,,GHS millions,,,unavailable,Not disclosed in GSE summary statements (net loans only).
 adb,9M-2026,balance_sheet,loan_loss_allowance,,GHS millions,,,unavailable,Not disclosed in GSE summary statements (net loans only).
 adb,9M-2026,balance_sheet,loans_and_advances_net,2119.837,GHS millions,ADB26Q3,1,reported,Bank-only.
-adb,9M-2026,balance_sheet,property_equipment_intangibles,193.497,GHS millions,ADB26Q3,1,derived,Property & equipment plus intangible assets.
-adb,9M-2026,balance_sheet,other_assets,746.57,GHS millions,ADB26Q3,1,derived,"Sum of restricted cash, investment other than securities, tax assets, ROU assets, and other assets."
+adb,9M-2026,balance_sheet,property_equipment_intangibles,219.905,GHS millions,ADB26Q3,1,derived,Property & equipment plus intangible assets plus right-of-use assets (ROU moved here from other_assets in model v2; see x_right_of_use_assets).
+adb,9M-2026,balance_sheet,other_assets,720.162,GHS millions,ADB26Q3,1,derived,"Sum of restricted cash, investment other than securities, tax assets and other assets. Right-of-use assets are excluded (they are in property_equipment_intangibles)."
 adb,9M-2026,balance_sheet,total_assets,20277.994,GHS millions,ADB26Q3,1,reported,Bank-only.
 adb,9M-2026,balance_sheet,customer_deposits,15362.718,GHS millions,ADB26Q3,1,reported,Bank-only.
 adb,9M-2026,balance_sheet,due_to_banks,,GHS millions,,,unavailable,Not separately reported on balance sheet face (included in deposits/borrowings if any).
@@ -245,3 +245,27 @@ adb,9M-2026,ratios,ldr_pct,13.7986,%,ADB26Q3,1,derived,loans_and_advances_net / 
 adb,9M-2026,ratios,cost_to_income_pct,60.744,%,ADB26Q3,2,derived,(staff + da + other_operating_expenses) / total_operating_income * 100.
 adb,9M-2026,ratios,roe_pct,,%,,,unavailable,Opening FY2020 not retrieved / 9M-2026 interim.
 adb,9M-2026,ratios,roa_pct,,%,,,unavailable,Opening FY2020 not retrieved / 9M-2026 interim.
+adb,FY2021,balance_sheet,x_right_of_use_assets,150.555,GHS millions,ADB22,1,reported,"Right-of-use assets, Bank; memo, included in property_equipment_intangibles. Amount per the papa-kojo-agent ROU evidence table (assistance/gemini/rou-classification); FY2023 not viewed by steward."
+adb,FY2022,balance_sheet,x_right_of_use_assets,110.923,GHS millions,ADB22,1,reported,"Right-of-use assets, Bank; memo, included in property_equipment_intangibles. Amount per the papa-kojo-agent ROU evidence table (assistance/gemini/rou-classification); FY2023 not viewed by steward."
+adb,FY2023,balance_sheet,x_right_of_use_assets,95.627,GHS millions,ADB24,1,reported,"Right-of-use assets, Bank; memo, included in property_equipment_intangibles. Amount per the papa-kojo-agent ROU evidence table (assistance/gemini/rou-classification); FY2023 not viewed by steward."
+adb,FY2024,balance_sheet,x_right_of_use_assets,72.591,GHS millions,ADB25,1,reported,"Right-of-use assets, Bank; memo, included in property_equipment_intangibles. Amount per the papa-kojo-agent ROU evidence table (assistance/gemini/rou-classification); FY2023 not viewed by steward."
+adb,FY2025,balance_sheet,x_right_of_use_assets,47.738,GHS millions,ADB25,1,reported,"Right-of-use assets, Bank; memo, included in property_equipment_intangibles. Amount per the papa-kojo-agent ROU evidence table (assistance/gemini/rou-classification); FY2023 not viewed by steward."
+adb,9M-2026,balance_sheet,x_right_of_use_assets,26.408,GHS millions,ADB26Q3,1,reported,"Right-of-use assets, Bank; memo, included in property_equipment_intangibles. Amount per the papa-kojo-agent ROU evidence table (assistance/gemini/rou-classification); FY2023 not viewed by steward."
+adb,FY2025,income_statement,x_interest_income_loans,562.031,GHS millions,ADB25AR,113,reported,Note 8 (printed p113). Evidence pack (assistance/gemini/adb-earning-assets/findings.md); steward did not view the page. 
+adb,FY2025,income_statement,x_interest_income_govt_securities,1398.716,GHS millions,ADB25AR,113,reported,Note 8 (printed p113); includes short bills held in cash. Evidence pack (assistance/gemini/adb-earning-assets/findings.md); steward did not view the page. 
+adb,FY2025,income_statement,x_interest_income_placements,133.097,GHS millions,ADB25AR,113,reported,Note 8 (printed p113). Evidence pack (assistance/gemini/adb-earning-assets/findings.md); steward did not view the page. 
+adb,FY2025,balance_sheet,x_cash_treasury_bills_under_91d,3561.795,GHS millions,ADB25AR,117,reported,Note 18 (printed p117); inside cash_and_bog_balances. Evidence pack (assistance/gemini/adb-earning-assets/findings.md); steward did not view the page. 
+adb,FY2025,balance_sheet,x_cash_mandatory_reserve_included,3306.666,GHS millions,ADB25AR,117,reported,Note 18 (printed p117); Bank of Ghana mandatory reserve included in cash. Evidence pack (assistance/gemini/adb-earning-assets/findings.md); steward did not view the page. 
+adb,FY2025,balance_sheet,x_regulatory_capital,1038.461,GHS millions,ADB25AR,102,reported,"Note 5.7.2 (printed p102), total regulatory capital (not book equity). Evidence pack (assistance/gemini/adb-earning-assets/findings.md); steward did not view the page. "
+adb,FY2025,balance_sheet,x_tier2_capital,76.432,GHS millions,ADB25AR,102,reported,Note 5.7.2 (printed p102). Evidence pack (assistance/gemini/adb-earning-assets/findings.md); steward did not view the page. 
+adb,FY2025,balance_sheet,x_cet1_capital,962.029,GHS millions,ADB25AR,102,reported,"Note 5.7.2 (printed p102), CET1/Tier 1 amount. Evidence pack (assistance/gemini/adb-earning-assets/findings.md); steward did not view the page. "
+adb,FY2025,balance_sheet,x_risk_weighted_assets,3821.530,GHS millions,ADB25AR,102,reported,Note 5.7.2 (printed p102). Evidence pack (assistance/gemini/adb-earning-assets/findings.md); steward did not view the page. 
+adb,FY2024,income_statement,x_interest_income_loans,691.103,GHS millions,ADB25AR,113,reported,Note 8 (printed p113). Evidence pack (assistance/gemini/adb-earning-assets/findings.md); steward did not view the page. 
+adb,FY2024,income_statement,x_interest_income_govt_securities,701.208,GHS millions,ADB25AR,113,reported,Note 8 (printed p113); includes short bills held in cash. Evidence pack (assistance/gemini/adb-earning-assets/findings.md); steward did not view the page. 
+adb,FY2024,income_statement,x_interest_income_placements,179.316,GHS millions,ADB25AR,113,reported,Note 8 (printed p113). Evidence pack (assistance/gemini/adb-earning-assets/findings.md); steward did not view the page. 
+adb,FY2024,balance_sheet,x_cash_treasury_bills_under_91d,1882.678,GHS millions,ADB25AR,117,reported,Note 18 (printed p117); inside cash_and_bog_balances. Evidence pack (assistance/gemini/adb-earning-assets/findings.md); steward did not view the page. 
+adb,FY2024,balance_sheet,x_cash_mandatory_reserve_included,1869.385,GHS millions,ADB25AR,117,reported,Note 18 (printed p117); Bank of Ghana mandatory reserve included in cash. Evidence pack (assistance/gemini/adb-earning-assets/findings.md); steward did not view the page. 
+adb,FY2024,balance_sheet,x_regulatory_capital,-133.407,GHS millions,ADB25AR,102,reported,"Note 5.7.2 (printed p102), total regulatory capital (not book equity). Evidence pack (assistance/gemini/adb-earning-assets/findings.md); steward did not view the page. "
+adb,FY2024,balance_sheet,x_tier2_capital,126.956,GHS millions,ADB25AR,102,reported,Note 5.7.2 (printed p102). Evidence pack (assistance/gemini/adb-earning-assets/findings.md); steward did not view the page. 
+adb,FY2024,balance_sheet,x_cet1_capital,-260.363,GHS millions,ADB25AR,102,reported,"Note 5.7.2 (printed p102), CET1/Tier 1 amount. Evidence pack (assistance/gemini/adb-earning-assets/findings.md); steward did not view the page. "
+adb,FY2024,balance_sheet,x_risk_weighted_assets,4231.879,GHS millions,ADB25AR,102,reported,Note 5.7.2 (printed p102). Evidence pack (assistance/gemini/adb-earning-assets/findings.md); steward did not view the page. 
