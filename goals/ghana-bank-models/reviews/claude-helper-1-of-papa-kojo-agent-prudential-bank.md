@@ -2,6 +2,7 @@
 
 ## 2026-11-25T18:31Z, conditional scope "9M-2026 unavailable", package 1919f9e6
 Verdict: PASS
+Scope: conditional (9M-2026 unavailable)
 Package SHA-256 fingerprint: 1919f9e67abe7b9a4c0bee01ea80cb1629b137516d991bd25daca96202841384
 Macro SHA-256 fingerprint: b3c4412d681469e8d974e0c067af8e28435f5669900a9f1b4c54b0178992b8df
 

@@ -23,3 +23,24 @@ Macro SHA-256 fingerprint: b3c4412d681469e8d974e0c067af8e28435f5669900a9f1b4c54b
 - I did not read the OmniBSIC annual report, which is image-only, or the interim statements. Every history value is checked for arithmetic only, not against a source page.
 - I did not test the source URLs or the shared macro values.
 - This verdict covers the exact fingerprint above and nothing else.
+
+## 2026-11-25T19:14Z, conditional scope per CONDITIONAL-POLICY.md, package 4fd09185
+Verdict: PASS
+Scope: conditional (FY2021 annual statement unavailable)
+Package SHA-256 fingerprint: 4fd091850f3c6ab9e6b9d28cb52ee34af3ddb5f841d89aed1ffc163fa7e3a987
+Macro SHA-256 fingerprint: b3c4412d681469e8d974e0c067af8e28435f5669900a9f1b4c54b0178992b8df
+
+**Supersedes** my 18:30Z BLOCK on bc244a31. That BLOCK had one reason, the missing FY2021 annual period, and the lead has since declared it unavailable (`review-resolutions/CONDITIONAL-POLICY.md` section 6, marker `review-resolutions/omnibsic-bank.md`). This is a conditional PASS only, not ordinary acceptance.
+
+**Independence.** I did not build, edit or supply source evidence for any file in `banks/omnibsic-bank/`.
+
+### What I checked (observed)
+- **Gate:** the working tree hashes to the fingerprint above. The gate status is `failed` only on the schema line "annual periods 4" (the missing FY2021 period the policy now scopes); 310 history rows, 945 forecast rows, 0 bad, 0 duplicate, 15 scenario-years.
+- **Replay:** copied the bank folder and the shared macro file to a scratch tree and ran `node model.mjs` (exit 0, "120 checks, 945 rows"). `forecast.csv` and `checks.md` are byte-identical to the submitted files.
+- **Independent identities:** from `forecast.csv` alone I recomputed net interest income, profit after tax and assets = liabilities + equity for all 15 scenario-years (45 checks); largest residual 0.001m, none above 0.0025m. FY2030E base profit after tax 97.735m, downside -505.863m, upside 326.294m.
+- **My earlier non-blocking note is closed:** the ROU classification is now stated in the `other_assets` notes (ROU is included once in `property_equipment_intangibles`, other assets exclude it, ROU memo non-additive) and in the README label for FY2022 to FY2025.
+- **Conditional labelling:** the README carries "conditional: FY2021 annual statement unavailable" and no FY2021 value is invented.
+
+### What I could not verify
+- I did not open the OmniBSIC PDFs (the annual report is image-only); history values are checked for arithmetic and replay only, not against a page. chatgpt-support's 19:04Z review records 46 primary-source comparisons.
+- This verdict covers the exact fingerprint above only.
