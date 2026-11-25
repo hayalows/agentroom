@@ -155,13 +155,52 @@
   "assessed": true
  },
  {
-  "slug": "societe-generale-ghana",
+  "slug": "gtbank-ghana",
   "fail": [],
   "warn": [],
   "info": {
+   "owner": "claude",
+   "claim_status": "needs-review",
+   "history_rows": 304,
+   "periods": [
+    "9M-2025",
+    "9M-2026",
+    "FY2021",
+    "FY2022",
+    "FY2023",
+    "FY2024",
+    "FY2025"
+   ],
+   "identity_failures": 0,
+   "total_assets_fy2025": 21201.62,
+   "forecast_rows": 540,
+   "anchor_gap_interest_income_pct": 0.0,
+   "anchor_gap_interest_expense_pct": 0.0,
+   "anchor_gap_profit_after_tax_pct": 0.0,
+   "base_asset_cagr_26_30_pct": 18.6
+  },
+  "assessed": true
+ },
+ {
+  "slug": "societe-generale-ghana",
+  "fail": [
+   "FY2021: gross loans 2804.859 - allowance 234.145 - net loans 2504.367 leaves 66.347, of which interest in suspense explains 37.957, leaving 28.390 unexplained",
+   "FY2022: gross loans 3635.009 - allowance 433.733 - net loans 3102.993 leaves 98.282, of which interest in suspense explains 52.331, leaving 45.951 unexplained",
+   "FY2023: gross loans 4663.625 - allowance 541.210 - net loans 3987.842 leaves 134.573, of which interest in suspense explains 74.292, leaving 60.281 unexplained",
+   "FY2024: gross loans 5840.975 - allowance 654.569 - net loans 5011.684 leaves 174.722, of which interest in suspense explains 103.493, leaving 71.229 unexplained"
+  ],
+  "warn": [
+   "9M-2026: asset lines sum 11016.260 vs total assets 11078.375 (due_from_banks may be inside another line; say so in notes)",
+   "FY2021: asset lines sum 5290.942 vs total assets 5437.022 (due_from_banks may be inside another line; say so in notes)",
+   "FY2022: asset lines sum 6389.349 vs total assets 6595.836 (due_from_banks may be inside another line; say so in notes)",
+   "FY2023: asset lines sum 8524.581 vs total assets 8529.827 (due_from_banks may be inside another line; say so in notes)",
+   "FY2024: asset lines sum 10379.961 vs total assets 10396.291 (due_from_banks may be inside another line; say so in notes)",
+   "FY2025: asset lines sum 9659.112 vs total assets 9676.100 (due_from_banks may be inside another line; say so in notes)"
+  ],
+  "info": {
    "owner": "deepseek",
-   "claim_status": "in-progress",
-   "history_rows": 270,
+   "claim_status": "needs-review",
+   "history_rows": 294,
    "periods": [
     "9M-2026",
     "FY2021",
@@ -171,27 +210,14 @@
     "FY2025"
    ],
    "identity_failures": 0,
-   "total_assets_fy2025": 9676.100447
+   "total_assets_fy2025": 9676.100447,
+   "forecast_rows": 855,
+   "anchor_gap_interest_income_pct": 0.0,
+   "anchor_gap_interest_expense_pct": -0.0,
+   "anchor_gap_profit_after_tax_pct": -3.5,
+   "base_asset_cagr_26_30_pct": 12.8
   },
-  "assessed": false,
-  "wip": [
-   "missing file README.md",
-   "missing file forecast.csv",
-   "missing file checks.md",
-   "missing assumptions.json or assumptions.md",
-   "no reproducible model (model.py / model.mjs) or written formulas",
-   "FY2021: gross loans 2804.859 - allowance 234.145 - net loans 2504.367 leaves 66.347, of which interest in suspense explains 37.957, leaving 28.390 unexplained",
-   "FY2022: gross loans 3635.009 - allowance 433.733 - net loans 3102.993 leaves 98.282, of which interest in suspense explains 52.331, leaving 45.951 unexplained",
-   "FY2023: gross loans 4663.625 - allowance 541.210 - net loans 3987.842 leaves 134.573, of which interest in suspense explains 74.292, leaving 60.281 unexplained",
-   "FY2024: gross loans 5840.975 - allowance 654.569 - net loans 5011.684 leaves 174.722, of which interest in suspense explains 103.493, leaving 71.229 unexplained",
-   "no reference to the shared macro file in assumptions or model",
-   "9M-2026: asset lines sum 11016.260 vs total assets 11078.375 (due_from_banks may be inside another line; say so in notes)",
-   "FY2021: asset lines sum 5290.942 vs total assets 5437.022 (due_from_banks may be inside another line; say so in notes)",
-   "FY2022: asset lines sum 6389.349 vs total assets 6595.836 (due_from_banks may be inside another line; say so in notes)",
-   "FY2023: asset lines sum 8524.581 vs total assets 8529.827 (due_from_banks may be inside another line; say so in notes)",
-   "FY2024: asset lines sum 10379.961 vs total assets 10396.291 (due_from_banks may be inside another line; say so in notes)",
-   "FY2025: asset lines sum 9659.112 vs total assets 9676.100 (due_from_banks may be inside another line; say so in notes)"
-  ]
+  "assessed": true
  },
  {
   "slug": "standard-chartered-ghana",
@@ -227,7 +253,7 @@
   "info": {
    "owner": "claude-helper-1",
    "claim_status": "needs-review",
-   "history_rows": 337,
+   "history_rows": 346,
    "periods": [
     "9M-2025",
     "9M-2026",
@@ -239,11 +265,11 @@
    ],
    "identity_failures": 0,
    "total_assets_fy2025": 26702.82,
-   "forecast_rows": 555,
+   "forecast_rows": 654,
    "anchor_gap_interest_income_pct": 0.0,
    "anchor_gap_interest_expense_pct": 0.0,
    "anchor_gap_profit_after_tax_pct": -22.4,
-   "base_asset_cagr_26_30_pct": 18.9
+   "base_asset_cagr_26_30_pct": 18.8
   },
   "assessed": true
  }

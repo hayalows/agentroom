@@ -1,0 +1,305 @@
+bank,period,statement,line_item,value,unit,source_id,page,status,notes
+gtbank-ghana,FY2021,income_statement,interest_income,481.576,GHS millions,GTB-FY21,1,derived,"Interest income by effective interest method 421028 + other interest and similar income 60548 (GH¢'000). Bank-only (GTBank Ghana publishes a single set of statements). As originally reported in GTB-FY21; FY2022 report not read, so any later re-presentation of 2021 is not applied."
+gtbank-ghana,FY2021,income_statement,interest_expense,140.110,GHS millions,GTB-FY21,1,reported,"Stored positive. FY2023 onward includes the lease finance charge; FY2021 and FY2022 print it as a separate expense, which I show inside other_operating_expenses."
+gtbank-ghana,FY2021,income_statement,net_interest_income,341.466,GHS millions,GTB-FY21,1,reported,
+gtbank-ghana,FY2021,income_statement,fee_commission_income,149.901,GHS millions,GTB-FY21,1,reported,
+gtbank-ghana,FY2021,income_statement,fee_commission_expense,32.836,GHS millions,GTB-FY21,1,reported,Stored positive.
+gtbank-ghana,FY2021,income_statement,net_trading_income,133.954,GHS millions,GTB-FY21,1,reported,
+gtbank-ghana,FY2021,income_statement,other_operating_income,55.628,GHS millions,GTB-FY21,1,derived,Net income from other financial instruments at fair value 55192 + other income 436 (GH¢'000).
+gtbank-ghana,FY2021,income_statement,total_operating_income,648.113,GHS millions,GTB-FY21,1,derived,Net interest income + net fee and commission income + net trading income + other operating income (before impairment). The bank's own 'Net operating income' line excludes 'Other income'.
+gtbank-ghana,FY2021,income_statement,staff_costs,63.297,GHS millions,GTB-FY21,1,reported,Printed as personnel expenses; stored positive.
+gtbank-ghana,FY2021,income_statement,depreciation_amortisation,21.519,GHS millions,GTB-FY21,1,derived,Depreciation and amortisation 19595 + amortisation of prepaid leases 1924 (GH¢'000).
+gtbank-ghana,FY2021,income_statement,other_operating_expenses,71.229,GHS millions,GTB-FY21,1,derived,Other operating expenses 67051 + lease finance charge 4178 (printed separately in this period; later reports put it in interest expense).
+gtbank-ghana,FY2021,income_statement,impairment_charge,14.826,GHS millions,GTB-FY21,1,reported,Net impairment cost (positive = cost). Printed as one line 'Net impairment on financial instruments'. 
+gtbank-ghana,FY2021,income_statement,profit_before_tax,477.242,GHS millions,GTB-FY21,1,reported,
+gtbank-ghana,FY2021,income_statement,income_tax,161.796,GHS millions,GTB-FY21,1,derived,Total income tax and levies (profit before tax minus profit after tax).
+gtbank-ghana,FY2021,income_statement,x_income_tax_before_levies,120.037,GHS millions,GTB-FY21,1,reported,"Printed separately; already inside income_tax above, do not add again."
+gtbank-ghana,FY2021,income_statement,x_national_fiscal_stabilisation_levy,23.862,GHS millions,GTB-FY21,1,reported,"Printed separately; already inside income_tax above, do not add again."
+gtbank-ghana,FY2021,income_statement,x_financial_sector_recovery_levy,17.897,GHS millions,GTB-FY21,1,reported,"Printed separately; already inside income_tax above, do not add again."
+gtbank-ghana,FY2021,income_statement,profit_after_tax,315.446,GHS millions,GTB-FY21,1,reported,Printed as 'Profit for the year/period'.
+gtbank-ghana,FY2021,balance_sheet,cash_and_bog_balances,894.167,GHS millions,GTB-FY21,1,reported,"Printed 'Cash and cash equivalents'; includes balances at the Bank of Ghana and with other banks (no separate due-from-banks line). Bank-only (GTBank Ghana publishes a single set of statements). As originally reported in GTB-FY21; FY2022 report not read, so any later re-presentation of 2021 is not applied."
+gtbank-ghana,FY2021,balance_sheet,due_from_banks,0.000,GHS millions,GTB-FY21,1,derived,No separate line is printed; balances with other banks are inside cash and cash equivalents.
+gtbank-ghana,FY2021,balance_sheet,investment_securities,1013.537,GHS millions,GTB-FY21,1,reported,Printed 'Investment securities' only. Pledged assets and non-pledged trading assets are in other_assets (memo x_ rows below).
+gtbank-ghana,FY2021,balance_sheet,loans_and_advances_net,1647.641,GHS millions,GTB-FY21,1,reported,Printed 'Loans and advances to customers' (net of impairment).
+gtbank-ghana,FY2021,balance_sheet,property_equipment_intangibles,126.457,GHS millions,GTB-FY21,1,derived,Property and equipment 117208 + intangible assets 9249 (GH¢'000). No separate right-of-use line is printed.
+gtbank-ghana,FY2021,balance_sheet,other_assets,1353.649,GHS millions,GTB-FY21,1,derived,Non-pledged trading assets 764426 + pledged assets 160121 + current tax assets 0 + deferred tax assets 4132 + other assets 424970 (GH¢'000).
+gtbank-ghana,FY2021,balance_sheet,x_pledged_assets,160.121,GHS millions,GTB-FY21,1,reported,"Memo only: inside other_assets above, do not add again."
+gtbank-ghana,FY2021,balance_sheet,x_non_pledged_trading_assets,764.426,GHS millions,GTB-FY21,1,reported,"Memo only: inside other_assets above, do not add again."
+gtbank-ghana,FY2021,balance_sheet,total_assets,5035.451,GHS millions,GTB-FY21,1,reported,
+gtbank-ghana,FY2021,balance_sheet,customer_deposits,3725.427,GHS millions,GTB-FY21,1,reported,
+gtbank-ghana,FY2021,balance_sheet,due_to_banks,0.000,GHS millions,GTB-FY21,1,derived,No line printed for deposits from banks.
+gtbank-ghana,FY2021,balance_sheet,borrowings,0.000,GHS millions,GTB-FY21,1,derived,No borrowings line is printed.
+gtbank-ghana,FY2021,balance_sheet,other_liabilities,89.546,GHS millions,GTB-FY21,1,derived,Current tax liabilities 2740 + deferred tax liabilities 2705 + provision on off-balance-sheet items 1396 + other liabilities 82705 (GH¢'000).
+gtbank-ghana,FY2021,balance_sheet,total_liabilities,3814.973,GHS millions,GTB-FY21,1,reported,
+gtbank-ghana,FY2021,balance_sheet,stated_capital,404.895,GHS millions,GTB-FY21,1,reported,
+gtbank-ghana,FY2021,balance_sheet,retained_earnings,375.870,GHS millions,GTB-FY21,1,reported,Printed as 'Retained earnings' or 'Income surplus'.
+gtbank-ghana,FY2021,balance_sheet,reserves_other,439.713,GHS millions,GTB-FY21,1,derived,Credit risk reserve 37241 + statutory reserve fund 403861 + other reserves -1389 (GH¢'000).
+gtbank-ghana,FY2021,balance_sheet,total_equity,1220.478,GHS millions,GTB-FY21,1,reported,
+gtbank-ghana,FY2021,ratios,car_pct,38.80,percent,GTB-FY21,1,reported,
+gtbank-ghana,FY2021,ratios,npl_pct,1.59,percent,GTB-FY21,1,reported,
+gtbank-ghana,FY2021,ratios,x_loan_loss_provision_ratio_pct,0.47,percent,GTB-FY21,1,reported,
+gtbank-ghana,FY2021,ratios,x_liquidity_ratio_pct,60.60,percent,GTB-FY21,1,reported,
+gtbank-ghana,FY2021,ratios,x_leverage_ratio_pct,21.79,percent,GTB-FY21,1,reported,
+gtbank-ghana,FY2022,income_statement,interest_income,649.145,GHS millions,GTB-FY23,1,reported,As printed. Bank-only (GTBank Ghana publishes a single set of statements). Income statement and balance sheet as printed in the FY2022 comparatives of GTB-FY23 (the FY2022 report itself was not read).
+gtbank-ghana,FY2022,income_statement,interest_expense,176.232,GHS millions,GTB-FY23,1,reported,"Stored positive. FY2023 onward includes the lease finance charge; FY2021 and FY2022 print it as a separate expense, which I show inside other_operating_expenses."
+gtbank-ghana,FY2022,income_statement,net_interest_income,472.913,GHS millions,GTB-FY23,1,reported,
+gtbank-ghana,FY2022,income_statement,fee_commission_income,244.472,GHS millions,GTB-FY23,1,reported,
+gtbank-ghana,FY2022,income_statement,fee_commission_expense,57.464,GHS millions,GTB-FY23,1,reported,Stored positive.
+gtbank-ghana,FY2022,income_statement,net_trading_income,304.813,GHS millions,GTB-FY23,1,reported,
+gtbank-ghana,FY2022,income_statement,other_operating_income,2.040,GHS millions,GTB-FY23,1,derived,Net income from other financial instruments at fair value 1771 + other income 269 (GH¢'000).
+gtbank-ghana,FY2022,income_statement,total_operating_income,966.774,GHS millions,GTB-FY23,1,derived,Net interest income + net fee and commission income + net trading income + other operating income (before impairment). The bank's own 'Net operating income' line excludes 'Other income'.
+gtbank-ghana,FY2022,income_statement,staff_costs,81.809,GHS millions,GTB-FY23,1,reported,Printed as personnel expenses; stored positive.
+gtbank-ghana,FY2022,income_statement,depreciation_amortisation,22.561,GHS millions,GTB-FY23,1,derived,Depreciation and amortisation 20885 + amortisation of prepaid leases 1676 (GH¢'000).
+gtbank-ghana,FY2022,income_statement,other_operating_expenses,114.346,GHS millions,GTB-FY23,1,derived,Other operating expenses 110570 + lease finance charge 3776 (printed separately in this period; later reports put it in interest expense).
+gtbank-ghana,FY2022,income_statement,impairment_charge,557.020,GHS millions,GTB-FY23,1,reported,Net impairment cost (positive = cost). Printed as one line 'Net impairment on financial instruments'. FY2022 is the year of the domestic debt exchange (DDEP).
+gtbank-ghana,FY2022,income_statement,profit_before_tax,191.038,GHS millions,GTB-FY23,1,reported,
+gtbank-ghana,FY2022,income_statement,income_tax,76.058,GHS millions,GTB-FY23,1,derived,Total income tax and levies (profit before tax minus profit after tax).
+gtbank-ghana,FY2022,income_statement,x_income_tax_before_levies,56.954,GHS millions,GTB-FY23,1,reported,"Printed separately; already inside income_tax above, do not add again."
+gtbank-ghana,FY2022,income_statement,x_national_fiscal_stabilisation_levy,9.552,GHS millions,GTB-FY23,1,reported,"Printed separately; already inside income_tax above, do not add again."
+gtbank-ghana,FY2022,income_statement,x_financial_sector_recovery_levy,9.552,GHS millions,GTB-FY23,1,reported,"Printed separately; already inside income_tax above, do not add again."
+gtbank-ghana,FY2022,income_statement,profit_after_tax,114.980,GHS millions,GTB-FY23,1,reported,Printed as 'Profit for the year/period'.
+gtbank-ghana,FY2022,balance_sheet,cash_and_bog_balances,1779.276,GHS millions,GTB-FY23,1,reported,Printed 'Cash and cash equivalents'; includes balances at the Bank of Ghana and with other banks (no separate due-from-banks line). Bank-only (GTBank Ghana publishes a single set of statements). Income statement and balance sheet as printed in the FY2022 comparatives of GTB-FY23 (the FY2022 report itself was not read).
+gtbank-ghana,FY2022,balance_sheet,due_from_banks,0.000,GHS millions,GTB-FY23,1,derived,No separate line is printed; balances with other banks are inside cash and cash equivalents.
+gtbank-ghana,FY2022,balance_sheet,investment_securities,2134.382,GHS millions,GTB-FY23,1,reported,Printed 'Investment securities' only. Pledged assets and non-pledged trading assets are in other_assets (memo x_ rows below).
+gtbank-ghana,FY2022,balance_sheet,loans_and_advances_net,2026.345,GHS millions,GTB-FY23,1,reported,Printed 'Loans and advances to customers' (net of impairment).
+gtbank-ghana,FY2022,balance_sheet,property_equipment_intangibles,143.643,GHS millions,GTB-FY23,1,derived,Property and equipment 138662 + intangible assets 4981 (GH¢'000). No separate right-of-use line is printed.
+gtbank-ghana,FY2022,balance_sheet,other_assets,1043.699,GHS millions,GTB-FY23,1,derived,Non-pledged trading assets 142756 + pledged assets 158628 + current tax assets 44370 + deferred tax assets 137422 + other assets 560523 (GH¢'000).
+gtbank-ghana,FY2022,balance_sheet,x_pledged_assets,158.628,GHS millions,GTB-FY23,1,reported,"Memo only: inside other_assets above, do not add again."
+gtbank-ghana,FY2022,balance_sheet,x_non_pledged_trading_assets,142.756,GHS millions,GTB-FY23,1,reported,"Memo only: inside other_assets above, do not add again."
+gtbank-ghana,FY2022,balance_sheet,total_assets,7127.345,GHS millions,GTB-FY23,1,reported,
+gtbank-ghana,FY2022,balance_sheet,customer_deposits,5629.807,GHS millions,GTB-FY23,1,reported,
+gtbank-ghana,FY2022,balance_sheet,due_to_banks,0.000,GHS millions,GTB-FY23,1,derived,No line printed for deposits from banks.
+gtbank-ghana,FY2022,balance_sheet,borrowings,0.000,GHS millions,GTB-FY23,1,derived,No borrowings line is printed.
+gtbank-ghana,FY2022,balance_sheet,other_liabilities,161.916,GHS millions,GTB-FY23,1,derived,Current tax liabilities 0 + deferred tax liabilities 0 + provision on off-balance-sheet items 521 + other liabilities 161395 (GH¢'000).
+gtbank-ghana,FY2022,balance_sheet,total_liabilities,5791.723,GHS millions,GTB-FY23,1,reported,
+gtbank-ghana,FY2022,balance_sheet,stated_capital,404.895,GHS millions,GTB-FY23,1,reported,
+gtbank-ghana,FY2022,balance_sheet,retained_earnings,473.113,GHS millions,GTB-FY23,1,reported,Printed as 'Retained earnings' or 'Income surplus'.
+gtbank-ghana,FY2022,balance_sheet,reserves_other,457.614,GHS millions,GTB-FY23,1,derived,Credit risk reserve 26233 + statutory reserve fund 432606 + other reserves -1225 (GH¢'000).
+gtbank-ghana,FY2022,balance_sheet,total_equity,1335.622,GHS millions,GTB-FY23,1,reported,
+gtbank-ghana,FY2022,ratios,car_pct,33.42,percent,GTB-FY23,2,reported,
+gtbank-ghana,FY2022,ratios,npl_pct,2.42,percent,GTB-FY23,2,reported,
+gtbank-ghana,FY2022,ratios,x_loan_loss_provision_ratio_pct,0.86,percent,GTB-FY23,2,reported,
+gtbank-ghana,FY2022,ratios,x_liquidity_ratio_pct,57.51,percent,GTB-FY23,2,reported,
+gtbank-ghana,FY2022,ratios,x_leverage_ratio_pct,21.83,percent,GTB-FY23,2,reported,
+gtbank-ghana,FY2023,income_statement,interest_income,1344.278,GHS millions,GTB-FY24,1,derived,"Interest income by effective interest method 1341301 + other interest and similar income 2977 (GH¢'000). Bank-only (GTBank Ghana publishes a single set of statements). Taken from the FY2023 comparatives in GTB-FY24 (the bank re-presented 2023: the lease finance charge of 3.927m moved into interest expense; profit before tax 1,118.498m is unchanged from GTB-FY23)."
+gtbank-ghana,FY2023,income_statement,interest_expense,313.113,GHS millions,GTB-FY24,1,reported,Stored positive. 
+gtbank-ghana,FY2023,income_statement,net_interest_income,1031.166,GHS millions,GTB-FY24,1,reported,
+gtbank-ghana,FY2023,income_statement,fee_commission_income,281.228,GHS millions,GTB-FY24,1,reported,
+gtbank-ghana,FY2023,income_statement,fee_commission_expense,85.993,GHS millions,GTB-FY24,1,reported,Stored positive.
+gtbank-ghana,FY2023,income_statement,net_trading_income,297.364,GHS millions,GTB-FY24,1,reported,
+gtbank-ghana,FY2023,income_statement,other_operating_income,-1.278,GHS millions,GTB-FY24,1,derived,Net income from other financial instruments at fair value -3411 + other income 2133 (GH¢'000).
+gtbank-ghana,FY2023,income_statement,total_operating_income,1522.487,GHS millions,GTB-FY24,1,derived,Net interest income + net fee and commission income + net trading income + other operating income (before impairment). The bank's own 'Net operating income' line excludes 'Other income'.
+gtbank-ghana,FY2023,income_statement,staff_costs,87.279,GHS millions,GTB-FY24,1,reported,Printed as personnel expenses; stored positive.
+gtbank-ghana,FY2023,income_statement,depreciation_amortisation,25.598,GHS millions,GTB-FY24,1,derived,Depreciation and amortisation 23314 + amortisation of prepaid leases 2284 (GH¢'000).
+gtbank-ghana,FY2023,income_statement,other_operating_expenses,175.748,GHS millions,GTB-FY24,1,reported,Other operating expenses.
+gtbank-ghana,FY2023,income_statement,impairment_charge,115.364,GHS millions,GTB-FY24,1,derived,Net impairment cost (positive = cost). Components shown in x_ rows (cost positive; a reversal is negative). 
+gtbank-ghana,FY2023,income_statement,x_impairment_reversal_financial_assets,-295.067,GHS millions,GTB-FY24,1,reported,Cost positive; reversal negative. Part of impairment_charge.
+gtbank-ghana,FY2023,income_statement,x_modification_loss_investment_securities,410.431,GHS millions,GTB-FY24,1,reported,Cost positive; reversal negative. Part of impairment_charge.
+gtbank-ghana,FY2023,income_statement,profit_before_tax,1118.498,GHS millions,GTB-FY24,1,reported,
+gtbank-ghana,FY2023,income_statement,income_tax,392.712,GHS millions,GTB-FY24,1,reported,Income tax expense as printed (levies included in the printed charge).
+gtbank-ghana,FY2023,income_statement,profit_after_tax,725.786,GHS millions,GTB-FY24,1,reported,Printed as 'Profit for the year/period'.
+gtbank-ghana,FY2023,balance_sheet,cash_and_bog_balances,3094.740,GHS millions,GTB-FY24,1,reported,"Printed 'Cash and cash equivalents'; includes balances at the Bank of Ghana and with other banks (no separate due-from-banks line). Bank-only (GTBank Ghana publishes a single set of statements). Taken from the FY2023 comparatives in GTB-FY24 (the bank re-presented 2023: the lease finance charge of 3.927m moved into interest expense; profit before tax 1,118.498m is unchanged from GTB-FY23)."
+gtbank-ghana,FY2023,balance_sheet,due_from_banks,0.000,GHS millions,GTB-FY24,1,derived,No separate line is printed; balances with other banks are inside cash and cash equivalents.
+gtbank-ghana,FY2023,balance_sheet,investment_securities,5516.067,GHS millions,GTB-FY24,1,reported,Printed 'Investment securities' only. Pledged assets and non-pledged trading assets are in other_assets (memo x_ rows below).
+gtbank-ghana,FY2023,balance_sheet,loans_and_advances_net,1790.422,GHS millions,GTB-FY24,1,reported,Printed 'Loans and advances to customers' (net of impairment).
+gtbank-ghana,FY2023,balance_sheet,property_equipment_intangibles,149.256,GHS millions,GTB-FY24,1,derived,Property and equipment 144070 + intangible assets 5186 (GH¢'000). No separate right-of-use line is printed.
+gtbank-ghana,FY2023,balance_sheet,other_assets,673.868,GHS millions,GTB-FY24,1,derived,Non-pledged trading assets 60897 + pledged assets 156831 + current tax assets 11892 + deferred tax assets 166671 + other assets 277577 (GH¢'000).
+gtbank-ghana,FY2023,balance_sheet,x_pledged_assets,156.831,GHS millions,GTB-FY24,1,reported,"Memo only: inside other_assets above, do not add again."
+gtbank-ghana,FY2023,balance_sheet,x_non_pledged_trading_assets,60.897,GHS millions,GTB-FY24,1,reported,"Memo only: inside other_assets above, do not add again."
+gtbank-ghana,FY2023,balance_sheet,total_assets,11224.353,GHS millions,GTB-FY24,1,reported,
+gtbank-ghana,FY2023,balance_sheet,customer_deposits,9011.566,GHS millions,GTB-FY24,1,reported,
+gtbank-ghana,FY2023,balance_sheet,due_to_banks,0.000,GHS millions,GTB-FY24,1,derived,No line printed for deposits from banks.
+gtbank-ghana,FY2023,balance_sheet,borrowings,0.000,GHS millions,GTB-FY24,1,derived,No borrowings line is printed.
+gtbank-ghana,FY2023,balance_sheet,other_liabilities,150.152,GHS millions,GTB-FY24,1,derived,Current tax liabilities 0 + deferred tax liabilities 0 + provision on off-balance-sheet items 1025 + other liabilities 149127 (GH¢'000).
+gtbank-ghana,FY2023,balance_sheet,total_liabilities,9161.718,GHS millions,GTB-FY24,1,reported,
+gtbank-ghana,FY2023,balance_sheet,stated_capital,404.895,GHS millions,GTB-FY24,1,reported,
+gtbank-ghana,FY2023,balance_sheet,retained_earnings,997.000,GHS millions,GTB-FY24,1,reported,Printed as 'Retained earnings' or 'Income surplus'.
+gtbank-ghana,FY2023,balance_sheet,reserves_other,660.740,GHS millions,GTB-FY24,1,derived,Credit risk reserve 46687 + statutory reserve fund 614053 + other reserves 0 (GH¢'000).
+gtbank-ghana,FY2023,balance_sheet,total_equity,2062.635,GHS millions,GTB-FY24,1,reported,
+gtbank-ghana,FY2023,ratios,car_pct,41.84,percent,GTB-FY24,2,reported,
+gtbank-ghana,FY2023,ratios,npl_pct,3.95,percent,GTB-FY24,2,reported,
+gtbank-ghana,FY2023,ratios,x_loan_loss_provision_ratio_pct,2.26,percent,GTB-FY24,2,reported,
+gtbank-ghana,FY2023,ratios,x_liquidity_ratio_pct,73.18,percent,GTB-FY24,2,reported,
+gtbank-ghana,FY2023,ratios,x_leverage_ratio_pct,18.03,percent,GTB-FY24,2,reported,
+gtbank-ghana,FY2024,income_statement,interest_income,1828.655,GHS millions,GTB-FY25,1,derived,Interest income by effective interest method 1828378 + other interest and similar income 277 (GH¢'000). Bank-only (GTBank Ghana publishes a single set of statements). Taken from the FY2024 comparatives in GTB-FY25; equal to GTB-FY24 on every statement line I compared.
+gtbank-ghana,FY2024,income_statement,interest_expense,630.424,GHS millions,GTB-FY25,1,reported,Stored positive. 
+gtbank-ghana,FY2024,income_statement,net_interest_income,1198.231,GHS millions,GTB-FY25,1,reported,
+gtbank-ghana,FY2024,income_statement,fee_commission_income,364.278,GHS millions,GTB-FY25,1,reported,
+gtbank-ghana,FY2024,income_statement,fee_commission_expense,129.307,GHS millions,GTB-FY25,1,reported,Stored positive.
+gtbank-ghana,FY2024,income_statement,net_trading_income,281.748,GHS millions,GTB-FY25,1,reported,
+gtbank-ghana,FY2024,income_statement,other_operating_income,8.726,GHS millions,GTB-FY25,1,derived,Net income from other financial instruments at fair value 1555 + other income 7171 (GH¢'000).
+gtbank-ghana,FY2024,income_statement,total_operating_income,1723.676,GHS millions,GTB-FY25,1,derived,Net interest income + net fee and commission income + net trading income + other operating income (before impairment). The bank's own 'Net operating income' line excludes 'Other income'.
+gtbank-ghana,FY2024,income_statement,staff_costs,117.054,GHS millions,GTB-FY25,1,reported,Printed as personnel expenses; stored positive.
+gtbank-ghana,FY2024,income_statement,depreciation_amortisation,29.946,GHS millions,GTB-FY25,1,derived,Depreciation and amortisation 27826 + amortisation of prepaid leases 2120 (GH¢'000).
+gtbank-ghana,FY2024,income_statement,other_operating_expenses,219.479,GHS millions,GTB-FY25,1,reported,Other operating expenses.
+gtbank-ghana,FY2024,income_statement,impairment_charge,185.805,GHS millions,GTB-FY25,1,derived,Net impairment cost (positive = cost). Components shown in x_ rows (cost positive; a reversal is negative). 
+gtbank-ghana,FY2024,income_statement,x_impairment_reversal_financial_assets,-157.167,GHS millions,GTB-FY25,1,reported,Cost positive; reversal negative. Part of impairment_charge.
+gtbank-ghana,FY2024,income_statement,x_modification_loss_investment_securities,342.972,GHS millions,GTB-FY25,1,reported,Cost positive; reversal negative. Part of impairment_charge.
+gtbank-ghana,FY2024,income_statement,profit_before_tax,1171.391,GHS millions,GTB-FY25,1,reported,
+gtbank-ghana,FY2024,income_statement,income_tax,427.369,GHS millions,GTB-FY25,1,reported,Income tax expense as printed (levies included in the printed charge).
+gtbank-ghana,FY2024,income_statement,profit_after_tax,744.022,GHS millions,GTB-FY25,1,reported,Printed as 'Profit for the year/period'.
+gtbank-ghana,FY2024,balance_sheet,cash_and_bog_balances,5660.310,GHS millions,GTB-FY25,1,reported,Printed 'Cash and cash equivalents'; includes balances at the Bank of Ghana and with other banks (no separate due-from-banks line). Bank-only (GTBank Ghana publishes a single set of statements). Taken from the FY2024 comparatives in GTB-FY25; equal to GTB-FY24 on every statement line I compared.
+gtbank-ghana,FY2024,balance_sheet,due_from_banks,0.000,GHS millions,GTB-FY25,1,derived,No separate line is printed; balances with other banks are inside cash and cash equivalents.
+gtbank-ghana,FY2024,balance_sheet,investment_securities,5609.497,GHS millions,GTB-FY25,1,reported,Printed 'Investment securities' only. Pledged assets and non-pledged trading assets are in other_assets (memo x_ rows below).
+gtbank-ghana,FY2024,balance_sheet,loans_and_advances_net,2553.795,GHS millions,GTB-FY25,1,reported,Printed 'Loans and advances to customers' (net of impairment).
+gtbank-ghana,FY2024,balance_sheet,property_equipment_intangibles,276.785,GHS millions,GTB-FY25,1,derived,Property and equipment 272198 + intangible assets 4587 (GH¢'000). No separate right-of-use line is printed.
+gtbank-ghana,FY2024,balance_sheet,other_assets,1265.763,GHS millions,GTB-FY25,1,derived,Non-pledged trading assets 158697 + pledged assets 283000 + current tax assets 23728 + deferred tax assets 199619 + other assets 600719 (GH¢'000).
+gtbank-ghana,FY2024,balance_sheet,x_pledged_assets,283.000,GHS millions,GTB-FY25,1,reported,"Memo only: inside other_assets above, do not add again."
+gtbank-ghana,FY2024,balance_sheet,x_non_pledged_trading_assets,158.697,GHS millions,GTB-FY25,1,reported,"Memo only: inside other_assets above, do not add again."
+gtbank-ghana,FY2024,balance_sheet,total_assets,15366.150,GHS millions,GTB-FY25,1,reported,
+gtbank-ghana,FY2024,balance_sheet,customer_deposits,12741.124,GHS millions,GTB-FY25,1,reported,
+gtbank-ghana,FY2024,balance_sheet,due_to_banks,0.000,GHS millions,GTB-FY25,1,derived,No line printed for deposits from banks.
+gtbank-ghana,FY2024,balance_sheet,borrowings,0.000,GHS millions,GTB-FY25,1,derived,No borrowings line is printed.
+gtbank-ghana,FY2024,balance_sheet,other_liabilities,131.180,GHS millions,GTB-FY25,1,derived,Current tax liabilities 0 + deferred tax liabilities 0 + provision on off-balance-sheet items 1025 + other liabilities 130155 (GH¢'000).
+gtbank-ghana,FY2024,balance_sheet,total_liabilities,12872.304,GHS millions,GTB-FY25,1,reported,
+gtbank-ghana,FY2024,balance_sheet,stated_capital,404.895,GHS millions,GTB-FY25,1,reported,
+gtbank-ghana,FY2024,balance_sheet,retained_earnings,1348.501,GHS millions,GTB-FY25,1,reported,Printed as 'Retained earnings' or 'Income surplus'.
+gtbank-ghana,FY2024,balance_sheet,reserves_other,740.450,GHS millions,GTB-FY25,1,derived,Credit risk reserve 33394 + statutory reserve fund 707056 + other reserves 0 (GH¢'000).
+gtbank-ghana,FY2024,balance_sheet,total_equity,2493.846,GHS millions,GTB-FY25,1,reported,
+gtbank-ghana,FY2024,ratios,car_pct,36.94,percent,GTB-FY25,2,reported,CAR 36.94 and leverage 15.41 are the FY2024 values printed in GTB-FY25; GTB-FY24 itself printed 37.01 and 15.30.
+gtbank-ghana,FY2024,ratios,npl_pct,2.42,percent,GTB-FY25,2,reported,CAR 36.94 and leverage 15.41 are the FY2024 values printed in GTB-FY25; GTB-FY24 itself printed 37.01 and 15.30.
+gtbank-ghana,FY2024,ratios,x_loan_loss_provision_ratio_pct,1.14,percent,GTB-FY25,2,reported,CAR 36.94 and leverage 15.41 are the FY2024 values printed in GTB-FY25; GTB-FY24 itself printed 37.01 and 15.30.
+gtbank-ghana,FY2024,ratios,x_liquidity_ratio_pct,69.52,percent,GTB-FY25,2,reported,CAR 36.94 and leverage 15.41 are the FY2024 values printed in GTB-FY25; GTB-FY24 itself printed 37.01 and 15.30.
+gtbank-ghana,FY2024,ratios,x_leverage_ratio_pct,15.41,percent,GTB-FY25,2,reported,CAR 36.94 and leverage 15.41 are the FY2024 values printed in GTB-FY25; GTB-FY24 itself printed 37.01 and 15.30.
+gtbank-ghana,FY2025,income_statement,interest_income,2206.252,GHS millions,GTB-FY25,1,derived,Interest income by effective interest method 2194220 + other interest and similar income 12032 (GH¢'000). Bank-only (GTBank Ghana publishes a single set of statements).
+gtbank-ghana,FY2025,income_statement,interest_expense,843.730,GHS millions,GTB-FY25,1,reported,Stored positive. 
+gtbank-ghana,FY2025,income_statement,net_interest_income,1362.522,GHS millions,GTB-FY25,1,reported,
+gtbank-ghana,FY2025,income_statement,fee_commission_income,469.380,GHS millions,GTB-FY25,1,reported,
+gtbank-ghana,FY2025,income_statement,fee_commission_expense,161.805,GHS millions,GTB-FY25,1,reported,Stored positive.
+gtbank-ghana,FY2025,income_statement,net_trading_income,426.243,GHS millions,GTB-FY25,1,reported,
+gtbank-ghana,FY2025,income_statement,other_operating_income,25.500,GHS millions,GTB-FY25,1,derived,Net income from other financial instruments at fair value 16833 + other income 8667 (GH¢'000).
+gtbank-ghana,FY2025,income_statement,total_operating_income,2121.840,GHS millions,GTB-FY25,1,derived,Net interest income + net fee and commission income + net trading income + other operating income (before impairment). The bank's own 'Net operating income' line excludes 'Other income'.
+gtbank-ghana,FY2025,income_statement,staff_costs,152.305,GHS millions,GTB-FY25,1,reported,Printed as personnel expenses; stored positive.
+gtbank-ghana,FY2025,income_statement,depreciation_amortisation,48.390,GHS millions,GTB-FY25,1,derived,Depreciation and amortisation 45492 + amortisation of prepaid leases 2898 (GH¢'000).
+gtbank-ghana,FY2025,income_statement,other_operating_expenses,341.057,GHS millions,GTB-FY25,1,reported,Other operating expenses.
+gtbank-ghana,FY2025,income_statement,impairment_charge,15.684,GHS millions,GTB-FY25,1,derived,Net impairment cost (positive = cost). Components shown in x_ rows (cost positive; a reversal is negative). 
+gtbank-ghana,FY2025,income_statement,x_impairment_charge_financial_assets,1.088,GHS millions,GTB-FY25,1,reported,Cost positive; reversal negative. Part of impairment_charge.
+gtbank-ghana,FY2025,income_statement,x_modification_loss_investment_securities,0.896,GHS millions,GTB-FY25,1,reported,Cost positive; reversal negative. Part of impairment_charge.
+gtbank-ghana,FY2025,income_statement,x_impairment_non_financial_assets,13.700,GHS millions,GTB-FY25,1,reported,Cost positive; reversal negative. Part of impairment_charge.
+gtbank-ghana,FY2025,income_statement,profit_before_tax,1564.405,GHS millions,GTB-FY25,1,reported,
+gtbank-ghana,FY2025,income_statement,income_tax,552.182,GHS millions,GTB-FY25,1,reported,Income tax expense as printed (levies included in the printed charge).
+gtbank-ghana,FY2025,income_statement,profit_after_tax,1012.223,GHS millions,GTB-FY25,1,reported,Printed as 'Profit for the year/period'.
+gtbank-ghana,FY2025,balance_sheet,cash_and_bog_balances,9545.853,GHS millions,GTB-FY25,1,reported,Printed 'Cash and cash equivalents'; includes balances at the Bank of Ghana and with other banks (no separate due-from-banks line). Bank-only (GTBank Ghana publishes a single set of statements).
+gtbank-ghana,FY2025,balance_sheet,due_from_banks,0.000,GHS millions,GTB-FY25,1,derived,No separate line is printed; balances with other banks are inside cash and cash equivalents.
+gtbank-ghana,FY2025,balance_sheet,investment_securities,6363.569,GHS millions,GTB-FY25,1,reported,Printed 'Investment securities' only. Pledged assets and non-pledged trading assets are in other_assets (memo x_ rows below).
+gtbank-ghana,FY2025,balance_sheet,loans_and_advances_net,3429.641,GHS millions,GTB-FY25,1,reported,Printed 'Loans and advances to customers' (net of impairment).
+gtbank-ghana,FY2025,balance_sheet,property_equipment_intangibles,388.314,GHS millions,GTB-FY25,1,derived,Property and equipment 353454 + intangible assets 34860 (GH¢'000). No separate right-of-use line is printed.
+gtbank-ghana,FY2025,balance_sheet,other_assets,1474.243,GHS millions,GTB-FY25,1,derived,Non-pledged trading assets 107406 + pledged assets 260402 + current tax assets 112448 + deferred tax assets 159999 + other assets 833988 (GH¢'000).
+gtbank-ghana,FY2025,balance_sheet,x_pledged_assets,260.402,GHS millions,GTB-FY25,1,reported,"Memo only: inside other_assets above, do not add again."
+gtbank-ghana,FY2025,balance_sheet,x_non_pledged_trading_assets,107.406,GHS millions,GTB-FY25,1,reported,"Memo only: inside other_assets above, do not add again."
+gtbank-ghana,FY2025,balance_sheet,total_assets,21201.620,GHS millions,GTB-FY25,1,reported,
+gtbank-ghana,FY2025,balance_sheet,customer_deposits,18049.481,GHS millions,GTB-FY25,1,reported,
+gtbank-ghana,FY2025,balance_sheet,due_to_banks,0.000,GHS millions,GTB-FY25,1,derived,No line printed for deposits from banks.
+gtbank-ghana,FY2025,balance_sheet,borrowings,0.000,GHS millions,GTB-FY25,1,derived,No borrowings line is printed.
+gtbank-ghana,FY2025,balance_sheet,other_liabilities,110.908,GHS millions,GTB-FY25,1,derived,Current tax liabilities 0 + deferred tax liabilities 0 + provision on off-balance-sheet items 1025 + other liabilities 109883 (GH¢'000).
+gtbank-ghana,FY2025,balance_sheet,total_liabilities,18160.389,GHS millions,GTB-FY25,1,reported,
+gtbank-ghana,FY2025,balance_sheet,stated_capital,404.895,GHS millions,GTB-FY25,1,reported,
+gtbank-ghana,FY2025,balance_sheet,retained_earnings,1686.279,GHS millions,GTB-FY25,1,reported,Printed as 'Retained earnings' or 'Income surplus'.
+gtbank-ghana,FY2025,balance_sheet,reserves_other,950.056,GHS millions,GTB-FY25,1,derived,Credit risk reserve 116473 + statutory reserve fund 833583 + other reserves 0 (GH¢'000).
+gtbank-ghana,FY2025,balance_sheet,total_equity,3041.231,GHS millions,GTB-FY25,1,reported,
+gtbank-ghana,FY2025,ratios,car_pct,32.70,percent,GTB-FY25,2,reported,The Q3-2026 statement prints December 2025 CAR as 32.37 and leverage 12.35; the audited FY2025 report prints CAR 32.70. 32.70 is used.
+gtbank-ghana,FY2025,ratios,npl_pct,7.13,percent,GTB-FY25,2,reported,The Q3-2026 statement prints December 2025 CAR as 32.37 and leverage 12.35; the audited FY2025 report prints CAR 32.70. 32.70 is used.
+gtbank-ghana,FY2025,ratios,x_loan_loss_provision_ratio_pct,0.91,percent,GTB-FY25,2,reported,The Q3-2026 statement prints December 2025 CAR as 32.37 and leverage 12.35; the audited FY2025 report prints CAR 32.70. 32.70 is used.
+gtbank-ghana,FY2025,ratios,x_liquidity_ratio_pct,77.48,percent,GTB-FY25,2,reported,The Q3-2026 statement prints December 2025 CAR as 32.37 and leverage 12.35; the audited FY2025 report prints CAR 32.70. 32.70 is used.
+gtbank-ghana,FY2025,ratios,x_leverage_ratio_pct,12.35,percent,GTB-FY25,2,reported,The Q3-2026 statement prints December 2025 CAR as 32.37 and leverage 12.35; the audited FY2025 report prints CAR 32.70. 32.70 is used.
+gtbank-ghana,9M-2025,income_statement,interest_income,1586.594,GHS millions,GTB-Q3-26,1,derived,Interest income by effective interest method 1586385 + other interest and similar income 209 (GH¢'000). Bank-only (GTBank Ghana publishes a single set of statements). Unaudited comparative (nine months to 30 Sep 2025) printed in GTB-Q3-26.
+gtbank-ghana,9M-2025,income_statement,interest_expense,622.138,GHS millions,GTB-Q3-26,1,reported,Stored positive. 
+gtbank-ghana,9M-2025,income_statement,net_interest_income,964.456,GHS millions,GTB-Q3-26,1,reported,
+gtbank-ghana,9M-2025,income_statement,fee_commission_income,393.026,GHS millions,GTB-Q3-26,1,reported,
+gtbank-ghana,9M-2025,income_statement,fee_commission_expense,117.355,GHS millions,GTB-Q3-26,1,reported,Stored positive.
+gtbank-ghana,9M-2025,income_statement,net_trading_income,299.476,GHS millions,GTB-Q3-26,1,reported,
+gtbank-ghana,9M-2025,income_statement,other_operating_income,23.132,GHS millions,GTB-Q3-26,1,derived,Net income from other financial instruments at fair value 21777 + other income 1355 (GH¢'000).
+gtbank-ghana,9M-2025,income_statement,total_operating_income,1562.735,GHS millions,GTB-Q3-26,1,derived,Net interest income + net fee and commission income + net trading income + other operating income (before impairment). The bank's own 'Net operating income' line excludes 'Other income'.
+gtbank-ghana,9M-2025,income_statement,staff_costs,112.628,GHS millions,GTB-Q3-26,1,reported,Printed as personnel expenses; stored positive.
+gtbank-ghana,9M-2025,income_statement,depreciation_amortisation,26.149,GHS millions,GTB-Q3-26,1,derived,Depreciation and amortisation 23317 + amortisation of prepaid leases 2832 (GH¢'000).
+gtbank-ghana,9M-2025,income_statement,other_operating_expenses,211.957,GHS millions,GTB-Q3-26,1,reported,Other operating expenses.
+gtbank-ghana,9M-2025,income_statement,impairment_charge,20.571,GHS millions,GTB-Q3-26,1,derived,Net impairment cost (positive = cost). Components shown in x_ rows (cost positive; a reversal is negative). 
+gtbank-ghana,9M-2025,income_statement,x_impairment_loans_and_advances,7.975,GHS millions,GTB-Q3-26,1,reported,Cost positive; reversal negative. Part of impairment_charge.
+gtbank-ghana,9M-2025,income_statement,x_impairment_other_financial_assets,12.596,GHS millions,GTB-Q3-26,1,reported,Cost positive; reversal negative. Part of impairment_charge.
+gtbank-ghana,9M-2025,income_statement,profit_before_tax,1191.430,GHS millions,GTB-Q3-26,1,reported,
+gtbank-ghana,9M-2025,income_statement,income_tax,417.000,GHS millions,GTB-Q3-26,1,reported,Income tax expense as printed (levies included in the printed charge).
+gtbank-ghana,9M-2025,income_statement,profit_after_tax,774.430,GHS millions,GTB-Q3-26,1,reported,Printed as 'Profit for the year/period'.
+gtbank-ghana,9M-2025,balance_sheet,cash_and_bog_balances,6426.068,GHS millions,GTB-Q3-26,1,reported,Printed 'Cash and cash equivalents'; includes balances at the Bank of Ghana and with other banks (no separate due-from-banks line). Bank-only (GTBank Ghana publishes a single set of statements). Unaudited comparative (nine months to 30 Sep 2025) printed in GTB-Q3-26.
+gtbank-ghana,9M-2025,balance_sheet,due_from_banks,0.000,GHS millions,GTB-Q3-26,1,derived,No separate line is printed; balances with other banks are inside cash and cash equivalents.
+gtbank-ghana,9M-2025,balance_sheet,investment_securities,7069.029,GHS millions,GTB-Q3-26,1,reported,Printed 'Investment securities' only. Pledged assets and non-pledged trading assets are in other_assets (memo x_ rows below).
+gtbank-ghana,9M-2025,balance_sheet,loans_and_advances_net,3344.440,GHS millions,GTB-Q3-26,1,reported,Printed 'Loans and advances to customers' (net of impairment).
+gtbank-ghana,9M-2025,balance_sheet,property_equipment_intangibles,366.240,GHS millions,GTB-Q3-26,1,derived,Property and equipment 355274 + intangible assets 10966 (GH¢'000). No separate right-of-use line is printed.
+gtbank-ghana,9M-2025,balance_sheet,other_assets,1920.326,GHS millions,GTB-Q3-26,1,derived,Non-pledged trading assets 153451 + pledged assets 446073 + current tax assets 0 + deferred tax assets 199619 + other assets 1121183 (GH¢'000).
+gtbank-ghana,9M-2025,balance_sheet,x_pledged_assets,446.073,GHS millions,GTB-Q3-26,1,reported,"Memo only: inside other_assets above, do not add again."
+gtbank-ghana,9M-2025,balance_sheet,x_non_pledged_trading_assets,153.451,GHS millions,GTB-Q3-26,1,reported,"Memo only: inside other_assets above, do not add again."
+gtbank-ghana,9M-2025,balance_sheet,total_assets,19126.103,GHS millions,GTB-Q3-26,1,reported,
+gtbank-ghana,9M-2025,balance_sheet,customer_deposits,15988.217,GHS millions,GTB-Q3-26,1,reported,
+gtbank-ghana,9M-2025,balance_sheet,due_to_banks,0.000,GHS millions,GTB-Q3-26,1,derived,No line printed for deposits from banks.
+gtbank-ghana,9M-2025,balance_sheet,borrowings,0.000,GHS millions,GTB-Q3-26,1,derived,No borrowings line is printed.
+gtbank-ghana,9M-2025,balance_sheet,other_liabilities,334.448,GHS millions,GTB-Q3-26,1,derived,Current tax liabilities 173210 + deferred tax liabilities 0 + provision on off-balance-sheet items 1025 + other liabilities 160213 (GH¢'000).
+gtbank-ghana,9M-2025,balance_sheet,total_liabilities,16322.665,GHS millions,GTB-Q3-26,1,reported,
+gtbank-ghana,9M-2025,balance_sheet,stated_capital,404.895,GHS millions,GTB-Q3-26,1,reported,
+gtbank-ghana,9M-2025,balance_sheet,retained_earnings,1561.289,GHS millions,GTB-Q3-26,1,reported,Printed as 'Retained earnings' or 'Income surplus'.
+gtbank-ghana,9M-2025,balance_sheet,reserves_other,837.253,GHS millions,GTB-Q3-26,1,derived,Credit risk reserve 33394 + statutory reserve fund 803859 + other reserves 0 (GH¢'000).
+gtbank-ghana,9M-2025,balance_sheet,total_equity,2803.438,GHS millions,GTB-Q3-26,1,reported,
+gtbank-ghana,9M-2025,ratios,car_pct,33.33,percent,GTB-Q3-26,1,reported,Unaudited comparative as printed in GTB-Q3-26.
+gtbank-ghana,9M-2025,ratios,npl_pct,1.63,percent,GTB-Q3-26,1,reported,Unaudited comparative as printed in GTB-Q3-26.
+gtbank-ghana,9M-2025,ratios,x_loan_loss_provision_ratio_pct,1.10,percent,GTB-Q3-26,1,reported,Unaudited comparative as printed in GTB-Q3-26.
+gtbank-ghana,9M-2025,ratios,x_liquidity_ratio_pct,73.56,percent,GTB-Q3-26,1,reported,Unaudited comparative as printed in GTB-Q3-26.
+gtbank-ghana,9M-2025,ratios,x_leverage_ratio_pct,11.53,percent,GTB-Q3-26,1,reported,Unaudited comparative as printed in GTB-Q3-26.
+gtbank-ghana,9M-2026,income_statement,interest_income,1661.768,GHS millions,GTB-Q3-26,1,derived,Interest income by effective interest method 1656601 + other interest and similar income 5167 (GH¢'000). Bank-only (GTBank Ghana publishes a single set of statements). UNAUDITED interim to 30 September 2026. Includes dividends paid of 604.370m in 2026.
+gtbank-ghana,9M-2026,income_statement,interest_expense,429.953,GHS millions,GTB-Q3-26,1,reported,Stored positive. 
+gtbank-ghana,9M-2026,income_statement,net_interest_income,1231.815,GHS millions,GTB-Q3-26,1,reported,
+gtbank-ghana,9M-2026,income_statement,fee_commission_income,462.787,GHS millions,GTB-Q3-26,1,reported,
+gtbank-ghana,9M-2026,income_statement,fee_commission_expense,141.093,GHS millions,GTB-Q3-26,1,reported,Stored positive.
+gtbank-ghana,9M-2026,income_statement,net_trading_income,257.197,GHS millions,GTB-Q3-26,1,reported,
+gtbank-ghana,9M-2026,income_statement,other_operating_income,5.881,GHS millions,GTB-Q3-26,1,derived,Net income from other financial instruments at fair value 4441 + other income 1440 (GH¢'000).
+gtbank-ghana,9M-2026,income_statement,total_operating_income,1816.587,GHS millions,GTB-Q3-26,1,derived,Net interest income + net fee and commission income + net trading income + other operating income (before impairment). The bank's own 'Net operating income' line excludes 'Other income'.
+gtbank-ghana,9M-2026,income_statement,staff_costs,126.850,GHS millions,GTB-Q3-26,1,reported,Printed as personnel expenses; stored positive.
+gtbank-ghana,9M-2026,income_statement,depreciation_amortisation,63.318,GHS millions,GTB-Q3-26,1,derived,Depreciation and amortisation 61247 + amortisation of prepaid leases 2071 (GH¢'000).
+gtbank-ghana,9M-2026,income_statement,other_operating_expenses,235.218,GHS millions,GTB-Q3-26,1,reported,Other operating expenses.
+gtbank-ghana,9M-2026,income_statement,impairment_charge,6.499,GHS millions,GTB-Q3-26,1,derived,Net impairment cost (positive = cost). Components shown in x_ rows (cost positive; a reversal is negative). 
+gtbank-ghana,9M-2026,income_statement,x_impairment_loans_and_advances,1.275,GHS millions,GTB-Q3-26,1,reported,Cost positive; reversal negative. Part of impairment_charge.
+gtbank-ghana,9M-2026,income_statement,x_impairment_other_financial_assets,5.224,GHS millions,GTB-Q3-26,1,reported,Cost positive; reversal negative. Part of impairment_charge.
+gtbank-ghana,9M-2026,income_statement,profit_before_tax,1384.702,GHS millions,GTB-Q3-26,1,reported,
+gtbank-ghana,9M-2026,income_statement,income_tax,484.646,GHS millions,GTB-Q3-26,1,reported,Income tax expense as printed (levies included in the printed charge).
+gtbank-ghana,9M-2026,income_statement,profit_after_tax,900.056,GHS millions,GTB-Q3-26,1,reported,Printed as 'Profit for the year/period'.
+gtbank-ghana,9M-2026,balance_sheet,cash_and_bog_balances,11747.476,GHS millions,GTB-Q3-26,1,reported,Printed 'Cash and cash equivalents'; includes balances at the Bank of Ghana and with other banks (no separate due-from-banks line). Bank-only (GTBank Ghana publishes a single set of statements). UNAUDITED interim to 30 September 2026. Includes dividends paid of 604.370m in 2026.
+gtbank-ghana,9M-2026,balance_sheet,due_from_banks,0.000,GHS millions,GTB-Q3-26,1,derived,No separate line is printed; balances with other banks are inside cash and cash equivalents.
+gtbank-ghana,9M-2026,balance_sheet,investment_securities,5123.287,GHS millions,GTB-Q3-26,1,reported,Printed 'Investment securities' only. Pledged assets and non-pledged trading assets are in other_assets (memo x_ rows below).
+gtbank-ghana,9M-2026,balance_sheet,loans_and_advances_net,6406.184,GHS millions,GTB-Q3-26,1,reported,Printed 'Loans and advances to customers' (net of impairment).
+gtbank-ghana,9M-2026,balance_sheet,property_equipment_intangibles,374.903,GHS millions,GTB-Q3-26,1,derived,Property and equipment 345522 + intangible assets 29381 (GH¢'000). No separate right-of-use line is printed.
+gtbank-ghana,9M-2026,balance_sheet,other_assets,2320.580,GHS millions,GTB-Q3-26,1,derived,Non-pledged trading assets 232853 + pledged assets 88416 + current tax assets 0 + deferred tax assets 159999 + other assets 1839312 (GH¢'000).
+gtbank-ghana,9M-2026,balance_sheet,x_pledged_assets,88.416,GHS millions,GTB-Q3-26,1,reported,"Memo only: inside other_assets above, do not add again."
+gtbank-ghana,9M-2026,balance_sheet,x_non_pledged_trading_assets,232.853,GHS millions,GTB-Q3-26,1,reported,"Memo only: inside other_assets above, do not add again."
+gtbank-ghana,9M-2026,balance_sheet,total_assets,25972.432,GHS millions,GTB-Q3-26,1,reported,
+gtbank-ghana,9M-2026,balance_sheet,customer_deposits,22496.810,GHS millions,GTB-Q3-26,1,reported,
+gtbank-ghana,9M-2026,balance_sheet,due_to_banks,0.000,GHS millions,GTB-Q3-26,1,derived,No line printed for deposits from banks.
+gtbank-ghana,9M-2026,balance_sheet,borrowings,0.000,GHS millions,GTB-Q3-26,1,derived,No borrowings line is printed.
+gtbank-ghana,9M-2026,balance_sheet,other_liabilities,138.705,GHS millions,GTB-Q3-26,1,derived,Current tax liabilities 802 + deferred tax liabilities 0 + provision on off-balance-sheet items 1025 + other liabilities 136878 (GH¢'000).
+gtbank-ghana,9M-2026,balance_sheet,total_liabilities,22635.515,GHS millions,GTB-Q3-26,1,reported,
+gtbank-ghana,9M-2026,balance_sheet,stated_capital,404.895,GHS millions,GTB-Q3-26,1,reported,
+gtbank-ghana,9M-2026,balance_sheet,retained_earnings,1869.458,GHS millions,GTB-Q3-26,1,reported,Printed as 'Retained earnings' or 'Income surplus'.
+gtbank-ghana,9M-2026,balance_sheet,reserves_other,1062.564,GHS millions,GTB-Q3-26,1,derived,Credit risk reserve 116473 + statutory reserve fund 946091 + other reserves 0 (GH¢'000).
+gtbank-ghana,9M-2026,balance_sheet,total_equity,3336.918,GHS millions,GTB-Q3-26,1,reported,
+gtbank-ghana,9M-2026,ratios,car_pct,24.08,percent,GTB-Q3-26,1,reported,"Unaudited, as published."
+gtbank-ghana,9M-2026,ratios,npl_pct,3.67,percent,GTB-Q3-26,1,reported,"Unaudited, as published."
+gtbank-ghana,9M-2026,ratios,x_loan_loss_provision_ratio_pct,0.51,percent,GTB-Q3-26,1,reported,"Unaudited, as published."
+gtbank-ghana,9M-2026,ratios,x_liquidity_ratio_pct,69.15,percent,GTB-Q3-26,1,reported,"Unaudited, as published."
+gtbank-ghana,9M-2026,ratios,x_leverage_ratio_pct,10.30,percent,GTB-Q3-26,1,reported,"Unaudited, as published."
+gtbank-ghana,FY2021,balance_sheet,loans_and_advances_gross,,GHS millions,,,unavailable,"The summary statements print loans net only. Gross loans and the allowance are in the annual-report notes (GTB-AR24, GTB-AR22), which I have not read."
+gtbank-ghana,FY2021,balance_sheet,loan_loss_allowance,,GHS millions,,,unavailable,"The summary statements print loans net only. Gross loans and the allowance are in the annual-report notes (GTB-AR24, GTB-AR22), which I have not read."
+gtbank-ghana,FY2021,ratios,tier1_pct,,percent,,,unavailable,"Not printed. The bank prints a 'Tier 1 leverage ratio' (x_leverage_ratio_pct), which is a different measure."
+gtbank-ghana,FY2022,balance_sheet,loans_and_advances_gross,,GHS millions,,,unavailable,"The summary statements print loans net only. Gross loans and the allowance are in the annual-report notes (GTB-AR24, GTB-AR22), which I have not read."
+gtbank-ghana,FY2022,balance_sheet,loan_loss_allowance,,GHS millions,,,unavailable,"The summary statements print loans net only. Gross loans and the allowance are in the annual-report notes (GTB-AR24, GTB-AR22), which I have not read."
+gtbank-ghana,FY2022,ratios,tier1_pct,,percent,,,unavailable,"Not printed. The bank prints a 'Tier 1 leverage ratio' (x_leverage_ratio_pct), which is a different measure."
+gtbank-ghana,FY2023,balance_sheet,loans_and_advances_gross,,GHS millions,,,unavailable,"The summary statements print loans net only. Gross loans and the allowance are in the annual-report notes (GTB-AR24, GTB-AR22), which I have not read."
+gtbank-ghana,FY2023,balance_sheet,loan_loss_allowance,,GHS millions,,,unavailable,"The summary statements print loans net only. Gross loans and the allowance are in the annual-report notes (GTB-AR24, GTB-AR22), which I have not read."
+gtbank-ghana,FY2023,ratios,tier1_pct,,percent,,,unavailable,"Not printed. The bank prints a 'Tier 1 leverage ratio' (x_leverage_ratio_pct), which is a different measure."
+gtbank-ghana,FY2024,balance_sheet,loans_and_advances_gross,,GHS millions,,,unavailable,"The summary statements print loans net only. Gross loans and the allowance are in the annual-report notes (GTB-AR24, GTB-AR22), which I have not read."
+gtbank-ghana,FY2024,balance_sheet,loan_loss_allowance,,GHS millions,,,unavailable,"The summary statements print loans net only. Gross loans and the allowance are in the annual-report notes (GTB-AR24, GTB-AR22), which I have not read."
+gtbank-ghana,FY2024,ratios,tier1_pct,,percent,,,unavailable,"Not printed. The bank prints a 'Tier 1 leverage ratio' (x_leverage_ratio_pct), which is a different measure."
+gtbank-ghana,FY2025,balance_sheet,loans_and_advances_gross,,GHS millions,,,unavailable,"The summary statements print loans net only. Gross loans and the allowance are in the annual-report notes (GTB-AR24, GTB-AR22), which I have not read."
+gtbank-ghana,FY2025,balance_sheet,loan_loss_allowance,,GHS millions,,,unavailable,"The summary statements print loans net only. Gross loans and the allowance are in the annual-report notes (GTB-AR24, GTB-AR22), which I have not read."
+gtbank-ghana,FY2025,ratios,tier1_pct,,percent,,,unavailable,"Not printed. The bank prints a 'Tier 1 leverage ratio' (x_leverage_ratio_pct), which is a different measure."
+gtbank-ghana,9M-2025,balance_sheet,loans_and_advances_gross,,GHS millions,,,unavailable,"The summary statements print loans net only. Gross loans and the allowance are in the annual-report notes (GTB-AR24, GTB-AR22), which I have not read."
+gtbank-ghana,9M-2025,balance_sheet,loan_loss_allowance,,GHS millions,,,unavailable,"The summary statements print loans net only. Gross loans and the allowance are in the annual-report notes (GTB-AR24, GTB-AR22), which I have not read."
+gtbank-ghana,9M-2025,ratios,tier1_pct,,percent,,,unavailable,"Not printed. The bank prints a 'Tier 1 leverage ratio' (x_leverage_ratio_pct), which is a different measure."
+gtbank-ghana,9M-2026,balance_sheet,loans_and_advances_gross,,GHS millions,,,unavailable,"The summary statements print loans net only. Gross loans and the allowance are in the annual-report notes (GTB-AR24, GTB-AR22), which I have not read."
+gtbank-ghana,9M-2026,balance_sheet,loan_loss_allowance,,GHS millions,,,unavailable,"The summary statements print loans net only. Gross loans and the allowance are in the annual-report notes (GTB-AR24, GTB-AR22), which I have not read."
+gtbank-ghana,9M-2026,ratios,tier1_pct,,percent,,,unavailable,"Not printed. The bank prints a 'Tier 1 leverage ratio' (x_leverage_ratio_pct), which is a different measure."
