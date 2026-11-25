@@ -1,0 +1,260 @@
+bank,period,statement,line_item,value,unit,source_id,page,status,notes
+ecobank-ghana,FY2021,income_statement,interest_income,1698.636,GHS millions,EGH22,1,reported,"Bank-only; expenses positive, tax benefit negative."
+ecobank-ghana,FY2021,income_statement,interest_expense,194.541,GHS millions,EGH22,1,reported,"Bank-only; expenses positive, tax benefit negative."
+ecobank-ghana,FY2021,income_statement,net_interest_income,1504.095,GHS millions,EGH22,1,reported,"Bank-only; expenses positive, tax benefit negative."
+ecobank-ghana,FY2021,income_statement,fee_commission_income,348.25,GHS millions,EGH22,1,reported,"Bank-only; expenses positive, tax benefit negative."
+ecobank-ghana,FY2021,income_statement,fee_commission_expense,41.769,GHS millions,EGH22,1,reported,"Bank-only; expenses positive, tax benefit negative."
+ecobank-ghana,FY2021,income_statement,net_trading_income,144.416,GHS millions,EGH22,1,reported,"Bank-only; expenses positive, tax benefit negative."
+ecobank-ghana,FY2021,income_statement,other_operating_income,115.564,GHS millions,EGH22,1,derived,"Sum of other operating income, dividend income, and gain on sale of equipment."
+ecobank-ghana,FY2021,income_statement,total_operating_income,2070.556,GHS millions,EGH22,1,reported,Reported as Net income (FY21-22) or Operating income (FY23-26).
+ecobank-ghana,FY2021,income_statement,staff_costs,379.896,GHS millions,EGH22,1,reported,"Bank-only; expenses positive, tax benefit negative."
+ecobank-ghana,FY2021,income_statement,depreciation_amortisation,62.786,GHS millions,EGH22,1,reported,"Bank-only; expenses positive, tax benefit negative."
+ecobank-ghana,FY2021,income_statement,other_operating_expenses,462.462,GHS millions,EGH22,1,reported,"Bank-only; expenses positive, tax benefit negative."
+ecobank-ghana,FY2021,income_statement,impairment_charge,274.74,GHS millions,EGH22,1,reported,"Bank-only; expenses positive, tax benefit negative."
+ecobank-ghana,FY2021,income_statement,profit_before_tax,886.318,GHS millions,EGH22,1,reported,"Bank-only; expenses positive, tax benefit negative."
+ecobank-ghana,FY2021,income_statement,income_tax,306.876,GHS millions,EGH22,1,reported,"Bank-only; expenses positive, tax benefit negative."
+ecobank-ghana,FY2021,income_statement,profit_after_tax,579.442,GHS millions,EGH22,1,reported,"Bank-only; expenses positive, tax benefit negative."
+ecobank-ghana,FY2021,income_statement,x_lease_finance_cost,4.354,GHS millions,EGH22,1,reported,Finance cost on lease liabilities reported as separate line before PBT.
+ecobank-ghana,FY2021,balance_sheet,cash_and_bog_balances,2870.571,GHS millions,EGH22,1,reported,Reported as Cash and cash equivalents (or Cash and balances with banks in FY21-22); includes due from banks.
+ecobank-ghana,FY2021,balance_sheet,due_from_banks,,GHS millions,,,unavailable,Not split from Cash and cash equivalents in GSE summary statements.
+ecobank-ghana,FY2021,balance_sheet,investment_securities,6012.495,GHS millions,EGH22,1,reported,Reported as Non-trading assets; trading assets included in other_assets.
+ecobank-ghana,FY2021,balance_sheet,loans_and_advances_gross,,GHS millions,,,unavailable,Not disclosed in GSE summary statements (net loans only).
+ecobank-ghana,FY2021,balance_sheet,loan_loss_allowance,,GHS millions,,,unavailable,Not disclosed in GSE summary statements (net loans only).
+ecobank-ghana,FY2021,balance_sheet,loans_and_advances_net,5634.861,GHS millions,EGH22,1,reported,Bank-only net loans and advances to customers.
+ecobank-ghana,FY2021,balance_sheet,property_equipment_intangibles,657.561,GHS millions,EGH22,1,derived,Property and equipment plus intangible assets. Includes right-of-use assets 45.530m (moved from other_assets).
+ecobank-ghana,FY2021,balance_sheet,other_assets,2681.191,GHS millions,EGH22,1,derived,"Sum of non-pledged trading assets, other assets, tax assets, investment in subsidiaries, and assets held for sale. Excludes right-of-use assets 45.530m (now in property_equipment_intangibles)."
+ecobank-ghana,FY2021,balance_sheet,x_right_of_use_assets,45.530,GHS millions,EGH22,1,reported,"Memo, non-additive: ROU assets, already inside property_equipment_intangibles. Source: Bank column, statement of financial position."
+ecobank-ghana,FY2021,balance_sheet,total_assets,17856.679,GHS millions,EGH22,1,reported,Bank-only.
+ecobank-ghana,FY2021,balance_sheet,customer_deposits,12877.525,GHS millions,EGH22,1,reported,Bank-only.
+ecobank-ghana,FY2021,balance_sheet,due_to_banks,1653.588,GHS millions,EGH22,1,reported,Bank-only deposits from banks.
+ecobank-ghana,FY2021,balance_sheet,borrowings,25.537,GHS millions,EGH22,1,reported,Bank-only.
+ecobank-ghana,FY2021,balance_sheet,other_liabilities,643.613,GHS millions,EGH22,1,derived,"Sum of other liabilities, provisions, current tax liabilities, and lease liabilities."
+ecobank-ghana,FY2021,balance_sheet,total_liabilities,15200.263,GHS millions,EGH22,1,reported,Bank-only.
+ecobank-ghana,FY2021,balance_sheet,stated_capital,416.641,GHS millions,EGH22,1,reported,Bank-only.
+ecobank-ghana,FY2021,balance_sheet,retained_earnings,1442.569,GHS millions,EGH22,1,reported,Bank-only.
+ecobank-ghana,FY2021,balance_sheet,reserves_other,797.206,GHS millions,EGH22,1,derived,"Sum of statutory, credit risk, revaluation, and other reserves."
+ecobank-ghana,FY2021,balance_sheet,total_equity,2656.416,GHS millions,EGH22,1,reported,Bank-only.
+ecobank-ghana,FY2021,ratios,car_pct,20.24,%,EGH21,2,reported,Bank-only regulatory CAR.
+ecobank-ghana,FY2021,ratios,tier1_pct,,%,,,unavailable,Total Tier 1 ratio not separately disclosed; CET1 reported in x_cet1_pct.
+ecobank-ghana,FY2021,ratios,x_cet1_pct,20.08,%,EGH21,2,reported,Bank-only Common Equity Tier 1 ratio.
+ecobank-ghana,FY2021,ratios,npl_pct,12,%,EGH21,2,reported,Bank-only NPL ratio (BoG basis in FY21).
+ecobank-ghana,FY2021,ratios,ldr_pct,43.7573,%,EGH22,1,derived,loans_and_advances_net / customer_deposits * 100 (gross loans unavailable).
+ecobank-ghana,FY2021,ratios,cost_to_income_pct,43.9253,%,EGH22,1,derived,(staff_costs + depreciation_amortisation + other_operating_expenses + x_lease_finance_cost) / total_operating_income * 100.
+ecobank-ghana,FY2021,ratios,roe_pct,22.8136,%,EGH22,1,derived,profit_after_tax / average total_equity * 100.
+ecobank-ghana,FY2021,ratios,roa_pct,3.4348,%,EGH22,1,derived,profit_after_tax / average total_assets * 100.
+ecobank-ghana,FY2022,income_statement,interest_income,2859.31,GHS millions,EGH22,1,reported,"Bank-only; expenses positive, tax benefit negative."
+ecobank-ghana,FY2022,income_statement,interest_expense,393.334,GHS millions,EGH22,1,reported,"Bank-only; expenses positive, tax benefit negative."
+ecobank-ghana,FY2022,income_statement,net_interest_income,2465.976,GHS millions,EGH22,1,reported,"Bank-only; expenses positive, tax benefit negative."
+ecobank-ghana,FY2022,income_statement,fee_commission_income,402.466,GHS millions,EGH22,1,reported,"Bank-only; expenses positive, tax benefit negative."
+ecobank-ghana,FY2022,income_statement,fee_commission_expense,82.562,GHS millions,EGH22,1,reported,"Bank-only; expenses positive, tax benefit negative."
+ecobank-ghana,FY2022,income_statement,net_trading_income,23.52,GHS millions,EGH22,1,reported,"Bank-only; expenses positive, tax benefit negative."
+ecobank-ghana,FY2022,income_statement,other_operating_income,84.112,GHS millions,EGH22,1,derived,"Sum of other operating income, dividend income, and gain on sale of equipment."
+ecobank-ghana,FY2022,income_statement,total_operating_income,2893.512,GHS millions,EGH22,1,reported,Reported as Net income (FY21-22) or Operating income (FY23-26).
+ecobank-ghana,FY2022,income_statement,staff_costs,514.453,GHS millions,EGH22,1,reported,"Bank-only; expenses positive, tax benefit negative."
+ecobank-ghana,FY2022,income_statement,depreciation_amortisation,71.818,GHS millions,EGH22,1,reported,"Bank-only; expenses positive, tax benefit negative."
+ecobank-ghana,FY2022,income_statement,other_operating_expenses,654.879,GHS millions,EGH22,1,reported,"Bank-only; expenses positive, tax benefit negative."
+ecobank-ghana,FY2022,income_statement,impairment_charge,1697.929,GHS millions,EGH22,1,reported,"Bank-only; expenses positive, tax benefit negative."
+ecobank-ghana,FY2022,income_statement,profit_before_tax,-53.093,GHS millions,EGH22,1,reported,"Bank-only; expenses positive, tax benefit negative."
+ecobank-ghana,FY2022,income_statement,income_tax,-19.548,GHS millions,EGH22,1,reported,"Bank-only; expenses positive, tax benefit negative."
+ecobank-ghana,FY2022,income_statement,profit_after_tax,-33.545,GHS millions,EGH22,1,reported,"Bank-only; expenses positive, tax benefit negative."
+ecobank-ghana,FY2022,income_statement,x_lease_finance_cost,7.526,GHS millions,EGH22,1,reported,Finance cost on lease liabilities reported as separate line before PBT.
+ecobank-ghana,FY2022,balance_sheet,cash_and_bog_balances,6443.617,GHS millions,EGH22,1,reported,Reported as Cash and cash equivalents (or Cash and balances with banks in FY21-22); includes due from banks.
+ecobank-ghana,FY2022,balance_sheet,due_from_banks,,GHS millions,,,unavailable,Not split from Cash and cash equivalents in GSE summary statements.
+ecobank-ghana,FY2022,balance_sheet,investment_securities,6617.538,GHS millions,EGH22,1,reported,Reported as Non-trading assets; trading assets included in other_assets.
+ecobank-ghana,FY2022,balance_sheet,loans_and_advances_gross,,GHS millions,,,unavailable,Not disclosed in GSE summary statements (net loans only).
+ecobank-ghana,FY2022,balance_sheet,loan_loss_allowance,,GHS millions,,,unavailable,Not disclosed in GSE summary statements (net loans only).
+ecobank-ghana,FY2022,balance_sheet,loans_and_advances_net,8802.239,GHS millions,EGH22,1,reported,Bank-only net loans and advances to customers.
+ecobank-ghana,FY2022,balance_sheet,property_equipment_intangibles,1312.770,GHS millions,EGH22,1,derived,Property and equipment plus intangible assets. Includes right-of-use assets 38.670m (moved from other_assets).
+ecobank-ghana,FY2022,balance_sheet,other_assets,2597.921,GHS millions,EGH22,1,derived,"Sum of non-pledged trading assets, other assets, tax assets, investment in subsidiaries, and assets held for sale. Excludes right-of-use assets 38.670m (now in property_equipment_intangibles)."
+ecobank-ghana,FY2022,balance_sheet,x_right_of_use_assets,38.670,GHS millions,EGH22,1,reported,"Memo, non-additive: ROU assets, already inside property_equipment_intangibles. Source: Bank column, statement of financial position."
+ecobank-ghana,FY2022,balance_sheet,total_assets,25774.085,GHS millions,EGH22,1,reported,Bank-only.
+ecobank-ghana,FY2022,balance_sheet,customer_deposits,19590.418,GHS millions,EGH22,1,reported,Bank-only.
+ecobank-ghana,FY2022,balance_sheet,due_to_banks,2635.136,GHS millions,EGH22,1,reported,Bank-only deposits from banks.
+ecobank-ghana,FY2022,balance_sheet,borrowings,9.972,GHS millions,EGH22,1,reported,Bank-only.
+ecobank-ghana,FY2022,balance_sheet,other_liabilities,877.931,GHS millions,EGH22,1,derived,"Sum of other liabilities, provisions, current tax liabilities, and lease liabilities."
+ecobank-ghana,FY2022,balance_sheet,total_liabilities,23113.457,GHS millions,EGH22,1,reported,Bank-only.
+ecobank-ghana,FY2022,balance_sheet,stated_capital,416.641,GHS millions,EGH22,1,reported,Bank-only.
+ecobank-ghana,FY2022,balance_sheet,retained_earnings,1160.919,GHS millions,EGH22,1,reported,Bank-only.
+ecobank-ghana,FY2022,balance_sheet,reserves_other,1083.068,GHS millions,EGH22,1,derived,"Sum of statutory, credit risk, revaluation, and other reserves."
+ecobank-ghana,FY2022,balance_sheet,total_equity,2660.628,GHS millions,EGH22,1,reported,Bank-only.
+ecobank-ghana,FY2022,ratios,car_pct,14.63,%,EGH22,2,reported,Bank-only regulatory CAR.
+ecobank-ghana,FY2022,ratios,tier1_pct,,%,,,unavailable,Total Tier 1 ratio not separately disclosed; CET1 reported in x_cet1_pct.
+ecobank-ghana,FY2022,ratios,x_cet1_pct,12.09,%,EGH22,2,reported,Bank-only Common Equity Tier 1 ratio.
+ecobank-ghana,FY2022,ratios,npl_pct,9.47,%,EGH22,2,reported,Bank-only NPL ratio (BoG basis in FY21).
+ecobank-ghana,FY2022,ratios,ldr_pct,44.9313,%,EGH22,1,derived,loans_and_advances_net / customer_deposits * 100 (gross loans unavailable).
+ecobank-ghana,FY2022,ratios,cost_to_income_pct,43.1543,%,EGH22,1,derived,(staff_costs + depreciation_amortisation + other_operating_expenses + x_lease_finance_cost) / total_operating_income * 100.
+ecobank-ghana,FY2022,ratios,roe_pct,-1.2618,%,EGH22,1,derived,profit_after_tax / average total_equity * 100.
+ecobank-ghana,FY2022,ratios,roa_pct,-0.1538,%,EGH22,1,derived,profit_after_tax / average total_assets * 100.
+ecobank-ghana,FY2023,income_statement,interest_income,3470.839,GHS millions,EGH24,1,reported,"Bank-only; expenses positive, tax benefit negative."
+ecobank-ghana,FY2023,income_statement,interest_expense,595.382,GHS millions,EGH24,1,reported,"Bank-only; expenses positive, tax benefit negative."
+ecobank-ghana,FY2023,income_statement,net_interest_income,2875.457,GHS millions,EGH24,1,reported,"Bank-only; expenses positive, tax benefit negative."
+ecobank-ghana,FY2023,income_statement,fee_commission_income,574.787,GHS millions,EGH24,1,reported,"Bank-only; expenses positive, tax benefit negative."
+ecobank-ghana,FY2023,income_statement,fee_commission_expense,156.151,GHS millions,EGH24,1,reported,"Bank-only; expenses positive, tax benefit negative."
+ecobank-ghana,FY2023,income_statement,net_trading_income,1896.242,GHS millions,EGH24,1,reported,"Bank-only; expenses positive, tax benefit negative."
+ecobank-ghana,FY2023,income_statement,other_operating_income,56.062,GHS millions,EGH24,1,reported,Bank-only.
+ecobank-ghana,FY2023,income_statement,total_operating_income,5246.397,GHS millions,EGH24,1,reported,Reported as Net income (FY21-22) or Operating income (FY23-26).
+ecobank-ghana,FY2023,income_statement,staff_costs,636.254,GHS millions,EGH24,1,reported,"Bank-only; expenses positive, tax benefit negative."
+ecobank-ghana,FY2023,income_statement,depreciation_amortisation,79.397,GHS millions,EGH24,1,reported,"Bank-only; expenses positive, tax benefit negative."
+ecobank-ghana,FY2023,income_statement,other_operating_expenses,799.161,GHS millions,EGH24,1,reported,"Bank-only; expenses positive, tax benefit negative."
+ecobank-ghana,FY2023,income_statement,impairment_charge,1822.235,GHS millions,EGH24,1,reported,"Bank-only; expenses positive, tax benefit negative."
+ecobank-ghana,FY2023,income_statement,profit_before_tax,965.978,GHS millions,EGH24,1,reported,"Bank-only; expenses positive, tax benefit negative."
+ecobank-ghana,FY2023,income_statement,income_tax,346.499,GHS millions,EGH24,1,reported,"Bank-only; expenses positive, tax benefit negative."
+ecobank-ghana,FY2023,income_statement,profit_after_tax,619.479,GHS millions,EGH24,1,reported,"Bank-only; expenses positive, tax benefit negative."
+ecobank-ghana,FY2023,income_statement,x_lease_finance_cost,5.61,GHS millions,EGH24,1,reported,Finance cost on lease liabilities reported as separate line before PBT.
+ecobank-ghana,FY2023,income_statement,x_modification_loss,937.762,GHS millions,EGH24,1,reported,DDEP modification loss reported as separate line before PBT.
+ecobank-ghana,FY2023,balance_sheet,cash_and_bog_balances,11255.251,GHS millions,EGH24,1,reported,Reported as Cash and cash equivalents (or Cash and balances with banks in FY21-22); includes due from banks.
+ecobank-ghana,FY2023,balance_sheet,due_from_banks,,GHS millions,,,unavailable,Not split from Cash and cash equivalents in GSE summary statements.
+ecobank-ghana,FY2023,balance_sheet,investment_securities,9779.471,GHS millions,EGH24,1,reported,Reported as Non-trading assets; trading assets included in other_assets.
+ecobank-ghana,FY2023,balance_sheet,loans_and_advances_gross,,GHS millions,,,unavailable,Not disclosed in GSE summary statements (net loans only).
+ecobank-ghana,FY2023,balance_sheet,loan_loss_allowance,,GHS millions,,,unavailable,Not disclosed in GSE summary statements (net loans only).
+ecobank-ghana,FY2023,balance_sheet,loans_and_advances_net,9444.131,GHS millions,EGH24,1,reported,Bank-only net loans and advances to customers.
+ecobank-ghana,FY2023,balance_sheet,property_equipment_intangibles,1327.220,GHS millions,EGH24,1,derived,Property and equipment plus intangible assets. Includes right-of-use assets 62.472m (moved from other_assets).
+ecobank-ghana,FY2023,balance_sheet,other_assets,1714.563,GHS millions,EGH24,1,derived,"Sum of non-pledged trading assets, other assets, tax assets, investment in subsidiaries, and assets held for sale. Excludes right-of-use assets 62.472m (now in property_equipment_intangibles)."
+ecobank-ghana,FY2023,balance_sheet,x_right_of_use_assets,62.472,GHS millions,EGH24,1,reported,"Memo, non-additive: ROU assets, already inside property_equipment_intangibles. Source: Bank column, statement of financial position."
+ecobank-ghana,FY2023,balance_sheet,total_assets,33520.636,GHS millions,EGH24,1,reported,Bank-only.
+ecobank-ghana,FY2023,balance_sheet,customer_deposits,25642.117,GHS millions,EGH24,1,reported,Bank-only.
+ecobank-ghana,FY2023,balance_sheet,due_to_banks,3010.316,GHS millions,EGH24,1,reported,Bank-only deposits from banks.
+ecobank-ghana,FY2023,balance_sheet,borrowings,149.228,GHS millions,EGH24,1,reported,Bank-only.
+ecobank-ghana,FY2023,balance_sheet,other_liabilities,1115.294,GHS millions,EGH24,1,derived,"Sum of other liabilities, provisions, current tax liabilities, and lease liabilities."
+ecobank-ghana,FY2023,balance_sheet,total_liabilities,29916.955,GHS millions,EGH24,1,reported,Bank-only.
+ecobank-ghana,FY2023,balance_sheet,stated_capital,416.641,GHS millions,EGH24,1,reported,Bank-only.
+ecobank-ghana,FY2023,balance_sheet,retained_earnings,1626.794,GHS millions,EGH24,1,reported,Bank-only.
+ecobank-ghana,FY2023,balance_sheet,reserves_other,1560.246,GHS millions,EGH24,1,derived,"Sum of statutory, credit risk, revaluation, and other reserves."
+ecobank-ghana,FY2023,balance_sheet,total_equity,3603.681,GHS millions,EGH24,1,reported,Bank-only.
+ecobank-ghana,FY2023,ratios,car_pct,13.49,%,EGH24,2,reported,Bank-only regulatory CAR.
+ecobank-ghana,FY2023,ratios,tier1_pct,,%,,,unavailable,Total Tier 1 ratio not separately disclosed; CET1 reported in x_cet1_pct.
+ecobank-ghana,FY2023,ratios,x_cet1_pct,11.57,%,EGH24,2,reported,Bank-only Common Equity Tier 1 ratio.
+ecobank-ghana,FY2023,ratios,npl_pct,19.84,%,EGH24,2,reported,Bank-only NPL ratio (BoG basis in FY21).
+ecobank-ghana,FY2023,ratios,ldr_pct,36.8305,%,EGH24,1,derived,loans_and_advances_net / customer_deposits * 100 (gross loans unavailable).
+ecobank-ghana,FY2023,ratios,cost_to_income_pct,28.9803,%,EGH24,1,derived,(staff_costs + depreciation_amortisation + other_operating_expenses + x_lease_finance_cost) / total_operating_income * 100.
+ecobank-ghana,FY2023,ratios,roe_pct,19.778,%,EGH24,1,derived,profit_after_tax / average total_equity * 100.
+ecobank-ghana,FY2023,ratios,roa_pct,2.0895,%,EGH24,1,derived,profit_after_tax / average total_assets * 100.
+ecobank-ghana,FY2024,income_statement,interest_income,4717.434,GHS millions,EGH25,1,reported,"Bank-only; expenses positive, tax benefit negative."
+ecobank-ghana,FY2024,income_statement,interest_expense,998.434,GHS millions,EGH25,1,reported,"Bank-only; expenses positive, tax benefit negative."
+ecobank-ghana,FY2024,income_statement,net_interest_income,3719,GHS millions,EGH25,1,reported,"Bank-only; expenses positive, tax benefit negative."
+ecobank-ghana,FY2024,income_statement,fee_commission_income,671.458,GHS millions,EGH25,1,reported,"Bank-only; expenses positive, tax benefit negative."
+ecobank-ghana,FY2024,income_statement,fee_commission_expense,308.219,GHS millions,EGH25,1,reported,"Bank-only; expenses positive, tax benefit negative."
+ecobank-ghana,FY2024,income_statement,net_trading_income,1046.115,GHS millions,EGH25,1,reported,"Bank-only; expenses positive, tax benefit negative."
+ecobank-ghana,FY2024,income_statement,other_operating_income,150.224,GHS millions,EGH25,1,reported,Bank-only.
+ecobank-ghana,FY2024,income_statement,total_operating_income,5278.578,GHS millions,EGH25,1,reported,Reported as Net income (FY21-22) or Operating income (FY23-26).
+ecobank-ghana,FY2024,income_statement,staff_costs,667.156,GHS millions,EGH25,1,reported,"Bank-only; expenses positive, tax benefit negative."
+ecobank-ghana,FY2024,income_statement,depreciation_amortisation,86.688,GHS millions,EGH25,1,reported,"Bank-only; expenses positive, tax benefit negative."
+ecobank-ghana,FY2024,income_statement,other_operating_expenses,1143.486,GHS millions,EGH25,1,reported,"Bank-only; expenses positive, tax benefit negative."
+ecobank-ghana,FY2024,income_statement,impairment_charge,1028.712,GHS millions,EGH25,1,reported,"Bank-only; expenses positive, tax benefit negative."
+ecobank-ghana,FY2024,income_statement,profit_before_tax,2336.8,GHS millions,EGH25,1,reported,"Bank-only; expenses positive, tax benefit negative."
+ecobank-ghana,FY2024,income_statement,income_tax,649.69,GHS millions,EGH25,1,reported,"Bank-only; expenses positive, tax benefit negative."
+ecobank-ghana,FY2024,income_statement,profit_after_tax,1687.11,GHS millions,EGH25,1,reported,"Bank-only; expenses positive, tax benefit negative."
+ecobank-ghana,FY2024,income_statement,x_lease_finance_cost,15.736,GHS millions,EGH25,1,reported,Finance cost on lease liabilities reported as separate line before PBT.
+ecobank-ghana,FY2024,balance_sheet,cash_and_bog_balances,20647.016,GHS millions,EGH25,1,reported,Reported as Cash and cash equivalents (or Cash and balances with banks in FY21-22); includes due from banks.
+ecobank-ghana,FY2024,balance_sheet,due_from_banks,,GHS millions,,,unavailable,Not split from Cash and cash equivalents in GSE summary statements.
+ecobank-ghana,FY2024,balance_sheet,investment_securities,10299.404,GHS millions,EGH25,1,reported,Reported as Non-trading assets; trading assets included in other_assets.
+ecobank-ghana,FY2024,balance_sheet,loans_and_advances_gross,,GHS millions,,,unavailable,Not disclosed in GSE summary statements (net loans only).
+ecobank-ghana,FY2024,balance_sheet,loan_loss_allowance,,GHS millions,,,unavailable,Not disclosed in GSE summary statements (net loans only).
+ecobank-ghana,FY2024,balance_sheet,loans_and_advances_net,10533.576,GHS millions,EGH25,1,reported,Bank-only net loans and advances to customers.
+ecobank-ghana,FY2024,balance_sheet,property_equipment_intangibles,1353.975,GHS millions,EGH25,1,derived,Property and equipment plus intangible assets. Includes right-of-use assets 92.353m (moved from other_assets).
+ecobank-ghana,FY2024,balance_sheet,other_assets,2817.312,GHS millions,EGH25,1,derived,"Sum of non-pledged trading assets, other assets, tax assets, investment in subsidiaries, and assets held for sale. Excludes right-of-use assets 92.353m (now in property_equipment_intangibles)."
+ecobank-ghana,FY2024,balance_sheet,x_right_of_use_assets,92.353,GHS millions,EGH25,1,reported,"Memo, non-additive: ROU assets, already inside property_equipment_intangibles. Source: Bank column, statement of financial position."
+ecobank-ghana,FY2024,balance_sheet,total_assets,45651.283,GHS millions,EGH25,1,reported,Bank-only.
+ecobank-ghana,FY2024,balance_sheet,customer_deposits,31198.857,GHS millions,EGH25,1,reported,Bank-only.
+ecobank-ghana,FY2024,balance_sheet,due_to_banks,7010.399,GHS millions,EGH25,1,reported,Bank-only deposits from banks.
+ecobank-ghana,FY2024,balance_sheet,borrowings,394.001,GHS millions,EGH25,1,reported,Bank-only.
+ecobank-ghana,FY2024,balance_sheet,other_liabilities,1719.255,GHS millions,EGH25,1,derived,"Sum of other liabilities, provisions, current tax liabilities, and lease liabilities."
+ecobank-ghana,FY2024,balance_sheet,total_liabilities,40322.512,GHS millions,EGH25,1,reported,Bank-only.
+ecobank-ghana,FY2024,balance_sheet,stated_capital,416.641,GHS millions,EGH25,1,reported,Bank-only.
+ecobank-ghana,FY2024,balance_sheet,retained_earnings,3130.859,GHS millions,EGH25,1,reported,Bank-only.
+ecobank-ghana,FY2024,balance_sheet,reserves_other,1781.271,GHS millions,EGH25,1,derived,"Sum of statutory, credit risk, revaluation, and other reserves."
+ecobank-ghana,FY2024,balance_sheet,total_equity,5328.771,GHS millions,EGH25,1,reported,Bank-only.
+ecobank-ghana,FY2024,ratios,car_pct,17.03,%,EGH25,2,reported,Bank-only regulatory CAR.
+ecobank-ghana,FY2024,ratios,tier1_pct,,%,,,unavailable,Total Tier 1 ratio not separately disclosed; CET1 reported in x_cet1_pct.
+ecobank-ghana,FY2024,ratios,x_cet1_pct,15.39,%,EGH25,2,reported,Bank-only Common Equity Tier 1 ratio.
+ecobank-ghana,FY2024,ratios,npl_pct,21.27,%,EGH25,2,reported,Bank-only NPL ratio (BoG basis in FY21).
+ecobank-ghana,FY2024,ratios,ldr_pct,33.7627,%,EGH25,1,derived,loans_and_advances_net / customer_deposits * 100 (gross loans unavailable).
+ecobank-ghana,FY2024,ratios,cost_to_income_pct,36.2421,%,EGH25,1,derived,(staff_costs + depreciation_amortisation + other_operating_expenses + x_lease_finance_cost) / total_operating_income * 100.
+ecobank-ghana,FY2024,ratios,roe_pct,37.7748,%,EGH25,1,derived,profit_after_tax / average total_equity * 100.
+ecobank-ghana,FY2024,ratios,roa_pct,4.2619,%,EGH25,1,derived,profit_after_tax / average total_assets * 100.
+ecobank-ghana,FY2025,income_statement,interest_income,3977.889,GHS millions,EGH25,1,reported,"Bank-only; expenses positive, tax benefit negative."
+ecobank-ghana,FY2025,income_statement,interest_expense,1303.758,GHS millions,EGH25,1,reported,"Bank-only; expenses positive, tax benefit negative."
+ecobank-ghana,FY2025,income_statement,net_interest_income,2674.131,GHS millions,EGH25,1,reported,"Bank-only; expenses positive, tax benefit negative."
+ecobank-ghana,FY2025,income_statement,fee_commission_income,642.788,GHS millions,EGH25,1,reported,"Bank-only; expenses positive, tax benefit negative."
+ecobank-ghana,FY2025,income_statement,fee_commission_expense,118.454,GHS millions,EGH25,1,reported,"Bank-only; expenses positive, tax benefit negative."
+ecobank-ghana,FY2025,income_statement,net_trading_income,1605.006,GHS millions,EGH25,1,reported,"Bank-only; expenses positive, tax benefit negative."
+ecobank-ghana,FY2025,income_statement,other_operating_income,307.649,GHS millions,EGH25,1,reported,Bank-only.
+ecobank-ghana,FY2025,income_statement,total_operating_income,5111.12,GHS millions,EGH25,1,reported,Reported as Net income (FY21-22) or Operating income (FY23-26).
+ecobank-ghana,FY2025,income_statement,staff_costs,800.953,GHS millions,EGH25,1,reported,"Bank-only; expenses positive, tax benefit negative."
+ecobank-ghana,FY2025,income_statement,depreciation_amortisation,86.764,GHS millions,EGH25,1,reported,"Bank-only; expenses positive, tax benefit negative."
+ecobank-ghana,FY2025,income_statement,other_operating_expenses,872.99,GHS millions,EGH25,1,reported,"Bank-only; expenses positive, tax benefit negative."
+ecobank-ghana,FY2025,income_statement,impairment_charge,355.199,GHS millions,EGH25,1,reported,"Bank-only; expenses positive, tax benefit negative."
+ecobank-ghana,FY2025,income_statement,profit_before_tax,2982.37,GHS millions,EGH25,1,reported,"Bank-only; expenses positive, tax benefit negative."
+ecobank-ghana,FY2025,income_statement,income_tax,1190.018,GHS millions,EGH25,1,reported,"Bank-only; expenses positive, tax benefit negative."
+ecobank-ghana,FY2025,income_statement,profit_after_tax,1792.352,GHS millions,EGH25,1,reported,"Bank-only; expenses positive, tax benefit negative."
+ecobank-ghana,FY2025,income_statement,x_lease_finance_cost,12.844,GHS millions,EGH25,1,reported,Finance cost on lease liabilities reported as separate line before PBT.
+ecobank-ghana,FY2025,balance_sheet,cash_and_bog_balances,14871.185,GHS millions,EGH25,1,reported,Reported as Cash and cash equivalents (or Cash and balances with banks in FY21-22); includes due from banks.
+ecobank-ghana,FY2025,balance_sheet,due_from_banks,,GHS millions,,,unavailable,Not split from Cash and cash equivalents in GSE summary statements.
+ecobank-ghana,FY2025,balance_sheet,investment_securities,14101.974,GHS millions,EGH25,1,reported,Reported as Non-trading assets; trading assets included in other_assets.
+ecobank-ghana,FY2025,balance_sheet,loans_and_advances_gross,,GHS millions,,,unavailable,Not disclosed in GSE summary statements (net loans only).
+ecobank-ghana,FY2025,balance_sheet,loan_loss_allowance,,GHS millions,,,unavailable,Not disclosed in GSE summary statements (net loans only).
+ecobank-ghana,FY2025,balance_sheet,loans_and_advances_net,13058.608,GHS millions,EGH25,1,reported,Bank-only net loans and advances to customers.
+ecobank-ghana,FY2025,balance_sheet,property_equipment_intangibles,1389.626,GHS millions,EGH25,1,derived,Property and equipment plus intangible assets. Includes right-of-use assets 90.823m (moved from other_assets).
+ecobank-ghana,FY2025,balance_sheet,other_assets,2654.844,GHS millions,EGH25,1,derived,"Sum of non-pledged trading assets, other assets, tax assets, investment in subsidiaries, and assets held for sale. Excludes right-of-use assets 90.823m (now in property_equipment_intangibles)."
+ecobank-ghana,FY2025,balance_sheet,x_right_of_use_assets,90.823,GHS millions,EGH25,1,reported,"Memo, non-additive: ROU assets, already inside property_equipment_intangibles. Source: Bank column, statement of financial position."
+ecobank-ghana,FY2025,balance_sheet,total_assets,46076.237,GHS millions,EGH25,1,reported,Bank-only.
+ecobank-ghana,FY2025,balance_sheet,customer_deposits,30397.499,GHS millions,EGH25,1,reported,Bank-only.
+ecobank-ghana,FY2025,balance_sheet,due_to_banks,4763.955,GHS millions,EGH25,1,reported,Bank-only deposits from banks.
+ecobank-ghana,FY2025,balance_sheet,borrowings,455.984,GHS millions,EGH25,1,reported,Bank-only.
+ecobank-ghana,FY2025,balance_sheet,other_liabilities,3384.991,GHS millions,EGH25,1,derived,"Sum of other liabilities, provisions, current tax liabilities, and lease liabilities."
+ecobank-ghana,FY2025,balance_sheet,total_liabilities,39002.429,GHS millions,EGH25,1,reported,Bank-only.
+ecobank-ghana,FY2025,balance_sheet,stated_capital,416.641,GHS millions,EGH25,1,reported,Bank-only.
+ecobank-ghana,FY2025,balance_sheet,retained_earnings,4290.481,GHS millions,EGH25,1,reported,Bank-only.
+ecobank-ghana,FY2025,balance_sheet,reserves_other,2366.686,GHS millions,EGH25,1,derived,"Sum of statutory, credit risk, revaluation, and other reserves."
+ecobank-ghana,FY2025,balance_sheet,total_equity,7073.808,GHS millions,EGH25,1,reported,Bank-only.
+ecobank-ghana,FY2025,ratios,car_pct,21.23,%,EGH25,2,reported,Bank-only regulatory CAR.
+ecobank-ghana,FY2025,ratios,tier1_pct,,%,,,unavailable,Total Tier 1 ratio not separately disclosed; CET1 reported in x_cet1_pct.
+ecobank-ghana,FY2025,ratios,x_cet1_pct,19.83,%,EGH25,2,reported,Bank-only Common Equity Tier 1 ratio.
+ecobank-ghana,FY2025,ratios,npl_pct,17.85,%,EGH25,2,reported,Bank-only NPL ratio (BoG basis in FY21).
+ecobank-ghana,FY2025,ratios,ldr_pct,42.9595,%,EGH25,1,derived,loans_and_advances_net / customer_deposits * 100 (gross loans unavailable).
+ecobank-ghana,FY2025,ratios,cost_to_income_pct,34.6999,%,EGH25,1,derived,(staff_costs + depreciation_amortisation + other_operating_expenses + x_lease_finance_cost) / total_operating_income * 100.
+ecobank-ghana,FY2025,ratios,roe_pct,28.9029,%,EGH25,1,derived,profit_after_tax / average total_equity * 100.
+ecobank-ghana,FY2025,ratios,roa_pct,3.908,%,EGH25,1,derived,profit_after_tax / average total_assets * 100.
+ecobank-ghana,9M-2026,income_statement,interest_income,3118.765,GHS millions,EGH26Q3,1,reported,"Bank-only; expenses positive, tax benefit negative."
+ecobank-ghana,9M-2026,income_statement,interest_expense,844.784,GHS millions,EGH26Q3,1,reported,"Bank-only; expenses positive, tax benefit negative."
+ecobank-ghana,9M-2026,income_statement,net_interest_income,2273.981,GHS millions,EGH26Q3,1,reported,"Bank-only; expenses positive, tax benefit negative."
+ecobank-ghana,9M-2026,income_statement,fee_commission_income,599.853,GHS millions,EGH26Q3,1,reported,"Bank-only; expenses positive, tax benefit negative."
+ecobank-ghana,9M-2026,income_statement,fee_commission_expense,106.773,GHS millions,EGH26Q3,1,reported,"Bank-only; expenses positive, tax benefit negative."
+ecobank-ghana,9M-2026,income_statement,net_trading_income,612.675,GHS millions,EGH26Q3,1,reported,"Bank-only; expenses positive, tax benefit negative."
+ecobank-ghana,9M-2026,income_statement,other_operating_income,45.33,GHS millions,EGH26Q3,1,reported,Bank-only.
+ecobank-ghana,9M-2026,income_statement,total_operating_income,3425.066,GHS millions,EGH26Q3,1,reported,Reported as Net income (FY21-22) or Operating income (FY23-26).
+ecobank-ghana,9M-2026,income_statement,staff_costs,594.586,GHS millions,EGH26Q3,1,reported,"Bank-only; expenses positive, tax benefit negative."
+ecobank-ghana,9M-2026,income_statement,depreciation_amortisation,69.446,GHS millions,EGH26Q3,1,reported,"Bank-only; expenses positive, tax benefit negative."
+ecobank-ghana,9M-2026,income_statement,other_operating_expenses,536.269,GHS millions,EGH26Q3,1,reported,"Bank-only; expenses positive, tax benefit negative."
+ecobank-ghana,9M-2026,income_statement,impairment_charge,166.955,GHS millions,EGH26Q3,1,reported,"Bank-only; expenses positive, tax benefit negative."
+ecobank-ghana,9M-2026,income_statement,profit_before_tax,2049.247,GHS millions,EGH26Q3,1,reported,"Bank-only; expenses positive, tax benefit negative."
+ecobank-ghana,9M-2026,income_statement,income_tax,723.834,GHS millions,EGH26Q3,1,reported,"Bank-only; expenses positive, tax benefit negative."
+ecobank-ghana,9M-2026,income_statement,profit_after_tax,1325.413,GHS millions,EGH26Q3,1,reported,"Bank-only; expenses positive, tax benefit negative."
+ecobank-ghana,9M-2026,income_statement,x_lease_finance_cost,8.563,GHS millions,EGH26Q3,1,reported,Finance cost on lease liabilities reported as separate line before PBT.
+ecobank-ghana,9M-2026,balance_sheet,cash_and_bog_balances,17123.578,GHS millions,EGH26Q3,1,reported,Reported as Cash and cash equivalents (or Cash and balances with banks in FY21-22); includes due from banks.
+ecobank-ghana,9M-2026,balance_sheet,due_from_banks,,GHS millions,,,unavailable,Not split from Cash and cash equivalents in GSE summary statements.
+ecobank-ghana,9M-2026,balance_sheet,investment_securities,15641.223,GHS millions,EGH26Q3,1,reported,Reported as Non-trading assets; trading assets included in other_assets.
+ecobank-ghana,9M-2026,balance_sheet,loans_and_advances_gross,,GHS millions,,,unavailable,Not disclosed in GSE summary statements (net loans only).
+ecobank-ghana,9M-2026,balance_sheet,loan_loss_allowance,,GHS millions,,,unavailable,Not disclosed in GSE summary statements (net loans only).
+ecobank-ghana,9M-2026,balance_sheet,loans_and_advances_net,16162.005,GHS millions,EGH26Q3,1,reported,Bank-only net loans and advances to customers.
+ecobank-ghana,9M-2026,balance_sheet,property_equipment_intangibles,1361.731,GHS millions,EGH26Q3,1,derived,Property and equipment plus intangible assets. Includes right-of-use assets 73.725m (moved from other_assets).
+ecobank-ghana,9M-2026,balance_sheet,other_assets,3518.763,GHS millions,EGH26Q3,1,derived,"Sum of non-pledged trading assets, other assets, tax assets, investment in subsidiaries, and assets held for sale. Excludes right-of-use assets 73.725m (now in property_equipment_intangibles)."
+ecobank-ghana,9M-2026,balance_sheet,x_right_of_use_assets,73.725,GHS millions,EGH26Q3,1,reported,"Memo, non-additive: ROU assets, already inside property_equipment_intangibles. Source: Bank column, statement of financial position."
+ecobank-ghana,9M-2026,balance_sheet,total_assets,53807.3,GHS millions,EGH26Q3,1,reported,Bank-only.
+ecobank-ghana,9M-2026,balance_sheet,customer_deposits,36100.191,GHS millions,EGH26Q3,1,reported,Bank-only.
+ecobank-ghana,9M-2026,balance_sheet,due_to_banks,6900.227,GHS millions,EGH26Q3,1,reported,Bank-only deposits from banks.
+ecobank-ghana,9M-2026,balance_sheet,borrowings,281.321,GHS millions,EGH26Q3,1,reported,Bank-only.
+ecobank-ghana,9M-2026,balance_sheet,other_liabilities,2494.722,GHS millions,EGH26Q3,1,derived,"Sum of other liabilities, provisions, current tax liabilities, and lease liabilities."
+ecobank-ghana,9M-2026,balance_sheet,total_liabilities,45776.461,GHS millions,EGH26Q3,1,reported,Bank-only.
+ecobank-ghana,9M-2026,balance_sheet,stated_capital,416.641,GHS millions,EGH26Q3,1,reported,Bank-only.
+ecobank-ghana,9M-2026,balance_sheet,retained_earnings,5225.606,GHS millions,EGH26Q3,1,reported,Bank-only.
+ecobank-ghana,9M-2026,balance_sheet,reserves_other,2388.592,GHS millions,EGH26Q3,1,derived,"Sum of statutory, credit risk, revaluation, and other reserves."
+ecobank-ghana,9M-2026,balance_sheet,total_equity,8030.839,GHS millions,EGH26Q3,1,reported,Bank-only.
+ecobank-ghana,9M-2026,ratios,car_pct,18.19,%,EGH26Q3,2,reported,Bank-only regulatory CAR.
+ecobank-ghana,9M-2026,ratios,tier1_pct,,%,,,unavailable,Total Tier 1 ratio not separately disclosed; CET1 reported in x_cet1_pct.
+ecobank-ghana,9M-2026,ratios,x_cet1_pct,16.19,%,EGH26Q3,2,reported,Bank-only Common Equity Tier 1 ratio.
+ecobank-ghana,9M-2026,ratios,npl_pct,14.99,%,EGH26Q3,2,reported,Bank-only NPL ratio (BoG basis in FY21).
+ecobank-ghana,9M-2026,ratios,ldr_pct,44.7699,%,EGH26Q3,1,derived,loans_and_advances_net / customer_deposits * 100 (gross loans unavailable).
+ecobank-ghana,9M-2026,ratios,cost_to_income_pct,35.2946,%,EGH26Q3,1,derived,(staff_costs + depreciation_amortisation + other_operating_expenses + x_lease_finance_cost) / total_operating_income * 100.
+ecobank-ghana,9M-2026,ratios,roe_pct,,%,,,unavailable,9M-2026 is interim; annualised ROE not reported.
+ecobank-ghana,9M-2026,ratios,roa_pct,,%,,,unavailable,9M-2026 is interim; annualised ROA not reported.
