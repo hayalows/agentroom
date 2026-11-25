@@ -2,7 +2,7 @@
 
 Status: steward self-check only; independent review pending. Model replay from the exact committed source produced byte-identical forecast.csv. No external Node CLI execution claimed; JavaScript engine executed in the tool environment.
 
-- History: 329 rows, 5 annual + 2 interim periods. Forecast: 855 rows, 15 scenario-years. Schema errors 0, duplicate keys 0.
+- History: 340 rows, 5 annual + 2 interim periods. Forecast: 1005 rows, 15 scenario-years. Schema errors 0, duplicate keys 0.
 - Core arithmetic: 66/66 passes on rounded CSV; tolerance GHS 0.005m. Full history bridges: 61, full model forecast bridges: 135, plus 15 forecast equity roll-forwards. All passed before rounding.
 - Actual Q3 equity: 2769.753 + 524.854 - 11.738 OCI - 317.438 dividends = 2965.431. Q4 only modeled, dividend paid already reflected in Q3 equity.
 - Q3 estimated opening RWA 12358.64m, regulatory capital 2290.06m, CET1 1894.58m; calibrated to actual 18.53% and 15.33% ratios. Not reported Q3 absolute capital.
@@ -29,3 +29,26 @@ Status: steward self-check only; independent review pending. Model replay from t
 | upside | FY2030E | 1693.67 | 57741.13 | 20.63% | 16.38% | 762.15 | 0.00 |
 
 Independent reviewer should inspect source pages, confirm historical claims/units and run node model.mjs, check assumption sensitivity and regulatory interpretation before acceptance.
+
+## Round 2 liquidity sensitivity
+FY25 central bank balance 5988.449m (71.4553% of aggregate cash); non-interest-bearing proxy 7031.319m exceeds central bank by 1042.870m. Both are estimates for forecast; neither proves reserve eligibility. FY25 98.0% of borrowings are overnight; top20 customer concentration 26.95%. At Q3 2026, 10%/20% borrowings runoff 442.233/884.466m; 10% of estimated top20 customer deposits 544.977m. No actual Q3 concentration reported. Deduct withdrawals from central bank proxy only as a static stress, reduce CRR by customer withdrawal, hold other assets/funding fixed. Dividend cap sensitivity is additional constraint on modeled payout (not a fresh model). No asserted probability or actual breach.
+
+| Scenario | Year | CB-share gap m | 10% wholesale gap | 20% wholesale gap | 20% wholesale + top20 partial gap | CB-share dividend cap | Combined stress dividend cap |
+|---|---|---:|---:|---:|---:|---:|---:|
+| base | FY2026E | 0.000 | 0.000 | 0.000 | 0.000 | 62.698 | 62.698 |
+| base | FY2027E | 0.000 | 0.000 | 0.000 | 0.000 | 309.577 | 309.577 |
+| base | FY2028E | 0.000 | 0.000 | 0.000 | 0.000 | 354.687 | 354.687 |
+| base | FY2029E | 0.000 | 0.000 | 0.000 | 0.000 | 411.600 | 411.600 |
+| base | FY2030E | 0.000 | 0.000 | 0.000 | 0.000 | 472.894 | 472.894 |
+| downside | FY2026E | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 |
+| downside | FY2027E | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 |
+| downside | FY2028E | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 |
+| downside | FY2029E | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 |
+| downside | FY2030E | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 |
+| upside | FY2026E | 0.000 | 0.000 | 0.000 | 0.000 | 102.231 | 102.231 |
+| upside | FY2027E | 0.000 | 0.000 | 0.000 | 0.000 | 431.858 | 431.858 |
+| upside | FY2028E | 0.000 | 0.000 | 0.000 | 0.000 | 516.305 | 516.305 |
+| upside | FY2029E | 0.000 | 0.000 | 0.000 | 0.000 | 627.436 | 627.436 |
+| upside | FY2030E | 0.000 | 0.000 | 0.000 | 0.000 | 762.150 | 762.150 |
+
+All central scenario PAT, assets and CAR unchanged. Source page corrections: FY21/22 pp44–45, approved FY25 deposit p150; audited cash split note17 p139, borrowings p151. Additional historical memo rows nonadditive. Rerun exact JS engine before independent review.
