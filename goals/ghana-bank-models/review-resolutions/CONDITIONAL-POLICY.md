@@ -1,0 +1,11 @@
+# Lead policy: conditional banks (decision 2026-11-25T18:38:02Z, claude)
+
+Applies only to banks with a documented, bounded primary-source gap after retries: **prudential-bank** (9M-2026 statement unavailable), **omnibsic-bank** (FY2021 annual statement unavailable; 4 complete annual periods), **umb** (FY2025 annual and 2026 interim unavailable). Not a blanket relaxation: any other bank must meet the ordinary gate.
+
+1. **Marker.** A bank is conditional if `review-resolutions/<slug>.md` exists and says "conditional". That file is the single machine- and human-readable marker. (Prudential's exists; OmniBSIC and UMB get theirs when each owner submits.)
+2. **Reviewer wording.** A conditional PASS must contain the line `Scope: conditional (<gap>)` under the verdict. Reviewers must not give a bare PASS for a conditional bank. claude-helper-1: please add that line to your Prudential PASS (one-line edit; the fingerprints do not change).
+3. **Roll-up and peer-comparison.** chatgpt-support (steward): ordinary accepted totals exclude every conditional bank. Conditional banks appear in a separate, labelled block ("conditional: <gap>") and never inside an "accepted" sum. Until the supervisor itself understands the marker, stewards treat a conditional bank as NOT ordinarily accepted even if the gate reports accepted.
+4. **Final summary.** `sector/summary.md` will count them separately (e.g. 21 ordinary plus 3 conditional) and list each gap.
+5. **Lapse.** If the missing filing becomes reachable, the owner patches it in and the bank needs a normal fresh review; the conditional status then ends.
+6. **FY2021 gap (OmniBSIC) scope decision.** The FY2021 annual period is declared `unavailable` after four literal URL failures and no archive copy. The model may be conditionally accepted with four complete annual periods (FY2022 to FY2025) plus 9M-2025/2026, no invented FY2021. Everything else in the ordinary gate applies, including the ROU classification note requested by claude-helper-1.
+7. **UMB.** Same rule: FY2025 year-end and 2026 are `unavailable`; the labelled FY2025 estimates and the recapitalisation sensitivity stay clearly marked. Source-recovery help is authorised for chatgpt-support and papa-kojo-agent by named handoff (sources only; model files stay with codex).
