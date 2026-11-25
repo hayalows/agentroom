@@ -22,8 +22,8 @@ calbank,base,FY2026E,balance_sheet,investment_securities,7290.863,GHS millions,M
 calbank,base,FY2026E,balance_sheet,loans_and_advances_gross,,GHS millions,MODEL-ESTIMATE,unavailable,Net loans projected (9M-2026 anchor is net).
 calbank,base,FY2026E,balance_sheet,loan_loss_allowance,,GHS millions,MODEL-ESTIMATE,unavailable,Net loans projected.
 calbank,base,FY2026E,balance_sheet,loans_and_advances_net,2136.333,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ linked to nominal GDP.
-calbank,base,FY2026E,balance_sheet,property_equipment_intangibles,866.649,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
-calbank,base,FY2026E,balance_sheet,other_assets,1567.927,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
+calbank,base,FY2026E,balance_sheet,property_equipment_intangibles,816.776,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
+calbank,base,FY2026E,balance_sheet,other_assets,1617.800,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
 calbank,base,FY2026E,balance_sheet,total_assets,14986.426,GHS millions,MODEL-ESTIMATE,estimated,total_liabilities + total_equity.
 calbank,base,FY2026E,balance_sheet,customer_deposits,10952.709,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ linked to nominal GDP.
 calbank,base,FY2026E,balance_sheet,due_to_banks,481.570,GHS millions,MODEL-ESTIMATE,estimated,0.5 * deposit_growth.
@@ -64,8 +64,8 @@ calbank,base,FY2027E,balance_sheet,investment_securities,8369.833,GHS millions,M
 calbank,base,FY2027E,balance_sheet,loans_and_advances_gross,,GHS millions,MODEL-ESTIMATE,unavailable,Net loans projected (9M-2026 anchor is net).
 calbank,base,FY2027E,balance_sheet,loan_loss_allowance,,GHS millions,MODEL-ESTIMATE,unavailable,Net loans projected.
 calbank,base,FY2027E,balance_sheet,loans_and_advances_net,2454.112,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ linked to nominal GDP.
-calbank,base,FY2027E,balance_sheet,property_equipment_intangibles,883.982,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
-calbank,base,FY2027E,balance_sheet,other_assets,1599.286,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
+calbank,base,FY2027E,balance_sheet,property_equipment_intangibles,833.111,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
+calbank,base,FY2027E,balance_sheet,other_assets,1650.156,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
 calbank,base,FY2027E,balance_sheet,total_assets,16894.284,GHS millions,MODEL-ESTIMATE,estimated,total_liabilities + total_equity.
 calbank,base,FY2027E,balance_sheet,customer_deposits,12417.634,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ linked to nominal GDP.
 calbank,base,FY2027E,balance_sheet,due_to_banks,513.775,GHS millions,MODEL-ESTIMATE,estimated,0.5 * deposit_growth.
@@ -106,8 +106,8 @@ calbank,base,FY2028E,balance_sheet,investment_securities,9547.923,GHS millions,M
 calbank,base,FY2028E,balance_sheet,loans_and_advances_gross,,GHS millions,MODEL-ESTIMATE,unavailable,Net loans projected (9M-2026 anchor is net).
 calbank,base,FY2028E,balance_sheet,loan_loss_allowance,,GHS millions,MODEL-ESTIMATE,unavailable,Net loans projected.
 calbank,base,FY2028E,balance_sheet,loans_and_advances_net,2832.045,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ linked to nominal GDP.
-calbank,base,FY2028E,balance_sheet,property_equipment_intangibles,901.661,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
-calbank,base,FY2028E,balance_sheet,other_assets,1631.271,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
+calbank,base,FY2028E,balance_sheet,property_equipment_intangibles,849.774,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
+calbank,base,FY2028E,balance_sheet,other_assets,1683.159,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
 calbank,base,FY2028E,balance_sheet,total_assets,19004.868,GHS millions,MODEL-ESTIMATE,estimated,total_liabilities + total_equity.
 calbank,base,FY2028E,balance_sheet,customer_deposits,14143.685,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ linked to nominal GDP.
 calbank,base,FY2028E,balance_sheet,due_to_banks,549.482,GHS millions,MODEL-ESTIMATE,estimated,0.5 * deposit_growth.
@@ -148,8 +148,8 @@ calbank,base,FY2029E,balance_sheet,investment_securities,10840.367,GHS millions,
 calbank,base,FY2029E,balance_sheet,loans_and_advances_gross,,GHS millions,MODEL-ESTIMATE,unavailable,Net loans projected (9M-2026 anchor is net).
 calbank,base,FY2029E,balance_sheet,loan_loss_allowance,,GHS millions,MODEL-ESTIMATE,unavailable,Net loans projected.
 calbank,base,FY2029E,balance_sheet,loans_and_advances_net,3262.063,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ linked to nominal GDP.
-calbank,base,FY2029E,balance_sheet,property_equipment_intangibles,919.695,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
-calbank,base,FY2029E,balance_sheet,other_assets,1663.897,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
+calbank,base,FY2029E,balance_sheet,property_equipment_intangibles,866.769,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
+calbank,base,FY2029E,balance_sheet,other_assets,1716.822,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
 calbank,base,FY2029E,balance_sheet,total_assets,21331.894,GHS millions,MODEL-ESTIMATE,estimated,total_liabilities + total_equity.
 calbank,base,FY2029E,balance_sheet,customer_deposits,16079.107,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ linked to nominal GDP.
 calbank,base,FY2029E,balance_sheet,due_to_banks,587.078,GHS millions,MODEL-ESTIMATE,estimated,0.5 * deposit_growth.
@@ -190,8 +190,8 @@ calbank,base,FY2030E,balance_sheet,investment_securities,12295.231,GHS millions,
 calbank,base,FY2030E,balance_sheet,loans_and_advances_gross,,GHS millions,MODEL-ESTIMATE,unavailable,Net loans projected (9M-2026 anchor is net).
 calbank,base,FY2030E,balance_sheet,loan_loss_allowance,,GHS millions,MODEL-ESTIMATE,unavailable,Net loans projected.
 calbank,base,FY2030E,balance_sheet,loans_and_advances_net,3757.375,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ linked to nominal GDP.
-calbank,base,FY2030E,balance_sheet,property_equipment_intangibles,938.088,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
-calbank,base,FY2030E,balance_sheet,other_assets,1697.175,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
+calbank,base,FY2030E,balance_sheet,property_equipment_intangibles,884.104,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
+calbank,base,FY2030E,balance_sheet,other_assets,1751.159,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
 calbank,base,FY2030E,balance_sheet,total_assets,23957.253,GHS millions,MODEL-ESTIMATE,estimated,total_liabilities + total_equity.
 calbank,base,FY2030E,balance_sheet,customer_deposits,18279.372,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ linked to nominal GDP.
 calbank,base,FY2030E,balance_sheet,due_to_banks,627.246,GHS millions,MODEL-ESTIMATE,estimated,0.5 * deposit_growth.
@@ -232,8 +232,8 @@ calbank,downside,FY2026E,balance_sheet,investment_securities,7173.675,GHS millio
 calbank,downside,FY2026E,balance_sheet,loans_and_advances_gross,,GHS millions,MODEL-ESTIMATE,unavailable,Net loans projected (9M-2026 anchor is net).
 calbank,downside,FY2026E,balance_sheet,loan_loss_allowance,,GHS millions,MODEL-ESTIMATE,unavailable,Net loans projected.
 calbank,downside,FY2026E,balance_sheet,loans_and_advances_net,2084.978,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ linked to nominal GDP.
-calbank,downside,FY2026E,balance_sheet,property_equipment_intangibles,866.649,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
-calbank,downside,FY2026E,balance_sheet,other_assets,1567.927,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
+calbank,downside,FY2026E,balance_sheet,property_equipment_intangibles,816.776,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
+calbank,downside,FY2026E,balance_sheet,other_assets,1617.800,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
 calbank,downside,FY2026E,balance_sheet,total_assets,14767.661,GHS millions,MODEL-ESTIMATE,estimated,total_liabilities + total_equity.
 calbank,downside,FY2026E,balance_sheet,customer_deposits,10740.035,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ linked to nominal GDP.
 calbank,downside,FY2026E,balance_sheet,due_to_banks,476.825,GHS millions,MODEL-ESTIMATE,estimated,0.5 * deposit_growth.
@@ -274,8 +274,8 @@ calbank,downside,FY2027E,balance_sheet,investment_securities,8329.201,GHS millio
 calbank,downside,FY2027E,balance_sheet,loans_and_advances_gross,,GHS millions,MODEL-ESTIMATE,unavailable,Net loans projected (9M-2026 anchor is net).
 calbank,downside,FY2027E,balance_sheet,loan_loss_allowance,,GHS millions,MODEL-ESTIMATE,unavailable,Net loans projected.
 calbank,downside,FY2027E,balance_sheet,loans_and_advances_net,2342.056,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ linked to nominal GDP.
-calbank,downside,FY2027E,balance_sheet,property_equipment_intangibles,883.982,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
-calbank,downside,FY2027E,balance_sheet,other_assets,1599.286,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
+calbank,downside,FY2027E,balance_sheet,property_equipment_intangibles,833.111,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
+calbank,downside,FY2027E,balance_sheet,other_assets,1650.156,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
 calbank,downside,FY2027E,balance_sheet,total_assets,16724.183,GHS millions,MODEL-ESTIMATE,estimated,total_liabilities + total_equity.
 calbank,downside,FY2027E,balance_sheet,customer_deposits,12117.981,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ linked to nominal GDP.
 calbank,downside,FY2027E,balance_sheet,due_to_banks,507.414,GHS millions,MODEL-ESTIMATE,estimated,0.5 * deposit_growth.
@@ -316,8 +316,8 @@ calbank,downside,FY2028E,balance_sheet,investment_securities,9604.098,GHS millio
 calbank,downside,FY2028E,balance_sheet,loans_and_advances_gross,,GHS millions,MODEL-ESTIMATE,unavailable,Net loans projected (9M-2026 anchor is net).
 calbank,downside,FY2028E,balance_sheet,loan_loss_allowance,,GHS millions,MODEL-ESTIMATE,unavailable,Net loans projected.
 calbank,downside,FY2028E,balance_sheet,loans_and_advances_net,2631.710,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ linked to nominal GDP.
-calbank,downside,FY2028E,balance_sheet,property_equipment_intangibles,901.661,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
-calbank,downside,FY2028E,balance_sheet,other_assets,1631.271,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
+calbank,downside,FY2028E,balance_sheet,property_equipment_intangibles,849.774,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
+calbank,downside,FY2028E,balance_sheet,other_assets,1683.159,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
 calbank,downside,FY2028E,balance_sheet,total_assets,18884.783,GHS millions,MODEL-ESTIMATE,estimated,total_liabilities + total_equity.
 calbank,downside,FY2028E,balance_sheet,customer_deposits,13677.263,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ linked to nominal GDP.
 calbank,downside,FY2028E,balance_sheet,due_to_banks,540.059,GHS millions,MODEL-ESTIMATE,estimated,0.5 * deposit_growth.
@@ -358,8 +358,8 @@ calbank,downside,FY2029E,balance_sheet,investment_securities,10969.705,GHS milli
 calbank,downside,FY2029E,balance_sheet,loans_and_advances_gross,,GHS millions,MODEL-ESTIMATE,unavailable,Net loans projected (9M-2026 anchor is net).
 calbank,downside,FY2029E,balance_sheet,loan_loss_allowance,,GHS millions,MODEL-ESTIMATE,unavailable,Net loans projected.
 calbank,downside,FY2029E,balance_sheet,loans_and_advances_net,2958.042,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ linked to nominal GDP.
-calbank,downside,FY2029E,balance_sheet,property_equipment_intangibles,919.695,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
-calbank,downside,FY2029E,balance_sheet,other_assets,1663.897,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
+calbank,downside,FY2029E,balance_sheet,property_equipment_intangibles,866.769,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
+calbank,downside,FY2029E,balance_sheet,other_assets,1716.822,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
 calbank,downside,FY2029E,balance_sheet,total_assets,21212.640,GHS millions,MODEL-ESTIMATE,estimated,total_liabilities + total_equity.
 calbank,downside,FY2029E,balance_sheet,customer_deposits,15441.630,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ linked to nominal GDP.
 calbank,downside,FY2029E,balance_sheet,due_to_banks,574.893,GHS millions,MODEL-ESTIMATE,estimated,0.5 * deposit_growth.
@@ -400,8 +400,8 @@ calbank,downside,FY2030E,balance_sheet,investment_securities,12413.943,GHS milli
 calbank,downside,FY2030E,balance_sheet,loans_and_advances_gross,,GHS millions,MODEL-ESTIMATE,unavailable,Net loans projected (9M-2026 anchor is net).
 calbank,downside,FY2030E,balance_sheet,loan_loss_allowance,,GHS millions,MODEL-ESTIMATE,unavailable,Net loans projected.
 calbank,downside,FY2030E,balance_sheet,loans_and_advances_net,3309.458,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ linked to nominal GDP.
-calbank,downside,FY2030E,balance_sheet,property_equipment_intangibles,938.088,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
-calbank,downside,FY2030E,balance_sheet,other_assets,1697.175,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
+calbank,downside,FY2030E,balance_sheet,property_equipment_intangibles,884.104,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
+calbank,downside,FY2030E,balance_sheet,other_assets,1751.159,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
 calbank,downside,FY2030E,balance_sheet,total_assets,23678.925,GHS millions,MODEL-ESTIMATE,estimated,total_liabilities + total_equity.
 calbank,downside,FY2030E,balance_sheet,customer_deposits,17353.303,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ linked to nominal GDP.
 calbank,downside,FY2030E,balance_sheet,due_to_banks,610.479,GHS millions,MODEL-ESTIMATE,estimated,0.5 * deposit_growth.
@@ -442,8 +442,8 @@ calbank,upside,FY2026E,balance_sheet,investment_securities,7352.822,GHS millions
 calbank,upside,FY2026E,balance_sheet,loans_and_advances_gross,,GHS millions,MODEL-ESTIMATE,unavailable,Net loans projected (9M-2026 anchor is net).
 calbank,upside,FY2026E,balance_sheet,loan_loss_allowance,,GHS millions,MODEL-ESTIMATE,unavailable,Net loans projected.
 calbank,upside,FY2026E,balance_sheet,loans_and_advances_net,2156.874,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ linked to nominal GDP.
-calbank,upside,FY2026E,balance_sheet,property_equipment_intangibles,866.649,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
-calbank,upside,FY2026E,balance_sheet,other_assets,1567.927,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
+calbank,upside,FY2026E,balance_sheet,property_equipment_intangibles,816.776,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
+calbank,upside,FY2026E,balance_sheet,other_assets,1617.800,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
 calbank,upside,FY2026E,balance_sheet,total_assets,15095.482,GHS millions,MODEL-ESTIMATE,estimated,total_liabilities + total_equity.
 calbank,upside,FY2026E,balance_sheet,customer_deposits,11059.046,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ linked to nominal GDP.
 calbank,upside,FY2026E,balance_sheet,due_to_banks,483.942,GHS millions,MODEL-ESTIMATE,estimated,0.5 * deposit_growth.
@@ -484,8 +484,8 @@ calbank,upside,FY2027E,balance_sheet,investment_securities,8458.105,GHS millions
 calbank,upside,FY2027E,balance_sheet,loans_and_advances_gross,,GHS millions,MODEL-ESTIMATE,unavailable,Net loans projected (9M-2026 anchor is net).
 calbank,upside,FY2027E,balance_sheet,loan_loss_allowance,,GHS millions,MODEL-ESTIMATE,unavailable,Net loans projected.
 calbank,upside,FY2027E,balance_sheet,loans_and_advances_net,2509.739,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ linked to nominal GDP.
-calbank,upside,FY2027E,balance_sheet,property_equipment_intangibles,883.982,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
-calbank,upside,FY2027E,balance_sheet,other_assets,1599.286,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
+calbank,upside,FY2027E,balance_sheet,property_equipment_intangibles,833.111,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
+calbank,upside,FY2027E,balance_sheet,other_assets,1650.156,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
 calbank,upside,FY2027E,balance_sheet,total_assets,17076.014,GHS millions,MODEL-ESTIMATE,estimated,total_liabilities + total_equity.
 calbank,upside,FY2027E,balance_sheet,customer_deposits,12647.125,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ linked to nominal GDP.
 calbank,upside,FY2027E,balance_sheet,due_to_banks,518.689,GHS millions,MODEL-ESTIMATE,estimated,0.5 * deposit_growth.
@@ -526,8 +526,8 @@ calbank,upside,FY2028E,balance_sheet,investment_securities,9696.791,GHS millions
 calbank,upside,FY2028E,balance_sheet,loans_and_advances_gross,,GHS millions,MODEL-ESTIMATE,unavailable,Net loans projected (9M-2026 anchor is net).
 calbank,upside,FY2028E,balance_sheet,loan_loss_allowance,,GHS millions,MODEL-ESTIMATE,unavailable,Net loans projected.
 calbank,upside,FY2028E,balance_sheet,loans_and_advances_net,2941.565,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ linked to nominal GDP.
-calbank,upside,FY2028E,balance_sheet,property_equipment_intangibles,901.661,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
-calbank,upside,FY2028E,balance_sheet,other_assets,1631.271,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
+calbank,upside,FY2028E,balance_sheet,property_equipment_intangibles,849.774,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
+calbank,upside,FY2028E,balance_sheet,other_assets,1683.159,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
 calbank,upside,FY2028E,balance_sheet,total_assets,19327.056,GHS millions,MODEL-ESTIMATE,estimated,total_liabilities + total_equity.
 calbank,upside,FY2028E,balance_sheet,customer_deposits,14570.247,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ linked to nominal GDP.
 calbank,upside,FY2028E,balance_sheet,due_to_banks,558.125,GHS millions,MODEL-ESTIMATE,estimated,0.5 * deposit_growth.
@@ -568,8 +568,8 @@ calbank,upside,FY2029E,balance_sheet,investment_securities,11127.928,GHS million
 calbank,upside,FY2029E,balance_sheet,loans_and_advances_gross,,GHS millions,MODEL-ESTIMATE,unavailable,Net loans projected (9M-2026 anchor is net).
 calbank,upside,FY2029E,balance_sheet,loan_loss_allowance,,GHS millions,MODEL-ESTIMATE,unavailable,Net loans projected.
 calbank,upside,FY2029E,balance_sheet,loans_and_advances_net,3453.765,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ linked to nominal GDP.
-calbank,upside,FY2029E,balance_sheet,property_equipment_intangibles,919.695,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
-calbank,upside,FY2029E,balance_sheet,other_assets,1663.897,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
+calbank,upside,FY2029E,balance_sheet,property_equipment_intangibles,866.769,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
+calbank,upside,FY2029E,balance_sheet,other_assets,1716.822,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
 calbank,upside,FY2029E,balance_sheet,total_assets,21934.395,GHS millions,MODEL-ESTIMATE,estimated,total_liabilities + total_equity.
 calbank,upside,FY2029E,balance_sheet,customer_deposits,16815.886,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ linked to nominal GDP.
 calbank,upside,FY2029E,balance_sheet,due_to_banks,601.136,GHS millions,MODEL-ESTIMATE,estimated,0.5 * deposit_growth.
@@ -610,8 +610,8 @@ calbank,upside,FY2030E,balance_sheet,investment_securities,12819.443,GHS million
 calbank,upside,FY2030E,balance_sheet,loans_and_advances_gross,,GHS millions,MODEL-ESTIMATE,unavailable,Net loans projected (9M-2026 anchor is net).
 calbank,upside,FY2030E,balance_sheet,loan_loss_allowance,,GHS millions,MODEL-ESTIMATE,unavailable,Net loans projected.
 calbank,upside,FY2030E,balance_sheet,loans_and_advances_net,4073.370,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ linked to nominal GDP.
-calbank,upside,FY2030E,balance_sheet,property_equipment_intangibles,938.088,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
-calbank,upside,FY2030E,balance_sheet,other_assets,1697.175,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
+calbank,upside,FY2030E,balance_sheet,property_equipment_intangibles,884.104,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
+calbank,upside,FY2030E,balance_sheet,other_assets,1751.159,GHS millions,MODEL-ESTIMATE,estimated,2% annual growth.
 calbank,upside,FY2030E,balance_sheet,total_assets,25022.123,GHS millions,MODEL-ESTIMATE,estimated,total_liabilities + total_equity.
 calbank,upside,FY2030E,balance_sheet,customer_deposits,19496.338,GHS millions,MODEL-ESTIMATE,estimated,FY26E anchored on 9M-26; FY27E+ linked to nominal GDP.
 calbank,upside,FY2030E,balance_sheet,due_to_banks,649.046,GHS millions,MODEL-ESTIMATE,estimated,0.5 * deposit_growth.
