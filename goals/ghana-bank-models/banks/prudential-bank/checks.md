@@ -34,3 +34,34 @@ Capital recognition sensitivity (same assets, earnings and inferred RWA; not act
 | upside | FY2030E | 14.807 | 16.840 | 18.873 |
 
 No actual September statement, source loan/ECL for FY25, post-injection accounting split, true RWA or capital return. Statutory reserve tier proxy allocates positive annual PAT based on opening reserve relative to modeled paid-up capital; no dividends. No claimed PASS.
+
+## Instrument and tax sensitivity (hypothetical)
+
+All four alternatives rerun every scenario-year; 480 full-precision identities checked. Same macro and original actuals, no actual instrument split or tax forecast claimed.
+
+| Alternative | Scenario | Year | PAT m | Equity m | Cash m | CAR proxy % |
+|---|---|---|---:|---:|---:|---:|
+| 80% equity / 20% debt, all cash | base | FY2026E | -62.654 | 902.209 | 4104.585 | 6.827 |
+| 80% equity / 20% debt, all cash | base | FY2030E | -11.687 | 753.728 | 6312.436 | 1.616 |
+| 80% equity / 20% debt, all cash | downside | FY2026E | -286.412 | 678.451 | 3690.056 | -5.631 |
+| 80% equity / 20% debt, all cash | downside | FY2030E | -534.864 | -954.643 | 3232.917 | -46.820 |
+| 80% equity / 20% debt, all cash | upside | FY2026E | 52.558 | 1017.421 | 4326.409 | 10.057 |
+| 80% equity / 20% debt, all cash | upside | FY2030E | 179.687 | 1478.085 | 8070.377 | 14.423 |
+| 100% equity / 80% cash | base | FY2026E | -62.654 | 1128.209 | 3878.585 | 13.023 |
+| 100% equity / 80% cash | base | FY2030E | -5.419 | 1004.677 | 6111.385 | 6.638 |
+| 100% equity / 80% cash | downside | FY2026E | -286.412 | 904.451 | 3464.056 | 0.059 |
+| 100% equity / 80% cash | downside | FY2030E | -527.121 | -696.952 | 3038.608 | -39.664 |
+| 100% equity / 80% cash | upside | FY2026E | 52.558 | 1243.421 | 4100.409 | 15.959 |
+| 100% equity / 80% cash | upside | FY2030E | 183.084 | 1717.471 | 7857.764 | 18.198 |
+| 45% tax | base | FY2026E | -62.654 | 1128.209 | 4104.585 | 13.662 |
+| 45% tax | base | FY2030E | -3.324 | 1013.505 | 6346.212 | 7.048 |
+| 45% tax | downside | FY2026E | -286.412 | 904.451 | 3690.056 | 0.062 |
+| 45% tax | downside | FY2030E | -525.796 | -691.134 | 3270.426 | -41.179 |
+| 45% tax | upside | FY2026E | 44.472 | 1235.335 | 4318.323 | 16.486 |
+| 45% tax | upside | FY2030E | 156.164 | 1642.393 | 8008.686 | 17.379 |
+| FY25 effective-tax stress | base | FY2026E | -62.654 | 1128.209 | 4104.585 | 13.662 |
+| FY25 effective-tax stress | base | FY2030E | -3.324 | 1013.505 | 6346.212 | 7.048 |
+| FY25 effective-tax stress | downside | FY2026E | -286.412 | 904.451 | 3690.056 | 0.062 |
+| FY25 effective-tax stress | downside | FY2030E | -525.796 | -691.134 | 3270.426 | -41.179 |
+| FY25 effective-tax stress | upside | FY2026E | 23.943 | 1214.806 | 4297.794 | 15.880 |
+| FY25 effective-tax stress | upside | FY2030E | 83.560 | 1432.853 | 7799.146 | 13.609 |
