@@ -19,3 +19,5 @@ Retrieved/checked 25 November 2026. FY21–24 normalized source figures credited
 - October 2026 capital injection is an actual announced event, but Sep 2026 balance sheet not available; never include the injection in Sep actual. No invented 2026 statement or CAR numerator. Model, if prepared on last audited year with a conditional post-event scenario, remains provisional until interim anchor is retrieved.
 
 44/44 historical accounting identities reconcile exactly at GHS thousand precision (36 FY21–24, eight FY25; no FY25 gross/ECL bridge). Independent review still required.
+
+- Statutory reserve forecast assumption: Act 930 s34, https://www.bog.gov.gh/wp-content/uploads/2019/09/BANKS-AND-SPECIALISED-DEPOSIT-ACT-2016.pdf ; FY25 opening reserve131.423m from PBL25SUM. Model transfers 50%, 25%, or 12.5% of positive annual PAT using the opening reserve and modeled stated capital. No dividends; not a legal-compliance finding.
