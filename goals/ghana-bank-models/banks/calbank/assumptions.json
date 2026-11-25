@@ -43,11 +43,11 @@
       },
       "yield_on_investments_spread_over_blend_pct": {
         "value": -4.0,
-        "note": "50% tbill_364d_pct + 50% govt_bond_yield_pct from macro.csv - 4.0% (calibrated to 9M-2026 actual ~8.5% blended asset yield)."
+        "note": "FY2026E Q4 uses the Q4 364-day bill and 10-year bond yield proxies in cost_of_funds_calibration, blended 50/50, less 4.0 percentage points. FY2027E+ uses 50% macro.csv tbill_364d_pct + 50% govt_bond_yield_pct - 4.0 points. The aggregate fit in checks.md is a calibration guide, not an observed security yield."
       },
       "yield_on_loans_spread_over_policy_pct": {
         "value": 1.0,
-        "note": "policy_rate_pct from macro.csv + 1.0% (calibrated to 9M-2026 actual interest income ~884m annualised)."
+        "note": "FY2026E Q4 uses the 12.57% day-weighted Q4 policy input in cost_of_funds_calibration + 1.0 percentage point; FY2027E+ uses macro.csv policy_rate_pct + 1.0 point. The aggregate interest-income fit in checks.md is a calibration guide, not an observed loan yield."
       },
       "trading_income_growth_pct": {
         "FY2027E": 8.0,
@@ -116,11 +116,11 @@
       },
       "yield_on_investments_spread_over_blend_pct": {
         "value": -4.0,
-        "note": "Linked to macro.csv downside yields."
+        "note": "FY2026E Q4 uses the Q4 364-day bill and 10-year bond yield proxies in cost_of_funds_calibration, blended 50/50, less 4.0 percentage points; FY2027E+ uses downside macro.csv yields."
       },
       "yield_on_loans_spread_over_policy_pct": {
         "value": 1.5,
-        "note": "Higher risk spread."
+        "note": "Higher risk-spread assumption: FY2026E Q4 uses the day-weighted policy input in cost_of_funds_calibration + 1.5 percentage points; FY2027E+ uses macro.csv policy_rate_pct + 1.5 points."
       },
       "trading_income_growth_pct": {
         "FY2027E": 5.0,
@@ -189,11 +189,11 @@
       },
       "yield_on_investments_spread_over_blend_pct": {
         "value": -4.0,
-        "note": "Linked to macro.csv upside yields."
+        "note": "FY2026E Q4 uses the Q4 364-day bill and 10-year bond yield proxies in cost_of_funds_calibration, blended 50/50, less 4.0 percentage points; FY2027E+ uses upside macro.csv yields."
       },
       "yield_on_loans_spread_over_policy_pct": {
         "value": 0.5,
-        "note": "Spread compression as asset quality improves."
+        "note": "Spread-compression assumption: FY2026E Q4 uses the day-weighted policy input in cost_of_funds_calibration + 0.5 percentage points; FY2027E+ uses macro.csv policy_rate_pct + 0.5 points."
       },
       "trading_income_growth_pct": {
         "FY2027E": 10.0,
