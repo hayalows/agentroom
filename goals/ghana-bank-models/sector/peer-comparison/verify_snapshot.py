@@ -132,7 +132,20 @@ def verify(root, roll, peer):
 
     for b, r in {**ordinary, **conditional}.items():
         bd = goal/"banks"/b
-        history, forecast = read_csv(bd/"financials.csv"), read_csv(bd/"forecast.csv")
+        def diagnostic_table(name, historical):
+            rows = read_csv(bd/name)
+            if b in ordinary:
+                return rows
+            statuses = ("reported", "derived", "estimated", "unavailable") if historical else ("estimated", "unavailable")
+            for x in rows:
+                require(x.get("bank") == b and x.get("period") and x.get("line_item"), f"invalid diagnostic bank/identity: {b} {name}")
+                require(x.get("status") in statuses, f"invalid diagnostic status: {b} {name}")
+                if not historical:
+                    require(x.get("scenario") in ("base", "downside", "upside") and re.fullmatch(r"FY(?:202[6-9]|2030)E", x["period"]), f"invalid diagnostic scenario/year: {b} {name}")
+                value = x.get("value", "").strip()
+                require(not value if x["status"] == "unavailable" else bool(value) and D(value).is_finite(), f"invalid diagnostic value: {b} {name}")
+            return rows
+        history, forecast = diagnostic_table("financials.csv", True), diagnostic_table("forecast.csv", False)
         p, a = load_period(history, "FY2024"), load_period(history, "FY2025")
         check(r, "source_commit", source)
         for key, item in (("assets_2025_m", "total_assets"), ("customer_deposits_2025_m", "customer_deposits"), ("pat_2025_m", "profit_after_tax")):
