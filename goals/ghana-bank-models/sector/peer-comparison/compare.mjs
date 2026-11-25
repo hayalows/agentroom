@@ -11,6 +11,9 @@ for(let i=0;i<args.length;i+=2){if(!['--input-root','--output','--report'].inclu
 const root=path.resolve(options['--input-root']??path.resolve(here,'../../../..'));
 const goal='ghana-bank-models',dir=path.join(root,'goals',goal);
 const out=path.resolve(options['--output']??path.join(here,'comparison.csv'));
+const conditionalOut=path.join(path.dirname(out),'conditional-comparison.csv');
+const reportOut=options['--report']?path.resolve(options['--report']):null;
+if(new Set([out,conditionalOut,...(reportOut?[reportOut]:[])]).size!==(reportOut?3:2))throw Error('Ordinary, conditional and report output paths must differ');
 const clean=()=>{const changed=execFileSync('git',['status','--porcelain','--untracked-files=all'],{cwd:root,encoding:'utf8'}).trim();if(changed)throw Error('Input checkout must be entirely clean before comparison: '+changed.slice(0,400));};
 clean();
 const sha=execFileSync('git',['rev-parse','HEAD'],{cwd:root,encoding:'utf8'}).trim();
@@ -40,16 +43,18 @@ const format=(k,v)=>v==null?'':typeof v==='number'?v.toFixed(k.endsWith('_pct')?
 const content=[cols,...rows.map(r=>cols.map(k=>format(k,r[k])))].map(r=>r.map(quote).join(',')).join('\n')+'\n';
 clean();
 if(execFileSync('git',['rev-parse','HEAD'],{cwd:root,encoding:'utf8'}).trim()!==sha)throw Error('Input commit changed during generation');
-fs.writeFileSync(out,content);
 // A separate bank-level table is deliberately not part of comparison.csv or its totals.
+const conditionalErrors=[];
 const conditionalRows=conditional.map(t=>{
  const bd=path.join(dir,'banks',t.slug), get=(file)=>{const p=path.join(bd,file);return fs.existsSync(p)?csv(fs.readFileSync(p,'utf8')):[]};
- const h=get('financials.csv'),f=get('forecast.csv'),a=values(h,'FY2025'),b=values(f,'FY2030E','base'),d=values(f,'FY2030E','downside'),u=values(f,'FY2030E','upside');
+ const safe=(file,period,scenario)=>{try{return values(get(file),period,scenario)}catch(e){conditionalErrors.push({bank:t.slug,file,period,scenario:scenario??null,error:String(e.message)});return {}}};
+ const a=safe('financials.csv','FY2025'),b=safe('forecast.csv','FY2030E','base'),d=safe('forecast.csv','FY2030E','downside'),u=safe('forecast.csv','FY2030E','upside');
  return {bank:t.slug,scope:markers[t.slug].label,claim_status:t.status??'',review_stage:t.reviewStage??'',assets_2025_m:a.total_assets,customer_deposits_2025_m:a.customer_deposits,pat_2025_m:a.profit_after_tax,pat_base_2030_m:b.profit_after_tax,pat_downside_2030_m:d.profit_after_tax,pat_upside_2030_m:u.profit_after_tax,car_base_2030_proxy_pct:car(b),car_downside_2030_proxy_pct:car(d),car_upside_2030_proxy_pct:car(u),package_sha256:t.gate?.fingerprint??'',macro_sha256:t.gate?.macroFingerprint??'',scope_marker_sha256:markers[t.slug].sha256,source_commit:sha};
 });
 const conditionalCols=['bank','scope','claim_status','review_stage','assets_2025_m','customer_deposits_2025_m','pat_2025_m','pat_base_2030_m','pat_downside_2030_m','pat_upside_2030_m','car_base_2030_proxy_pct','car_downside_2030_proxy_pct','car_upside_2030_proxy_pct','package_sha256','macro_sha256','scope_marker_sha256','source_commit'];
-const conditionalOut=path.join(path.dirname(out),'conditional-comparison.csv');
-if(conditionalOut===out)throw Error('Ordinary and conditional output paths must differ');
+clean();
+if(execFileSync('git',['rev-parse','HEAD'],{cwd:root,encoding:'utf8'}).trim()!==sha)throw Error('Input commit changed during conditional generation');
+fs.writeFileSync(out,content);
 fs.writeFileSync(conditionalOut,[conditionalCols,...conditionalRows.map(r=>conditionalCols.map(k=>format(k,r[k])))].map(r=>r.map(quote).join(',')).join('\n')+'\n');
 if(options['--report']){
  const fmt=(v,d=3)=>v==null?'—':v.toLocaleString('en-US',{minimumFractionDigits:d,maximumFractionDigits:d});
@@ -66,7 +71,7 @@ if(options['--report']){
   '## FY2030 estimated scenarios','', '| Bank | PAT base | PAT downside | PAT upside | CAR proxy base % | CAR proxy downside % | CAR proxy upside % |','|---|---:|---:|---:|---:|---:|---:|',
   ...rows.map(r=>'| '+[r.bank,fmt(r.pat_base_2030_m),fmt(r.pat_downside_2030_m),fmt(r.pat_upside_2030_m),fmt(r.car_base_2030_proxy_pct,4),fmt(r.car_downside_2030_proxy_pct,4),fmt(r.car_upside_2030_proxy_pct,4)].join(' | ')+' |'),
   '', 'Scenario values are estimates, not actual regulatory compliance or investment recommendations. Bank-specific capital proxies differ; below-minimum and negative outcomes are retained. Scenario ordering need not be monotonic. No estimated historical rows are used, no unavailable values filled.','',
-  '## Conditional scope (separate; no aggregate)','','A scope marker is not a PASS or closure. FY25 columns use reported/derived history only. Forecasts are estimates. These banks are excluded from ordinary comparison.csv and all its totals. See conditional-comparison.csv.','', '| Bank | Scope | Claim status | Review stage | FY25 assets | FY25 PAT | FY30E PAT base | FY30E PAT downside | FY30E PAT upside |','|---|---|---|---|---:|---:|---:|---:|---:|',...conditionalRows.map(r=>'| '+[r.bank,r.scope,r.claim_status,r.review_stage,fmt(r.assets_2025_m),fmt(r.pat_2025_m),fmt(r.pat_base_2030_m),fmt(r.pat_downside_2030_m),fmt(r.pat_upside_2030_m)].join(' | ')+' |'),'','## Reproducibility','', 'Run the current compare.mjs against a clean LF checkout of the pinned source: `node compare.mjs --input-root PATH --output PATH/comparison.csv --report PATH/README.md`. Keep outputs outside the input checkout until both are generated. Package/macro fingerprints, reviewer and exact source commit are in the CSV. Prior independent Codex review applies to the previous snapshot; seek re-review of this label revision.',''];
+  '## Conditional scope (separate; no aggregate)','','A scope marker is not a PASS or closure. FY25 columns use reported/derived history only. Forecasts are estimates. These banks are excluded from ordinary comparison.csv and all its totals. See conditional-comparison.csv.','', '| Bank | Scope | Claim status | Review stage | FY25 assets | FY25 PAT | FY30E PAT base | FY30E PAT downside | FY30E PAT upside |','|---|---|---|---|---:|---:|---:|---:|---:|',...conditionalRows.map(r=>'| '+[r.bank,r.scope,r.claim_status,r.review_stage,fmt(r.assets_2025_m),fmt(r.pat_2025_m),fmt(r.pat_base_2030_m),fmt(r.pat_downside_2030_m),fmt(r.pat_upside_2030_m)].join(' | ')+' |'),'','Conditional diagnostic errors: '+(conditionalErrors.length?JSON.stringify(conditionalErrors):'none')+'.','','## Reproducibility','', 'Run the current compare.mjs against a clean LF checkout of the pinned source: `node compare.mjs --input-root PATH --output PATH/comparison.csv --report PATH/README.md`. Keep outputs outside the input checkout until both are generated. Package/macro fingerprints, reviewer and exact source commit are in the CSV. Prior independent Codex review applies to the previous snapshot; seek re-review of this label revision.',''];
  fs.writeFileSync(path.resolve(options['--report']),md.join('\n'));
 }
-console.log(JSON.stringify({source_commit:sha,accepted:rows.length,roster:state.tasks.length,conditional:conditionalRows.map(r=>({bank:r.bank,scope:r.scope})),excluded:excluded.map(t=>({slug:t.slug,stage:t.reviewStage})),totals:Object.fromEntries(['assets_2025_m','customer_deposits_2025_m','pat_2025_m'].map(k=>[k,{total:rows.reduce((a,r)=>a+(r[k]??0),0),n:rows.filter(r=>r[k]!=null).length}]))},null,2));
+console.log(JSON.stringify({source_commit:sha,accepted:rows.length,roster:state.tasks.length,conditional:conditionalRows.map(r=>({bank:r.bank,scope:r.scope})),conditionalErrors,excluded:excluded.map(t=>({slug:t.slug,stage:t.reviewStage})),totals:Object.fromEntries(['assets_2025_m','customer_deposits_2025_m','pat_2025_m'].map(k=>[k,{total:rows.reduce((a,r)=>a+(r[k]??0),0),n:rows.filter(r=>r[k]!=null).length}]))},null,2));
