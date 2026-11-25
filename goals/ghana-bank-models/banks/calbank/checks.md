@@ -24,10 +24,10 @@ All historical and forecast checks dynamically computed by `model.py` from `fina
 | base | FY2029E | 0.000 | 0.000000 | PASS | 19.93% | 13.00% | PASS | 382.5 | 13.7% |
 | base | FY2030E | 0.000 | 0.000000 | PASS | 19.76% | 13.00% | PASS | 416.4 | 13.4% |
 | downside | FY2026E | 0.000 | 0.000000 | PASS | 19.15% | 13.00% | PASS | 425.8 | 24.5% |
-| downside | FY2027E | 0.000 | 0.000000 | PASS | 20.79% | 13.00% | PASS | 489.9 | 22.5% |
-| downside | FY2028E | 0.000 | 0.000000 | PASS | 22.29% | 13.00% | PASS | 562.2 | 21.2% |
-| downside | FY2029E | 0.000 | 0.000000 | PASS | 23.01% | 13.00% | PASS | 514.5 | 16.4% |
-| downside | FY2030E | 0.000 | 0.000000 | PASS | 23.37% | 13.00% | PASS | 500.8 | 14.0% |
+| downside | FY2027E | 0.000 | 0.000000 | PASS | 21.16% | 13.00% | PASS | 491.1 | 22.3% |
+| downside | FY2028E | 0.000 | 0.000000 | PASS | 22.63% | 13.00% | PASS | 564.9 | 20.9% |
+| downside | FY2029E | 0.000 | 0.000000 | PASS | 23.32% | 13.00% | PASS | 517.0 | 16.2% |
+| downside | FY2030E | 0.000 | 0.000000 | PASS | 23.66% | 13.00% | PASS | 503.1 | 13.8% |
 | upside | FY2026E | 0.000 | 0.000000 | PASS | 18.75% | 13.00% | PASS | 427.5 | 24.5% |
 | upside | FY2027E | 0.000 | 0.000000 | PASS | 19.34% | 13.00% | PASS | 326.7 | 15.4% |
 | upside | FY2028E | 0.000 | 0.000000 | PASS | 18.96% | 13.00% | PASS | 333.5 | 13.9% |
@@ -48,21 +48,21 @@ Formula across scenarios: `max(1.5%, 0.7% + 0.18 x tbill_91d_pct)`, where the sl
 | FY2025 | 15.38 | 370.268 | 10670.087 | 3.470 | 3.468 | -0.002 |
 | 9M-2026 annualized | 6.23 | 202.175 | 11152.078 | 1.813 | 1.821 | +0.009 |
 - FY2025 bill rate is the 12-month mean in `macro.csv`. The 9M-2026 bill rate is the Jan-Sep monthly mean (6.23%) from Bank of Ghana November 2026 Summary, p.3.
-- FY2026E adds Q4 only. Q4 uses an implied 91-day bill mean of 4.55%, a day-weighted policy rate of 12.57%, and Q4 investment references of 9.447% (364-day bill) and 15.01% (10-year bond). The 5.81% 91-day, 11.01% 364-day and 14.05% bond inputs in `macro.csv` are full-year estimates, so they are not applied directly to Q4.
+- FY2026E adds Q4 only. Q4 uses an implied 91-day bill mean of 4.55%, a day-weighted policy rate of 12.57%, and investment-yield proxies of 9.447% (364-day bill) and 15.01% (10-year bond). These are Q4 run-rate proxies, not observed quarter-average yields. The 5.81% 91-day, 11.01% 364-day and 14.05% bond inputs in `macro.csv` are full-year estimates, so they are not applied directly to Q4.
 - Related interest-income fit: base FY2026E is 879.963m versus the 9M-2026 annualized run rate of 884.093m (-0.5%). The base loan-yield rule is Q4 policy rate + 1.0 percentage point; this aggregate fit is a calibration guide, not an observed loan yield.
 
 ## 5. Scenario PAT ordering
 | Year | Downside PAT | Base PAT | Upside PAT | Highest to lowest |
 | --- | ---: | ---: | ---: | --- |
 | FY2026E | 425.8 | 427.2 | 427.5 | upside > base > downside |
-| FY2027E | 489.9 | 372.0 | 326.7 | downside > base > upside |
-| FY2028E | 562.2 | 380.5 | 333.5 | downside > base > upside |
-| FY2029E | 514.5 | 382.5 | 366.3 | downside > base > upside |
-| FY2030E | 500.8 | 416.4 | 411.9 | downside > base > upside |
+| FY2027E | 491.1 | 372.0 | 326.7 | downside > base > upside |
+| FY2028E | 564.9 | 380.5 | 333.5 | downside > base > upside |
+| FY2029E | 517.0 | 382.5 | 366.3 | downside > base > upside |
+| FY2030E | 503.1 | 416.4 | 411.9 | downside > base > upside |
 - From FY2027E, the downside macro path produces the highest modeled PAT because higher policy, T-bill and bond rates lift modeled loan and securities income faster than higher impairment and operating costs reduce profit. The downside loan spread is +1.5 percentage points versus +1.0 base and +0.5 upside; investment yields use a 50/50 blend of 364-day bills and 10-year bonds, with no maturity or repricing schedule. This ordering is sensitive to those assumptions and does not mean downside conditions are generally better for CalBank.
 
 ## 6. Presentation and source reconciliations
 - FY2024 Bank retained earnings stored from CAL25 SoFP p.65 are (1,209.108)m. The Directors table p.22 shows (946.562)m excluding reserve transfers; CAL25 SoCE p.67 reconciles this as opening (1,202.955) + PAT 256.393 - statutory reserve transfer 64.098 - credit-risk reserve transfer 198.448 = closing (1,209.108).
 - CAL25 p.122 reports Bank CAR of 18.87% (FY2025) and (7.22%) (FY2024). Group CAR is 19.80% and (6.38%); the p.14 narrative refers to Group. Historical rows retain the Bank series.
 - Right-of-use assets are recast from `other_assets` to `property_equipment_intangibles` per MODEL-SPEC; the reclass changes no period total. Source values and formulas are in `financials.csv` and `sources.md`.
-- CAL26Q3 Statement of Changes in Equity (physical PDF p.3; no printed page numbers) reports no 9M-2026 dividend movement or amount. FY2026E `x_dividends_paid` is 0.000 because no Q4 payout is assumed; subsequent modeled payments are shown and deducted from retained earnings.
+- CAL26Q3 Statement of Changes in Equity (physical PDF p.3; no printed page numbers) does not report a 9M-2026 dividend movement or amount. FY2026E `x_dividends_paid` is 0.000 because no Q4 payout is assumed; later payouts occur only when the full payout leaves positive retained earnings and post-payout CAR meets target.
