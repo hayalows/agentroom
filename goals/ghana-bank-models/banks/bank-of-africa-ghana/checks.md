@@ -1,6 +1,6 @@
 # Model checks
 
-History 280 rows; forecast 915 rows; 176 accounting identities, max residual 2.000e-6 GHS m (before rounding). All pass at 0.005m.
+History 308 rows; forecast 1035 rows; 176 accounting identities, max residual 2.000e-6 GHS m (before rounding). All pass at 0.005m.
 Missing gross/allowance, actual regulatory capital numerator/RWA, and actual eligible CRR are not tested or assumed known.
 
 ## Calibration
@@ -35,3 +35,28 @@ Missing gross/allowance, actual regulatory capital numerator/RWA, and actual eli
 Capital screen below assumed minimum: 0/15. Negative securities: 0/15. Half-cash CRR gap positive: 0/15. These are diagnostics, not actual regulatory breaches.
 Historical FY2025 and 9M2026 spot figures: assets 4026.194/4512.378, PAT 123.611/50.242, deposits 2616.858/3206.582; source register records source verification and limitations.
 No independent review claimed. Model recomputes with shared macro.csv. The generated outputs were calculated by the same JS function used in model.mjs; full CLI replay requested from independent reviewer.
+
+## Additional independent-review sensitivities
+
+Frozen FY26 implied rates on FY24/FY25 average exposures: interest income 314.575 vs actual 463.031; interest expense 54.494 vs actual 92.136 GHS m. Different rate regimes, not a backtest.
+Base FY2030 PAT: fast repricing 25% 158.167m, central 153.763m, 75% 149.413m. Recomputed using same engine and inputs, changing one estimated driver.
+
+| Scenario | Year | CAR density +20% | Joint density/eligibility | 40%-eligible cash gap m | Alternative incremental dividend cap m |
+|---|---|---:|---:|---:|---:|
+| base | FY2026E | 22.472 | 22.359 | 55.008 | 0.000 |
+| base | FY2027E | 22.003 | 21.480 | 62.090 | 0.000 |
+| base | FY2028E | 21.555 | 20.644 | 70.410 | 0.000 |
+| base | FY2029E | 21.200 | 19.932 | 79.693 | 0.000 |
+| base | FY2030E | 20.928 | 19.329 | 90.200 | 0.000 |
+| downside | FY2026E | 22.524 | 22.455 | 28.197 | 0.000 |
+| downside | FY2027E | 22.247 | 21.948 | 30.264 | 0.000 |
+| downside | FY2028E | 21.937 | 21.433 | 32.494 | 0.000 |
+| downside | FY2029E | 21.377 | 20.745 | 34.898 | 0.000 |
+| downside | FY2030E | 20.671 | 19.976 | 37.299 | 0.000 |
+| upside | FY2026E | 22.459 | 22.316 | 55.453 | 0.000 |
+| upside | FY2027E | 21.962 | 21.294 | 64.525 | 0.000 |
+| upside | FY2028E | 21.460 | 20.295 | 75.627 | 0.000 |
+| upside | FY2029E | 21.143 | 19.506 | 88.796 | 0.000 |
+| upside | FY2030E | 20.948 | 18.867 | 104.726 | 0.000 |
+
+The lower cash-eligibility payout screen is separate from the central case; no regulatory approval assumed. CAR estimates are diagnostic only.

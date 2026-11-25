@@ -44,13 +44,17 @@
     }
   },
   "rationale": {
-    "rates": "Loan and securities yields jointly fitted to 9M26 annualized interest using mean FY25 and Sep26 exposures. 5pp spread and 15% relative cash yield are analyst assumptions; no contractual rate buckets available. 50% fast reset and 20% yearly slow reset use shared bill and bond drivers, not sourced maturity fractions. Policy betas .5/.35 estimates; no issuer beta disclosure.",
+    "rates": "Loan and securities yields jointly fitted to 9M26 annualized interest using mean FY25 and Sep26 exposures. 5pp spread and 15% relative cash yield are analyst assumptions; no contractual rate buckets available. 50% fast reset and 20% yearly slow reset use shared bill and bond drivers, not sourced maturity fractions. Policy betas .5/.35 estimates; no issuer beta disclosure. Central case assumes no marginal interest on traded assets (trading gains separate); sensitivity includes 50% of reported pledged/nonpledged trading stock in interest-bearing base, scales with other_assets and refits securities yield to same 9M total. Pledged assets remain unavailable for free liquidity.",
     "growth": "Nominal GDP (real GDP and CPI combined) plus explicit scenario adjustments; Q4 uses quarter compounding, not full-year growth. Funding borrow elasticity .5, bank deposits proportional to customer deposits, asset and expense growth linked to inflation.",
     "credit": "Observed 9M26 impairment annualized divided by average net loans, not IFRS gross cost of risk; scenario multiplier .65/1/1.5. No forecast gross loan, ECL, NPL or Tier1 where basis unknown.",
     "tax": "35% of positive incremental PBT, preserves 9M actual tax, all-in assumed Ghana sector levies and corporation tax; no assumed deferred tax credit on losses.",
     "capital": "No new capital/OCI. Statutory reserve only, Act930 s34; payout capped at modeled retained earnings after reserve transfer and gated by CAR proxy buffer, cash upper-bound and nonnegative securities. FY26 no extra payout. Capital proxy anchored to 9M reported CAR using equity/assets; actual eligible capital/RWA unavailable. 80% positive-PAT eligibility stress. No regulatory compliance claim.",
     "cash": "Keep Sep26 combined cash/customer deposit ratio with 2pp downside buffer; securities residual asset allocation, negative securities flagged as unfunded, never fabricate financing. Half-cash sensitivity not actual eligible reserves.",
     "fx": "Small explicitly assumed trading growth sensitivity to annual exchange-rate change; no currency-specific asset/liability positions known; not a modeled FX revaluation.",
-    "bank": "Retained deficit remains GHS309.925m at September 2026; no dividend assumed in all scenarios, no further equity injection; preserve observed GHS358.572m FY2025 contribution only in history."
-  }
+    "bank": "Retained deficit remains GHS309.925m at September 2026; no dividend assumed in all scenarios, no further equity injection; preserve observed GHS358.572m FY2025 contribution only in history.",
+    "sensitivity": "Central assumptions unchanged. Explicit 20% higher risk density reduces CAR proxy by 1/1.2; 40% eligible cash diagnostic tests actual liquidity uncertainty. Fast-security share 25% and 75% sensitivity runs recalibrate no other central drivers. Historical implied rate diagnostic is not a backtest. Alternative dividends constrained by lower cash eligibility, not a rerun of capital trajectory."
+  },
+  "eligible_cash_stress_fraction": 0.4,
+  "rwa_density_stress_factor": 1.2,
+  "trading_earning_fraction": 0
 }

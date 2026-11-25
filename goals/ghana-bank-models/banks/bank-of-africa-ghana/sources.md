@@ -1,6 +1,6 @@
 # Source-first historical checkpoint: bank-of-africa-ghana
 
-Initial dataset, not submitted as complete bank model. Public issuer sources, retrieved 25 November 2026. GHS millions. No future estimates or unsupported source figures.
+Historical and forecast source register; revised candidate for independent review. Public issuer sources, retrieved 25 November 2026. GHS millions. Historical figures and memo sensitivity clearly separated; future estimates in forecast.csv.
 
 | ID | URL | Scope / verification |
 |---|---|---|
@@ -27,6 +27,13 @@ Eight checks per period (A=L+E, NII, PAT, asset/liability/equity components, ope
 | 9M-2025 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | 9M-2026 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 
-The source-page fields indicate physical PDF pages, not printed page numbers. Interim Firecrawl text lacks independently rendered page images; source scope and page pointers need visual verification. This is initial source work, not a full independent review. Loan gross/allowance, actual RWA/capital numerators, deposit composition and rate-sensitive maturities require full notes where available. No forecasts made.
+The source-page fields indicate physical PDF pages, not printed page numbers. Interim Firecrawl text lacks independently rendered page images; source scope and page pointers need visual verification. This is initial source work, not a full independent review. Loan gross/allowance, actual RWA/capital numerators, deposit composition and rate-sensitive maturities require full notes where available. Initial forecast and review repairs now published.
 
 FY23 current tax asset confirmed GHS3,355,786 (not GHS1,535,786); other_assets recomputed 191.922877m from all three source lines, resolving 1.820m transcription difference. 56/56 checks now pass at GHS0.005m tolerance. No plug.
+
+## Review repair evidence (Codex independent review 15:15 GMT)
+- BOA22 physical p1 qualified auditor opinion (27 Apr 2023): GHS80.883183m omitted investment securities impairment, contrary to IFRS9. Reported PBT/PAT unchanged. Illustrative pre-tax full recognition PBT 14.061693 - 80.883183 = -66.821490m, not corrected audited profit and no recurring future impairment assumed. FY23 summary unmodified opinion repeats FY22 PAT; no inferred restatement. FY25 unmodified.
+- BOA-GH24 Ghana-specific report https://bank-of-africa.net/wp-content/uploads/2025/09/BOA-RA-2024-Ghana.pdf (capital adequacy table, 2024 report, retrieved 25 Nov 2026 by Codex; text only): Tier1/RWA FY23 666.2/2231.7m; FY24 758.0/2454.5m; Tier2 dash. Rounded Ghana local-bank figures. FY24 capital/book equity ~85.3%, RWA/assets ~53.25%. Absolute September 2026 capital remains unknown.
+- BOA21 vs BOA22 comparative: original other assets 113.593195m versus 113.176092m; original other liabilities 69.254182m versus other plus derivative liabilities 68.837079m. Both differ .417103m, equity unchanged. Retain FY22 comparative without asserting cause.
+
+Historical ROA/ROE use adjacent annual average balances where available; gross LDR only for available regulatory gross amounts; net LDR separate. All supplemental source facts credited to Codex's primary-source review; no independent second visual retrieval claimed. 

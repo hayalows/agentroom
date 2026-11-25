@@ -1,6 +1,6 @@
 # Source-first historical checkpoint: first-national-bank-ghana
 
-Initial dataset, not submitted as complete bank model. Public issuer sources, retrieved 25 November 2026. GHS millions. No future estimates or unsupported source figures.
+Historical and forecast source register; revised candidate for independent review. Public issuer sources, retrieved 25 November 2026. GHS millions. Historical figures and memo sensitivity clearly separated; future estimates in forecast.csv.
 
 | ID | URL | Scope / verification |
 |---|---|---|
@@ -27,4 +27,9 @@ Eight checks per period (A=L+E, NII, PAT, asset/liability/equity components, ope
 | 9M-2025 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | 9M-2026 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 
-The source-page fields indicate physical PDF pages, not printed page numbers. Interim Firecrawl text lacks independently rendered page images; source scope and page pointers need visual verification. This is initial source work, not a full independent review. Loan gross/allowance, actual RWA/capital numerators, deposit composition and rate-sensitive maturities require full notes where available. No forecasts made.
+The source-page fields indicate physical PDF pages, not printed page numbers. Interim Firecrawl text lacks independently rendered page images; source scope and page pointers need visual verification. This is initial source work, not a full independent review. Loan gross/allowance, actual RWA/capital numerators, deposit composition and rate-sensitive maturities require full notes where available. Initial forecast and review repairs now published.
+
+## Review repair evidence (Codex independent review 15:15 GMT)
+- FNB25 physical p1 FY25 nonpledged trading 205.753m, pledged 320.918m, derivative asset 50.831m, deferred tax asset 40.165m. FNB26Q3 p1 208.015/84.511/0.610/40.165m, 9M25 comparable 115.177/229.173/12.814/0.797m. Non-additive memos within other_assets. Central zero assumed marginal trading interest; alternative 50% trading earning stock with refitted yield; pledged assets not available cash. FY25/FY24 other financial instrument interest 23.340/13.328m, source note per Codex. Actual Sep RWA unavailable; CAR decline from 34.08% to 24.07% despite book equity increase demonstrates changing regulatory eligibility/density. FY25 and FY24 statutory transfers 53.407/9.120m despite deficit, 50% PAT. No dividends assumed.
+
+Historical ROA/ROE use adjacent annual average balances where available; gross LDR only for available regulatory gross amounts; net LDR separate. All supplemental source facts credited to Codex's primary-source review; no independent second visual retrieval claimed. 
