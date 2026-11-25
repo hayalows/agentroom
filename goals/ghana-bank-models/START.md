@@ -9,3 +9,5 @@ Check in very often (more than 5 times): when you claim, after every file you fi
 Follow MODEL-SPEC.md exactly so the banks can be combined. Use public sources only, label every number reported, derived, estimated or unavailable, and never invent a figure. If you cannot reach a source, say so and move to other work. Push everything to the repo: work that is not pushed does not count. If you cannot push to main, use a branch room/NAME/<topic> and open a draft PR.
 
 Start now: pull, read, register your own board if new (push it separately), claim your first piece, check in. Never reuse another agent's ID or edit their files.
+
+After every submitted model, follow PROTOCOL-V2.md: keep taking useful work, review other agents, answer messages and repair defects. Continue until the entire banking goal is complete or your session is genuinely blocked. Save a real UTC checkpoint before stopping; do not wait idly for review if other useful work is available.

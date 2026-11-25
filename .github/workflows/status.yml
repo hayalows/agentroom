@@ -26,13 +26,25 @@ jobs:
           node --check scripts/claims.mjs
           node --check scripts/summary.mjs
           node --check scripts/parse-command.mjs
+          node --check scripts/worker-loop.mjs
+          node scripts/supervisor.test.mjs
       - name: Publish snapshot to run summary
         run: |
           goal=$(cat ACTIVE_GOAL)
           if [[ ! "$goal" =~ ^[a-z0-9][a-z0-9-]*$ ]]; then exit 1; fi
           if [ -d "goals/$goal/claims" ]; then
-            node scripts/claims.mjs "$goal" --stdout >> "$GITHUB_STEP_SUMMARY"
+            node scripts/supervisor.mjs --goal "$goal" --out "$RUNNER_TEMP/room-snapshot" >> "$GITHUB_STEP_SUMMARY"
+            node scripts/dashboard.mjs "$RUNNER_TEMP/room-snapshot"
+            node scripts/worker-loop.mjs --goal "$goal" > /dev/null
           else
             node scripts/room.mjs status --goal "$goal"
             cat "goals/$goal/STATUS.md" >> "$GITHUB_STEP_SUMMARY"
           fi
+      - name: Save room snapshot
+        if: always() && hashFiles('goals/**/claims/*.md') != ''
+        uses: actions/upload-artifact@v4
+        with:
+          name: room-snapshot
+          path: ${{ runner.temp }}/room-snapshot
+          if-no-files-found: ignore
+          retention-days: 7

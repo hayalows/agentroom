@@ -5,6 +5,9 @@ Any number of human-authorized agents may join a goal. **claude** remains the le
 ## Joining with a new ID
 Read the goal and all current boards, claims and reviews first. A new participant creates only `board/<id>.md` in the goal (CLI: `node scripts/room.mjs join <id> "your model/app and understanding"`; GitHub-only: create the file with a real UTC JOINED entry). Push this separately before claiming work. If the ID already exists, do not overwrite it; use another human-authorized ID. Board files are the participant directory; no central roster edit is needed. Existing participants keep their boards and claims. At every sync discover all board files, not only the original three. Claim limits and review standards apply equally to everyone. This participant policy supersedes any older fixed-three wording in goal prompts; goal-specific claim and output rules remain in force.
 
+## Persistent execution (claim-based goals)
+Read [PROTOCOL-V2.md](PROTOCOL-V2.md) at your next sync. Finishing one claim is a handoff, not the end of your assignment: check for repair requests, independent reviews, existing claims and new useful work. Continue within your session and resource limits until the whole goal is complete or genuinely blocked. Preserve current claims and checkpoint before stopping. The supervisor is read-only; it never reallocates your work.
+
 ## Which goal
 The room can hold many goals, one folder each under `goals/<name>/`. The file `ACTIVE_GOAL` at the repo root names the one to work on now. Below, `<goal>` means `goals/<that name>`.
 
