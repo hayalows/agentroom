@@ -25,7 +25,7 @@
    "base_asset_cagr_26_30_pct": 12.0
   },
   "assessed": true,
-  "source_commit": "e73b4e6ee367d2f5e63a3465a0e3a57815917321"
+  "source_commit": "61fd40c4f77e23593d6118d0b8c12d500e904e66"
  },
  {
   "slug": "access-bank-ghana",
@@ -52,13 +52,18 @@
    "base_asset_cagr_26_30_pct": 12.5
   },
   "assessed": true,
-  "source_commit": "e73b4e6ee367d2f5e63a3465a0e3a57815917321"
+  "source_commit": "61fd40c4f77e23593d6118d0b8c12d500e904e66"
  },
  {
   "slug": "adb",
   "fail": [],
   "warn": [
-   "FY2021: right-of-use assets appear to be inside other_assets (spec: property_equipment_intangibles)",
+   "FY2021: other_assets note indicates right-of-use inclusion (spec: property_equipment_intangibles); check source and reclassify if confirmed",
+   "FY2022: other_assets note indicates right-of-use inclusion (spec: property_equipment_intangibles); check source and reclassify if confirmed",
+   "FY2023: other_assets note indicates right-of-use inclusion (spec: property_equipment_intangibles); check source and reclassify if confirmed",
+   "FY2024: other_assets note indicates right-of-use inclusion (spec: property_equipment_intangibles); check source and reclassify if confirmed",
+   "FY2025: other_assets note indicates right-of-use inclusion (spec: property_equipment_intangibles); check source and reclassify if confirmed",
+   "9M-2026: other_assets note indicates right-of-use inclusion (spec: property_equipment_intangibles); check source and reclassify if confirmed",
    "base FY2026E profit_after_tax is -31% away from 9M-2026 annualised (interest lines that are far off can hide offsetting errors)"
   ],
   "info": {
@@ -82,7 +87,7 @@
    "base_asset_cagr_26_30_pct": 8.5
   },
   "assessed": true,
-  "source_commit": "e73b4e6ee367d2f5e63a3465a0e3a57815917321"
+  "source_commit": "61fd40c4f77e23593d6118d0b8c12d500e904e66"
  },
  {
   "slug": "bank-of-africa-ghana",
@@ -110,14 +115,12 @@
    "base_asset_cagr_26_30_pct": 12.1
   },
   "assessed": true,
-  "source_commit": "e73b4e6ee367d2f5e63a3465a0e3a57815917321"
+  "source_commit": "61fd40c4f77e23593d6118d0b8c12d500e904e66"
  },
  {
   "slug": "calbank",
   "fail": [],
-  "warn": [
-   "FY2021: right-of-use assets appear to be inside other_assets (spec: property_equipment_intangibles)"
-  ],
+  "warn": [],
   "info": {
    "owner": "gemini",
    "claim_status": "done",
@@ -139,7 +142,7 @@
    "base_asset_cagr_26_30_pct": 12.5
   },
   "assessed": true,
-  "source_commit": "e73b4e6ee367d2f5e63a3465a0e3a57815917321"
+  "source_commit": "61fd40c4f77e23593d6118d0b8c12d500e904e66"
  },
  {
   "slug": "consolidated-bank-ghana",
@@ -164,13 +167,18 @@
    "base_asset_cagr_26_30_pct": 12.5
   },
   "assessed": true,
-  "source_commit": "e73b4e6ee367d2f5e63a3465a0e3a57815917321"
+  "source_commit": "61fd40c4f77e23593d6118d0b8c12d500e904e66"
  },
  {
   "slug": "ecobank-ghana",
   "fail": [],
   "warn": [
-   "FY2021: right-of-use assets appear to be inside other_assets (spec: property_equipment_intangibles)"
+   "FY2021: other_assets note indicates right-of-use inclusion (spec: property_equipment_intangibles); check source and reclassify if confirmed",
+   "FY2022: other_assets note indicates right-of-use inclusion (spec: property_equipment_intangibles); check source and reclassify if confirmed",
+   "FY2023: other_assets note indicates right-of-use inclusion (spec: property_equipment_intangibles); check source and reclassify if confirmed",
+   "FY2024: other_assets note indicates right-of-use inclusion (spec: property_equipment_intangibles); check source and reclassify if confirmed",
+   "FY2025: other_assets note indicates right-of-use inclusion (spec: property_equipment_intangibles); check source and reclassify if confirmed",
+   "9M-2026: other_assets note indicates right-of-use inclusion (spec: property_equipment_intangibles); check source and reclassify if confirmed"
   ],
   "info": {
    "owner": "gemini",
@@ -193,7 +201,7 @@
    "base_asset_cagr_26_30_pct": 12.3
   },
   "assessed": true,
-  "source_commit": "e73b4e6ee367d2f5e63a3465a0e3a57815917321"
+  "source_commit": "61fd40c4f77e23593d6118d0b8c12d500e904e66"
  },
  {
   "slug": "fbnbank-ghana",
@@ -221,7 +229,7 @@
    "base_asset_cagr_26_30_pct": 11.5
   },
   "assessed": true,
-  "source_commit": "e73b4e6ee367d2f5e63a3465a0e3a57815917321"
+  "source_commit": "61fd40c4f77e23593d6118d0b8c12d500e904e66"
  },
  {
   "slug": "fidelity-bank-ghana",
@@ -249,7 +257,7 @@
    "base_asset_cagr_26_30_pct": 14.3
   },
   "assessed": true,
-  "source_commit": "e73b4e6ee367d2f5e63a3465a0e3a57815917321"
+  "source_commit": "61fd40c4f77e23593d6118d0b8c12d500e904e66"
  },
  {
   "slug": "first-atlantic-bank",
@@ -277,7 +285,7 @@
    "base_asset_cagr_26_30_pct": 14.9
   },
   "assessed": true,
-  "source_commit": "e73b4e6ee367d2f5e63a3465a0e3a57815917321"
+  "source_commit": "61fd40c4f77e23593d6118d0b8c12d500e904e66"
  },
  {
   "slug": "first-national-bank-ghana",
@@ -305,7 +313,7 @@
    "base_asset_cagr_26_30_pct": 12.3
   },
   "assessed": true,
-  "source_commit": "e73b4e6ee367d2f5e63a3465a0e3a57815917321"
+  "source_commit": "61fd40c4f77e23593d6118d0b8c12d500e904e66"
  },
  {
   "slug": "gcb",
@@ -332,7 +340,7 @@
    "base_asset_cagr_26_30_pct": 17.0
   },
   "assessed": true,
-  "source_commit": "e73b4e6ee367d2f5e63a3465a0e3a57815917321"
+  "source_commit": "61fd40c4f77e23593d6118d0b8c12d500e904e66"
  },
  {
   "slug": "gtbank-ghana",
@@ -360,7 +368,7 @@
    "base_asset_cagr_26_30_pct": 18.6
   },
   "assessed": true,
-  "source_commit": "e73b4e6ee367d2f5e63a3465a0e3a57815917321"
+  "source_commit": "61fd40c4f77e23593d6118d0b8c12d500e904e66"
  },
  {
   "slug": "nib",
@@ -388,7 +396,7 @@
    "base_asset_cagr_26_30_pct": 12.6
   },
   "assessed": true,
-  "source_commit": "e73b4e6ee367d2f5e63a3465a0e3a57815917321"
+  "source_commit": "61fd40c4f77e23593d6118d0b8c12d500e904e66"
  },
  {
   "slug": "omnibsic-bank",
@@ -436,17 +444,13 @@
    "derived row without a formula in notes ('9M-2026', 'other_liabilities')",
    "only 4 full fiscal years in history (spec asks for 5)"
   ],
-  "source_commit": "e73b4e6ee367d2f5e63a3465a0e3a57815917321"
+  "source_commit": "61fd40c4f77e23593d6118d0b8c12d500e904e66"
  },
  {
   "slug": "prudential-bank",
-  "fail": [
-   "FY2023: gross loans 2035.023 - allowance 915.457 - net loans 1010.841 leaves 108.725 and no x_ suspense/adjustment row explains it",
-   "FY2024: gross loans 1797.721 - allowance 830.569 - net loans 864.378 leaves 102.774 and no x_ suspense/adjustment row explains it"
-  ],
+  "fail": [],
   "warn": [
-   "no 2026 interim period in history (9M-2026 expected)",
-   "FY2021: right-of-use assets appear to be inside other_assets (spec: property_equipment_intangibles)"
+   "no 2026 interim period in history (9M-2026 expected)"
   ],
   "info": {
    "owner": "papa-kojo-agent",
@@ -465,7 +469,7 @@
    "base_asset_cagr_26_30_pct": 10.5
   },
   "assessed": true,
-  "source_commit": "e73b4e6ee367d2f5e63a3465a0e3a57815917321"
+  "source_commit": "61fd40c4f77e23593d6118d0b8c12d500e904e66"
  },
  {
   "slug": "republic-bank-ghana",
@@ -474,7 +478,7 @@
   "info": {
    "owner": "deepseek",
    "claim_status": "needs-review",
-   "history_rows": 373,
+   "history_rows": 480,
    "periods": [
     "9M-2025",
     "9M-2026",
@@ -486,14 +490,14 @@
    ],
    "identity_failures": 0,
    "total_assets_fy2025": 12265.013,
-   "forecast_rows": 915,
+   "forecast_rows": 1020,
    "anchor_gap_interest_income_pct": 0.0,
    "anchor_gap_interest_expense_pct": 0.0,
    "anchor_gap_profit_after_tax_pct": -17.2,
-   "base_asset_cagr_26_30_pct": 14.5
+   "base_asset_cagr_26_30_pct": 14.4
   },
   "assessed": true,
-  "source_commit": "e73b4e6ee367d2f5e63a3465a0e3a57815917321"
+  "source_commit": "61fd40c4f77e23593d6118d0b8c12d500e904e66"
  },
  {
   "slug": "societe-generale-ghana",
@@ -521,7 +525,7 @@
    "base_asset_cagr_26_30_pct": 12.8
   },
   "assessed": true,
-  "source_commit": "e73b4e6ee367d2f5e63a3465a0e3a57815917321"
+  "source_commit": "61fd40c4f77e23593d6118d0b8c12d500e904e66"
  },
  {
   "slug": "stanbic-bank-ghana",
@@ -549,7 +553,7 @@
    "base_asset_cagr_26_30_pct": 13.3
   },
   "assessed": true,
-  "source_commit": "e73b4e6ee367d2f5e63a3465a0e3a57815917321"
+  "source_commit": "61fd40c4f77e23593d6118d0b8c12d500e904e66"
  },
  {
   "slug": "standard-chartered-ghana",
@@ -577,7 +581,7 @@
    "base_asset_cagr_26_30_pct": 11.4
   },
   "assessed": true,
-  "source_commit": "e73b4e6ee367d2f5e63a3465a0e3a57815917321"
+  "source_commit": "61fd40c4f77e23593d6118d0b8c12d500e904e66"
  },
  {
   "slug": "uba-ghana",
@@ -605,7 +609,7 @@
    "base_asset_cagr_26_30_pct": 13.3
   },
   "assessed": true,
-  "source_commit": "e73b4e6ee367d2f5e63a3465a0e3a57815917321"
+  "source_commit": "61fd40c4f77e23593d6118d0b8c12d500e904e66"
  },
  {
   "slug": "umb",
@@ -633,7 +637,7 @@
    "only 4 full fiscal years in history (spec asks for 5)",
    "no 2026 interim period in history (9M-2026 expected)"
   ],
-  "source_commit": "e73b4e6ee367d2f5e63a3465a0e3a57815917321"
+  "source_commit": "61fd40c4f77e23593d6118d0b8c12d500e904e66"
  },
  {
   "slug": "zenith-bank-ghana",
@@ -661,6 +665,6 @@
    "base_asset_cagr_26_30_pct": 18.8
   },
   "assessed": true,
-  "source_commit": "e73b4e6ee367d2f5e63a3465a0e3a57815917321"
+  "source_commit": "61fd40c4f77e23593d6118d0b8c12d500e904e66"
  }
 ]

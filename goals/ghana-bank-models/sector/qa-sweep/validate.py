@@ -64,9 +64,32 @@ def claim_status(slug):
                 owner = m.group(2)
             if m and m.group(1) == "status":
                 status = m.group(2)
-        if status != "released" or name.endswith("-takeover.md"):
+        if status not in ("", "released", "unclaimed") or name.endswith("-takeover.md"):
             return owner, status
     return "", "released" if os.path.exists(os.path.join(CLAIMS, slug + ".md")) else ""
+
+# Narrowly recognise the disclosed loan write-off bridge, not any write-off memo.
+# Keep existing suspense/adjustment convention for prior accepted packages.
+def loan_bridge_memo(item):
+    return item == "x_amounts_written_off_bridge" or bool(re.fullmatch(r"x_.*(suspense|adjustment).*", item))
+
+def rou_note_state(note):
+    """Classify a note about other_assets, not the actual accounting.
+    Split clauses so an inclusion in one clause is not swallowed by an exclusion elsewhere.
+    Ambiguous notes remain review warnings, not proven misclassifications.
+    """
+    states = []
+    for clause in re.split(r"[;.!?]", note or ""):
+        for m in re.finditer(r"right[- ]of[- ]use|\bROU\b", clause, re.I):
+            prefix = clause[:m.start()]
+            suffix = clause[m.end():]
+            if re.search(r"\b(exclud(?:es?|ed|ing)|without|omit(?:s|ted|ting)?|less|not including)\b[^,;]*$", prefix, re.I) or re.match(r"\s*(?:assets\s+)?(?:are\s+|is\s+)?excluded\b", suffix, re.I):
+                states.append("excluded")
+            elif re.search(r"\b(sum of|includ(?:es?|ed|ing)|contains?|comprises?|consists of)\b", prefix, re.I):
+                states.append("included")
+            else:
+                states.append("ambiguous")
+    return "included" if "included" in states else "ambiguous" if "ambiguous" in states else "excluded" if states else "none"
 
 def check_bank(slug):
     d = os.path.join(BANKS, slug)
@@ -127,7 +150,7 @@ def check_bank(slug):
         if r["status"] == "derived" and len(r["notes"].strip()) < 10:
             F.append(f"derived row without a formula in notes {k}")
         S[k] = r["status"]
-        if not li.startswith("x_") and r["unit"] not in ("GHS millions", "percent", "%", ""):
+        if not li.startswith("x_") and r["unit"] not in ("GHS millions", "percent", "%"):
             W.append(f"unit '{r['unit']}' on {k}")
     periods = sorted({p for p, _ in S})
     fy = [p for p in periods if re.fullmatch(r"FY\d{4}", p)]
@@ -167,7 +190,7 @@ def check_bank(slug):
         ln, lg, la = g(p, "loans_and_advances_net"), g(p, "loans_and_advances_gross"), g(p, "loan_loss_allowance")
         if None not in (ln, lg, la):
             gap = lg - la - ln
-            sus = sum(v for (pp, ii), v in V.items() if pp == p and re.fullmatch(r"x_.*(suspense|adjustment).*", ii))
+            sus = sum(v for (pp, ii), v in V.items() if pp == p and loan_bridge_memo(ii))
             if abs(gap) > 0.0051 and abs(gap - sus) > 0.0051:
                 msg = f"{p}: gross loans {lg:.3f} - allowance {la:.3f} - net loans {ln:.3f} leaves {gap:.3f}" + (f", of which x_ suspense/adjustment rows explain {sus:.3f}, leaving {gap - sus:.3f} unexplained" if sus else " and no x_ suspense/adjustment row explains it")
                 F.append(msg)
@@ -179,9 +202,13 @@ def check_bank(slug):
             F.append(f"{item} is negative in {neg} (spec: costs are stored positive)")
     # right-of-use convention
     for r in rows:
-        if r.get("line_item") == "other_assets" and re.search(r"right[- ]of[- ]use|\bROU\b", r.get("notes") or "", re.I) and "property_equipment" not in (r.get("notes") or ""):
-            W.append(f"{r['period']}: right-of-use assets appear to be inside other_assets (spec: property_equipment_intangibles)")
-            break
+        if r.get("line_item") != "other_assets":
+            continue
+        state = rou_note_state(r.get("notes"))
+        if state == "included":
+            W.append(f"{r['period']}: other_assets note indicates right-of-use inclusion (spec: property_equipment_intangibles); check source and reclassify if confirmed")
+        elif state == "ambiguous":
+            W.append(f"{r['period']}: other_assets note mentions right-of-use assets ambiguously; verify mapping")
     # size sanity
     ta25 = g("FY2025", "total_assets")
     I["total_assets_fy2025"] = ta25
