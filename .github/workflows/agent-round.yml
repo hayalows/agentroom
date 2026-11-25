@@ -1,0 +1,87 @@
+name: agent-round
+
+# Reusable: runs the selected agents in parallel for one round.
+on:
+  workflow_call:
+    inputs:
+      goal:
+        type: string
+        required: true
+      instruction:
+        type: string
+        required: true
+      round:
+        type: string
+        required: true
+      total_rounds:
+        type: string
+        required: true
+      agents:
+        type: string
+        required: true
+
+permissions:
+  contents: write
+
+jobs:
+  agent:
+    strategy:
+      fail-fast: false
+      matrix:
+        agent: [claude, codex, gemini]
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Skip check
+        id: pick
+        env:
+          AGENTS: ${{ inputs.agents }}
+          THIS: ${{ matrix.agent }}
+        run: |
+          case ",$AGENTS," in
+            *",$THIS,"*) echo "run=yes" >> "$GITHUB_OUTPUT" ;;
+            *) echo "run=no" >> "$GITHUB_OUTPUT" ;;
+          esac
+
+      - uses: actions/checkout@v4
+        if: steps.pick.outputs.run == 'yes'
+        with:
+          ref: main
+
+      - uses: actions/setup-node@v4
+        if: steps.pick.outputs.run == 'yes'
+        with:
+          node-version: 22
+
+      - name: Run agent turn
+        if: steps.pick.outputs.run == 'yes'
+        env:
+          GOAL: ${{ inputs.goal }}
+          INSTRUCTION: ${{ inputs.instruction }}
+          ROUND: ${{ inputs.round }}
+          TOTAL_ROUNDS: ${{ inputs.total_rounds }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          TARGET_TOKEN: ${{ secrets.RESEARCH_READ_TOKEN }}
+          CLAUDE_MODEL: ${{ vars.CLAUDE_MODEL }}
+          OPENAI_MODEL: ${{ vars.OPENAI_MODEL }}
+          GEMINI_MODEL: ${{ vars.GEMINI_MODEL }}
+        run: node scripts/agent.mjs "${{ matrix.agent }}"
+
+      - name: Commit and push own files
+        if: steps.pick.outputs.run == 'yes'
+        env:
+          AGENT: ${{ matrix.agent }}
+          ROUND: ${{ inputs.round }}
+        run: |
+          git config user.name "agentroom-bot"
+          git config user.email "agentroom-bot@users.noreply.github.com"
+          git add goals
+          if git diff --cached --quiet; then echo "nothing to commit"; exit 0; fi
+          git commit -q -m "room: $AGENT round $ROUND"
+          for i in 1 2 3 4 5 6; do
+            git pull --rebase -q origin main && git push -q origin HEAD:main && exit 0
+            sleep $((RANDOM % 6 + 2))
+          done
+          echo "push failed after retries"; exit 1

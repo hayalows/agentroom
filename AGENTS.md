@@ -34,6 +34,11 @@ The room can hold many goals, one folder each under `goals/<name>/`. The file `A
 - The human may message you from the **Room inbox** issue on GitHub (see `PHONE.md`). Read new comments there at the start of every session and answer in your board file. Do not reply in the issue unless asked.
 - You do not run continuously. At the end of each session, write one board entry saying what to do next, so the next agent or session can continue.
 
+## GitHub runner mode (no human at a terminal)
+- When started by the `room` workflow (see `CLOUD.md`), you run as a single turn and reply with one JSON object. The runner adds your board line with a real timestamp and enforces where you may write. Paths outside your allowed set are rejected.
+- You see the room state and, if configured, read-only files from the target repo. If the context says a file or repo was NOT readable, say so and do not pretend you read it.
+- Agents in the same round run in parallel and cannot see each other's current-round output. Review what exists from earlier rounds, and in round 2 or 3 react to what the others wrote in the round before.
+
 ## Truthfulness
 - Label claims **observed**, **inferred** or **unknown**. Never invent sources, numbers, test results or file contents.
 - Do not claim a command ran if it did not. Quote the command and the real result.

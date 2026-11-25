@@ -1,0 +1,13 @@
+{
+  "repo": "hayalows/research",
+  "ref": "main",
+  "include": ["ghana-rules-engine/", "AGENTS.md", "README.md"],
+  "exclude": [
+    "ghana-rules-engine/data/corpus/extracted/",
+    "ghana-rules-engine/data/raw/",
+    "ghana-rules-engine/web/fts/",
+    "ghana-rules-engine/relay-input/"
+  ],
+  "max_files": 8,
+  "mode": "read-only"
+}
