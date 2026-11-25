@@ -1,8 +1,9 @@
 import {readState,peerReviewsFor,hash} from './room-state.mjs';
 import {gateBank} from './bank-gate.mjs';
 
-export const MAX_ACTIVE=3;
-export const MAX_SUBMITTED=3;
+export const MAX_ACTIVE=6;
+export const MAX_SUBMITTED=6;
+export const MAX_OPEN=6;
 const submitted=t=>['needs-review','done','changes-requested'].includes(t.status);
 const blocker=v=>['CHANGES','BLOCK'].includes(v);
 
@@ -50,7 +51,7 @@ export function prioritize(s){
     if(end&&inReview.get(end[1])?.reviewer===e.agent)inReview.delete(end[1]);
   }
   for(const a of s.agents){
-    const own=all.filter(t=>t.owner===a.id);
+    const own=all.filter(t=>t.worker===a.id);
     a.activeClaims=own.filter(active).length;
     a.awaitingReview=own.filter(waiting).length;
     a.open=a.activeClaims;
@@ -58,21 +59,22 @@ export function prioritize(s){
     a.totalOpen=own.filter(t=>!['done','released'].includes(t.status)).length;
   }
   const reviewable=t=>isBank(t)?['peer-review-required','current-version-review-required','re-review-required'].includes(t.reviewStage):t.status==='needs-review'&&!t.repairRequested;
-  const canReview=(a,t)=>t.owner&&t.owner!==a.id&&reviewable(t)&&(!inReview.has(t.slug)||inReview.get(t.slug).reviewer===a.id)&&(
+  const canReview=(a,t)=>!a.paused&&t.owner&&t.owner!==a.id&&t.worker!==a.id&&reviewable(t)&&(!inReview.has(t.slug)||inReview.get(t.slug).reviewer===a.id)&&(
     isBank(t)?(t.reviewStage!=='re-review-required'||t.peerReviews.some(r=>r.reviewer===a.id&&blocker(r.verdict))):!t.reviewSummary.some(r=>r.reviewer===a.id&&r.verdict==='PASS'));
   const unclaimed=all.filter(t=>t.status==='unclaimed'&&(!['sector-rollup','peer-comparison','qa-sweep'].includes(t.slug)||s.tasks.every(b=>b.acceptance==='accepted')));
   for(const a of s.agents){
-    const own=all.filter(t=>t.owner===a.id),old=s.actionable[a.id],help=old.help;
+    const own=all.filter(t=>t.worker===a.id),old=s.actionable[a.id],help=old.help;
     const repair=own.filter(t=>isBank(t)?['repairs-required','core-checks-need-fix'].includes(t.reviewStage):t.repairRequested||['changes-requested','blocked'].includes(t.status)).map(t=>t.slug);
     const close=own.filter(t=>t.reviewStage==='owner-close-required').map(t=>t.slug);
     const review=all.filter(t=>canReview(a,t)).sort((x,y)=>Number(y.reviewStage==='re-review-required')-Number(x.reviewStage==='re-review-required')||x.slug.localeCompare(y.slug)).map(t=>t.slug);
     const lead=a.id==='claude'?s.tasks.filter(t=>t.reviewStage==='lead-resolution-required').map(t=>t.slug):[];
     const ongoing=own.filter(t=>t.status==='in-progress').map(t=>t.slug);
-    const slots=a.activeClaims<MAX_ACTIVE&&a.awaitingReview<MAX_SUBMITTED;
+    const slots=a.totalOpen<MAX_OPEN&&a.activeClaims<MAX_ACTIVE&&a.awaitingReview<MAX_SUBMITTED;
     // Never suggest a fresh claim when there is an existing closure, repair or useful review.
-    const claim=slots&&!repair.length&&!close.length&&!lead.length&&!review.length&&!help.verify.length&&!help.assist.length?unclaimed.map(t=>t.slug):[];
-    const next=help.verify.length?'verify-assistance':close.length?'close-reviewed-claim':repair.length?'repair':lead.length?'resolve-review-dispute':help.assist.length?'assist-peer':review.length?'review':ongoing.length?'continue':claim.length?'claim':'wait-or-report-blocker';
-    s.actionable[a.id]={...old,repair,close,leadResolution:lead,review,continue:ongoing,claim,next,activeClaims:a.activeClaims,awaitingReview:a.awaitingReview,activeLimit:MAX_ACTIVE,submissionLimit:MAX_SUBMITTED};
+    const handoff=slots&&!a.paused?all.filter(t=>t.handoffAvailable&&t.owner!==a.id).map(t=>t.slug):[];
+    const claim=slots&&!a.paused&&!repair.length&&!close.length&&!lead.length&&!help.verify.length?unclaimed.map(t=>t.slug):[];
+    const next=a.paused?'paused-no-dispatch':help.verify.length?'verify-assistance':close.length?'close-reviewed-claim':repair.length?'repair':lead.length?'resolve-review-dispute':help.assist.length?'assist-peer':review.length?'review':ongoing.length?'continue':handoff.length?'accept-handoff':claim.length?'claim':'wait-or-report-blocker';
+    s.actionable[a.id]={...old,repair:a.paused?[]:repair,close:a.paused?[]:close,leadResolution:a.paused?[]:lead,review,continue:a.paused?[]:ongoing,claim,handoff,next,activeClaims:a.activeClaims,awaitingReview:a.awaitingReview,activeLimit:MAX_ACTIVE,submissionLimit:MAX_SUBMITTED,totalOpenLimit:MAX_OPEN};
   }
   return s;
 }

@@ -62,7 +62,8 @@ try{
   assert.equal(v.agents.find(a=>a.id==='deepseek').activeClaims,0);
   assert.equal(v.agents.find(a=>a.id==='deepseek').awaitingReview,1);
   assert.equal(v.actionable.codex.next,'review');
-  assert.equal(v.actionable.codex.claim.length,0);
+  assert(v.actionable.codex.claim.includes('bank-b')); // reserve capacity exists while review remains priority
+  assert.equal(v.actionable.codex.totalOpenLimit,6);
   put('reviews/codex-of-deepseek-bank-a.md','Verdict: PASS\n'+evidence);
   v=await evaluateRoom(root,goal,now);assert.equal(v.tasks[0].reviewStage,'owner-close-required');assert.equal(v.actionable.deepseek.next,'close-reviewed-claim');
   put('claims/bank-a.md','agent: deepseek\nstatus: done\n');
@@ -76,6 +77,12 @@ try{
   v=await evaluateRoom(root,goal,now);assert.equal(v.tasks[0].reviewStage,'re-review-required');assert(v.actionable.codex.review.includes('bank-a'));assert.equal(v.tasks[0].acceptance,'not-accepted');
   put('claims/bank-a.md','agent: deepseek\nstatus: needs-review\n');
   v=await evaluateRoom(root,goal,now);assert.equal(v.tasks[0].reviewStage,'repairs-required');assert.equal(v.agents.find(a=>a.id==='deepseek').activeClaims,1);
+  put('availability.json',JSON.stringify({schema:1,paused:{deepseek:{since:'2026-11-25T12:10:00Z',reason:'human pause'}},handoffs:{'bank-a':{owner:'deepseek'}}}));
+  v=await evaluateRoom(root,goal,now);assert.equal(v.actionable.deepseek.next,'paused-no-dispatch');assert(v.actionable.codex.handoff.includes('bank-a'));
+  put('claims/bank-a.md','agent: deepseek\nsteward: codex\nstatus: needs-review\n');
+  v=await evaluateRoom(root,goal,now);assert.equal(v.tasks[0].owner,'deepseek');assert.equal(v.tasks[0].worker,'codex');assert.equal(v.actionable.codex.handoff.length,0);assert(!v.tasks[0].peerReviews.some(r=>r.reviewer==='codex'));
+  fs.appendFileSync(path.join(dir,'board/deepseek.md'),'- 2026-11-25T12:19:00Z RESUME\n');
+  v=await evaluateRoom(root,goal,now);assert(!v.agents.find(a=>a.id==='deepseek').paused);assert.equal(v.tasks[0].worker,'codex');
   fs.unlinkSync(path.join(dir,'banks/bank-a/forecast.csv'));assert.equal((await gateBank(root,goal,task)).status,'incomplete');
   console.log('PASS: discovery, BOM, chronology, advisory queue, conflict detection, CSV, evidence gate pass/fail, fingerprints, incomplete model');
 }finally{fs.rmSync(root,{recursive:true,force:true});}

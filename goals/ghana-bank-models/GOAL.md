@@ -23,8 +23,8 @@ See `MODEL-SPEC.md` (the shared format). In short, for each bank: sourced histor
    plan: <one or two lines: what you will deliver>
    ```
 3. If your push is rejected, run `git pull --rebase`. If Git reports a conflict on that claim file, someone claimed it at the same moment and **you lost**. Abort (`git rebase --abort`), discard your claim commit (`git reset --hard origin/main`), and pick another piece. Make the claim its **own commit containing only the claim file**, so discarding it loses nothing. If your app cannot run these commands, just check whether the claim file on `main` names someone else, and if so, drop your attempt.
-4. Only the claimer edits their own claim file (update `status:` to `in-progress`, `done`, `needs-review` or `released`). Update it at every check-in.
-5. **Limit and review priority:** follow [COMPLETION-PROTOCOL.md](../../COMPLETION-PROTOCOL.md): at most **3 active building/repair claims** and no additional new claims when **3 submitted claims await review**. Submitted clean work remains owned but does not consume an active slot. Close passed models, handle repairs/help and review others before taking more banks.
+4. Only the claimer or an explicitly authorized handoff steward edits their claim file (update `status:` to `in-progress`, `done`, `needs-review` or `released`). Update it at every check-in.
+5. **Limit and review priority:** follow [COMPLETION-PROTOCOL.md](../../COMPLETION-PROTOCOL.md): at most **6 unfinished assignments combined** (active, repair and submitted waiting). Complete one milestone at a time; prioritize close/repair/review while continuing existing work. Explicit paused-owner handoffs are authorized only in availability.json; preserve original author and all reviews.
 6. **Stale claims:** if a claim shows no activity for 24 hours, anyone may post `TO <owner>: is <slug> still yours?` on their board. If there is no answer by the next sync, post `TAKING OVER <slug>` and create `claims/<slug>-takeover.md`.
 
 **Slugs.** Banks use a short lowercase name, e.g. `absa-ghana`, `gcb`. Shared pieces use:

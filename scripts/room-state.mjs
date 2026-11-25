@@ -35,7 +35,7 @@ export function reviewDecision(text){
 export function reviewVerdict(text){return reviewDecision(text).verdict;}
 export function peerReviewsFor(reviews,task){
   const suffix='-of-'+task.owner+'-'+task.slug+'.md';
-  return reviews.filter(r=>task.owner&&r.file.endsWith(suffix)).map(r=>({...r,reviewer:r.file.slice(0,-suffix.length)})).filter(r=>validAgent(r.reviewer)&&r.reviewer!==task.owner).map(r=>({...r,...reviewDecision(r.text)}));
+  return reviews.filter(r=>task.owner&&r.file.endsWith(suffix)).map(r=>({...r,reviewer:r.file.slice(0,-suffix.length)})).filter(r=>validAgent(r.reviewer)&&r.reviewer!==task.owner&&r.reviewer!==task.worker).map(r=>({...r,...reviewDecision(r.text)}));
 }
 export function readState(root,goal,now=Date.now()){
   if(!slugOK(goal))throw Error('Invalid goal');
@@ -73,7 +73,24 @@ export function readState(root,goal,now=Date.now()){
     const cs=groups.get(slug)||[],c=cs.find(x=>x.status!=='released')||cs[0];
     return {slug,name:slug,owner:c?.agent||null,status:cs.filter(x=>x.status!=='released').length>1?'ownership-conflict':c?.status||'unclaimed',claim:c||null};
   });
+  let availability={paused:{},handoffs:{}};
+  const availabilityText=read(path.join(dir,'availability.json'));
+  if(availabilityText){availability=JSON.parse(availabilityText);if(availability.schema!==1)throw Error('Unknown availability schema');}
+  for(const a of agents){
+    const paused=availability.paused?.[a.id];
+    const resumed=paused&&events.some(e=>e.agent===a.id&&time(e.at)>time(paused.since)&&/^RESUME\b/i.test(e.text));
+    a.paused=!!paused&&!resumed;
+    a.pauseReason=a.paused?paused.reason:null;
+  }
   const all=[...tasks,...shared];
+  for(const t of all){
+    const offer=availability.handoffs?.[t.slug],owner=agents.find(a=>a.id===t.owner);
+    const steward=t.claim?.steward;
+    // Explicit, task-specific human authorization; preserve original author/review history.
+    t.worker=offer?.owner===t.owner&&steward&&steward!==t.owner&&boards.includes(steward)?steward:t.owner;
+    t.handoffAvailable=!!offer&&offer.owner===t.owner&&!!owner?.paused&&t.worker===t.owner&&!['done','released','ownership-conflict'].includes(t.status);
+    t.workerPaused=!!agents.find(a=>a.id===t.worker)?.paused;
+  }
   const messageId=m=>/^\[([a-zA-Z0-9_-]{1,80})\]/.exec(m.text)?.[1]||null;
   const pending=messages.filter(m=>m.kind==='TO'&&!messages.some(a=>a.from===m.to&&a.to===m.from&&time(a.at)>time(m.at)&&a.kind==='ACK'&&(messageId(m)?messageId(a)===messageId(m):!messageId(a))));
   for(const t of all){
@@ -91,5 +108,5 @@ export function readState(root,goal,now=Date.now()){
     return [a.id,{help:h,messages:pending.filter(m=>m.to===a.id).length,repair:repairs.map(t=>t.slug),continue:ongoing.map(t=>t.slug),review:reviewable.map(t=>t.slug),claim:a.open<3?unclaimed.map(t=>t.slug):[],next:h.verify.length?'verify-assistance':repairs.length?'repair':h.assist.length?'assist-peer':ongoing.length?'continue':reviewable.length?'review':a.open<3&&unclaimed.length?'claim':'wait-or-report-blocker'}];
   }));
   const sorted=a=>a.sort((x,y)=>(time(x.at)||0)-(time(y.at)||0));
-  return {goal,generatedAt:new Date(now).toISOString(),agents,tasks,shared,claims,reviews,events:sorted(events),messages:sorted(messages),pending,actionable,help,goalClaimComplete:tasks.length>0&&all.every(t=>t.status==='done'),notes:['Recent check-in is not proof a process is running.','Quiet claims are not released automatically.','Legacy ACK matching is advisory; an acknowledgment may cover multiple messages.','A done claim is an owner assertion until evidence and peer review are checked.']};
+  return {goal,availability,generatedAt:new Date(now).toISOString(),agents,tasks,shared,claims,reviews,events:sorted(events),messages:sorted(messages),pending,actionable,help,goalClaimComplete:tasks.length>0&&all.every(t=>t.status==='done'),notes:['Recent check-in is not proof a process is running.','Quiet claims are not released automatically.','Legacy ACK matching is advisory; an acknowledgment may cover multiple messages.','A done claim is an owner assertion until evidence and peer review are checked.']};
 }

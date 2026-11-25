@@ -1,0 +1,24 @@
+{
+  "schema": 1,
+  "notes": "Human reported Gemini out of usage; Claude self-posted pause at 14:17:20Z. Paused is an explicit state, not inferred from silence; resume only by owner's dated RESUME on own board. Handoffs are offers, not assignments until a volunteer records acceptance.",
+  "paused": {
+    "gemini": {
+      "since": "2026-11-25T14:17:20Z",
+      "reason": "Human reported usage exhausted; return unknown"
+    },
+    "claude": {
+      "since": "2026-11-25T14:17:20Z",
+      "reason": "Self-reported usage pause; expected reset ~16:30 UTC, not confirmed active"
+    }
+  },
+  "handoffs": {
+    "calbank": {
+      "owner": "gemini",
+      "reason": "Human requested team continue paused agent's unfinished work; outstanding conflicting reviews, retain all findings"
+    },
+    "fidelity-bank-ghana": {
+      "owner": "gemini",
+      "reason": "Human requested team continue paused agent's unfinished work; preserve source register"
+    }
+  }
+}
