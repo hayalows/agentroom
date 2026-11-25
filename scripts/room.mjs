@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 // Tiny helper for the room. No dependencies.
 // Usage:
-//   node scripts/room.mjs post <claude|codex|gemini> "message"
+//   node scripts/room.mjs post <agent-id> "message"
 //   node scripts/room.mjs status
 //   node scripts/room.mjs sync
 //   node scripts/room.mjs new-goal <slug>
@@ -10,9 +10,10 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { validAgent, agentsFor, joinBoard } from './participants.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const AGENTS = ['claude', 'codex', 'gemini'];
+
 const NL = String.fromCharCode(10);
 const read = (p) => (fs.existsSync(p) ? fs.readFileSync(p, 'utf8') : '');
 
@@ -40,11 +41,12 @@ function goalName() {
 }
 
 function post(agent, message) {
-  if (!AGENTS.includes(agent) || !message) {
-    console.error('usage: room.mjs post <claude|codex|gemini> "message"');
+  if (!validAgent(agent) || !message) {
+    console.error('usage: room.mjs post <agent-id> "message"');
     process.exit(1);
   }
   const { name, dir } = goalName();
+  if (!fs.existsSync(path.join(dir, 'board', agent + '.md'))) { console.error('Join first: room.mjs join ' + agent); process.exit(1); }
   const line = '- ' + new Date().toISOString() + ' ' + message + NL;
   fs.appendFileSync(path.join(dir, 'board', agent + '.md'), line);
   console.log('posted to goals/' + name + '/board/' + agent + '.md');
@@ -55,7 +57,7 @@ function status() {
   let out = '# Room status: ' + name + NL + NL + 'Generated ' + new Date().toISOString() + NL + NL;
   out += read(path.join(dir, 'GOAL.md')) + NL;
   out += read(path.join(dir, 'TASKS.md')) + NL;
-  for (const a of AGENTS) {
+  for (const a of agentsFor(dir)) {
     const lines = read(path.join(dir, 'board', a + '.md')).split(NL).filter((l) => l.startsWith('- '));
     out += NL + '## ' + a + ' (last 5 of ' + lines.length + ' posts)' + NL;
     out += (lines.slice(-5).join(NL) || '(no posts)') + NL;
@@ -94,7 +96,7 @@ function newGoal(slug) {
 }
 
 function use(slug) {
-  if (!slug || !fs.existsSync(path.join(root, 'goals', slug))) {
+  if (!slug || !/^[a-z0-9][a-z0-9-]*$/.test(slug) || !fs.existsSync(path.join(root, 'goals', slug))) {
     console.error('goal not found: goals/' + (slug || ''));
     process.exit(1);
   }
@@ -102,9 +104,15 @@ function use(slug) {
   console.log('active goal is now ' + slug);
 }
 
-if (cmd === 'post') post(args[0], args.slice(1).join(' '));
+if (cmd === 'join') {
+  const { dir } = goalName();
+  try { console.log('joined: ' + joinBoard(dir, args[0], args.slice(1).join(' ') || undefined)); }
+  catch (e) { console.error(e.message); process.exit(1); }
+} else if (cmd === 'agents') {
+  console.log(agentsFor(goalName().dir).join(NL));
+} else if (cmd === 'post') post(args[0], args.slice(1).join(' '));
 else if (cmd === 'status') status();
 else if (cmd === 'sync') sync();
 else if (cmd === 'new-goal') newGoal(args[0]);
 else if (cmd === 'use') use(args[0]);
-else console.error('commands: post, status, sync, new-goal, use');
+else console.error('commands: join, agents, post, status, sync, new-goal, use');
