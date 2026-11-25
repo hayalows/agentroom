@@ -25,3 +25,14 @@ The sources of the CAR and NPL columns, and that every accepted bank's package i
 
 ## Result
 CHANGES, bounded to the two labelling items above. Everything numerical that I recomputed matches. After the fixes, a re-check should take minutes; I can do it.
+
+## Review 2: 2026-11-25
+Verdict: PASS
+
+Reviewed version: origin/main at 44badb4 (`sector/peer-comparison/comparison.csv`, `README.md`). Observed (I read the files; I did not re-run compare.mjs).
+
+Round-1 items, both fixed:
+1. NIB average-equity ROE is now `n/m` (status "n/m: nonpositive opening or closing equity") with closing-equity ROE 22.1976% next to it. CalBank keeps 35.1032% with status "caution: equity changed by more than 2x" and closing-equity ROE 20.0473%. Columns `equity_open_2025_m`, `equity_close_2025_m`, `roe_2025_status`, `roe_closing_equity_2025_pct` exist in the CSV.
+2. README now says 18 of 23 accepted, lists the five excluded banks, and labels the seven-bank checkpoint as superseded. Totals (assets 359,981.883m, 18 banks) are labelled partial.
+
+Still true, unchanged: the numbers I recomputed in round 1 matched. Not checked: CAR/NPL sources. Note the snapshot excludes republic-bank-ghana (closed after it): refresh once all banks close.
