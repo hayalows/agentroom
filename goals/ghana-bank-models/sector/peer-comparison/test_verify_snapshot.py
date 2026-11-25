@@ -17,9 +17,9 @@ with tempfile.TemporaryDirectory() as tmp:
   h=[];fc=[]
   oldeq=-5 if b=='alpha' else 5
   for per,dat in [('FY2024',{'total_assets':100,'total_equity':oldeq}),('FY2025',{'total_assets':200,'total_equity':15,'customer_deposits':100,'profit_after_tax':10,'car_pct':20,'npl_pct':4,'loans_and_advances_gross':30})]:
-   for k,x in dat.items():h.append({'period':per,'line_item':k,'value':str(x),'status':'estimated' if b=='umb' and per=='FY2025' else 'reported'})
+   for k,x in dat.items():h.append({'bank':b,'period':per,'line_item':k,'value':str(x),'status':'estimated' if b=='umb' and per=='FY2025' else 'reported'})
   for sc,x in [('base',11),('downside',-2),('upside',20)]:
-   for k,n in [('profit_after_tax',x),('x_car_proxy_pct',17)]:fc.append({'period':'FY2030E','scenario':sc,'line_item':k,'value':str(n),'status':'estimated'})
+   for k,n in [('profit_after_tax',x),('x_car_proxy_pct',17)]:fc.append({'bank':b,'period':'FY2030E','scenario':sc,'line_item':k,'value':str(n),'status':'estimated'})
   wr(d/'financials.csv',h);wr(d/'forecast.csv',fc)
   for n in ['README.md','sources.md','assumptions.json','checks.md','model.py']:write(d/n,'fixture\n')
   ph=v.package_hash(d);common={'bank':b,'assets_2025_m':'200.000' if b!='umb' else '', 'customer_deposits_2025_m':'100.000' if b!='umb' else '', 'pat_2025_m':'10.000' if b!='umb' else '', 'pat_base_2030_m':'11.000','pat_downside_2030_m':'-2.000','pat_upside_2030_m':'20.000','car_base_2030_proxy_pct':'17.0000','car_downside_2030_proxy_pct':'17.0000','car_upside_2030_proxy_pct':'17.0000','package_sha256':ph,'macro_sha256':macro,'source_commit':''}
