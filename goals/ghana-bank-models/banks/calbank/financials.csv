@@ -246,3 +246,5 @@ calbank,9M-2026,ratios,ldr_pct,19.3175,%,CAL26Q3,2,derived,loans_and_advances_ne
 calbank,9M-2026,ratios,cost_to_income_pct,51.247,%,CAL26Q3,1,derived,Total operating expenses / total_operating_income * 100.
 calbank,9M-2026,ratios,roe_pct,,%,,,unavailable,Interim 9M-2026; annualised ROE not reported.
 calbank,9M-2026,ratios,roa_pct,,%,,,unavailable,Interim 9M-2026; annualised ROA not reported.
+calbank,9M-2026,balance_sheet,x_statutory_reserve_fund,611.291,GHS millions,CAL26Q3,2,reported,"Bank statutory reserve fund; nonadditive component of reserves_other."
+calbank,9M-2026,balance_sheet,x_ytd_statutory_transfer,1.000,GHS millions,CAL26Q3,3,reported,"Actual YTD statutory transfer in bank statement of changes in equity; not an additional equity component."

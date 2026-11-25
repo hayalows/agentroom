@@ -11,5 +11,8 @@ progress: Accepted named replacement under PR9, former steward Luna explicitly p
 
 updated: 2026-11-25T16:17:26.557Z
 progress: Authorized replacement steward reversed duplicate ROU in twelve history cells; all six component aggregates documented. Python -I model.py: 630 forecasts, max historical/forecast residual 0.000m, iteration residual 0.000000. Four transferred file hashes exactly match local replay; only 30 classification rows differ, all other 600 unchanged. Prior repairs preserved. Independent review and paused-blocker resolution required; no self-approval.
-review_revision: d580b3936af8cef11cf0693e6bf9860d6771be6eeb36ef0a83fc60a5934f0350
+
+updated: 2026-11-25T16:31:14.838163+00:00
+progress: Codex reserve blocker repaired; 249 history/675 forecasts. Python -I replay identical after LF normalization, all 15 scenario-years pass accounting and reserve assertions. Independent rounded CSV verification 75/75 reserve/equity equations, max 0.0010m; base/upside FY28 payout zero. Base FY30 PAT418.800m CAR20.180%; downside503.084/23.661%; upside414.106/18.465%. Prior historical ROU repair preserved. No self-approval; requires distinct independent reviews.
+review_revision: 8ac68a37b2453a8724888b6d1d03ee37356039e8344d3cf386b4dd0f49c865c1
 review_macro: b3c4412d681469e8d974e0c067af8e28435f5669900a9f1b4c54b0178992b8df

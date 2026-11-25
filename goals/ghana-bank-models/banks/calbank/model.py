@@ -45,6 +45,13 @@ def check_historical(hist, hist_rows):
     dups = len(hist_rows) - len(set((r['period'], r['statement'], r['line_item']) for r in hist_rows))
     return res, missing_src, nonblank_unavail, dups
 
+def statutory_rate(opening_reserve, paid_up_capital):
+    # Opening annual fund tier, a transparent modelling convention under Act 930 s34.
+    if paid_up_capital <= 0:
+        raise ValueError("positive paid-up capital required")
+    ratio = opening_reserve / paid_up_capital
+    return 0.50 if ratio < 0.50 else (0.25 if ratio < 1.0 else 0.125)
+
 def run():
     hist, hist_rows = load_hist()
     macro = load_macro()
@@ -58,12 +65,20 @@ def run():
     # Calibrate CAR proxy directly to 9M-2026 reported 18.4% CAR
     rwa_density_q3 = (q3['total_equity'] / (q3['car_pct'] / 100.0)) / q3['total_assets']
 
+    statutory = assump['statutory_reserve']
+    sep_fund = q3['x_statutory_reserve_fund']
+    ytd_transfer = q3['x_ytd_statutory_transfer']
+    assert abs(sep_fund - statutory['sep_2026_fund_m']) < 1e-9
+    assert abs(ytd_transfer - statutory['ytd_2026_transfer_m']) < 1e-9
+    opening_fund_26 = sep_fund - ytd_transfer
+    assert [statutory_rate(x, 100) for x in (49.999,50,99.999,100)] == [.5,.25,.25,.125]
     fc_rows = []
     fc_checks = []
 
     for scen in ['base', 'downside', 'upside']:
         drv = assump['drivers'][scen]
         prev = dict(fy25)
+        prev['x_statutory_reserve_fund'] = opening_fund_26
 
         q4_loan_g = drv['q4_2026_loan_growth_pct']['value'] / 100.0
         q4_dep_g = drv['q4_2026_deposit_growth_pct']['value'] / 100.0
@@ -132,8 +147,12 @@ def run():
                     pat = pbt - tax
                     q4_pat = pat - q3['profit_after_tax']
                     stated_cap = q3['stated_capital']
-                    ret_earn = q3['retained_earnings'] + q4_pat
-                    res_other = q3['reserves_other']
+                    reserve_rate = statutory_rate(opening_fund_26, stated_cap)
+                    transfer = max(0.0, max(0.0, pat) * reserve_rate - ytd_transfer)
+                    fund = sep_fund + transfer
+                    full_year_transfer = ytd_transfer + transfer
+                    ret_earn = q3['retained_earnings'] + q4_pat - transfer
+                    res_other = q3['reserves_other'] + transfer
                     total_eq = stated_cap + ret_earn + res_other
                     total_assets = total_liab + total_eq
                     rem_assets = total_assets - loans_net - ppe_int - oth_assets
@@ -180,19 +199,23 @@ def run():
                     pbt = toi - staff - da - oth_opex - lease_fin - impairment
                     tax = max(0.0, pbt * tax_r)
                     pat = pbt - tax
-                    # Pay the full modeled dividend only if retained earnings stay positive after payout.
-                    pre_div_retained = prev['retained_earnings'] + pat
+                    # Reserve allocation precedes dividend testing; it is an internal equity movement.
+                    reserve_rate = statutory_rate(prev['x_statutory_reserve_fund'], prev['stated_capital'])
+                    transfer = max(0.0, pat) * reserve_rate
+                    full_year_transfer = transfer
+                    fund = prev['x_statutory_reserve_fund'] + transfer
+                    pre_div_retained = prev['retained_earnings'] + pat - transfer
                     proposed_div = max(0.0, pat * payout)
                     div = proposed_div if (pre_div_retained > 0 and pre_div_retained - proposed_div > 0) else 0.0
                     stated_cap = prev['stated_capital']
-                    ret_earn = prev['retained_earnings'] + pat - div
-                    res_other = prev['reserves_other']
+                    ret_earn = pre_div_retained - div
+                    res_other = prev['reserves_other'] + transfer
                     total_eq = stated_cap + ret_earn + res_other
                     total_assets = total_liab + total_eq
                     car_test = (total_eq / (total_assets * rwa_density_q3)) * 100.0
                     if car_test < target_car and div > 0:
                         div = 0.0
-                        ret_earn = prev['retained_earnings'] + pat
+                        ret_earn = pre_div_retained
                         total_eq = stated_cap + ret_earn + res_other
                         total_assets = total_liab + total_eq
                     rem_assets = total_assets - loans_net - ppe_int - oth_assets
@@ -200,6 +223,13 @@ def run():
                     inv_sec = rem_assets - cash_bog
                     iter_diff = abs(inv_sec - inv_prev)
 
+            assert 0 <= fund <= res_other + 1e-8
+            assert abs(full_year_transfer - (max(ytd_transfer, max(0.0, pat) * reserve_rate) if yr == 'FY2026E' else max(0.0, pat) * reserve_rate)) < 1e-7
+            opening_equity = q3['total_equity'] if yr == 'FY2026E' else prev['total_equity']
+            incremental_pat = q4_pat if yr == 'FY2026E' else pat
+            assert abs(total_eq - (opening_equity + incremental_pat - div)) < 1e-6
+            assert div == 0 or (ret_earn > 0 and (total_eq / (total_assets * rwa_density_q3)) * 100 >= target_car)
+            assert iter_diff < 1e-6, (scen, yr, iter_diff)
             avg_eq = 0.5 * (prev['total_equity'] + total_eq)
             avg_as = 0.5 * (prev['total_assets'] + total_assets)
             car_pct = (total_eq / (total_assets * rwa_density_q3)) * 100.0
@@ -210,8 +240,8 @@ def run():
 
             interest_income_note = ('FY2026E = 9M actual + iterative Q4; Q4 uses the day-weighted policy rate and investment-yield proxies in assumptions.json, not observed Q4 average yields.' if yr == 'FY2026E' else 'Average loans x policy-linked loan yield + average investments x 50/50 364-day bill and 10-year bond yield (macro.csv).')
             cof_note = ('FY2026E adds Q4 interest expense using the implied Q4 bill mean in assumptions.json; 9M actual is retained.' if yr == 'FY2026E' else 'Cost of funds = max(1.5%, 0.7% + 0.18 x annual 91-day bill rate); calibrated to FY2025 and 9M-2026 in checks.md.')
-            dividends_note = ('FY2026E assumes no Q4 dividend; CAL26Q3 does not report a dividend movement in its 9M-2026 equity rollforward.' if yr == 'FY2026E' else 'Full modeled payout only if retained earnings stay positive after payout and post-payout CAR meets target; deducted once.')
-            retained_earnings_note = ('9M-2026 closing retained earnings + projected Q4 PAT - assumed Q4 dividends (0); 9M reserve transfers are already reflected.' if yr == 'FY2026E' else 'Prior retained_earnings + PAT - dividends (payout gated on positive retained earnings & CAR >= target).')
+            dividends_note = ('FY2026E assumes no Q4 dividend; CAL26Q3 does not report a dividend movement in its 9M-2026 equity rollforward.' if yr == 'FY2026E' else 'Full modeled payout only if retained earnings after statutory transfer and full payout stay positive and post-payout CAR meets target; not a legal dividend permission.')
+            retained_earnings_note = ('9M-2026 retained earnings + Q4 PAT - incremental statutory transfer; zero Q4 dividend. YTD transfer already reflected.' if yr == 'FY2026E' else 'Prior retained earnings + PAT - statutory transfer - dividends; payout subject to positive remaining retained earnings and CAR buffer.')
             items = [
                 ('income_statement', 'interest_income', int_inc, 'GHS millions', interest_income_note),
                 ('income_statement', 'interest_expense', int_exp, 'GHS millions', cof_note),
@@ -227,7 +257,7 @@ def run():
                 ('income_statement', 'x_lease_finance_cost', lease_fin, 'GHS millions', 'Consistent with historical separate line item.'),
                 ('income_statement', 'impairment_charge', impairment, 'GHS millions', 'avg net loans * cost_of_risk.'),
                 ('income_statement', 'profit_before_tax', pbt, 'GHS millions', 'total_operating_income - opex - x_lease_finance_cost - impairment.'),
-                ('income_statement', 'income_tax', tax, 'GHS millions', 'profit_before_tax * tax_rate.'),
+                ('income_statement', 'income_tax', tax, 'GHS millions', 'Actual 9M tax plus estimated tax on positive Q4 PBT.' if yr == 'FY2026E' else 'Positive PBT * tax_rate; no assumed tax credit on losses.'),
                 ('income_statement', 'profit_after_tax', pat, 'GHS millions', 'profit_before_tax - income_tax.'),
                 ('income_statement', 'x_dividends_paid', div, 'GHS millions', dividends_note),
                 ('balance_sheet', 'cash_and_bog_balances', cash_bog, 'GHS millions', 'Proxy screen >= crr_pct (20%) on customer_deposits; includes due_from_banks aggregate.'),
@@ -246,7 +276,10 @@ def run():
                 ('balance_sheet', 'total_liabilities', total_liab, 'GHS millions', 'Sum of liability items.'),
                 ('balance_sheet', 'stated_capital', stated_cap, 'GHS millions', 'Held flat.'),
                 ('balance_sheet', 'retained_earnings', ret_earn, 'GHS millions', retained_earnings_note),
-                ('balance_sheet', 'reserves_other', res_other, 'GHS millions', 'Held flat.'),
+                ('balance_sheet', 'reserves_other', res_other, 'GHS millions', 'Opening reserves plus statutory transfer; no further credit-risk reserve or OCI movement assumed.'),
+                ('balance_sheet', 'x_statutory_reserve_fund', fund, 'GHS millions', 'Nonadditive component of reserves_other; opening fund plus statutory transfer.'),
+                ('balance_sheet', 'x_statutory_reserve_transfer', full_year_transfer, 'GHS millions', 'Full-year allocation; includes actual 9M 2026 transfer of 1.000m in anchor year. Internal equity transfer, not an expense.'),
+                ('ratios', 'x_statutory_reserve_rate_pct', reserve_rate * 100, '%', 'Opening annual fund/paid-up capital tier per Act 930 s34.'),
                 ('balance_sheet', 'total_equity', total_eq, 'GHS millions', 'stated_capital + retained_earnings + reserves_other.'),
                 ('ratios', 'car_pct', car_pct, '%', 'Proxy calibrated to 9M-2026 reported 18.4% CAR (total_equity / (total_assets * 9M-26_RWA_density)).'),
                 ('ratios', 'tier1_pct', None, '%', 'Not projected separately.'),
@@ -279,7 +312,7 @@ def run():
                 'due_to_banks': due_to_banks, 'borrowings': borrowings, 'other_liabilities': other_liab,
                 'investment_securities': inv_sec, 'property_equipment_intangibles': ppe_int, 'other_assets': oth_assets,
                 'total_assets': total_assets, 'stated_capital': stated_cap, 'retained_earnings': ret_earn,
-                'reserves_other': res_other, 'total_equity': total_eq,
+                'reserves_other': res_other, 'total_equity': total_eq, 'x_statutory_reserve_fund': fund,
                 'fee_commission_income': fee_inc, 'fee_commission_expense': fee_exp,
                 'net_trading_income': trd_inc, 'other_operating_income': oth_inc,
                 'staff_costs': staff, 'depreciation_amortisation': da, 'other_operating_expenses': oth_opex,
@@ -374,8 +407,17 @@ def run():
         '- FY2024 Bank retained earnings stored from CAL25 SoFP p.65 are (1,209.108)m. The Directors table p.22 shows (946.562)m excluding reserve transfers; CAL25 SoCE p.67 reconciles this as opening (1,202.955) + PAT 256.393 - statutory reserve transfer 64.098 - credit-risk reserve transfer 198.448 = closing (1,209.108).',
         '- CAL25 p.122 reports Bank CAR of 18.87% (FY2025) and (7.22%) (FY2024). Group CAR is 19.80% and (6.38%); the p.14 narrative refers to Group. Historical rows retain the Bank series.',
         '- Right-of-use assets are included exactly once in `property_equipment_intangibles` (PPE + intangibles + ROU), excluded from `other_assets`; the prior duplicate reclass was reversed without changing total assets. Source component values and formulas are in `financials.csv` and `sources.md`.',
-        '- CAL26Q3 Statement of Changes in Equity (physical PDF p.3; no printed page numbers) does not report a 9M-2026 dividend movement or amount. FY2026E `x_dividends_paid` is 0.000 because no Q4 payout is assumed; later payouts occur only when the full payout leaves positive retained earnings and post-payout CAR meets target.',
+        '- CAL26Q3 Statement of Changes in Equity (physical PDF p.3; no printed page numbers) does not report a 9M-2026 dividend movement or amount. FY2026E `x_dividends_paid` is 0.000 because no Q4 payout is assumed; later payouts occur only after statutory allocation and when full payout leaves positive retained earnings and post-payout CAR meets target.',
     ])
+    lines.extend(['', '## 7. Statutory reserve and dividend checks', '',
+        'Act 930 ss34–35 (BoG PDF printed pp30–31): allocation uses the opening annual fund tier (50%, 25%, 12.5%) and positive annual PAT. FY2026 uses 610.291m opening fund inferred from Sep fund 611.291m less observed 1.000m YTD allocation; Sep stated capital 1421.535m. The Q4 increment is annual required allocation less 1.000m, floored at zero. Other reserves remain fixed after Sep26; no new credit-risk reserve/OCI forecast. No assertion of dividend authorization or bank-specific waiver.', '',
+        '| Scenario | Year | Rate % | Annual transfer m | Closing fund m | Closing retained m | Dividend m |', '|---|---|---:|---:|---:|---:|---:|'])
+    lookup = {(r[1],r[2],r[4]):r[5] for r in fc_rows}
+    for scen in ['base','downside','upside']:
+        for year in years:
+            vals = [lookup[(scen,year,k)] for k in ['x_statutory_reserve_rate_pct','x_statutory_reserve_transfer','x_statutory_reserve_fund','retained_earnings','x_dividends_paid']]
+            lines.append('| ' + ' | '.join([scen,year]+vals) + ' |')
+    lines.append('All 15 scenario-years passed independent-in-engine reserve rate, transfer, equity roll-forward, payout and iteration assertions.')
     with open(CHECKS_PATH, 'w', encoding='utf-8') as f:
         f.write('\n'.join(lines) + '\n')
     print(f'CAL: wrote {len(fc_rows)} forecast rows, max hist={max(x[6] for x in hist_res):.3f}, max fc={max(x[2] for x in fc_checks):.3f}, max iter={max(x[3] for x in fc_checks):.6f}')
