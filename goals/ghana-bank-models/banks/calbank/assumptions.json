@@ -18,11 +18,11 @@
   "drivers": {
     "base": {
       "q4_2026_loan_growth_pct": {
-        "value": 4.0,
+        "value": 4,
         "note": "Q4-2026 net loan growth over 30 Sep 2026."
       },
       "q4_2026_deposit_growth_pct": {
-        "value": 3.0,
+        "value": 3,
         "note": "Q4-2026 customer deposit growth over 30 Sep 2026."
       },
       "q4_2026_flow_scale": {
@@ -30,7 +30,7 @@
         "note": "Q4-2026 non-interest income and opex run-rate as fraction of 9M-2026."
       },
       "loan_spread_over_nom_gdp_pct": {
-        "value": 2.0,
+        "value": 2,
         "note": "FY2027E+ loan growth = nominal GDP (from macro.csv) + 2.0%."
       },
       "deposit_spread_over_nom_gdp_pct": {
@@ -38,26 +38,26 @@
         "note": "FY2027E+ deposit growth = nominal GDP (from macro.csv) + 0.5%."
       },
       "opex_spread_over_cpi_pct": {
-        "value": 2.0,
+        "value": 2,
         "note": "FY2027E+ opex growth = inflation_cpi_pct (from macro.csv) + 2.0%."
       },
       "yield_on_investments_spread_over_blend_pct": {
-        "value": -4.0,
+        "value": -4,
         "note": "FY2026E Q4 uses the Q4 364-day bill and 10-year bond yield proxies in cost_of_funds_calibration, blended 50/50, less 4.0 percentage points. FY2027E+ uses 50% macro.csv tbill_364d_pct + 50% govt_bond_yield_pct - 4.0 points. The aggregate fit in checks.md is a calibration guide, not an observed security yield."
       },
       "yield_on_loans_spread_over_policy_pct": {
-        "value": 1.0,
+        "value": 1,
         "note": "FY2026E Q4 uses the 12.57% day-weighted Q4 policy input in cost_of_funds_calibration + 1.0 percentage point; FY2027E+ uses macro.csv policy_rate_pct + 1.0 point. The aggregate interest-income fit in checks.md is a calibration guide, not an observed loan yield."
       },
       "trading_income_growth_pct": {
-        "FY2027E": 8.0,
-        "FY2028E": 8.0,
-        "FY2029E": 8.0,
-        "FY2030E": 8.0,
+        "FY2027E": 8,
+        "FY2028E": 8,
+        "FY2029E": 8,
+        "FY2030E": 8,
         "note": "FY2027E+ trading income growth."
       },
       "cost_of_risk_pct": {
-        "FY2026E": 0.0,
+        "FY2026E": 0,
         "FY2027E": 1.5,
         "FY2028E": 1.5,
         "FY2029E": 1.4,
@@ -65,15 +65,15 @@
         "note": "FY2026E near zero on 9M-2026 recoveries; normalizes to 1.4-1.5%."
       },
       "tax_rate_pct": {
-        "value": 33.0,
+        "value": 33,
         "note": "Effective tax + levies (9M-2026 = 32.6%, FY2025 = 35.4%)."
       },
       "dividend_payout_pct": {
-        "value": 20.0,
-        "note": "20.0% of positive PAT is paid only when retained earnings remain positive after the full proposed payout and post-payout CAR meets target_car_pct; otherwise payout is zero."
+        "value": 20,
+        "note": "20.0% of positive PAT is paid only when retained earnings after statutory transfer remain positive after the full proposed payout and post-payout CAR meets target_car_pct; otherwise payout is zero."
       },
       "target_car_pct": {
-        "value": 15.0,
+        "value": 15,
         "note": "Target CAR proxy buffer above 13.0% min_car_pct."
       },
       "cost_of_funds_tbill_beta": {
@@ -95,7 +95,7 @@
         "note": "Q4-2026 net loan growth over 30 Sep 2026."
       },
       "q4_2026_deposit_growth_pct": {
-        "value": 1.0,
+        "value": 1,
         "note": "Q4-2026 deposit growth over 30 Sep 2026."
       },
       "q4_2026_flow_scale": {
@@ -103,7 +103,7 @@
         "note": "Q4-2026 non-interest income and opex run-rate."
       },
       "loan_spread_over_nom_gdp_pct": {
-        "value": -2.0,
+        "value": -2,
         "note": "FY2027E+ loan growth = nominal GDP - 2.0%."
       },
       "deposit_spread_over_nom_gdp_pct": {
@@ -115,7 +115,7 @@
         "note": "FY2027E+ opex growth = CPI + 2.5%."
       },
       "yield_on_investments_spread_over_blend_pct": {
-        "value": -4.0,
+        "value": -4,
         "note": "FY2026E Q4 uses the Q4 364-day bill and 10-year bond yield proxies in cost_of_funds_calibration, blended 50/50, less 4.0 percentage points; FY2027E+ uses downside macro.csv yields."
       },
       "yield_on_loans_spread_over_policy_pct": {
@@ -123,30 +123,30 @@
         "note": "Higher risk-spread assumption: FY2026E Q4 uses the day-weighted policy input in cost_of_funds_calibration + 1.5 percentage points; FY2027E+ uses macro.csv policy_rate_pct + 1.5 points."
       },
       "trading_income_growth_pct": {
-        "FY2027E": 5.0,
-        "FY2028E": 5.0,
-        "FY2029E": 5.0,
-        "FY2030E": 5.0,
+        "FY2027E": 5,
+        "FY2028E": 5,
+        "FY2029E": 5,
+        "FY2030E": 5,
         "note": "Lower trading gains."
       },
       "cost_of_risk_pct": {
         "FY2026E": 0.5,
         "FY2027E": 3.5,
-        "FY2028E": 3.0,
+        "FY2028E": 3,
         "FY2029E": 2.5,
         "FY2030E": 2.2,
         "note": "Credit stress on corporate book."
       },
       "tax_rate_pct": {
-        "value": 34.0,
+        "value": 34,
         "note": "Effective tax + levies."
       },
       "dividend_payout_pct": {
-        "value": 10.0,
-        "note": "10.0% of positive PAT is paid only when retained earnings remain positive after the full proposed payout and post-payout CAR meets target_car_pct; otherwise payout is zero."
+        "value": 10,
+        "note": "10.0% of positive PAT is paid only when retained earnings after statutory transfer remain positive after the full proposed payout and post-payout CAR meets target_car_pct; otherwise payout is zero."
       },
       "target_car_pct": {
-        "value": 15.0,
+        "value": 15,
         "note": "Buffer above 13.0% min_car_pct."
       },
       "cost_of_funds_tbill_beta": {
@@ -164,11 +164,11 @@
     },
     "upside": {
       "q4_2026_loan_growth_pct": {
-        "value": 5.0,
+        "value": 5,
         "note": "Q4-2026 net loan growth over 30 Sep 2026."
       },
       "q4_2026_deposit_growth_pct": {
-        "value": 4.0,
+        "value": 4,
         "note": "Q4-2026 deposit growth over 30 Sep 2026."
       },
       "q4_2026_flow_scale": {
@@ -176,11 +176,11 @@
         "note": "Q4-2026 non-interest income and opex run-rate."
       },
       "loan_spread_over_nom_gdp_pct": {
-        "value": 4.0,
+        "value": 4,
         "note": "FY2027E+ loan growth = nominal GDP + 4.0%."
       },
       "deposit_spread_over_nom_gdp_pct": {
-        "value": 2.0,
+        "value": 2,
         "note": "FY2027E+ deposit growth = nominal GDP + 2.0%."
       },
       "opex_spread_over_cpi_pct": {
@@ -188,7 +188,7 @@
         "note": "FY2027E+ opex growth = CPI + 1.5%."
       },
       "yield_on_investments_spread_over_blend_pct": {
-        "value": -4.0,
+        "value": -4,
         "note": "FY2026E Q4 uses the Q4 364-day bill and 10-year bond yield proxies in cost_of_funds_calibration, blended 50/50, less 4.0 percentage points; FY2027E+ uses upside macro.csv yields."
       },
       "yield_on_loans_spread_over_policy_pct": {
@@ -196,30 +196,30 @@
         "note": "Spread-compression assumption: FY2026E Q4 uses the day-weighted policy input in cost_of_funds_calibration + 0.5 percentage points; FY2027E+ uses macro.csv policy_rate_pct + 0.5 points."
       },
       "trading_income_growth_pct": {
-        "FY2027E": 10.0,
-        "FY2028E": 10.0,
-        "FY2029E": 10.0,
-        "FY2030E": 10.0,
+        "FY2027E": 10,
+        "FY2028E": 10,
+        "FY2029E": 10,
+        "FY2030E": 10,
         "note": "Stronger FX/trading."
       },
       "cost_of_risk_pct": {
         "FY2026E": -0.2,
-        "FY2027E": 1.0,
-        "FY2028E": 1.0,
-        "FY2029E": 1.0,
-        "FY2030E": 1.0,
+        "FY2027E": 1,
+        "FY2028E": 1,
+        "FY2029E": 1,
+        "FY2030E": 1,
         "note": "Continued recoveries."
       },
       "tax_rate_pct": {
-        "value": 32.0,
+        "value": 32,
         "note": "Effective tax + levies."
       },
       "dividend_payout_pct": {
-        "value": 25.0,
-        "note": "25.0% of positive PAT is paid only when retained earnings remain positive after the full proposed payout and post-payout CAR meets target_car_pct; otherwise payout is zero."
+        "value": 25,
+        "note": "25.0% of positive PAT is paid only when retained earnings after statutory transfer remain positive after the full proposed payout and post-payout CAR meets target_car_pct; otherwise payout is zero."
       },
       "target_car_pct": {
-        "value": 15.0,
+        "value": 15,
         "note": "Buffer above 13.0% min_car_pct."
       },
       "cost_of_funds_tbill_beta": {
@@ -254,5 +254,12 @@
     "q4_2026_policy_rate_pct": 12.57,
     "q4_2026_policy_rate_source_id": "S-BOG-MPC-NOV26",
     "q4_2026_policy_rate_basis": "Day-weighted Q4 mean: 14.0% from 1 Oct through 17 Nov (48 days) and 11.0% from 18 Nov through 31 Dec (44 days), based on the 18 Nov policy-rate cut in macro.csv; (48*14 + 44*11)/92 = 12.565%, rounded to 12.57%."
+  },
+  "statutory_reserve": {
+    "source": "CAL26Q3 Bank statement of financial position and changes in equity; Act 930 s34–35, BoG PDF printed pp30–31",
+    "source_url": "https://www.bog.gov.gh/wp-content/uploads/2019/09/BANKS-AND-SPECIALISED-DEPOSIT-ACT-2016.pdf",
+    "sep_2026_fund_m": 611.291,
+    "ytd_2026_transfer_m": 1,
+    "method": "Opening annual reserve fund divided by paid-up capital determines 50%, 25%, or 12.5% allocation of positive annual after-tax profit. FY2026 incremental transfer deducts actual YTD 1m, floored at zero. Reserve transfer precedes payout gate; no further credit-risk reserve or OCI transfer assumed. Statutory fund is a nonadditive component of other reserves. Other dividend permissions not modeled."
   }
 }
