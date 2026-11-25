@@ -17,7 +17,9 @@ export function reviewDecision(text){
     const m=/\bverdict\s*:\s*(.*)$/i.exec(clean);
     if(!m)continue;
     const v=m[1];
-    const verdict=/\bBLOCK(?:ED)?\b/i.test(v)?'BLOCK':/\bCHANGES(?: REQUIRED)?\b/i.test(v)?'CHANGES':/\bPASS\b/i.test(v)?'PASS':'unparsed';
+    const explicitBlock=/^(?:BLOCK|BLOCKED)\b/i.test(v)||/\b(?:forecast|overall|model|history|historical)\s+(?:verdict\s*:\s*)?BLOCK(?:ED)?\b/i.test(v);
+    const explicitChanges=/^CHANGES\b/i.test(v)||/\bCHANGES REQUIRED\b/i.test(v)||/\b(?:forecast|overall|model|history|historical)\s+(?:verdict\s*:\s*)?CHANGES\b/i.test(v);
+    const verdict=explicitBlock?'BLOCK':explicitChanges?'CHANGES':/^(?:PASS)\b/i.test(v)||/\b(?:history|historical|forecast|overall|model)\s+PASS\b/i.test(v)?'PASS':'unparsed';
     hits.push({i,verdict});
   }
   const last=hits.at(-1);
